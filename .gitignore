@@ -1,0 +1,15 @@
+# AL dependencies
+.alpackages/
+*.app
+
+# AL cache
+.vscode/.alcache/
+
+# Build outputs
+*.app
+
+# VS Code settings (optional, uncomment if you don't want to share)
+# .vscode/
+
+# AL Compiler artifacts
+rad.json

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-US" original="CP-JMC Base">
+    <body>
+      <group id="body">
+        <trans-unit id="Report 3538701464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Archived Events</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Eliminar eventos archivados"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3538701464 - NamedType 2168318557" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must confirm deletion to proceed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Debe confirmar la eliminación para continuar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - NamedType ConfirmDeletionErr</note>
+        </trans-unit>
+        <trans-unit id="Report 3538701464 - NamedType 1788877861" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 archived event(s) have been deleted.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="%1 evento(s) archivado(s) han sido eliminados."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - NamedType DeletedEventsMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 3538701464 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3538701464 - Control 1361802906 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to delete the archived events. Check this box to proceed with deletion.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si desea eliminar los eventos archivados. Marque esta casilla para proceder con la eliminación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Control ConfirmDeletion - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3538701464 - Control 1361802906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm Deletion</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Control ConfirmDeletion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Change 2950845476 - Method 3279464882 - NamedType 3941846598" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 2602508561">
+          <source>Changing the status to Archived is not allowed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se permite cambiar el estado a Archivado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Change Estado - Method OnBeforeValidate - NamedType ErrorLbl</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

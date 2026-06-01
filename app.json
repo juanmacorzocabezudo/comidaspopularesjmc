@@ -1,51 +1,55 @@
 {
-  "id": "794dc3d6-9bae-4a75-bc69-d04cc2e88465",
-  "name": "CP-JMC Base",
-  "publisher": "Juan María Corzo",
-  "version": "27.5.0.2",
-  "brief": "",
-  "description": "Objetos y funciones para los proyectos de Juan María Corzo",
-  "privacyStatement": "",
-  "EULA": "",
-  "help": "",
-  "url": "",
-  "logo": "",
-  "dependencies": [
-    {
-      "id": "f055119a-8dbe-4a0b-8c3d-1f2e5f7b6c9d",
-      "name": "CP - Feature",
-      "publisher": "Alxia Consultoria e innovación",
-      "version": "26.0.0.0"
+    "id": "794dc3d6-9bae-4a75-bc69-d04cc2e88465",
+    "name": "CP-JMC Base",
+    "publisher": "Juan Maria Corzo",
+    "version": "27.5.0.10",
+    "brief": "Objetos JMC",
+    "description": "Objetos y funciones para los proyectos de JMC",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "f055119a-8dbe-4a0b-8c3d-1f2e5f7b6c9d",
+            "name": "CP - Feature",
+            "publisher": "Alxia Consultoria e innovación",
+            "version": "26.0.0.0"
+        },
+        {
+            "id": "e425495b-7717-4f65-a538-6528bf549000",
+            "name": "CP - Functionality",
+            "publisher": "Alxia Consultoria e innovación",
+            "version": "1.26.1.0"
+        },
+        {
+            "id": "9e6357ac-83ea-4113-bb11-35144e9def98",
+            "name": "Comidas Populares Base",
+            "publisher": "Vicente Pastor Tejero",
+            "version": "27.5.0.0"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "27.0.0.0",
+    "idRanges": [
+        {
+            "from": 53100,
+            "to": 53499
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": true,
+        "includeSourceInSymbolFile": true
     },
-    {
-      "id": "e425495b-7717-4f65-a538-6528bf549000",
-      "name": "CP - Functionality",
-      "publisher": "Alxia Consultoria e innovación",
-      "version": "1.26.1.0"
-    },
-    {
-      "id": "9e6357ac-83ea-4113-bb11-35144e9def98",
-      "name": "Comidas Populares Base",
-      "publisher": "Vicente Pastor Tejero",
-      "version": "27.5.0.0"
-    }
-  ],
-  "screenshots": [],
-  "platform": "1.0.0.0",
-  "application": "27.0.0.0",
-  "idRanges": [
-    {
-      "from": 53100,
-      "to": 53499
-    }
-  ],
-  "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": true,
-    "includeSourceInSymbolFile": true
-  },
-  "runtime": "16.0",
-  "features": [
-  "TranslationFile"
-  ]
+    "runtime": "16.0",
+    "features": [
+        "TranslationFile"
+    ],
+    "supportedLocales": [
+        "es-ES",
+        "en-US"
+    ]
 }

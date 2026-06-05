@@ -3,6 +3,7 @@ page 53110 "JMC Cronus"
     Caption = 'Cronus', Comment = 'ESP="Cronus"';
     PageType = List;
     SourceTable = "JMC Cronus";
+    SourceTableView = sorting("JMC Entry No.") order(descending);
     UsageCategory = Lists;
     ApplicationArea = All;
     Editable = true;
@@ -21,6 +22,11 @@ page 53110 "JMC Cronus"
                 field(Cronus; Rec."JMC Cronus")
                 {
                     Caption = 'Cronus', Comment = 'ESP="Cronus"';
+                    ApplicationArea = All;
+                }
+                field(CostType; Rec."JMC Cost Type")
+                {
+                    Caption = 'Type', Comment = 'ESP="Tipo"';
                     ApplicationArea = All;
                 }
                 field(PostingDate; Rec."JMC Posting Date")
@@ -44,6 +50,12 @@ page 53110 "JMC Cronus"
                     ApplicationArea = All;
                     Style = Unfavorable;
                     StyleExpr = jmcIsNegativeAmount;
+
+                    trigger OnValidate()
+                    begin
+                        jmcIsNegativeAmount := Rec."JMC Amount" < 0;
+                        CurrPage.Update(false);
+                    end;
                 }
                 field(GLAccountNo; Rec."JMC G/L Account No.")
                 {
@@ -69,29 +81,30 @@ page 53110 "JMC Cronus"
                 {
                     Caption = 'Business Line', Comment = 'ESP="Linea de negocio"';
                     ApplicationArea = All;
-
-                    trigger OnAssistEdit()
-                    var
-                        jmcBusinessLinesPage: Page "JMC Business Lines";
-                    begin
-                        jmcBusinessLinesPage.Run();
-                    end;
                 }
                 field(Family; Rec."JMC Family")
                 {
                     Caption = 'Family', Comment = 'ESP="Familia"';
                     ApplicationArea = All;
-
-                    trigger OnAssistEdit()
-                    var
-                        jmcFamiliesPage: Page "JMC Families";
-                    begin
-                        jmcFamiliesPage.Run();
-                    end;
                 }
-                field(ExternalReference; Rec."JMC External Reference")
+                field(FamilyName; Rec."JMC Family Name")
                 {
-                    Caption = 'External Reference', Comment = 'ESP="Referencia externa"';
+                    Caption = 'Family Name', Comment = 'ESP="Nombre familia"';
+                    ApplicationArea = All;
+                }
+                field(CustomerType; Rec."JMC Customer Type")
+                {
+                    Caption = 'Customer Type', Comment = 'ESP="Tipo cliente"';
+                    ApplicationArea = All;
+                }
+                field(ResourceNo; Rec."JMC Resource No.")
+                {
+                    Caption = 'Resource No.', Comment = 'ESP="Nº recurso"';
+                    ApplicationArea = All;
+                }
+                field(ResourceName; Rec."JMC Resource Name")
+                {
+                    Caption = 'Resource Name', Comment = 'ESP="Nombre recurso"';
                     ApplicationArea = All;
                 }
                 field(Comments; Rec."JMC Comments")
@@ -125,58 +138,6 @@ page 53110 "JMC Cronus"
     {
         area(Processing)
         {
-            action(ManageBusinessLines)
-            {
-                Caption = 'Business Lines', Comment = 'ESP="Lineas de negocio"';
-                ToolTip = 'Manage business lines.', Comment = 'ESP="Administrar lineas de negocio."';
-                ApplicationArea = All;
-                Image = Dimensions;
-                Promoted = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                var
-                    jmcBusinessLinesPage: Page "JMC Business Lines";
-                begin
-                    jmcBusinessLinesPage.Run();
-                end;
-            }
-            action(ManageFamilies)
-            {
-                Caption = 'Families', Comment = 'ESP="Familias"';
-                ToolTip = 'Manage families.', Comment = 'ESP="Administrar familias."';
-                ApplicationArea = All;
-                Image = Dimensions;
-                Promoted = true;
-                PromotedCategory = Process;
-
-                trigger OnAction()
-                var
-                    jmcFamiliesPage: Page "JMC Families";
-                begin
-                    jmcFamiliesPage.Run();
-                end;
-            }
-            action(DeleteRecord)
-            {
-                Caption = 'Delete', Comment = 'ESP="Eliminar"';
-                ToolTip = 'Deletes the selected operation record.', Comment = 'ESP="Elimina el registro operativo seleccionado."';
-                ApplicationArea = All;
-                Image = Delete;
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
-
-                trigger OnAction()
-                var
-                    jmcConfirmDeleteQst: Label 'Are you sure you want to delete this record?', Comment = 'ESP="¿Está seguro de que desea eliminar este registro?"';
-                begin
-                    if Confirm(jmcConfirmDeleteQst, false) then begin
-                        Rec.Delete(true);
-                        CurrPage.Update(false);
-                    end;
-                end;
-            }
             action(OpenJournal)
             {
                 Caption = 'Add Records', Comment = 'ESP="Añadir registros"';
@@ -192,6 +153,63 @@ page 53110 "JMC Cronus"
                     jmcOperRecJournal: Page "JMC Oper. Rec. Journal";
                 begin
                     jmcOperRecJournal.Run();
+                end;
+            }
+            action(BusinessLineValues)
+            {
+                Caption = 'Business Line', Comment = 'ESP="Linea negocio"';
+                ToolTip = 'Opens the dimension values for Business Line.', Comment = 'ESP="Abre los valores de dimensión para línea de negocio."';
+                ApplicationArea = All;
+                Image = Dimensions;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    jmcDimensionValue: Record "Dimension Value";
+                begin
+                    jmcDimensionValue.FilterGroup(2);
+                    jmcDimensionValue.SetRange("Dimension Code", 'LINEA');
+                    jmcDimensionValue.FilterGroup(0);
+                    Page.Run(Page::"Dimension Values", jmcDimensionValue);
+                end;
+            }
+            action(FamilyValues)
+            {
+                Caption = 'Family', Comment = 'ESP="Familia"';
+                ToolTip = 'Opens the dimension values for Family.', Comment = 'ESP="Abre los valores de dimensión para familia."';
+                ApplicationArea = All;
+                Image = Dimensions;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    jmcDimensionValue: Record "Dimension Value";
+                begin
+                    jmcDimensionValue.FilterGroup(2);
+                    jmcDimensionValue.SetRange("Dimension Code", 'FAMILIA');
+                    jmcDimensionValue.FilterGroup(0);
+                    Page.Run(Page::"Dimension Values", jmcDimensionValue);
+                end;
+            }
+            action(CustomerTypeValues)
+            {
+                Caption = 'Customer Type', Comment = 'ESP="Tipo cliente"';
+                ToolTip = 'Opens the dimension values for Customer Type.', Comment = 'ESP="Abre los valores de dimensión para tipo cliente."';
+                ApplicationArea = All;
+                Image = Dimensions;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction()
+                var
+                    jmcDimensionValue: Record "Dimension Value";
+                begin
+                    jmcDimensionValue.FilterGroup(2);
+                    jmcDimensionValue.SetRange("Dimension Code", 'TIPO CLIENTE');
+                    jmcDimensionValue.FilterGroup(0);
+                    Page.Run(Page::"Dimension Values", jmcDimensionValue);
                 end;
             }
         }

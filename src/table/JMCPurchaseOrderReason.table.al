@@ -4,6 +4,8 @@ table 53114 "JMC Purchase Order Reason"
     DataClassification = CustomerContent;
     LookupPageId = "JMC Purchase Order Reasons";
     DrillDownPageId = "JMC Purchase Order Reasons";
+    InherentPermissions = RX;
+    InherentEntitlements = RX;
 
     fields
     {

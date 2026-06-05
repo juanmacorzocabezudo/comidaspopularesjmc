@@ -8,9 +8,10 @@ page 53112 "JMC Cronus Statistics"
     {
         area(Content)
         {
-            group(Totals)
+            group(TotalsGroup)
             {
                 Caption = 'Totals', Comment = 'ESP="Totales"';
+                ShowCaption = true;
 
                 field(TotalIncome; TotalIncomeValue)
                 {
@@ -28,14 +29,26 @@ page 53112 "JMC Cronus Statistics"
                     Style = Unfavorable;
                     StyleExpr = true;
                 }
+            }
+            group(CashBoxGroup)
+            {
+                Caption = 'Cash Box', Comment = 'ESP="Caja"';
+                ShowCaption = true;
+
                 field(TotalCashBox; TotalCashBoxValue)
                 {
                     Caption = 'Total in Cash Box', Comment = 'ESP="Total en Caja"';
                     ApplicationArea = All;
                     Editable = false;
-                    Style = Attention;
+                    Style = Strong;
                     StyleExpr = true;
                 }
+            }
+            group(HomeGroup)
+            {
+                Caption = 'Home', Comment = 'ESP="Casa"';
+                ShowCaption = true;
+
                 field(TotalHome; TotalHomeValue)
                 {
                     Caption = 'Total at Home', Comment = 'ESP="Total en Casa"';
@@ -78,6 +91,9 @@ page 53112 "JMC Cronus Statistics"
         TotalExpenseValue := 0;
         TotalCashBoxValue := 0;
         TotalHomeValue := 0;
+
+        OperationRecord.Copy(Rec);
+        OperationRecord.SetRange("JMC Entry No.");
 
         if OperationRecord.FindSet() then
             repeat

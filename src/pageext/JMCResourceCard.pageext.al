@@ -1,13 +1,13 @@
-pageextension 53103 "JMC G/L Account Card" extends "G/L Account Card"
+pageextension 53117 "JMC Resource Card" extends "Resource Card"
 {
     layout
     {
-        addafter("Account Category")
+        addafter(Type)
         {
-            field("JMC CP Categories"; Rec."JMC CP Categories")
+            field("JMC Gestoría ID"; Rec."JMC Gestoría ID")
             {
                 ApplicationArea = All;
-                Caption = 'CP Categories', Comment = 'ESP="Categorías CP"';
+                Caption = 'Gestoría ID', Comment = 'ESP="ID Gestoría"';
             }
             field("JMC Cost Type"; Rec."JMC Cost Type")
             {

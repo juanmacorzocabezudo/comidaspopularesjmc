@@ -4,11 +4,20 @@ pageextension 53114 "JMC Pstd Purch Rcpt Subform" extends "Posted Purchase Rcpt.
     {
         addafter("Shortcut Dimension 2 Code")
         {
-            field("JMC Responsibility Center"; Rec."Responsibility Center")
+            field("JMC Internal Notes"; Rec."JMC Internal Notes")
             {
                 ApplicationArea = All;
-                Caption = 'Business Line', Comment = 'ESP="Línea negocio"';
-                Visible = true;
+                Caption = 'Internal Notes', Comment = 'ESP="Observaciones internas"';
+            }
+            field("JMC Received"; Rec."JMC Received")
+            {
+                ApplicationArea = All;
+                Caption = 'Received', Comment = 'ESP="Recibido"';
+            }
+            field("JMC Recipe"; Rec."JMC Recipe")
+            {
+                ApplicationArea = All;
+                Caption = 'Recipe', Comment = 'ESP="Receta"';
             }
         }
     }

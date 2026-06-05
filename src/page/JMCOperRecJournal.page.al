@@ -20,6 +20,11 @@ page 53111 "JMC Oper. Rec. Journal"
                     ToolTip = 'Specifies the posting date for the analysis movement.', Comment = 'ESP="Especifica la fecha de registro para el registro operativo."';
                     ApplicationArea = All;
                 }
+                field(CostType; Rec."JMC Cost Type")
+                {
+                    Caption = 'Type', Comment = 'ESP="Tipo"';
+                    ApplicationArea = All;
+                }
                 field(CashBox; Rec."JMC Cash Box")
                 {
                     Caption = 'Cash Box', Comment = 'ESP="Caja"';
@@ -61,29 +66,30 @@ page 53111 "JMC Oper. Rec. Journal"
                 {
                     Caption = 'Business Line', Comment = 'ESP="Linea de negocio"';
                     ApplicationArea = All;
-
-                    trigger OnAssistEdit()
-                    var
-                        jmcBusinessLinesPage: Page "JMC Business Lines";
-                    begin
-                        jmcBusinessLinesPage.Run();
-                    end;
                 }
                 field(Family; Rec."JMC Family")
                 {
                     Caption = 'Family', Comment = 'ESP="Familia"';
                     ApplicationArea = All;
-
-                    trigger OnAssistEdit()
-                    var
-                        jmcFamiliesPage: Page "JMC Families";
-                    begin
-                        jmcFamiliesPage.Run();
-                    end;
                 }
-                field(ExternalReference; Rec."JMC External Reference")
+                field(FamilyName; Rec."JMC Family Name")
                 {
-                    Caption = 'External Reference', Comment = 'ESP="Referencia externa"';
+                    Caption = 'Family Name', Comment = 'ESP="Nombre familia"';
+                    ApplicationArea = All;
+                }
+                field(CustomerType; Rec."JMC Customer Type")
+                {
+                    Caption = 'Customer Type', Comment = 'ESP="Tipo cliente"';
+                    ApplicationArea = All;
+                }
+                field(ResourceNo; Rec."JMC Resource No.")
+                {
+                    Caption = 'Resource No.', Comment = 'ESP="Nº recurso"';
+                    ApplicationArea = All;
+                }
+                field(ResourceName; Rec."JMC Resource Name")
+                {
+                    Caption = 'Resource Name', Comment = 'ESP="Nombre recurso"';
                     ApplicationArea = All;
                 }
                 field(Comments; Rec."JMC Comments")

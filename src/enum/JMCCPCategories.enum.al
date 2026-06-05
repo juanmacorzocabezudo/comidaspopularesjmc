@@ -4,7 +4,7 @@ enum 53111 "JMC CP Categories"
 
     value(0; " ")
     {
-        Caption = ' ', Comment = 'ESP=" "';
+        Caption = ' ';
     }
     value(1; "Current Asset")
     {

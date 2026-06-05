@@ -13,3 +13,12 @@
 
 # AL Compiler artifacts
 rad.json
+
+# Data files (Excel, CSV, etc.)
+*.xlsx
+*.xls
+*.csv
+
+# Backup files
+*copy.xlsx
+*copy.xls

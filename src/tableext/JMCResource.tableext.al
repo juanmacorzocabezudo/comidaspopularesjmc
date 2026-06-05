@@ -1,10 +1,10 @@
-tableextension 53103 "JMC G/L Account" extends "G/L Account"
+tableextension 53112 "JMC Resource" extends Resource
 {
     fields
     {
-        field(53101; "JMC CP Categories"; Enum "JMC CP Categories")
+        field(53101; "JMC Gestoría ID"; Code[20])
         {
-            Caption = 'CP Categories', Comment = 'ESP="Categorías CP"';
+            Caption = 'Gestoría ID', Comment = 'ESP="ID Gestoría"';
             DataClassification = CustomerContent;
         }
         field(53102; "JMC Cost Type"; Enum "JMC Cost Type")

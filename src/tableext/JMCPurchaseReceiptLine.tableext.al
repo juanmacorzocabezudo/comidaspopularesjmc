@@ -19,5 +19,15 @@ tableextension 53109 "JMC Purch. Rcpt. Line" extends "Purch. Rcpt. Line"
             Caption = 'Internal Notes', Comment = 'ESP="Observaciones internas"';
             DataClassification = CustomerContent;
         }
+        field(53103; "JMC Received"; Boolean)
+        {
+            Caption = 'Received', Comment = 'ESP="Recibido"';
+            DataClassification = CustomerContent;
+        }
+        field(53104; "JMC Recipe"; Text[100])
+        {
+            Caption = 'Recipe', Comment = 'ESP="Receta"';
+            DataClassification = CustomerContent;
+        }
     }
 }

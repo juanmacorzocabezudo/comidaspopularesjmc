@@ -3,21 +3,6 @@
   <file datatype="xml" source-language="en-US" target-language="en-US" original="CP-JMC Base">
     <body>
       <group id="body">
-        <trans-unit id="Table 2020166536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Business Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Linea de negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Business Line - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 2020166536 - Field 3870862051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Business Line - Field JMC Code - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 2020166536 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Business Line - Field JMC Description - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3452581174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cronus</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cronus"</note>
@@ -43,6 +28,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Linea de negocio"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Business Line - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 2746250165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Line Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre línea negocio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Business Line Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3452581174 - Field 3346077548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cash Box</source>
           <note from="Developer" annotates="general" priority="2">ESP="Caja"</note>
@@ -57,6 +47,11 @@
           <source>Concept</source>
           <note from="Developer" annotates="general" priority="2">ESP="Concepto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Concept - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Cost Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3452581174 - Field 2133148144 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation DateTime</source>
@@ -73,6 +68,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cronus"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Cronus - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Customer Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 589816305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Customer Type Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3452581174 - Field 53952327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detail</source>
           <note from="Developer" annotates="general" priority="2">ESP="Detalle"</note>
@@ -83,15 +88,15 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Entry No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 3452581174 - Field 1092179614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>External Reference</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Referencia externa"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC External Reference - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 3452581174 - Field 972704678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Family - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 53081495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Family Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Family Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3452581174 - Field 600621242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
@@ -113,6 +118,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Posting Date - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 2662219907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Resource Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3452581174 - Field 231317795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus - Field JMC Resource No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3452581174 - Field 3026719715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Responsible User</source>
           <note from="Developer" annotates="general" priority="2">ESP="Usuario responsable"</note>
@@ -127,6 +142,11 @@
           <source>Cronus Journal Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Linea diario CRONUS"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1056067502 - Method 3000404747 - NamedType 4000598163" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount must be different from zero.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El importe debe ser distinto de cero."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Method NormalizeAmount - NamedType jmcAmountCannotBeZeroErr</note>
         </trans-unit>
         <trans-unit id="Table 1056067502 - Field 3011512269 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Account</source>
@@ -143,6 +163,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Linea de negocio"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Business Line - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 2746250165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Line Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre línea negocio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Business Line Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1056067502 - Field 3346077548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cash Box</source>
           <note from="Developer" annotates="general" priority="2">ESP="Caja"</note>
@@ -158,6 +183,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Concepto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Concept - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Cost Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Customer Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 589816305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Customer Type Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1056067502 - Field 53952327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detail</source>
           <note from="Developer" annotates="general" priority="2">ESP="Detalle"</note>
@@ -168,15 +208,15 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nº linea"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Entry No. - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Table 1056067502 - Field 1092179614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>External Reference</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Referencia externa"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC External Reference - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Table 1056067502 - Field 972704678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Family - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 53081495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Family Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Family Name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1056067502 - Field 600621242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
@@ -213,6 +253,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora registro"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Registered DateTime - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 2662219907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Resource Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1056067502 - Field 231317795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Resource No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1056067502 - Field 3026719715 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Responsible User</source>
           <note from="Developer" annotates="general" priority="2">ESP="Usuario responsable"</note>
@@ -222,21 +272,6 @@
           <source>User Name</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nombre de usuario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Responsible User Name - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 972704678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Family</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Family - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 972704678 - Field 3870862051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Family - Field JMC Code - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 972704678 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Family - Field JMC Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3654729090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Order Method</source>
@@ -277,21 +312,6 @@
           <source>%1 line(s) have been registered in analysis entries.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
-        </trans-unit>
-        <trans-unit id="Page 1163480457 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Business Lines</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Lineas de negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Business Lines - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1163480457 - Control 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Business Lines - Control Code - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1163480457 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Business Lines - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>
@@ -458,6 +478,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Concepto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control Concept - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3452581174 - Control 2300093965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control CostType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3452581174 - Control 675121212 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Creation DateTime</source>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora creacion"</note>
@@ -473,6 +498,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Cronus"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control Cronus - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3452581174 - Control 2076807096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control CustomerType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3452581174 - Control 2642869315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detail</source>
           <note from="Developer" annotates="general" priority="2">ESP="Detalle"</note>
@@ -483,15 +513,15 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control EntryNo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Control 3227332498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>External Reference</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Referencia externa"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control ExternalReference - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 3452581174 - Control 633051610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control Family - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3452581174 - Control 2903497563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Family Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control FamilyName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3452581174 - Control 1260824717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
@@ -508,45 +538,50 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control PostingDate - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3452581174 - Control 4250575119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control ResourceName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3452581174 - Control 2754093181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control ResourceNo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3452581174 - Control 84074407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Statistics</source>
           <note from="Developer" annotates="general" priority="2">ESP="Estadísticas"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Control Statistics - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 2957767720 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Deletes the selected operation record.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Elimina el registro operativo seleccionado."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action DeleteRecord - Property ToolTip</note>
+        <trans-unit id="Page 3452581174 - Action 1413536876 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the dimension values for Business Line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre los valores de dimensión para línea de negocio."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action BusinessLineValues - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 2957767720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Delete</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Eliminar"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action DeleteRecord - Property Caption</note>
+        <trans-unit id="Page 3452581174 - Action 1413536876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Linea negocio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action BusinessLineValues - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 2957767720 - Method 1377591017 - NamedType 3456453259" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Are you sure you want to delete this record?</source>
-          <note from="Developer" annotates="general" priority="2">ESP="¿Está seguro de que desea eliminar este registro?"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action DeleteRecord - Method OnAction - NamedType jmcConfirmDeleteQst</note>
+        <trans-unit id="Page 3452581174 - Action 1157019736 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the dimension values for Customer Type.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre los valores de dimensión para tipo cliente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action CustomerTypeValues - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 3139134606 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manage business lines.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Administrar lineas de negocio."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action ManageBusinessLines - Property ToolTip</note>
+        <trans-unit id="Page 3452581174 - Action 1157019736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action CustomerTypeValues - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 3139134606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Business Lines</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Lineas de negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action ManageBusinessLines - Property Caption</note>
+        <trans-unit id="Page 3452581174 - Action 2682744826 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Opens the dimension values for Family.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre los valores de dimensión para familia."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action FamilyValues - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 1616387483 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Manage families.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Administrar familias."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action ManageFamilies - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 3452581174 - Action 1616387483 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Families</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Familias"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action ManageFamilies - Property Caption</note>
+        <trans-unit id="Page 3452581174 - Action 2682744826 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Family</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus - Action FamilyValues - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3452581174 - Action 1164579583 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Opens the journal to add new operation records.</source>
@@ -563,45 +598,40 @@
           <note from="Developer" annotates="general" priority="2">ESP="Estadísticas de Cronus"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 412555537 - Control 3971433691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Totals</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Totales"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control Totals - Property Caption</note>
+        <trans-unit id="Page 412555537 - Control 1957563541 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Box</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Caja"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control CashBoxGroup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 412555537 - Control 1281461274 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total in Cash Box</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total en Caja"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalCashBox - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 412555537 - Control 1984557254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Expenses</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Total gastos"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalExpense - Property Caption</note>
+        <trans-unit id="Page 412555537 - Control 3656943684 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Home</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Casa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control HomeGroup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 412555537 - Control 58082303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total at Home</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total en Casa"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalHome - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 412555537 - Control 448466658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Totals</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Totales"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalsGroup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 412555537 - Control 1984557254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Expenses</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total gastos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalExpense - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 412555537 - Control 3483792763 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Total Income</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total ingresos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalIncome - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3614424760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Families</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Familias"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Families - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3614424760 - Control 3004954119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Families - Control Code - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3614424760 - Control 3461834954 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Families - Control Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
@@ -668,20 +698,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Concepto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control Concept - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2937564307 - Control 2300093965 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control CostType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2937564307 - Control 2076807096 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control CustomerType - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2937564307 - Control 2642869315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Detail</source>
           <note from="Developer" annotates="general" priority="2">ESP="Detalle"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control Detail - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2937564307 - Control 3227332498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>External Reference</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Referencia externa"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control ExternalReference - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 2937564307 - Control 633051610 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control Family - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2937564307 - Control 2903497563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Family Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control FamilyName - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2937564307 - Control 1260824717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No.</source>
@@ -707,6 +747,16 @@
           <source>Posting Date</source>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control PostingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2937564307 - Control 4250575119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control ResourceName - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2937564307 - Control 2754093181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Control ResourceNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2937564307 - Action 4224692072 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Registers all unregistered journal lines into operation records.</source>
@@ -798,6 +848,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Debe seleccionar una línea para añadir observaciones internas."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Action JMC Add Internal Notes - Method OnAction - NamedType jmcNoLineSelectedErr</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Action 1828475592 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>View and edit the purchase order related to the selected line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver y editar el pedido de compra relacionado con la línea seleccionada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Action JMC View Purchase Order - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Action 1828475592 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>View Purchase Order</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver pedido compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Action JMC View Purchase Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Action 1828475592 - Method 1377591017 - NamedType 3508608135" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 3072224728">
+          <source>No purchase order found for this line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se encontró pedido de compra para esta línea."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Action JMC View Purchase Order - Method OnAction - NamedType jmcNoPurchaseOrderErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 413286464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Direct Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste unitario directo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Direct Unit Cost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3072224728 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
           <source>Internal Notes</source>
           <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
@@ -813,40 +883,125 @@
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Purchase Order Reason Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3072224728 - Control 2247850105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+        <trans-unit id="PageExtension 3072224728 - Control 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Recipe (Free Text)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta (Texto libre)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 1812177924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
           <source>Business Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Línea negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control Responsibility Center - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Shortcut Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 1778312005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Family</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 2702998682 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Discount %</source>
+          <note from="Developer" annotates="general" priority="2">ESP="% Descuento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control Line Discount % - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3072224728 - Control 3450651614 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
           <source>Brand</source>
           <note from="Developer" annotates="general" priority="2">ESP="Marca"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control Variant Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Control 1689561207 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Last Direct Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Último Coste Directo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Control Último Coste Directo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3072224728 - Change 68186622 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
+          <source>Unit Cost with Discount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 2573148565 - Control 2276326627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3105459369">
           <source>CP Categories</source>
           <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Chart of Accounts - Control JMC CP Categories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3336454887 - Control 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4219821699">
+          <source>Cost Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC Cost Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 3336454887 - Control 2276326627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4219821699">
           <source>CP Categories</source>
           <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC CP Categories - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4197554639 - Control 1984971365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
-          <source>Business Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Línea negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Cr M Subform - Control JMC Responsibility Center - Property Caption</note>
+        <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>Open the item card for the item in this entry, even if it is blocked.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abrir la ficha del producto de este movimiento, incluso si está bloqueado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 3854882044 - Control 1984971365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2410131092">
-          <source>Business Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Línea negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Inv Subform - Control JMC Responsibility Center - Property Caption</note>
+        <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
+          <source>View Related Item</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver producto relacionado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1933228888 - Control 1984971365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2406989597">
-          <source>Business Line</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Línea negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Rcpt Subform - Control JMC Responsibility Center - Property Caption</note>
+        <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Method 1377591017 - NamedType 1967538207" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4239028258">
+          <source>No source number specified for this entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No hay código de procedencia especificado para este movimiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Method OnAction - NamedType jmcNoItemErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Method 1377591017 - NamedType 2717204809" size-unit="char" translate="yes" xml:space="preserve" al-object-target="PageExtension 4239028258">
+          <source>Item %1 does not exist.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no existe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Method OnAction - NamedType jmcItemNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
+          <source>Internal Notes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Cr M Subform - Control JMC Internal Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4197554639 - Control 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Cr M Subform - Control JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4197554639 - Control 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Cr M Subform - Control JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3854882044 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2410131092">
+          <source>Internal Notes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Inv Subform - Control JMC Internal Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3854882044 - Control 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2410131092">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Inv Subform - Control JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3854882044 - Control 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2410131092">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Inv Subform - Control JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1933228888 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2406989597">
+          <source>Internal Notes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Rcpt Subform - Control JMC Internal Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1933228888 - Control 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2406989597">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Rcpt Subform - Control JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1933228888 - Control 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2406989597">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Rcpt Subform - Control JMC Recipe - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 142967027 - Control 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
           <source>Purchase Order Method</source>
@@ -858,10 +1013,55 @@
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Control JMC Purchase Order Reason Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 888496525 - Control 1984971365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+        <trans-unit id="PageExtension 3239250589 - Action 2747857051 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
+          <source>View all purchase order lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver todas las líneas de pedidos de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order List - Action JMC View Purchase Order Lines - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3239250589 - Action 2747857051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
+          <source>View Purchase Order Lines</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver Lineas Pedido Compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order List - Action JMC View Purchase Order Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 888496525 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+          <source>Internal Notes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Internal Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 888496525 - Control 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 888496525 - Control 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+          <source>Recipe (Free Text)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta (Texto libre)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 888496525 - Control 1812177924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
           <source>Business Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Línea negocio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Responsibility Center - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 888496525 - Control 1778312005 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
+          <source>Family</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 996725262 - Control 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1580859378">
+          <source>Cost Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Resource Card - Control JMC Cost Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 996725262 - Control 144979543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1580859378">
+          <source>Gestoría ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Resource Card - Control JMC Gestoría ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3527052147 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
+          <source>Cost Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC G/L Account - Field JMC Cost Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3527052147 - Field 2276326627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
           <source>CP Categories</source>
@@ -893,6 +1093,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Cr. Memo Line - Field JMC Purchase Order Reason Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1688147527 - Field 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Cr. Memo Line - Field JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1688147527 - Field 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 518488723">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Cr. Memo Line - Field JMC Recipe - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 553772042 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1592379974">
           <source>Purchase Order Method</source>
           <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
@@ -917,6 +1127,16 @@
           <source>Purchase Order Reason</source>
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Inv. Line - Field JMC Purchase Order Reason Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 140149905 - Field 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Inv. Line - Field JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 140149905 - Field 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2575310733">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Inv. Line - Field JMC Recipe - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2624312134 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1052755578">
           <source>Purchase Order Method</source>
@@ -943,6 +1163,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Rcpt. Line - Field JMC Purchase Order Reason Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3355678861 - Field 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Rcpt. Line - Field JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3355678861 - Field 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 959319265">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purch. Rcpt. Line - Field JMC Recipe - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2817669124 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
           <source>Purchase Order Method</source>
           <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
@@ -968,6 +1198,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purchase Line - Field JMC Purchase Order Reason Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 3534185835 - Field 4145227925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Received</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Recibido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purchase Line - Field JMC Received - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3534185835 - Field 2726943352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1519909599">
+          <source>Recipe</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purchase Line - Field JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 217764810 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 348912950">
+          <source>Cost Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Cost Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 217764810 - Field 144979543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 348912950">
+          <source>Gestoría ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 3346077548 - EnumValue 1704809163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cash Box</source>
           <note from="Developer" annotates="general" priority="2">ESP="Caja"</note>
@@ -978,9 +1228,19 @@
           <note from="Developer" annotates="general" priority="2">ESP="Casa"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Cash Box - EnumValue Casa - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 2951830561 - EnumValue 744835066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fijo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Cost Type - EnumValue Fixed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 2951830561 - EnumValue 2371676730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Variable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Cost Type - EnumValue Variable - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <note from="Developer" annotates="general" priority="2">ESP=" "</note>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

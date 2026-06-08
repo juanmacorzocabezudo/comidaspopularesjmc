@@ -1,6 +1,6 @@
 codeunit 53103 "JMC Weight Extractor"
 {
-    procedure ExtractWeightInGrams(Description: Text): Decimal
+    procedure ExtractWeightInKilos(Description: Text): Decimal
     var
         Weight: Decimal;
         CleanDesc: Text;
@@ -39,7 +39,7 @@ codeunit 53103 "JMC Weight Extractor"
                     NumberText := CopyStr(NumberText, 1, CommaPos - 1) + '.' + CopyStr(NumberText, CommaPos + 1);
 
                 if Evaluate(Weight, NumberText) then begin
-                    Weight := Weight * 1000; // Convert to grams
+                    // Weight is already in kilos
                     exit(true);
                 end;
             end;
@@ -62,8 +62,10 @@ codeunit 53103 "JMC Weight Extractor"
                 NumberText := ExtractNumberBeforeKeyword(Description, 'GR');
 
             if NumberText <> '' then begin
-                if Evaluate(Weight, NumberText) then
+                if Evaluate(Weight, NumberText) then begin
+                    Weight := Weight / 1000; // Convert grams to kilos
                     exit(true);
+                end;
             end;
         end;
         exit(false);
@@ -80,7 +82,7 @@ codeunit 53103 "JMC Weight Extractor"
                 NumberText := ExtractNumberBeforeKeyword(Description, 'LITRO');
                 if NumberText <> '' then begin
                     if Evaluate(Weight, NumberText) then begin
-                        Weight := Weight * 1000; // Convert liters to ml
+                        // Weight is already in kilos (1 liter ≈ 1 kg)
                         exit(true);
                     end;
                 end;
@@ -92,8 +94,10 @@ codeunit 53103 "JMC Weight Extractor"
                 NumberText := ExtractNumberBeforeKeyword(Description, 'MILILITRO');
 
             if NumberText <> '' then begin
-                if Evaluate(Weight, NumberText) then
+                if Evaluate(Weight, NumberText) then begin
+                    Weight := Weight / 1000; // Convert ml to kilos
                     exit(true);
+                end;
             end;
         end;
         exit(false);

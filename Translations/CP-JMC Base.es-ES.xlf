@@ -1138,15 +1138,15 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC CP Categories - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies the weight of the item in grams.</source>
-          <target>Especifica el peso del producto en gramos.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en gramos."</note>
+          <source>Specifies the weight of the item in kilograms.</source>
+          <target>Especifica el peso del producto en kilogramos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Weight (Gr)</source>
-          <target>Peso (Gr)</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Peso (Gr)"</note>
+          <source>Weight (Kg)</source>
+          <target>Peso (Kg)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso (Kg)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
@@ -1589,7 +1589,7 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target>[NAB: REVIEW] </target>
+          <target> </target>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>

@@ -30,7 +30,7 @@ report 53101 "JMC Update Item Weights"
                 end;
 
                 // Extract weight from description
-                ExtractedWeight := WeightExtractor.ExtractWeightInGrams(FormatoProducto.Descripcion);
+                ExtractedWeight := WeightExtractor.ExtractWeightInKilos(FormatoProducto.Descripcion);
 
                 if ExtractedWeight > 0 then begin
                     Item."JMC Weight" := ExtractedWeight;

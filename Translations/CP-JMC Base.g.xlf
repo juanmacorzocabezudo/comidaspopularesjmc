@@ -828,6 +828,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Control ConfirmDeletion - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 2107182141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Item Weights from Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar pesos de productos desde formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2107182141 - NamedType 1000503204" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process completed:\Updated: %1\Skipped (already has weight): %2\No weight found in description: %3\Format not found: %4</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3072224728 - Action 1716364059 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 239521356">
           <source>Add or edit internal notes for the selected line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Añadir o editar observaciones internas para la línea seleccionada."</note>
@@ -938,6 +948,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC CP Categories - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the weight of the item in kilograms.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Weight (Kg)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso (Kg)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Open the item card for the item in this entry, even if it is blocked.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Abrir la ficha del producto de este movimiento, incluso si está bloqueado."</note>
@@ -1003,6 +1023,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Purch Rcpt Subform - Control JMC Recipe - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1009807651 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1257057922">
+          <source>Specifies comments for this credit memo line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica comentarios para esta línea de abono."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Sales Cr M Subform - Control JMC Comments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1009807651 - Control 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1257057922">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Sales Cr M Subform - Control JMC Comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1009807651 - Control 1232661154 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1257057922">
+          <source>Specifies if this line is a return.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si esta línea es una devolución."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Sales Cr M Subform - Control JMC Return - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1009807651 - Control 1232661154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1257057922">
+          <source>Return</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Pstd Sales Cr M Subform - Control JMC Return - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 142967027 - Control 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
           <source>Purchase Order Method</source>
           <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
@@ -1058,6 +1098,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Resource Card - Control JMC Gestoría ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
+          <source>Specifies comments for this credit memo line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica comentarios para esta línea de abono."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Comments - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1700197791 - Control 1232661154 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
+          <source>Specifies if this line is a return.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si esta línea es una devolución."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1700197791 - Control 1232661154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
+          <source>Return</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 3527052147 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
           <source>Cost Type</source>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
@@ -1067,6 +1127,11 @@
           <source>CP Categories</source>
           <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC G/L Account - Field JMC CP Categories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Weight</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Weight - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 741081079 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Purchase Order Method</source>
@@ -1217,6 +1282,26 @@
           <source>Gestoría ID</source>
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 866013865 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Cr. Memo Line - Field JMC Comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 866013865 - Field 1232661154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
+          <source>Return</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Cr. Memo Line - Field JMC Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3019300814 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Line - Field JMC Comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 3019300814 - Field 1232661154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
+          <source>Return</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Line - Field JMC Return - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 3346077548 - EnumValue 1704809163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cash Box</source>

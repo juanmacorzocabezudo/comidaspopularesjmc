@@ -1283,6 +1283,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Pasivo no corriente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue Non-Current Liability - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PermissionSet 1866728888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JMC CP Base Management</source>
+          <note from="Developer" annotates="general" priority="2">ESP="JMC CP Base - Gestión"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet JMC CP BASE MGT - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PermissionSet 3118563034 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Operation Record Maintenance</source>
           <note from="Developer" annotates="general" priority="2">ESP="Mantenimiento registro operativo"</note>

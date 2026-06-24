@@ -1,4 +1,4 @@
-pageextension 53104 "JMC Chart of Accounts" extends "Chart of Accounts"
+/*pageextension 53104 "JMC Chart of Accounts" extends "Chart of Accounts"
 {
     layout
     {
@@ -12,4 +12,4 @@ pageextension 53104 "JMC Chart of Accounts" extends "Chart of Accounts"
             }
         }
     }
-}
+}*/

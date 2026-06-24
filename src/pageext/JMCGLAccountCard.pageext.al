@@ -1,4 +1,4 @@
-pageextension 53103 "JMC G/L Account Card" extends "G/L Account Card"
+/*pageextension 53103 "JMC G/L Account Card" extends "G/L Account Card"
 {
     layout
     {
@@ -16,4 +16,4 @@ pageextension 53103 "JMC G/L Account Card" extends "G/L Account Card"
             }
         }
     }
-}
+}*/

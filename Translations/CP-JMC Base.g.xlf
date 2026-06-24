@@ -933,21 +933,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 2573148565 - Control 2276326627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3105459369">
-          <source>CP Categories</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Chart of Accounts - Control JMC CP Categories - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3336454887 - Control 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4219821699">
-          <source>Cost Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo coste"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC Cost Type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 3336454887 - Control 2276326627 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4219821699">
-          <source>CP Categories</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC CP Categories - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>

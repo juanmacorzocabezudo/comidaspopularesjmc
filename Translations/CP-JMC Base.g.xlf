@@ -798,6 +798,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Purchase Order Reasons - Control Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 3201346265 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Activate Price List Lines</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Activar líneas de lista de precios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - NamedType 3366217384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 price list lines have been activated successfully.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="%1 líneas de lista de precios se han activado correctamente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - NamedType CompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - NamedType 460844637" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must confirm the activation by checking the "Confirm Activation" field.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Debe confirmar la activación marcando el campo Confirmar activación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - NamedType ConfirmationRequiredErr</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - NamedType 2022467170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This process will change the status of all filtered Price List Lines to Active. Use the filters to limit the lines to process. Make sure to check "Confirm Activation" to proceed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Este proceso cambiará el estado de todas las líneas de lista de precios filtradas a Activo. Use los filtros para limitar las líneas a procesar. Asegúrese de marcar Confirmar activación para continuar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - NamedType InfoTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - Control 419426744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Información"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Control Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - Control 480581714 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm that you want to activate all filtered price list lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirme que desea activar todas las líneas de lista de precios filtradas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Control ConfirmActivation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3201346265 - Control 480581714 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm Activation</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirmar activación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Control ConfirmActivation - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3538701464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Delete Archived Events</source>
           <note from="Developer" annotates="general" priority="2">ESP="Eliminar eventos archivados"</note>

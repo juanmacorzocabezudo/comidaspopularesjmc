@@ -61,11 +61,6 @@ page 53112 "JMC Cronus Statistics"
         }
     }
 
-    trigger OnAfterGetCurrRecord()
-    begin
-        UpdateTotals();
-    end;
-
     trigger OnOpenPage()
     begin
         UpdateTotals();
@@ -94,6 +89,7 @@ page 53112 "JMC Cronus Statistics"
 
         OperationRecord.Copy(Rec);
         OperationRecord.SetRange("JMC Entry No.");
+        OperationRecord.SetLoadFields("JMC Movement Type", "JMC Amount", "JMC Cash Box");
 
         if OperationRecord.FindSet() then
             repeat

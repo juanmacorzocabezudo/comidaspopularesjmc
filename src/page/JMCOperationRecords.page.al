@@ -38,11 +38,21 @@ page 53110 "JMC Cronus"
                 {
                     Caption = 'Cash Box', Comment = 'ESP="Caja"';
                     ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Statistics.Page.UpdateTotals();
+                    end;
                 }
                 field(MovementType; Rec."JMC Movement Type")
                 {
                     Caption = 'Movement Type', Comment = 'ESP="Tipo de movimiento"';
                     ApplicationArea = All;
+
+                    trigger OnValidate()
+                    begin
+                        CurrPage.Statistics.Page.UpdateTotals();
+                    end;
                 }
                 field(Amount; Rec."JMC Amount")
                 {
@@ -54,6 +64,7 @@ page 53110 "JMC Cronus"
                     trigger OnValidate()
                     begin
                         jmcIsNegativeAmount := Rec."JMC Amount" < 0;
+                        CurrPage.Statistics.Page.UpdateTotals();
                         CurrPage.Update(false);
                     end;
                 }
@@ -153,6 +164,7 @@ page 53110 "JMC Cronus"
                     jmcOperRecJournal: Page "JMC Oper. Rec. Journal";
                 begin
                     jmcOperRecJournal.Run();
+                    CurrPage.Statistics.Page.UpdateTotals();
                 end;
             }
             action(BusinessLineValues)
@@ -221,22 +233,60 @@ page 53110 "JMC Cronus"
     begin
         if not (IsUserInPermissionSet('JMC OPER. REC. READ') or IsUserInPermissionSet('JMC OPER. REC. MGT')) then
             Error(jmcAccessDeniedErr);
+
+        jmcLastRecordCount := GetRecordCount();
+        CurrPage.Statistics.Page.UpdateTotals();
     end;
 
     trigger OnAfterGetRecord()
     begin
         jmcIsNegativeAmount := Rec."JMC Amount" < 0;
-        CurrPage.Statistics.Page.UpdateTotals();
+
+        // Actualizar estadísticas después de cualquier cambio
+        if jmcRecordModified then begin
+            CurrPage.Statistics.Page.UpdateTotals();
+            jmcRecordModified := false;
+        end;
     end;
 
     trigger OnAfterGetCurrRecord()
+    var
+        jmcCurrentRecordCount: Integer;
     begin
         jmcIsNegativeAmount := Rec."JMC Amount" < 0;
-        CurrPage.Statistics.Page.UpdateTotals();
+
+        // Solo actualizar estadísticas si el número de registros ha cambiado
+        // Esto detecta inserciones/eliminaciones desde el diario
+        jmcCurrentRecordCount := GetRecordCount();
+        if jmcCurrentRecordCount <> jmcLastRecordCount then begin
+            CurrPage.Statistics.Page.UpdateTotals();
+            jmcLastRecordCount := jmcCurrentRecordCount;
+        end;
+    end;
+
+    trigger OnModifyRecord(): Boolean
+    begin
+        jmcIsNegativeAmount := Rec."JMC Amount" < 0;
+        jmcRecordModified := true;  // Marcar que hubo modificación
+    end;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    begin
+        jmcIsNegativeAmount := Rec."JMC Amount" < 0;
+        jmcLastRecordCount := GetRecordCount() + 1;
+        jmcRecordModified := true;  // Marcar que hubo inserción
+    end;
+
+    trigger OnDeleteRecord(): Boolean
+    begin
+        jmcLastRecordCount := GetRecordCount() - 1;
+        CurrPage.Statistics.Page.UpdateTotals();  // Actualizar inmediatamente al eliminar
     end;
 
     var
         jmcIsNegativeAmount: Boolean;
+        jmcLastRecordCount: Integer;
+        jmcRecordModified: Boolean;
 
     local procedure IsUserInPermissionSet(PermissionSetCode: Code[20]): Boolean
     var
@@ -245,5 +295,14 @@ page 53110 "JMC Cronus"
         AccessControl.SetRange("User Security ID", UserSecurityId());
         AccessControl.SetRange("Role ID", PermissionSetCode);
         exit(not AccessControl.IsEmpty());
+    end;
+
+    local procedure GetRecordCount(): Integer
+    var
+        jmcOperationRecord: Record "JMC Cronus";
+    begin
+        jmcOperationRecord.Copy(Rec);
+        jmcOperationRecord.SetRange("JMC Entry No.");
+        exit(jmcOperationRecord.Count());
     end;
 }

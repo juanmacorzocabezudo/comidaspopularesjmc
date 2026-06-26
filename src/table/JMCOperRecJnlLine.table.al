@@ -75,6 +75,11 @@ table 53111 "JMC Cronus Jnl. Line"
             Caption = 'Family', Comment = 'ESP="Familia"';
             TableRelation = "Dimension Value".Code where("Dimension Code" = const('FAMILIA'));
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                CalcFields("JMC Family Name");
+            end;
         }
         field(23; "JMC Family Name"; Text[100])
         {

@@ -12,12 +12,15 @@ tableextension 53104 "JMC Purchase Header" extends "Purchase Header"
             var
                 PurchLine: Record "Purchase Line";
             begin
+                // Update all existing lines with the new reason code
                 PurchLine.SetRange("Document Type", Rec."Document Type");
                 PurchLine.SetRange("Document No.", Rec."No.");
                 if PurchLine.FindSet(true) then
                     repeat
-                        PurchLine."JMC Purchase Order Reason Code" := Rec."JMC Purchase Order Reason Code";
-                        PurchLine.Modify(true);
+                        if PurchLine."JMC Purchase Order Reason Code" <> Rec."JMC Purchase Order Reason Code" then begin
+                            PurchLine."JMC Purchase Order Reason Code" := Rec."JMC Purchase Order Reason Code";
+                            PurchLine.Modify(true);
+                        end;
                     until PurchLine.Next() = 0;
             end;
         }
@@ -31,12 +34,15 @@ tableextension 53104 "JMC Purchase Header" extends "Purchase Header"
             var
                 PurchLine: Record "Purchase Line";
             begin
+                // Update all existing lines with the new method code
                 PurchLine.SetRange("Document Type", Rec."Document Type");
                 PurchLine.SetRange("Document No.", Rec."No.");
                 if PurchLine.FindSet(true) then
                     repeat
-                        PurchLine."JMC Purchase Order Method Code" := Rec."JMC Purchase Order Method Code";
-                        PurchLine.Modify(true);
+                        if PurchLine."JMC Purchase Order Method Code" <> Rec."JMC Purchase Order Method Code" then begin
+                            PurchLine."JMC Purchase Order Method Code" := Rec."JMC Purchase Order Method Code";
+                            PurchLine.Modify(true);
+                        end;
                     until PurchLine.Next() = 0;
             end;
         }

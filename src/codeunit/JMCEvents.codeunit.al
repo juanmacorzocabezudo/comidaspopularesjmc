@@ -21,6 +21,79 @@ codeunit 53100 "JMC Events"
         IsHandled := true;
     end;
 
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Line", 'OnAfterInsertEvent', '', false, false)]
+    local procedure OnAfterInsertPurchaseLine(var Rec: Record "Purchase Line"; RunTrigger: Boolean)
+    var
+        PurchHeader: Record "Purchase Header";
+    begin
+        if Rec.IsTemporary() then
+            exit;
+
+        // Get header and copy custom fields to the line
+        if PurchHeader.Get(Rec."Document Type", Rec."Document No.") then begin
+            Rec."JMC Purchase Order Reason Code" := PurchHeader."JMC Purchase Order Reason Code";
+            Rec."JMC Purchase Order Method Code" := PurchHeader."JMC Purchase Order Method Code";
+            Rec.Modify(true);
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Line", 'OnAfterValidateEvent', 'Type', false, false)]
+    local procedure OnAfterValidateTypePurchaseLine(var Rec: Record "Purchase Line"; var xRec: Record "Purchase Line"; CurrFieldNo: Integer)
+    var
+        PurchHeader: Record "Purchase Header";
+    begin
+        if Rec.IsTemporary() then
+            exit;
+
+        // Reapply custom fields after Type validation (Type validation can reset fields)
+        if PurchHeader.Get(Rec."Document Type", Rec."Document No.") then begin
+            if Rec."JMC Purchase Order Reason Code" = '' then
+                Rec."JMC Purchase Order Reason Code" := PurchHeader."JMC Purchase Order Reason Code";
+            if Rec."JMC Purchase Order Method Code" = '' then
+                Rec."JMC Purchase Order Method Code" := PurchHeader."JMC Purchase Order Method Code";
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Header", 'OnAfterValidateEvent', 'JMC Purchase Order Reason Code', false, false)]
+    local procedure OnAfterValidateReasonCodePurchHeader(var Rec: Record "Purchase Header"; var xRec: Record "Purchase Header"; CurrFieldNo: Integer)
+    var
+        PurchLine: Record "Purchase Line";
+    begin
+        if Rec.IsTemporary() then
+            exit;
+
+        // Propagate reason code to all lines when header field is validated
+        PurchLine.SetRange("Document Type", Rec."Document Type");
+        PurchLine.SetRange("Document No.", Rec."No.");
+        if PurchLine.FindSet(true) then
+            repeat
+                if PurchLine."JMC Purchase Order Reason Code" <> Rec."JMC Purchase Order Reason Code" then begin
+                    PurchLine."JMC Purchase Order Reason Code" := Rec."JMC Purchase Order Reason Code";
+                    PurchLine.Modify(true);
+                end;
+            until PurchLine.Next() = 0;
+    end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Purchase Header", 'OnAfterValidateEvent', 'JMC Purchase Order Method Code', false, false)]
+    local procedure OnAfterValidateMethodCodePurchHeader(var Rec: Record "Purchase Header"; var xRec: Record "Purchase Header"; CurrFieldNo: Integer)
+    var
+        PurchLine: Record "Purchase Line";
+    begin
+        if Rec.IsTemporary() then
+            exit;
+
+        // Propagate method code to all lines when header field is validated
+        PurchLine.SetRange("Document Type", Rec."Document Type");
+        PurchLine.SetRange("Document No.", Rec."No.");
+        if PurchLine.FindSet(true) then
+            repeat
+                if PurchLine."JMC Purchase Order Method Code" <> Rec."JMC Purchase Order Method Code" then begin
+                    PurchLine."JMC Purchase Order Method Code" := Rec."JMC Purchase Order Method Code";
+                    PurchLine.Modify(true);
+                end;
+            until PurchLine.Next() = 0;
+    end;
+
     [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnBeforeCheckAvailableCreditLimit', '', false, false)]
     local procedure OnBeforeCheckAvailableCreditLimit(var SalesHeader: Record "Sales Header"; var ReturnValue: Decimal; var IsHandled: Boolean)
     var

@@ -21,8 +21,8 @@ codeunit 53100 "JMC Events"
         IsHandled := true;
     end;
 
-    [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnAfterValidateEvent', 'Status', false, false)]
-    local procedure OnAfterValidateSalesHeaderStatus(var Rec: Record "Sales Header"; var xRec: Record "Sales Header"; CurrFieldNo: Integer)
+    [EventSubscriber(ObjectType::Table, Database::"Sales Header", 'OnBeforeCheckAvailableCreditLimit', '', false, false)]
+    local procedure OnBeforeCheckAvailableCreditLimit(var SalesHeader: Record "Sales Header"; var ReturnValue: Decimal; var IsHandled: Boolean)
     var
         Customer: Record Customer;
         CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"';
@@ -30,11 +30,9 @@ codeunit 53100 "JMC Events"
         TotalAmount: Decimal;
         ExceededAmount: Decimal;
     begin
-        // Solo procesar cuando se lanza el pedido
-        if not (Rec.Status = Rec.Status::Released) then
-            exit;
 
-        if not Customer.Get(Rec."Sell-to Customer No.") then
+
+        if not Customer.Get(SalesHeader."Sell-to Customer No.") then
             exit;
 
         // Verificar si tiene límite de crédito configurado
@@ -42,8 +40,44 @@ codeunit 53100 "JMC Events"
             exit;
 
         Customer.CalcFields("Balance (LCY)");
-        Rec.CalcFields("Amount Including VAT");
-        OrderAmount := Rec."Amount Including VAT";
+        SalesHeader.CalcFields("Amount Including VAT");
+        OrderAmount := SalesHeader."Amount Including VAT";
+        TotalAmount := Customer."Balance (LCY)" + OrderAmount;
+
+        // Si se excede el límite, mostrar mensaje
+        if TotalAmount > Customer."Credit Limit (LCY)" then begin
+            ExceededAmount := TotalAmount - Customer."Credit Limit (LCY)";
+            Message(CreditLimitMsg,
+                Customer."No." + ' - ' + Customer.Name,
+                Customer."Credit Limit (LCY)",
+                Customer."Balance (LCY)",
+                OrderAmount,
+                TotalAmount,
+                ExceededAmount);
+        end;
+    end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Sales Line", 'OnUpdateAmountOnBeforeCheckCreditLimit', '', false, false)]
+    local procedure OnUpdateAmountOnBeforeCheckCreditLimit(var SalesLine: Record "Sales Line"; var IsHandled: Boolean; CurrentFieldNo: Integer)
+    var
+        Customer: Record Customer;
+        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"';
+        OrderAmount: Decimal;
+        TotalAmount: Decimal;
+        ExceededAmount: Decimal;
+    begin
+
+
+        if not Customer.Get(SalesLine."Sell-to Customer No.") then
+            exit;
+
+        // Verificar si tiene límite de crédito configurado
+        if Customer."Credit Limit (LCY)" = 0 then
+            exit;
+
+        Customer.CalcFields("Balance (LCY)");
+        SalesLine.CalcFields("Amount Including VAT");
+        OrderAmount := SalesLine."Amount Including VAT";
         TotalAmount := Customer."Balance (LCY)" + OrderAmount;
 
         // Si se excede el límite, mostrar mensaje

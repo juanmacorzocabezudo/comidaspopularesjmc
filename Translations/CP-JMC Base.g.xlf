@@ -303,10 +303,285 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Purchase Order Reason - Field JMC Description - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3278144653 - Method 3850805900 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Table 1831575858 - Field 1588651819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount %</source>
+          <note from="Developer" annotates="general" priority="2">ESP="% Descuento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field % Descuento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1559619346 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Alias</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Alias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Alias - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 255832887 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Advice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Aviso Envío"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Aviso Envío - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1057567105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>YEAR</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AÑO"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field AÑO - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1543751693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Base</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Base IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Base IVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1243505398 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Blocked</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Bloqueado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Bloqueado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2877034268 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>QUANTITY</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CANTIDAD"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field CANTIDAD - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1296688760 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CUSTOMER</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CLIENTE"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field CLIENTE - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1826121287 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cliente No"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Cliente No - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 861730856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Agent Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cod Agente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Cod Agente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1830457302 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Agent Service Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cod Servicio Transportista"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Cod Servicio Transportista - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 4281804248 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shipping Agent Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cod Transportista"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Cod Transportista - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 857953589 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cod. Almacén"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Cod. Almacén - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3301435324 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 560137261 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Commission</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comision"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Comision - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3272888193 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Contacto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Contacto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2852233033 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Correo Electrónico"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Correo Electrónico - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3123521355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Limit</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crédito Maximo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Crédito Maximo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1158090868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Post Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Postal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Código Postal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2615446671 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Descripción - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2720824798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Return</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Devolucion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1834217378 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Dirección - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2559327280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Address 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Dirección 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 667397148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Divisa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Divisa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2828889369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Dto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2257076082 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Factura"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Factura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2968619447 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Automatic Invoicing</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturación Automática"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Facturación Automática - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1991915875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Fecha - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 234136033 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Service Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha Servicio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Fecha Servicio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3332922080 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha Ultima Modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Fecha Ultima Modificación - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2052025434 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Method</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Forma Pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Forma Pago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1279245237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo Contable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Grupo Contable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2651006444 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discount Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo Dto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Grupo Dto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1042298439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Grupo Precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2272012708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Importe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3276012120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe Pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Importe Pendiente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3320823955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 151346206 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Linea Empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Linea Empresa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1436151686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Business Lines</source>
+          <note from="Developer" annotates="general" priority="2">ESP="LineasNegocio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field LineasNegocio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2852463093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MONTH</source>
+          <note from="Developer" annotates="general" priority="2">ESP="MES"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field MES - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 814966011 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Nombre - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2410835200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Paid</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pagado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Pagado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1599170314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Weight Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso Neto Linea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Peso Neto Linea - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2532727081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>City</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Población"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Población - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3093304502 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PRICE</source>
+          <note from="Developer" annotates="general" priority="2">ESP="PRECIO"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field PRECIO - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2231268992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Producto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1557317609 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>County</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Provincia - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3364085384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Teléfono - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 606520816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Termino Pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Terminos Pago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2832857678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Tipo Documento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 4099743607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="TipoLinea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field TipoLinea - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3286506108 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Términos Pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Términos Pago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 3821837223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Vendedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Vendedor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2073514020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>€ W/ VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="€ CON IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € CON IVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 2012910834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>€ W/O VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="€ SIN IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
           <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6</source>
           <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnAfterValidateSalesHeaderStatus - NamedType CreditLimitMsg</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3285737940 - Method 1395175847 - NamedType 2951323841" size-unit="char" translate="yes" xml:space="preserve">
           <source>There are no journal lines to register.</source>

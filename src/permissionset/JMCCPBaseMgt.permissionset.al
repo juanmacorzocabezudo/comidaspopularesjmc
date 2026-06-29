@@ -22,6 +22,7 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "Item Ledger Entry" = RIMD,
         tabledata "Value Entry" = R,
         tabledata "Evento" = RIMD,
+        tabledata "Price List Header" = RIMD,
         tabledata "Price List Line" = RIMD,
 
         // Tablas JMC personalizadas
@@ -68,6 +69,7 @@ permissionset 53100 "JMC CP BASE MGT"
         report "JMC Delete Archived Events" = X,
         report "JMC Update Item Weights" = X,
         report "JMC Activate Price List Lines" = X,
+        report "JMC Delete Empty Price Lines" = X,
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,

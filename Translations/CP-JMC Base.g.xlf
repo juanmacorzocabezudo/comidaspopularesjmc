@@ -1153,6 +1153,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Archived Events - Control ConfirmDeletion - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4085684196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Empty Price List Lines</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Eliminar líneas de precio vacías"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - NamedType 3366217384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 empty price list lines have been deleted successfully.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="%1 líneas de lista de precios vacías se han eliminado correctamente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - NamedType CompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - NamedType 460844637" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must confirm the deletion by checking the "Confirm Deletion" field.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Debe confirmar la eliminación marcando el campo Confirmar eliminación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - NamedType ConfirmationRequiredErr</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - NamedType 2022467170" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This process will permanently delete all Price List Lines where the Product (Asset No.) is empty. Use the filters to preview the records before deletion. Make sure to check "Confirm Deletion" to proceed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Este proceso eliminará permanentemente todas las líneas de lista de precios donde el Producto (Asset No.) esté vacío. Use los filtros para previsualizar los registros antes de la eliminación. Asegúrese de marcar Confirmar eliminación para continuar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - NamedType InfoTxt</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - Control 419426744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Información"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - Control 1361802906 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm that you want to delete all price list lines with empty product.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirme que desea eliminar todas las líneas de lista de precios con producto vacío."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4085684196 - Control 1361802906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm Deletion</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2107182141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Item Weights from Format</source>
           <note from="Developer" annotates="general" priority="2">ESP="Actualizar pesos de productos desde formato"</note>
@@ -1447,6 +1487,11 @@
           <source>Weight</source>
           <note from="Developer" annotates="general" priority="2">ESP="Peso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1227168464 - Change 513339096 - Method 3279464882 - NamedType 1679176215" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 1227168464">
+          <source>Cannot set status to Inactive because there are price list lines with empty product. Please delete or complete these lines first.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se puede establecer el estado como Inactivo porque existen líneas de lista de precios con el producto vacío. Por favor, elimine o complete estas líneas primero."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Header - Change Status - Method OnBeforeValidate - NamedType EmptyLinesErr</note>
         </trans-unit>
         <trans-unit id="TableExtension 741081079 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Purchase Order Method</source>

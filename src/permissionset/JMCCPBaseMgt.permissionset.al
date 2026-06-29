@@ -22,12 +22,14 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "Item Ledger Entry" = RIMD,
         tabledata "Value Entry" = R,
         tabledata "Evento" = RIMD,
+        tabledata "Price List Line" = RIMD,
 
         // Tablas JMC personalizadas
         tabledata "JMC Purchase Order Method" = RIMD,
         tabledata "JMC Purchase Order Reason" = RIMD,
         tabledata "JMC Cronus" = RIMD,
         tabledata "JMC Cronus Jnl. Line" = RIMD,
+        tabledata JMCAlxControlVenta = RIMD,
 
         // Páginas de compras base
         page "Purchase Order" = X,
@@ -59,6 +61,13 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Cronus Statistics" = X,
         page "JMC CP BOM Aditional Cost" = X,
         page "JMC Internal Notes Editor" = X,
+        page JMCAlxControlVentasAbonos = X,
+
+
+        // Reports JMC
+        report "JMC Delete Archived Events" = X,
+        report "JMC Update Item Weights" = X,
+        report "JMC Activate Price List Lines" = X,
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,

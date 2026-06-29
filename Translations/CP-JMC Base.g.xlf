@@ -583,6 +583,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3285737940 - Method 1395175847 - NamedType 2951323841" size-unit="char" translate="yes" xml:space="preserve">
           <source>There are no journal lines to register.</source>
           <note from="Developer" annotates="general" priority="2">ESP="No hay lineas de diario para registrar."</note>

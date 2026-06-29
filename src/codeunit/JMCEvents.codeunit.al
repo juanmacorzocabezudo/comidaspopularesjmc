@@ -98,14 +98,22 @@ codeunit 53100 "JMC Events"
     local procedure OnBeforeCheckAvailableCreditLimit(var SalesHeader: Record "Sales Header"; var ReturnValue: Decimal; var IsHandled: Boolean)
     var
         Customer: Record Customer;
-        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"';
+        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"';
         OrderAmount: Decimal;
         TotalAmount: Decimal;
         ExceededAmount: Decimal;
     begin
-
+        // Solo verificar en Ofertas, Pedidos y Facturas (no en Abonos ni Devoluciones)
+        if not (SalesHeader."Document Type" in [SalesHeader."Document Type"::Quote,
+                                                  SalesHeader."Document Type"::Order,
+                                                  SalesHeader."Document Type"::Invoice]) then
+            exit;
 
         if not Customer.Get(SalesHeader."Sell-to Customer No.") then
+            exit;
+
+        // Verificar si ya se mostró el aviso para este documento
+        if SalesHeader."JMC Credit Limit Warning Shown" then
             exit;
 
         // Verificar si tiene límite de crédito configurado
@@ -115,9 +123,10 @@ codeunit 53100 "JMC Events"
         Customer.CalcFields("Balance (LCY)");
         SalesHeader.CalcFields("Amount Including VAT");
         OrderAmount := SalesHeader."Amount Including VAT";
-        TotalAmount := Customer."Balance (LCY)" + OrderAmount;
+        // Calcular total: saldo pendiente + todos los documentos pendientes (ofertas, pedidos, facturas)
+        TotalAmount := Customer."Balance (LCY)" + CalculatePendingDocumentsAmount(Customer."No.", SalesHeader."Document Type", SalesHeader."No.") + OrderAmount;
 
-        // Si se excede el límite, mostrar mensaje
+        // Si se excede el límite, mostrar mensaje y enviar email
         if TotalAmount > Customer."Credit Limit (LCY)" then begin
             ExceededAmount := TotalAmount - Customer."Credit Limit (LCY)";
             Message(CreditLimitMsg,
@@ -127,6 +136,13 @@ codeunit 53100 "JMC Events"
                 OrderAmount,
                 TotalAmount,
                 ExceededAmount);
+
+            // Enviar notificación por email
+            SendCreditLimitEmail(Customer, OrderAmount, TotalAmount, ExceededAmount, SalesHeader."Document Type", SalesHeader."No.");
+
+            // Marcar que ya se mostró el aviso para este documento
+            SalesHeader."JMC Credit Limit Warning Shown" := true;
+            SalesHeader.Modify(false);
         end;
     end;
 
@@ -134,12 +150,25 @@ codeunit 53100 "JMC Events"
     local procedure OnUpdateAmountOnBeforeCheckCreditLimit(var SalesLine: Record "Sales Line"; var IsHandled: Boolean; CurrentFieldNo: Integer)
     var
         Customer: Record Customer;
-        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe pedido: %4\\Total: %5\\Excedido: %6"';
+        SalesHeader: Record "Sales Header";
+        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"';
         OrderAmount: Decimal;
         TotalAmount: Decimal;
         ExceededAmount: Decimal;
     begin
+        // Solo verificar en Ofertas, Pedidos y Facturas (no en Abonos ni Devoluciones)
+        if not (SalesLine."Document Type" in [SalesLine."Document Type"::Quote,
+                                                SalesLine."Document Type"::Order,
+                                                SalesLine."Document Type"::Invoice]) then
+            exit;
 
+        // Obtener el header para verificar si ya se mostró el aviso
+        if not SalesHeader.Get(SalesLine."Document Type", SalesLine."Document No.") then
+            exit;
+
+        // Verificar si ya se mostró el aviso para este documento
+        if SalesHeader."JMC Credit Limit Warning Shown" then
+            exit;
 
         if not Customer.Get(SalesLine."Sell-to Customer No.") then
             exit;
@@ -149,11 +178,11 @@ codeunit 53100 "JMC Events"
             exit;
 
         Customer.CalcFields("Balance (LCY)");
-        SalesLine.CalcFields("Amount Including VAT");
         OrderAmount := SalesLine."Amount Including VAT";
-        TotalAmount := Customer."Balance (LCY)" + OrderAmount;
+        // Calcular total: saldo pendiente + todos los documentos pendientes (ofertas, pedidos, facturas)
+        TotalAmount := Customer."Balance (LCY)" + CalculatePendingDocumentsAmount(Customer."No.", SalesLine."Document Type", SalesLine."Document No.") + OrderAmount;
 
-        // Si se excede el límite, mostrar mensaje
+        // Si se excede el límite, mostrar mensaje y enviar email
         if TotalAmount > Customer."Credit Limit (LCY)" then begin
             ExceededAmount := TotalAmount - Customer."Credit Limit (LCY)";
             Message(CreditLimitMsg,
@@ -163,6 +192,93 @@ codeunit 53100 "JMC Events"
                 OrderAmount,
                 TotalAmount,
                 ExceededAmount);
+
+            // Enviar notificación por email
+            SendCreditLimitEmail(Customer, OrderAmount, TotalAmount, ExceededAmount, SalesLine."Document Type", SalesLine."Document No.");
+
+            // Marcar que ya se mostró el aviso para este documento
+            SalesHeader."JMC Credit Limit Warning Shown" := true;
+            SalesHeader.Modify(false);
         end;
+    end;
+
+    local procedure SendCreditLimitEmail(Customer: Record Customer; OrderAmount: Decimal; TotalAmount: Decimal; ExceededAmount: Decimal; DocumentType: Enum "Sales Document Type"; DocumentNo: Code[20])
+    var
+        SalesSetup: Record "Sales & Receivables Setup";
+        EmailMessage: Codeunit "Email Message";
+        Email: Codeunit Email;
+        EmailSubject: Label 'AVISO: Cliente %1 ha superado límite de crédito en %2 %3', Comment = 'ESP="AVISO: Cliente %1 ha superado límite de crédito en %2 %3"';
+        EmailBody: TextBuilder;
+        RecipientEmail: Text[250];
+        DocumentTypeText: Text[50];
+        QuoteLbl: Label 'Oferta', Comment = 'ESP="Oferta"';
+        OrderLbl: Label 'Pedido', Comment = 'ESP="Pedido"';
+        InvoiceLbl: Label 'Factura', Comment = 'ESP="Factura"';
+    begin
+        // Obtener configuración de ventas
+        if not SalesSetup.Get() then
+            exit;
+
+        RecipientEmail := SalesSetup."JMC Credit Limit Email";
+
+        // Verificar que hay un email configurado
+        if RecipientEmail = '' then
+            exit;
+
+        // Determinar el tipo de documento en español
+        case DocumentType of
+            DocumentType::Quote:
+                DocumentTypeText := QuoteLbl;
+            DocumentType::Order:
+                DocumentTypeText := OrderLbl;
+            DocumentType::Invoice:
+                DocumentTypeText := InvoiceLbl;
+        end;
+
+        // Construir el cuerpo del email
+        EmailBody.AppendLine('<html><body>');
+        EmailBody.AppendLine('<h2 style="color: red;">AVISO: Límite de crédito excedido</h2>');
+        EmailBody.AppendLine('<p><strong>Cliente:</strong> ' + Customer."No." + ' - ' + Customer.Name + '</p>');
+        EmailBody.AppendLine('<p><strong>Documento:</strong> ' + DocumentTypeText + ' ' + DocumentNo + '</p>');
+        EmailBody.AppendLine('<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">');
+        EmailBody.AppendLine('<tr><td><strong>Límite de crédito:</strong></td><td style="text-align: right;">' + Format(Customer."Credit Limit (LCY)", 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
+        EmailBody.AppendLine('<tr><td><strong>Saldo pendiente:</strong></td><td style="text-align: right;">' + Format(Customer."Balance (LCY)", 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
+        EmailBody.AppendLine('<tr><td><strong>Importe documento:</strong></td><td style="text-align: right;">' + Format(OrderAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
+        EmailBody.AppendLine('<tr style="background-color: #ffcccc;"><td><strong>Total:</strong></td><td style="text-align: right;"><strong>' + Format(TotalAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</strong></td></tr>');
+        EmailBody.AppendLine('<tr style="background-color: #ff6666; color: white;"><td><strong>Excedido:</strong></td><td style="text-align: right;"><strong>' + Format(ExceededAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</strong></td></tr>');
+        EmailBody.AppendLine('</table>');
+        EmailBody.AppendLine('</body></html>');
+
+        // Crear y enviar el mensaje
+        EmailMessage.Create(RecipientEmail, StrSubstNo(EmailSubject, Customer."No." + ' - ' + Customer.Name, DocumentTypeText, DocumentNo), EmailBody.ToText(), true);
+
+        // Enviar el email
+        Email.Send(EmailMessage, Enum::"Email Scenario"::Default);
+    end;
+
+    local procedure CalculatePendingDocumentsAmount(CustomerNo: Code[20]; CurrentDocType: Enum "Sales Document Type"; CurrentDocNo: Code[20]): Decimal
+    var
+        SalesHeader: Record "Sales Header";
+        TotalPendingAmount: Decimal;
+    begin
+        TotalPendingAmount := 0;
+
+        // Buscar todos los documentos de venta pendientes del cliente (Ofertas, Pedidos, Facturas)
+        SalesHeader.SetRange("Sell-to Customer No.", CustomerNo);
+        SalesHeader.SetFilter("Document Type", '%1|%2|%3',
+            SalesHeader."Document Type"::Quote,
+            SalesHeader."Document Type"::Order,
+            SalesHeader."Document Type"::Invoice);
+
+        if SalesHeader.FindSet() then
+            repeat
+                // Excluir el documento actual para no contarlo dos veces
+                if not ((SalesHeader."Document Type" = CurrentDocType) and (SalesHeader."No." = CurrentDocNo)) then begin
+                    SalesHeader.CalcFields("Amount Including VAT");
+                    TotalPendingAmount += SalesHeader."Amount Including VAT";
+                end;
+            until SalesHeader.Next() = 0;
+
+        exit(TotalPendingAmount);
     end;
 }

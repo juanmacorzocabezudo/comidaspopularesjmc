@@ -205,6 +205,8 @@ codeunit 53100 "JMC Events"
     local procedure SendCreditLimitEmail(Customer: Record Customer; OrderAmount: Decimal; TotalAmount: Decimal; ExceededAmount: Decimal; DocumentType: Enum "Sales Document Type"; DocumentNo: Code[20])
     var
         SalesSetup: Record "Sales & Receivables Setup";
+        SalesLine: Record "Sales Line";
+        Item: Record Item;
         EmailMessage: Codeunit "Email Message";
         Email: Codeunit Email;
         EmailSubject: Label 'AVISO: Cliente %1 ha superado límite de crédito en %2 %3', Comment = 'ESP="AVISO: Cliente %1 ha superado límite de crédito en %2 %3"';
@@ -214,6 +216,9 @@ codeunit 53100 "JMC Events"
         QuoteLbl: Label 'Oferta', Comment = 'ESP="Oferta"';
         OrderLbl: Label 'Pedido', Comment = 'ESP="Pedido"';
         InvoiceLbl: Label 'Factura', Comment = 'ESP="Factura"';
+        BrandText: Text[100];
+        UnitCostText: Text[50];
+        LineTotalCost: Decimal;
     begin
         // Obtener configuración de ventas
         if not SalesSetup.Get() then
@@ -246,6 +251,54 @@ codeunit 53100 "JMC Events"
         EmailBody.AppendLine('<tr><td><strong>Importe documento:</strong></td><td style="text-align: right;">' + Format(OrderAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
         EmailBody.AppendLine('<tr style="background-color: #ffcccc;"><td><strong>Total:</strong></td><td style="text-align: right;"><strong>' + Format(TotalAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</strong></td></tr>');
         EmailBody.AppendLine('<tr style="background-color: #ff6666; color: white;"><td><strong>Excedido:</strong></td><td style="text-align: right;"><strong>' + Format(ExceededAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</strong></td></tr>');
+        EmailBody.AppendLine('</table>');
+
+        // Agregar tabla de líneas del documento (LM Ensamblado)
+        EmailBody.AppendLine('<br/>');
+        EmailBody.AppendLine('<h3>Detalle de líneas del documento</h3>');
+        EmailBody.AppendLine('<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse; width: 100%;">');
+        EmailBody.AppendLine('<thead>');
+        EmailBody.AppendLine('<tr style="background-color: #4CAF50; color: white;">');
+        EmailBody.AppendLine('<th>Nº</th>');
+        EmailBody.AppendLine('<th>Descripción</th>');
+        EmailBody.AppendLine('<th>Marca</th>');
+        EmailBody.AppendLine('<th>Cantidad por Lote</th>');
+        EmailBody.AppendLine('<th>Unidad medida</th>');
+        EmailBody.AppendLine('<th>Coste Estándar Marcado</th>');
+        EmailBody.AppendLine('<th>Coste</th>');
+        EmailBody.AppendLine('</tr>');
+        EmailBody.AppendLine('</thead>');
+        EmailBody.AppendLine('<tbody>');
+
+        // Obtener las líneas del documento
+        SalesLine.SetRange("Document Type", DocumentType);
+        SalesLine.SetRange("Document No.", DocumentNo);
+        SalesLine.SetFilter(Type, '<>%1', SalesLine.Type::" ");
+        if SalesLine.FindSet() then
+            repeat
+                // Obtener información del producto para la marca
+                BrandText := '';
+                if (SalesLine.Type = SalesLine.Type::Item) and Item.Get(SalesLine."No.") then begin
+                    if Item."Item Category Code" <> '' then
+                        BrandText := Item."Item Category Code";
+                end;
+
+                // Calcular coste total de la línea
+                LineTotalCost := SalesLine.Quantity * SalesLine."Unit Cost (LCY)";
+
+                // Agregar fila con los datos de la línea
+                EmailBody.AppendLine('<tr>');
+                EmailBody.AppendLine('<td>' + SalesLine."No." + '</td>');
+                EmailBody.AppendLine('<td>' + SalesLine.Description + '</td>');
+                EmailBody.AppendLine('<td>' + BrandText + '</td>');
+                EmailBody.AppendLine('<td style="text-align: right;">' + Format(SalesLine.Quantity, 0, '<Precision,2:2><Standard Format,0>') + '</td>');
+                EmailBody.AppendLine('<td>' + SalesLine."Unit of Measure Code" + '</td>');
+                EmailBody.AppendLine('<td style="text-align: right;">' + Format(SalesLine."Unit Cost (LCY)", 0, '<Precision,2:2><Standard Format,0>') + '</td>');
+                EmailBody.AppendLine('<td style="text-align: right;">' + Format(LineTotalCost, 0, '<Precision,2:2><Standard Format,0>') + '</td>');
+                EmailBody.AppendLine('</tr>');
+            until SalesLine.Next() = 0;
+
+        EmailBody.AppendLine('</tbody>');
         EmailBody.AppendLine('</table>');
         EmailBody.AppendLine('</body></html>');
 

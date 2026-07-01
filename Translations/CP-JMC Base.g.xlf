@@ -1338,6 +1338,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Total (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending sales quotes.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de ofertas de venta pendientes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Quotes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ofertas pendientes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>

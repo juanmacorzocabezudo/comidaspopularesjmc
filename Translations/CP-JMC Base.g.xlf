@@ -578,6 +578,36 @@
           <note from="Developer" annotates="general" priority="2">ESP="€ SIN IVA"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 3292692308" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AVISO: Cliente %1 ha superado límite de crédito en %2 %3</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: Cliente %1 ha superado límite de crédito en %2 %3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method SendCreditLimitEmail - NamedType EmailSubject</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 1529251892" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Oferta</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Oferta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method SendCreditLimitEmail - NamedType QuoteLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 1210317888" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pedido</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method SendCreditLimitEmail - NamedType OrderLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 2813721509" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Factura"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method SendCreditLimitEmail - NamedType InvoiceLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3285737940 - Method 1395175847 - NamedType 2951323841" size-unit="char" translate="yes" xml:space="preserve">
           <source>There are no journal lines to register.</source>
           <note from="Developer" annotates="general" priority="2">ESP="No hay lineas de diario para registrar."</note>
@@ -1298,6 +1328,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending sales documents (quotes + orders + invoices - credit memos).</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Total (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending sales quotes.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de ofertas de venta pendientes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Quotes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ofertas pendientes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
@@ -1457,6 +1507,16 @@
           <source>Gestoría ID</source>
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Resource Card - Control JMC Gestoría ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1100795140 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the email address to send credit limit notifications to.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la dirección de email a la que se enviarán las notificaciones de límite de crédito."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Credit Limit Email - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1100795140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Credit Limit Notification Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Credit Limit Email - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
@@ -1648,6 +1708,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1100795140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Credit Limit Notification Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 866013865 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
           <source>Comments</source>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
@@ -1657,6 +1722,11 @@
           <source>Return</source>
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Cr. Memo Line - Field JMC Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 716105589 - Field 3571459173 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1192395785">
+          <source>Credit Limit Warning Shown</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Aviso límite crédito mostrado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Header - Field JMC Credit Limit Warning Shown - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3019300814 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2574427010">
           <source>Comments</source>

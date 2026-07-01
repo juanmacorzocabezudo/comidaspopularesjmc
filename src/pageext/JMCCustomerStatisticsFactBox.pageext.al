@@ -2,7 +2,7 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
 {
     layout
     {
-        addafter("Outstanding Invoices (LCY)")
+        addbefore("Outstanding Orders (LCY)")
         {
             field("JMC Pending Quotes"; PendingQuotesLCY)
             {
@@ -19,6 +19,9 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
                     Page.Run(Page::"Sales Quotes", SalesHeader);
                 end;
             }
+        }
+        addafter("Outstanding Invoices (LCY)")
+        {
             field("JMC Custom Total (LCY)"; CustomTotalLCY)
             {
                 ApplicationArea = All;

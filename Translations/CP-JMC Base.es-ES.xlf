@@ -1695,6 +1695,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ver Lineas Pedido Compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order List - Action JMC View Purchase Order Lines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3239250589 - Control 2632124822 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
+          <source>Specifies the date when the order was created.</source>
+          <target>Especifica la fecha en que se creó el pedido.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fecha en que se creó el pedido."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order List - Control Order Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3239250589 - Control 2632124822 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
+          <source>Order Date</source>
+          <target>Fecha pedido</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha pedido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order List - Control Order Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 888496525 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 526152577">
           <source>Internal Notes</source>
           <target>Observaciones internas</target>

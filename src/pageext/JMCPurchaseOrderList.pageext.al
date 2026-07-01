@@ -1,5 +1,18 @@
 pageextension 53118 "JMC Purchase Order List" extends "Purchase Order List"
 {
+    layout
+    {
+        addbefore("Document Date")
+        {
+            field("Order Date"; Rec."Order Date")
+            {
+                ApplicationArea = All;
+                Caption = 'Order Date', Comment = 'ESP="Fecha pedido"';
+                ToolTip = 'Specifies the date when the order was created.', Comment = 'ESP="Especifica la fecha en que se creó el pedido."';
+            }
+        }
+    }
+
     actions
     {
         addlast(processing)

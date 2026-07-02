@@ -579,13 +579,13 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6</source>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6</source>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Importe documento: %4\\Total: %5\\Excedido: %6"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 3292692308" size-unit="char" translate="yes" xml:space="preserve">

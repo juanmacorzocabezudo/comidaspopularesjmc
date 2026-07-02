@@ -1358,6 +1358,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Peso (Kg)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit cost calculated from all inventory entries in the last year.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado de todos los movimientos de inventario del último año."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Last Year Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Último Año"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit cost calculated only from inventory entries with remaining quantity greater than zero.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Stock Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Existencias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Open the item card for the item in this entry, even if it is blocked.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Abrir la ficha del producto de este movimiento, incluso si está bloqueado."</note>

@@ -1593,18 +1593,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
-          <source>Specifies the total amount for pending sales documents (quotes + orders + invoices - credit memos).</source>
-          <target>Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos).</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos)."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
-          <source>Total (LCY)</source>
-          <target>Total (DL)</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Total (DL)"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for pending sales quotes.</source>
           <target>Especifica el importe total de ofertas de venta pendientes.</target>
@@ -1617,6 +1605,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ofertas pendientes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending sales documents (quotes + orders + invoices - credit memos).</source>
+          <target>Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Total (LCY)</source>
+          <target>Total (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Total (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <target>Especifica el peso del producto en kilogramos.</target>
@@ -1628,6 +1628,30 @@
           <target>Peso (Kg)</target>
           <note from="Developer" annotates="general" priority="2">ESP="Peso (Kg)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit cost calculated from all inventory entries in the last year.</source>
+          <target>Especifica el coste unitario calculado de todos los movimientos de inventario del último año.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado de todos los movimientos de inventario del último año."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Last Year Unit Cost</source>
+          <target>Coste Unitario Último Año</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Ultimo Año"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit cost calculated only from inventory entries with remaining quantity greater than zero.</source>
+          <target>Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Stock Unit Cost</source>
+          <target>Coste Unitario Existencias</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Existencias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Open the item card for the item in this entry, even if it is blocked.</source>

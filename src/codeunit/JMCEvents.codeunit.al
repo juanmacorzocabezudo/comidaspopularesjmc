@@ -334,4 +334,66 @@ codeunit 53100 "JMC Events"
 
         exit(TotalPendingAmount);
     end;
+
+    [EventSubscriber(ObjectType::Table, Database::"Purch. Inv. Header", 'OnAfterInsertEvent', '', false, false)]
+    local procedure OnAfterInsertPurchInvHeader(var Rec: Record "Purch. Inv. Header"; RunTrigger: Boolean)
+    begin
+        if Rec.IsTemporary() then
+            exit;
+
+        UpdateLastDirectUnitCost(Rec."No.");
+    end;
+
+    local procedure UpdateLastDirectUnitCost(DocumentNo: Code[20])
+    var
+        PurchInvLine: Record "Purch. Inv. Line";
+        Item: Record Item;
+        TempItemCostBuffer: Record Item temporary;
+        TotalCost: Decimal;
+        TotalQty: Decimal;
+        AverageCost: Decimal;
+    begin
+        // Obtener todas las líneas de tipo Item de la factura
+        PurchInvLine.SetRange("Document No.", DocumentNo);
+        PurchInvLine.SetRange(Type, PurchInvLine.Type::Item);
+        PurchInvLine.SetFilter("No.", '<>%1', '');
+
+        if not PurchInvLine.FindSet() then
+            exit;
+
+        // Agrupar por producto y calcular totales
+        repeat
+            // Buscar si ya procesamos este producto
+            TempItemCostBuffer.SetRange("No.", PurchInvLine."No.");
+            if TempItemCostBuffer.FindFirst() then begin
+                // Acumular valores
+                TempItemCostBuffer."Standard Cost" += PurchInvLine."Direct Unit Cost" * PurchInvLine.Quantity;
+                TempItemCostBuffer."Unit Cost" += PurchInvLine.Quantity;
+                TempItemCostBuffer.Modify();
+            end else begin
+                // Crear nuevo registro temporal
+                TempItemCostBuffer.Init();
+                TempItemCostBuffer."No." := PurchInvLine."No.";
+                TempItemCostBuffer."Standard Cost" := PurchInvLine."Direct Unit Cost" * PurchInvLine.Quantity; // Usar Standard Cost para guardar suma ponderada
+                TempItemCostBuffer."Unit Cost" := PurchInvLine.Quantity; // Usar Unit Cost para guardar cantidad total
+                TempItemCostBuffer.Insert();
+            end;
+        until PurchInvLine.Next() = 0;
+
+        // Actualizar Last Direct Unit Cost de cada producto con la media ponderada
+        TempItemCostBuffer.Reset();
+        if TempItemCostBuffer.FindSet() then
+            repeat
+                if Item.Get(TempItemCostBuffer."No.") then begin
+                    TotalCost := TempItemCostBuffer."Standard Cost";
+                    TotalQty := TempItemCostBuffer."Unit Cost";
+
+                    if TotalQty <> 0 then begin
+                        AverageCost := TotalCost / TotalQty;
+                        Item.Validate("Last Direct Cost", AverageCost);
+                        Item.Modify(true);
+                    end;
+                end;
+            until TempItemCostBuffer.Next() = 0;
+    end;
 }

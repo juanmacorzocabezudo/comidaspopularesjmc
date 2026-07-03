@@ -225,6 +225,15 @@ table 53100 JMCAlxControlVenta
         {
             Caption = 'Comments', Comment = 'ESP="Comentarios"';
         }
+        field(56; Formato; Code[20])
+        {
+            Caption = 'Format', Comment = 'ESP="Formato"';
+        }
+        field(57; "Peso Formato"; Decimal)
+        {
+            Caption = 'Format Weight', Comment = 'ESP="Peso Formato"';
+            DecimalPlaces = 0 : 5;
+        }
     }
     keys
     {

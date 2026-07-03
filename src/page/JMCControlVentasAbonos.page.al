@@ -66,6 +66,8 @@ page 53101 JMCAlxControlVentasAbonos
                 field("Fecha Servicio"; Rec."Fecha Servicio") { }
                 field("Devolucion"; Rec."Devolucion") { }
                 field("Comentarios"; Rec."Comentarios") { }
+                field(Formato; Rec.Formato) { }
+                field("Peso Formato"; Rec."Peso Formato") { }
             }
         }
     }
@@ -111,6 +113,7 @@ page 53101 JMCAlxControlVentasAbonos
         RecSCM: Record "Sales Cr.Memo Header";
         FactVentasQuery: Query AlxSalesInvoiceLine;
         AbonVentasQuery: Query JMCAlxSalesCrMemoLine;
+        Item: Record Item;
     begin
         if FactVentasQuery.Open() then begin
             while FactVentasQuery.Read() do begin
@@ -163,6 +166,13 @@ page 53101 JMCAlxControlVentasAbonos
                 Rec."Términos Pago" := FactVentasQuery.PaymentMethodCode;
                 Rec.Producto := FactVentasQuery.No;
                 Rec."Descripción" := FactVentasQuery.Description;
+                // Get Item info for Formato and Weight
+                if FactVentasQuery.Type = FactVentasQuery.Type::Item then begin
+                    if Item.Get(FactVentasQuery.No) then begin
+                        Rec.Formato := Item.Formato;
+                        Rec."Peso Formato" := Item."JMC Weight";
+                    end;
+                end;
                 Rec.CANTIDAD := FactVentasQuery.Quantity;
                 Rec."€ SIN IVA" := FactVentasQuery.LineAmount;
                 Rec."€ CON IVA" := FactVentasQuery.AmountIncludingVAT;
@@ -261,6 +271,13 @@ page 53101 JMCAlxControlVentasAbonos
                 Rec."Términos Pago" := AbonVentasQuery.PaymentMethodCode;
                 Rec.Producto := AbonVentasQuery.No;
                 Rec."Descripción" := AbonVentasQuery.Description;
+                // Get Item info for Formato and Weight
+                if AbonVentasQuery.Type = AbonVentasQuery.Type::Item then begin
+                    if Item.Get(AbonVentasQuery.No) then begin
+                        Rec.Formato := Item.Formato;
+                        Rec."Peso Formato" := Item."JMC Weight";
+                    end;
+                end;
                 Rec.CANTIDAD := AbonVentasQuery.Quantity * -1;
                 Rec."€ SIN IVA" := AbonVentasQuery.LineAmount * -1;
                 Rec."€ CON IVA" := AbonVentasQuery.AmountIncludingVAT * -1;

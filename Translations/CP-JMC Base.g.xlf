@@ -458,6 +458,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Forma Pago"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Forma Pago - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1751879152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Formato - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1831575858 - Field 1279245237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting Group</source>
           <note from="Developer" annotates="general" priority="2">ESP="Grupo Contable"</note>
@@ -512,6 +517,11 @@
           <source>Paid</source>
           <note from="Developer" annotates="general" priority="2">ESP="Pagado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Pagado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1895300399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Format Weight</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Peso Formato - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1831575858 - Field 1599170314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Net Weight Line</source>

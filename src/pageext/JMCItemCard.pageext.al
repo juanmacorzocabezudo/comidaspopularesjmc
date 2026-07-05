@@ -18,16 +18,16 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
                 ApplicationArea = All;
                 Caption = 'Stock Unit Cost', Comment = 'ESP="Coste Unitario Existencias"';
                 ToolTip = 'Specifies the unit cost calculated only from inventory entries with remaining quantity greater than zero.', Comment = 'ESP="Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero."';
-                DecimalPlaces = 2 : 5;
+                DecimalPlaces = 0 : 3;
                 Editable = false;
                 BlankZero = true;
             }
             field("JMC Last Year Unit Cost"; LastYearUnitCost)
             {
                 ApplicationArea = All;
-                Caption = 'Last Year Unit Cost', Comment = 'ESP="Coste Unitario Último Año"';
-                ToolTip = 'Specifies the unit cost calculated from all inventory entries in the last year.', Comment = 'ESP="Especifica el coste unitario calculado de todos los movimientos de inventario del último año."';
-                DecimalPlaces = 2 : 5;
+                Caption = 'Last Year Purchase Cost', Comment = 'ESP="Coste Compra Último Año"';
+                ToolTip = 'Specifies the weighted average unit cost from purchases in the last year.', Comment = 'ESP="Especifica el coste unitario medio ponderado de las compras del último año."';
+                DecimalPlaces = 0 : 3;
                 Editable = false;
                 BlankZero = true;
             }
@@ -71,7 +71,7 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
 
     local procedure CalculateLastYearUnitCost()
     var
-        ValueEntry: Record "Value Entry";
+        PurchInvLine: Record "Purch. Inv. Line";
         TotalCost: Decimal;
         TotalQty: Decimal;
         StartDate: Date;
@@ -79,15 +79,16 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
         Clear(LastYearUnitCost);
         StartDate := CalcDate('<-1Y>', Today);
 
-        ValueEntry.SetCurrentKey("Item No.", "Posting Date");
-        ValueEntry.SetRange("Item No.", Rec."No.");
-        ValueEntry.SetRange("Posting Date", StartDate, Today);
-        ValueEntry.SetFilter("Item Ledger Entry Quantity", '<>0');
-        if ValueEntry.FindSet() then
+        // Calcular basándose en las facturas de compra registradas del último año
+        PurchInvLine.SetCurrentKey("Pay-to Vendor No.", "Posting Date");
+        PurchInvLine.SetRange("No.", Rec."No.");
+        PurchInvLine.SetRange(Type, PurchInvLine.Type::Item);
+        PurchInvLine.SetRange("Posting Date", StartDate, Today);
+        if PurchInvLine.FindSet() then
             repeat
-                TotalCost += ValueEntry."Cost Amount (Actual)";
-                TotalQty += ValueEntry."Item Ledger Entry Quantity";
-            until ValueEntry.Next() = 0;
+                TotalCost += PurchInvLine."Direct Unit Cost" * PurchInvLine.Quantity;
+                TotalQty += PurchInvLine.Quantity;
+            until PurchInvLine.Next() = 0;
 
         if TotalQty <> 0 then
             LastYearUnitCost := TotalCost / TotalQty;

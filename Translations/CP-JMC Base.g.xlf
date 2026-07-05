@@ -1369,13 +1369,13 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Specifies the unit cost calculated from all inventory entries in the last year.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado de todos los movimientos de inventario del último año."</note>
+          <source>Specifies the weighted average unit cost from purchases in the last year.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario medio ponderado de las compras del último año."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
-          <source>Last Year Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Último Año"</note>
+          <source>Last Year Purchase Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Compra Último Año"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">

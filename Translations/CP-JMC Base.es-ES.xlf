@@ -549,6 +549,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Forma Pago"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Forma Pago - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1751879152 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Format</source>
+          <target>Formato</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Formato - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1831575858 - Field 1279245237 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Posting Group</source>
           <target>Grupo Contable</target>
@@ -614,6 +620,12 @@
           <target>Pagado</target>
           <note from="Developer" annotates="general" priority="2">ESP="Pagado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Pagado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 1895300399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Format Weight</source>
+          <target>Peso Formato</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Peso Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Peso Formato - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1831575858 - Field 1599170314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Net Weight Line</source>
@@ -694,15 +706,15 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
+          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos pendientes: %4\\Enviado no facturado: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
+          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 3292692308" size-unit="char" translate="yes" xml:space="preserve">
@@ -1473,6 +1485,66 @@
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
         </trans-unit>
+        <trans-unit id="Query 3359553205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eventos con Recursos</source>
+          <target>Eventos con Recursos</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 2673828796 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad</source>
+          <target>Cantidad</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Cantidad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 3185196323 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Recurso</source>
+          <target>Código Recurso</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Codigo_Recurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 1534080251 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción Recurso</source>
+          <target>Descripción Recurso</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Descripcion_Recurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 3774568998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo Recurso</source>
+          <target>Tipo Recurso</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Tipo_Recurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 2017695335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Evento</source>
+          <target>Código Evento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Codigo_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 2950845476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Estado</source>
+          <target>Estado</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Estado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 374189815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha Evento</source>
+          <target>Fecha Evento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Fecha_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3359553205 - QueryColumn 4197182740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora Evento</source>
+          <target>Hora Evento</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Resources - QueryColumn Hora_Evento - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Query 3072147544 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>AlxSalesCrMemoLine</source>
           <target>AlxSalesCrMemoLine</target>
@@ -1593,6 +1665,42 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for open (not released) sales orders.</source>
+          <target>Especifica el importe total de pedidos de venta abiertos (no lanzados).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de pedidos de venta abiertos (no lanzados)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Open Sales Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Open Sales Orders (LCY)</source>
+          <target>Pedidos abiertos de venta (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedidos abiertos de venta (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Open Sales Orders - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending sales quotes.</source>
+          <target>Especifica el importe total de ofertas de venta pendientes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de ofertas de venta pendientes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Quotes (LCY)</source>
+          <target>Ofertas pendientes (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ofertas pendientes (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2875244168 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for released sales orders (shipped not invoiced).</source>
+          <target>Especifica el importe total de pedidos de venta lanzados (enviados no facturados).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de pedidos de venta lanzados (enviados no facturados)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Released Sales Orders - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 2875244168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Released Sales Orders (LCY)</source>
+          <target>Pedidos de venta lanzados (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedidos de venta lanzados (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Released Sales Orders - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 2103040318 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for pending sales documents (quotes + orders + invoices - credit memos).</source>
           <target>Especifica el importe total de documentos de venta pendientes (ofertas + pedidos + facturas - abonos).</target>
@@ -1605,17 +1713,17 @@
           <note from="Developer" annotates="general" priority="2">ESP="Total (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Custom Total (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
-          <source>Specifies the total amount for pending sales quotes.</source>
-          <target>Especifica el importe total de ofertas de venta pendientes.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de ofertas de venta pendientes."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property ToolTip</note>
+        <trans-unit id="PageExtension 471549067 - Control 2493647185 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for pending credit memos.</source>
+          <target>Especifica el importe total de notas de abono pendientes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de notas de abono pendientes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Credit Memos - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 471549067 - Control 1199489142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
-          <source>Pending Quotes</source>
-          <target>Ofertas pendientes</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Ofertas pendientes"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Quotes - Property Caption</note>
+        <trans-unit id="PageExtension 471549067 - Control 2493647185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Credit Memos (LCY)</source>
+          <target>Notas de abonos pendientes (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Notas de abonos pendientes (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Credit Memos - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
@@ -2111,9 +2219,8 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target>[NAB: REVIEW] </target>
+          <target> </target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

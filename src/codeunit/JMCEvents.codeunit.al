@@ -392,10 +392,8 @@ codeunit 53100 "JMC Events"
     var
         PurchInvLine: Record "Purch. Inv. Line";
         Item: Record Item;
-        TempItemCostBuffer: Record Item temporary;
-        TotalCost: Decimal;
-        TotalQty: Decimal;
-        AverageCost: Decimal;
+        LastLineByItem: Record "Purch. Inv. Line" temporary;
+        UnitCostWithoutDiscount: Decimal;
     begin
         // Obtener todas las líneas de tipo Item de la factura
         PurchInvLine.SetRange("Document No.", DocumentNo);
@@ -405,39 +403,39 @@ codeunit 53100 "JMC Events"
         if not PurchInvLine.FindSet() then
             exit;
 
-        // Agrupar por producto y calcular totales con media ponderada
+        // Para cada línea, guardar solo la última línea de cada producto (por Line No.)
         repeat
-            // Buscar si ya procesamos este producto
-            TempItemCostBuffer.SetRange("No.", PurchInvLine."No.");
-            if TempItemCostBuffer.FindFirst() then begin
-                // Acumular valores ponderados
-                TempItemCostBuffer."Standard Cost" += PurchInvLine."Direct Unit Cost" * PurchInvLine.Quantity;
-                TempItemCostBuffer."Unit Cost" += PurchInvLine.Quantity;
-                TempItemCostBuffer.Modify();
+            LastLineByItem.SetRange("No.", PurchInvLine."No.");
+            if LastLineByItem.FindFirst() then begin
+                // Si ya existe este producto, verificar si la línea actual es posterior
+                if PurchInvLine."Line No." > LastLineByItem."Line No." then begin
+                    LastLineByItem.Delete();
+                    LastLineByItem := PurchInvLine;
+                    LastLineByItem.Insert();
+                end;
             end else begin
-                // Crear nuevo registro temporal
-                TempItemCostBuffer.Init();
-                TempItemCostBuffer."No." := PurchInvLine."No.";
-                TempItemCostBuffer."Standard Cost" := PurchInvLine."Direct Unit Cost" * PurchInvLine.Quantity; // Coste total ponderado
-                TempItemCostBuffer."Unit Cost" := PurchInvLine.Quantity; // Cantidad total
-                TempItemCostBuffer.Insert();
+                // Primera línea de este producto
+                LastLineByItem := PurchInvLine;
+                LastLineByItem.Insert();
             end;
         until PurchInvLine.Next() = 0;
 
-        // Actualizar Last Direct Cost de cada producto con la media ponderada
-        TempItemCostBuffer.Reset();
-        if TempItemCostBuffer.FindSet() then
+        // Actualizar Last Direct Cost de cada producto con el coste de la última línea
+        LastLineByItem.Reset();
+        if LastLineByItem.FindSet() then
             repeat
-                if Item.Get(TempItemCostBuffer."No.") then begin
-                    TotalCost := TempItemCostBuffer."Standard Cost";
-                    TotalQty := TempItemCostBuffer."Unit Cost";
+                if Item.Get(LastLineByItem."No.") then begin
+                    // Calcular el coste unitario SIN descuento de línea
+                    // Si hay descuento de línea, el Direct Unit Cost ya está reducido
+                    // Necesitamos revertir el descuento para obtener el precio base
+                    if LastLineByItem."Line Discount %" <> 0 then
+                        UnitCostWithoutDiscount := LastLineByItem."Direct Unit Cost" / (1 - LastLineByItem."Line Discount %" / 100)
+                    else
+                        UnitCostWithoutDiscount := LastLineByItem."Direct Unit Cost";
 
-                    if TotalQty <> 0 then begin
-                        AverageCost := TotalCost / TotalQty;
-                        Item.Validate("Last Direct Cost", AverageCost);
-                        Item.Modify(true);
-                    end;
+                    Item.Validate("Last Direct Cost", UnitCostWithoutDiscount);
+                    Item.Modify(true);
                 end;
-            until TempItemCostBuffer.Next() = 0;
+            until LastLineByItem.Next() = 0;
     end;
 }

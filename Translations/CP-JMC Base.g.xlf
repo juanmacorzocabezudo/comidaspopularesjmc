@@ -589,13 +589,13 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 3292692308" size-unit="char" translate="yes" xml:space="preserve">
@@ -1437,6 +1437,26 @@
           <source>Pending Credit Memos (LCY)</source>
           <note from="Developer" annotates="general" priority="2">ESP="Notas de abonos pendientes (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Credit Memos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1687777587 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for posted invoices not yet paid.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de facturas registradas pendientes de pago."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1687777587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Invoices (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturas pendientes (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 3048580832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for unposted sales invoices.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de facturas de venta sin registrar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 3048580832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Unposted Invoices (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturas sin registrar (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>

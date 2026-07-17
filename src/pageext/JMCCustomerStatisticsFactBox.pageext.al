@@ -165,7 +165,8 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
         CustomTotalLCY := 0;
         QuoteAmount := 0;
 
-        // Calculate: OFERTAS + PEDIDOS ABIERTOS + PEDIDOS LANZADOS + FACTURAS REGISTRADAS + FACTURAS SIN REGISTRAR - ABONOS
+        // Calculate: OFERTAS + PEDIDOS ABIERTOS + PEDIDOS LANZADOS + FACTURAS REGISTRADAS + FACTURAS SIN REGISTRAR
+        // NOTA: Los abonos pendientes NO se restan del total (solo son informativos hasta que se registren)
         if Rec."No." = '' then
             exit;
 
@@ -179,7 +180,7 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
                 QuoteAmount += SalesHeader."Amount Including VAT";
             until SalesHeader.Next() = 0;
 
-        CustomTotalLCY := QuoteAmount + OpenSalesOrdersLCY + ReleasedSalesOrdersLCY + PendingInvoicesLCY + UnpostedInvoicesLCY - PendingCreditMemosLCY;
+        CustomTotalLCY := QuoteAmount + OpenSalesOrdersLCY + ReleasedSalesOrdersLCY + PendingInvoicesLCY + UnpostedInvoicesLCY;
     end;
 
     local procedure CalculatePendingQuotes()

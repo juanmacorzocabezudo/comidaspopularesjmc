@@ -382,19 +382,28 @@ codeunit 53100 "JMC Events"
         exit(TotalAmount);
     end;
 
-    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnAfterPurchInvHeaderInsert, '', false, false)]
-    local procedure OnAfterPurchInvHeaderInsert(var PurchHeader: Record "Purchase Header"; var PurchInvHeader: Record "Purch. Inv. Header")
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnAfterFinalizePosting, '', false, false)]
+    local procedure OnAfterFinalizePosting(var PurchHeader: Record "Purchase Header"; var PurchRcptHeader: Record "Purch. Rcpt. Header"; var PurchInvHeader: Record "Purch. Inv. Header"; var PurchCrMemoHdr: Record "Purch. Cr. Memo Hdr."; var ReturnShptHeader: Record "Return Shipment Header"; var GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line"; PreviewMode: Boolean; CommitIsSupressed: Boolean)
     begin
-        UpdateLastDirectUnitCost(PurchInvHeader."No.");
+        // Solo actualizar si hay una factura registrada
+        if PurchInvHeader."No." <> '' then
+            UpdateLastDirectUnitCost(PurchInvHeader."No.");
     end;
 
     local procedure UpdateLastDirectUnitCost(DocumentNo: Code[20])
     var
         PurchInvLine: Record "Purch. Inv. Line";
         Item: Record Item;
-        LastLineByItem: Record "Purch. Inv. Line" temporary;
-        UnitCostWithoutDiscount: Decimal;
+        ItemNo: Code[20];
+        TotalCostByItem: Decimal;
+        LineCountByItem: Integer;
+        AverageCost: Decimal;
+        ProcessedItems: List of [Code[20]];
     begin
+        // Validar que tenemos un número de documento
+        if DocumentNo = '' then
+            exit;
+
         // Obtener todas las líneas de tipo Item de la factura
         PurchInvLine.SetRange("Document No.", DocumentNo);
         PurchInvLine.SetRange(Type, PurchInvLine.Type::Item);
@@ -403,39 +412,44 @@ codeunit 53100 "JMC Events"
         if not PurchInvLine.FindSet() then
             exit;
 
-        // Para cada línea, guardar solo la última línea de cada producto (por Line No.)
+        // Procesar cada producto único
         repeat
-            LastLineByItem.SetRange("No.", PurchInvLine."No.");
-            if LastLineByItem.FindFirst() then begin
-                // Si ya existe este producto, verificar si la línea actual es posterior
-                if PurchInvLine."Line No." > LastLineByItem."Line No." then begin
-                    LastLineByItem.Delete();
-                    LastLineByItem := PurchInvLine;
-                    LastLineByItem.Insert();
+            ItemNo := PurchInvLine."No.";
+
+            // Si NO hemos procesado este producto, procesarlo
+            if not ProcessedItems.Contains(ItemNo) then begin
+                // Calcular promedio para este producto
+                TotalCostByItem := 0;
+                LineCountByItem := 0;
+
+                // Recorrer todas las líneas de este producto en la factura
+                PurchInvLine.SetRange("Document No.", DocumentNo);
+                PurchInvLine.SetRange(Type, PurchInvLine.Type::Item);
+                PurchInvLine.SetRange("No.", ItemNo);
+                if PurchInvLine.FindSet() then
+                    repeat
+                        TotalCostByItem += PurchInvLine."Unit Cost (LCY)";
+                        LineCountByItem += 1;
+                    until PurchInvLine.Next() = 0;
+
+                // Actualizar JMC Average Purchase Cost con el promedio
+                if LineCountByItem > 0 then begin
+                    AverageCost := TotalCostByItem / LineCountByItem;
+                    if Item.Get(ItemNo) then begin
+                        Item."JMC Average Purchase Cost" := AverageCost;
+                        Item."JMC Last Purch. Invoice No." := DocumentNo;
+                        Item.Modify(true);
+                    end;
                 end;
-            end else begin
-                // Primera línea de este producto
-                LastLineByItem := PurchInvLine;
-                LastLineByItem.Insert();
+
+                // Marcar este producto como procesado
+                ProcessedItems.Add(ItemNo);
+
+                // Resetear filtros para continuar con el siguiente producto
+                PurchInvLine.SetRange("Document No.", DocumentNo);
+                PurchInvLine.SetRange(Type, PurchInvLine.Type::Item);
+                PurchInvLine.SetFilter("No.", '<>%1', '');
             end;
         until PurchInvLine.Next() = 0;
-
-        // Actualizar Last Direct Cost de cada producto con el coste de la última línea
-        LastLineByItem.Reset();
-        if LastLineByItem.FindSet() then
-            repeat
-                if Item.Get(LastLineByItem."No.") then begin
-                    // Calcular el coste unitario SIN descuento de línea
-                    // Si hay descuento de línea, el Direct Unit Cost ya está reducido
-                    // Necesitamos revertir el descuento para obtener el precio base
-                    if LastLineByItem."Line Discount %" <> 0 then
-                        UnitCostWithoutDiscount := LastLineByItem."Direct Unit Cost" / (1 - LastLineByItem."Line Discount %" / 100)
-                    else
-                        UnitCostWithoutDiscount := LastLineByItem."Direct Unit Cost";
-
-                    Item.Validate("Last Direct Cost", UnitCostWithoutDiscount);
-                    Item.Modify(true);
-                end;
-            until LastLineByItem.Next() = 0;
     end;
 }

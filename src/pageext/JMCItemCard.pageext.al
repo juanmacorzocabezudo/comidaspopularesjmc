@@ -11,8 +11,28 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
                 ToolTip = 'Specifies the weight of the item in kilograms.', Comment = 'ESP="Especifica el peso del producto en kilogramos."';
             }
         }
+        modify("Last Direct Cost")
+        {
+            Visible = false;
+        }
         addafter("Unit Cost")
         {
+            field("JMC Last Direct Cost"; Rec."JMC Average Purchase Cost")
+            {
+                ApplicationArea = All;
+                Caption = 'Last Direct Cost', Comment = 'ESP="Último coste directo"';
+                ToolTip = 'Specifies the average purchase cost calculated from the last purchase invoice.', Comment = 'ESP="Especifica el coste medio de compra calculado de la última factura de compra."';
+
+                trigger OnDrillDown()
+                var
+                    PurchInvHeader: Record "Purch. Inv. Header";
+                begin
+                    if Rec."JMC Last Purch. Invoice No." <> '' then begin
+                        PurchInvHeader.Get(Rec."JMC Last Purch. Invoice No.");
+                        Page.Run(Page::"Posted Purchase Invoice", PurchInvHeader);
+                    end;
+                end;
+            }
             field("JMC Stock Unit Cost"; StockUnitCost)
             {
                 ApplicationArea = All;

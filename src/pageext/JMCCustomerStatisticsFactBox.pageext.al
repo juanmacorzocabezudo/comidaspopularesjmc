@@ -61,8 +61,47 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
         {
             Visible = false;
         }
+        modify("Balance (LCY)")
+        {
+            Visible = false;
+        }
+        modify("Outstanding Invoices (LCY)")
+        {
+            Visible = false;
+        }
         addafter("Outstanding Invoices (LCY)")
         {
+            field("JMC Pending Invoices"; PendingInvoicesLCY)
+            {
+                ApplicationArea = All;
+                Caption = 'Pending Invoices (LCY)', Comment = 'ESP="Facturas pendientes (DL)"';
+                ToolTip = 'Specifies the total amount for posted invoices not yet paid.', Comment = 'ESP="Especifica el importe total de facturas registradas pendientes de pago."';
+
+                trigger OnDrillDown()
+                var
+                    Customer: Record Customer;
+                begin
+                    if Customer.Get(Rec."No.") then begin
+                        Customer.SetRange("No.", Rec."No.");
+                        Page.Run(Page::"Customer Ledger Entries", Customer);
+                    end;
+                end;
+            }
+            field("JMC Unposted Invoices"; UnpostedInvoicesLCY)
+            {
+                ApplicationArea = All;
+                Caption = 'Unposted Invoices (LCY)', Comment = 'ESP="Facturas sin registrar (DL)"';
+                ToolTip = 'Specifies the total amount for unposted sales invoices.', Comment = 'ESP="Especifica el importe total de facturas de venta sin registrar."';
+
+                trigger OnDrillDown()
+                var
+                    SalesHeader: Record "Sales Header";
+                begin
+                    SalesHeader.SetRange("Sell-to Customer No.", Rec."No.");
+                    SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Invoice);
+                    Page.Run(Page::"Sales Invoice List", SalesHeader);
+                end;
+            }
             field("JMC Pending Credit Memos"; PendingCreditMemosLCY)
             {
                 ApplicationArea = All;
@@ -103,6 +142,8 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
         PendingQuotesLCY: Decimal;
         OpenSalesOrdersLCY: Decimal;
         ReleasedSalesOrdersLCY: Decimal;
+        PendingInvoicesLCY: Decimal;
+        UnpostedInvoicesLCY: Decimal;
         PendingCreditMemosLCY: Decimal;
 
     trigger OnAfterGetRecord()
@@ -110,6 +151,8 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
         CalculatePendingQuotes();
         CalculateOpenSalesOrders();
         CalculateReleasedSalesOrders();
+        CalculatePendingInvoices();
+        CalculateUnpostedInvoices();
         CalculatePendingCreditMemos();
         CalculateCustomTotal();
     end;
@@ -117,24 +160,15 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
     local procedure CalculateCustomTotal()
     var
         SalesHeader: Record "Sales Header";
-        Customer: Record Customer;
         QuoteAmount: Decimal;
-        InvoiceAmount: Decimal;
     begin
         CustomTotalLCY := 0;
         QuoteAmount := 0;
-        InvoiceAmount := 0;
 
-        // Calculate: OFERTAS + PEDIDOS ABIERTOS + PEDIDOS LANZADOS + FACTURAS - ABONOS
+        // Calculate: OFERTAS + PEDIDOS ABIERTOS + PEDIDOS LANZADOS + FACTURAS REGISTRADAS + FACTURAS SIN REGISTRAR
+        // NOTA: Los abonos pendientes NO se restan del total (solo son informativos hasta que se registren)
         if Rec."No." = '' then
             exit;
-
-        if not Customer.Get(Rec."No.") then
-            exit;
-
-        // Use standard flowfields from Customer
-        Customer.CalcFields("Outstanding Invoices (LCY)");
-        InvoiceAmount := Customer."Outstanding Invoices (LCY)";
 
         // Add Quotes
         SalesHeader.Reset();
@@ -146,7 +180,7 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
                 QuoteAmount += SalesHeader."Amount Including VAT";
             until SalesHeader.Next() = 0;
 
-        CustomTotalLCY := QuoteAmount + OpenSalesOrdersLCY + ReleasedSalesOrdersLCY + InvoiceAmount - PendingCreditMemosLCY;
+        CustomTotalLCY := QuoteAmount + OpenSalesOrdersLCY + ReleasedSalesOrdersLCY + PendingInvoicesLCY + UnpostedInvoicesLCY;
     end;
 
     local procedure CalculatePendingQuotes()
@@ -207,6 +241,23 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
         ReleasedSalesOrdersLCY := Customer."Shipped Not Invoiced (LCY)";
     end;
 
+    local procedure CalculatePendingInvoices()
+    var
+        Customer: Record Customer;
+    begin
+        PendingInvoicesLCY := 0;
+
+        // Calculate pending invoices (Balance) for the customer - posted invoices not yet paid
+        if Rec."No." = '' then
+            exit;
+
+        if not Customer.Get(Rec."No.") then
+            exit;
+
+        Customer.CalcFields("Balance (LCY)");
+        PendingInvoicesLCY := Customer."Balance (LCY)";
+    end;
+
     local procedure CalculatePendingCreditMemos()
     var
         SalesHeader: Record "Sales Header";
@@ -225,5 +276,22 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
                 SalesHeader.CalcFields("Amount Including VAT");
                 PendingCreditMemosLCY += SalesHeader."Amount Including VAT";
             until SalesHeader.Next() = 0;
+    end;
+
+    local procedure CalculateUnpostedInvoices()
+    var
+        Customer: Record Customer;
+    begin
+        UnpostedInvoicesLCY := 0;
+
+        // Calculate unposted invoices (Outstanding Invoices) for the customer
+        if Rec."No." = '' then
+            exit;
+
+        if not Customer.Get(Rec."No.") then
+            exit;
+
+        Customer.CalcFields("Outstanding Invoices (LCY)");
+        UnpostedInvoicesLCY := Customer."Outstanding Invoices (LCY)";
     end;
 }

@@ -706,15 +706,15 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</source>
+          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</target>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnBeforeCheckAvailableCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 826348334 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
-          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</source>
-          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8</target>
-          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Saldo pendiente: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Total: %7\\Excedido: %8"</note>
+          <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</source>
+          <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9</target>
+          <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method OnUpdateAmountOnBeforeCheckCreditLimit - NamedType CreditLimitMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 15911652 - NamedType 3292692308" size-unit="char" translate="yes" xml:space="preserve">
@@ -1665,6 +1665,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Specifies the available credit calculated as: Credit Limit - (Open Orders + Released Orders + Pending Invoices + Unposted Invoices).</source>
+          <target>Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Avail. Credit (LCY) - JMC</source>
+          <target>Crédito disponible (DL) - JMC</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Crédito disponible (DL) - JMC"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for open (not released) sales orders.</source>
           <target>Especifica el importe total de pedidos de venta abiertos (no lanzados).</target>
@@ -1725,6 +1737,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Notas de abonos pendientes (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Credit Memos - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1687777587 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for posted invoices not yet paid.</source>
+          <target>Especifica el importe total de facturas registradas pendientes de pago.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de facturas registradas pendientes de pago."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 1687777587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Pending Invoices (LCY)</source>
+          <target>Facturas pendientes (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturas pendientes (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Pending Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 3048580832 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Specifies the total amount for unposted sales invoices.</source>
+          <target>Especifica el importe total de facturas de venta sin registrar.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe total de facturas de venta sin registrar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 471549067 - Control 3048580832 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
+          <source>Unposted Invoices (LCY)</source>
+          <target>Facturas sin registrar (DL)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Facturas sin registrar (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <target>Especifica el peso del producto en kilogramos.</target>
@@ -1736,6 +1772,42 @@
           <target>Peso (Kg)</target>
           <note from="Developer" annotates="general" priority="2">ESP="Peso (Kg)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 2056776124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the average purchase cost calculated from the last purchase invoice.</source>
+          <target>Especifica el coste medio de compra calculado de la última factura de compra.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste medio de compra calculado de la última factura de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Direct Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 2056776124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Last Direct Cost</source>
+          <target>Último coste directo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Direct Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the weighted average unit cost from purchases in the last year.</source>
+          <target>Especifica el coste unitario medio ponderado de las compras del último año.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario medio ponderado de las compras del último año."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 1671620048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Last Year Purchase Cost</source>
+          <target>Coste Compra Último Año</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Compra Último Año"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Last Year Unit Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the unit cost calculated only from inventory entries with remaining quantity greater than zero.</source>
+          <target>Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario calculado solo de movimientos de inventario con cantidad pendiente mayor que cero."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3316346635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Stock Unit Cost</source>
+          <target>Coste Unitario Existencias</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Existencias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Open the item card for the item in this entry, even if it is blocked.</source>
@@ -1760,6 +1832,18 @@
           <target>El producto %1 no existe.</target>
           <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no existe."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Method OnAction - NamedType jmcItemNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 2056776124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Specifies the average purchase cost calculated from the last purchase invoice.</source>
+          <target>Especifica el coste medio de compra calculado de la última factura de compra.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste medio de compra calculado de la última factura de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 2056776124 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Last Direct Cost</source>
+          <target>Último coste directo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
           <source>Internal Notes</source>
@@ -1964,6 +2048,18 @@
           <target>Categorías CP</target>
           <note from="Developer" annotates="general" priority="2">ESP="Categorías CP"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC G/L Account - Field JMC CP Categories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 3186865137 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Last Direct Cost</source>
+          <target>Último coste directo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Average Purchase Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 1892570966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Last Purchase Invoice No.</source>
+          <target>Nº última factura compra</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº última factura compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Last Purch. Invoice No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4200125043 - Field 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>Weight</source>

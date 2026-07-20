@@ -2,31 +2,33 @@ pageextension 53124 "JMC Customer Details FB" extends "Customer Details FactBox"
 {
     layout
     {
-        addlast(Content)
+        modify(AvailableCreditLCY)
         {
-            field("JMC Avail. Credit (LCY)"; AvailableCreditLCY)
+            Visible = false;
+        }
+        addafter("Credit Limit (LCY)")
+        {
+            field("Avail Credit (LCY)"; JMCAvailableCreditLCY)
             {
                 ApplicationArea = All;
-                Caption = 'Avail. Credit (LCY) - JMC', Comment = 'ESP="Crédito disponible (DL) - JMC"';
-                ToolTip = 'Specifies the available credit calculated as: Credit Limit - (Open Orders + Released Orders + Pending Invoices + Unposted Invoices).', Comment = 'ESP="Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar)."';
+                Caption = 'Crédito disponible (DL)';
+                ToolTip = 'Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).';
                 Style = Attention;
-                StyleExpr = AvailableCreditLCY < 0;
+                StyleExpr = JMCAvailableCreditLCY < 0;
 
                 trigger OnDrillDown()
                 var
-                    Customer: Record Customer;
+                    CustLedgerEntry: Record "Cust. Ledger Entry";
                 begin
-                    if Customer.Get(Rec."No.") then begin
-                        Customer.SetRange("No.", Rec."No.");
-                        Page.Run(Page::"Customer Ledger Entries", Customer);
-                    end;
+                    CustLedgerEntry.SetRange("Customer No.", Rec."No.");
+                    Page.Run(Page::"Customer Ledger Entries", CustLedgerEntry);
                 end;
             }
         }
     }
 
     var
-        AvailableCreditLCY: Decimal;
+        JMCAvailableCreditLCY: Decimal;
 
     trigger OnAfterGetRecord()
     begin
@@ -37,19 +39,31 @@ pageextension 53124 "JMC Customer Details FB" extends "Customer Details FactBox"
     var
         Customer: Record Customer;
         SalesHeader: Record "Sales Header";
+        PendingQuotesAmount: Decimal;
         OpenOrdersAmount: Decimal;
         ReleasedOrdersAmount: Decimal;
         PendingInvoicesAmount: Decimal;
         UnpostedInvoicesAmount: Decimal;
         TotalDebt: Decimal;
     begin
-        AvailableCreditLCY := 0;
+        JMCAvailableCreditLCY := 0;
 
         if Rec."No." = '' then
             exit;
 
         if not Customer.Get(Rec."No.") then
             exit;
+
+        // Calcular ofertas pendientes
+        PendingQuotesAmount := 0;
+        SalesHeader.Reset();
+        SalesHeader.SetRange("Sell-to Customer No.", Rec."No.");
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Quote);
+        if SalesHeader.FindSet() then
+            repeat
+                SalesHeader.CalcFields("Amount Including VAT");
+                PendingQuotesAmount += SalesHeader."Amount Including VAT";
+            until SalesHeader.Next() = 0;
 
         // Calcular pedidos abiertos (no lanzados)
         OpenOrdersAmount := 0;
@@ -75,11 +89,11 @@ pageextension 53124 "JMC Customer Details FB" extends "Customer Details FactBox"
         Customer.CalcFields("Outstanding Invoices (LCY)");
         UnpostedInvoicesAmount := Customer."Outstanding Invoices (LCY)";
 
-        // Total deuda = Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar
+        // Total deuda = Ofertas + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar
         // NOTA: Los abonos pendientes NO se restan (solo son informativos hasta que se registren)
-        TotalDebt := OpenOrdersAmount + ReleasedOrdersAmount + PendingInvoicesAmount + UnpostedInvoicesAmount;
+        TotalDebt := PendingQuotesAmount + OpenOrdersAmount + ReleasedOrdersAmount + PendingInvoicesAmount + UnpostedInvoicesAmount;
 
         // Crédito disponible = Límite de crédito - Total deuda
-        AvailableCreditLCY := Customer."Credit Limit (LCY)" - TotalDebt;
+        JMCAvailableCreditLCY := Customer."Credit Limit (LCY)" - TotalDebt;
     end;
 }

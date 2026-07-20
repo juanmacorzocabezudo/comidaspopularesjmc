@@ -1388,15 +1388,15 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
-          <source>Specifies the available credit calculated as: Credit Limit - (Open Orders + Released Orders + Pending Invoices + Unposted Invoices).</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar)."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property ToolTip</note>
+        <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control Avail Credit (LCY) - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
-          <source>Avail. Credit (LCY) - JMC</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Crédito disponible (DL) - JMC"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property Caption</note>
+        <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Crédito disponible (DL)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control Avail Credit (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for open (not released) sales orders.</source>

@@ -63,6 +63,15 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC CP BOM Aditional Cost" = X,
         page "JMC Internal Notes Editor" = X,
         page JMCAlxControlVentasAbonos = X,
+        page "JMC Eventos API" = X,
+        page "JMC Menu Adulto API" = X,
+        page "JMC Menu Especial API" = X,
+        page "JMC Menu Niño API" = X,
+        page "JMC Pan Evento API" = X,
+        page "JMC Menaje Desechable API" = X,
+        page "JMC Suplementos Evento API" = X,
+        page "JMC Personal Evento API" = X,
+        page "JMC Recursos Evento API" = X,
 
 
         // Reports JMC

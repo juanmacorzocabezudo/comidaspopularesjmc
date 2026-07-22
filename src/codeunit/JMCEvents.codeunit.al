@@ -98,13 +98,15 @@ codeunit 53100 "JMC Events"
     local procedure OnBeforeCheckAvailableCreditLimit(var SalesHeader: Record "Sales Header"; var ReturnValue: Decimal; var IsHandled: Boolean)
     var
         Customer: Record Customer;
-        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"';
+        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10"';
         TotalAmount: Decimal;
         ExceededAmount: Decimal;
+        PendingQuotesAmount: Decimal;
         OpenOrdersAmount: Decimal;
         ReleasedOrdersAmount: Decimal;
         UnpostedInvoicesAmount: Decimal;
         PendingCreditMemosAmount: Decimal;
+        CurrentDocAmount: Decimal;
     begin
         // Solo verificar en Ofertas, Pedidos y Facturas (no en Abonos ni Devoluciones)
         if not (SalesHeader."Document Type" in [SalesHeader."Document Type"::Quote,
@@ -123,16 +125,22 @@ codeunit 53100 "JMC Events"
         if Customer."Credit Limit (LCY)" = 0 then
             exit;
 
-        // Calcular pedidos abiertos (no lanzados) y pedidos lanzados (enviados no facturados)
-        OpenOrdersAmount := CalculateOpenSalesOrders(Customer."No.");
-        Customer.CalcFields("Balance (LCY)", "Shipped Not Invoiced (LCY)", "Outstanding Invoices (LCY)");
-        ReleasedOrdersAmount := Customer."Shipped Not Invoiced (LCY)";
+        // Calcular ofertas, pedidos abiertos, pedidos lanzados, facturas pendientes y sin registrar
+        // Excluir el documento actual para sumarlo después
+        PendingQuotesAmount := CalculatePendingQuotes(Customer."No.", SalesHeader."No.");
+        OpenOrdersAmount := CalculateOpenSalesOrders(Customer."No.", SalesHeader."No.");
+        ReleasedOrdersAmount := CalculateReleasedSalesOrders(Customer."No.");
+        Customer.CalcFields("Balance (LCY)", "Outstanding Invoices (LCY)");
         UnpostedInvoicesAmount := Customer."Outstanding Invoices (LCY)";
         PendingCreditMemosAmount := CalculatePendingCreditMemos(Customer."No.");
 
-        // Calcular total: pedidos abiertos + pedidos lanzados + facturas pendientes (registradas) + facturas sin registrar
+        // Obtener el importe del documento actual
+        SalesHeader.CalcFields("Amount Including VAT");
+        CurrentDocAmount := SalesHeader."Amount Including VAT";
+
+        // Calcular total: ofertas + pedidos abiertos + pedidos lanzados + facturas pendientes + facturas sin registrar + documento actual
         // NOTA: Los abonos pendientes NO se restan del total (solo son informativos hasta que se registren)
-        TotalAmount := OpenOrdersAmount + ReleasedOrdersAmount + Customer."Balance (LCY)" + UnpostedInvoicesAmount;
+        TotalAmount := PendingQuotesAmount + OpenOrdersAmount + ReleasedOrdersAmount + Customer."Balance (LCY)" + UnpostedInvoicesAmount + CurrentDocAmount;
 
         // Si se excede el límite, mostrar mensaje y enviar email
         if TotalAmount > Customer."Credit Limit (LCY)" then begin
@@ -140,6 +148,7 @@ codeunit 53100 "JMC Events"
             Message(CreditLimitMsg,
                 Customer."No." + ' - ' + Customer.Name,
                 Customer."Credit Limit (LCY)",
+                PendingQuotesAmount,
                 OpenOrdersAmount,
                 ReleasedOrdersAmount,
                 Customer."Balance (LCY)",
@@ -149,7 +158,7 @@ codeunit 53100 "JMC Events"
                 ExceededAmount);
 
             // Enviar notificación por email
-            SendCreditLimitEmail(Customer, TotalAmount, ExceededAmount, SalesHeader."Document Type", SalesHeader."No.", OpenOrdersAmount, ReleasedOrdersAmount, UnpostedInvoicesAmount, PendingCreditMemosAmount);
+            SendCreditLimitEmail(Customer, TotalAmount, ExceededAmount, SalesHeader."Document Type", SalesHeader."No.", PendingQuotesAmount, OpenOrdersAmount, ReleasedOrdersAmount, UnpostedInvoicesAmount, PendingCreditMemosAmount);
 
             // Marcar que ya se mostró el aviso para este documento
             SalesHeader."JMC Credit Limit Warning Shown" := true;
@@ -162,13 +171,15 @@ codeunit 53100 "JMC Events"
     var
         Customer: Record Customer;
         SalesHeader: Record "Sales Header";
-        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Pedidos abiertos: %3\\Pedidos lanzados: %4\\Facturas pendientes: %5\\Facturas sin registrar: %6\\Notas de abono pendientes: %7\\Total: %8\\Excedido: %9"';
+        CreditLimitMsg: Label 'AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10', Comment = 'ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10"';
         TotalAmount: Decimal;
         ExceededAmount: Decimal;
+        PendingQuotesAmount: Decimal;
         OpenOrdersAmount: Decimal;
         ReleasedOrdersAmount: Decimal;
         UnpostedInvoicesAmount: Decimal;
         PendingCreditMemosAmount: Decimal;
+        CurrentDocAmount: Decimal;
     begin
         // Solo verificar en Ofertas, Pedidos y Facturas (no en Abonos ni Devoluciones)
         if not (SalesLine."Document Type" in [SalesLine."Document Type"::Quote,
@@ -191,16 +202,22 @@ codeunit 53100 "JMC Events"
         if Customer."Credit Limit (LCY)" = 0 then
             exit;
 
-        // Calcular pedidos abiertos (no lanzados) y pedidos lanzados (enviados no facturados)
-        OpenOrdersAmount := CalculateOpenSalesOrders(Customer."No.");
-        Customer.CalcFields("Balance (LCY)", "Shipped Not Invoiced (LCY)", "Outstanding Invoices (LCY)");
-        ReleasedOrdersAmount := Customer."Shipped Not Invoiced (LCY)";
+        // Calcular ofertas, pedidos abiertos, pedidos lanzados, facturas pendientes y sin registrar
+        // Excluir el documento actual para sumarlo después
+        PendingQuotesAmount := CalculatePendingQuotes(Customer."No.", SalesHeader."No.");
+        OpenOrdersAmount := CalculateOpenSalesOrders(Customer."No.", SalesHeader."No.");
+        ReleasedOrdersAmount := CalculateReleasedSalesOrders(Customer."No.");
+        Customer.CalcFields("Balance (LCY)", "Outstanding Invoices (LCY)");
         UnpostedInvoicesAmount := Customer."Outstanding Invoices (LCY)";
         PendingCreditMemosAmount := CalculatePendingCreditMemos(Customer."No.");
 
-        // Calcular total: pedidos abiertos + pedidos lanzados + facturas pendientes (registradas) + facturas sin registrar
+        // Obtener el importe del documento actual
+        SalesHeader.CalcFields("Amount Including VAT");
+        CurrentDocAmount := SalesHeader."Amount Including VAT";
+
+        // Calcular total: ofertas + pedidos abiertos + pedidos lanzados + facturas pendientes + facturas sin registrar + documento actual
         // NOTA: Los abonos pendientes NO se restan del total (solo son informativos hasta que se registren)
-        TotalAmount := OpenOrdersAmount + ReleasedOrdersAmount + Customer."Balance (LCY)" + UnpostedInvoicesAmount;
+        TotalAmount := PendingQuotesAmount + OpenOrdersAmount + ReleasedOrdersAmount + Customer."Balance (LCY)" + UnpostedInvoicesAmount + CurrentDocAmount;
 
         // Si se excede el límite, mostrar mensaje y enviar email
         if TotalAmount > Customer."Credit Limit (LCY)" then begin
@@ -208,6 +225,7 @@ codeunit 53100 "JMC Events"
             Message(CreditLimitMsg,
                 Customer."No." + ' - ' + Customer.Name,
                 Customer."Credit Limit (LCY)",
+                PendingQuotesAmount,
                 OpenOrdersAmount,
                 ReleasedOrdersAmount,
                 Customer."Balance (LCY)",
@@ -217,7 +235,7 @@ codeunit 53100 "JMC Events"
                 ExceededAmount);
 
             // Enviar notificación por email
-            SendCreditLimitEmail(Customer, TotalAmount, ExceededAmount, SalesLine."Document Type", SalesLine."Document No.", OpenOrdersAmount, ReleasedOrdersAmount, UnpostedInvoicesAmount, PendingCreditMemosAmount);
+            SendCreditLimitEmail(Customer, TotalAmount, ExceededAmount, SalesLine."Document Type", SalesLine."Document No.", PendingQuotesAmount, OpenOrdersAmount, ReleasedOrdersAmount, UnpostedInvoicesAmount, PendingCreditMemosAmount);
 
             // Marcar que ya se mostró el aviso para este documento
             SalesHeader."JMC Credit Limit Warning Shown" := true;
@@ -225,7 +243,7 @@ codeunit 53100 "JMC Events"
         end;
     end;
 
-    local procedure SendCreditLimitEmail(Customer: Record Customer; TotalAmount: Decimal; ExceededAmount: Decimal; DocumentType: Enum "Sales Document Type"; DocumentNo: Code[20]; OpenOrdersAmount: Decimal; ReleasedOrdersAmount: Decimal; UnpostedInvoicesAmount: Decimal; PendingCreditMemosAmount: Decimal)
+    local procedure SendCreditLimitEmail(Customer: Record Customer; TotalAmount: Decimal; ExceededAmount: Decimal; DocumentType: Enum "Sales Document Type"; DocumentNo: Code[20]; PendingQuotesAmount: Decimal; OpenOrdersAmount: Decimal; ReleasedOrdersAmount: Decimal; UnpostedInvoicesAmount: Decimal; PendingCreditMemosAmount: Decimal)
     var
         SalesSetup: Record "Sales & Receivables Setup";
         SalesLine: Record "Sales Line";
@@ -270,6 +288,7 @@ codeunit 53100 "JMC Events"
         EmailBody.AppendLine('<p><strong>Documento:</strong> ' + DocumentTypeText + ' ' + DocumentNo + '</p>');
         EmailBody.AppendLine('<table border="1" cellpadding="5" cellspacing="0" style="border-collapse: collapse;">');
         EmailBody.AppendLine('<tr><td><strong>Límite de crédito:</strong></td><td style="text-align: right;">' + Format(Customer."Credit Limit (LCY)", 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
+        EmailBody.AppendLine('<tr><td><strong>Ofertas pendientes:</strong></td><td style="text-align: right;">' + Format(PendingQuotesAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
         EmailBody.AppendLine('<tr><td><strong>Pedidos abiertos:</strong></td><td style="text-align: right;">' + Format(OpenOrdersAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
         EmailBody.AppendLine('<tr><td><strong>Pedidos lanzados:</strong></td><td style="text-align: right;">' + Format(ReleasedOrdersAmount, 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
         EmailBody.AppendLine('<tr><td><strong>Facturas pendientes:</strong></td><td style="text-align: right;">' + Format(Customer."Balance (LCY)", 0, '<Precision,2:2><Standard Format,0>') + ' €</td></tr>');
@@ -336,6 +355,11 @@ codeunit 53100 "JMC Events"
     end;
 
     local procedure CalculateOpenSalesOrders(CustomerNo: Code[20]): Decimal
+    begin
+        exit(CalculateOpenSalesOrders(CustomerNo, ''));
+    end;
+
+    local procedure CalculateOpenSalesOrders(CustomerNo: Code[20]; ExcludeDocNo: Code[20]): Decimal
     var
         SalesHeader: Record "Sales Header";
         TotalAmount: Decimal;
@@ -350,6 +374,38 @@ codeunit 53100 "JMC Events"
         SalesHeader.SetRange("Sell-to Customer No.", CustomerNo);
         SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Order);
         SalesHeader.SetRange(Status, SalesHeader.Status::Open);
+        if ExcludeDocNo <> '' then
+            SalesHeader.SetFilter("No.", '<>%1', ExcludeDocNo);
+        if SalesHeader.FindSet() then
+            repeat
+                SalesHeader.CalcFields("Amount Including VAT");
+                TotalAmount += SalesHeader."Amount Including VAT";
+            until SalesHeader.Next() = 0;
+
+        exit(TotalAmount);
+    end;
+
+    local procedure CalculatePendingQuotes(CustomerNo: Code[20]): Decimal
+    begin
+        exit(CalculatePendingQuotes(CustomerNo, ''));
+    end;
+
+    local procedure CalculatePendingQuotes(CustomerNo: Code[20]; ExcludeDocNo: Code[20]): Decimal
+    var
+        SalesHeader: Record "Sales Header";
+        TotalAmount: Decimal;
+    begin
+        TotalAmount := 0;
+
+        // Calculate pending quotes for the customer
+        if CustomerNo = '' then
+            exit(0);
+
+        SalesHeader.Reset();
+        SalesHeader.SetRange("Sell-to Customer No.", CustomerNo);
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Quote);
+        if ExcludeDocNo <> '' then
+            SalesHeader.SetFilter("No.", '<>%1', ExcludeDocNo);
         if SalesHeader.FindSet() then
             repeat
                 SalesHeader.CalcFields("Amount Including VAT");
@@ -377,6 +433,30 @@ codeunit 53100 "JMC Events"
             repeat
                 SalesHeader.CalcFields("Amount Including VAT");
                 TotalAmount += SalesHeader."Amount Including VAT";
+            until SalesHeader.Next() = 0;
+
+        exit(TotalAmount);
+    end;
+
+    local procedure CalculateReleasedSalesOrders(CustomerNo: Code[20]): Decimal
+    var
+        SalesHeader: Record "Sales Header";
+        TotalAmount: Decimal;
+    begin
+        TotalAmount := 0;
+
+        // Calculate shipped not invoiced amount from sales orders
+        if CustomerNo = '' then
+            exit(0);
+
+        SalesHeader.Reset();
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Order);
+        SalesHeader.SetRange("Sell-to Customer No.", CustomerNo);
+        SalesHeader.SetRange("Shipped Not Invoiced", true);
+        if SalesHeader.FindSet() then
+            repeat
+                SalesHeader.CalcFields("Amt. Ship. Not Inv. (LCY)");
+                TotalAmount += SalesHeader."Amt. Ship. Not Inv. (LCY)";
             until SalesHeader.Next() = 0;
 
         exit(TotalAmount);

@@ -78,8 +78,16 @@ pageextension 53124 "JMC Customer Details FB" extends "Customer Details FactBox"
             until SalesHeader.Next() = 0;
 
         // Calcular pedidos lanzados (enviados no facturados)
-        Customer.CalcFields("Shipped Not Invoiced (LCY)");
-        ReleasedOrdersAmount := Customer."Shipped Not Invoiced (LCY)";
+        ReleasedOrdersAmount := 0;
+        SalesHeader.Reset();
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Order);
+        SalesHeader.SetRange("Sell-to Customer No.", Rec."No.");
+        SalesHeader.SetRange("Shipped Not Invoiced", true);
+        if SalesHeader.FindSet() then
+            repeat
+                SalesHeader.CalcFields("Amt. Ship. Not Inv. (LCY)");
+                ReleasedOrdersAmount += SalesHeader."Amt. Ship. Not Inv. (LCY)";
+            until SalesHeader.Next() = 0;
 
         // Calcular facturas pendientes (registradas no liquidadas)
         Customer.CalcFields("Balance (LCY)");

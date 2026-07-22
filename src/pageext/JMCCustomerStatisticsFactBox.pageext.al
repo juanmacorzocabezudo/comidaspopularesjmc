@@ -226,19 +226,23 @@ pageextension 53103 "JMC Customer Statistics FB" extends "Customer Statistics Fa
 
     local procedure CalculateReleasedSalesOrders()
     var
-        Customer: Record Customer;
+        SalesHeader: Record "Sales Header";
     begin
         ReleasedSalesOrdersLCY := 0;
 
-        // Calculate released sales orders (shipped not invoiced) for the customer
+        // Calculate shipped not invoiced amount from sales orders
         if Rec."No." = '' then
             exit;
 
-        if not Customer.Get(Rec."No.") then
-            exit;
-
-        Customer.CalcFields("Shipped Not Invoiced (LCY)");
-        ReleasedSalesOrdersLCY := Customer."Shipped Not Invoiced (LCY)";
+        SalesHeader.Reset();
+        SalesHeader.SetRange("Document Type", SalesHeader."Document Type"::Order);
+        SalesHeader.SetRange("Sell-to Customer No.", Rec."No.");
+        SalesHeader.SetRange("Shipped Not Invoiced", true);
+        if SalesHeader.FindSet() then
+            repeat
+                SalesHeader.CalcFields("Amt. Ship. Not Inv. (LCY)");
+                ReleasedSalesOrdersLCY += SalesHeader."Amt. Ship. Not Inv. (LCY)";
+            until SalesHeader.Next() = 0;
     end;
 
     local procedure CalculatePendingInvoices()

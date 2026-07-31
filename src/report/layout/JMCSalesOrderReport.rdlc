@@ -25,8 +25,8 @@
                 <Sizing>FitProportional</Sizing>
                 <Top>0.2cm</Top>
                 <Left>0.5cm</Left>
-                <Height>2cm</Height>
-                <Width>4cm</Width>
+                <Height>3cm</Height>
+                <Width>6cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -52,7 +52,7 @@
                         <Value>=vbCrLf &amp; Fields!CompanyVATRegistrationNo.Value &amp; vbCrLf &amp;
 Fields!CompanyAddress.Value &amp; ", " &amp; Fields!CompanyPostCode.Value &amp; vbCrLf &amp;
 Fields!CompanyCity.Value &amp; ", " &amp; Fields!CompanyCounty.Value &amp; vbCrLf &amp;
-Fields!CompanyPhoneNo.Value &amp; " / " &amp; Fields!CompanyEMail.Value &amp; vbCrLf &amp;
+Fields!CompanyPhoneNo.Value &amp; vbCrLf &amp; Fields!CompanyEMail.Value &amp; vbCrLf &amp;
 Fields!CompanyHomePage.Value</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
@@ -92,7 +92,7 @@ VENTA</Value>
                               <FontFamily>Arial</FontFamily>
                               <FontSize>10pt</FontSize>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
+                              <Color>Black</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -124,7 +124,7 @@ VENTA</Value>
                     <Style>Solid</Style>
                     <Width>2pt</Width>
                   </Border>
-                  <BackgroundColor>#B91921</BackgroundColor>
+                  <BackgroundColor>White</BackgroundColor>
                 </Style>
               </Rectangle>
               <!-- Quote Number -->
@@ -192,7 +192,7 @@ VENTA</Value>
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Left</TextAlign>
+                      <TextAlign>Center</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -413,8 +413,8 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
@@ -440,8 +440,8 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>1</ZIndex>
                 <Style>
@@ -469,9 +469,9 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -497,9 +497,9 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>3</ZIndex>
                 <Style>
@@ -558,7 +558,7 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                 </Paragraphs>
                 <Top>0.2cm</Top>
                 <Left>12.9cm</Left>
-                <Width>4cm</Width>
+                <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>5</ZIndex>
                 <Style>
@@ -593,6 +593,7 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Textbox>
               <Textbox Name="BankValue">
@@ -644,7 +645,7 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>9.8cm</Left>
                 <Width>3cm</Width>
                 <Height>0.5cm</Height>
@@ -672,7 +673,7 @@ Fields!SelltoEMail_SalesHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>12.9cm</Left>
                 <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
@@ -897,8 +898,7 @@ Medida</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cantidad
-U.L.</Value>
+                                  <Value>Cantidad / U.L.</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1234,27 +1234,26 @@ IVA</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="QtyPerUnitOfMeasure">
+                        <Textbox Name="LogisticsUnitQty">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!QtyPerUnitOfMeasure_SalesLine.Value</Value>
+                                  <Value>=Fields!LogisticsUnitQty_SalesLine.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>7pt</FontSize>
-                                    <Format>#,0.##</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>QtyPerUnitOfMeasure</rd:DefaultName>
+                          <rd:DefaultName>LogisticsUnitQty</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -2078,6 +2077,9 @@ IVA</Value>
         </Field>
         <Field Name="QtyPerUnitOfMeasure_SalesLineFormat">
           <DataField>QtyPerUnitOfMeasure_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="LogisticsUnitQty_SalesLine">
+          <DataField>LogisticsUnitQty_SalesLine</DataField>
         </Field>
       </Fields>
       <Query>

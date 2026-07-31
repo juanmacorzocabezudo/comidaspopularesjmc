@@ -2,12 +2,12 @@ pageextension 53127 "JMC Posted Sales Invoices" extends "Posted Sales Invoices"
 {
     actions
     {
-        addlast(processing)
+        addafter(Print)
         {
             action("JMC Print Invoice")
             {
                 ApplicationArea = All;
-                Caption = 'Print JMC', Comment = 'ESP="Imprimir JMC"';
+                Caption = 'Print Catering Invoice', Comment = 'ESP="Imprimir factura Catering"';
                 ToolTip = 'Print the posted sales invoice using the JMC report format.', Comment = 'ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."';
                 Image = Print;
                 Promoted = true;

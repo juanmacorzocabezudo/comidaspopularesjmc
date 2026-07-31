@@ -25,8 +25,8 @@
                 <Sizing>FitProportional</Sizing>
                 <Top>0.2cm</Top>
                 <Left>0.5cm</Left>
-                <Height>2cm</Height>
-                <Width>4cm</Width>
+                <Height>3cm</Height>
+                <Width>6cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -52,7 +52,7 @@
                         <Value>=vbCrLf &amp; Fields!CompanyVATRegistrationNo.Value &amp; vbCrLf &amp;
 Fields!CompanyAddress.Value &amp; ", " &amp; Fields!CompanyPostCode.Value &amp; vbCrLf &amp;
 Fields!CompanyCity.Value &amp; ", " &amp; Fields!CompanyCounty.Value &amp; vbCrLf &amp;
-Fields!CompanyPhoneNo.Value &amp; " / " &amp; Fields!CompanyEMail.Value &amp; vbCrLf &amp;
+Fields!CompanyPhoneNo.Value &amp; vbCrLf &amp; Fields!CompanyEMail.Value &amp; vbCrLf &amp;
 Fields!CompanyHomePage.Value</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
@@ -92,7 +92,7 @@ VENTA</Value>
                               <FontFamily>Arial</FontFamily>
                               <FontSize>10pt</FontSize>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
+                              <Color>Black</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -124,7 +124,7 @@ VENTA</Value>
                     <Style>Solid</Style>
                     <Width>2pt</Width>
                   </Border>
-                  <BackgroundColor>#B91921</BackgroundColor>
+                  <BackgroundColor>White</BackgroundColor>
                 </Style>
               </Rectangle>
               <!-- Quote Number -->
@@ -192,7 +192,7 @@ VENTA</Value>
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Left</TextAlign>
+                      <TextAlign>Center</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -413,8 +413,8 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
@@ -440,8 +440,8 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>1</ZIndex>
                 <Style>
@@ -469,9 +469,9 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -497,9 +497,9 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>3</ZIndex>
                 <Style>
@@ -558,7 +558,7 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                 </Paragraphs>
                 <Top>0.2cm</Top>
                 <Left>12.9cm</Left>
-                <Width>4cm</Width>
+                <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>5</ZIndex>
                 <Style>
@@ -593,6 +593,7 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Textbox>
               <Textbox Name="BankValue">
@@ -644,7 +645,7 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>9.8cm</Left>
                 <Width>3cm</Width>
                 <Height>0.5cm</Height>
@@ -672,7 +673,7 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>12.9cm</Left>
                 <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
@@ -888,8 +889,7 @@ Medida</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Cantidad
-U.L.</Value>
+                                  <Value>Cantidad / U.L.</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1020,6 +1020,21 @@ Logística</Value>
                                 <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIF(IsNothing(Fields!TrackingInfo_SalesShipmentLine.Value), "", Fields!TrackingInfo_SalesShipmentLine.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Arial</FontFamily>
+                                    <FontSize>6pt</FontSize>
+                                    <FontStyle>Italic</FontStyle>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
+                            </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Description</rd:DefaultName>
                           <Style>
@@ -1108,27 +1123,26 @@ Logística</Value>
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="QtyPerUnitOfMeasure">
+                        <Textbox Name="LogisticsUnitQty">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!QtyPerUnitOfMeasure_SalesShipmentLine.Value</Value>
+                                  <Value>=Fields!QtyPerLogisticsUnit_SalesShipmentLine.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>7pt</FontSize>
-                                    <Format>#,0.##</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Right</TextAlign>
+                                <TextAlign>Center</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>QtyPerUnitOfMeasure</rd:DefaultName>
+                          <rd:DefaultName>LogisticsUnitQty</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -1151,7 +1165,7 @@ Logística</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value></Value>
+                                  <Value>=Fields!LogisticsUnitQty_SalesShipmentLine.Value</Value>
                                   <Style>
                                     <FontFamily>Arial</FontFamily>
                                     <FontSize>7pt</FontSize>
@@ -1159,7 +1173,7 @@ Logística</Value>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1416,6 +1430,21 @@ Logística</Value>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Line after Observaciones title -->
+                  <Line Name="ObservacionesTitleLine">
+                    <Top>0.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>9.3cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <Textbox Name="ObservacionesContent">
                     <CanGrow>true</CanGrow>
                     <Paragraphs>
@@ -1436,9 +1465,9 @@ Logística</Value>
                     </Paragraphs>
                     <Top>0.6cm</Top>
                     <Left>0.2cm</Left>
-                    <Height>1.8cm</Height>
+                    <Height>2.3cm</Height>
                     <Width>9cm</Width>
-                    <ZIndex>1</ZIndex>
+                    <ZIndex>2</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -1449,7 +1478,7 @@ Logística</Value>
                 <KeepTogether>true</KeepTogether>
                 <Top>0.2cm</Top>
                 <Left>0cm</Left>
-                <Height>4cm</Height>
+                <Height>3cm</Height>
                 <Width>9.3cm</Width>
                 <Style>
                   <Border>
@@ -1491,6 +1520,21 @@ Logística</Value>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Line after Conformidad title -->
+                  <Line Name="ConformidadTitleLine">
+                    <Top>0.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <!-- Nombre y Apellidos -->
                   <Textbox Name="NombreApellidosLabel">
                     <CanGrow>false</CanGrow>
@@ -1510,17 +1554,32 @@ Logística</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>0.7cm</Top>
+                    <Top>0.6cm</Top>
                     <Left>0.2cm</Left>
                     <Height>0.4cm</Height>
                     <Width>10cm</Width>
-                    <ZIndex>1</ZIndex>
+                    <ZIndex>2</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Full line after Nombre y Apellidos -->
+                  <Line Name="NombreApellidosFullLine">
+                    <Top>1cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>4</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <!-- DNI -->
                   <Textbox Name="DNILabel">
                     <CanGrow>false</CanGrow>
@@ -1540,18 +1599,33 @@ Logística</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.2cm</Top>
+                    <Top>1.05cm</Top>
                     <Left>0.2cm</Left>
                     <Height>0.4cm</Height>
                     <Width>10cm</Width>
-                    <ZIndex>2</ZIndex>
+                    <ZIndex>5</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
-                  <!-- En calidad de y Firma -->
+                  <!-- Horizontal line dividing bottom section -->
+                  <Line Name="BottomSectionDivider">
+                    <Top>1.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>5</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
+                  <!-- En calidad de -->
                   <Textbox Name="CalidadLabel">
                     <CanGrow>false</CanGrow>
                     <Paragraphs>
@@ -1570,17 +1644,33 @@ Logística</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.7cm</Top>
+                    <Top>1.6cm</Top>
                     <Left>0.2cm</Left>
-                    <Height>1.2cm</Height>
-                    <Width>4cm</Width>
-                    <ZIndex>3</ZIndex>
+                    <Height>0.4cm</Height>
+                    <Width>4.8cm</Width>
+                    <ZIndex>6</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Vertical line separator -->
+                  <Line Name="VerticalSeparator">
+                    <Top>1.5cm</Top>
+                    <Left>5cm</Left>
+                    <Height>1.5cm</Height>
+                    <Width>0cm</Width>
+                    <ZIndex>7</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
+                  <!-- Firma -->
                   <Textbox Name="FirmaLabel">
                     <CanGrow>false</CanGrow>
                     <Paragraphs>
@@ -1595,15 +1685,15 @@ Logística</Value>
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Left</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.7cm</Top>
-                    <Left>5cm</Left>
-                    <Height>1.2cm</Height>
-                    <Width>5cm</Width>
-                    <ZIndex>4</ZIndex>
+                    <Top>1.6cm</Top>
+                    <Left>5.2cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>4.8cm</Width>
+                    <ZIndex>8</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -1614,8 +1704,8 @@ Logística</Value>
                 <KeepTogether>true</KeepTogether>
                 <Top>0.2cm</Top>
                 <Left>9.4cm</Left>
-                <Height>4cm</Height>
-                <Width>10.2cm</Width>
+                <Height>3cm</Height>
+                <Width>10.3cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1625,6 +1715,21 @@ Logística</Value>
                   </Border>
                 </Style>
               </Rectangle>
+              <!-- Horizontal divider line below boxes -->
+              <Line Name="FooterDividerLine">
+                <Top>3.2cm</Top>
+                <Left>0cm</Left>
+                <Height>0cm</Height>
+                <Width>19.7cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#000000</Color>
+                    <Style>Solid</Style>
+                    <Width>0.5pt</Width>
+                  </Border>
+                </Style>
+              </Line>
               <!-- Footer Text Red -->
               <Textbox Name="FooterTextRed">
                 <CanGrow>false</CanGrow>
@@ -1645,11 +1750,11 @@ Logística</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>4.3cm</Top>
-                <Left>0cm</Left>
-                <Height>0.3cm</Height>
-                <Width>19.6cm</Width>
-                <ZIndex>2</ZIndex>
+                <Top>3.3cm</Top>
+                <Left>3.5cm</Left>
+                <Height>0.4cm</Height>
+                <Width>16.2cm</Width>
+                <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1676,7 +1781,7 @@ Logística</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>4.8cm</Top>
+                <Top>3.8cm</Top>
                 <Left>0cm</Left>
                 <Height>0.4cm</Height>
                 <Width>19.6cm</Width>
@@ -1699,7 +1804,7 @@ Logística</Value>
 </Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <Color>#000000</Color>
                         </Style>
                       </TextRun>
@@ -1707,7 +1812,7 @@ Logística</Value>
                         <Value>RECEPCIÓN Y REVISIÓN DEL PEDIDO RECIBIDO</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                           <Color>#000000</Color>
                         </Style>
@@ -1718,7 +1823,7 @@ Logística</Value>
 - </Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <Color>#000000</Color>
                         </Style>
                       </TextRun>
@@ -1726,7 +1831,7 @@ Logística</Value>
                         <Value>Imprescindible</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                           <Color>#000000</Color>
                         </Style>
@@ -1737,7 +1842,7 @@ Logística</Value>
 - En caso de alguna </Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <Color>#000000</Color>
                         </Style>
                       </TextRun>
@@ -1745,7 +1850,7 @@ Logística</Value>
                         <Value>incidencia con los bultos</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <FontWeight>Bold</FontWeight>
                           <Color>#000000</Color>
                         </Style>
@@ -1756,13 +1861,14 @@ Logística</Value>
 - Correos oficiales en caso de incidencias: administracion@comidaspopulares.com / javier.lorenzo@comidaspopulares.com</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
+                          <FontSize>6pt</FontSize>
                           <Color>#000000</Color>
                         </Style>
                       </TextRun>
                     </TextRuns>
                     <Style>
                       <TextAlign>Left</TextAlign>
+                      <LineHeight>7pt</LineHeight>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -2007,6 +2113,15 @@ Logística</Value>
         </Field>
         <Field Name="QtyPerUnitOfMeasure_SalesShipmentLineFormat">
           <DataField>QtyPerUnitOfMeasure_SalesShipmentLineFormat</DataField>
+        </Field>
+        <Field Name="QtyPerLogisticsUnit_SalesShipmentLine">
+          <DataField>QtyPerLogisticsUnit_SalesShipmentLine</DataField>
+        </Field>
+        <Field Name="LogisticsUnitQty_SalesShipmentLine">
+          <DataField>LogisticsUnitQty_SalesShipmentLine</DataField>
+        </Field>
+        <Field Name="TrackingInfo_SalesShipmentLine">
+          <DataField>TrackingInfo_SalesShipmentLine</DataField>
         </Field>
       </Fields>
       <Query>

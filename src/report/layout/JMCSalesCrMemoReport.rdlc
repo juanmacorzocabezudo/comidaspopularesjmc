@@ -25,8 +25,8 @@
                 <Sizing>FitProportional</Sizing>
                 <Top>0.2cm</Top>
                 <Left>0.5cm</Left>
-                <Height>2cm</Height>
-                <Width>4cm</Width>
+                <Height>3cm</Height>
+                <Width>6cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -91,7 +91,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                               <FontFamily>Arial</FontFamily>
                               <FontSize>8pt</FontSize>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
+                              <Color>Black</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -123,7 +123,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                     <Style>Solid</Style>
                     <Width>2pt</Width>
                   </Border>
-                  <BackgroundColor>#B91921</BackgroundColor>
+                  <BackgroundColor>White</BackgroundColor>
                 </Style>
               </Rectangle>
               <!-- Invoice Number -->
@@ -191,7 +191,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Left</TextAlign>
+                      <TextAlign>Center</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -256,6 +256,7 @@ Provincia</Value>
                       <TextRun>
                         <Value>=Fields!SelltoCustomerNo_SalesCrMemoHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoCustomerName_SalesCrMemoHeader.Value &amp; vbCrLf &amp;
+Fields!CustomerVATRegistrationNo.Value &amp; vbCrLf &amp;
 Fields!SelltoAddress_SalesCrMemoHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoPostCode_SalesCrMemoHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoCounty_SalesCrMemoHeader.Value</Value>
@@ -411,8 +412,8 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
@@ -438,8 +439,8 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>1</ZIndex>
                 <Style>
@@ -467,9 +468,9 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -495,9 +496,9 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>3</ZIndex>
                 <Style>
@@ -584,7 +585,7 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>9.8cm</Left>
                 <Width>4.5cm</Width>
                 <Height>0.5cm</Height>
@@ -612,7 +613,7 @@ Fields!SelltoEMail_SalesCrMemoHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>14.4cm</Left>
                 <Width>5.2cm</Width>
                 <Height>0.5cm</Height>
@@ -1711,8 +1712,8 @@ Medida</Value>
                         <Value>LA FALTA DE PAGO DE ESTA FACTURA EN EL PLAZO DE VENCIMIENTO ESTABLECIDO GENERARA UN 2% MENSUAL EN CONCEPTO DE INTERESES DE DEMORA.</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
+                          <FontSize>6pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
                         </Style>
                       </TextRun>
                     </TextRuns>
@@ -1785,6 +1786,12 @@ Medida</Value>
         </Field>
         <Field Name="SelltoCustomerName_SalesCrMemoHeader">
           <DataField>SelltoCustomerName_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="CustomerVATRegistrationNo">
+          <DataField>CustomerVATRegistrationNo</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_SalesCrMemoHeader">
+          <DataField>VATRegistrationNo_SalesCrMemoHeader</DataField>
         </Field>
         <Field Name="SelltoAddress_SalesCrMemoHeader">
           <DataField>SelltoAddress_SalesCrMemoHeader</DataField>

@@ -79,34 +79,34 @@ report 53105 "JMC Sales Order Report"
             }
 
             // Company Information columns
-            column(CompanyName; CompanyInfo.Name)
+            column(CompanyName; SalesSetup."JMC Company Name")
             {
             }
-            column(CompanyAddress; CompanyInfo.Address)
+            column(CompanyAddress; SalesSetup."JMC Company Address")
             {
             }
-            column(CompanyAddress2; CompanyInfo."Address 2")
+            column(CompanyAddress2; SalesSetup."JMC Company Address 2")
             {
             }
-            column(CompanyCity; CompanyInfo.City)
+            column(CompanyCity; SalesSetup."JMC Company City")
             {
             }
-            column(CompanyPostCode; CompanyInfo."Post Code")
+            column(CompanyPostCode; SalesSetup."JMC Company Post Code")
             {
             }
-            column(CompanyCounty; CompanyInfo.County)
+            column(CompanyCounty; SalesSetup."JMC Company County")
             {
             }
-            column(CompanyPhoneNo; CompanyInfo."Phone No.")
+            column(CompanyPhoneNo; SalesSetup."JMC Company Phone No.")
             {
             }
-            column(CompanyEMail; CompanyInfo."E-Mail")
+            column(CompanyEMail; SalesSetup."JMC Company E-Mail")
             {
             }
-            column(CompanyHomePage; CompanyInfo."Home Page")
+            column(CompanyHomePage; SalesSetup."JMC Company Home Page")
             {
             }
-            column(CompanyVATRegistrationNo; CompanyInfo."VAT Registration No.")
+            column(CompanyVATRegistrationNo; SalesSetup."JMC Company VAT Reg. No.")
             {
             }
             column(CompanyPicture; CompanyInfo.Picture)
@@ -186,10 +186,16 @@ report 53105 "JMC Sales Order Report"
                 column(QtyPerUnitOfMeasure_SalesLine; QtyPerUnitOfMeasure)
                 {
                 }
+                column(LogisticsUnitQty_SalesLine; LogisticsUnitQty)
+                {
+                }
 
                 trigger OnAfterGetRecord()
                 var
                     ItemUnitOfMeasure: Record "Item Unit of Measure";
+                    LogisticsUoM: Record "Item Unit of Measure";
+                    LogisticsQty: Decimal;
+                    LogisticsCode: Code[10];
                 begin
                     SubtotalAmount += "Line Amount";
                     TotalVATAmount += "Amount Including VAT" - "Line Amount";
@@ -201,6 +207,19 @@ report 53105 "JMC Sales Order Report"
                         if ItemUnitOfMeasure.Get(SalesLine."No.", SalesLine."Unit of Measure Code") then
                             if ItemUnitOfMeasure."Qty. per Unit of Measure" <> 0 then
                                 QtyPerUnitOfMeasure := SalesLine.Quantity / ItemUnitOfMeasure."Qty. per Unit of Measure";
+                    end;
+
+                    // Calculate Logistics Unit Quantity (Cantidad / UL)
+                    LogisticsUnitQty := '';
+                    if Type = Type::Item then begin
+                        LogisticsUoM.SetRange("Item No.", SalesLine."No.");
+                        LogisticsUoM.SetRange("Unidad Logística Albaran", true);
+                        if LogisticsUoM.FindFirst() then begin
+                            if LogisticsUoM."Qty. per Unit of Measure" <> 0 then begin
+                                // Cantidad / U.L.: "X UNIDAD / CÓDIGO" (ej: "4 KG / CAJA")
+                                LogisticsUnitQty := Format(LogisticsUoM."Qty. per Unit of Measure", 0, '<Precision,2:2><Standard Format,0>') + ' ' + SalesLine."Unit of Measure Code" + ' / ' + LogisticsUoM.Code;
+                            end;
+                        end;
                     end;
                 end;
 
@@ -221,10 +240,11 @@ report 53105 "JMC Sales Order Report"
             trigger OnAfterGetRecord()
             begin
                 // Get Company Information
-                if not CompanyInfoRead then begin
+                if not SalesSetupRead then begin
                     CompanyInfo.Get();
                     CompanyInfo.CalcFields(Picture);
-                    CompanyInfoRead := true;
+                    SalesSetup.Get();
+                    SalesSetupRead := true;
                 end;
 
                 // Get Customer
@@ -263,10 +283,11 @@ report 53105 "JMC Sales Order Report"
 
     var
         CompanyInfo: Record "Company Information";
+        SalesSetup: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         PaymentTerms: Record "Payment Terms";
         BankAccount: Record "Bank Account";
-        CompanyInfoRead: Boolean;
+        SalesSetupRead: Boolean;
         SubtotalAmount: Decimal;
         TotalVATAmount: Decimal;
         TotalAmount: Decimal;
@@ -274,4 +295,5 @@ report 53105 "JMC Sales Order Report"
         CompanyBankName: Text[100];
         CompanyBankIBAN: Code[50];
         QtyPerUnitOfMeasure: Decimal;
+        LogisticsUnitQty: Text[50];
 }

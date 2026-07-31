@@ -25,8 +25,8 @@
                 <Sizing>FitProportional</Sizing>
                 <Top>0.2cm</Top>
                 <Left>0.5cm</Left>
-                <Height>2cm</Height>
-                <Width>4cm</Width>
+                <Height>3cm</Height>
+                <Width>6cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -66,9 +66,9 @@ Fields!CompanyInfoHomePage.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.6cm</Top>
-                <Left>6cm</Left>
+                <Left>6.5cm</Left>
                 <Height>2cm</Height>
-                <Width>9.5cm</Width>
+                <Width>8.5cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -82,10 +82,10 @@ Fields!CompanyInfoHomePage.Value</Value>
                 <Value>=Fields!CompanyInfoInsuranceLogo.Value</Value>
                 <MIMEType>image/png</MIMEType>
                 <Sizing>FitProportional</Sizing>
-                <Top>1.1cm</Top>
-                <Left>16cm</Left>
+                <Top>1.5cm</Top>
+                <Left>16.5cm</Left>
                 <Height>1.5cm</Height>
-                <Width>3.5cm</Width>
+                <Width>3cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -108,7 +108,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                               <FontFamily>Arial</FontFamily>
                               <FontSize>10pt</FontSize>
                               <FontWeight>Bold</FontWeight>
-                              <Color>White</Color>
+                              <Color>Black</Color>
                             </Style>
                           </TextRun>
                         </TextRuns>
@@ -140,7 +140,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                     <Style>Solid</Style>
                     <Width>2pt</Width>
                   </Border>
-                  <BackgroundColor>#B91921</BackgroundColor>
+                  <BackgroundColor>White</BackgroundColor>
                 </Style>
               </Rectangle>
               <!-- Invoice Number -->
@@ -208,7 +208,7 @@ Fields!CompanyInfoHomePage.Value</Value>
                       </TextRun>
                     </TextRuns>
                     <Style>
-                      <TextAlign>Left</TextAlign>
+                      <TextAlign>Center</TextAlign>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
@@ -273,6 +273,7 @@ Provincia</Value>
                       <TextRun>
                         <Value>=Fields!SelltoCustomerNo_SalesInvoiceHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoCustomerName_SalesInvoiceHeader.Value &amp; vbCrLf &amp;
+Fields!CustomerVATRegistrationNo.Value &amp; vbCrLf &amp;
 Fields!SelltoAddress_SalesInvoiceHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoPostCode_SalesInvoiceHeader.Value &amp; vbCrLf &amp;
 Fields!SelltoCounty_SalesInvoiceHeader.Value</Value>
@@ -428,8 +429,8 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
@@ -455,8 +456,8 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>1</ZIndex>
                 <Style>
@@ -484,9 +485,9 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>0cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>2</ZIndex>
                 <Style>
@@ -512,9 +513,9 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
-                <Left>3.1cm</Left>
-                <Width>3cm</Width>
+                <Top>0.6cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>3</ZIndex>
                 <Style>
@@ -573,7 +574,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                 </Paragraphs>
                 <Top>0.2cm</Top>
                 <Left>12.9cm</Left>
-                <Width>4cm</Width>
+                <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>5</ZIndex>
                 <Style>
@@ -608,6 +609,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
+                  <TextAlign>Right</TextAlign>
                 </Style>
               </Textbox>
               <Textbox Name="BankValue">
@@ -659,7 +661,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>9.8cm</Left>
                 <Width>3cm</Width>
                 <Height>0.5cm</Height>
@@ -687,7 +689,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.9cm</Top>
+                <Top>0.6cm</Top>
                 <Left>12.9cm</Left>
                 <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
@@ -1781,6 +1783,21 @@ Medida</Value>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Line after Observaciones title -->
+                  <Line Name="ObservacionesTitleLine">
+                    <Top>0.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>9.3cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <Textbox Name="ObservacionesContent">
                     <CanGrow>true</CanGrow>
                     <Paragraphs>
@@ -1801,9 +1818,9 @@ Medida</Value>
                     </Paragraphs>
                     <Top>0.6cm</Top>
                     <Left>0.2cm</Left>
-                    <Height>1.8cm</Height>
+                    <Height>2.3cm</Height>
                     <Width>9cm</Width>
-                    <ZIndex>1</ZIndex>
+                    <ZIndex>2</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -1814,7 +1831,7 @@ Medida</Value>
                 <KeepTogether>true</KeepTogether>
                 <Top>0.2cm</Top>
                 <Left>0cm</Left>
-                <Height>4cm</Height>
+                <Height>3cm</Height>
                 <Width>9.3cm</Width>
                 <Style>
                   <Border>
@@ -1856,6 +1873,21 @@ Medida</Value>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Line after Conformidad title -->
+                  <Line Name="ConformidadTitleLine">
+                    <Top>0.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <!-- Nombre y Apellidos -->
                   <Textbox Name="NombreApellidosLabel">
                     <CanGrow>false</CanGrow>
@@ -1875,17 +1907,32 @@ Medida</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>0.7cm</Top>
+                    <Top>0.6cm</Top>
                     <Left>0.2cm</Left>
                     <Height>0.4cm</Height>
                     <Width>10cm</Width>
-                    <ZIndex>1</ZIndex>
+                    <ZIndex>2</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Full line after Nombre y Apellidos -->
+                  <Line Name="NombreApellidosFullLine">
+                    <Top>1cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>4</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
                   <!-- DNI -->
                   <Textbox Name="DNILabel">
                     <CanGrow>false</CanGrow>
@@ -1905,18 +1952,33 @@ Medida</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.2cm</Top>
+                    <Top>1.05cm</Top>
                     <Left>0.2cm</Left>
                     <Height>0.4cm</Height>
                     <Width>10cm</Width>
-                    <ZIndex>2</ZIndex>
+                    <ZIndex>5</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
-                  <!-- En calidad de y Firma -->
+                  <!-- Horizontal line dividing bottom section -->
+                  <Line Name="BottomSectionDivider">
+                    <Top>1.5cm</Top>
+                    <Left>0cm</Left>
+                    <Height>0cm</Height>
+                    <Width>10.3cm</Width>
+                    <ZIndex>5</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
+                  <!-- En calidad de -->
                   <Textbox Name="CalidadLabel">
                     <CanGrow>false</CanGrow>
                     <Paragraphs>
@@ -1935,17 +1997,33 @@ Medida</Value>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.7cm</Top>
+                    <Top>1.6cm</Top>
                     <Left>0.2cm</Left>
-                    <Height>1.2cm</Height>
-                    <Width>4cm</Width>
-                    <ZIndex>3</ZIndex>
+                    <Height>0.4cm</Height>
+                    <Width>4.8cm</Width>
+                    <ZIndex>6</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
                       </Border>
                     </Style>
                   </Textbox>
+                  <!-- Vertical line separator -->
+                  <Line Name="VerticalSeparator">
+                    <Top>1.5cm</Top>
+                    <Left>5cm</Left>
+                    <Height>1.5cm</Height>
+                    <Width>0cm</Width>
+                    <ZIndex>7</ZIndex>
+                    <Style>
+                      <Border>
+                        <Color>#000000</Color>
+                        <Style>Solid</Style>
+                        <Width>0.5pt</Width>
+                      </Border>
+                    </Style>
+                  </Line>
+                  <!-- Firma -->
                   <Textbox Name="FirmaLabel">
                     <CanGrow>false</CanGrow>
                     <Paragraphs>
@@ -1960,15 +2038,15 @@ Medida</Value>
                           </TextRun>
                         </TextRuns>
                         <Style>
-                          <TextAlign>Right</TextAlign>
+                          <TextAlign>Left</TextAlign>
                         </Style>
                       </Paragraph>
                     </Paragraphs>
-                    <Top>1.7cm</Top>
-                    <Left>5cm</Left>
-                    <Height>1.2cm</Height>
-                    <Width>5cm</Width>
-                    <ZIndex>4</ZIndex>
+                    <Top>1.6cm</Top>
+                    <Left>5.2cm</Left>
+                    <Height>0.4cm</Height>
+                    <Width>4.8cm</Width>
+                    <ZIndex>8</ZIndex>
                     <Style>
                       <Border>
                         <Style>None</Style>
@@ -1979,8 +2057,8 @@ Medida</Value>
                 <KeepTogether>true</KeepTogether>
                 <Top>0.2cm</Top>
                 <Left>9.4cm</Left>
-                <Height>4cm</Height>
-                <Width>10.2cm</Width>
+                <Height>3cm</Height>
+                <Width>10.3cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1990,6 +2068,21 @@ Medida</Value>
                   </Border>
                 </Style>
               </Rectangle>
+              <!-- Horizontal divider line below boxes -->
+              <Line Name="FooterDividerLine">
+                <Top>3.2cm</Top>
+                <Left>0cm</Left>
+                <Height>0cm</Height>
+                <Width>19.7cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#000000</Color>
+                    <Style>Solid</Style>
+                    <Width>0.5pt</Width>
+                  </Border>
+                </Style>
+              </Line>
               <!-- Footer Text in Red -->
               <Textbox Name="FooterText">
                 <CanGrow>false</CanGrow>
@@ -2010,11 +2103,11 @@ Medida</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>4.3cm</Top>
-                <Left>0cm</Left>
-                <Height>0.3cm</Height>
-                <Width>19.6cm</Width>
-                <ZIndex>2</ZIndex>
+                <Top>3.3cm</Top>
+                <Left>3.5cm</Left>
+                <Height>0.4cm</Height>
+                <Width>16.2cm</Width>
+                <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -2041,7 +2134,7 @@ Medida</Value>
                     </Style>
                   </Paragraph>
                 </Paragraphs>
-                <Top>4.8cm</Top>
+                <Top>3.8cm</Top>
                 <Left>0cm</Left>
                 <Height>0.4cm</Height>
                 <Width>19.6cm</Width>
@@ -2089,8 +2182,8 @@ Medida</Value>
                         <Value>LA FALTA DE PAGO DE ESTA FACTURA EN EL PLAZO DE VENCIMIENTO ESTABLECIDO GENERARA UN 2% MENSUAL EN CONCEPTO DE INTERESES DE DEMORA.</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
-                          <FontSize>7pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
+                          <FontSize>6pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
                         </Style>
                       </TextRun>
                     </TextRuns>
@@ -2164,6 +2257,12 @@ Medida</Value>
         </Field>
         <Field Name="SelltoCustomerName_SalesInvoiceHeader">
           <DataField>SelltoCustomerName_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="CustomerVATRegistrationNo">
+          <DataField>CustomerVATRegistrationNo</DataField>
+        </Field>
+        <Field Name="VATRegistrationNo_SalesInvoiceHeader">
+          <DataField>VATRegistrationNo_SalesInvoiceHeader</DataField>
         </Field>
         <Field Name="SelltoAddress_SalesInvoiceHeader">
           <DataField>SelltoAddress_SalesInvoiceHeader</DataField>

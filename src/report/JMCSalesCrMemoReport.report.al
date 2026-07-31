@@ -31,6 +31,12 @@ report 53108 "JMC Sales Cr. Memo Report"
             column(SelltoCustomerName_SalesCrMemoHeader; "Sell-to Customer Name")
             {
             }
+            column(CustomerVATRegistrationNo; Customer."VAT Registration No.")
+            {
+            }
+            column(VATRegistrationNo_SalesCrMemoHeader; "VAT Registration No.")
+            {
+            }
             column(SelltoAddress_SalesCrMemoHeader; "Sell-to Address")
             {
             }
@@ -82,34 +88,34 @@ report 53108 "JMC Sales Cr. Memo Report"
             column(PaymentTermsDescription; PaymentTermsDescription)
             {
             }
-            column(CompanyInfoName; CompanyInfo.Name)
+            column(CompanyInfoName; SalesSetup."JMC Company Name")
             {
             }
-            column(CompanyInfoAddress; CompanyInfo.Address)
+            column(CompanyInfoAddress; SalesSetup."JMC Company Address")
             {
             }
-            column(CompanyInfoAddress2; CompanyInfo."Address 2")
+            column(CompanyInfoAddress2; SalesSetup."JMC Company Address 2")
             {
             }
-            column(CompanyInfoCity; CompanyInfo.City)
+            column(CompanyInfoCity; SalesSetup."JMC Company City")
             {
             }
-            column(CompanyInfoPostCode; CompanyInfo."Post Code")
+            column(CompanyInfoPostCode; SalesSetup."JMC Company Post Code")
             {
             }
-            column(CompanyInfoCounty; CompanyInfo.County)
+            column(CompanyInfoCounty; SalesSetup."JMC Company County")
             {
             }
-            column(CompanyInfoPhoneNo; CompanyInfo."Phone No.")
+            column(CompanyInfoPhoneNo; SalesSetup."JMC Company Phone No.")
             {
             }
-            column(CompanyInfoEMail; CompanyInfo."E-Mail")
+            column(CompanyInfoEMail; SalesSetup."JMC Company E-Mail")
             {
             }
-            column(CompanyInfoHomePage; CompanyInfo."Home Page")
+            column(CompanyInfoHomePage; SalesSetup."JMC Company Home Page")
             {
             }
-            column(CompanyInfoVATRegNo; CompanyInfo."VAT Registration No.")
+            column(CompanyInfoVATRegNo; SalesSetup."JMC Company VAT Reg. No.")
             {
             }
             column(CompanyInfoPicture; CompanyInfo.Picture)
@@ -224,10 +230,12 @@ report 53108 "JMC Sales Cr. Memo Report"
     begin
         CompanyInfo.Get();
         CompanyInfo.CalcFields(Picture);
+        SalesSetup.Get();
     end;
 
     var
         CompanyInfo: Record "Company Information";
+        SalesSetup: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         BankAccount: Record "Bank Account";
         PaymentTermsDescription: Text[100];

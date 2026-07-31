@@ -78,34 +78,34 @@ report 53106 "JMC Sales Shipment Report"
             }
 
             // Company Information columns
-            column(CompanyName; CompanyInfo.Name)
+            column(CompanyName; SalesSetup."JMC Company Name")
             {
             }
-            column(CompanyAddress; CompanyInfo.Address)
+            column(CompanyAddress; SalesSetup."JMC Company Address")
             {
             }
-            column(CompanyAddress2; CompanyInfo."Address 2")
+            column(CompanyAddress2; SalesSetup."JMC Company Address 2")
             {
             }
-            column(CompanyCity; CompanyInfo.City)
+            column(CompanyCity; SalesSetup."JMC Company City")
             {
             }
-            column(CompanyPostCode; CompanyInfo."Post Code")
+            column(CompanyPostCode; SalesSetup."JMC Company Post Code")
             {
             }
-            column(CompanyCounty; CompanyInfo.County)
+            column(CompanyCounty; SalesSetup."JMC Company County")
             {
             }
-            column(CompanyPhoneNo; CompanyInfo."Phone No.")
+            column(CompanyPhoneNo; SalesSetup."JMC Company Phone No.")
             {
             }
-            column(CompanyEMail; CompanyInfo."E-Mail")
+            column(CompanyEMail; SalesSetup."JMC Company E-Mail")
             {
             }
-            column(CompanyHomePage; CompanyInfo."Home Page")
+            column(CompanyHomePage; SalesSetup."JMC Company Home Page")
             {
             }
-            column(CompanyVATRegistrationNo; CompanyInfo."VAT Registration No.")
+            column(CompanyVATRegistrationNo; SalesSetup."JMC Company VAT Reg. No.")
             {
             }
             column(CompanyPicture; CompanyInfo.Picture)
@@ -191,11 +191,24 @@ report 53106 "JMC Sales Shipment Report"
                 column(QtyPerUnitOfMeasure_SalesShipmentLine; QtyPerUnitOfMeasure)
                 {
                 }
+                column(QtyPerLogisticsUnit_SalesShipmentLine; QtyPerLogisticsUnit)
+                {
+                }
+                column(LogisticsUnitQty_SalesShipmentLine; LogisticsUnitQty)
+                {
+                }
+                column(TrackingInfo_SalesShipmentLine; TrackingInfoText)
+                {
+                }
 
                 trigger OnAfterGetRecord()
                 var
                     ItemUnitOfMeasure: Record "Item Unit of Measure";
                     Item: Record Item;
+                    ItemLedgerEntry: Record "Item Ledger Entry";
+                    LogisticsUoM: Record "Item Unit of Measure";
+                    LogisticsQty: Decimal;
+                    LogisticsCode: Code[10];
                 begin
                     // Calculate amounts (not stored in posted shipment)
                     CalcLineAmount := Round(Quantity * "Unit Price");
@@ -218,6 +231,44 @@ report 53106 "JMC Sales Shipment Report"
                         if Item.Get(SalesShipmentLine."No.") then
                             TotalKg += SalesShipmentLine.Quantity * Item."JMC Weight";
                     end;
+
+                    // Calculate Logistics Unit Quantity (Cantidad / UL and Ud. Logística)
+                    QtyPerLogisticsUnit := '';
+                    LogisticsUnitQty := '';
+                    if Type = Type::Item then begin
+                        LogisticsUoM.Reset();
+                        LogisticsUoM.SetRange("Item No.", "No.");
+                        LogisticsUoM.SetRange("Unidad Logística Albaran", true);
+                        if LogisticsUoM.FindFirst() then begin
+                            if LogisticsUoM."Qty. per Unit of Measure" <> 0 then begin
+                                // Cantidad / U.L.: "X UNIDAD / CÓDIGO" (ej: "4 KG / CAJA")
+                                QtyPerLogisticsUnit := Format(LogisticsUoM."Qty. per Unit of Measure", 0, '<Precision,2:2><Standard Format,0>') + ' ' + "Unit of Measure Code" + ' / ' + LogisticsUoM.Code;
+
+                                // Ud. Logística: Total unidades logísticas (ej: "70 CJ")
+                                LogisticsQty := Quantity / LogisticsUoM."Qty. per Unit of Measure";
+                                LogisticsCode := LogisticsUoM.Code;
+                                LogisticsUnitQty := Format(LogisticsQty, 0, '<Precision,2:2><Standard Format,0>') + ' ' + LogisticsCode;
+                            end;
+                        end;
+                    end;
+
+                    // Get Item Tracking Information
+                    TrackingInfoText := '';
+                    if Type = Type::Item then begin
+                        ItemLedgerEntry.SetRange("Document No.", SalesShipmentLine."Document No.");
+                        ItemLedgerEntry.SetRange("Document Line No.", SalesShipmentLine."Line No.");
+                        ItemLedgerEntry.SetRange("Entry Type", ItemLedgerEntry."Entry Type"::Sale);
+                        ItemLedgerEntry.SetFilter("Lot No.", '<>%1', '');
+                        if ItemLedgerEntry.FindSet() then begin
+                            repeat
+                                if TrackingInfoText <> '' then
+                                    TrackingInfoText += ' | ';
+                                TrackingInfoText += 'Lot: ' + ItemLedgerEntry."Lot No." + ', Cantidad: ' + Format(ItemLedgerEntry.Quantity, 0, '<Precision,0:3><Standard Format,0>');
+                                if ItemLedgerEntry."Expiration Date" <> 0D then
+                                    TrackingInfoText += ', Fecha de caducidad: ' + Format(ItemLedgerEntry."Expiration Date", 0, '<Day,2>/<Month,2>/<Year,2>');
+                            until ItemLedgerEntry.Next() = 0;
+                        end;
+                    end;
                 end;
 
                 trigger OnPreDataItem()
@@ -239,10 +290,11 @@ report 53106 "JMC Sales Shipment Report"
             trigger OnAfterGetRecord()
             begin
                 // Get Company Information
-                if not CompanyInfoRead then begin
+                if not SalesSetupRead then begin
                     CompanyInfo.Get();
                     CompanyInfo.CalcFields(Picture);
-                    CompanyInfoRead := true;
+                    SalesSetup.Get();
+                    SalesSetupRead := true;
                 end;
 
                 // Get Customer
@@ -281,10 +333,11 @@ report 53106 "JMC Sales Shipment Report"
 
     var
         CompanyInfo: Record "Company Information";
+        SalesSetup: Record "Sales & Receivables Setup";
         Customer: Record Customer;
         PaymentTerms: Record "Payment Terms";
         BankAccount: Record "Bank Account";
-        CompanyInfoRead: Boolean;
+        SalesSetupRead: Boolean;
         SubtotalAmount: Decimal;
         TotalVATAmount: Decimal;
         TotalAmount: Decimal;
@@ -296,4 +349,7 @@ report 53106 "JMC Sales Shipment Report"
         CalcAmountInclVAT: Decimal;
         TotalBultos: Decimal;
         TotalKg: Decimal;
+        QtyPerLogisticsUnit: Text[50];
+        LogisticsUnitQty: Text[50];
+        TrackingInfoText: Text[250];
 }

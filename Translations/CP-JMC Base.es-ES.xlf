@@ -2754,6 +2754,20 @@
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4144855433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo Report</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de nota de abono de venta"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4144855433 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>[NAB: SUGGESTION]Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Control Options - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 891574109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Invoice Report</source>
           <target>Informe de factura de venta</target>
@@ -3010,96 +3024,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 3292590038 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Sales Report Data</source>
-          <target>Datos informes de venta</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Datos informes de venta"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC Sales Report Data - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 1522260119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the insurance logo image to display in the top-right corner of sales invoices.</source>
-          <target>Especifica la imagen del logo de seguro para mostrar en la esquina superior derecha de las facturas de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la imagen del logo de seguro para mostrar en la esquina superior derecha de las facturas de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC Sales Doc Insurance Logo - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Insurance Logo</source>
-          <target>Logo seguro</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Logo seguro"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC Sales Doc Insurance Logo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 4092693957 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company address for sales reports.</source>
-          <target>Especifica la dirección de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la dirección de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Address - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 4092693957 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Address</source>
-          <target>Dirección</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Dirección"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Address - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 3212654344 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company email address for sales reports.</source>
-          <target>Especifica el email de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el email de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR E-Mail - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 3212654344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Email</source>
-          <target>Email</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Email"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR E-Mail - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 2870387195 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company website for sales reports.</source>
-          <target>Especifica la página web de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la página web de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Home Page - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 2870387195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Website</source>
-          <target>Página web</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Página web"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Home Page - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 579590142 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company name for sales reports.</source>
-          <target>Especifica el nombre de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Name - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 579590142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Company Name</source>
-          <target>Nombre empresa</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Name - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 3192728218 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company phone number for sales reports.</source>
-          <target>Especifica el teléfono de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el teléfono de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Phone No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 3192728218 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Phone No.</source>
-          <target>Teléfono</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Teléfono"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR Phone No. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 2325222940 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>Specifies the company VAT registration number (CIF) for sales reports.</source>
-          <target>Especifica el CIF de la empresa para informes de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el CIF de la empresa para informes de venta."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR VAT Registration No. - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="PageExtension 4292291777 - Control 2325222940 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3469146285">
-          <source>VAT Registration No. (CIF)</source>
-          <target>CIF</target>
-          <note from="Developer" annotates="general" priority="2">ESP="CIF"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Company Information - Control JMC SR VAT Registration No. - Property Caption</note>
-        </trans-unit>
         <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
           <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
           <target>[NAB: NOT TRANSLATED]</target>
@@ -3289,9 +3213,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
-          <source>Print JMC</source>
-          <target>Imprimir JMC</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Imprimir JMC"</note>
+          <source>Print Catering Invoice</source>
+          <target>Imprimir factura Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
@@ -3301,9 +3225,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
-          <source>Print JMC</source>
-          <target>Imprimir JMC</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Imprimir JMC"</note>
+          <source>Print Catering Invoice</source>
+          <target>Imprimir factura Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
@@ -3474,6 +3398,144 @@
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Credit Limit Email - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 4292291777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Information for Sales Documents</source>
+          <target>Información empresa para documentos de venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Información empresa para documentos de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company address to display on sales documents.</source>
+          <target>Especifica la dirección de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la dirección de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address</source>
+          <target>Dirección</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies additional address information to display on sales documents.</source>
+          <target>Especifica información adicional de dirección que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica información adicional de dirección que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address 2</source>
+          <target>Dirección 2</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company city to display on sales documents.</source>
+          <target>Especifica la ciudad de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la ciudad de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>City</source>
+          <target>Ciudad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company county/province to display on sales documents.</source>
+          <target>Especifica la provincia de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la provincia de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>County</source>
+          <target>Provincia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company email to display on sales documents.</source>
+          <target>Especifica el email de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el email de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>E-Mail</source>
+          <target>Email</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company website to display on sales documents.</source>
+          <target>Especifica la página web de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la página web de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Home Page</source>
+          <target>Página web</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company name to display on sales documents.</source>
+          <target>Especifica el nombre de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Name</source>
+          <target>Nombre empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company phone number to display on sales documents.</source>
+          <target>Especifica el número de teléfono de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de teléfono de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Phone No.</source>
+          <target>Nº teléfono</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº teléfono"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company post code to display on sales documents.</source>
+          <target>Especifica el código postal de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código postal de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Post Code</source>
+          <target>Código postal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company VAT registration number to display on sales documents.</source>
+          <target>Especifica el CIF/NIF de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el CIF/NIF de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>VAT Registration No.</source>
+          <target>CIF/NIF</target>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF/NIF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the insurance logo to display on sales documents.</source>
+          <target>Especifica el logo de la aseguradora que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el logo de la aseguradora que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Insurance Logo</source>
+          <target>Logo aseguradora</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo aseguradora"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
           <target>Especifica comentarios para esta línea de abono.</target>
@@ -3497,13 +3559,6 @@
           <target>Devolución</target>
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="TableExtension 4292291777 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3469146285">
-          <source>Sales Doc Insurance Logo</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Logo seguro doc. venta"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Company Information - Field JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3527052147 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
           <source>Cost Type</source>
@@ -3721,11 +3776,77 @@
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address</source>
+          <target>Dirección empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address 2</source>
+          <target>Dirección empresa 2</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company City</source>
+          <target>Ciudad empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company County</source>
+          <target>Provincia empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company E-Mail</source>
+          <target>Email empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Home Page</source>
+          <target>Página web empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Name</source>
+          <target>Nombre empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Phone No.</source>
+          <target>Teléfono empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Post Code</source>
+          <target>Código postal empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company VAT Registration No.</source>
+          <target>CIF empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 373820646 - Field 1100795140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Credit Limit Notification Email</source>
           <target>Email notificación límite crédito</target>
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Sales Document Insurance Logo</source>
+          <target>Logo seguro documentos venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo seguro documentos venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 866013865 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
           <source>Comments</source>

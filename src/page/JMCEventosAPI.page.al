@@ -46,6 +46,42 @@ page 53114 "JMC Eventos API"
                 {
                     Caption = 'Event Time', Comment = 'ESP="Hora Evento"';
                 }
+                field(timeSlot; Rec."Franja horaria")
+                {
+                    Caption = 'Time Slot', Comment = 'ESP="Franja horaria"';
+                }
+                field(customerCode; Rec."Codigo Cliente")
+                {
+                    Caption = 'Customer Code', Comment = 'ESP="Código Cliente"';
+                }
+                field(eventVariety; Rec."Variedad Evento")
+                {
+                    Caption = 'Event Variety', Comment = 'ESP="Variedad Evento"';
+                }
+                field(eventVarietyDescription; Rec."JMC Event Variety Description")
+                {
+                    Caption = 'Event Variety Description', Comment = 'ESP="Descripción Variedad Evento"';
+                }
+                field(contactPerson2; Rec."Persona de Contacto 2")
+                {
+                    Caption = 'Contact Person 2', Comment = 'ESP="Persona de Contacto 2"';
+                }
+                field(phone2; Rec."Telefono 2")
+                {
+                    Caption = 'Phone 2', Comment = 'ESP="Teléfono 2"';
+                }
+                field(email2; Rec."E-Mail 2")
+                {
+                    Caption = 'E-Mail 2', Comment = 'ESP="E-Mail 2"';
+                }
+                field(totalAdults; Rec."Total Adultos")
+                {
+                    Caption = 'Total Adults', Comment = 'ESP="Total Adultos"';
+                }
+                field(totalChildren; Rec."Total Ninos")
+                {
+                    Caption = 'Total Children', Comment = 'ESP="Total Niños"';
+                }
                 field(lastModifiedDateTime; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';

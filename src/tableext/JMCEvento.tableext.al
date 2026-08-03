@@ -1,5 +1,15 @@
 tableextension 53100 "JMC Evento" extends Evento
 {
+    fields
+    {
+        field(53100; "JMC Event Variety Description"; Text[50])
+        {
+            Caption = 'Event Variety Description', Comment = 'ESP="Descripción Variedad Evento"';
+            FieldClass = FlowField;
+            CalcFormula = lookup("Variedad de Evento".Descripcion where(Codigo = field("Variedad Evento")));
+            Editable = false;
+        }
+    }
     /*
     fields
     {

@@ -958,10 +958,25 @@
           <note from="Developer" annotates="general" priority="2">ESP="Eventos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Property EntitySetCaption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1828409785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact Person 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Persona de Contacto 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control contactPerson2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4209087115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control customerCode - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1820811674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Mail 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="E-Mail 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control email2 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
@@ -978,6 +993,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventTime - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 257104252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Variety</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventVariety - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 540954498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Variety Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventVarietyDescription - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
@@ -988,10 +1013,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control lastModifiedDateTime - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4169984794 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control phone2 - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Status</source>
           <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2640016835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Slot</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Franja horaria"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control timeSlot - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1564395147 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Adults</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total Adultos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control totalAdults - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 3210110699 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Children</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total Niños"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control totalChildren - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
@@ -2213,6 +2258,51 @@
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
         </trans-unit>
+        <trans-unit id="Query 3749665593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eventos con Líneas</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Eventos con Líneas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2895594700 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Cantidad_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 74377420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comentarios</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Comentarios_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 3852275139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2017695335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Codigo_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2950845476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Estado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Estado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 374189815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Fecha_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 4197182740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Hora_Evento - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Query 3359553205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Eventos con Recursos</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -2807,6 +2897,11 @@
           <source>Return</source>
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Field 173185262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
+          <source>Event Variety Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Field JMC Event Variety Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3527052147 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
           <source>Cost Type</source>

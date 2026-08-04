@@ -82,6 +82,10 @@ page 53114 "JMC Eventos API"
                 {
                     Caption = 'Total Children', Comment = 'ESP="Total Niños"';
                 }
+                field(comments; Rec.Comentario)
+                {
+                    Caption = 'Comments', Comment = 'ESP="Comentario"';
+                }
                 field(lastModifiedDateTime; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';

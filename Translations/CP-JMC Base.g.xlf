@@ -958,6 +958,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Eventos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Property EntitySetCaption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control comments - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Control 1828409785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Contact Person 2</source>
           <note from="Developer" annotates="general" priority="2">ESP="Persona de Contacto 2"</note>

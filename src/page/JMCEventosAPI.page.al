@@ -26,47 +26,47 @@ page 53114 "JMC Eventos API"
                     Caption = 'Id', Comment = 'ESP="Id"';
                     Editable = false;
                 }
-                field(eventCode; Rec."Codigo Evento")
+                field(codigoEvento; Rec."Codigo Evento")
                 {
                     Caption = 'Event Code', Comment = 'ESP="Código Evento"';
                 }
-                field(description; Rec.Descripcion)
+                field(descripcion; Rec.Descripcion)
                 {
                     Caption = 'Description', Comment = 'ESP="Descripción"';
                 }
-                field(status; Rec.Estado)
+                field(estado; Rec.Estado)
                 {
                     Caption = 'Status', Comment = 'ESP="Estado"';
                 }
-                field(eventDate; Rec."Fecha Evento")
+                field(fechaEvento; Rec."Fecha Evento")
                 {
                     Caption = 'Event Date', Comment = 'ESP="Fecha Evento"';
                 }
-                field(eventTime; Rec."Hora Evento")
+                field(horaEvento; Rec."Hora Evento")
                 {
                     Caption = 'Event Time', Comment = 'ESP="Hora Evento"';
                 }
-                field(timeSlot; Rec."Franja horaria")
+                field(franjaHoraria; Rec."Franja horaria")
                 {
                     Caption = 'Time Slot', Comment = 'ESP="Franja horaria"';
                 }
-                field(customerCode; Rec."Codigo Cliente")
+                field(codigoCliente; Rec."Codigo Cliente")
                 {
                     Caption = 'Customer Code', Comment = 'ESP="Código Cliente"';
                 }
-                field(eventVariety; Rec."Variedad Evento")
+                field(variedadEvento; Rec."Variedad Evento")
                 {
                     Caption = 'Event Variety', Comment = 'ESP="Variedad Evento"';
                 }
-                field(eventVarietyDescription; Rec."JMC Event Variety Description")
+                field(descripcionVariedadEvento; Rec."JMC Event Variety Description")
                 {
                     Caption = 'Event Variety Description', Comment = 'ESP="Descripción Variedad Evento"';
                 }
-                field(contactPerson2; Rec."Persona de Contacto 2")
+                field(personaContacto2; Rec."Persona de Contacto 2")
                 {
                     Caption = 'Contact Person 2', Comment = 'ESP="Persona de Contacto 2"';
                 }
-                field(phone2; Rec."Telefono 2")
+                field(telefono2; Rec."Telefono 2")
                 {
                     Caption = 'Phone 2', Comment = 'ESP="Teléfono 2"';
                 }
@@ -74,19 +74,19 @@ page 53114 "JMC Eventos API"
                 {
                     Caption = 'E-Mail 2', Comment = 'ESP="E-Mail 2"';
                 }
-                field(totalAdults; Rec."Total Adultos")
+                field(totalAdultos; Rec."Total Adultos")
                 {
                     Caption = 'Total Adults', Comment = 'ESP="Total Adultos"';
                 }
-                field(totalChildren; Rec."Total Ninos")
+                field(totalNinos; Rec."Total Ninos")
                 {
                     Caption = 'Total Children', Comment = 'ESP="Total Niños"';
                 }
-                field(comments; Rec.Comentario)
+                field(comentarios; Rec.Comentario)
                 {
                     Caption = 'Comments', Comment = 'ESP="Comentario"';
                 }
-                field(lastModifiedDateTime; Rec.SystemModifiedAt)
+                field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';
                     Editable = false;

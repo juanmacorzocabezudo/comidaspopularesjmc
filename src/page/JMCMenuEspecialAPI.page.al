@@ -27,48 +27,48 @@ page 53115 "JMC Menu Especial API"
                     Caption = 'Id', Comment = 'ESP="Id"';
                     Editable = false;
                 }
-                field(eventCode; Rec."Codigo Evento")
+                field(codigoEvento; Rec."Codigo Evento")
                 {
                     Caption = 'Event Code', Comment = 'ESP="Código Evento"';
                 }
-                field(lineNo; Rec.Linea)
+                field(numeroLinea; Rec.Linea)
                 {
                     Caption = 'Line No.', Comment = 'ESP="Nº Línea"';
                 }
-                field(type; Rec.Tipo)
+                field(tipo; Rec.Tipo)
                 {
                     Caption = 'Type', Comment = 'ESP="Tipo"';
                     Editable = false;
                 }
-                field(itemNo; Rec."No.")
+                field(numeroProducto; Rec."No.")
                 {
                     Caption = 'Item No.', Comment = 'ESP="Código Producto"';
                 }
-                field(description; Rec.Descripcion)
+                field(descripcion; Rec.Descripcion)
                 {
                     Caption = 'Description', Comment = 'ESP="Descripción"';
                 }
-                field(quantity; Rec.Cantidad)
+                field(cantidad; Rec.Cantidad)
                 {
                     Caption = 'Quantity', Comment = 'ESP="Cantidad"';
                 }
-                field(unitPrice; Rec."Precio Unitario")
+                field(precioUnitario; Rec."Precio Unitario")
                 {
                     Caption = 'Unit Price', Comment = 'ESP="Precio Unitario"';
                 }
-                field(lineAmount; Rec.Importe)
+                field(importe; Rec.Importe)
                 {
                     Caption = 'Amount', Comment = 'ESP="Importe"';
                 }
-                field(unitCost; Rec."Coste Unitario")
+                field(costeUnitario; Rec."Coste Unitario")
                 {
                     Caption = 'Unit Cost', Comment = 'ESP="Coste Unitario"';
                 }
-                field(totalCost; Rec."Coste Total")
+                field(costeTotal; Rec."Coste Total")
                 {
                     Caption = 'Total Cost', Comment = 'ESP="Coste Total"';
                 }
-                field(lastModifiedDateTime; Rec.SystemModifiedAt)
+                field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';
                     Editable = false;

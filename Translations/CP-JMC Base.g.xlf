@@ -1048,6 +1048,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control estado - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1084001978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status Semaphore</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado Semáforo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control estadoSemaforo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Date</source>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha Evento"</note>
@@ -2957,6 +2962,11 @@
           <source>Return</source>
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Field 1403531422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
+          <source>Status Semaphore</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado Semáforo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Field JMC Estado Semaforo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2602508561 - Field 173185262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
           <source>Event Variety Description</source>

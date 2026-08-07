@@ -38,6 +38,11 @@ page 53114 "JMC Eventos API"
                 {
                     Caption = 'Status', Comment = 'ESP="Estado"';
                 }
+                field(estadoSemaforo; EstadoSemaforoValue)
+                {
+                    Caption = 'Status Semaphore', Comment = 'ESP="Estado Semáforo"';
+                    Editable = false;
+                }
                 field(fechaEvento; Rec."Fecha Evento")
                 {
                     Caption = 'Event Date', Comment = 'ESP="Fecha Evento"';
@@ -94,4 +99,27 @@ page 53114 "JMC Eventos API"
             }
         }
     }
+
+    trigger OnAfterGetRecord()
+    begin
+        CalculateEstadoSemaforo();
+    end;
+
+    var
+        EstadoSemaforoValue: Integer;
+
+    local procedure CalculateEstadoSemaforo()
+    begin
+        // Estado es un Option: Presupuesto=0, Aceptado=1, Rechazado=2, Anulado=3, Realizado=4, Archivado=5, EnProceso=6
+        case Rec.Estado of
+            0: // Presupuesto
+                EstadoSemaforoValue := 0;
+            1: // Aceptado
+                EstadoSemaforoValue := 1;
+            3: // Anulado
+                EstadoSemaforoValue := 2;
+            else
+                EstadoSemaforoValue := -1;
+        end;
+    end;
 }

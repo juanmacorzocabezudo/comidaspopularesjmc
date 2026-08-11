@@ -26,27 +26,72 @@ page 53114 "JMC Eventos API"
                     Caption = 'Id', Comment = 'ESP="Id"';
                     Editable = false;
                 }
-                field(eventCode; Rec."Codigo Evento")
+                field(codigoEvento; Rec."Codigo Evento")
                 {
                     Caption = 'Event Code', Comment = 'ESP="Código Evento"';
                 }
-                field(description; Rec.Descripcion)
+                field(descripcion; Rec.Descripcion)
                 {
                     Caption = 'Description', Comment = 'ESP="Descripción"';
                 }
-                field(status; Rec.Estado)
+                field(estado; Rec.Estado)
                 {
                     Caption = 'Status', Comment = 'ESP="Estado"';
                 }
-                field(eventDate; Rec."Fecha Evento")
+                field(estadoSemaforo; EstadoSemaforoValue)
+                {
+                    Caption = 'Status Semaphore', Comment = 'ESP="Estado Semáforo"';
+                    Editable = false;
+                }
+                field(fechaEvento; Rec."Fecha Evento")
                 {
                     Caption = 'Event Date', Comment = 'ESP="Fecha Evento"';
                 }
-                field(eventTime; Rec."Hora Evento")
+                field(horaEvento; Rec."Hora Evento")
                 {
                     Caption = 'Event Time', Comment = 'ESP="Hora Evento"';
                 }
-                field(lastModifiedDateTime; Rec.SystemModifiedAt)
+                field(franjaHoraria; Rec."Franja horaria")
+                {
+                    Caption = 'Time Slot', Comment = 'ESP="Franja horaria"';
+                }
+                field(codigoCliente; Rec."Codigo Cliente")
+                {
+                    Caption = 'Customer Code', Comment = 'ESP="Código Cliente"';
+                }
+                field(variedadEvento; Rec."Variedad Evento")
+                {
+                    Caption = 'Event Variety', Comment = 'ESP="Variedad Evento"';
+                }
+                field(descripcionVariedadEvento; Rec."JMC Event Variety Description")
+                {
+                    Caption = 'Event Variety Description', Comment = 'ESP="Descripción Variedad Evento"';
+                }
+                field(personaContacto2; Rec."Persona de Contacto 2")
+                {
+                    Caption = 'Contact Person 2', Comment = 'ESP="Persona de Contacto 2"';
+                }
+                field(telefono2; Rec."Telefono 2")
+                {
+                    Caption = 'Phone 2', Comment = 'ESP="Teléfono 2"';
+                }
+                field(email2; Rec."E-Mail 2")
+                {
+                    Caption = 'E-Mail 2', Comment = 'ESP="E-Mail 2"';
+                }
+                field(totalAdultos; Rec."Total Adultos")
+                {
+                    Caption = 'Total Adults', Comment = 'ESP="Total Adultos"';
+                }
+                field(totalNinos; Rec."Total Ninos")
+                {
+                    Caption = 'Total Children', Comment = 'ESP="Total Niños"';
+                }
+                field(comentarios; Rec.Comentario)
+                {
+                    Caption = 'Comments', Comment = 'ESP="Comentario"';
+                }
+                field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';
                     Editable = false;
@@ -54,4 +99,27 @@ page 53114 "JMC Eventos API"
             }
         }
     }
+
+    trigger OnAfterGetRecord()
+    begin
+        CalculateEstadoSemaforo();
+    end;
+
+    var
+        EstadoSemaforoValue: Integer;
+
+    local procedure CalculateEstadoSemaforo()
+    begin
+        // Estado es un Option: Presupuesto=0, Aceptado=1, Rechazado=2, Anulado=3, Realizado=4, Archivado=5, EnProceso=6
+        case Rec.Estado of
+            0: // Presupuesto
+                EstadoSemaforoValue := 0;
+            1: // Aceptado
+                EstadoSemaforoValue := 1;
+            3: // Anulado
+                EstadoSemaforoValue := 2;
+            else
+                EstadoSemaforoValue := -1;
+        end;
+    end;
 }

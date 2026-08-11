@@ -628,6 +628,61 @@
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
         </trans-unit>
+        <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Resource Assignment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Asignación Recursos Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Resource Assignments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Asignaciones Recursos Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control cantidad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control codigoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control fechaHoraUltimaModificacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 2800025482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Performed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control tareaRealizada - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>
           <note from="Developer" annotates="general" priority="2">ESP="Costes adicional de la BOM"</note>
@@ -958,40 +1013,95 @@
           <note from="Developer" annotates="general" priority="2">ESP="Eventos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control description - Property Caption</note>
+        <trans-unit id="Page 2664101872 - Control 873297679 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control codigoCliente - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2664101872 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control codigoEvento - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 2642521524 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2664101872 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4116421198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Variety Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control descripcionVariedadEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1820811674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E-Mail 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="E-Mail 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control email2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4135883780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control estado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1084001978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status Semaphore</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado Semáforo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control estadoSemaforo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Date</source>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventDate - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control fechaEvento - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 3595242739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2664101872 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control fechaHoraUltimaModificacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 1236538338 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Time Slot</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Franja horaria"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control franjaHoraria - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Time</source>
           <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventTime - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control horaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 2664101872 - Control 3635695883 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contact Person 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Persona de Contacto 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control personaContacto2 - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2664101872 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Status</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control status - Property Caption</note>
+        <trans-unit id="Page 2664101872 - Control 1680898686 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Phone 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control telefono2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2438347130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Adults</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total Adultos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control totalAdultos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 3365240217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Children</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total Niños"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control totalNinos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2130298405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Variety</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control variedadEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
@@ -1023,125 +1133,125 @@
           <note from="Developer" annotates="general" priority="2">ESP="Menaje Desechable"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control amount - Property Caption</note>
+        <trans-unit id="Page 115785206 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control amountInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Chapter Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control chapterDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comments</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control comments - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 115785206 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3138513535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control codigoProducto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control descripcionCapitulo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 115785206 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control lineNo - Property Caption</note>
+        <trans-unit id="Page 115785206 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control importeIVAIncl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control marginType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Value</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control marginValue - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 115785206 - Control 1838459169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control print - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control imprime - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 115785206 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Chapter</source>
           <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control printChapter - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control product - Property Caption</note>
+        <trans-unit id="Page 115785206 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control productCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Proposed Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control proposedPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control quantity - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Real Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control realPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit of Measure</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unitOfMeasure - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 115785206 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 115785206 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control vatPercent - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control porcentajeIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1019345334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2006132969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control precioPropuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1980377348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control precioReal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control producto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control tipoMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unidadMedida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1837767384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control valorMargen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Adult Menu</source>
@@ -1153,65 +1263,65 @@
           <note from="Developer" annotates="general" priority="2">ESP="Menús Adulto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control description - Property Caption</note>
+        <trans-unit id="Page 3526754988 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3526754988 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control itemNo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lastModifiedDateTime - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3526754988 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lineAmount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3526754988 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lineNo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control quantity - Property Caption</note>
+        <trans-unit id="Page 3526754988 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control numeroProducto - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3526754988 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3526754988 - Control 2237224955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Price</source>
           <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control unitPrice - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control precioUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Special Menu</source>
@@ -1223,65 +1333,65 @@
           <note from="Developer" annotates="general" priority="2">ESP="Menús Especiales"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control description - Property Caption</note>
+        <trans-unit id="Page 3166611245 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3166611245 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control itemNo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lastModifiedDateTime - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3166611245 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lineAmount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3166611245 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lineNo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control quantity - Property Caption</note>
+        <trans-unit id="Page 3166611245 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control numeroProducto - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 3166611245 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 3166611245 - Control 2237224955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Price</source>
           <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control unitPrice - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control precioUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Child Menu</source>
@@ -1293,65 +1403,65 @@
           <note from="Developer" annotates="general" priority="2">ESP="Menús Niño"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control description - Property Caption</note>
+        <trans-unit id="Page 4040715290 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4040715290 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control itemNo - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lastModifiedDateTime - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4040715290 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lineAmount - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4040715290 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lineNo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control quantity - Property Caption</note>
+        <trans-unit id="Page 4040715290 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control numeroProducto - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4040715290 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 4040715290 - Control 2237224955 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Price</source>
           <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control unitPrice - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control precioUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2937564307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Operation Record Journal</source>
@@ -1478,125 +1588,125 @@
           <note from="Developer" annotates="general" priority="2">ESP="Pan Eventos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control amount - Property Caption</note>
+        <trans-unit id="Page 2062717068 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control amountInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Chapter Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control chapterDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comments</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control comments - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2062717068 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3138513535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control codigoProducto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control descripcionCapitulo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 2062717068 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control lineNo - Property Caption</note>
+        <trans-unit id="Page 2062717068 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control importeIVAIncl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control marginType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Value</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control marginValue - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2062717068 - Control 1838459169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control print - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control imprime - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2062717068 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Chapter</source>
           <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control printChapter - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control product - Property Caption</note>
+        <trans-unit id="Page 2062717068 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control productCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Proposed Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control proposedPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control quantity - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Real Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control realPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit of Measure</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unitOfMeasure - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2062717068 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2062717068 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control vatPercent - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control porcentajeIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1019345334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2006132969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control precioPropuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1980377348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control precioReal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control producto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control tipoMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unidadMedida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1837767384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Staff</source>
@@ -1608,130 +1718,130 @@
           <note from="Developer" annotates="general" priority="2">ESP="Personal Eventos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control amount - Property Caption</note>
+        <trans-unit id="Page 1112059641 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control amountInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Chapter Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control chapterDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comments</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control comments - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1112059641 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control codigoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control descripcionCapitulo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 1112059641 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control lineNo - Property Caption</note>
+        <trans-unit id="Page 1112059641 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control importeIVAIncl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control marginType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Value</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control marginValue - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3952395962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control priceInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1112059641 - Control 1838459169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control print - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control imprime - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1112059641 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Chapter</source>
           <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control printChapter - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Proposed Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control proposedPrice - Property Caption</note>
+        <trans-unit id="Page 1112059641 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control quantity - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Real Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control realPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2805002169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resource Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control resourceCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2329958254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resource Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control resourceType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit of Measure</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unitOfMeasure - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 1112059641 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 1112059641 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control vatPercent - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control porcentajeIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1019345334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 199853848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control precioIVAIncl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2006132969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control precioPropuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1980377348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control precioReal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control tipoMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 265351263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control tipoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unidadMedida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1837767384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3413657455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Order Methods</source>
@@ -1773,130 +1883,130 @@
           <note from="Developer" annotates="general" priority="2">ESP="Recursos Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control amount - Property Caption</note>
+        <trans-unit id="Page 628882109 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control amountInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Chapter Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control chapterDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comments</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control comments - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 628882109 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control codigoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control descripcionCapitulo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 628882109 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control lineNo - Property Caption</note>
+        <trans-unit id="Page 628882109 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control importeIVAIncl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control marginType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Value</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control marginValue - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3952395962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control priceInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 628882109 - Control 1838459169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control print - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control imprime - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 628882109 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Chapter</source>
           <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control printChapter - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Proposed Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control proposedPrice - Property Caption</note>
+        <trans-unit id="Page 628882109 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control quantity - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Real Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control realPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2805002169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resource Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control resourceCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2329958254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Resource Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control resourceType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit of Measure</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unitOfMeasure - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 628882109 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 628882109 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control vatPercent - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control porcentajeIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1019345334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 199853848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control precioIVAIncl - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2006132969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control precioPropuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1980377348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control precioReal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control tipoMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 265351263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control tipoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unidadMedida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1837767384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Supplement</source>
@@ -1908,125 +2018,125 @@
           <note from="Developer" annotates="general" priority="2">ESP="Suplementos Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Property EntitySetCaption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control amount - Property Caption</note>
+        <trans-unit id="Page 2894705026 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Amount Incl. VAT</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control amountInclVAT - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Chapter Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control chapterDescription - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comments</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control comments - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control description - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2894705026 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control eventCode - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3138513535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control codigoProducto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control costeTotal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control descripcionCapitulo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control id - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Last Modified Date Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control lastModifiedDateTime - Property Caption</note>
+        <trans-unit id="Page 2894705026 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control importe - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Line No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control lineNo - Property Caption</note>
+        <trans-unit id="Page 2894705026 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control importeIVAIncl - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control marginType - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Margin Value</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control marginValue - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control price - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2894705026 - Control 1838459169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control print - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control imprime - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2894705026 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Print Chapter</source>
           <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control printChapter - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control product - Property Caption</note>
+        <trans-unit id="Page 2894705026 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Product Code</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control productCode - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Proposed Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control proposedPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control quantity - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Real Price</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control realPrice - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control totalCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Type</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control type - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit Cost</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unitCost - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unit of Measure</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unitOfMeasure - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 2894705026 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+        <trans-unit id="Page 2894705026 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>VAT %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control vatPercent - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control porcentajeIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1019345334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control precio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2006132969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control precioPropuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1980377348 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control precioReal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control producto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control tipoMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unidadMedida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1837767384 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 439438213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Credit Memo Sales Control</source>
@@ -2143,6 +2253,66 @@
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4144855433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de nota de abono de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4144855433 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 891574109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoice Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de factura de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 891574109 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3351298344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de pedido de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3351298344 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de oferta de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 1312601249 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to print the internal notes in the report.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si desea imprimir las observaciones internas en el informe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control ShowInternalNotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 1312601249 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Notes</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mostrar observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control ShowInternalNotes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 120712462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Shipment Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de albarán de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 120712462 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Control Options - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2107182141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Item Weights from Format</source>
           <note from="Developer" annotates="general" priority="2">ESP="Actualizar pesos de productos desde formato"</note>
@@ -2152,6 +2322,51 @@
           <source>Process completed:\Updated: %1\Skipped (already has weight): %2\No weight found in description: %3\Format not found: %4</source>
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eventos con Líneas</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Eventos con Líneas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2895594700 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Cantidad_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 74377420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comentarios</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Comentarios_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 3852275139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion_LineasEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2017695335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Codigo_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 2950845476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Estado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Estado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 374189815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Fecha_Evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Query 3749665593 - QueryColumn 4197182740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Hora_Evento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3359553205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Eventos con Recursos</source>
@@ -2453,6 +2668,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Print the posted sales invoice using the JMC report format.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Print Catering Invoice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Print the posted sales invoice using the JMC report format.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Print Catering Invoice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
           <source>Internal Notes</source>
           <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
@@ -2593,6 +2828,121 @@
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Credit Limit Email - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 4292291777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Information for Sales Documents</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Información empresa para documentos de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company address to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la dirección de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies additional address information to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica información adicional de dirección que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company city to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la ciudad de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>City</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company county/province to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la provincia de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>County</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company email to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el email de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>E-Mail</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company website to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la página web de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Home Page</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company name to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company phone number to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de teléfono de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº teléfono"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company post code to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código postal de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Post Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company VAT registration number to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el CIF/NIF de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>VAT Registration No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF/NIF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the insurance logo to display on sales documents.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el logo de la aseguradora que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Insurance Logo</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo aseguradora"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica comentarios para esta línea de abono."</note>
@@ -2612,6 +2962,16 @@
           <source>Return</source>
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Field 1403531422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
+          <source>Status Semaphore</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado Semáforo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Field JMC Estado Semaforo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Field 173185262 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
+          <source>Event Variety Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Variedad Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Field JMC Event Variety Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3527052147 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4274826855">
           <source>Cost Type</source>
@@ -2793,10 +3153,65 @@
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company City</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company County</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company E-Mail</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Email empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Home Page</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Phone No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Post Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company VAT Registration No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 373820646 - Field 1100795140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Credit Limit Notification Email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Sales Document Insurance Logo</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo seguro documentos venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 866013865 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
           <source>Comments</source>

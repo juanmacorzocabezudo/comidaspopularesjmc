@@ -2,7 +2,7 @@
     "id": "794dc3d6-9bae-4a75-bc69-d04cc2e88465",
     "name": "CP-JMC Base",
     "publisher": "Juan Maria Corzo",
-    "version": "27.5.0.27",
+    "version": "27.5.0.28",
     "brief": "Objetos JMC",
     "description": "Objetos y funciones para los proyectos de JMC",
     "privacyStatement": "",
@@ -22,6 +22,12 @@
             "name": "CP - Functionality",
             "publisher": "Alxia Consultoria e innovación",
             "version": "1.26.1.0"
+        },
+        {
+            "id": "f2103434-723a-4bcf-8062-8398ff69bc9e",
+            "name": "Formatos Alxia",
+            "publisher": "Alxia",
+            "version": "1.27.0.0"
         },
         {
             "id": "9e6357ac-83ea-4113-bb11-35144e9def98",

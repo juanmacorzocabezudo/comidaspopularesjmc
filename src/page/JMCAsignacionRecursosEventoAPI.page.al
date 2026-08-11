@@ -1,17 +1,16 @@
-page 53116 "JMC Menu Niño API"
+page 53102 "JMC Asignacion Recursos API"
 {
     APIVersion = 'v1.0';
     APIPublisher = 'juanMariaCorzo';
     APIGroup = 'events';
 
-    EntityCaption = 'Child Menu', Comment = 'ESP="Menú Niño"';
-    EntitySetCaption = 'Child Menus', Comment = 'ESP="Menús Niño"';
-    EntityName = 'childMenu';
-    EntitySetName = 'childMenus';
+    EntityCaption = 'Event Resource Assignment', Comment = 'ESP="Asignación Recursos Evento"';
+    EntitySetCaption = 'Event Resource Assignments', Comment = 'ESP="Asignaciones Recursos Evento"';
+    EntityName = 'eventResourceAssignment';
+    EntitySetName = 'eventResourceAssignments';
 
     PageType = API;
-    SourceTable = "Lineas Evento";
-    SourceTableView = where(Tipo = const(Niño));
+    SourceTable = "Asignacion Recursos Eventos";
     DelayedInsert = true;
     ODataKeyFields = SystemId;
     Editable = true;
@@ -31,18 +30,9 @@ page 53116 "JMC Menu Niño API"
                 {
                     Caption = 'Event Code', Comment = 'ESP="Código Evento"';
                 }
-                field(numeroLinea; Rec.Linea)
+                field(codigoRecurso; Rec."Codigo Recurso")
                 {
-                    Caption = 'Line No.', Comment = 'ESP="Nº Línea"';
-                }
-                field(tipo; Rec.Tipo)
-                {
-                    Caption = 'Type', Comment = 'ESP="Tipo"';
-                    Editable = false;
-                }
-                field(numeroProducto; Rec."No.")
-                {
-                    Caption = 'Item No.', Comment = 'ESP="Código Producto"';
+                    Caption = 'Resource Code', Comment = 'ESP="Código Recurso"';
                 }
                 field(descripcion; Rec.Descripcion)
                 {
@@ -52,21 +42,17 @@ page 53116 "JMC Menu Niño API"
                 {
                     Caption = 'Quantity', Comment = 'ESP="Cantidad"';
                 }
-                field(precioUnitario; Rec."Precio Unitario")
-                {
-                    Caption = 'Unit Price', Comment = 'ESP="Precio Unitario"';
-                }
-                field(importe; Rec.Importe)
-                {
-                    Caption = 'Amount', Comment = 'ESP="Importe"';
-                }
                 field(costeUnitario; Rec."Coste Unitario")
                 {
                     Caption = 'Unit Cost', Comment = 'ESP="Coste Unitario"';
                 }
-                field(costeTotal; Rec."Coste Total")
+                field(tareaRealizada; Rec."Tarea Realizada")
                 {
-                    Caption = 'Total Cost', Comment = 'ESP="Coste Total"';
+                    Caption = 'Task Performed', Comment = 'ESP="Tarea Realizada"';
+                }
+                field(comentarios; Rec.Comentarios)
+                {
+                    Caption = 'Comments', Comment = 'ESP="Comentarios"';
                 }
                 field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {

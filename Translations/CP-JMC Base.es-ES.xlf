@@ -1137,6 +1137,69 @@
           <note from="Developer" annotates="general" priority="2">ESP="Total ingresos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalIncome - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2664101872 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Events</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Eventos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2642521524 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Date</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 3595242739 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control eventTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2664101872 - Control 998393528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control status - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
           <target>Observaciones internas</target>
@@ -1160,6 +1223,482 @@
           <target>Observaciones internas</target>
           <note from="Developer" annotates="general" priority="2">ESP="Observaciones internas"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Internal Notes Editor - Control JMC Internal Notes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disposable Tableware</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menaje Desechable"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disposable Tablewares</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menaje Desechable"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control amountInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control chapterDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <target>[NAB: SUGGESTION]Comentarios</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control marginType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control marginValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control printChapter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <target>[NAB: SUGGESTION]Producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control product - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control productCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control proposedPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control realPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unitOfMeasure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 115785206 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT %</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control vatPercent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adult Menu</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú Adulto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adult Menus</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menús Adulto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control itemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lineAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control unitPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Menu</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú Especial"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Menus</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menús Especiales"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control itemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lineAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3166611245 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control unitPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Child Menu</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú Niño"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Child Menus</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Menús Niño"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2930473216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control itemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 1058112966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lineAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4040715290 - Control 3421409717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control unitPrice - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2937564307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Operation Record Journal</source>
@@ -1299,6 +1838,377 @@
           <note from="Developer" annotates="general" priority="2">ESP="Registrar"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Oper. Rec. Journal - Action RegisterLines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2062717068 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Bread</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pan Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Breads</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pan Eventos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control amountInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control chapterDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <target>[NAB: SUGGESTION]Comentarios</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control marginType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control marginValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control printChapter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <target>[NAB: SUGGESTION]Producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control product - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control productCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control proposedPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control realPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unitOfMeasure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2062717068 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT %</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control vatPercent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Staff</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Personal Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Staff</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Personal Eventos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control amountInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control chapterDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <target>[NAB: SUGGESTION]Comentarios</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control marginType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control marginValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3952395962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control priceInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control printChapter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control proposedPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control realPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2805002169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control resourceCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2329958254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control resourceType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unitOfMeasure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1112059641 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT %</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control vatPercent - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3413657455 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Order Methods</source>
           <target>Formas pedido</target>
@@ -1334,6 +2244,377 @@
           <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Purchase Order Reasons - Control Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Resource</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Recurso Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Resources</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Recursos Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control amountInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control chapterDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <target>[NAB: SUGGESTION]Comentarios</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control marginType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control marginValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3952395962 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control priceInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control printChapter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control proposedPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control realPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2805002169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control resourceCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2329958254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Recurso"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control resourceType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unitOfMeasure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 628882109 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT %</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control vatPercent - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Supplement</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Suplemento Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Supplements</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Suplementos Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1121446808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <target>[NAB: SUGGESTION]Importe</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2015335993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount Incl. VAT</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe IVA Incl."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control amountInclVAT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1831727169 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Chapter Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control chapterDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2389296300 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comments</source>
+          <target>[NAB: SUGGESTION]Comentarios</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control comments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4232699882 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>[NAB: SUGGESTION]Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2768474171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control eventCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control id - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2245436958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Modified Date Time</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control lastModifiedDateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1294919425 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>[NAB: SUGGESTION]Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control lineNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4192655090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control marginType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3137836927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Margin Value</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control marginValue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3328426687 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control price - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 695507907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 468553292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control printChapter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1006339157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product</source>
+          <target>[NAB: SUGGESTION]Producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control product - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2432678314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Product Code</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control productCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 4020235799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Propuesto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control proposedPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3355113493 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1052151521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Real Price</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Precio Real"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control realPrice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2177258107 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control totalCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3175374588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Type</source>
+          <target>[NAB: SUGGESTION]Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 2570064479 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit Cost</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 1511501393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unitOfMeasure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2894705026 - Control 3294615612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT %</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% IVA"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control vatPercent - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 439438213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Credit Memo Sales Control</source>
@@ -1472,6 +2753,84 @@
           <target>Confirmar eliminación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4144855433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Credit Memo Report</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de nota de abono de venta"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4144855433 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>[NAB: SUGGESTION]Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 891574109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoice Report</source>
+          <target>Informe de factura de venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de factura de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 891574109 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3351298344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Order Report</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de pedido de venta"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3351298344 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>[NAB: SUGGESTION]Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Quote Report</source>
+          <target>Informe de oferta de venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de oferta de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 1312601249 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies if you want to print the internal notes in the report.</source>
+          <target>Especifica si desea imprimir las observaciones internas en el informe.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si desea imprimir las observaciones internas en el informe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control ShowInternalNotes - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 140357244 - Control 1312601249 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Internal Notes</source>
+          <target>Mostrar observaciones internas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Mostrar observaciones internas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Quote Report - Control ShowInternalNotes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 120712462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Shipment Report</source>
+          <target>Informe de albarán de venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de albarán de venta"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 120712462 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Control Options - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 2107182141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Item Weights from Format</source>
@@ -1665,17 +3024,19 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
-          <source>Specifies the available credit calculated as: Credit Limit - (Open Orders + Released Orders + Pending Invoices + Unposted Invoices).</source>
-          <target>Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el crédito disponible calculado como: Límite de crédito - (Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar)."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property ToolTip</note>
+        <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control Avail Credit (LCY) - Property ToolTip</note>
         </trans-unit>
-        <trans-unit id="PageExtension 1485145298 - Control 970247093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
-          <source>Avail. Credit (LCY) - JMC</source>
-          <target>Crédito disponible (DL) - JMC</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Crédito disponible (DL) - JMC"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control JMC Avail. Credit (LCY) - Property Caption</note>
+        <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
+          <source>Crédito disponible (DL)</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control Avail Credit (LCY) - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for open (not released) sales orders.</source>
@@ -1845,6 +3206,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Print the posted sales invoice using the JMC report format.</source>
+          <target>Imprimir la factura de venta registrada usando el formato de informe JMC.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Print Catering Invoice</source>
+          <target>Imprimir factura Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Print the posted sales invoice using the JMC report format.</source>
+          <target>Imprimir la factura de venta registrada usando el formato de informe JMC.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Print Catering Invoice</source>
+          <target>Imprimir factura Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
           <source>Internal Notes</source>
           <target>Observaciones internas</target>
@@ -2012,6 +3397,144 @@
           <target>Email notificación límite crédito</target>
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 4292291777 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Information for Sales Documents</source>
+          <target>Información empresa para documentos de venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Información empresa para documentos de venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company address to display on sales documents.</source>
+          <target>Especifica la dirección de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la dirección de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address</source>
+          <target>Dirección</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies additional address information to display on sales documents.</source>
+          <target>Especifica información adicional de dirección que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica información adicional de dirección que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Address 2</source>
+          <target>Dirección 2</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company city to display on sales documents.</source>
+          <target>Especifica la ciudad de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la ciudad de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>City</source>
+          <target>Ciudad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company county/province to display on sales documents.</source>
+          <target>Especifica la provincia de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la provincia de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>County</source>
+          <target>Provincia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company email to display on sales documents.</source>
+          <target>Especifica el email de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el email de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>E-Mail</source>
+          <target>Email</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company website to display on sales documents.</source>
+          <target>Especifica la página web de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la página web de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Home Page</source>
+          <target>Página web</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company name to display on sales documents.</source>
+          <target>Especifica el nombre de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Company Name</source>
+          <target>Nombre empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company phone number to display on sales documents.</source>
+          <target>Especifica el número de teléfono de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de teléfono de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Phone No.</source>
+          <target>Nº teléfono</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº teléfono"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company post code to display on sales documents.</source>
+          <target>Especifica el código postal de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código postal de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Post Code</source>
+          <target>Código postal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the company VAT registration number to display on sales documents.</source>
+          <target>Especifica el CIF/NIF de la empresa que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el CIF/NIF de la empresa que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>VAT Registration No.</source>
+          <target>CIF/NIF</target>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF/NIF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the insurance logo to display on sales documents.</source>
+          <target>Especifica el logo de la aseguradora que se mostrará en los documentos de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el logo de la aseguradora que se mostrará en los documentos de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Insurance Logo</source>
+          <target>Logo aseguradora</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo aseguradora"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
@@ -2253,11 +3776,77 @@
           <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Resource - Field JMC Gestoría ID - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2992247639 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address</source>
+          <target>Dirección empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 116642841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Address 2</source>
+          <target>Dirección empresa 2</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dirección empresa 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Address 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1900340528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company City</source>
+          <target>Ciudad empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ciudad empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company City - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3166739691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company County</source>
+          <target>Provincia empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Provincia empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company County - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 893100566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company E-Mail</source>
+          <target>Email empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Email empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company E-Mail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2412303937 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Home Page</source>
+          <target>Página web empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Página web empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Home Page - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 3982665376 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Name</source>
+          <target>Nombre empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1182262356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Phone No.</source>
+          <target>Teléfono empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Teléfono empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Phone No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 32156570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company Post Code</source>
+          <target>Código postal empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código postal empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company Post Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2620050595 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Company VAT Registration No.</source>
+          <target>CIF empresa</target>
+          <note from="Developer" annotates="general" priority="2">ESP="CIF empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Company VAT Reg. No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 373820646 - Field 1100795140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Credit Limit Notification Email</source>
           <target>Email notificación límite crédito</target>
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Sales Document Insurance Logo</source>
+          <target>Logo seguro documentos venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Logo seguro documentos venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 866013865 - Field 917214256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3059602325">
           <source>Comments</source>
@@ -2315,8 +3904,9 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target> </target>
+          <target>[NAB: REVIEW] </target>
           <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

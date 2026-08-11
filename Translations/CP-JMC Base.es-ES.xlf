@@ -2756,14 +2756,14 @@
         </trans-unit>
         <trans-unit id="Report 4144855433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Credit Memo Report</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Informe de nota de abono de venta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Informe de nota de abono de venta"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 4144855433 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
-          <target>[NAB: SUGGESTION]Opciones</target>
+          <target>Opciones</target>
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Control Options - Property Caption</note>
@@ -2782,14 +2782,14 @@
         </trans-unit>
         <trans-unit id="Report 3351298344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Order Report</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Informe de pedido de venta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Informe de pedido de venta"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 3351298344 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
-          <target>[NAB: SUGGESTION]Opciones</target>
+          <target>Opciones</target>
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Order Report - Control Options - Property Caption</note>

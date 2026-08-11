@@ -390,7 +390,124 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
           <!-- Dates and Payment Section - Reorganized -->
           <Rectangle Name="DatesSection">
             <ReportItems>
-              <!-- LEFT SECTION: Dates -->
+              <!-- LEFT SECTION: Order Info -->
+              <!-- Nº Pedido Label -->
+              <Textbox Name="OrderNoLabel">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Nº Pedido:</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.2cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
+                <Height>0.5cm</Height>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="OrderNoValue">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Fields!OrderNo_SalesShipmentHeader.Value</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.2cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
+                <Height>0.5cm</Height>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <!-- Nº Documento Externo Label -->
+              <Textbox Name="ExternalDocNoLabel">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Nº Documento
+Externo:</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.6cm</Top>
+                <Left>0.2cm</Left>
+                <Width>2.5cm</Width>
+                <Height>1cm</Height>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="ExternalDocNoValue">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Fields!ExternalDocumentNo_SalesShipmentHeader.Value</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.6cm</Top>
+                <Left>2.8cm</Left>
+                <Width>6cm</Width>
+                <Height>1cm</Height>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <!-- RIGHT SECTION: Dates -->
               <!-- Fecha de emisión Label -->
               <Textbox Name="IssueDateLabel">
                 <CanGrow>false</CanGrow>
@@ -413,9 +530,10 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>0.2cm</Left>
-                <Width>2.5cm</Width>
+                <Left>9.8cm</Left>
+                <Width>3cm</Width>
                 <Height>0.5cm</Height>
+                <ZIndex>4</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
@@ -440,10 +558,10 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.2cm</Top>
-                <Left>2.8cm</Left>
-                <Width>6cm</Width>
+                <Left>12.9cm</Left>
+                <Width>6.7cm</Width>
                 <Height>0.5cm</Height>
-                <ZIndex>1</ZIndex>
+                <ZIndex>5</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
@@ -470,10 +588,10 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.6cm</Top>
-                <Left>0.2cm</Left>
-                <Width>2.5cm</Width>
+                <Left>9.8cm</Left>
+                <Width>3cm</Width>
                 <Height>0.5cm</Height>
-                <ZIndex>2</ZIndex>
+                <ZIndex>6</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
@@ -498,186 +616,10 @@ Fields!SelltoEMail_SalesShipmentHeader.Value</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.6cm</Top>
-                <Left>2.8cm</Left>
-                <Width>6cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>3</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                </Style>
-              </Textbox>
-              <!-- RIGHT SECTION: Payment Terms and Bank -->
-              <!-- Término de pago Label -->
-              <Textbox Name="PaymentTermsLabel">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Término de pago:</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.2cm</Top>
-                <Left>9.8cm</Left>
-                <Width>3cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>4</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                </Style>
-              </Textbox>
-              <Textbox Name="PaymentTermsValue">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Fields!PaymentTermsDescription.Value</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.2cm</Top>
                 <Left>12.9cm</Left>
                 <Width>6.7cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>5</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                </Style>
-              </Textbox>
-              <!-- Banco Label -->
-              <Textbox Name="BankLabel">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Banco:</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Right</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.2cm</Top>
-                <Left>15.5cm</Left>
-                <Width>1.3cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>6</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Textbox>
-              <Textbox Name="BankValue">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=First(Fields!CompanyBankName.Value, "DataSet_Result")</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.2cm</Top>
-                <Left>16.9cm</Left>
-                <Width>2.7cm</Width>
                 <Height>0.5cm</Height>
                 <ZIndex>7</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                </Style>
-              </Textbox>
-              <!-- Nº de Cuenta (IBAN) Label -->
-              <Textbox Name="IBANLabel">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Nº de Cuenta:</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <FontWeight>Bold</FontWeight>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.6cm</Top>
-                <Left>9.8cm</Left>
-                <Width>3cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>8</ZIndex>
-                <Style>
-                  <VerticalAlign>Middle</VerticalAlign>
-                </Style>
-              </Textbox>
-              <Textbox Name="IBANValue">
-                <CanGrow>false</CanGrow>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=First(Fields!CompanyBankIBAN.Value, "DataSet_Result")</Value>
-                        <Style>
-                          <FontFamily>Arial</FontFamily>
-                          <FontSize>8pt</FontSize>
-                          <Color>#000000</Color>
-                        </Style>
-                      </TextRun>
-                    </TextRuns>
-                    <Style>
-                      <TextAlign>Left</TextAlign>
-                    </Style>
-                  </Paragraph>
-                </Paragraphs>
-                <Top>0.6cm</Top>
-                <Left>12.9cm</Left>
-                <Width>6.7cm</Width>
-                <Height>0.5cm</Height>
-                <ZIndex>9</ZIndex>
                 <Style>
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
@@ -1254,11 +1196,12 @@ Logística</Value>
                 <Top>0cm</Top>
                 <Left>0cm</Left>
                 <Height>0.5cm</Height>
-                <Width>3cm</Width>
+                <Width>5.2cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
+                  <VerticalAlign>Middle</VerticalAlign>
                 </Style>
               </Textbox>
               <Textbox Name="TotalBultosLabel">
@@ -1283,7 +1226,7 @@ Logística</Value>
                 <Top>0.6cm</Top>
                 <Left>0cm</Left>
                 <Height>0.5cm</Height>
-                <Width>3cm</Width>
+                <Width>2cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1293,12 +1236,12 @@ Logística</Value>
                 </Style>
               </Textbox>
               <Textbox Name="TotalBultosValue">
-                <CanGrow>false</CanGrow>
+                <CanGrow>true</CanGrow>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Format(First(Fields!TotalBultos.Value, "DataSet_Result"), "#,0.00")</Value>
+                        <Value>=Last(Fields!TotalLogisticsText.Value, "DataSet_Result")</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
                           <FontSize>9pt</FontSize>
@@ -1311,9 +1254,9 @@ Logística</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>0.6cm</Top>
-                <Left>3.2cm</Left>
+                <Left>2.1cm</Left>
                 <Height>0.5cm</Height>
-                <Width>2cm</Width>
+                <Width>3.1cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -1344,7 +1287,7 @@ Logística</Value>
                 <Top>1.2cm</Top>
                 <Left>0cm</Left>
                 <Height>0.5cm</Height>
-                <Width>3cm</Width>
+                <Width>2cm</Width>
                 <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
@@ -1359,7 +1302,7 @@ Logística</Value>
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Format(First(Fields!TotalKg.Value, "DataSet_Result"), "#,0.00")</Value>
+                        <Value>=Format(Last(Fields!TotalKg.Value, "DataSet_Result"), "#,0.00") &amp; " Kg"</Value>
                         <Style>
                           <FontFamily>Arial</FontFamily>
                           <FontSize>9pt</FontSize>
@@ -1372,9 +1315,9 @@ Logística</Value>
                   </Paragraph>
                 </Paragraphs>
                 <Top>1.2cm</Top>
-                <Left>3.2cm</Left>
+                <Left>2.1cm</Left>
                 <Height>0.5cm</Height>
-                <Width>2cm</Width>
+                <Width>3.1cm</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -1979,6 +1922,9 @@ Logística</Value>
         <Field Name="ExternalDocumentNo_SalesShipmentHeader">
           <DataField>ExternalDocumentNo_SalesShipmentHeader</DataField>
         </Field>
+        <Field Name="OrderNo_SalesShipmentHeader">
+          <DataField>OrderNo_SalesShipmentHeader</DataField>
+        </Field>
         <Field Name="CompanyName">
           <DataField>CompanyName</DataField>
         </Field>
@@ -2059,6 +2005,9 @@ Logística</Value>
         </Field>
         <Field Name="TotalKgFormat">
           <DataField>TotalKgFormat</DataField>
+        </Field>
+        <Field Name="TotalLogisticsText">
+          <DataField>TotalLogisticsText</DataField>
         </Field>
         <Field Name="LineNo_SalesShipmentLine">
           <DataField>LineNo_SalesShipmentLine</DataField>

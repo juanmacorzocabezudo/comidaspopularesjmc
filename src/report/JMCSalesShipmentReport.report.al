@@ -76,6 +76,9 @@ report 53106 "JMC Sales Shipment Report"
             column(ExternalDocumentNo_SalesShipmentHeader; "External Document No.")
             {
             }
+            column(OrderNo_SalesShipmentHeader; "Order No.")
+            {
+            }
 
             // Company Information columns
             column(CompanyName; SalesSetup."JMC Company Name")
@@ -150,6 +153,9 @@ report 53106 "JMC Sales Shipment Report"
             {
             }
             column(TotalKg; TotalKg)
+            {
+            }
+            column(TotalLogisticsText; TotalLogisticsText)
             {
             }
 
@@ -227,9 +233,8 @@ report 53106 "JMC Sales Shipment Report"
                                 TotalBultos += QtyPerUnitOfMeasure;
                             end;
 
-                        // Calculate Total Kg
-                        if Item.Get(SalesShipmentLine."No.") then
-                            TotalKg += SalesShipmentLine.Quantity * Item."JMC Weight";
+                        // Calculate Total Kg (Quantity * Gross Weight)
+                        TotalKg += SalesShipmentLine.Quantity * SalesShipmentLine."Gross Weight";
                     end;
 
                     // Calculate Logistics Unit Quantity (Cantidad / UL and Ud. Logística)
@@ -248,6 +253,12 @@ report 53106 "JMC Sales Shipment Report"
                                 LogisticsQty := Quantity / LogisticsUoM."Qty. per Unit of Measure";
                                 LogisticsCode := LogisticsUoM.Code;
                                 LogisticsUnitQty := Format(LogisticsQty, 0, '<Precision,2:2><Standard Format,0>') + ' ' + LogisticsCode;
+
+                                // Accumulate logistics totals by UoM code
+                                AccumulateLogisticsTotal(LogisticsCode, LogisticsQty);
+
+                                // Build the total text after each accumulation
+                                BuildLogisticsTotalText();
                             end;
                         end;
                     end;
@@ -263,7 +274,7 @@ report 53106 "JMC Sales Shipment Report"
                             repeat
                                 if TrackingInfoText <> '' then
                                     TrackingInfoText += ' | ';
-                                TrackingInfoText += 'Lot: ' + ItemLedgerEntry."Lot No." + ', Cantidad: ' + Format(ItemLedgerEntry.Quantity, 0, '<Precision,0:3><Standard Format,0>');
+                                TrackingInfoText += 'Lote: ' + ItemLedgerEntry."Lot No." + ', Cantidad: ' + Format(Abs(ItemLedgerEntry.Quantity), 0, '<Precision,0:3><Standard Format,0>');
                                 if ItemLedgerEntry."Expiration Date" <> 0D then
                                     TrackingInfoText += ', Fecha de caducidad: ' + Format(ItemLedgerEntry."Expiration Date", 0, '<Day,2>/<Month,2>/<Year,2>');
                             until ItemLedgerEntry.Next() = 0;
@@ -278,6 +289,16 @@ report 53106 "JMC Sales Shipment Report"
                     TotalAmount := 0;
                     TotalBultos := 0;
                     TotalKg := 0;
+
+                    // Initialize logistics totals
+                    Clear(LogisticsUoMCodes);
+                    Clear(LogisticsUoMQuantities);
+                end;
+
+                trigger OnPostDataItem()
+                begin
+                    // Build the total logistics text from accumulated values
+                    BuildLogisticsTotalText();
                 end;
             }
 
@@ -352,4 +373,54 @@ report 53106 "JMC Sales Shipment Report"
         QtyPerLogisticsUnit: Text[50];
         LogisticsUnitQty: Text[50];
         TrackingInfoText: Text[250];
+        LogisticsUoMCodes: List of [Code[10]];
+        LogisticsUoMQuantities: List of [Decimal];
+        TotalLogisticsText: Text[250];
+
+    local procedure AccumulateLogisticsTotal(UoMCode: Code[10]; Quantity: Decimal)
+    var
+        i: Integer;
+        CurrentCode: Code[10];
+        CurrentQty: Decimal;
+        Found: Boolean;
+    begin
+        Found := false;
+
+        // Search if the UoM code already exists
+        for i := 1 to LogisticsUoMCodes.Count do begin
+            LogisticsUoMCodes.Get(i, CurrentCode);
+            if CurrentCode = UoMCode then begin
+                // Update existing quantity
+                LogisticsUoMQuantities.Get(i, CurrentQty);
+                LogisticsUoMQuantities.Set(i, CurrentQty + Quantity);
+                Found := true;
+                break;
+            end;
+        end;
+
+        // If not found, add new entry
+        if not Found then begin
+            LogisticsUoMCodes.Add(UoMCode);
+            LogisticsUoMQuantities.Add(Quantity);
+        end;
+    end;
+
+    local procedure BuildLogisticsTotalText()
+    var
+        i: Integer;
+        UoMCode: Code[10];
+        Qty: Decimal;
+    begin
+        TotalLogisticsText := '';
+
+        for i := 1 to LogisticsUoMCodes.Count do begin
+            LogisticsUoMCodes.Get(i, UoMCode);
+            LogisticsUoMQuantities.Get(i, Qty);
+
+            if TotalLogisticsText <> '' then
+                TotalLogisticsText += ' y ';
+
+            TotalLogisticsText += Format(Qty, 0, '<Precision,2:2><Standard Format,0>') + ' ' + UoMCode;
+        end;
+    end;
 }

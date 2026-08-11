@@ -2820,14 +2820,14 @@
         </trans-unit>
         <trans-unit id="Report 120712462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Shipment Report</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Informe de albarán de venta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Informe de albarán de venta"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 120712462 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
-          <target>[NAB: SUGGESTION]Opciones</target>
+          <target>Opciones</target>
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Control Options - Property Caption</note>

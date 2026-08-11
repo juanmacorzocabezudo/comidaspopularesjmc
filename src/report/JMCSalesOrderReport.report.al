@@ -209,15 +209,17 @@ report 53105 "JMC Sales Order Report"
                                 QtyPerUnitOfMeasure := SalesLine.Quantity / ItemUnitOfMeasure."Qty. per Unit of Measure";
                     end;
 
-                    // Calculate Logistics Unit Quantity (Cantidad / UL)
+                    // Calculate Logistics Unit Quantity (Ud. Logística)
                     LogisticsUnitQty := '';
                     if Type = Type::Item then begin
                         LogisticsUoM.SetRange("Item No.", SalesLine."No.");
                         LogisticsUoM.SetRange("Unidad Logística Albaran", true);
                         if LogisticsUoM.FindFirst() then begin
                             if LogisticsUoM."Qty. per Unit of Measure" <> 0 then begin
-                                // Cantidad / U.L.: "X UNIDAD / CÓDIGO" (ej: "4 KG / CAJA")
-                                LogisticsUnitQty := Format(LogisticsUoM."Qty. per Unit of Measure", 0, '<Precision,2:2><Standard Format,0>') + ' ' + SalesLine."Unit of Measure Code" + ' / ' + LogisticsUoM.Code;
+                                // Ud. Logística: Total unidades logísticas (ej: "70 CJ")
+                                LogisticsQty := SalesLine.Quantity / LogisticsUoM."Qty. per Unit of Measure";
+                                LogisticsCode := LogisticsUoM.Code;
+                                LogisticsUnitQty := Format(LogisticsQty, 0, '<Precision,2:2><Standard Format,0>') + ' ' + LogisticsCode;
                             end;
                         end;
                     end;

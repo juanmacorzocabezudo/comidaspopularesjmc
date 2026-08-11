@@ -466,7 +466,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
               </Textbox>
               <!-- Fecha vencimiento Label -->
               <Textbox Name="DeliveryDateLabel">
-                <CanGrow>false</CanGrow>
+                <CanGrow>true</CanGrow>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
@@ -495,7 +495,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                 </Style>
               </Textbox>
               <Textbox Name="DeliveryDateValue">
-                <CanGrow>false</CanGrow>
+                <CanGrow>true</CanGrow>
                 <Paragraphs>
                   <Paragraph>
                     <TextRuns>
@@ -702,7 +702,7 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
             <KeepTogether>true</KeepTogether>
             <Top>8.3cm</Top>
             <Left>0.2cm</Left>
-            <Height>1.6cm</Height>
+            <Height>1.9cm</Height>
             <Width>19.6cm</Width>
             <ZIndex>3</ZIndex>
             <Style>

@@ -19,7 +19,7 @@ report 53106 "JMC Sales Shipment Report"
             column(DocumentDate_SalesShipmentHeader; Format("Document Date", 0, '<Day,2>/<Month,2>/<Year4>'))
             {
             }
-            column(ShipmentDate_SalesShipmentHeader; Format("Shipment Date", 0, '<Day,2>/<Month,2>/<Year4>'))
+            column(ShipmentDate_SalesShipmentHeader; Format("Requested Delivery Date", 0, '<Day,2>/<Month,2>/<Year4>'))
             {
             }
             column(PaymentTermsCode_SalesShipmentHeader; "Payment Terms Code")

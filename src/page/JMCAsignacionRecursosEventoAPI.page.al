@@ -59,6 +59,10 @@ page 53102 "JMC Asignacion Recursos API"
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';
                     Editable = false;
                 }
+                field(numeroLinea; Rec."Linea Recurso Evento")
+                {
+                    Caption = 'Line Number', Comment = 'ESP="Número Línea"';
+                }
             }
         }
     }

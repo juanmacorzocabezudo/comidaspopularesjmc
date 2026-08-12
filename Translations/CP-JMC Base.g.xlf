@@ -678,6 +678,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control id - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Number</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Número Línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control numeroLinea - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3505042124 - Control 2800025482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Task Performed</source>
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>

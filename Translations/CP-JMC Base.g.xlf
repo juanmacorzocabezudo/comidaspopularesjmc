@@ -2138,6 +2138,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control ResourceCodeFilter - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3136628527 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filter by task performed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtrar por tarea realizada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TaskPerformedFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3136628527 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Task Performed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TaskPerformedFilter - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2494211124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the business line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica la línea de negocio."</note>
@@ -2187,6 +2197,26 @@
           <source>Event Date</source>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3192496904 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit the event date.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Editar la fecha del evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date Edit - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3192496904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Edit Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Editar Fecha"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date Edit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3178581958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the event description.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción del evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3178581958 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Event Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción Evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2155838363 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the event time.</source>
@@ -3622,6 +3652,11 @@
           <source>Operation Record Read</source>
           <note from="Developer" annotates="general" priority="2">ESP="Consulta registro operativo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PermissionSet JMC OPER. REC. READ - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 2571676866 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>JMC Resource Assignment - Financial Fields</source>
+          <note from="Developer" annotates="general" priority="2">ESP="JMC Asignación Recursos - Campos Financieros"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet JMC RES. ASSIG. FIN - Property Caption</note>
         </trans-unit>
       </group>
     </body>

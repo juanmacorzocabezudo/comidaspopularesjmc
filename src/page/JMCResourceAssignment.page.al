@@ -53,6 +53,18 @@ page 53131 "JMC Resource Assignment"
                         LoadData();
                     end;
                 }
+                field(TaskPerformedFilter; TaskPerformedFilter)
+                {
+                    Caption = 'Task Performed', Comment = 'ESP="Tarea Realizada"';
+                    ApplicationArea = All;
+                    ToolTip = 'Filter by task performed.', Comment = 'ESP="Filtrar por tarea realizada."';
+                    TableRelation = "Work Type";
+
+                    trigger OnValidate()
+                    begin
+                        LoadData();
+                    end;
+                }
             }
             repeater(Group)
             {
@@ -100,19 +112,40 @@ page 53131 "JMC Resource Assignment"
                                 Rec."Event Date" := EventoRec."Fecha Evento";
                                 Rec."Event Time" := EventoRec."Hora Evento";
                             end;
+                            Rec.CalcFields("Event Description");
                         end else begin
                             Clear(Rec."Event Date");
                             Clear(Rec."Event Time");
                         end;
                     end;
                 }
-                field("Event Date"; Rec."Event Date")
+                field("Event Description"; Rec."Event Description")
+                {
+                    Caption = 'Event Description', Comment = 'ESP="Descripción Evento"';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the event description.', Comment = 'ESP="Especifica la descripción del evento."';
+                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    Editable = false;
+                }
+                field("Event Date"; GetFormattedEventDate())
                 {
                     Caption = 'Event Date', Comment = 'ESP="Fecha"';
                     ApplicationArea = All;
                     ToolTip = 'Specifies the event date.', Comment = 'ESP="Especifica la fecha del evento."';
                     Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    Editable = false;
+                    Style = StandardAccent;
+                    StyleExpr = true;
+                }
+                field("Event Date Edit"; Rec."Event Date")
+                {
+                    Caption = 'Edit Date', Comment = 'ESP="Editar Fecha"';
+                    ApplicationArea = All;
+                    ToolTip = 'Edit the event date.', Comment = 'ESP="Editar la fecha del evento."';
+                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
                     Editable = true;
+                    ShowCaption = false;
+                    Width = 10;
                 }
                 field("Event Time"; Rec."Event Time")
                 {
@@ -163,18 +196,21 @@ page 53131 "JMC Resource Assignment"
                     Caption = 'Quantity', Comment = 'ESP="Cantidad"';
                     ApplicationArea = All;
                     ToolTip = 'Specifies the quantity.', Comment = 'ESP="Especifica la cantidad."';
+                    Visible = CanViewFinancialFields;
                 }
                 field("Unit of Measure"; Rec."Unit of Measure")
                 {
                     Caption = 'Unit of Measure', Comment = 'ESP="Unidad de Medida"';
                     ApplicationArea = All;
                     ToolTip = 'Specifies the unit of measure.', Comment = 'ESP="Especifica la unidad de medida."';
+                    Visible = CanViewFinancialFields;
                 }
                 field("Unit Cost"; Rec."Unit Cost")
                 {
                     Caption = 'Unit Cost', Comment = 'ESP="Coste Unitario"';
                     ApplicationArea = All;
                     ToolTip = 'Specifies the unit cost.', Comment = 'ESP="Especifica el coste unitario."';
+                    Visible = CanViewFinancialFields;
                 }
                 field("Business Line"; Rec."Business Line")
                 {
@@ -202,11 +238,15 @@ page 53131 "JMC Resource Assignment"
         BusinessLineFilter: Enum "JMC Business Line Filter";
         EventDateFilter: Date;
         ResourceCodeFilter: Code[20];
+        TaskPerformedFilter: Code[10];
         EntryNoCounter: Integer;
+        CanViewFinancialFields: Boolean;
 
     trigger OnOpenPage()
     begin
         BusinessLineFilter := BusinessLineFilter::Industry;
+        // Check if user has the specific permission set assigned
+        CanViewFinancialFields := HasFinancialFieldsPermission();
         LoadData();
     end;
 
@@ -365,7 +405,8 @@ page 53131 "JMC Resource Assignment"
                 if ShouldIncludeRecord(
                     LegacyAssignment."JMC Business Line",
                     LegacyAssignment."JMC Event Date",
-                    LegacyAssignment."Codigo Recurso")
+                    LegacyAssignment."Codigo Recurso",
+                    LegacyAssignment."Tarea Realizada")
                 then begin
                     EntryNoCounter -= 1;
                     Rec.Init();
@@ -410,7 +451,8 @@ page 53131 "JMC Resource Assignment"
                 if ShouldIncludeRecord(
                     NewAssignment."Business Line",
                     NewAssignment."Event Date",
-                    NewAssignment."Resource Code")
+                    NewAssignment."Resource Code",
+                    NewAssignment."Task Performed")
                 then begin
                     Rec.Init();
                     Rec."Entry No." := NewAssignment."Entry No.";
@@ -440,7 +482,7 @@ page 53131 "JMC Resource Assignment"
         if Rec.FindFirst() then;
     end;
 
-    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]): Boolean
+    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]; TaskPerformed: Code[20]): Boolean
     begin
         // Business Line filter
         if BusinessLineFilter <> BusinessLineFilter::Both then begin
@@ -460,7 +502,40 @@ page 53131 "JMC Resource Assignment"
             if ResourceCode <> ResourceCodeFilter then
                 exit(false);
 
+        // Task Performed filter
+        if TaskPerformedFilter <> '' then
+            if TaskPerformed <> TaskPerformedFilter then
+                exit(false);
+
         exit(true);
+    end;
+
+    local procedure GetFormattedEventDate(): Text
+    var
+        WeekdayName: Text;
+        MonthName: Text;
+    begin
+        if Rec."Event Date" = 0D then
+            exit('');
+
+        // Format: sábado, 15 de agosto de 2026
+        WeekdayName := Format(Rec."Event Date", 0, '<Weekday Text>');
+        MonthName := Format(Rec."Event Date", 0, '<Month Text>');
+
+        exit(StrSubstNo('%1, %2 de %3 de %4',
+            WeekdayName,
+            Format(Rec."Event Date", 0, '<Day>'),
+            MonthName,
+            Format(Rec."Event Date", 0, '<Year4>')));
+    end;
+
+    local procedure HasFinancialFieldsPermission(): Boolean
+    var
+        AccessControl: Record "Access Control";
+    begin
+        AccessControl.SetRange("User Security ID", UserSecurityId());
+        AccessControl.SetRange("Role ID", 'JMC RES. ASSIG. FIN');
+        exit(not AccessControl.IsEmpty());
     end;
 
     local procedure GetNextLineNo(EventCode: Code[20]): Integer

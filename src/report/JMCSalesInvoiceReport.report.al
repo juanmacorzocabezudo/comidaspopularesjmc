@@ -1,6 +1,6 @@
-report 53107 "JMC Sales Invoice Report"
+report 53107 "Sales Invoice Industry Report"
 {
-    Caption = 'Sales Invoice Report', Comment = 'ESP="Informe de factura de venta"';
+    Caption = 'Sales Invoice Industry Report', Comment = 'ESP="Factura venta Industria"';
     DefaultLayout = RDLC;
     RDLCLayout = './src/report/layout/JMCSalesInvoiceReport.rdlc';
     UsageCategory = ReportsAndAnalysis;

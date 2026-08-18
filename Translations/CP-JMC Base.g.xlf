@@ -353,6 +353,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field Event Time - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1623548903 - Field 3917084599 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day of Week</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Día de la Semana"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field JMC Day of Week - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1623548903 - Field 2238337224 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Month</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field JMC Month - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1623548903 - Field 2331571337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Week No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Semana"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field JMC Week No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1623548903 - Field 3692599133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Año"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field JMC Year - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1623548903 - Field 2704404533 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
@@ -377,6 +397,11 @@
           <source>Task Performed</source>
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field Task Performed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1623548903 - Field 2883740582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Resource Assignment - Field Tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1623548903 - Field 381961415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
@@ -673,6 +698,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="€ SIN IVA"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 2883740582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2883740582 - Field 4092165491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Tipo - Field Codigo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2883740582 - Field 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Tipo - Field Descripcion - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
           <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10</source>
           <note from="Developer" annotates="general" priority="2">ESP="AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10"</note>
@@ -772,6 +812,11 @@
           <source>Task Performed</source>
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control tareaRealizada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3505042124 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Asignacion Recursos API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>
@@ -2098,6 +2143,96 @@
           <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1916214376 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Asignación de Recursos Simple</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Asignaciones de Recursos Simple</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 2093463043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Año</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control anio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Recurso</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control codigoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comentarios</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 3788660022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control descripcionEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 860491395 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Día de la Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control diaSemana - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control fechaEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control horaEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 3742402547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Línea de Negocio</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control lineaNegocio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 4018899989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control mes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 521500921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Mov.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control nMovimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 348206557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control numeroSemana - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 4146287422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tabla Origen</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tablaOrigen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 2800025482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tarea Realizada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tareaRealizada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1916214376 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tipo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1623548903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Resource Assignment</source>
           <note from="Developer" annotates="general" priority="2">ESP="Asignación de Recursos"</note>
@@ -2119,8 +2254,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control BusinessLineFilter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3748927164 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Filter by event date.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Filtrar por fecha del evento."</note>
+          <source>Filter by event date. Use ranges like 1008..1708 or single dates.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtrar por fecha del evento. Use rangos como 1008..1708 o fechas individuales."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control EventDateFilter - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3748927164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2188,24 +2323,14 @@
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Code - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 1623548903 - Control 3545664188 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the event date.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fecha del evento."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 1623548903 - Control 3545664188 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Event Date</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3192496904 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Edit the event date.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Editar la fecha del evento."</note>
+          <source>Event date.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha del evento."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date Edit - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3192496904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Edit Date</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Editar Fecha"</note>
+          <source>Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Date Edit - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3178581958 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -2227,6 +2352,46 @@
           <source>Event Time</source>
           <note from="Developer" annotates="general" priority="2">ESP="Hora"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3917084599 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the day of week.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el día de la semana."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Day of Week - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3917084599 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day of Week</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Día de la Semana"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Day of Week - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2238337224 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the month.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el mes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Month - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2238337224 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Month</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Month - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2331571337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the week number.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de semana."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Week No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2331571337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Week No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº Semana"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Week No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3692599133 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the year.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el año."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Year - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3692599133 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Year</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Año"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Year - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2704404533 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the quantity.</source>
@@ -2268,6 +2433,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Task Performed - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2883740582 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tipo.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Tipo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 2883740582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Tipo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1623548903 - Control 381961415 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the unit cost.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste unitario."</note>
@@ -2287,6 +2462,111 @@
           <source>Unit of Measure</source>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de Medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Unit of Measure - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Asignación de Recursos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Asignaciones de Recursos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 2093463043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Año</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control anio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control cantidad - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control codigoEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Código Recurso</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control codigoRecurso - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comentarios</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control comentarios - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Coste Unitario</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control costeUnitario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 3788660022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descripción Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control descripcionEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 860491395 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Día de la Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control diaSemana - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control fechaEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora Evento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control horaEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 3742402547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Línea de Negocio</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control lineaNegocio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4018899989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mes</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control mes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 521500921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Mov.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control nMovimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 348206557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control numeroSemana - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4146287422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tabla Origen</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control tablaOrigen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 2800025482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tarea Realizada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control tareaRealizada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1590272575 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unidad de Medida</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control unidadMedida - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Supplement</source>
@@ -2418,6 +2698,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control valorMargen - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3106991722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Tipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3106991722 - Control 4092165491 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the code.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Tipo - Control Codigo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3106991722 - Control 1475260075 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Tipo - Control Descripcion - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 439438213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Credit Memo Sales Control</source>
           <note from="Developer" annotates="general" priority="2">ESP="Control Ventas Abonos"</note>
@@ -2543,16 +2838,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Cr. Memo Report - Control Options - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Report 891574109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Sales Invoice Report</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Informe de factura de venta"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Report 891574109 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Options</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Invoice Report - Control Options - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Report 3351298344 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Order Report</source>
           <note from="Developer" annotates="general" priority="2">ESP="Informe de pedido de venta"</note>
@@ -2602,6 +2887,16 @@
           <source>Process completed:\Updated: %1\Skipped (already has weight): %2\No weight found in description: %3\Format not found: %4</source>
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 507838215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales Invoice Industry Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Factura venta Industria"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Invoice Industry Report - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 507838215 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Invoice Industry Report - Control Options - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Eventos con Líneas</source>
@@ -2948,15 +3243,35 @@
           <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 466347597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Send the posted sales invoice by email using the Industry report format.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Enviar la factura de venta registrada por correo electrónico usando el formato de informe Industria."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print and Send Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3295873112 - Action 466347597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
+          <source>Send Industry Invoice by Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Enviar factura Industria por email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print and Send Invoice - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
           <source>Print the posted sales invoice using the JMC report format.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir la factura de venta registrada usando el formato de informe JMC."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3295873112 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
-          <source>Print Catering Invoice</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <source>Print Industry Invoice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Industria"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoice - Action JMC Print Invoice - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 466347597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Send the posted sales invoice by email using the Industry report format.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Enviar la factura de venta registrada por correo electrónico usando el formato de informe Industria."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print and Send Invoice - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2976275769 - Action 466347597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
+          <source>Send Industry Invoice by Email</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Enviar factura Industria por email"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print and Send Invoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
           <source>Print the posted sales invoice using the JMC report format.</source>
@@ -2964,8 +3279,8 @@
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 2976275769 - Action 2304856128 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3434938165">
-          <source>Print Catering Invoice</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Catering"</note>
+          <source>Print Industry Invoice</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir factura Industria"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Posted Sales Invoices - Action JMC Print Invoice - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4197554639 - Control 3650899692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2618934728">
@@ -3087,6 +3402,11 @@
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2462045702 - Control 2415219557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3740874685">
+          <source>Specifies if the Industry report should be used when sending this document by email.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si se debe usar el informe de Industria al enviar este documento por correo electrónico."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Report Selection Sales - Control JMC Use Industry Report - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 996725262 - Control 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1580859378">
           <source>Cost Type</source>
@@ -3273,6 +3593,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Asignacion Recursos - Field JMC Hora Evento - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 1768073076 - Field 3106991722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 788205136">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Asignacion Recursos - Field JMC Tipo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 2602508561 - Field 1403531422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
           <source>Status Semaphore</source>
           <note from="Developer" annotates="general" priority="2">ESP="Estado Semáforo"</note>
@@ -3452,6 +3777,11 @@
           <source>Recipe</source>
           <note from="Developer" annotates="general" priority="2">ESP="Receta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Purchase Line - Field JMC Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1857177243 - Field 2415219557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4046772223">
+          <source>Use Industry Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Usar Informe Industria"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Report Selections - Field JMC Use Industry Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 217764810 - Field 2951830561 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 348912950">
           <source>Cost Type</source>

@@ -57,5 +57,11 @@ tableextension 53130 "JMC Asignacion Recursos" extends "Asignacion Recursos Even
             Caption = 'Event Time', Comment = 'ESP="Hora Evento"';
             DataClassification = CustomerContent;
         }
+        field(53106; "JMC Tipo"; Code[100])
+        {
+            Caption = 'Tipo';
+            DataClassification = CustomerContent;
+            TableRelation = Tipo;
+        }
     }
 }

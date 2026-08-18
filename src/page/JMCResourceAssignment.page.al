@@ -34,7 +34,7 @@ page 53131 "JMC Resource Assignment"
                 {
                     Caption = 'Event Date', Comment = 'ESP="Fecha"';
                     ApplicationArea = All;
-                    ToolTip = 'Filter by event date.', Comment = 'ESP="Filtrar por fecha del evento."';
+                    ToolTip = 'Filter by event date. Use ranges like 1008..1708 or single dates.', Comment = 'ESP="Filtrar por fecha del evento. Use rangos como 1008..1708 o fechas individuales."';
 
                     trigger OnValidate()
                     begin
@@ -127,25 +127,13 @@ page 53131 "JMC Resource Assignment"
                     Visible = Rec."Source Table" = Rec."Source Table"::Catering;
                     Editable = false;
                 }
-                field("Event Date"; GetFormattedEventDate())
-                {
-                    Caption = 'Event Date', Comment = 'ESP="Fecha"';
-                    ApplicationArea = All;
-                    ToolTip = 'Specifies the event date.', Comment = 'ESP="Especifica la fecha del evento."';
-                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
-                    Editable = false;
-                    Style = StandardAccent;
-                    StyleExpr = true;
-                }
                 field("Event Date Edit"; Rec."Event Date")
                 {
-                    Caption = 'Edit Date', Comment = 'ESP="Editar Fecha"';
+                    Caption = 'Date', Comment = 'ESP="Fecha"';
                     ApplicationArea = All;
-                    ToolTip = 'Edit the event date.', Comment = 'ESP="Editar la fecha del evento."';
-                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    ToolTip = 'Event date.', Comment = 'ESP="Fecha del evento."';
+                    Visible = true;
                     Editable = true;
-                    ShowCaption = false;
-                    Width = 10;
                 }
                 field("Event Time"; Rec."Event Time")
                 {
@@ -179,6 +167,13 @@ page 53131 "JMC Resource Assignment"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the resource description.', Comment = 'ESP="Especifica la descripción del recurso."';
                 }
+                field(Tipo; Rec.Tipo)
+                {
+                    Caption = 'Tipo';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the tipo.', Comment = 'ESP="Especifica el tipo."';
+                }
+
                 field("Task Performed"; Rec."Task Performed")
                 {
                     Caption = 'Task Performed', Comment = 'ESP="Tarea Realizada"';
@@ -219,6 +214,34 @@ page 53131 "JMC Resource Assignment"
                     ToolTip = 'Specifies the business line.', Comment = 'ESP="Especifica la línea de negocio."';
                     Visible = false;
                 }
+                field("JMC Week No."; Rec."JMC Week No.")
+                {
+                    Caption = 'Week No.', Comment = 'ESP="Nº Semana"';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the week number.', Comment = 'ESP="Especifica el número de semana."';
+                    Editable = false;
+                }
+                field("JMC Day of Week"; Rec."JMC Day of Week")
+                {
+                    Caption = 'Day of Week', Comment = 'ESP="Día de la Semana"';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the day of week.', Comment = 'ESP="Especifica el día de la semana."';
+                    Editable = false;
+                }
+                field("JMC Month"; Rec."JMC Month")
+                {
+                    Caption = 'Month', Comment = 'ESP="Mes"';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the month.', Comment = 'ESP="Especifica el mes."';
+                    Editable = false;
+                }
+                field("JMC Year"; Rec."JMC Year")
+                {
+                    Caption = 'Year', Comment = 'ESP="Año"';
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the year.', Comment = 'ESP="Especifica el año."';
+                    Editable = false;
+                }
             }
         }
         area(FactBoxes)
@@ -236,7 +259,7 @@ page 53131 "JMC Resource Assignment"
 
     var
         BusinessLineFilter: Enum "JMC Business Line Filter";
-        EventDateFilter: Date;
+        EventDateFilter: Text[250];
         ResourceCodeFilter: Code[20];
         TaskPerformedFilter: Code[10];
         EntryNoCounter: Integer;
@@ -297,6 +320,7 @@ page 53131 "JMC Resource Assignment"
             LegacyAssignment."JMC Business Line" := Rec."Business Line";
             LegacyAssignment."JMC Fecha Evento" := Rec."Event Date";
             LegacyAssignment."JMC Hora Evento" := Rec."Event Time";
+            LegacyAssignment."JMC Tipo" := Rec.Tipo;
             LegacyAssignment.Insert(true);
             Rec."Event Resource Line No." := LegacyAssignment."Linea Recurso Evento";
         end else begin
@@ -313,6 +337,7 @@ page 53131 "JMC Resource Assignment"
             NewAssignment."Business Line" := Rec."Business Line";
             NewAssignment."Event Date" := Rec."Event Date";
             NewAssignment."Event Time" := Rec."Event Time";
+            NewAssignment.Tipo := Rec.Tipo;
             NewAssignment.Insert(true);
             Rec."Entry No." := NewAssignment."Entry No.";
         end;
@@ -339,6 +364,7 @@ page 53131 "JMC Resource Assignment"
                 LegacyAssignment."JMC Business Line" := Rec."Business Line";
                 LegacyAssignment."JMC Fecha Evento" := Rec."Event Date";
                 LegacyAssignment."JMC Hora Evento" := Rec."Event Time";
+                LegacyAssignment."JMC Tipo" := Rec.Tipo;
                 LegacyAssignment.Modify(true);
             end;
         end else begin
@@ -355,6 +381,7 @@ page 53131 "JMC Resource Assignment"
                 NewAssignment."Business Line" := Rec."Business Line";
                 NewAssignment."Event Date" := Rec."Event Date";
                 NewAssignment."Event Time" := Rec."Event Time";
+                NewAssignment.Tipo := Rec.Tipo;
                 NewAssignment.Modify(true);
             end;
         end;
@@ -436,6 +463,15 @@ page 53131 "JMC Resource Assignment"
                         Rec."Event Time" := LegacyAssignment."JMC Event Time";
                     // Set event description from FlowField
                     Rec."Event Description" := LegacyAssignment."JMC Event Description";
+                    Rec.Tipo := LegacyAssignment."JMC Tipo";
+
+                    // Calculate date fields manually
+                    if Rec."Event Date" <> 0D then begin
+                        Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
+                        Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                        Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
+                        Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
+                    end;
 
                     Rec.Insert();
                 end;
@@ -475,6 +511,16 @@ page 53131 "JMC Resource Assignment"
                     Rec."Event Date" := NewAssignment."Event Date";
                     Rec."Event Time" := NewAssignment."Event Time";
                     Rec."Event Description" := NewAssignment."Event Description";
+                    Rec.Tipo := NewAssignment.Tipo;
+
+                    // Calculate date fields manually to ensure they are always populated
+                    if Rec."Event Date" <> 0D then begin
+                        Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
+                        Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                        Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
+                        Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
+                    end;
+
                     Rec.Insert();
                 end;
             until NewAssignment.Next() = 0;
@@ -492,9 +538,9 @@ page 53131 "JMC Resource Assignment"
                 exit(false);
         end;
 
-        // Event Date filter
-        if EventDateFilter <> 0D then
-            if EventDate <> EventDateFilter then
+        // Event Date range filter - support filter expressions
+        if EventDateFilter <> '' then
+            if not DateMatchesFilter(EventDate, EventDateFilter) then
                 exit(false);
 
         // Resource Code filter
@@ -510,23 +556,21 @@ page 53131 "JMC Resource Assignment"
         exit(true);
     end;
 
-    local procedure GetFormattedEventDate(): Text
+    local procedure DateMatchesFilter(DateToCheck: Date; FilterExpression: Text): Boolean
     var
-        WeekdayName: Text;
-        MonthName: Text;
+        TempDate: Record Date temporary;
     begin
-        if Rec."Event Date" = 0D then
-            exit('');
+        if FilterExpression = '' then
+            exit(true);
 
-        // Format: sábado, 15 de agosto de 2026
-        WeekdayName := Format(Rec."Event Date", 0, '<Weekday Text>');
-        MonthName := Format(Rec."Event Date", 0, '<Month Text>');
+        TempDate.Init();
+        TempDate."Period Start" := DateToCheck;
+        TempDate.Insert();
 
-        exit(StrSubstNo('%1, %2 de %3 de %4',
-            WeekdayName,
-            Format(Rec."Event Date", 0, '<Day>'),
-            MonthName,
-            Format(Rec."Event Date", 0, '<Year4>')));
+        TempDate.Reset();
+        TempDate.SetFilter("Period Start", FilterExpression);
+
+        exit(TempDate.FindFirst());
     end;
 
     local procedure HasFinancialFieldsPermission(): Boolean

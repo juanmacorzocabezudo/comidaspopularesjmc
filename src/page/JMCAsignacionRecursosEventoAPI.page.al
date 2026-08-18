@@ -54,6 +54,10 @@ page 53102 "JMC Asignacion Recursos API"
                 {
                     Caption = 'Comments', Comment = 'ESP="Comentarios"';
                 }
+                field(tipo; Rec."JMC Tipo")
+                {
+                    Caption = 'Tipo', Comment = 'ESP="Tipo"';
+                }
                 field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';

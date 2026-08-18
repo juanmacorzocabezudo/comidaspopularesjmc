@@ -36,11 +36,13 @@ table 53116 "JMC Resource Assignment"
                         "Event Date" := EventRec."Fecha Evento";
                         "Event Time" := EventRec."Hora Evento";
                         CalcFields("Event Description");
+                        UpdateDateFields();
                     end;
                 end else begin
                     Clear("Event Date");
                     Clear("Event Time");
                     Clear("Event Description");
+                    UpdateDateFields();
                 end;
             end;
         }
@@ -48,6 +50,11 @@ table 53116 "JMC Resource Assignment"
         {
             Caption = 'Event Date', Comment = 'ESP="Fecha Evento"';
             DataClassification = CustomerContent;
+
+            trigger OnValidate()
+            begin
+                UpdateDateFields();
+            end;
         }
         field(12; "Event Time"; Time)
         {
@@ -127,6 +134,36 @@ table 53116 "JMC Resource Assignment"
             Caption = 'Business Line', Comment = 'ESP="Línea de Negocio"';
             DataClassification = CustomerContent;
         }
+        field(61; Tipo; Code[100])
+        {
+            Caption = 'Tipo';
+            DataClassification = CustomerContent;
+            TableRelation = Tipo;
+        }
+        field(62; "JMC Week No."; Integer)
+        {
+            Caption = 'Week No.', Comment = 'ESP="Nº Semana"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(63; "JMC Day of Week"; Text[10])
+        {
+            Caption = 'Day of Week', Comment = 'ESP="Día de la Semana"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(64; "JMC Month"; Integer)
+        {
+            Caption = 'Month', Comment = 'ESP="Mes"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(65; "JMC Year"; Integer)
+        {
+            Caption = 'Year', Comment = 'ESP="Año"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
     }
 
     keys
@@ -149,4 +186,19 @@ table 53116 "JMC Resource Assignment"
         {
         }
     }
+
+    local procedure UpdateDateFields()
+    begin
+        if "Event Date" <> 0D then begin
+            "JMC Week No." := Date2DWY("Event Date", 2);
+            "JMC Day of Week" := Format("Event Date", 0, '<Weekday Text>');
+            "JMC Month" := Date2DMY("Event Date", 2);
+            "JMC Year" := Date2DMY("Event Date", 3);
+        end else begin
+            Clear("JMC Week No.");
+            Clear("JMC Day of Week");
+            Clear("JMC Month");
+            Clear("JMC Year");
+        end;
+    end;
 }

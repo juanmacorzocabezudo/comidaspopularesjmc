@@ -32,6 +32,7 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "JMC Cronus Jnl. Line" = RIMD,
         tabledata JMCAlxControlVenta = RIMD,
         tabledata "JMC Resource Assignment" = RIMD,
+        tabledata "Tipo" = RIMD,
 
         // Páginas de compras base
         page "Purchase Order" = X,
@@ -75,6 +76,7 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Recursos Evento API" = X,
         page "JMC Asignacion Recursos API" = X,
         page "JMC Resource Assignment" = X,
+        page "JMC Tipo" = X,
 
 
         // Reports JMC

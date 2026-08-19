@@ -16,6 +16,13 @@ tableextension 53100 "JMC Evento" extends Evento
         }
     }
 
+    fieldgroups
+    {
+        addlast(DropDown; "Codigo Evento", Descripcion, "Fecha Evento", "Hora Evento")
+        {
+        }
+    }
+
     procedure GetEstadoSemaforo(): Integer
     begin
         // Estado es un Option: Presupuesto=0, Aceptado=1, Rechazado=2, Anulado=3, Realizado=4, Archivado=5, EnProceso=6

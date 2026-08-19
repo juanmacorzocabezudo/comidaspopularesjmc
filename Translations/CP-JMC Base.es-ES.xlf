@@ -851,9 +851,8 @@
         </trans-unit>
         <trans-unit id="Table 2883740582 - Field 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Tipo - Field Descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
@@ -1386,22 +1385,20 @@
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control codigoEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentario"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 4116421198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1430,13 +1427,13 @@
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Date</source>
-          <target>[NAB: SUGGESTION]Fecha</target>
+          <target>Fecha</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control fechaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
@@ -1448,13 +1445,13 @@
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Time</source>
-          <target>[NAB: SUGGESTION]Hora</target>
+          <target>Hora</target>
           <note from="Developer" annotates="general" priority="2">ESP="Hora Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control horaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2664101872 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control id - Property Caption</note>
         </trans-unit>
@@ -1526,13 +1523,13 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -1544,9 +1541,8 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1557,15 +1553,14 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1576,21 +1571,20 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1613,9 +1607,8 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1644,16 +1637,14 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Product</source>
-          <target>[NAB: SUGGESTION]Producto</target>
+          <target>Producto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control producto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1664,7 +1655,7 @@
         </trans-unit>
         <trans-unit id="Page 115785206 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit of Measure</source>
-          <target>[NAB: SUGGESTION]Unidad de Medida</target>
+          <target>Unidad de Medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menaje Desechable API - Control unidadMedida - Property Caption</note>
         </trans-unit>
@@ -1688,13 +1679,13 @@
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -1706,41 +1697,38 @@
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1757,9 +1745,8 @@
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
@@ -1776,13 +1763,13 @@
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -1794,41 +1781,38 @@
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1845,9 +1829,8 @@
         </trans-unit>
         <trans-unit id="Page 3166611245 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Especial API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
@@ -1864,13 +1847,13 @@
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -1882,41 +1865,38 @@
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 3672230726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -1933,9 +1913,8 @@
         </trans-unit>
         <trans-unit id="Page 4040715290 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Niño API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2937564307 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2090,13 +2069,13 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -2108,9 +2087,8 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2121,15 +2099,14 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2140,21 +2117,20 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2177,9 +2153,8 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2208,16 +2183,14 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Product</source>
-          <target>[NAB: SUGGESTION]Producto</target>
+          <target>Producto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control producto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2228,7 +2201,7 @@
         </trans-unit>
         <trans-unit id="Page 2062717068 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit of Measure</source>
-          <target>[NAB: SUGGESTION]Unidad de Medida</target>
+          <target>Unidad de Medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control unidadMedida - Property Caption</note>
         </trans-unit>
@@ -2252,27 +2225,26 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control codigoEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Resource Code</source>
-          <target>[NAB: SUGGESTION]Cód. Recurso</target>
+          <target>Cód. Recurso</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control codigoRecurso - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2283,15 +2255,14 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2302,21 +2273,20 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2339,9 +2309,8 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2376,9 +2345,8 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2395,7 +2363,7 @@
         </trans-unit>
         <trans-unit id="Page 1112059641 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit of Measure</source>
-          <target>[NAB: SUGGESTION]Unidad de Medida</target>
+          <target>Unidad de Medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Personal Evento API - Control unidadMedida - Property Caption</note>
         </trans-unit>
@@ -2455,27 +2423,26 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control codigoEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Resource Code</source>
-          <target>[NAB: SUGGESTION]Cód. Recurso</target>
+          <target>Cód. Recurso</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Recurso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control codigoRecurso - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2486,15 +2453,14 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2505,21 +2471,20 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2542,9 +2507,8 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2579,9 +2543,8 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2598,7 +2561,7 @@
         </trans-unit>
         <trans-unit id="Page 628882109 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit of Measure</source>
-          <target>[NAB: SUGGESTION]Unidad de Medida</target>
+          <target>Unidad de Medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Recursos Evento API - Control unidadMedida - Property Caption</note>
         </trans-unit>
@@ -2622,114 +2585,98 @@
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 2093463043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Año</source>
-          <target>[NAB: SUGGESTION]Año</target>
+          <target>Año</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control anio - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Código Evento</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control codigoEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Código Recurso</source>
-          <target>[NAB: SUGGESTION]Código Recurso</target>
+          <target>Código Recurso</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control codigoRecurso - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comentarios</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 3788660022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción Evento</source>
-          <target>[NAB: SUGGESTION]Descripción Evento</target>
+          <target>Descripción Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control descripcionEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 860491395 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Día de la Semana</source>
-          <target>[NAB: SUGGESTION]Día de la Semana</target>
+          <target>Día de la Semana</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control diaSemana - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Evento</source>
-          <target>[NAB: SUGGESTION]Fecha Evento</target>
+          <target>Fecha Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control fechaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hora Evento</source>
-          <target>[NAB: SUGGESTION]Hora Evento</target>
+          <target>Hora Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control horaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 3742402547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Línea de Negocio</source>
-          <target>[NAB: SUGGESTION]Línea de Negocio</target>
+          <target>Línea de Negocio</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control lineaNegocio - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 4018899989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Mes</source>
-          <target>[NAB: SUGGESTION]Mes</target>
+          <target>Mes</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control mes - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 521500921 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nº Mov.</source>
-          <target>[NAB: SUGGESTION]Nº Mov.</target>
+          <target>Nº Mov.</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control nMovimiento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 348206557 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nº Semana</source>
-          <target>[NAB: SUGGESTION]Nº Semana</target>
+          <target>Nº Semana</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control numeroSemana - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 4146287422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tabla Origen</source>
-          <target>[NAB: SUGGESTION]Tabla Origen</target>
+          <target>Tabla Origen</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tablaOrigen - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 2800025482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tarea Realizada</source>
-          <target>[NAB: SUGGESTION]Tarea Realizada</target>
+          <target>Tarea Realizada</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tareaRealizada - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1916214376 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Res Assignment API Simp - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2758,9 +2705,8 @@
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3748927164 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Filter by event date. Use ranges like 1008..1708 or single dates.</source>
-          <target>[NAB: REVIEW]Filtrar por fecha del evento.</target>
+          <target>Filtrar por fecha del evento.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Filtrar por fecha del evento. Use rangos como 1008..1708 o fechas individuales."</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control EventDateFilter - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3748927164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2792,6 +2738,18 @@
           <target>Tarea Realizada</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TaskPerformedFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3475714702 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filter by tipo.</source>
+          <target>Filtrar por tipo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtrar por tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TipoFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3475714702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <target>Tipo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TipoFilter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2494211124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the business line.</source>
@@ -3009,6 +2967,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de Medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Unit of Measure - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1623548903 - Action 2015509123 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new resource assignment.</source>
+          <target>Crear una nueva asignación de recurso.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear una nueva asignación de recurso."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Action NewRecord - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Action 2015509123 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>New</source>
+          <target>Nuevo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nuevo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Action NewRecord - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1590272575 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Asignación de Recursos</source>
           <target>Asignación de Recursos</target>
@@ -3029,23 +2999,20 @@
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cantidad</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Código Evento</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control codigoEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 3598114506 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Código Recurso</source>
-          <target>[NAB: SUGGESTION]Código Recurso</target>
+          <target>Código Recurso</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control codigoRecurso - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3062,9 +3029,8 @@
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 3788660022 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3081,16 +3047,14 @@
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 173343758 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Evento</source>
-          <target>[NAB: SUGGESTION]Fecha Evento</target>
+          <target>Fecha Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control fechaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 4049475529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hora Evento</source>
-          <target>[NAB: SUGGESTION]Hora Evento</target>
+          <target>Hora Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control horaEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1590272575 - Control 3742402547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3155,13 +3119,13 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 3984858780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Quantity</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control cantidad - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 1040322782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Code</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control codigoEvento - Property Caption</note>
         </trans-unit>
@@ -3173,9 +3137,8 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 1798147036 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Comments</source>
-          <target>[NAB: SUGGESTION]Comentarios</target>
+          <target>Comentarios</target>
           <note from="Developer" annotates="general" priority="2">ESP="Comentarios"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control comentarios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 981959952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3186,15 +3149,14 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4014938975 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit Cost</source>
-          <target>[NAB: SUGGESTION]Coste Unitario</target>
+          <target>Coste Unitario</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control costeUnitario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Description</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 1314136020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3205,21 +3167,20 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4170767400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Last Modified Date Time</source>
-          <target>[NAB: SUGGESTION]Fecha/hora última modificación</target>
+          <target>Fecha/hora última modificación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora última modificación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control fechaHoraUltimaModificacion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 2686962215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Id</source>
-          <target>[NAB: SUGGESTION]Id</target>
+          <target>Id</target>
           <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control id - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Amount</source>
-          <target>[NAB: SUGGESTION]Importe</target>
+          <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4224837658 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3242,9 +3203,8 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
-          <target>[NAB: SUGGESTION]Nº línea</target>
+          <target>Nº línea</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control numeroLinea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 1616593491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3273,16 +3233,14 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4120798560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Product</source>
-          <target>[NAB: SUGGESTION]Producto</target>
+          <target>Producto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control producto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4180984966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Type</source>
-          <target>[NAB: SUGGESTION]Tipo</target>
+          <target>Tipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 2095337156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3293,7 +3251,7 @@
         </trans-unit>
         <trans-unit id="Page 2894705026 - Control 4030228861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unit of Measure</source>
-          <target>[NAB: SUGGESTION]Unidad de Medida</target>
+          <target>Unidad de Medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Suplementos Evento API - Control unidadMedida - Property Caption</note>
         </trans-unit>
@@ -3539,9 +3497,8 @@
         </trans-unit>
         <trans-unit id="Report 507838215 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Options</source>
-          <target>[NAB: SUGGESTION]Opciones</target>
+          <target>Opciones</target>
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Sales Invoice Industry Report - Control Options - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3552,9 +3509,8 @@
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 2895594700 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cantidad</source>
-          <target>[NAB: SUGGESTION]Cantidad</target>
+          <target>Cantidad</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Cantidad_LineasEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 74377420 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3565,44 +3521,38 @@
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 3852275139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion_LineasEvento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 2017695335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Código Evento</source>
-          <target>[NAB: SUGGESTION]Código Evento</target>
+          <target>Código Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Codigo_Evento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 1475260075 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Descripción</source>
-          <target>[NAB: SUGGESTION]Descripción</target>
+          <target>Descripción</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 2950845476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Estado</source>
-          <target>[NAB: SUGGESTION]Estado</target>
+          <target>Estado</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Estado - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 374189815 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Evento</source>
-          <target>[NAB: SUGGESTION]Fecha Evento</target>
+          <target>Fecha Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Fecha_Evento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3749665593 - QueryColumn 4197182740 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Hora Evento</source>
-          <target>[NAB: SUGGESTION]Hora Evento</target>
+          <target>Hora Evento</target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Query JMC Event with Lines - QueryColumn Hora_Evento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Query 3359553205 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3784,6 +3734,18 @@
           <target>Coste unitario con descuento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1663153770 - Control 3106991722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1683515353">
+          <source>Specifies the type.</source>
+          <target>Especifica el tipo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Asignacion Recursos Pag - Control JMC Tipo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1663153770 - Control 3106991722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1683515353">
+          <source>Tipo</source>
+          <target>Tipo</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Asignacion Recursos Pag - Control JMC Tipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
           <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
@@ -4325,6 +4287,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Logo aseguradora"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2948369615 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the event type to use in resource assignment when an event is selected.</source>
+          <target>Especifica el tipo de evento a usar en asignación de recursos cuando se selecciona un evento.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de evento a usar en asignación de recursos cuando se selecciona un evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Event Type Res. Assign. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2948369615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Event Type Res. Assignment</source>
+          <target>Tipo Evento Asig. Recursos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Evento Asig. Recursos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Event Type Res. Assign. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
           <target>Especifica comentarios para esta línea de abono.</target>
@@ -4691,6 +4665,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2948369615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Event Type Res. Assignment</source>
+          <target>Tipo Evento Asig. Recursos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Evento Asig. Recursos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Event Type Res. Assign. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 373820646 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Sales Document Insurance Logo</source>
           <target>Logo seguro documentos venta</target>
@@ -4783,9 +4763,8 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target>[NAB: REVIEW] </target>
+          <target> </target>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

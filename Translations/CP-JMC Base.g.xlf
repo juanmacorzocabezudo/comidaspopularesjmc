@@ -2283,6 +2283,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Tarea Realizada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TaskPerformedFilter - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3475714702 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filter by tipo.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtrar por tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TipoFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 3475714702 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TipoFilter - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2494211124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the business line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica la línea de negocio."</note>
@@ -3093,6 +3103,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste unitario con descuento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Alx Lineas Pedido Compra - Change Unit Cost (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1663153770 - Control 3106991722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1683515353">
+          <source>Specifies the type.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Asignacion Recursos Pag - Control JMC Tipo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1663153770 - Control 3106991722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1683515353">
+          <source>Tipo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Asignacion Recursos Pag - Control JMC Tipo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
           <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -3543,6 +3563,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Logo aseguradora"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Sales Doc Insurance Logo - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2948369615 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Specifies the event type to use in resource assignment when an event is selected.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de evento a usar en asignación de recursos cuando se selecciona un evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Event Type Res. Assign. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 373820646 - Control 2948369615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4145206282">
+          <source>Event Type Res. Assignment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Evento Asig. Recursos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales &amp; Receivables Setup - Control JMC Event Type Res. Assign. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1700197791 - Control 917214256 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1056066689">
           <source>Specifies comments for this credit memo line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica comentarios para esta línea de abono."</note>
@@ -3847,6 +3877,11 @@
           <source>Credit Limit Notification Email</source>
           <note from="Developer" annotates="general" priority="2">ESP="Email notificación límite crédito"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Credit Limit Email - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 373820646 - Field 2948369615 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
+          <source>Event Type Res. Assignment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Evento Asig. Recursos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales &amp; Receivables Setup - Field JMC Event Type Res. Assign. - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 373820646 - Field 1522260119 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4145206282">
           <source>Sales Document Insurance Logo</source>

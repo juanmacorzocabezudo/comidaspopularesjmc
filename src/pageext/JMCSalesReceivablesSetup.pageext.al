@@ -84,6 +84,17 @@ pageextension 53123 "JMC Sales & Receivables Setup" extends "Sales & Receivables
                     ToolTip = 'Specifies the insurance logo to display on sales documents.', Comment = 'ESP="Especifica el logo de la aseguradora que se mostrará en los documentos de venta."';
                 }
             }
+
+
+        }
+        addafter("Linea Evento Otros")
+        {
+            field("JMC Event Type Res. Assign."; Rec."JMC Event Type Res. Assign.")
+            {
+                ApplicationArea = All;
+                Caption = 'Event Type Res. Assignment', Comment = 'ESP="Tipo Evento Asig. Recursos"';
+                ToolTip = 'Specifies the event type to use in resource assignment when an event is selected.', Comment = 'ESP="Especifica el tipo de evento a usar en asignación de recursos cuando se selecciona un evento."';
+            }
         }
     }
 }

@@ -30,9 +30,25 @@ page 53134 "JMC Res Assignment API Simp"
                 {
                     Caption = 'Tabla Origen';
                 }
-                field(codigoEvento; Rec."Event Code")
+                field(lineaNegocio; Rec."Business Line")
                 {
-                    Caption = 'Código Evento';
+                    Caption = 'Línea de Negocio';
+                }
+                field(numeroSemana; Rec."JMC Week No.")
+                {
+                    Caption = 'Nº Semana';
+                }
+                field(mes; Rec."JMC Month")
+                {
+                    Caption = 'Mes';
+                }
+                field(anio; Rec."JMC Year")
+                {
+                    Caption = 'Año';
+                }
+                field(diaSemana; Rec."JMC Day of Week")
+                {
+                    Caption = 'Día de la Semana';
                 }
                 field(fechaEvento; Rec."Event Date")
                 {
@@ -41,6 +57,10 @@ page 53134 "JMC Res Assignment API Simp"
                 field(horaEvento; Rec."Event Time")
                 {
                     Caption = 'Hora Evento';
+                }
+                field(codigoEvento; Rec."Event Code")
+                {
+                    Caption = 'Código Evento';
                 }
                 field(descripcionEvento; Rec."Event Description")
                 {
@@ -65,26 +85,6 @@ page 53134 "JMC Res Assignment API Simp"
                 field(comentarios; Rec.Comments)
                 {
                     Caption = 'Comentarios';
-                }
-                field(lineaNegocio; Rec."Business Line")
-                {
-                    Caption = 'Línea de Negocio';
-                }
-                field(numeroSemana; Rec."JMC Week No.")
-                {
-                    Caption = 'Nº Semana';
-                }
-                field(diaSemana; Rec."JMC Day of Week")
-                {
-                    Caption = 'Día de la Semana';
-                }
-                field(mes; Rec."JMC Month")
-                {
-                    Caption = 'Mes';
-                }
-                field(anio; Rec."JMC Year")
-                {
-                    Caption = 'Año';
                 }
             }
         }
@@ -169,7 +169,7 @@ page 53134 "JMC Res Assignment API Simp"
                 // Calculate date fields manually
                 if Rec."Event Date" <> 0D then begin
                     Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
-                    Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                    Rec."JMC Day of Week" := GetSpanishDayName(Rec."Event Date");
                     Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
                     Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
                 end;
@@ -213,7 +213,7 @@ page 53134 "JMC Res Assignment API Simp"
                 // Calculate date fields manually to ensure they are always populated
                 if Rec."Event Date" <> 0D then begin
                     Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
-                    Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                    Rec."JMC Day of Week" := GetSpanishDayName(Rec."Event Date");
                     Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
                     Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
                 end;
@@ -284,7 +284,7 @@ page 53134 "JMC Res Assignment API Simp"
                 // Calculate date fields manually
                 if Rec."Event Date" <> 0D then begin
                     Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
-                    Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                    Rec."JMC Day of Week" := GetSpanishDayName(Rec."Event Date");
                     Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
                     Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
                 end;
@@ -340,5 +340,28 @@ page 53134 "JMC Res Assignment API Simp"
             until NewAssignment.Next() = 0;
 
         if Rec.FindFirst() then;
+    end;
+
+    local procedure GetSpanishDayName(DateValue: Date): Text[10]
+    var
+        DayOfWeek: Integer;
+    begin
+        DayOfWeek := Date2DWY(DateValue, 1);
+        case DayOfWeek of
+            1:
+                exit('Lunes');
+            2:
+                exit('Martes');
+            3:
+                exit('Miércoles');
+            4:
+                exit('Jueves');
+            5:
+                exit('Viernes');
+            6:
+                exit('Sábado');
+            7:
+                exit('Domingo');
+        end;
     end;
 }

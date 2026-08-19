@@ -7,10 +7,14 @@ tableextension 53130 "JMC Asignacion Recursos" extends "Asignacion Recursos Even
             trigger OnBeforeValidate()
             var
                 EventoRec: Record Evento;
+                SalesSetup: Record "Sales & Receivables Setup";
             begin
                 // Allow blank event code - skip validation
-                if Rec."Codigo Evento" = '' then
+                if Rec."Codigo Evento" = '' then begin
+                    // Clear Tipo when event is cleared
+                    Clear(Rec."JMC Tipo");
                     exit;
+                end;
 
                 // If event code is provided but doesn't exist, allow it anyway
                 if not EventoRec.Get(Rec."Codigo Evento") then
@@ -19,6 +23,10 @@ tableextension 53130 "JMC Asignacion Recursos" extends "Asignacion Recursos Even
                 // Copy date and time from event
                 Rec."JMC Fecha Evento" := EventoRec."Fecha Evento";
                 Rec."JMC Hora Evento" := EventoRec."Hora Evento";
+
+                // Fill Tipo from Sales & Receivables Setup
+                if SalesSetup.Get() then
+                    Rec."JMC Tipo" := SalesSetup."JMC Event Type Res. Assign.";
             end;
         }
         field(53100; "JMC Event Date"; Date)

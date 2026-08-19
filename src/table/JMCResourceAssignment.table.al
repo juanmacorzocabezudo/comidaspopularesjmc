@@ -29,6 +29,7 @@ table 53116 "JMC Resource Assignment"
             trigger OnValidate()
             var
                 EventRec: Record Evento;
+                SalesSetup: Record "Sales & Receivables Setup";
             begin
                 if "Event Code" <> '' then begin
                     if EventRec.Get("Event Code") then begin
@@ -38,10 +39,15 @@ table 53116 "JMC Resource Assignment"
                         CalcFields("Event Description");
                         UpdateDateFields();
                     end;
+
+                    // Fill Tipo from Sales & Receivables Setup when event is selected
+                    if SalesSetup.Get() then
+                        Tipo := SalesSetup."JMC Event Type Res. Assign.";
                 end else begin
                     Clear("Event Date");
                     Clear("Event Time");
                     Clear("Event Description");
+                    Clear(Tipo);
                     UpdateDateFields();
                 end;
             end;
@@ -191,7 +197,7 @@ table 53116 "JMC Resource Assignment"
     begin
         if "Event Date" <> 0D then begin
             "JMC Week No." := Date2DWY("Event Date", 2);
-            "JMC Day of Week" := Format("Event Date", 0, '<Weekday Text>');
+            "JMC Day of Week" := GetSpanishDayName("Event Date");
             "JMC Month" := Date2DMY("Event Date", 2);
             "JMC Year" := Date2DMY("Event Date", 3);
         end else begin
@@ -199,6 +205,29 @@ table 53116 "JMC Resource Assignment"
             Clear("JMC Day of Week");
             Clear("JMC Month");
             Clear("JMC Year");
+        end;
+    end;
+
+    local procedure GetSpanishDayName(DateValue: Date): Text[10]
+    var
+        DayOfWeek: Integer;
+    begin
+        DayOfWeek := Date2DWY(DateValue, 1);
+        case DayOfWeek of
+            1:
+                exit('Lunes');
+            2:
+                exit('Martes');
+            3:
+                exit('Miércoles');
+            4:
+                exit('Jueves');
+            5:
+                exit('Viernes');
+            6:
+                exit('Sábado');
+            7:
+                exit('Domingo');
         end;
     end;
 }

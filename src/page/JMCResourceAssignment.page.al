@@ -11,6 +11,8 @@ page 53131 "JMC Resource Assignment"
     DeleteAllowed = true;
     ModifyAllowed = true;
     DelayedInsert = true;
+    SaveValues = true;
+    AutoSplitKey = true;
 
     layout
     {
@@ -65,6 +67,18 @@ page 53131 "JMC Resource Assignment"
                         LoadData();
                     end;
                 }
+                field(TipoFilter; TipoFilter)
+                {
+                    Caption = 'Tipo', Comment = 'ESP="Tipo"';
+                    ApplicationArea = All;
+                    ToolTip = 'Filter by tipo.', Comment = 'ESP="Filtrar por tipo."';
+                    TableRelation = Tipo;
+
+                    trigger OnValidate()
+                    begin
+                        LoadData();
+                    end;
+                }
             }
             repeater(Group)
             {
@@ -90,34 +104,6 @@ page 53131 "JMC Resource Assignment"
                     ApplicationArea = All;
                     ToolTip = 'Specifies the event code.', Comment = 'ESP="Especifica el código del evento."';
                     Visible = Rec."Source Table" = Rec."Source Table"::Catering;
-
-                    trigger OnLookup(var Text: Text): Boolean
-                    var
-                        EventoRec: Record Evento;
-                    begin
-                        EventoRec.SetView('SORTING("Fecha Evento") ORDER(Descending)');
-                        if Page.RunModal(0, EventoRec) = Action::LookupOK then begin
-                            Rec."Event Code" := EventoRec."Codigo Evento";
-                            Rec.Validate("Event Code");
-                        end;
-                    end;
-
-                    trigger OnValidate()
-                    var
-                        EventoRec: Record Evento;
-                    begin
-                        // Copy date and time from event when event code is selected
-                        if Rec."Event Code" <> '' then begin
-                            if EventoRec.Get(Rec."Event Code") then begin
-                                Rec."Event Date" := EventoRec."Fecha Evento";
-                                Rec."Event Time" := EventoRec."Hora Evento";
-                            end;
-                            Rec.CalcFields("Event Description");
-                        end else begin
-                            Clear(Rec."Event Date");
-                            Clear(Rec."Event Time");
-                        end;
-                    end;
                 }
                 field("Event Description"; Rec."Event Description")
                 {
@@ -172,6 +158,7 @@ page 53131 "JMC Resource Assignment"
                     Caption = 'Tipo';
                     ApplicationArea = All;
                     ToolTip = 'Specifies the tipo.', Comment = 'ESP="Especifica el tipo."';
+                    StyleExpr = TipoStyle;
                 }
 
                 field("Task Performed"; Rec."Task Performed")
@@ -257,20 +244,44 @@ page 53131 "JMC Resource Assignment"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+        }
+    }
+
     var
         BusinessLineFilter: Enum "JMC Business Line Filter";
         EventDateFilter: Text[250];
         ResourceCodeFilter: Code[20];
         TaskPerformedFilter: Code[10];
+        TipoFilter: Code[100];
         EntryNoCounter: Integer;
         CanViewFinancialFields: Boolean;
+        TipoStyle: Text;
 
     trigger OnOpenPage()
     begin
-        BusinessLineFilter := BusinessLineFilter::Industry;
-        // Check if user has the specific permission set assigned
+        // Set default to Both if this is a fresh open (no saved filters)
+        // SaveValues will preserve user's choice in subsequent opens
+        if (BusinessLineFilter = BusinessLineFilter::Industry) and
+           (EventDateFilter = '') and (ResourceCodeFilter = '') and
+           (TaskPerformedFilter = '') and (TipoFilter = '') then
+            BusinessLineFilter := BusinessLineFilter::Both;
+
         CanViewFinancialFields := HasFinancialFieldsPermission();
         LoadData();
+    end;
+
+    trigger OnAfterGetCurrRecord()
+    begin
+        SetTipoStyle();
+    end;
+
+    trigger OnAfterGetRecord()
+    begin
+        SetTipoStyle();
     end;
 
     trigger OnNewRecord(BelowxRec: Boolean)
@@ -433,7 +444,8 @@ page 53131 "JMC Resource Assignment"
                     LegacyAssignment."JMC Business Line",
                     LegacyAssignment."JMC Event Date",
                     LegacyAssignment."Codigo Recurso",
-                    LegacyAssignment."Tarea Realizada")
+                    LegacyAssignment."Tarea Realizada",
+                    LegacyAssignment."JMC Tipo")
                 then begin
                     EntryNoCounter -= 1;
                     Rec.Init();
@@ -468,7 +480,7 @@ page 53131 "JMC Resource Assignment"
                     // Calculate date fields manually
                     if Rec."Event Date" <> 0D then begin
                         Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
-                        Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                        Rec."JMC Day of Week" := GetSpanishDayName(Rec."Event Date");
                         Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
                         Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
                     end;
@@ -488,7 +500,8 @@ page 53131 "JMC Resource Assignment"
                     NewAssignment."Business Line",
                     NewAssignment."Event Date",
                     NewAssignment."Resource Code",
-                    NewAssignment."Task Performed")
+                    NewAssignment."Task Performed",
+                    NewAssignment.Tipo)
                 then begin
                     Rec.Init();
                     Rec."Entry No." := NewAssignment."Entry No.";
@@ -516,7 +529,7 @@ page 53131 "JMC Resource Assignment"
                     // Calculate date fields manually to ensure they are always populated
                     if Rec."Event Date" <> 0D then begin
                         Rec."JMC Week No." := Date2DWY(Rec."Event Date", 2);
-                        Rec."JMC Day of Week" := Format(Rec."Event Date", 0, '<Weekday Text>');
+                        Rec."JMC Day of Week" := GetSpanishDayName(Rec."Event Date");
                         Rec."JMC Month" := Date2DMY(Rec."Event Date", 2);
                         Rec."JMC Year" := Date2DMY(Rec."Event Date", 3);
                     end;
@@ -528,14 +541,18 @@ page 53131 "JMC Resource Assignment"
         if Rec.FindFirst() then;
     end;
 
-    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]; TaskPerformed: Code[20]): Boolean
+    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]; TaskPerformed: Code[20]; Tipo: Code[100]): Boolean
     begin
-        // Business Line filter
-        if BusinessLineFilter <> BusinessLineFilter::Both then begin
-            if (BusinessLineFilter = BusinessLineFilter::Catering) and (BizLine <> BizLine::Catering) then
-                exit(false);
-            if (BusinessLineFilter = BusinessLineFilter::Industry) and (BizLine <> BizLine::Industry) then
-                exit(false);
+        // Business Line filter - use explicit case logic
+        case BusinessLineFilter of
+            BusinessLineFilter::Industry:
+                if BizLine <> BizLine::Industry then
+                    exit(false);
+            BusinessLineFilter::Catering:
+                if BizLine <> BizLine::Catering then
+                    exit(false);
+            BusinessLineFilter::Both:
+                ; // Include both, no filter
         end;
 
         // Event Date range filter - support filter expressions
@@ -551,6 +568,11 @@ page 53131 "JMC Resource Assignment"
         // Task Performed filter
         if TaskPerformedFilter <> '' then
             if TaskPerformed <> TaskPerformedFilter then
+                exit(false);
+
+        // Tipo filter
+        if TipoFilter <> '' then
+            if Tipo <> TipoFilter then
                 exit(false);
 
         exit(true);
@@ -571,6 +593,31 @@ page 53131 "JMC Resource Assignment"
         TempDate.SetFilter("Period Start", FilterExpression);
 
         exit(TempDate.FindFirst());
+    end;
+
+    local procedure SetTipoStyle()
+    begin
+        // Set style based on Tipo value
+        case UpperCase(Rec.Tipo) of
+            'FABRICA':
+                TipoStyle := 'StandardAccent';  // Blue
+            'EVENTO':
+                TipoStyle := 'Favorable';  // Green
+            'COMP. DIARIO-EVENTO':
+                TipoStyle := 'Ambiguous';  // Yellow
+            'LIMPIEZA':
+                TipoStyle := 'Unfavorable';  // Orange/Pink-ish light
+            'ALMACEN':
+                TipoStyle := 'Subordinate';  // Gray (closer to purple)
+            'FORMULISTA':
+                TipoStyle := 'Attention';  // Red
+            'MANTENIMIENTO':
+                TipoStyle := 'AttentionAccent';  // Orange dark
+            'OFICINA':
+                TipoStyle := 'Strong';  // Black bold
+            else
+                TipoStyle := 'Standard';  // Default black
+        end;
     end;
 
     local procedure HasFinancialFieldsPermission(): Boolean
@@ -595,5 +642,28 @@ page 53131 "JMC Resource Assignment"
                     MaxLineNo := LegacyAssignment."Linea Recurso Evento";
             until LegacyAssignment.Next() = 0;
         exit(MaxLineNo + 10000);
+    end;
+
+    local procedure GetSpanishDayName(DateValue: Date): Text[10]
+    var
+        DayOfWeek: Integer;
+    begin
+        DayOfWeek := Date2DWY(DateValue, 1);
+        case DayOfWeek of
+            1:
+                exit('Lunes');
+            2:
+                exit('Martes');
+            3:
+                exit('Miércoles');
+            4:
+                exit('Jueves');
+            5:
+                exit('Viernes');
+            6:
+                exit('Sábado');
+            7:
+                exit('Domingo');
+        end;
     end;
 }

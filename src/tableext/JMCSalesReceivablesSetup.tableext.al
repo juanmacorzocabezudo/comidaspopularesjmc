@@ -67,5 +67,11 @@ tableextension 53117 "JMC Sales & Receivables Setup" extends "Sales & Receivable
             DataClassification = CustomerContent;
             Subtype = Bitmap;
         }
+        field(53113; "JMC Event Type Res. Assign."; Code[100])
+        {
+            Caption = 'Event Type Res. Assignment', Comment = 'ESP="Tipo Evento Asig. Recursos"';
+            DataClassification = CustomerContent;
+            TableRelation = Tipo;
+        }
     }
 }

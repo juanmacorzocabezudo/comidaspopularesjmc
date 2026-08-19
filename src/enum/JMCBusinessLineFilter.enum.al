@@ -2,16 +2,16 @@ enum 53113 "JMC Business Line Filter"
 {
     Extensible = true;
 
-    value(0; Both)
+    value(0; Industry)
     {
-        Caption = 'Both', Comment = 'ESP="Ambas"';
+        Caption = 'Industry', Comment = 'ESP="Industria"';
     }
     value(1; Catering)
     {
         Caption = 'Catering', Comment = 'ESP="Catering"';
     }
-    value(2; Industry)
+    value(2; Both)
     {
-        Caption = 'Industry', Comment = 'ESP="Industria"';
+        Caption = 'Both', Comment = 'ESP="Ambas"';
     }
 }

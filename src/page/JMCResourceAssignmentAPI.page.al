@@ -54,7 +54,7 @@ page 53133 "JMC Resource Assignment API"
                 {
                     Caption = 'Fecha Evento';
                 }
-                field(horaEvento; Rec."Event Time")
+                field(horaEvento; Format(Rec."Event Time", 0, '<Hours24,2>:<Minutes,2>'))
                 {
                     Caption = 'Hora Evento';
                 }
@@ -233,6 +233,10 @@ page 53133 "JMC Resource Assignment API"
                 Rec.Insert();
             until NewAssignment.Next() = 0;
 
+        // Sort by Event Date descending (most recent first)
+        Rec.SetCurrentKey("Event Date", "Event Time");
+        Rec.Ascending(false);
+
         if Rec.FindFirst() then;
     end;
 
@@ -350,6 +354,10 @@ page 53133 "JMC Resource Assignment API"
 
                 Rec.Insert();
             until NewAssignment.Next() = 0;
+
+        // Sort by Event Date descending (most recent first)
+        Rec.SetCurrentKey("Event Date", "Event Time");
+        Rec.Ascending(false);
 
         if Rec.FindFirst() then;
     end;

@@ -184,6 +184,9 @@ table 53116 "JMC Resource Assignment"
         key(Key3; "Business Line", "Event Code")
         {
         }
+        key(Key4; "Event Date", "Event Time")
+        {
+        }
     }
 
     fieldgroups

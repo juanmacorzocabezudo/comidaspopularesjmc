@@ -11,7 +11,6 @@ page 53131 "JMC Resource Assignment"
     DeleteAllowed = true;
     ModifyAllowed = true;
     DelayedInsert = true;
-    SaveValues = true;
     AutoSplitKey = true;
 
     layout
@@ -79,6 +78,18 @@ page 53131 "JMC Resource Assignment"
                         LoadData();
                     end;
                 }
+                field(WeekNoFilter; WeekNoFilter)
+                {
+                    Caption = 'Nº Semana';
+                    ApplicationArea = All;
+                    ToolTip = 'Filtrar por número de semana.';
+                    BlankZero = true;
+
+                    trigger OnValidate()
+                    begin
+                        LoadData();
+                    end;
+                }
             }
             repeater(Group)
             {
@@ -121,12 +132,20 @@ page 53131 "JMC Resource Assignment"
                     Visible = true;
                     Editable = true;
                 }
+                field("Event Time Formatted"; Format(Rec."Event Time", 0, '<Hours24,2>:<Minutes,2>'))
+                {
+                    Caption = 'Hora';
+                    ApplicationArea = All;
+                    ToolTip = 'Hora del evento sin segundos (formato HH:MM).';
+                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    Editable = false;
+                }
                 field("Event Time"; Rec."Event Time")
                 {
-                    Caption = 'Event Time', Comment = 'ESP="Hora"';
+                    Caption = 'Hora (Editar)';
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the event time.', Comment = 'ESP="Especifica la hora del evento."';
-                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    ToolTip = 'Haga clic aquí para editar la hora. Introduzca formato HH:MM.';
+                    Visible = false;
                     Editable = true;
                 }
                 field("Resource Code"; Rec."Resource Code")
@@ -203,9 +222,9 @@ page 53131 "JMC Resource Assignment"
                 }
                 field("JMC Week No."; Rec."JMC Week No.")
                 {
-                    Caption = 'Week No.', Comment = 'ESP="Nº Semana"';
+                    Caption = 'Nº Semana';
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the week number.', Comment = 'ESP="Especifica el número de semana."';
+                    ToolTip = 'Especifica el número de semana.';
                     Editable = false;
                 }
                 field("JMC Day of Week"; Rec."JMC Day of Week")
@@ -257,18 +276,18 @@ page 53131 "JMC Resource Assignment"
         ResourceCodeFilter: Code[20];
         TaskPerformedFilter: Code[10];
         TipoFilter: Code[100];
+        WeekNoFilter: Integer;
         EntryNoCounter: Integer;
         CanViewFinancialFields: Boolean;
         TipoStyle: Text;
+        OriginalEventCode: Code[20];
+        OriginalLineNo: Integer;
+        OriginalResourceCode: Code[20];
 
     trigger OnOpenPage()
     begin
-        // Set default to Both if this is a fresh open (no saved filters)
-        // SaveValues will preserve user's choice in subsequent opens
-        if (BusinessLineFilter = BusinessLineFilter::Industry) and
-           (EventDateFilter = '') and (ResourceCodeFilter = '') and
-           (TaskPerformedFilter = '') and (TipoFilter = '') then
-            BusinessLineFilter := BusinessLineFilter::Both;
+        // Always start with Both (Ambas) by default
+        BusinessLineFilter := BusinessLineFilter::Both;
 
         CanViewFinancialFields := HasFinancialFieldsPermission();
         LoadData();
@@ -282,6 +301,13 @@ page 53131 "JMC Resource Assignment"
     trigger OnAfterGetRecord()
     begin
         SetTipoStyle();
+
+        // Store original values for Catering records to use in OnModifyRecord
+        if Rec."Source Table" = Rec."Source Table"::Catering then begin
+            OriginalEventCode := Rec."Event Code";
+            OriginalLineNo := Rec."Event Resource Line No.";
+            OriginalResourceCode := Rec."Resource Code";
+        end;
     end;
 
     trigger OnNewRecord(BelowxRec: Boolean)
@@ -361,22 +387,54 @@ page 53131 "JMC Resource Assignment"
     var
         LegacyAssignment: Record "Asignacion Recursos Eventos";
         NewAssignment: Record "JMC Resource Assignment";
+        ResourceChanged: Boolean;
     begin
         // Update physical tables based on source
         if Rec."Source Table" = Rec."Source Table"::Catering then begin
-            // Modify legacy table (50005)
-            if LegacyAssignment.Get(Rec."Event Code", Rec."Event Resource Line No.", Rec."Resource Code") then begin
-                LegacyAssignment.Descripcion := Rec.Description;
-                LegacyAssignment.Cantidad := Rec.Quantity;
-                LegacyAssignment."Unidad de Medida" := Rec."Unit of Measure";
-                LegacyAssignment."Coste Unitario" := Rec."Unit Cost";
-                LegacyAssignment."Tarea Realizada" := Rec."Task Performed";
-                LegacyAssignment.Comentarios := Rec.Comments;
-                LegacyAssignment."JMC Business Line" := Rec."Business Line";
-                LegacyAssignment."JMC Fecha Evento" := Rec."Event Date";
-                LegacyAssignment."JMC Hora Evento" := Rec."Event Time";
-                LegacyAssignment."JMC Tipo" := Rec.Tipo;
-                LegacyAssignment.Modify(true);
+            // Check if Resource Code changed
+            ResourceChanged := (OriginalResourceCode <> Rec."Resource Code");
+
+            // Modify legacy table (50005) - Use ORIGINAL values for Get()
+            if LegacyAssignment.Get(OriginalEventCode, OriginalLineNo, OriginalResourceCode) then begin
+                if ResourceChanged then begin
+                    // If resource code changed, delete old record and insert new one
+                    // because Resource Code is part of the primary key
+                    LegacyAssignment.Delete(true);
+
+                    LegacyAssignment.Init();
+                    LegacyAssignment."Codigo Evento" := Rec."Event Code";
+                    LegacyAssignment."Linea Recurso Evento" := Rec."Event Resource Line No.";
+                    LegacyAssignment."Codigo Recurso" := Rec."Resource Code";
+                    LegacyAssignment.Descripcion := Rec.Description;
+                    LegacyAssignment.Cantidad := Rec.Quantity;
+                    LegacyAssignment."Unidad de Medida" := Rec."Unit of Measure";
+                    LegacyAssignment."Coste Unitario" := Rec."Unit Cost";
+                    LegacyAssignment."Tarea Realizada" := Rec."Task Performed";
+                    LegacyAssignment.Comentarios := Rec.Comments;
+                    LegacyAssignment."JMC Business Line" := Rec."Business Line";
+                    LegacyAssignment."JMC Fecha Evento" := Rec."Event Date";
+                    LegacyAssignment."JMC Hora Evento" := Rec."Event Time";
+                    LegacyAssignment."JMC Tipo" := Rec.Tipo;
+                    LegacyAssignment.Insert(true);
+
+                    // Update the stored original values
+                    OriginalEventCode := Rec."Event Code";
+                    OriginalLineNo := Rec."Event Resource Line No.";
+                    OriginalResourceCode := Rec."Resource Code";
+                end else begin
+                    // Resource didn't change, just modify the record
+                    LegacyAssignment.Descripcion := Rec.Description;
+                    LegacyAssignment.Cantidad := Rec.Quantity;
+                    LegacyAssignment."Unidad de Medida" := Rec."Unit of Measure";
+                    LegacyAssignment."Coste Unitario" := Rec."Unit Cost";
+                    LegacyAssignment."Tarea Realizada" := Rec."Task Performed";
+                    LegacyAssignment.Comentarios := Rec.Comments;
+                    LegacyAssignment."JMC Business Line" := Rec."Business Line";
+                    LegacyAssignment."JMC Fecha Evento" := Rec."Event Date";
+                    LegacyAssignment."JMC Hora Evento" := Rec."Event Time";
+                    LegacyAssignment."JMC Tipo" := Rec.Tipo;
+                    LegacyAssignment.Modify(true);
+                end;
             end;
         end else begin
             // Modify new table (53116)
@@ -408,8 +466,8 @@ page 53131 "JMC Resource Assignment"
     begin
         // Delete from physical tables based on source
         if Rec."Source Table" = Rec."Source Table"::Catering then begin
-            // Delete from legacy table (50005)
-            if LegacyAssignment.Get(Rec."Event Code", Rec."Event Resource Line No.", Rec."Resource Code") then
+            // Delete from legacy table (50005) - Use ORIGINAL values for Get()
+            if LegacyAssignment.Get(OriginalEventCode, OriginalLineNo, OriginalResourceCode) then
                 LegacyAssignment.Delete(true);
         end else begin
             // Delete from new table (53116)
@@ -439,13 +497,14 @@ page 53131 "JMC Resource Assignment"
             repeat
                 LegacyAssignment.CalcFields("JMC Event Date", "JMC Event Time", "JMC Event Description");
 
-                // Apply filters
+                // Apply filters (calculate week no. inline for filtering)
                 if ShouldIncludeRecord(
                     LegacyAssignment."JMC Business Line",
                     LegacyAssignment."JMC Event Date",
                     LegacyAssignment."Codigo Recurso",
                     LegacyAssignment."Tarea Realizada",
-                    LegacyAssignment."JMC Tipo")
+                    LegacyAssignment."JMC Tipo",
+                    Date2DWY(LegacyAssignment."JMC Event Date", 2))
                 then begin
                     EntryNoCounter -= 1;
                     Rec.Init();
@@ -501,7 +560,8 @@ page 53131 "JMC Resource Assignment"
                     NewAssignment."Event Date",
                     NewAssignment."Resource Code",
                     NewAssignment."Task Performed",
-                    NewAssignment.Tipo)
+                    NewAssignment.Tipo,
+                    NewAssignment."JMC Week No.")
                 then begin
                     Rec.Init();
                     Rec."Entry No." := NewAssignment."Entry No.";
@@ -538,10 +598,14 @@ page 53131 "JMC Resource Assignment"
                 end;
             until NewAssignment.Next() = 0;
 
+        // Sort by Event Date descending (most recent first)
+        Rec.SetCurrentKey("Event Date", "Event Time");
+        Rec.Ascending(false);
+
         if Rec.FindFirst() then;
     end;
 
-    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]; TaskPerformed: Code[20]; Tipo: Code[100]): Boolean
+    local procedure ShouldIncludeRecord(BizLine: Enum "JMC Business Line"; EventDate: Date; ResourceCode: Code[20]; TaskPerformed: Code[20]; Tipo: Code[100]; WeekNo: Integer): Boolean
     begin
         // Business Line filter - use explicit case logic
         case BusinessLineFilter of
@@ -558,6 +622,11 @@ page 53131 "JMC Resource Assignment"
         // Event Date range filter - support filter expressions
         if EventDateFilter <> '' then
             if not DateMatchesFilter(EventDate, EventDateFilter) then
+                exit(false);
+
+        // Week No. filter
+        if WeekNoFilter <> 0 then
+            if WeekNo <> WeekNoFilter then
                 exit(false);
 
         // Resource Code filter

@@ -2293,6 +2293,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Tipo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control TipoFilter - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 625696775 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Filtrar por número de semana.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control WeekNoFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 625696775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control WeekNoFilter - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2494211124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the business line.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica la línea de negocio."</note>
@@ -2354,14 +2364,24 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2155838363 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the event time.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la hora del evento."</note>
+          <source>Haga clic aquí para editar la hora. Introduzca formato HH:MM.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Time - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2155838363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Event Time</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Hora"</note>
+          <source>Hora (Editar)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Time - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 46939857 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora del evento sin segundos (formato HH:MM).</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Time Formatted - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1623548903 - Control 46939857 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hora</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control Event Time Formatted - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3917084599 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the day of week.</source>
@@ -2384,13 +2404,13 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Month - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2331571337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the week number.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de semana."</note>
+          <source>Especifica el número de semana.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Week No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 2331571337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Week No.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº Semana"</note>
+          <source>Nº Semana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment - Control JMC Week No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1623548903 - Control 3692599133 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">

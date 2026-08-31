@@ -76,6 +76,8 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Recursos Evento API" = X,
         page "JMC Asignacion Recursos API" = X,
         page "JMC Resource Assignment" = X,
+        page "JMC Res. Assignment Industry" = X,
+        page "JMC Res. Assignment Catering" = X,
         page "JMC Tipo" = X,
 
 

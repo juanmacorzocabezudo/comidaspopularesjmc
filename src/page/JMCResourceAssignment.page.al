@@ -6,12 +6,12 @@ page 53131 "JMC Resource Assignment"
     SourceTable = "JMC Resource Assignment";
     SourceTableTemporary = true;
     Caption = 'Resource Assignment', Comment = 'ESP="Asignación de Recursos"';
-    Editable = true;
-    InsertAllowed = true;
-    DeleteAllowed = true;
-    ModifyAllowed = true;
-    DelayedInsert = true;
-    AutoSplitKey = true;
+    Editable = false;
+    InsertAllowed = false;
+    DeleteAllowed = false;
+    ModifyAllowed = false;
+    DelayedInsert = false;
+    AutoSplitKey = false;
 
     layout
     {
@@ -25,65 +25,6 @@ page 53131 "JMC Resource Assignment"
                     Caption = 'Business Line', Comment = 'ESP="Línea de Negocio"';
                     ApplicationArea = All;
                     ToolTip = 'Filter by business line.', Comment = 'ESP="Filtrar por línea de negocio."';
-
-                    trigger OnValidate()
-                    begin
-                        LoadData();
-                    end;
-                }
-                field(EventDateFilter; EventDateFilter)
-                {
-                    Caption = 'Event Date', Comment = 'ESP="Fecha"';
-                    ApplicationArea = All;
-                    ToolTip = 'Filter by event date. Use ranges like 1008..1708 or single dates.', Comment = 'ESP="Filtrar por fecha del evento. Use rangos como 1008..1708 o fechas individuales."';
-
-                    trigger OnValidate()
-                    begin
-                        LoadData();
-                    end;
-                }
-                field(ResourceCodeFilter; ResourceCodeFilter)
-                {
-                    Caption = 'Resource Code', Comment = 'ESP="Código Recurso"';
-                    ApplicationArea = All;
-                    ToolTip = 'Filter by resource code.', Comment = 'ESP="Filtrar por código de recurso."';
-                    TableRelation = Resource;
-
-                    trigger OnValidate()
-                    begin
-                        LoadData();
-                    end;
-                }
-                field(TaskPerformedFilter; TaskPerformedFilter)
-                {
-                    Caption = 'Task Performed', Comment = 'ESP="Tarea Realizada"';
-                    ApplicationArea = All;
-                    ToolTip = 'Filter by task performed.', Comment = 'ESP="Filtrar por tarea realizada."';
-                    TableRelation = "Work Type";
-
-                    trigger OnValidate()
-                    begin
-                        LoadData();
-                    end;
-                }
-                field(TipoFilter; TipoFilter)
-                {
-                    Caption = 'Tipo', Comment = 'ESP="Tipo"';
-                    ApplicationArea = All;
-                    ToolTip = 'Filter by tipo.', Comment = 'ESP="Filtrar por tipo."';
-                    TableRelation = Tipo;
-
-                    trigger OnValidate()
-                    begin
-                        LoadData();
-                    end;
-                }
-                field(WeekNoFilter; WeekNoFilter)
-                {
-                    Caption = 'Nº Semana';
-                    ApplicationArea = All;
-                    ToolTip = 'Filtrar por número de semana.';
-                    BlankZero = true;
 
                     trigger OnValidate()
                     begin
@@ -136,17 +77,9 @@ page 53131 "JMC Resource Assignment"
                 {
                     Caption = 'Hora';
                     ApplicationArea = All;
-                    ToolTip = 'Hora del evento sin segundos (formato HH:MM).';
-                    Visible = Rec."Source Table" = Rec."Source Table"::Catering;
+                    ToolTip = 'Hora del evento.';
+                    Visible = true;
                     Editable = false;
-                }
-                field("Event Time"; Rec."Event Time")
-                {
-                    Caption = 'Hora (Editar)';
-                    ApplicationArea = All;
-                    ToolTip = 'Haga clic aquí para editar la hora. Introduzca formato HH:MM.';
-                    Visible = false;
-                    Editable = true;
                 }
                 field("Resource Code"; Rec."Resource Code")
                 {
@@ -272,11 +205,6 @@ page 53131 "JMC Resource Assignment"
 
     var
         BusinessLineFilter: Enum "JMC Business Line Filter";
-        EventDateFilter: Text[250];
-        ResourceCodeFilter: Code[20];
-        TaskPerformedFilter: Code[10];
-        TipoFilter: Code[100];
-        WeekNoFilter: Integer;
         EntryNoCounter: Integer;
         CanViewFinancialFields: Boolean;
         TipoStyle: Text;
@@ -599,7 +527,7 @@ page 53131 "JMC Resource Assignment"
             until NewAssignment.Next() = 0;
 
         // Sort by Event Date descending (most recent first)
-        Rec.SetCurrentKey("Event Date", "Event Time");
+        Rec.SetCurrentKey("Event Date");
         Rec.Ascending(false);
 
         if Rec.FindFirst() then;
@@ -619,49 +547,7 @@ page 53131 "JMC Resource Assignment"
                 ; // Include both, no filter
         end;
 
-        // Event Date range filter - support filter expressions
-        if EventDateFilter <> '' then
-            if not DateMatchesFilter(EventDate, EventDateFilter) then
-                exit(false);
-
-        // Week No. filter
-        if WeekNoFilter <> 0 then
-            if WeekNo <> WeekNoFilter then
-                exit(false);
-
-        // Resource Code filter
-        if ResourceCodeFilter <> '' then
-            if ResourceCode <> ResourceCodeFilter then
-                exit(false);
-
-        // Task Performed filter
-        if TaskPerformedFilter <> '' then
-            if TaskPerformed <> TaskPerformedFilter then
-                exit(false);
-
-        // Tipo filter
-        if TipoFilter <> '' then
-            if Tipo <> TipoFilter then
-                exit(false);
-
         exit(true);
-    end;
-
-    local procedure DateMatchesFilter(DateToCheck: Date; FilterExpression: Text): Boolean
-    var
-        TempDate: Record Date temporary;
-    begin
-        if FilterExpression = '' then
-            exit(true);
-
-        TempDate.Init();
-        TempDate."Period Start" := DateToCheck;
-        TempDate.Insert();
-
-        TempDate.Reset();
-        TempDate.SetFilter("Period Start", FilterExpression);
-
-        exit(TempDate.FindFirst());
     end;
 
     local procedure SetTipoStyle()

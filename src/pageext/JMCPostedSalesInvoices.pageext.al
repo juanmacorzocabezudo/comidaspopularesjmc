@@ -36,41 +36,15 @@ pageextension 53127 "JMC Posted Sales Invoices" extends "Posted Sales Invoices"
                 trigger OnAction()
                 var
                     SalesInvoiceHeader: Record "Sales Invoice Header";
-                    ReportSelections: Record "Report Selections";
-                    SavedReportID: Integer;
-                    SavedSequence: Code[10];
+                    Customer: Record Customer;
+                    JMCEmailReportMgt: Codeunit "JMC Email Report Mgt";
+                    RecipientEmail: Text[80];
                 begin
                     CurrPage.SetSelectionFilter(SalesInvoiceHeader);
+                    if Customer.Get(Rec."Sell-to Customer No.") then
+                        RecipientEmail := Customer."E-Mail";
 
-                    // Check if Industry report should be used and modify the report
-                    ReportSelections.Reset();
-                    ReportSelections.SetRange(Usage, ReportSelections.Usage::"S.Invoice");
-                    ReportSelections.SetRange("JMC Use Industry Report", true);
-                    if ReportSelections.FindFirst() then begin
-                        // Save current values
-                        SavedReportID := ReportSelections."Report ID";
-                        SavedSequence := ReportSelections.Sequence;
-
-                        // Change to Industry report
-                        ReportSelections."Report ID" := Report::"Sales Invoice Industry Report";
-                        ReportSelections.Modify();
-                        Commit();
-                    end;
-
-                    // Use standard email method
-                    SalesInvoiceHeader.EmailRecords(true);
-
-                    // Restore original values
-                    if SavedReportID <> 0 then begin
-                        ReportSelections.Reset();
-                        ReportSelections.SetRange(Usage, ReportSelections.Usage::"S.Invoice");
-                        ReportSelections.SetRange("Report ID", Report::"Sales Invoice Industry Report");
-                        if ReportSelections.FindFirst() then begin
-                            ReportSelections."Report ID" := SavedReportID;
-                            ReportSelections.Modify();
-                            Commit();
-                        end;
-                    end;
+                    JMCEmailReportMgt.SendIndustryInvoice(SalesInvoiceHeader, Rec."No.", RecipientEmail);
                 end;
             }
         }

@@ -1624,7 +1624,7 @@ IVA</Value>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Format(First(Fields!SubtotalAmount.Value, "DataSet_Result"), "#,0.00")</Value>
+                                      <Value>=Format(Last(Fields!SubtotalAmount.Value, "DataSet_Result"), "#,0.00")</Value>
                                       <Style>
                                         <FontFamily>Arial</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1690,7 +1690,7 @@ IVA</Value>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Format(First(Fields!TotalVATAmount.Value, "DataSet_Result"), "#,0.00")</Value>
+                                      <Value>=Format(Last(Fields!TotalVATAmount.Value, "DataSet_Result"), "#,0.00")</Value>
                                       <Style>
                                         <FontFamily>Arial</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1723,7 +1723,7 @@ IVA</Value>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Format(First(Fields!SubtotalAmount.Value, "DataSet_Result"), "#,0.00")</Value>
+                                      <Value>=Format(Last(Fields!SubtotalAmount.Value, "DataSet_Result"), "#,0.00")</Value>
                                       <Style>
                                         <FontFamily>Arial</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -1819,7 +1819,7 @@ IVA</Value>
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>=Format(First(Fields!TotalAmount.Value, "DataSet_Result"), "#,0.00") &amp; " €"</Value>
+                            <Value>=Format(Last(Fields!TotalAmount.Value, "DataSet_Result"), "#,0.00") &amp; " €"</Value>
                             <Style>
                               <FontFamily>Arial</FontFamily>
                               <FontSize>10pt</FontSize>

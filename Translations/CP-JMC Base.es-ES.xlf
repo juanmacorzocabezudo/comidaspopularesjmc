@@ -4305,6 +4305,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Last Direct Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 398337721 - Action 3084949263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
+          <source>Event Details</source>
+          <target>Detalles evento</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Detalles evento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Action JMC Detalles evento - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3295873112 - Action 466347597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2420212404">
           <source>Send the posted sales invoice by email using the Industry report format.</source>
           <target>Enviar la factura de venta registrada por correo electrónico usando el formato de informe Industria.</target>

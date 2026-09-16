@@ -698,6 +698,64 @@ Fields!SelltoEMail_SalesInvoiceHeader.Value</Value>
                   <VerticalAlign>Middle</VerticalAlign>
                 </Style>
               </Textbox>
+              <!-- Nº Documento Externo -->
+              <Textbox Name="ExternalDocumentNoLabel">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Nº Documento Externo:</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>7pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1cm</Top>
+                <Left>9.8cm</Left>
+                <Width>3cm</Width>
+                <Height>0.5cm</Height>
+                <ZIndex>10</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
+              <Textbox Name="ExternalDocumentNoValue">
+                <CanGrow>false</CanGrow>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!ExternalDocumentNo_SalesInvoiceHeader.Value, "DataSet_Result")</Value>
+                        <Style>
+                          <FontFamily>Arial</FontFamily>
+                          <FontSize>8pt</FontSize>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Left</TextAlign>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1cm</Top>
+                <Left>12.9cm</Left>
+                <Width>6.7cm</Width>
+                <Height>0.5cm</Height>
+                <ZIndex>11</ZIndex>
+                <Style>
+                  <VerticalAlign>Middle</VerticalAlign>
+                </Style>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>8.3cm</Top>
@@ -1314,7 +1372,7 @@ Medida</Value>
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>10cm</Top>
+            <Top>10.3cm</Top>
             <Left>0.2cm</Left>
             <Height>1.1cm</Height>
             <Width>19.6cm</Width>

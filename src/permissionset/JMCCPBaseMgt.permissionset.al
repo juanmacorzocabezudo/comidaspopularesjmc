@@ -33,6 +33,8 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata JMCAlxControlVenta = RIMD,
         tabledata "JMC Resource Assignment" = RIMD,
         tabledata "Tipo" = RIMD,
+        tabledata "JMC Supplier Incident" = RIMD,
+        tabledata "Document Attachment" = RIMD,
 
         // Páginas de compras base
         page "Purchase Order" = X,
@@ -79,6 +81,11 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Res. Assignment Industry" = X,
         page "JMC Res. Assignment Catering" = X,
         page "JMC Tipo" = X,
+        page "JMC Supplier Incident List" = X,
+        page "JMC Supplier Incident Card" = X,
+        page "JMC Supplier Incident Lines" = X,
+        page "JMC Assembly Incident Lines" = X,
+        page "JMC Vendor Incident FactBox" = X,
 
 
         // Reports JMC
@@ -87,10 +94,12 @@ permissionset 53100 "JMC CP BASE MGT"
         report "JMC Activate Price List Lines" = X,
         report "JMC Delete Empty Price Lines" = X,
         report "Sales Invoice Industry Report" = X,
+        report "JMC Supplier Incident Report" = X,
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,
         codeunit "JMC Oper. Rec. Jnl. Mgt" = X,
+        codeunit "JMC Supplier Incident Mgt" = X,
 
         // Codeunits de Business Central para registro de compras
         codeunit "Purch.-Post" = X,

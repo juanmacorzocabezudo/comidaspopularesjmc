@@ -837,6 +837,167 @@
           <note from="Developer" annotates="general" priority="2">ESP="€ SIN IVA"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field € SIN IVA - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 42651254 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia de proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 166752280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Communication Date</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha comunicación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Communication Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 47114017 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Corrective Measures</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Medidas correctivas"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Corrective Measures - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 145322349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Created By</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Usuario creador"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Created By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3135083588 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Creation DateTime</source>
+          <target>[NAB: SUGGESTION]Fecha/hora creacion</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha creación"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Creation DateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 1085954513 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Memo Registered</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Abono registrado"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Credit Memo Registered - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 272136696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>[NAB: SUGGESTION]Fecha</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 1648954175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detected By</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Detectado por"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Detected By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3251257916 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incident Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción incidencia"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Incident Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 580039637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 92408590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 778422604 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lot No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Lote"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Lot No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 2927900134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NC No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="NC asociada"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL NC No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 98989433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target>[NAB: SUGGESTION]Nº</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 1721956328 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº serie"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 2531786329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recurring Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia recurrente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Recurring Incident - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3675470695 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Document No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento origen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Source Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3335045808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Line No.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea origen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Source Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 1463278935 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Document Type</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo documento origen"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Source Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 637654840 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Communication</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Comunicación con proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Supplier Communication - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3838568881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Response</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Respuesta proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Supplier Response - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 2182257453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Name</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Vendor Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 42651254 - Field 3455907501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table RVL Supplier Incident - Field RVL Vendor No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 2883740582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo</source>
           <target>Tipo</target>
@@ -920,6 +1081,27 @@
           <target>Se han registrado %1 linea(s) en registros operativos.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3203008662 - NamedType 3446523928" size-unit="char" translate="yes" xml:space="preserve">
+          <source>RVLINC</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="RVLINC"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RVL Supplier Incident Mgt. - NamedType DefaultNoSeriesCode</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3203008662 - NamedType 224625068" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier incident No. %1</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia proveedor Nº %1"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RVL Supplier Incident Mgt. - NamedType IncidentSubjectLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3203008662 - NamedType 2857496992" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The document does not contain item lines.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El documento no contiene líneas de producto."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit RVL Supplier Incident Mgt. - NamedType NoItemLinesErr</note>
         </trans-unit>
         <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Resource Assignment</source>
@@ -3639,6 +3821,76 @@
           <note from="Developer" annotates="general" priority="2">ESP="Control Ventas Abonos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMCAlxControlVentasAbonos - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3770026271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Component Line</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccionar línea de componente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Assembly Incident Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia de proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Control 1483275053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closing</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cierre"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Control Closing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Control 318613646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Details</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Detalles"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Control Details - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target>[NAB: SUGGESTION]General</target>
+          <note from="Developer" annotates="general" priority="2">ESP="General"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Control 1225782422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachments</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Documentos adjuntos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Control Attachments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4290531890 - Action 4229978642 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print and Send</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprimir y enviar"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Card - Action RVL Print and Send - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4069387185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Item Line</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccionar línea de producto"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4163670324 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incidents</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencias de proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Supplier Incident List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2541246801 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incidents</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencias de proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page RVL Vendor Incident FactBox - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3201346265 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Activate Price List Lines</source>
           <target>Activar líneas de lista de precios</target>
@@ -3866,6 +4118,13 @@
           <target>Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4</target>
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado:\Actualizados: %1\Omitidos (ya tienen peso): %2\Sin peso en descripción: %3\Formato no encontrado: %4"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Weights - NamedType ResultMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2582107392 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident Report</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe de Incidencia de Proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report RVL Supplier Incident Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 507838215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Invoice Industry Report</source>
@@ -4707,6 +4966,48 @@
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 50794844 - Action 1001313782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1662713252">
+          <source>Create Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear incidencia"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Assembly Order - Action RVL Create Incident - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 50794844 - Action 1399397196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1662713252">
+          <source>View Incidents</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Assembly Order - Action RVL View Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2497901096 - Control 2703677986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4042331808">
+          <source>Related Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia relacionada"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Purchase Credit Memo - Control RVL Related Incident No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Action 1001313782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Create Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear incidencia"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Purchase Order - Action RVL Create Incident - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Action 1399397196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>View Incidents</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Purchase Order - Action RVL View Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1534474356 - Control 1696884643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>Supplier Incidents</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencias de proveedor"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension RVL Vendor Card - Control RVL Supplier Incidents - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 1768073076 - Field 2020166536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 788205136">
           <source>Business Line</source>
           <target>Línea de Negocio</target>
@@ -5115,6 +5416,20 @@
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Sales Line - Field JMC Return - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 741081079 - Field 2703677986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
+          <source>Related Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia relacionada"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RVL Purch. Cr. Memo Hdr - Field RVL Related Incident No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2817669124 - Field 2703677986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2072992664">
+          <source>Related Incident</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia relacionada"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension RVL Purchase Header - Field RVL Related Incident No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 2020166536 - EnumValue 1398195907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Catering</source>
           <target>Catering</target>
@@ -5223,6 +5538,62 @@
           <target>Pasivo no corriente</target>
           <note from="Developer" annotates="general" priority="2">ESP="Pasivo no corriente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue Non-Current Liability - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cliente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 2999086153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factory Operators</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Operarios fábrica"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Factory Operators - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Otro"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Production - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 1483341903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Quality - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3198121581 - EnumValue 1484878399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warehouse</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Almacén"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Detected By - EnumValue Warehouse - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 544639861 - EnumValue 1662713252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assembly Order</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedido de ensamblado"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Source Type - EnumValue Assembly Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 544639861 - EnumValue 387971303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Order</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedido de compra"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum RVL Incident Source Type - EnumValue Purchase Order - Property Caption</note>
         </trans-unit>
         <trans-unit id="PermissionSet 1866728888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>JMC CP Base Management</source>

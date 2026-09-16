@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>00000000-0000-0000-0000-000000000001</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Title">
+            <Image Name="CompanyLogo"><Source>Database</Source><Value>=Fields!CompanyPicture.Value</Value><MIMEType>image/bmp</MIMEType><Sizing>Fit</Sizing><Top>0.05in</Top><Left>0.2in</Left><Height>0.45in</Height><Width>1.2in</Width></Image>
+            <Textbox Name="Title"><CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>INFORME DE INCIDENCIA A PROVEEDOR</Value>
+                    <Style>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.1in</Top>
+            <Left>0.1in</Left>
+            <Height>0.35in</Height>
+            <Width>7.9in</Width>
+          </Textbox>
+          <Textbox Name="General">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="Nº incidencia: " &amp; Fields!No_.Value &amp; vbCrLf &amp; "Fecha: " &amp; Format(Fields!Date_.Value, "dd/MM/yyyy") &amp; vbCrLf &amp; "Proveedor: " &amp; Fields!VendorNo.Value &amp; " - " &amp; Fields!VendorName.Value &amp; vbCrLf &amp; "Pedido origen: " &amp; Fields!SourceDocumentNo.Value &amp; vbCrLf &amp; "Producto: " &amp; Fields!ItemNo.Value &amp; " - " &amp; Fields!ItemDescription.Value &amp; vbCrLf &amp; "Lote: " &amp; Fields!LotNo.Value &amp; vbCrLf &amp; "Detectado por: " &amp; Fields!DetectedBy.Value &amp; vbCrLf &amp; "Incidencia recurrente: " &amp; IIF(Fields!RecurringIncident.Value, "Sí", "No") &amp; vbCrLf &amp; "NC asociada: " &amp; Fields!NCNo.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.6in</Top>
+            <Left>0.2in</Left>
+            <Height>1.6in</Height>
+            <Width>7.7in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.08in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="IncidentDescription">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="DESCRIPCIÓN DE LA INCIDENCIA" &amp; vbCrLf &amp; vbCrLf &amp; Fields!IncidentDescription.Value</Value>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.35in</Top>
+            <Left>0.2in</Left>
+            <Height>1.2in</Height>
+            <Width>7.7in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.08in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="Communication">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="COMUNICACIONES CON EL PROVEEDOR (" &amp; Format(Fields!CommunicationDate.Value, "dd/MM/yyyy") &amp; ")" &amp; vbCrLf &amp; vbCrLf &amp; Fields!SupplierCommunication.Value</Value>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.7in</Top>
+            <Left>0.2in</Left>
+            <Height>1.2in</Height>
+            <Width>7.7in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.08in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="Response">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="RESPUESTA DEL PROVEEDOR" &amp; vbCrLf &amp; vbCrLf &amp; Fields!SupplierResponse.Value</Value>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.05in</Top>
+            <Left>0.2in</Left>
+            <Height>1.2in</Height>
+            <Width>7.7in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.08in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="Corrective">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>="MEDIDAS CORRECTIVAS" &amp; vbCrLf &amp; vbCrLf &amp; Fields!CorrectiveMeasures.Value</Value>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.4in</Top>
+            <Left>0.2in</Left>
+            <Height>1.2in</Height>
+            <Width>7.7in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.08in</PaddingTop>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>8.0in</Height>
+      </Body>
+      <Width>8.27in</Width>
+      <Page>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.3in</LeftMargin>
+        <RightMargin>0.3in</RightMargin>
+        <TopMargin>0.3in</TopMargin>
+        <BottomMargin>0.3in</BottomMargin>
+        <PageFooter>
+          <Height>0.35in</Height>
+          <ReportItems>
+            <Textbox Name="Footer">
+              <CanGrow>true</CanGrow>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Abono registrado: " &amp; IIF(Fields!CreditMemoRegistered.Value, "Sí", "No") &amp; "    Usuario creador: " &amp; Fields!CreatedBy.Value &amp; "    Fecha emisión: " &amp; Format(Fields!CreationDateTime.Value, "dd/MM/yyyy HH:mm")</Value>
+                    </TextRun>
+                  </TextRuns>
+                </Paragraph>
+              </Paragraphs>
+              <Left>0.1in</Left>
+              <Height>0.25in</Height>
+              <Width>7.9in</Width>
+            </Textbox>
+          </ReportItems>
+        </PageFooter>
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Date_">
+          <DataField>Date_</DataField>
+        </Field>
+        <Field Name="VendorNo">
+          <DataField>VendorNo</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="SourceType">
+          <DataField>SourceType</DataField>
+        </Field>
+        <Field Name="SourceDocumentNo">
+          <DataField>SourceDocumentNo</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="ItemDescription">
+          <DataField>ItemDescription</DataField>
+        </Field>
+        <Field Name="LotNo">
+          <DataField>LotNo</DataField>
+        </Field>
+        <Field Name="DetectedBy">
+          <DataField>DetectedBy</DataField>
+        </Field>
+        <Field Name="RecurringIncident">
+          <DataField>RecurringIncident</DataField>
+        </Field>
+        <Field Name="NCNo">
+          <DataField>NCNo</DataField>
+        </Field>
+        <Field Name="IncidentDescription">
+          <DataField>IncidentDescription</DataField>
+        </Field>
+        <Field Name="SupplierCommunication">
+          <DataField>SupplierCommunication</DataField>
+        </Field>
+        <Field Name="CommunicationDate">
+          <DataField>CommunicationDate</DataField>
+        </Field>
+        <Field Name="SupplierResponse">
+          <DataField>SupplierResponse</DataField>
+        </Field>
+        <Field Name="CorrectiveMeasures">
+          <DataField>CorrectiveMeasures</DataField>
+        </Field>
+        <Field Name="CreditMemoRegistered">
+          <DataField>CreditMemoRegistered</DataField>
+        </Field>
+        <Field Name="CreatedBy">
+          <DataField>CreatedBy</DataField>
+        </Field>
+        <Field Name="CreationDateTime">
+          <DataField>CreationDateTime</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyPicture">
+          <DataField>CompanyPicture</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

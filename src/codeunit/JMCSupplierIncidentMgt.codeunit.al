@@ -12,6 +12,7 @@ codeunit 53303 "JMC Supplier Incident Mgt"
             Error(NoItemLinesErr);
 
         SelectionPage.SetTableView(PurchaseLine);
+        SelectionPage.LookupMode(true);
         if SelectionPage.RunModal() = Action::LookupOK then begin
             SelectionPage.GetRecord(PurchaseLine);
             CreateFromPurchaseLine(PurchaseHeader, PurchaseLine);
@@ -30,6 +31,7 @@ codeunit 53303 "JMC Supplier Incident Mgt"
             Error(NoItemLinesErr);
 
         SelectionPage.SetTableView(AssemblyLine);
+        SelectionPage.LookupMode(true);
         if SelectionPage.RunModal() = Action::LookupOK then begin
             SelectionPage.GetRecord(AssemblyLine);
             CreateFromAssemblyLine(AssemblyHeader, AssemblyLine);
@@ -41,7 +43,7 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         Incident: Record "JMC Supplier Incident";
     begin
         Incident.Init();
-        Incident."JMC No. Series" := DefaultNoSeriesCode;
+        Incident."JMC No. Series" := GetIncidentNoSeries();
         Incident."JMC Vendor No." := PurchaseHeader."Buy-from Vendor No.";
         Incident."JMC Source Type" := Incident."JMC Source Type"::"Purchase Order";
         Incident."JMC Source Document No." := PurchaseHeader."No.";
@@ -58,7 +60,7 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         Item: Record Item;
     begin
         Incident.Init();
-        Incident."JMC No. Series" := DefaultNoSeriesCode;
+        Incident."JMC No. Series" := GetIncidentNoSeries();
         Incident."JMC Source Type" := Incident."JMC Source Type"::"Assembly Order";
         Incident."JMC Source Document No." := AssemblyHeader."No.";
         Incident."JMC Source Line No." := AssemblyLine."Line No.";
@@ -70,30 +72,15 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         Page.Run(Page::"JMC Supplier Incident Card", Incident);
     end;
 
-    procedure PrintAndSend(var Incident: Record "JMC Supplier Incident")
+    local procedure GetIncidentNoSeries(): Code[20]
     var
-        Vendor: Record Vendor;
-        EmailMessage: Codeunit "Email Message";
-        Email: Codeunit Email;
-        TempBlob: Codeunit "Temp Blob";
-        ReportOutStream: OutStream;
-        ReportInStream: InStream;
-        RecordRef: RecordRef;
-        RecipientEmail: Text[250];
+        PurchasesPayablesSetup: Record "Purchases & Payables Setup";
     begin
-        if Vendor.Get(Incident."JMC Vendor No.") then
-            RecipientEmail := Vendor."E-Mail";
-        EmailMessage.Create(RecipientEmail, StrSubstNo(IncidentSubjectLbl, Incident."JMC No."), '', false);
-        RecordRef.GetTable(Incident);
-        TempBlob.CreateOutStream(ReportOutStream);
-        Report.SaveAs(Report::"JMC Supplier Incident Report", '', ReportFormat::Pdf, ReportOutStream, RecordRef);
-        TempBlob.CreateInStream(ReportInStream);
-        EmailMessage.AddAttachment(Incident."JMC No." + '.pdf', 'application/pdf', ReportInStream);
-        Email.OpenInEditor(EmailMessage);
+        PurchasesPayablesSetup.Get();
+        PurchasesPayablesSetup.TestField("JMC Supplier Incident Nos.");
+        exit(PurchasesPayablesSetup."JMC Supplier Incident Nos.");
     end;
 
     var
         NoItemLinesErr: Label 'The document does not contain item lines.', Comment = 'ESP="El documento no contiene líneas de producto."';
-        DefaultNoSeriesCode: Label 'JMCINC', Comment = 'ESP="JMCINC"';
-        IncidentSubjectLbl: Label 'Supplier incident No. %1', Comment = 'ESP="Incidencia proveedor Nº %1"';
 }

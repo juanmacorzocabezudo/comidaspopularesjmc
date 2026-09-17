@@ -2,7 +2,7 @@ report 53316 "JMC Supplier Incident Report"
 {
     Caption = 'Supplier Incident Report', Comment = 'ESP="Informe de Incidencia de Proveedor"';
     DefaultLayout = RDLC;
-    RDLCLayout = './src/report/layout/JMCSupplierIncidentReport.rdlc';
+    RDLCLayout = './src/report/layout/JMCSupplierIncidentListReport.rdlc';
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     PreviewMode = PrintLayout;

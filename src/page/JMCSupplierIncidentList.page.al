@@ -2,7 +2,7 @@ page 53306 "JMC Supplier Incident List"
 {
     PageType = List;
     SourceTable = "JMC Supplier Incident";
-    Caption = 'Supplier Incidents', Comment = 'ESP="Incidencias de proveedor"';
+    Caption = 'Incident List', Comment = 'ESP="Lista incidencias"';
     ApplicationArea = All;
     UsageCategory = Lists;
     CardPageId = "JMC Supplier Incident Card";
@@ -23,5 +23,42 @@ page 53306 "JMC Supplier Incident List"
                 field("Credit Memo Registered"; Rec."JMC Credit Memo Registered") { ApplicationArea = All; }
             }
         }
+        area(FactBoxes)
+        {
+            part(Attachments; "JMC Incident Attachments")
+            {
+                ApplicationArea = All;
+                Caption = 'Attachments', Comment = 'ESP="Documentos adjuntos"';
+            }
+        }
     }
+
+    actions
+    {
+        area(Processing)
+        {
+            action("JMC Print Incidents")
+            {
+                ApplicationArea = All;
+                Caption = 'Print Incidents', Comment = 'ESP="Imprimir incidencias"';
+                Image = Print;
+                Promoted = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                var
+                    Incident: Record "JMC Supplier Incident";
+                begin
+                    Incident.Copy(Rec);
+                    Report.Run(Report::"JMC Supplier Incident Report", true, false, Incident);
+                end;
+            }
+        }
+    }
+
+    trigger OnAfterGetCurrRecord()
+    begin
+        CurrPage.Attachments.Page.SetIncident(Rec);
+    end;
+
 }

@@ -40,41 +40,24 @@ page 53307 "JMC Supplier Incident Card"
             group(Closing)
             {
                 Caption = 'Closing', Comment = 'ESP="Cierre"';
-                field("Credit Memo Registered"; Rec."JMC Credit Memo Registered") { ApplicationArea = All; }
+                field("Credit Memo Registered"; Rec."JMC Credit Memo Registered") { ApplicationArea = All; Editable = false; }
                 field("Created By"; Rec."JMC Created By") { ApplicationArea = All; }
                 field("Creation DateTime"; Rec."JMC Creation DateTime") { ApplicationArea = All; }
             }
         }
         area(FactBoxes)
         {
-            part(Attachments; "Document Attachment Details")
+            part(Attachments; "JMC Incident Attachments")
             {
                 ApplicationArea = All;
                 Caption = 'Attachments', Comment = 'ESP="Documentos adjuntos"';
-                SubPageLink = "Table ID" = const(Database::"JMC Supplier Incident"), "No." = field("JMC No.");
             }
         }
     }
 
-    actions
-    {
-        area(Processing)
-        {
-            action("JMC Print and Send")
-            {
-                ApplicationArea = All;
-                Caption = 'Print and Send', Comment = 'ESP="Imprimir y enviar"';
-                Image = Email;
-                Promoted = true;
-                PromotedCategory = Process;
+    trigger OnAfterGetCurrRecord()
+    begin
+        CurrPage.Attachments.Page.SetIncident(Rec);
+    end;
 
-                trigger OnAction()
-                var
-                    IncidentMgt: Codeunit "JMC Supplier Incident Mgt";
-                begin
-                    IncidentMgt.PrintAndSend(Rec);
-                end;
-            }
-        }
-    }
 }

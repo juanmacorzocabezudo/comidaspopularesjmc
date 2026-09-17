@@ -1,5 +1,20 @@
 codeunit 53100 "JMC Events"
 {
+    [EventSubscriber(ObjectType::Table, Database::"Document Attachment", 'OnAfterInitFieldsFromRecRef', '', false, false)]
+    local procedure OnAfterInitIncidentAttachmentFields(var DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef)
+    var
+        Incident: Record "JMC Supplier Incident";
+    begin
+        if RecRef.Number <> Database::"JMC Supplier Incident" then
+            exit;
+
+        RecRef.SetTable(Incident);
+        if Incident."JMC No." = '' then
+            exit;
+        DocumentAttachment."Table ID" := Database::"JMC Supplier Incident";
+        DocumentAttachment."No." := Incident."JMC No.";
+    end;
+
     [EventSubscriber(ObjectType::Table, Database::"G/L Account Category", 'OnGetBalanceOnAfterGetTotaling', '', false, false)]
     local procedure OnGetBalanceOnAfterGetTotaling(var GLAccountCategory: Record "G/L Account Category"; TotalingStr: Text; var Balance: Decimal; var IsHandled: Boolean)
     var
@@ -468,6 +483,23 @@ codeunit 53100 "JMC Events"
         // Solo actualizar si hay una factura registrada
         if PurchInvHeader."No." <> '' then
             UpdateLastDirectUnitCost(PurchInvHeader."No.");
+
+        if (not PreviewMode) and (PurchHeader."Document Type" = PurchHeader."Document Type"::"Credit Memo") and
+           (PurchCrMemoHdr."No." <> '') then
+            MarkRelatedIncidentAsCredited(PurchHeader."JMC Related Incident No.");
+    end;
+
+    local procedure MarkRelatedIncidentAsCredited(IncidentNo: Code[20])
+    var
+        Incident: Record "JMC Supplier Incident";
+    begin
+        if (IncidentNo = '') or (not Incident.Get(IncidentNo)) then
+            exit;
+
+        if not Incident."JMC Credit Memo Registered" then begin
+            Incident."JMC Credit Memo Registered" := true;
+            Incident.Modify(true);
+        end;
     end;
 
     local procedure UpdateLastDirectUnitCost(DocumentNo: Code[20])

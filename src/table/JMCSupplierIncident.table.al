@@ -102,6 +102,7 @@ table 53302 "JMC Supplier Incident"
         field(19; "JMC Credit Memo Registered"; Boolean)
         {
             Caption = 'Credit Memo Registered', Comment = 'ESP="Abono registrado"';
+            Editable = false;
             DataClassification = CustomerContent;
         }
         field(20; "JMC Created By"; Code[50])

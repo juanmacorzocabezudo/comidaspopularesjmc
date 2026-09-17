@@ -14,9 +14,18 @@
     <ReportSection>
       <Body>
         <ReportItems>
+          <Image Name="CompanyLogo">
+            <Source>Database</Source>
+            <Value>=Fields!CompanyPicture.Value</Value>
+            <MIMEType>image/bmp</MIMEType>
+            <Sizing>Fit</Sizing>
+            <Top>0.05in</Top>
+            <Left>0.2in</Left>
+            <Height>0.45in</Height>
+            <Width>1.2in</Width>
+          </Image>
           <Textbox Name="Title">
-            <Image Name="CompanyLogo"><Source>Database</Source><Value>=Fields!CompanyPicture.Value</Value><MIMEType>image/bmp</MIMEType><Sizing>Fit</Sizing><Top>0.05in</Top><Left>0.2in</Left><Height>0.45in</Height><Width>1.2in</Width></Image>
-            <Textbox Name="Title"><CanGrow>true</CanGrow>
+            <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>

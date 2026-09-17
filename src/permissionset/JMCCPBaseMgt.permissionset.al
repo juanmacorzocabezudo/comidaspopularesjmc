@@ -86,6 +86,7 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Supplier Incident Lines" = X,
         page "JMC Assembly Incident Lines" = X,
         page "JMC Vendor Incident FactBox" = X,
+        page "JMC Incident Attachments" = X,
 
 
         // Reports JMC

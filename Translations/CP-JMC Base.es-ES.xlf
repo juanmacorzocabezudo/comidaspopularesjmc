@@ -5001,11 +5001,23 @@
           <note from="Developer" annotates="general" priority="2">ESP="Devolución"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Sales Cr Memo Subform - Control JMC Return - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1264739008 - Action 70599500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
+          <source>View Incidents</source>
+          <target>Ver incidencias</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Vendor Card - Action JMC View Supplier Incidents - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1264739008 - Control 4102879311 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4055858012">
           <source>Supplier Incidents</source>
           <target>Incidencias de proveedor</target>
           <note from="Developer" annotates="general" priority="2">ESP="Incidencias de proveedor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Vendor Card - Control JMC Supplier Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1649899462 - Action 70599500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4194195770">
+          <source>View Incidents</source>
+          <target>Ver incidencias</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Vendor List - Action JMC View Supplier Incidents - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1768073076 - Field 2020166536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 788205136">
           <source>Business Line</source>

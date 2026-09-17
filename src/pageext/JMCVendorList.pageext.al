@@ -1,18 +1,5 @@
-pageextension 53315 "JMC Vendor Card" extends "Vendor Card"
+pageextension 53300 "JMC Vendor List" extends "Vendor List"
 {
-    layout
-    {
-        addlast(FactBoxes)
-        {
-            part("JMC Supplier Incidents"; "JMC Vendor Incident FactBox")
-            {
-                ApplicationArea = All;
-                Caption = 'Supplier Incidents', Comment = 'ESP="Incidencias de proveedor"';
-                SubPageLink = "JMC Vendor No." = field("No.");
-            }
-        }
-    }
-
     actions
     {
         addafter("Ven&dor")

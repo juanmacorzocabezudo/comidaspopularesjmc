@@ -1453,6 +1453,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control importe - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control imprimeCapitulo - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3526754988 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nº Línea"</note>

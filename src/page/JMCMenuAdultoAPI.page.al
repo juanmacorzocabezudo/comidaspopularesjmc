@@ -68,6 +68,10 @@ page 53125 "JMC Menu Adulto API"
                 {
                     Caption = 'Total Cost', Comment = 'ESP="Coste Total"';
                 }
+                field(imprimeCapitulo; Rec.ImprCapitulo)
+                {
+                    Caption = 'Print Chapter', Comment = 'ESP="Capítulo"';
+                }
                 field(fechaHoraUltimaModificacion; Rec.SystemModifiedAt)
                 {
                     Caption = 'Last Modified Date Time', Comment = 'ESP="Fecha/hora última modificación"';

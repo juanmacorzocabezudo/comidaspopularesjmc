@@ -273,6 +273,956 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nombre de usuario"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cronus Jnl. Line - Field JMC Responsible User Name - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3546027412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Account Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 2130164383 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authority that orders the garnishment.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el organismo que ordena el embargo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC Authority - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 2130164383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Authority</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC Authority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 1544131730 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the G/L account.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la cuenta contable."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC G/L Account Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 1544131730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC G/L Account Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 600621242 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L account proposed for garnishments of this authority.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cuenta contable que se propone para los embargos de este organismo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC G/L Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3546027412 - Field 600621242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Garnishment Account Setup - Field JMC G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Column Mapping</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mapeo columnas nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 2601727625 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies an optional concept that receives the opposite amount, for columns that are not part of the net pay (for example, extra pay accrual and provision).</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica un concepto opcional que recibe el importe contrario, para columnas que no forman parte del líquido (por ejemplo, devengo y provisión de paga extra)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Balancing Concept Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 2601727625 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balancing Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto contrapartida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Balancing Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 4093578320 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the concept of the entry line generated from this column.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el concepto de la línea de asiento que genera esta columna."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Concept Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 4093578320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 1394182351 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the column of the payroll Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la columna del Excel de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Excel Column - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 1394182351 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Column</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Columna Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Excel Column - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 3251196798 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the column is imported for information only and does not generate entry lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica que la columna se importa solo como información y no genera líneas de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Informative - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 3251196798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Informative</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informativa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Informative - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 2860041377 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies how the Excel amount becomes the entry amount. Same as Excel: a positive value is posted as debit and a negative value as credit. Reverse: a positive value is posted as credit.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica cómo se convierte el importe del Excel en el importe del asiento. Igual que Excel: un valor positivo va al debe y uno negativo al haber. Invertido: un valor positivo va al haber."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Posting Sign - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 2860041377 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Sign</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Signo contable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Posting Sign - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 915873605 - Field 2860041377 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Same as Excel,Reverse</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Igual que Excel,Invertido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Column Mapping - Field JMC Posting Sign - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Concept Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración conceptos nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 4093578320 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payroll concept.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el concepto de la nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC Concept Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 4093578320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 1544131730 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the G/L account.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la cuenta contable."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC G/L Account Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 1544131730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC G/L Account Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 600621242 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L account proposed for this concept.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cuenta contable que se propone para este concepto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC G/L Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 600621242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Propuesta asiento nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2351658292 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the amount of the entry line. Positive amounts are debit and negative amounts are credit.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe de la línea de asiento. Los importes positivos son debe y los negativos haber."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2351658292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1374531105 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the line is the balancing line generated from the column mapping.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica que la línea es la contrapartida generada desde el mapeo de columnas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Balancing - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1374531105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balancing Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Línea contrapartida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Balancing - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 4093578320 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the concept of the entry line. When it changes, the G/L account and the description are proposed from the setup.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el concepto de la línea de asiento. Al cambiarlo, se proponen la cuenta y la descripción desde la configuración."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Concept Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 4093578320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2043522583 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the credit amount of the entry line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe al haber de la línea de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Credit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2043522583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Credit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1462416314 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the debit amount of the entry line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe al debe de la línea de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Debit Amount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1462416314 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe debe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Debit Amount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3371300118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the journal line.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción de la línea del diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1544131730 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the G/L account.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre de la cuenta contable."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC G/L Account Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 1544131730 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC G/L Account Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 600621242 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the G/L account of the entry line. The dimensions are the default dimensions of the account.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cuenta contable de la línea de asiento. Las dimensiones son las predeterminadas de la cuenta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC G/L Account No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 600621242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC G/L Account No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 4163207473 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the authority that orders the garnishment. The G/L account is proposed from the garnishment account setup.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el organismo que ordena el embargo. La cuenta se propone desde la configuración de cuentas por organismo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Garnishment Authority - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 4163207473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Authority</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Garnishment Authority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 637181841 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the file number or reference of the garnishment.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nº de expediente o referencia del embargo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Garnishment File No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 637181841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment File No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº expediente embargo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Garnishment File No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 640997805 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default value of global dimension 1 of the G/L account. It is for information only.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el valor predeterminado de la dimensión global 1 de la cuenta. Es solo informativo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Global Dimension 1 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 640997805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Dimension 1 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cód. dimensión global 1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Global Dimension 1 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2806852364 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the default value of global dimension 2 of the G/L account. It is for information only.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el valor predeterminado de la dimensión global 2 de la cuenta. Es solo informativo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Global Dimension 2 Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2806852364 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Dimension 2 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cód. dimensión global 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Global Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3868656372 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payroll line the entry line belongs to.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la nómina a la que pertenece la línea de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Import Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3868656372 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Import Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 715175290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payroll import the entry line belongs to.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la importación de nóminas a la que pertenece la línea de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Import No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 715175290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº importación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Import No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3055118999 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de línea."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 3055118999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2649991905 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Excel column the amount comes from. It is used to check that the manual split of a column adds up to the Excel amount.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la columna del Excel de la que viene el importe. Se usa para comprobar que el reparto manual de una columna suma el importe del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Source Column - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 844012748 - Field 2649991905 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Column</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Columna origen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Entry - Field JMC Source Column - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Method 179108612 - NamedType 66904766" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll import %1 cannot be changed because its status is %2.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La importación de nóminas %1 no se puede modificar porque su estado es %2."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Method TestEditable - NamedType jmcNotEditableErr</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 540029898 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first payment date found in the import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la primera fecha de cobro de la importación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Date From - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 540029898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date From</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha desde"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Date From - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 300651573 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last payment date found in the import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la última fecha de cobro de la importación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Date To - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 300651573 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date To</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha hasta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Date To - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3371300118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a description of the payroll import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica una descripción de la importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3588143154 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the company Social Security total of the TOTAL EMPRESA row of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total de SS empresa de la fila TOTAL EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Company SS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3588143154 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Total Company SS</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total SS empresa Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Company SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3842557301 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the gross total of the TOTAL EMPRESA row of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total bruto de la fila TOTAL EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Gross - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3842557301 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Total Gross</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total bruto Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Gross - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2168625530 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net pay total of the TOTAL EMPRESA row of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total líquido de la fila TOTAL EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Net Pay - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2168625530 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Total Net Pay</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total líquido Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Excel Total Net Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 1505709903 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the imported Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre del fichero Excel importado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC File Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 1505709903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>File Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre fichero"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC File Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 85126442 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first document number created in the journal.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el primer nº de documento creado en el diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC First Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 85126442 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>First Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Primer nº documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC First Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3647434820 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the Excel file was imported.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica cuándo se importó el fichero Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Import DateTime - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3647434820 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Date/Time</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha/hora importación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Import DateTime - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 795762765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the user who imported the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el usuario que importó el fichero Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Imported By - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 795762765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imported By</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Imported By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 423374226 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the journal batch where the lines were created.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la sección del diario donde se crearon las líneas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Journal Batch Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 423374226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Journal Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3562854294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the journal template where the lines were created.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el libro del diario donde se crearon las líneas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Journal Template Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3562854294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre libro diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Journal Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 4094381706 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last document number created in the journal.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el último nº de documento creado en el diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Last Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 4094381706 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Último nº documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Last Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2285189677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of the payroll import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de la importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2285189677 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3917668643 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of payroll lines with errors.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de nóminas con errores."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Errors - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3917668643 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Errors</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº errores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Errors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 4116308145 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of payroll lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Lines - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 4116308145 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Payrolls</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2928155191 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of payroll lines that must be validated again.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de nóminas que hay que volver a validar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Pending - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 2928155191 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Pending Validation</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº pendientes de validar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 620062149 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number of payroll lines with warnings.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de nóminas con avisos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Warnings - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 620062149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. of Warnings</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº avisos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC No. of Warnings - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3169442276 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the status of the payroll import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el estado de la importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3169442276 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 1373307771 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the company Social Security total of the payroll lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total de SS empresa de las nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Company SS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 1373307771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Company SS</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total SS empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Company SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 34063872 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the gross total of the payroll lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total bruto de las nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Gross - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 34063872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Gross</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total bruto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Gross - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3658601931 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net pay total of the payroll lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total líquido de las nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Net Pay - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3658601931 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Net Pay</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total líquido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Total Net Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3550444467 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies that the totals of the payroll lines do not match the TOTAL EMPRESA row of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica que los totales de las nóminas no coinciden con la fila TOTAL EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Totals Mismatch - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1934875989 - Field 3550444467 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Totals Mismatch</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Totales no coinciden"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Header - Field JMC Totals Mismatch - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Línea importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 4149438567 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ANTICIPOS amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe ANTICIPOS del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Advances - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 4149438567 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advances (ANTICIPOS)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Anticipos (ANTICIPOS)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Advances - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2579215083 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the PRIMAS amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe PRIMAS del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Bonus - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2579215083 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bonus (PRIMAS)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Primas (PRIMAS)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Bonus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3653333885 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the SS.EMPRESA amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe SS.EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Company SS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3653333885 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company SS (SS.EMPRESA)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="SS empresa (SS.EMPRESA)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Company SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3371300118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the description of the payroll entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción del asiento de la nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Description - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1537457478 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the DESCUENTOS amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe DESCUENTOS del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Discounts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1537457478 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Discounts (DESCUENTOS)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuentos (DESCUENTOS)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Discounts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 521954016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the document number created in the general journal.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nº de documento creado en el diario general."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Document No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 521954016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Document No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3960162978 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the SS.TRAB. amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe SS.TRAB. del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Employee SS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3960162978 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee SS (SS.TRAB.)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="SS trabajador (SS.TRAB.)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Employee SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2772210074 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the difference between debit and credit of the proposed entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la diferencia entre el debe y el haber de la propuesta de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Entry Balance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2772210074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Difference</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuadre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Entry Balance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3536173210 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the row of the Excel file the payroll was read from.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fila del Excel de la que se leyó la nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Excel Row No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3536173210 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel Row No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº fila Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Excel Row No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2532672202 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the PP EXTRA amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe PP EXTRA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Extra Pay - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2532672202 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Pay (PP EXTRA)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Paga extra (PP EXTRA)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Extra Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 144979543 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the employee code of the payroll provider. It is used to find the resource by its Gestoría ID.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código de trabajador de la asesoría. Se usa para buscar el recurso por su ID Gestoría."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Gestoría ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 144979543 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gestoría ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="ID Gestoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Gestoría ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 132474898 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the C.BRUTO amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe C.BRUTO del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Gross - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 132474898 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gross (C.BRUTO)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Bruto (C.BRUTO)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Gross - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 715175290 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payroll import the line belongs to.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la importación de nóminas a la que pertenece la línea."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Import No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 715175290 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº importación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Import No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1335695363 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the IRPF amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe IRPF del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC IRPF - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1335695363 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF</source>
+          <note from="Developer" annotates="general" priority="2">ESP="IRPF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1529793216 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the BASE IRPF amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe BASE IRPF del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC IRPF Base - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1529793216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Base (BASE IRPF)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Base IRPF (BASE IRPF)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC IRPF Base - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3055118999 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the line number.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el número de línea."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Line No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3055118999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2199715591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the seguro med amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe seguro med del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Medical Insurance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2199715591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medical Insurance (seguro med)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguro médico (seguro med)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Medical Insurance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2857640388 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the s.med irpf amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe s.med irpf del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Medical Insurance IRPF - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2857640388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medical Insurance IRPF (s.med irpf)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguro médico IRPF (s.med irpf)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Medical Insurance IRPF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3385139581 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the LIQUIDO amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe LIQUIDO del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Net Pay - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3385139581 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Pay (LIQUIDO)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Líquido (LIQUIDO)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Net Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 738853200 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the pay type of the Excel file, such as MENSUAL, ATRASOS or FINIQUITO.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de paga del Excel, como MENSUAL, ATRASOS o FINIQUITO."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Pay Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 738853200 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pay Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo paga"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Pay Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2637457939 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the RTOS ESPEC amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe RTOS ESPEC del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Payment in Kind - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2637457939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment in Kind (RTOS ESPEC)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Retrib. especie (RTOS ESPEC)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Payment in Kind - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3503862106 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the deduc rtos amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe deduc rtos del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Payment in Kind Deduction - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3503862106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment in Kind Deduction (deduc rtos)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Deducción retrib. especie (deduc rtos)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Payment in Kind Deduction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3344648716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the payment date. It is used as the posting date of the entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fecha de cobro. Se usa como fecha de registro del asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3344648716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha cobro"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2662219907 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the name of the resource.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre del recurso."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Resource Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2662219907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Resource Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 231317795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the resource related to the payroll.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el recurso relacionado con la nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Resource No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 231317795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Resource No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3177441868 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the RETENCION amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe RETENCION del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Retention - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3177441868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Retention (RETENCION)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Retención (RETENCION)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Retention - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1698520674 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the SS AUTONOM amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe SS AUTONOM del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Self-Employed SS - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1698520674 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self-Employed SS (SS AUTONOM)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="SS autónomos (SS AUTONOM)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Self-Employed SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3751775979 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the BASE S.SOC amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe BASE S.SOC del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC SS Base - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3751775979 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SS Base (BASE S.SOC)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Base SS (BASE S.SOC)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC SS Base - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1524522014 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the TC1 amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe TC1 del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC TC1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1524522014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TC1</source>
+          <note from="Developer" annotates="general" priority="2">ESP="TC1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC TC1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 959360631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the C.TOTAL amount of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe C.TOTAL del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 959360631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Cost (C.TOTAL)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste total (C.TOTAL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 890379781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the credit total of the proposed entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total haber de la propuesta de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Credit - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 890379781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Credit</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Credit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2713298332 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the debit total of the proposed entry.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total debe de la propuesta de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Debit - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 2713298332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total Debit</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total debe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Total Debit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 4278613240 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the errors and warnings found in the last validation.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica los errores y avisos encontrados en la última validación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Validation Message - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 4278613240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validation Message</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mensaje validación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Validation Message - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3446979597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the result of the last validation. Any change sets the line back to Pending.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el resultado de la última validación. Cualquier cambio vuelve a dejar la línea en Pendiente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Validation Status - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 3446979597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validation Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado validación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Validation Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 401711563 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the tax ID of the employee.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el NIF del trabajador."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC VAT Registration No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 401711563 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NIF</source>
+          <note from="Developer" annotates="general" priority="2">ESP="NIF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC VAT Registration No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1551708735 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the employee name as it appears in the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el nombre del trabajador tal como aparece en el Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Worker Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 3829562542 - Field 1551708735 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Worker Name (Excel)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Trabajador (Excel)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Line - Field JMC Worker Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 1120580445 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the maximum difference allowed in the payroll checks.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la diferencia máxima admitida en las comprobaciones de la nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Balance Tolerance - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 1120580445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance Tolerance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia de cuadre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Balance Tolerance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 3279593305 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the number series used for the document number of each payroll entry when the journal batch has no number series.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la serie usada para el nº de documento de cada asiento de nómina cuando la sección del diario no tiene serie."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Document No. Series - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 3279593305 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No. Series</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº serie documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Document No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 423374226 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the general journal batch where the payroll lines are created. The batch must be empty when the journal is created.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la sección del diario general donde se crean las líneas de nómina. La sección debe estar vacía al crear el diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Journal Batch Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 423374226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Journal Batch Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 3562854294 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the general journal template where the payroll lines are created.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el libro del diario general donde se crean las líneas de nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Journal Template Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 3562854294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre libro diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Journal Template Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1439816149 - Field 1931827313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Clave primaria"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Import Setup - Field JMC Primary Key - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3654729090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Purchase Order Method</source>
           <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
@@ -768,6 +1718,196 @@
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3727982247" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal batch %2 of template %1 must be empty before creating the payroll entries.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La sección %2 del libro %1 debe estar vacía antes de crear los asientos de nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCBatchNotEmptyErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1466638761" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column %1 has an amount but is not mapped to a concept.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La columna %1 tiene importe pero no tiene concepto asignado en el mapeo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCColumnNotMappedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 596702534" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The entry lines of column %1 do not add up to the Excel amount.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Las líneas de asiento de la columna %1 no suman el importe del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCColumnSplitWarn</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3530228249" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to create %1 payroll entries in journal %2, batch %3?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="¿Desea crear %1 asientos de nómina en el libro %2, sección %3?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCCreateJournalQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 716447228" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The date %1 is not within the allowed posting period.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La fecha %1 no está dentro del periodo de registro permitido."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCDateNotAllowedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1648908650" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payroll is duplicated in this import or in an import already sent to the journal.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La nómina está duplicada en esta importación o en otra ya pasada al diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCDuplicateErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 138641956" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are entry lines without a G/L account.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Hay líneas de asiento sin cuenta contable."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCEntryWithoutAccountErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 984255645" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excel files (*.xlsx)|*.xlsx</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ficheros Excel (*.xlsx)|*.xlsx"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCExcelFilterTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3953231674" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are garnishment lines without an authority.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Hay líneas de embargo sin organismo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCGarnishmentWithoutAuthorityErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1608987484" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The journal cannot be created because there are %1 payrolls with errors.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se puede crear el diario porque hay %1 nóminas con errores."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCHasErrorsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3261378127" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The header row with the columns TRABAJADOR and FECHA COBRO was not found in the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se ha encontrado en el Excel la fila de cabecera con las columnas TRABAJADOR y FECHA COBRO."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCHeaderNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2288776251" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L account %1 does not exist, is blocked, is not a posting account or does not allow direct posting.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La cuenta %1 no existe, está bloqueada, no es auxiliar o no permite registro directo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCInvalidAccountErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 970831232" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The value %1 in row %2, column %3 is not a valid amount.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El valor %1 de la fila %2, columna %3 no es un importe válido."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCInvalidAmountErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2159528392" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payroll entries have been created in journal %2, batch %3.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Se han creado %1 asientos de nómina en el libro %2, sección %3."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCJournalCreatedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2238009208" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 payroll lines have been imported.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Se han importado %1 nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCLinesImportedMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2266654231" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to mark payroll import %1 as processed?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="¿Desea marcar como procesada la importación de nóminas %1?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCMarkProcessedQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1177332877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The column %1 was not found in the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se ha encontrado la columna %1 en el Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCMissingColumnErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2893481061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The employee code column must be the column before TRABAJADOR.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La columna del código de trabajador debe ser la anterior a TRABAJADOR."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoCodeColumnErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3036303120" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payment date is empty.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La fecha de cobro está vacía."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoDateErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 634495486" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payroll has no entry lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La nómina no tiene líneas de asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoEntriesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 4125639299" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The journal has not been created yet for this payroll import.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Todavía no se ha creado el diario para esta importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoJournalErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1130346183" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no payroll lines to validate.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No hay nóminas para validar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3889071672" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is no room to insert a new line after this line. Move the line or renumber the entry lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No hay hueco para insertar una línea después de esta. Mueva la línea o renumere las líneas del asiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCNoSpaceErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 984982657" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll %1 %2 - %3</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nómina %1 %2 - %3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCPayrollDescriptionTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1997247426" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The proposed entry of the payroll will be created again from the Excel amounts and the manual changes will be lost. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La propuesta de asiento de la nómina se volverá a crear desde los importes del Excel y se perderán los cambios manuales. ¿Desea continuar?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCRegenerateQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2927962405" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll import %1 already has lines. Do you want to delete them and import the Excel file again?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="La importación de nóminas %1 ya tiene líneas. ¿Desea borrarlas y volver a importar el Excel?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCReplaceLinesQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2486037" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Several resources have Gestoría ID %1.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Varios recursos tienen el ID Gestoría %1."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCResourceMultipleErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3790080471" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource %1 does not exist.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El recurso %1 no existe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCResourceNotExistErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2479623756" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No resource has Gestoría ID %1.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ningún recurso tiene el ID Gestoría %1."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCResourceNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 794781198" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select the payroll Excel file</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccione el Excel de nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCSelectFileTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2368775748" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TC1 does not match SS.EMPRESA + SS.TRAB.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="TC1 no coincide con SS.EMPRESA + SS.TRAB."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCTC1Warn</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1165254425" size-unit="char" translate="yes" xml:space="preserve">
+          <source>C.TOTAL does not match C.BRUTO + SS.EMPRESA.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="C.TOTAL no coincide con C.BRUTO + SS.EMPRESA."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCTotalCostWarn</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 787976852" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The totals of the payrolls do not match the TOTAL EMPRESA row of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Los totales de las nóminas no coinciden con la fila TOTAL EMPRESA del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCTotalsMismatchMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2668861889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The totals of the payrolls do not match the TOTAL EMPRESA row of the Excel file. Do you want to create the journal anyway?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Los totales de las nóminas no coinciden con la fila TOTAL EMPRESA del Excel. ¿Desea crear el diario igualmente?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCTotalsMismatchQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 2882909356" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The entry is not balanced. Difference: %1.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El asiento no cuadra. Descuadre: %1."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCUnbalancedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 131744383" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validate the payroll import before creating the journal.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Valide la importación de nóminas antes de crear el diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCValidateFirstErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 708942625" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validation completed.\\Payrolls: %1\Errors: %2\Warnings: %3</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Validación finalizada.\\Nóminas: %1\Errores: %2\Avisos: %3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCValidationResultMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 3766424325" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are %1 payrolls with warnings. Do you want to create the journal anyway?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Hay %1 nóminas con avisos. ¿Desea crear el diario igualmente?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCWarningsQst</note>
+        </trans-unit>
         <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Resource Assignment</source>
           <note from="Developer" annotates="general" priority="2">ESP="Asignación Recursos Evento"</note>
@@ -1252,6 +2392,11 @@
           <source>Event Variety</source>
           <note from="Developer" annotates="general" priority="2">ESP="Variedad Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control variedadEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3546027412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Accounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Garnishment Account Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
@@ -1862,6 +3007,236 @@
           <source>Margin Value</source>
           <note from="Developer" annotates="general" priority="2">ESP="Valor Margen"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Pan Evento API - Control valorMargen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 915873605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Column Mapping</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mapeo columnas nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Column Mapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1769259482 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Concept Accounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por concepto de nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Concept Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2">ESP="General"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Control 1368504227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Control Journal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Control 3971433691 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Totals</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Totales"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Control Totals - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1164579583 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the general journal with the created payroll entries.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre el diario general con los asientos de nómina creados."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action OpenJournal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1164579583 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open Journal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abrir diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action OpenJournal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1514883969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the payroll import setup.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre la configuración de la importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1514883969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2393384927 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create one entry per payroll in the general journal. The lines are not posted.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crea un asiento por nómina en el diario general. Las líneas no se registran."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action CreateJournal - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2393384927 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create Journal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crear diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action CreateJournal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1147532894 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import the Excel file of the payroll provider. The current lines are replaced.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importa el Excel de la asesoría. Se sustituyen las líneas actuales."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ImportExcel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1147532894 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Excel</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importar Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ImportExcel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2730681457 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mark the payroll import as processed once the journal has been posted.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Marca la importación de nóminas como procesada una vez registrado el diario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action MarkProcessed - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2730681457 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mark as Processed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Marcar como procesado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action MarkProcessed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 580853590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show all the payrolls.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra todas las nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ShowAll - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 580853590 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show All</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver todas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ShowAll - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1831001291 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show only the payrolls with errors or warnings.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra solo las nóminas con errores o avisos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ShowIssues - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 1831001291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Show Errors</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver errores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ShowIssues - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 31290717 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create the proposed entry of the payrolls that do not have one and check all the payrolls. Existing proposed entries and manual changes are kept.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crea la propuesta de asiento de las nóminas que no la tienen y comprueba todas las nóminas. Las propuestas existentes y los cambios manuales se mantienen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ValidateImport - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 31290717 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validate</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Validar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action ValidateImport - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 3383493608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Process</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Procesar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action Category_Process - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 3673084087 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Review</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Revisar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action Category_Review - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3002540034 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Proposed Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Propuesta de asiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Entries - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3002540034 - Action 227665064 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split the selected line into two lines with half of the amount each, for example to separate principal and interest. Then adjust the concept, account and amounts.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Divide la línea seleccionada en dos con la mitad del importe cada una, por ejemplo para separar amortización e intereses. Después ajuste el concepto, la cuenta y los importes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Entries - Action SplitLine - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3002540034 - Action 227665064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Split Line</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dividir línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Entries - Action SplitLine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4034793019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payrolls</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4034793019 - Action 486153596 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create the proposed entry of the selected payroll again from its amounts. The manual changes are lost.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Vuelve a crear la propuesta de asiento de la nómina seleccionada a partir de sus importes. Se pierden los cambios manuales."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Lines - Action RegenerateEntry - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4034793019 - Action 486153596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Regenerar asiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Lines - Action RegenerateEntry - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3282454426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Imports</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importaciones de nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3282454426 - Action 1514883969 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open the payroll import setup.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre la configuración de la importación de nóminas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import List - Action Setup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3282454426 - Action 1514883969 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import List - Action Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3282454426 - Action 1147532894 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create a new payroll import from the Excel file of the payroll provider.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crea una nueva importación de nóminas a partir del Excel de la asesoría."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import List - Action ImportExcel - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3282454426 - Action 1147532894 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Import Excel</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importar Excel"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import List - Action ImportExcel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Setup</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configuración importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Control 3493770575 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checks</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Comprobaciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Control Checks - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Control 1368504227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Control Journal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 2023477246 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up the concept generated by each column of the Excel file.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configura el concepto que genera cada columna del Excel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action ColumnMapping - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 2023477246 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column Mapping</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mapeo de columnas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action ColumnMapping - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 3560116217 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up the G/L account proposed for each payroll concept.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configura la cuenta contable que se propone para cada concepto de nómina."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action ConceptSetup - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 3560116217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Concept Accounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por concepto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action ConceptSetup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 4197742388 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set up the G/L account proposed for each garnishment authority.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Configura la cuenta contable que se propone para cada organismo embargante."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action GarnishmentAccounts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 4197742388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Accounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action GarnishmentAccounts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 1822757748 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create the missing concepts, authorities and column mappings with their default values. Existing records are not changed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Crea los conceptos, organismos y mapeos de columnas que falten con sus valores por defecto. No modifica los registros existentes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action InitializeDefaults - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1439816149 - Action 1822757748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initialize Defaults</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Inicializar valores por defecto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import Setup - Action InitializeDefaults - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1112059641 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Staff</source>
@@ -4358,6 +5733,186 @@
           <note from="Developer" annotates="general" priority="2">ESP="Pasivo no corriente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue Non-Current Liability - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 4163207473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Authority</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 451910705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Court</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Juzgado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Court - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otros"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 680292238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Provincial Council</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diputación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Provincial Council - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 3033105415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Social Security (TGSS)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social (TGSS)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Social Security - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 392035718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Agency (AEAT)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AEAT"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Tax Agency - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2473906886 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Anticipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Advance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2444719103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bonus</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Primas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Bonus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1863936113 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Social Security</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social a cargo de la empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Company SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1686543090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee Loan</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo a empleado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Employee Loan - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1671071299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Pay Accrual</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devengo paga extra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Extra Pay Accrual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 876350389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Pay Provision</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Provisión paga extra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Extra Pay Provision - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1596125630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Embargo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Garnishment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 430502041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="HP acreedora por IRPF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue IRPF Payable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 19041443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medical Insurance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguro médico"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Medical Insurance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2174406897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Pay Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Remuneraciones pendientes de pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Net Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otros"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2012713197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other Deduction</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otras deducciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Other Deduction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1722162279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment in Kind</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Retribución en especie"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Payment in Kind - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3741321381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Related Party Loan Interest</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo parte vinculada - intereses"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Related Party Loan Interest - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 556150353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Related Party Loan Principal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo parte vinculada - amortización"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Related Party Loan Principal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3900201624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salaries and Wages</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Sueldos y salarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Salary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1459342142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self-Employed Social Security</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social autónomos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Self-Employed SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3040601182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Social Security Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismos Seguridad Social acreedores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue SS Payable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1968908716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Excel Column</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Columna Excel nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Excel Column - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 399134067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Created</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diario creado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Journal Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 3481143665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 3208180638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Procesado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Processed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 2931278654 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validated</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Validado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Validated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Validation Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado validación nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 4065541250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Correct</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Correcta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Correct - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 2248886284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Error"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 3481143665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 3955473374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Aviso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Warning - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PermissionSet 1866728888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>JMC CP Base Management</source>
           <note from="Developer" annotates="general" priority="2">ESP="JMC CP Base - Gestión"</note>
@@ -4372,6 +5927,11 @@
           <source>Operation Record Read</source>
           <note from="Developer" annotates="general" priority="2">ESP="Consulta registro operativo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PermissionSet JMC OPER. REC. READ - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PermissionSet 1965851336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PermissionSet JMC PAYROLL IMPORT - Property Caption</note>
         </trans-unit>
         <trans-unit id="PermissionSet 2571676866 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>JMC Resource Assignment - Financial Fields</source>

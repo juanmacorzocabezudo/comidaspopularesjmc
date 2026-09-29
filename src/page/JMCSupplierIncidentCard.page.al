@@ -20,13 +20,14 @@ page 53307 "JMC Supplier Incident Card"
                 field("Vendor Name"; Rec."JMC Vendor Name") { ApplicationArea = All; }
                 field("Source Type"; Rec."JMC Source Type") { ApplicationArea = All; }
                 field("Source Document No."; Rec."JMC Source Document No.") { ApplicationArea = All; }
-                field("Source Line No."; Rec."JMC Source Line No.") { ApplicationArea = All; }
-                field(Item; Rec."JMC Item No.") { ApplicationArea = All; }
-                field("Item Description"; Rec."JMC Item Description") { ApplicationArea = All; }
-                field("Lot No."; Rec."JMC Lot No.") { ApplicationArea = All; }
                 field("Detected By"; Rec."JMC Detected By") { ApplicationArea = All; }
                 field("Recurring Incident"; Rec."JMC Recurring Incident") { ApplicationArea = All; }
-                field("NC No."; Rec."JMC NC No.") { ApplicationArea = All; }
+            }
+            part(ProductLines; "JMC Supplier Incident Products")
+            {
+                ApplicationArea = All;
+                Caption = 'Products', Comment = 'ESP="Productos"';
+                SubPageLink = "JMC Incident No." = field("JMC No.");
             }
             group(Details)
             {
@@ -40,6 +41,7 @@ page 53307 "JMC Supplier Incident Card"
             group(Closing)
             {
                 Caption = 'Closing', Comment = 'ESP="Cierre"';
+                field("Credit Memo Required"; Rec."JMC Credit Memo Required") { ApplicationArea = All; }
                 field("Credit Memo Registered"; Rec."JMC Credit Memo Registered") { ApplicationArea = All; Editable = false; }
                 field("Created By"; Rec."JMC Created By") { ApplicationArea = All; }
                 field("Creation DateTime"; Rec."JMC Creation DateTime") { ApplicationArea = All; }
@@ -55,9 +57,52 @@ page 53307 "JMC Supplier Incident Card"
         }
     }
 
+    actions
+    {
+        area(Processing)
+        {
+            action("JMC Add Products")
+            {
+                ApplicationArea = All;
+                Caption = 'Add Products', Comment = 'ESP="Añadir productos"';
+                ToolTip = 'Add products from the related source document.', Comment = 'ESP="Añade productos del documento de origen relacionado."';
+                Image = New;
+
+                trigger OnAction()
+                var
+                    IncidentMgt: Codeunit "JMC Supplier Incident Mgt";
+                begin
+                    IncidentMgt.AddProductsToIncident(Rec);
+                    CurrPage.Update(false);
+                end;
+            }
+        }
+    }
+
     trigger OnAfterGetCurrRecord()
     begin
+        EnsureLegacyProductLine();
         CurrPage.Attachments.Page.SetIncident(Rec);
+    end;
+
+    local procedure EnsureLegacyProductLine()
+    var
+        IncidentProduct: Record "JMC Supplier Incident Product";
+    begin
+        if Rec."JMC Item No." = '' then
+            exit;
+
+        IncidentProduct.SetRange("JMC Incident No.", Rec."JMC No.");
+        if not IncidentProduct.IsEmpty() then
+            exit;
+
+        IncidentProduct.Init();
+        IncidentProduct."JMC Incident No." := Rec."JMC No.";
+        IncidentProduct."JMC Line No." := 10000;
+        IncidentProduct."JMC Source Line No." := Rec."JMC Source Line No.";
+        IncidentProduct."JMC Item No." := Rec."JMC Item No.";
+        IncidentProduct."JMC Item Description" := Rec."JMC Item Description";
+        IncidentProduct.Insert(true);
     end;
 
 }

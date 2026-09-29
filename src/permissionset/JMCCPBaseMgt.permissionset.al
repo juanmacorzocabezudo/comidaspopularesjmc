@@ -34,6 +34,8 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "JMC Resource Assignment" = RIMD,
         tabledata "Tipo" = RIMD,
         tabledata "JMC Supplier Incident" = RIMD,
+        tabledata "JMC Supplier Incident Product" = RIMD,
+        tabledata "Reservation Entry" = R,
         tabledata "Document Attachment" = RIMD,
 
         // Páginas de compras base
@@ -83,6 +85,8 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Tipo" = X,
         page "JMC Supplier Incident List" = X,
         page "JMC Supplier Incident Card" = X,
+        page "JMC Supplier Incident Products" = X,
+        page "JMC Incident Tracking Lots" = X,
         page "JMC Supplier Incident Lines" = X,
         page "JMC Assembly Incident Lines" = X,
         page "JMC Vendor Incident FactBox" = X,

@@ -123,6 +123,11 @@ table 53302 "JMC Supplier Incident"
             TableRelation = "No. Series".Code;
             DataClassification = SystemMetadata;
         }
+        field(23; "JMC Credit Memo Required"; Boolean)
+        {
+            Caption = 'Credit Memo Required', Comment = 'ESP="Abono obligatorio"';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
@@ -153,5 +158,13 @@ table 53302 "JMC Supplier Incident"
             TestField("JMC No. Series");
             "JMC No." := NoSeries.GetNextNo("JMC No. Series", "JMC Date", true);
         end;
+    end;
+
+    trigger OnDelete()
+    var
+        IncidentProduct: Record "JMC Supplier Incident Product";
+    begin
+        IncidentProduct.SetRange("JMC Incident No.", "JMC No.");
+        IncidentProduct.DeleteAll();
     end;
 }

@@ -18,7 +18,23 @@ page 53305 "JMC Assembly Incident Lines"
                 field("No."; Rec."No.") { ApplicationArea = All; }
                 field(Description; Rec.Description) { ApplicationArea = All; }
                 field(Quantity; Rec.Quantity) { ApplicationArea = All; }
+                field("Vendor No."; ItemVendorNo)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Vendor No.', Comment = 'ESP="Nº proveedor"';
+                }
             }
         }
     }
+
+    var
+        Item: Record Item;
+        ItemVendorNo: Code[20];
+
+    trigger OnAfterGetRecord()
+    begin
+        Clear(ItemVendorNo);
+        if Item.Get(Rec."No.") then
+            ItemVendorNo := Item."Vendor No.";
+    end;
 }

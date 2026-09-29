@@ -531,6 +531,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Abono registrado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident - Field JMC Credit Memo Registered - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 3459189666 - Field 3655685462 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Memo Required</source>
+          <target>Abono obligatorio</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Abono obligatorio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident - Field JMC Credit Memo Required - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 3459189666 - Field 3286300140 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Date</source>
           <target>Fecha</target>
@@ -632,6 +638,66 @@
           <target>Proveedor</target>
           <note from="Developer" annotates="general" priority="2">ESP="Proveedor"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident - Field JMC Vendor No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident Product</source>
+          <target>Producto de incidencia de proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto de incidencia de proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 1884414863 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incident No.</source>
+          <target>Nº incidencia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº incidencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Incident No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 3253363329 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Description</source>
+          <target>Descripción del producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Item Description - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 1930225594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item</source>
+          <target>Producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Item No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 3055118999 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line No.</source>
+          <target>Nº línea</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 3826881176 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lot No.</source>
+          <target>Lote</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Lote"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Lot No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 1857481897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Cantidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 1655642521 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tracking Entry No.</source>
+          <target>Nº mov. seguimiento</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº mov. seguimiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Reservation Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 3628728516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Line No.</source>
+          <target>Línea de origen</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº línea origen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Source Line No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 824183655 - Field 2874110006 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lot No.</source>
+          <target>Lote</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Lote"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Supplier Incident Product - Field JMC Tracked Lot No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1831575858 - Field 1588651819 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Discount %</source>
@@ -1011,6 +1077,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="No hay ningún informe de Industria configurado para las facturas de venta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Email Report Mgt - Method SendIndustryInvoice - NamedType IndustryReportNotConfiguredErr</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3278144653 - Method 4171726465 - NamedType 2555499236" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This vendor has supplier incidents with pending credit memos: %1. Do you want to post this purchase invoice?</source>
+          <target>Este proveedor tiene incidencias con abono pendiente: %1. ¿Desea registrar esta factura de compra?</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Este proveedor tiene incidencias con abono pendiente: %1. ¿Desea registrar esta factura de compra?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Events - Method ConfirmPendingIncidentCreditMemos - NamedType PendingIncidentCreditMemoQst</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3278144653 - Method 612858897 - NamedType 2106753603" size-unit="char" translate="yes" xml:space="preserve">
           <source>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10</source>
           <target>AVISO: El cliente %1 ha superado su límite de crédito.\\\\Límite de crédito: %2\\Ofertas pendientes: %3\\Pedidos abiertos: %4\\Pedidos lanzados: %5\\Facturas pendientes: %6\\Facturas sin registrar: %7\\Notas de abono pendientes: %8\\Total: %9\\Excedido: %10</target>
@@ -1059,11 +1131,35 @@
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
         </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 3153240823" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lot %1 is not assigned to this product line in the source document tracking.</source>
+          <target>El lote %1 no está asignado a esta línea de producto en el seguimiento del documento de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El lote %1 no está asignado a esta línea de producto en el seguimiento del documento de origen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType InvalidTrackedLotErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 646235782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select products from the same vendor to create a supplier incident.</source>
+          <target>Seleccione productos del mismo proveedor para crear una incidencia.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccione productos del mismo proveedor para crear una incidencia."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType MultipleVendorsErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 983041636 - NamedType 2857496992" size-unit="char" translate="yes" xml:space="preserve">
           <source>The document does not contain item lines.</source>
           <target>El documento no contiene líneas de producto.</target>
           <note from="Developer" annotates="general" priority="2">ESP="El documento no contiene líneas de producto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoItemLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 4185921066" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This incident is not linked to a purchase order or an assembly order.</source>
+          <target>Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoSourceDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 3250223834" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No lot tracking lines are assigned to this product line.</source>
+          <target>La línea de producto no tiene lotes asignados en el seguimiento.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="La línea de producto no tiene lotes asignados en el seguimiento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoTrackedLotsErr</note>
         </trans-unit>
         <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Resource Assignment</source>
@@ -1148,6 +1244,12 @@
           <target>Seleccionar línea de componente</target>
           <note from="Developer" annotates="general" priority="2">ESP="Seleccionar línea de componente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Assembly Incident Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3995905587 - Control 1527594213 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor No.</source>
+          <target>Nº proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Assembly Incident Lines - Control Vendor No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>
@@ -1695,6 +1797,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ver documento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Action JMC View Attachment - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1556372195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Tracked Lot</source>
+          <target>Seleccionar lote de seguimiento</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccionar lote de seguimiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Tracking Lots - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
           <target>Observaciones internas</target>
@@ -1934,6 +2042,13 @@
           <target>Importe</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control importe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3526754988 - Control 3721697050 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Chapter</source>
+          <target>[NAB: SUGGESTION]Capítulo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Capítulo"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Menu Adulto API - Control imprimeCapitulo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3526754988 - Control 1588247355 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Line No.</source>
@@ -3831,11 +3946,29 @@
           <note from="Developer" annotates="general" priority="2">ESP="General"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 790843750 - Control 2639695650 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Products</source>
+          <target>Productos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Control ProductLines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 790843750 - Control 1225782422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Attachments</source>
           <target>Documentos adjuntos</target>
           <note from="Developer" annotates="general" priority="2">ESP="Documentos adjuntos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Control Attachments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 596370047 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add products from the related source document.</source>
+          <target>Añade productos del documento de origen relacionado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Añade productos del documento de origen relacionado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 596370047 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Products</source>
+          <target>Añadir productos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Añadir productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2444126405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select Item Line</source>
@@ -3860,6 +3993,18 @@
           <target>Imprimir incidencias</target>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Print Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2208656402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incident Products</source>
+          <target>Productos de incidencia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Productos de incidencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Products - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2208656402 - Control 1482668068 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select a lot assigned to this source document line.</source>
+          <target>Selecciona un lote asignado a esta línea del documento de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Selecciona un lote asignado a esta línea del documento de origen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Products - Control Lot No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 3106991722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo</source>
@@ -5501,8 +5646,9 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target> </target>
+          <target>[NAB: REVIEW] </target>
           <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

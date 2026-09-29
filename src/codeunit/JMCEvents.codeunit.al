@@ -502,6 +502,40 @@ codeunit 53100 "JMC Events"
         end;
     end;
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Purch.-Post", OnBeforePostPurchaseDoc, '', false, false)]
+    local procedure ConfirmPendingIncidentCreditMemos(var PurchaseHeader: Record "Purchase Header"; PreviewMode: Boolean; CommitIsSupressed: Boolean; var HideProgressWindow: Boolean; var ItemJnlPostLine: Codeunit "Item Jnl.-Post Line"; var IsHandled: Boolean)
+    var
+        Incident: Record "JMC Supplier Incident";
+        IncidentNos: Text[2048];
+        PendingIncidentCreditMemoQst: Label 'This vendor has supplier incidents with pending credit memos: %1. Do you want to post this purchase invoice?', Comment = 'ESP="Este proveedor tiene incidencias con abono pendiente: %1. ¿Desea registrar esta factura de compra?"';
+    begin
+        if PreviewMode or IsHandled then
+            exit;
+        if (PurchaseHeader."Document Type" <> PurchaseHeader."Document Type"::Order) and
+           (PurchaseHeader."Document Type" <> PurchaseHeader."Document Type"::Invoice) then
+            exit;
+        if (PurchaseHeader."Document Type" = PurchaseHeader."Document Type"::Order) and not PurchaseHeader.Invoice then
+            exit;
+        if PurchaseHeader."Buy-from Vendor No." = '' then
+            exit;
+
+        Incident.SetRange("JMC Vendor No.", PurchaseHeader."Buy-from Vendor No.");
+        Incident.SetRange("JMC Credit Memo Required", true);
+        Incident.SetRange("JMC Credit Memo Registered", false);
+        Incident.SetLoadFields("JMC No.");
+        if not Incident.FindSet() then
+            exit;
+
+        repeat
+            if IncidentNos <> '' then
+                IncidentNos += ', ';
+            IncidentNos += Incident."JMC No.";
+        until Incident.Next() = 0;
+
+        if not Confirm(PendingIncidentCreditMemoQst, true, IncidentNos) then
+            IsHandled := true;
+    end;
+
     local procedure UpdateLastDirectUnitCost(DocumentNo: Code[20])
     var
         PurchInvLine: Record "Purch. Inv. Line";

@@ -10,9 +10,10 @@ En **Configuración de compras y pagos**, informe el campo **Nº serie incidenci
 
 1. Abra un **Pedido de compra** o un **Pedido de ensamblado**.
 2. Seleccione **Acciones > Proceso > Crear incidencia**.
-3. Elija la línea de producto o componente afectada y confírmela.
-4. Se crea y abre la ficha de la incidencia con fecha, proveedor, producto, documento de origen y línea rellenados automáticamente.
-5. Complete los datos necesarios: lote, detectado por, recurrencia, NC asociada, descripción, comunicaciones, respuesta y medidas correctivas.
+3. Seleccione una o varias líneas de producto o componente y confírmelas.
+4. Se crea y abre la ficha de la incidencia con fecha, proveedor y documento de origen rellenados automáticamente. Los productos seleccionados aparecen en la subpágina **Productos**.
+5. Use **Añadir productos** para incorporar más líneas del mismo pedido de compra o pedido de ensamblado. En ensamblados, los productos deben pertenecer al mismo proveedor.
+6. Complete los datos necesarios en la incidencia y, para cada producto, seleccione el lote desde las líneas de seguimiento del pedido relacionado si procede.
 
 Si el documento no contiene líneas de producto, no se podrá crear la incidencia.
 
@@ -35,3 +36,5 @@ Desde el FactBox puede añadir varios archivos, verlos, descargarlos o eliminarl
 En un **Abono de compra**, seleccione la **Incidencia relacionada**. El selector muestra únicamente incidencias del mismo proveedor con la información disponible en la lista de incidencias.
 
 El código de la incidencia se traspasa al histórico y se muestra en **Abono compra registrado**. El campo **Abono registrado** de la incidencia se marca automáticamente al registrar el abono y no se puede modificar manualmente.
+
+Active **Abono obligatorio** en las incidencias que requieran un abono del proveedor. Al registrar una factura de compra de ese proveedor, la aplicación avisa con los números de las incidencias pendientes y permite continuar o cancelar el registro.

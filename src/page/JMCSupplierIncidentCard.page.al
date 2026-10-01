@@ -14,7 +14,6 @@ page 53307 "JMC Supplier Incident Card"
             {
                 Caption = 'General', Comment = 'ESP="General"';
                 field("No."; Rec."JMC No.") { ApplicationArea = All; Editable = false; }
-                field("No. Series"; Rec."JMC No. Series") { ApplicationArea = All; }
                 field(Date; Rec."JMC Date") { ApplicationArea = All; }
                 field(Vendor; Rec."JMC Vendor No.") { ApplicationArea = All; }
                 field("Vendor Name"; Rec."JMC Vendor Name") { ApplicationArea = All; }
@@ -35,6 +34,8 @@ page 53307 "JMC Supplier Incident Card"
                 field("Incident Description"; Rec."JMC Incident Description") { ApplicationArea = All; MultiLine = true; }
                 field("Supplier Communication"; Rec."JMC Supplier Communication") { ApplicationArea = All; MultiLine = true; }
                 field("Communication Date"; Rec."JMC Communication Date") { ApplicationArea = All; }
+                field("Notify Vendor"; Rec."JMC Notify Vendor") { ApplicationArea = All; }
+                field("Vendor Responded"; Rec."JMC Vendor Responded") { ApplicationArea = All; }
                 field("Supplier Response"; Rec."JMC Supplier Response") { ApplicationArea = All; MultiLine = true; }
                 field("Corrective Measures"; Rec."JMC Corrective Measures") { ApplicationArea = All; MultiLine = true; }
             }
@@ -88,21 +89,64 @@ page 53307 "JMC Supplier Incident Card"
     local procedure EnsureLegacyProductLine()
     var
         IncidentProduct: Record "JMC Supplier Incident Product";
+        HasChanges: Boolean;
     begin
         if Rec."JMC Item No." = '' then
             exit;
 
         IncidentProduct.SetRange("JMC Incident No.", Rec."JMC No.");
-        if not IncidentProduct.IsEmpty() then
+        if IncidentProduct.FindSet() then begin
+            repeat
+                HasChanges := false;
+                if (IncidentProduct."JMC Tracking Source Type" <> GetTrackingSourceType()) or
+                   (IncidentProduct."JMC Tracking Source ID" <> Rec."JMC Source Document No.") or
+                   (IncidentProduct."JMC Tracking Source Subtype" <> GetTrackingSourceSubtype()) then begin
+                    IncidentProduct."JMC Tracking Source Type" := GetTrackingSourceType();
+                    IncidentProduct."JMC Tracking Source ID" := Rec."JMC Source Document No.";
+                    IncidentProduct."JMC Tracking Source Subtype" := GetTrackingSourceSubtype();
+                    HasChanges := true;
+                end;
+                if HasChanges then
+                    IncidentProduct.Modify();
+            until IncidentProduct.Next() = 0;
             exit;
+        end;
 
         IncidentProduct.Init();
         IncidentProduct."JMC Incident No." := Rec."JMC No.";
         IncidentProduct."JMC Line No." := 10000;
         IncidentProduct."JMC Source Line No." := Rec."JMC Source Line No.";
+        IncidentProduct."JMC Tracking Source Type" := GetTrackingSourceType();
+        IncidentProduct."JMC Tracking Source ID" := Rec."JMC Source Document No.";
+        IncidentProduct."JMC Tracking Source Subtype" := GetTrackingSourceSubtype();
         IncidentProduct."JMC Item No." := Rec."JMC Item No.";
         IncidentProduct."JMC Item Description" := Rec."JMC Item Description";
         IncidentProduct.Insert(true);
+    end;
+
+    local procedure GetTrackingSourceType(): Integer
+    begin
+        case Rec."JMC Source Type" of
+            Rec."JMC Source Type"::"Purchase Order":
+                exit(Database::"Purchase Line");
+            Rec."JMC Source Type"::"Assembly Order":
+                exit(Database::"Assembly Line");
+        end;
+        exit(0);
+    end;
+
+    local procedure GetTrackingSourceSubtype(): Integer
+    var
+        PurchaseLine: Record "Purchase Line";
+        AssemblyLine: Record "Assembly Line";
+    begin
+        case Rec."JMC Source Type" of
+            Rec."JMC Source Type"::"Purchase Order":
+                exit(PurchaseLine."Document Type"::Order.AsInteger());
+            Rec."JMC Source Type"::"Assembly Order":
+                exit(AssemblyLine."Document Type"::Order.AsInteger());
+        end;
+        exit(0);
     end;
 
 }

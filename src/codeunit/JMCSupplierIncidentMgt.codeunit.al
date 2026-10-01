@@ -83,106 +83,6 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         end;
     end;
 
-    procedure SelectTrackedLot(var IncidentProduct: Record "JMC Supplier Incident Product"): Boolean
-    var
-        Incident: Record "JMC Supplier Incident";
-        PurchaseLine: Record "Purchase Line";
-        AssemblyLine: Record "Assembly Line";
-        ReservationEntry: Record "Reservation Entry";
-        TrackedLotsPage: Page "JMC Incident Tracking Lots";
-    begin
-        if not Incident.Get(IncidentProduct."JMC Incident No.") then
-            exit(false);
-
-        case Incident."JMC Source Type" of
-            Incident."JMC Source Type"::"Purchase Order":
-                begin
-                    PurchaseLine."Document Type" := PurchaseLine."Document Type"::Order;
-                    ReservationEntry.SetSourceFilter(
-                        Database::"Purchase Line",
-                        PurchaseLine."Document Type".AsInteger(),
-                        Incident."JMC Source Document No.",
-                        IncidentProduct."JMC Source Line No.",
-                        true);
-                end;
-            Incident."JMC Source Type"::"Assembly Order":
-                begin
-                    AssemblyLine."Document Type" := AssemblyLine."Document Type"::Order;
-                    ReservationEntry.SetSourceFilter(
-                        Database::"Assembly Line",
-                        AssemblyLine."Document Type".AsInteger(),
-                        Incident."JMC Source Document No.",
-                        IncidentProduct."JMC Source Line No.",
-                        true);
-                end;
-            else
-                Error(NoSourceDocumentErr);
-        end;
-
-        ReservationEntry.SetRange("Item No.", IncidentProduct."JMC Item No.");
-        ReservationEntry.SetFilter("Lot No.", '<>%1', '');
-        if ReservationEntry.IsEmpty() then
-            Error(NoTrackedLotsErr);
-
-        TrackedLotsPage.SetTableView(ReservationEntry);
-        TrackedLotsPage.LookupMode(true);
-        if TrackedLotsPage.RunModal() <> Action::LookupOK then
-            exit(false);
-
-        TrackedLotsPage.GetRecord(ReservationEntry);
-        IncidentProduct.Validate("JMC Lot No.", ReservationEntry."Lot No.");
-        IncidentProduct."JMC Reservation Entry No." := ReservationEntry."Entry No.";
-        IncidentProduct.Modify(true);
-        exit(true);
-    end;
-
-    procedure ValidateTrackedLot(var IncidentProduct: Record "JMC Supplier Incident Product")
-    var
-        Incident: Record "JMC Supplier Incident";
-        PurchaseLine: Record "Purchase Line";
-        AssemblyLine: Record "Assembly Line";
-        ReservationEntry: Record "Reservation Entry";
-    begin
-        if IncidentProduct."JMC Lot No." = '' then begin
-            IncidentProduct."JMC Reservation Entry No." := 0;
-            exit;
-        end;
-        if not Incident.Get(IncidentProduct."JMC Incident No.") then
-            Error(NoSourceDocumentErr);
-
-        case Incident."JMC Source Type" of
-            Incident."JMC Source Type"::"Purchase Order":
-                begin
-                    PurchaseLine."Document Type" := PurchaseLine."Document Type"::Order;
-                    ReservationEntry.SetSourceFilter(
-                        Database::"Purchase Line",
-                        PurchaseLine."Document Type".AsInteger(),
-                        Incident."JMC Source Document No.",
-                        IncidentProduct."JMC Source Line No.",
-                        true);
-                end;
-            Incident."JMC Source Type"::"Assembly Order":
-                begin
-                    AssemblyLine."Document Type" := AssemblyLine."Document Type"::Order;
-                    ReservationEntry.SetSourceFilter(
-                        Database::"Assembly Line",
-                        AssemblyLine."Document Type".AsInteger(),
-                        Incident."JMC Source Document No.",
-                        IncidentProduct."JMC Source Line No.",
-                        true);
-                end;
-            else
-                Error(NoSourceDocumentErr);
-        end;
-
-        ReservationEntry.SetRange("Item No.", IncidentProduct."JMC Item No.");
-        ReservationEntry.SetRange("Lot No.", IncidentProduct."JMC Lot No.");
-        if not ReservationEntry.FindFirst() then
-            Error(InvalidTrackedLotErr, IncidentProduct."JMC Lot No.");
-
-        IncidentProduct."JMC Reservation Entry No." := ReservationEntry."Entry No.";
-    end;
-
     local procedure SelectPurchaseLines(DocumentType: Enum "Purchase Document Type"; DocumentNo: Code[20]; var PurchaseLine: Record "Purchase Line"): Boolean
     var
         SelectionPage: Page "JMC Supplier Incident Lines";
@@ -234,6 +134,9 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         IncidentProduct."JMC Incident No." := Incident."JMC No.";
         IncidentProduct."JMC Line No." := GetNextProductLineNo(Incident."JMC No.");
         IncidentProduct."JMC Source Line No." := PurchaseLine."Line No.";
+        IncidentProduct."JMC Tracking Source Type" := Database::"Purchase Line";
+        IncidentProduct."JMC Tracking Source ID" := Incident."JMC Source Document No.";
+        IncidentProduct."JMC Tracking Source Subtype" := PurchaseLine."Document Type".AsInteger();
         IncidentProduct."JMC Item No." := PurchaseLine."No.";
         IncidentProduct."JMC Item Description" := PurchaseLine.Description;
         IncidentProduct."JMC Quantity" := PurchaseLine.Quantity;
@@ -253,6 +156,9 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         IncidentProduct."JMC Incident No." := Incident."JMC No.";
         IncidentProduct."JMC Line No." := GetNextProductLineNo(Incident."JMC No.");
         IncidentProduct."JMC Source Line No." := AssemblyLine."Line No.";
+        IncidentProduct."JMC Tracking Source Type" := Database::"Assembly Line";
+        IncidentProduct."JMC Tracking Source ID" := Incident."JMC Source Document No.";
+        IncidentProduct."JMC Tracking Source Subtype" := AssemblyLine."Document Type".AsInteger();
         IncidentProduct."JMC Item No." := AssemblyLine."No.";
         IncidentProduct."JMC Item Description" := AssemblyLine.Description;
         IncidentProduct."JMC Quantity" := AssemblyLine.Quantity;
@@ -295,6 +201,5 @@ codeunit 53303 "JMC Supplier Incident Mgt"
         NoItemLinesErr: Label 'The document does not contain item lines.', Comment = 'ESP="El documento no contiene líneas de producto."';
         MultipleVendorsErr: Label 'Select products from the same vendor to create a supplier incident.', Comment = 'ESP="Seleccione productos del mismo proveedor para crear una incidencia."';
         NoSourceDocumentErr: Label 'This incident is not linked to a purchase order or an assembly order.', Comment = 'ESP="Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado."';
-        NoTrackedLotsErr: Label 'No lot tracking lines are assigned to this product line.', Comment = 'ESP="La línea de producto no tiene lotes asignados en el seguimiento."';
-        InvalidTrackedLotErr: Label 'Lot %1 is not assigned to this product line in the source document tracking.', Comment = 'ESP="El lote %1 no está asignado a esta línea de producto en el seguimiento del documento de origen."';
+        SourceDocumentLineErr: Label 'The source document line for this product could not be found.', Comment = 'ESP="No se encuentra la línea de producto en el documento de origen."';
 }

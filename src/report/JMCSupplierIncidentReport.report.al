@@ -11,19 +11,15 @@ report 53316 "JMC Supplier Incident Report"
     {
         dataitem(Incident; "JMC Supplier Incident")
         {
-            RequestFilterFields = "JMC No.", "JMC Date", "JMC Vendor No.", "JMC Item No.", "JMC Detected By", "JMC Recurring Incident", "JMC Credit Memo Registered", "JMC Source Type";
+            RequestFilterFields = "JMC No.", "JMC Date", "JMC Vendor No.", "JMC Detected By", "JMC Recurring Incident", "JMC Credit Memo Registered", "JMC Source Type", "JMC Vendor Responded";
             column(No_; "JMC No.") { }
             column(Date_; "JMC Date") { }
             column(VendorNo; "JMC Vendor No.") { }
             column(VendorName; "JMC Vendor Name") { }
             column(SourceType; "JMC Source Type") { }
             column(SourceDocumentNo; "JMC Source Document No.") { }
-            column(ItemNo; "JMC Item No.") { }
-            column(ItemDescription; "JMC Item Description") { }
-            column(LotNo; "JMC Lot No.") { }
             column(DetectedBy; "JMC Detected By") { }
             column(RecurringIncident; "JMC Recurring Incident") { }
-            column(NCNo; "JMC NC No.") { }
             column(IncidentDescription; "JMC Incident Description") { }
             column(SupplierCommunication; "JMC Supplier Communication") { }
             column(CommunicationDate; "JMC Communication Date") { }
@@ -34,6 +30,17 @@ report 53316 "JMC Supplier Incident Report"
             column(CreationDateTime; "JMC Creation DateTime") { }
             column(CompanyName; CompanyInfo.Name) { }
             column(CompanyPicture; CompanyInfo.Picture) { }
+
+            dataitem(IncidentProduct; "JMC Supplier Incident Product")
+            {
+                DataItemLinkReference = Incident;
+                DataItemLink = "JMC Incident No." = field("JMC No.");
+                DataItemTableView = sorting("JMC Incident No.", "JMC Line No.");
+                RequestFilterFields = "JMC Item No.";
+
+                column(ProductNo; "JMC Item No.") { }
+                column(ProductDescription; "JMC Item Description") { }
+            }
 
             trigger OnAfterGetRecord()
             begin

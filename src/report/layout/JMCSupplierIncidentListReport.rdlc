@@ -51,31 +51,37 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.65in</Width>
+                  <Width>0.55in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.85in</Width>
+                  <Width>0.8in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.85in</Width>
+                  <Width>0.9in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.95in</Width>
+                  <Width>1.4in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.7in</Width>
+                  <Width>0.8in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.6in</Width>
+                  <Width>0.75in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.8in</Width>
+                  <Width>0.8in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.8in</Width>
+                  <Width>1.4in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.45in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.3in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.9in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -122,6 +128,70 @@
                               <TextRuns>
                                 <TextRun>
                                   <Value>PROVEEDOR</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#B91921</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.05in</PaddingLeft>
+                            <PaddingRight>0.05in</PaddingRight>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HProductNo">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Nº PRODUCTO</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                    <FontSize>7pt</FontSize>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <BackgroundColor>#B91921</BackgroundColor>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.05in</PaddingLeft>
+                            <PaddingRight>0.05in</PaddingRight>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="HProductDescription">
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>DESCRIPCIÓN PRODUCTO</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <FontSize>7pt</FontSize>
@@ -217,7 +287,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>NC ASOCIADA</Value>
+                                  <Value>Nº INCIDENCIA</Value>
                                   <Style>
                                     <FontWeight>Bold</FontWeight>
                                     <FontSize>7pt</FontSize>
@@ -436,6 +506,66 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="ProductNo">
+                          <CanGrow>true</CanGrow>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductNo.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.05in</PaddingLeft>
+                            <PaddingRight>0.05in</PaddingRight>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ProductDescription">
+                          <CanGrow>true</CanGrow>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ProductDescription.Value</Value>
+                                  <Style>
+                                    <FontSize>7pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <Style>
+                            <VerticalAlign>Middle</VerticalAlign>
+                            <PaddingLeft>0.05in</PaddingLeft>
+                            <PaddingRight>0.05in</PaddingRight>
+                            <Border>
+                              <Style>Solid</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Detected">
                           <CanGrow>true</CanGrow>
                           <Paragraphs>
@@ -501,7 +631,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!NCNo.Value</Value>
+                                  <Value>=Fields!No_.Value</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                   </Style>
@@ -658,6 +788,8 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -675,12 +807,12 @@
             <Top>0.8in</Top>
             <Left>0in</Left>
             <Height>0.7in</Height>
-            <Width>10.5in</Width>
+            <Width>11.05in</Width>
           </Tablix>
         </ReportItems>
         <Height>1.55in</Height>
       </Body>
-      <Width>10.5in</Width>
+      <Width>11.05in</Width>
       <Page>
         <PageHeight>8.27in</PageHeight>
         <PageWidth>11.69in</PageWidth>
@@ -712,23 +844,11 @@
         <Field Name="SourceDocumentNo">
           <DataField>SourceDocumentNo</DataField>
         </Field>
-        <Field Name="ItemNo">
-          <DataField>ItemNo</DataField>
-        </Field>
-        <Field Name="ItemDescription">
-          <DataField>ItemDescription</DataField>
-        </Field>
-        <Field Name="LotNo">
-          <DataField>LotNo</DataField>
-        </Field>
         <Field Name="DetectedBy">
           <DataField>DetectedBy</DataField>
         </Field>
         <Field Name="RecurringIncident">
           <DataField>RecurringIncident</DataField>
-        </Field>
-        <Field Name="NCNo">
-          <DataField>NCNo</DataField>
         </Field>
         <Field Name="IncidentDescription">
           <DataField>IncidentDescription</DataField>
@@ -759,6 +879,12 @@
         </Field>
         <Field Name="CompanyPicture">
           <DataField>CompanyPicture</DataField>
+        </Field>
+        <Field Name="ProductNo">
+          <DataField>ProductNo</DataField>
+        </Field>
+        <Field Name="ProductDescription">
+          <DataField>ProductDescription</DataField>
         </Field>
       </Fields>
       <Query>

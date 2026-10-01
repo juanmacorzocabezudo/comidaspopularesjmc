@@ -36,6 +36,7 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "JMC Supplier Incident" = RIMD,
         tabledata "JMC Supplier Incident Product" = RIMD,
         tabledata "Reservation Entry" = R,
+        tabledata "Lot No. Information" = R,
         tabledata "Document Attachment" = RIMD,
 
         // Páginas de compras base
@@ -86,7 +87,7 @@ permissionset 53100 "JMC CP BASE MGT"
         page "JMC Supplier Incident List" = X,
         page "JMC Supplier Incident Card" = X,
         page "JMC Supplier Incident Products" = X,
-        page "JMC Incident Tracking Lots" = X,
+        page "JMC Incident Lot Lookup" = X,
         page "JMC Supplier Incident Lines" = X,
         page "JMC Assembly Incident Lines" = X,
         page "JMC Vendor Incident FactBox" = X,
@@ -105,6 +106,8 @@ permissionset 53100 "JMC CP BASE MGT"
         codeunit "JMC Events" = X,
         codeunit "JMC Oper. Rec. Jnl. Mgt" = X,
         codeunit "JMC Supplier Incident Mgt" = X,
+        codeunit "JMC Incident Vendor Reminder" = X,
+        codeunit "Item Tracking Data Collection" = X,
 
         // Codeunits de Business Central para registro de compras
         codeunit "Purch.-Post" = X,

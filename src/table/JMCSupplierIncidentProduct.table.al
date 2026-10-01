@@ -42,11 +42,9 @@ table 53321 "JMC Supplier Incident Product"
             Caption = 'Lot No.', Comment = 'ESP="Lote"';
             DataClassification = CustomerContent;
 
-            trigger OnValidate()
-            var
-                IncidentMgt: Codeunit "JMC Supplier Incident Mgt";
+            trigger OnLookup()
             begin
-                IncidentMgt.ValidateTrackedLot(Rec);
+                LookupLotNo();
             end;
         }
         field(8; "JMC Reservation Entry No."; Integer)
@@ -65,6 +63,26 @@ table 53321 "JMC Supplier Incident Product"
             CalcFormula = lookup("Reservation Entry"."Lot No." where("Entry No." = field("JMC Reservation Entry No.")));
             Editable = false;
         }
+        field(10; "JMC Tracking Source Type"; Integer)
+        {
+            Caption = 'Tracking Source Type', Comment = 'ESP="Tipo origen seguimiento"';
+            DataClassification = SystemMetadata;
+        }
+        field(11; "JMC Tracking Source ID"; Code[20])
+        {
+            Caption = 'Tracking Source ID', Comment = 'ESP="Nº origen seguimiento"';
+            DataClassification = SystemMetadata;
+        }
+        field(12; "JMC Tracking Source Subtype"; Integer)
+        {
+            Caption = 'Tracking Source Subtype', Comment = 'ESP="Subtipo origen seguimiento"';
+            DataClassification = SystemMetadata;
+        }
+        field(13; "JMC Observations"; Text[2048])
+        {
+            Caption = 'Observations', Comment = 'ESP="Observaciones"';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys
@@ -77,4 +95,35 @@ table 53321 "JMC Supplier Incident Product"
         {
         }
     }
+
+    local procedure LookupLotNo()
+    var
+        ItemLedgerEntry: Record "Item Ledger Entry";
+        TempLotNoInfo: Record "Lot No. Information" temporary;
+        LotLookup: Page "JMC Incident Lot Lookup";
+    begin
+        ItemLedgerEntry.SetLoadFields("Item No.", "Lot No.");
+        ItemLedgerEntry.SetRange("Item No.", "JMC Item No.");
+        ItemLedgerEntry.SetRange("Entry Type", ItemLedgerEntry."Entry Type"::Purchase);
+        ItemLedgerEntry.SetFilter("Remaining Quantity", '>0');
+        ItemLedgerEntry.SetFilter("Lot No.", '<>%1', '');
+        if ItemLedgerEntry.FindSet() then
+            repeat
+                if not TempLotNoInfo.Get("JMC Item No.", '', ItemLedgerEntry."Lot No.") then begin
+                    TempLotNoInfo.Init();
+                    TempLotNoInfo."Item No." := "JMC Item No.";
+                    TempLotNoInfo."Lot No." := ItemLedgerEntry."Lot No.";
+                    TempLotNoInfo.Insert();
+                end;
+            until ItemLedgerEntry.Next() = 0;
+
+        if TempLotNoInfo.Get("JMC Item No.", '', "JMC Lot No.") then;
+        LotLookup.SetLots(TempLotNoInfo);
+        LotLookup.SetRecord(TempLotNoInfo);
+        LotLookup.LookupMode(true);
+        if LotLookup.RunModal() = Action::LookupOK then begin
+            LotLookup.GetRecord(TempLotNoInfo);
+            Validate("JMC Lot No.", TempLotNoInfo."Lot No.");
+        end;
+    end;
 }

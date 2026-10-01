@@ -34,21 +34,10 @@ page 53322 "JMC Supplier Incident Products"
                     ApplicationArea = All;
                     Editable = false;
                 }
-                field("Lot No."; Rec."JMC Lot No.")
+                field("Lot No."; Rec."JMC Lot No.") { ApplicationArea = All; }
+                field(Observations; Rec."JMC Observations")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Select a lot assigned to this source document line.', Comment = 'ESP="Selecciona un lote asignado a esta línea del documento de origen."';
-
-                    trigger OnLookup(var Text: Text): Boolean
-                    var
-                        IncidentMgt: Codeunit "JMC Supplier Incident Mgt";
-                    begin
-                        if IncidentMgt.SelectTrackedLot(Rec) then begin
-                            Text := Rec."JMC Lot No.";
-                            CurrPage.Update(false);
-                        end;
-                        exit(true);
-                    end;
                 }
             }
         }

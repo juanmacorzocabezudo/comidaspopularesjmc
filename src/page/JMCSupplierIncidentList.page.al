@@ -20,6 +20,8 @@ page 53306 "JMC Supplier Incident List"
                 field(Item; Rec."JMC Item No.") { ApplicationArea = All; }
                 field("Detected By"; Rec."JMC Detected By") { ApplicationArea = All; }
                 field(Recurring; Rec."JMC Recurring Incident") { ApplicationArea = All; }
+                field("Notify Vendor"; Rec."JMC Notify Vendor") { ApplicationArea = All; }
+                field("Vendor Responded"; Rec."JMC Vendor Responded") { ApplicationArea = All; }
                 field("Credit Memo Registered"; Rec."JMC Credit Memo Registered") { ApplicationArea = All; }
             }
         }

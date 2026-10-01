@@ -128,6 +128,16 @@ table 53302 "JMC Supplier Incident"
             Caption = 'Credit Memo Required', Comment = 'ESP="Abono obligatorio"';
             DataClassification = CustomerContent;
         }
+        field(24; "JMC Notify Vendor"; Boolean)
+        {
+            Caption = 'Notify Vendor', Comment = 'ESP="Notificar al proveedor"';
+            DataClassification = CustomerContent;
+        }
+        field(25; "JMC Vendor Responded"; Boolean)
+        {
+            Caption = 'Vendor Responded', Comment = 'ESP="Proveedor ha respondido"';
+            DataClassification = CustomerContent;
+        }
     }
 
     keys

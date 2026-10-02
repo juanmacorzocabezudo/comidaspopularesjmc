@@ -12,7 +12,6 @@ tableextension 53104 "JMC Purchase Header" extends "Purchase Header"
             var
                 PurchLine: Record "Purchase Line";
             begin
-                // Update all existing lines with the new reason code
                 PurchLine.SetRange("Document Type", Rec."Document Type");
                 PurchLine.SetRange("Document No.", Rec."No.");
                 if PurchLine.FindSet(true) then
@@ -34,7 +33,6 @@ tableextension 53104 "JMC Purchase Header" extends "Purchase Header"
             var
                 PurchLine: Record "Purchase Line";
             begin
-                // Update all existing lines with the new method code
                 PurchLine.SetRange("Document Type", Rec."Document Type");
                 PurchLine.SetRange("Document No.", Rec."No.");
                 if PurchLine.FindSet(true) then

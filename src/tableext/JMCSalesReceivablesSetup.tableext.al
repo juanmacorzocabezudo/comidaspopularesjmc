@@ -73,5 +73,33 @@ tableextension 53117 "JMC Sales & Receivables Setup" extends "Sales & Receivable
             DataClassification = CustomerContent;
             TableRelation = Tipo;
         }
+        field(53114; "JMC Person Task Res. Assign."; Code[10])
+        {
+            Caption = 'Person Task Res. Assignment', Comment = 'ESP="Tarea Persona Asig. Recursos"';
+            DataClassification = CustomerContent;
+            TableRelation = "Work Type";
+        }
+        field(53115; "JMC Machine Task Res. Assign."; Code[10])
+        {
+            Caption = 'Machine Task Res. Assignment', Comment = 'ESP="Tarea Máquina Asig. Recursos"';
+            DataClassification = CustomerContent;
+            TableRelation = "Work Type";
+        }
     }
+
+    procedure GetResAssignmentTask(ResourceCode: Code[20]): Code[10]
+    var
+        Resource: Record Resource;
+    begin
+        if not Resource.Get(ResourceCode) then
+            exit('');
+        if not Get() then
+            exit('');
+        case Resource.Type of
+            Resource.Type::Person:
+                exit("JMC Person Task Res. Assign.");
+            Resource.Type::Machine:
+                exit("JMC Machine Task Res. Assign.");
+        end;
+    end;
 }

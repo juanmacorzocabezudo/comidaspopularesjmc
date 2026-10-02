@@ -89,12 +89,14 @@ table 53116 "JMC Resource Assignment"
             trigger OnValidate()
             var
                 ResourceRec: Record Resource;
+                SalesSetup: Record "Sales & Receivables Setup";
             begin
                 if "Resource Code" <> '' then begin
                     ResourceRec.Get("Resource Code");
                     "Unit of Measure" := ResourceRec."Base Unit of Measure";
                     "Unit Cost" := ResourceRec."Unit Cost";
                     Description := ResourceRec.Name;
+                    "Task Performed" := SalesSetup.GetResAssignmentTask("Resource Code");
                 end else begin
                     Description := '';
                     "Unit of Measure" := '';

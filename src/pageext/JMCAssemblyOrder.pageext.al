@@ -1,4 +1,4 @@
-pageextension 53310 "JMC Purchase Order" extends "Purchase Order"
+pageextension 53311 "JMC Assembly Order" extends "Assembly Order"
 {
     actions
     {
@@ -16,7 +16,7 @@ pageextension 53310 "JMC Purchase Order" extends "Purchase Order"
                 var
                     IncidentMgt: Codeunit "JMC Supplier Incident Mgt";
                 begin
-                    IncidentMgt.CreateFromPurchaseOrder(Rec);
+                    IncidentMgt.CreateFromAssemblyOrder(Rec);
                 end;
             }
         }
@@ -34,7 +34,7 @@ pageextension 53310 "JMC Purchase Order" extends "Purchase Order"
                 var
                     Incident: Record "JMC Supplier Incident";
                 begin
-                    Incident.SetRange("JMC Source Type", Incident."JMC Source Type"::"Purchase Order");
+                    Incident.SetRange("JMC Source Type", Incident."JMC Source Type"::"Assembly Order");
                     Incident.SetRange("JMC Source Document No.", Rec."No.");
                     Page.Run(Page::"JMC Supplier Incident List", Incident);
                 end;

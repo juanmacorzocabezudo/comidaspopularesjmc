@@ -1167,77 +1167,17 @@
           <note from="Developer" annotates="general" priority="2">ESP="Este es un recordatorio automático que se envía una vez al día mientras la incidencia esté pendiente de respuesta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType AutoNoticeLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 4119188100" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Corrective action (immediate solution): measures applied to correct the affected lot or service.</source>
-          <target>Acción correctiva (solución inmediata): medidas aplicadas para corregir el lote o servicio afectado.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Acción correctiva (solución inmediata): medidas aplicadas para corregir el lote o servicio afectado."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType CorrectiveActionLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 3569966352" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Detailed description of the failure</source>
-          <target>Descripción detallada del fallo</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción detallada del fallo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType DescriptionLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 2599120625" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Detected by</source>
-          <target>Detectado por</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Detectado por"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType DetectedByLbl</note>
-        </trans-unit>
         <trans-unit id="Codeunit 3522885276 - NamedType 514421613" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dear %1,</source>
           <target>Estimado proveedor %1:</target>
           <note from="Developer" annotates="general" priority="2">ESP="Estimado proveedor %1:"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType GreetingLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 301090539" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Incident code</source>
-          <target>Código de incidencia</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Código de incidencia"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType IncidentCodeLbl</note>
-        </trans-unit>
         <trans-unit id="Codeunit 3522885276 - NamedType 3783589672" size-unit="char" translate="yes" xml:space="preserve">
-          <source>We are writing to follow up on incident %1, registered on %2. We have not yet received your reply, so we are sending you the details again in case they were overlooked.</source>
-          <target>Nos ponemos en contacto con ustedes para hacer seguimiento de la incidencia %1, registrada el %2. Todavía no hemos recibido su respuesta, por lo que les volvemos a enviar los datos por si hubieran pasado desapercibidos.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nos ponemos en contacto con ustedes para hacer seguimiento de la incidencia %1, registrada el %2. Todavía no hemos recibido su respuesta, por lo que les volvemos a enviar los datos por si hubieran pasado desapercibidos."</note>
+          <source>We are writing to follow up on incident %1, registered on %2. We kindly ask you to send us a reply as soon as possible.</source>
+          <target>Nos ponemos en contacto con ustedes para hacer seguimiento de la incidencia %1, registrada el %2. Les solicitamos el favor de enviar una respuesta a la mayor brevedad posible.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nos ponemos en contacto con ustedes para hacer seguimiento de la incidencia %1, registrada el %2. Les solicitamos el favor de enviar una respuesta a la mayor brevedad posible."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType IntroLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 1060950009" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Issue date</source>
-          <target>Fecha de emisión</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha de emisión"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType IssueDateLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 3120216939" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Description</source>
-          <target>Descripción</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType ItemDescriptionLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 2359003977" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Item</source>
-          <target>Producto</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType ItemLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 2729720791" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Lot</source>
-          <target>Lote</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Lote"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType LotLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 243617060" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Preventive action (future): measures implemented to ensure it does not happen again.</source>
-          <target>Acción preventiva (a futuro): medidas implantadas para asegurar que no vuelva a ocurrir.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Acción preventiva (a futuro): medidas implantadas para asegurar que no vuelva a ocurrir."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType PreventiveActionLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 2174691427" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Quantity</source>
-          <target>Cantidad</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType QuantityLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3522885276 - NamedType 3476006268" size-unit="char" translate="yes" xml:space="preserve">
           <source>You can simply reply to this email with this information. If you need any additional documentation (photos, delivery notes, etc.), please do not hesitate to ask us.</source>
@@ -1251,53 +1191,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Les agradeceríamos que, cuando les sea posible, la revisaran y nos hicieran llegar su análisis, para poder cerrarla conjuntamente."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType RequestLbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 931938674" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Person in charge and deadline for each action.</source>
-          <target>Responsable y fecha límite de cada acción.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Responsable y fecha límite de cada acción."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType ResponsibleLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 3323883687" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Origin of the problem (root cause): technical, human or process reason that caused the incident.</source>
-          <target>Origen del problema (causa raíz): motivo técnico, humano o de proceso que originó la incidencia.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Origen del problema (causa raíz): motivo técnico, humano o de proceso que originó la incidencia."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType RootCauseLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 1082944718" size-unit="char" translate="yes" xml:space="preserve">
-          <source>1. General incident information</source>
-          <target>1. Datos generales de la incidencia</target>
-          <note from="Developer" annotates="general" priority="2">ESP="1. Datos generales de la incidencia"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType Section1Lbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 1261251435" size-unit="char" translate="yes" xml:space="preserve">
-          <source>2. Description of the problem detected</source>
-          <target>2. Descripción del problema detectado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="2. Descripción del problema detectado"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType Section2Lbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 666532138" size-unit="char" translate="yes" xml:space="preserve">
-          <source>To close the incident, we need you to tell us:</source>
-          <target>Para poder cerrar la incidencia, necesitaríamos que nos indicaran:</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Para poder cerrar la incidencia, necesitaríamos que nos indicaran:"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType Section3IntroLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 66311116" size-unit="char" translate="yes" xml:space="preserve">
-          <source>3. Root cause analysis and action plan</source>
-          <target>3. Análisis de causa raíz y plan de acción</target>
-          <note from="Developer" annotates="general" priority="2">ESP="3. Análisis de causa raíz y plan de acción"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType Section3Lbl</note>
-        </trans-unit>
         <trans-unit id="Codeunit 3522885276 - NamedType 3058433994" size-unit="char" translate="yes" xml:space="preserve">
           <source>Kind regards,&lt;br&gt;Quality Department&lt;br&gt;%1</source>
           <target>Un cordial saludo,&lt;br&gt;Departamento de Calidad&lt;br&gt;%1</target>
           <note from="Developer" annotates="general" priority="2">ESP="Un cordial saludo,&lt;br&gt;Departamento de Calidad&lt;br&gt;%1"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType SignatureLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 3761319641" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Order / Receipt No.</source>
-          <target>Nº pedido / albarán</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº pedido / albarán"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType SourceDocLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3522885276 - NamedType 3871721722" size-unit="char" translate="yes" xml:space="preserve">
           <source>Follow-up on incident %1 - %2</source>
@@ -1310,12 +1208,6 @@
           <target>Muchas gracias por su colaboración.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Muchas gracias por su colaboración."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType ThanksLbl</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 3522885276 - NamedType 1163969659" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Vendor name</source>
-          <target>Nombre del proveedor</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre del proveedor"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Incident Vendor Reminder - NamedType VendorNameLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3285737940 - Method 1395175847 - NamedType 2951323841" size-unit="char" translate="yes" xml:space="preserve">
           <source>There are no journal lines to register.</source>
@@ -4353,6 +4245,144 @@
           <target>Confirmar eliminación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar eliminación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Delete Empty Price Lines - Control ConfirmDeletion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident Details</source>
+          <target>Datos de la incidencia de proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Datos de la incidencia de proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 4119188100" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Corrective action: measures applied to correct the affected lot or service.</source>
+          <target>Acción correctiva: medidas aplicadas para corregir el lote o servicio afectado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Acción correctiva: medidas aplicadas para corregir el lote o servicio afectado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType CorrectiveActionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 1542941690" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Issue date</source>
+          <target>Fecha de emisión</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha de emisión"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType DateLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 3569966352" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detailed description of the failure</source>
+          <target>Descripción detallada del fallo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción detallada del fallo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType DescriptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2599120625" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detected by</source>
+          <target>Detectado por</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Detectado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType DetectedByLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 301090539" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Incident code</source>
+          <target>Código de incidencia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código de incidencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType IncidentCodeLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2359003977" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item</source>
+          <target>Producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ItemLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2729720791" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lot</source>
+          <target>Lote</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Lote"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType LotLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 243617060" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preventive action: measures implemented to ensure it does not happen again.</source>
+          <target>Acción preventiva: medidas implantadas para asegurar que no vuelva a ocurrir.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Acción preventiva: medidas implantadas para asegurar que no vuelva a ocurrir."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType PreventiveActionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2612743185" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ProductDescriptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 3139181098" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 | %2 | %3 | %4</source>
+          <target>%1 | %2 | %3 | %4</target>
+          <note from="Developer" annotates="general" priority="2">ESP="%1 | %2 | %3 | %4"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ProductHeaderLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2525017717" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 | %2 | %3 | %4</source>
+          <target>%1 | %2 | %3 | %4</target>
+          <note from="Developer" annotates="general" priority="2">ESP="%1 | %2 | %3 | %4"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ProductRowLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2555914758" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Products</source>
+          <target>Productos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Productos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ProductsLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 2174691427" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Cantidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType QuantityLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 931938674" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Person responsible and deadline for each action.</source>
+          <target>Persona responsable y fecha límite de cada acción.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Persona responsable y fecha límite de cada acción."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType ResponsibleLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 3323883687" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Root cause: technical, human or process reason that caused the incident.</source>
+          <target>Causa raíz: motivo técnico, humano o de proceso que originó la incidencia.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Causa raíz: motivo técnico, humano o de proceso que originó la incidencia."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType RootCauseLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 1082944718" size-unit="char" translate="yes" xml:space="preserve">
+          <source>1. General incident information</source>
+          <target>1. Datos generales de la incidencia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="1. Datos generales de la incidencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType Section1Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 1261251435" size-unit="char" translate="yes" xml:space="preserve">
+          <source>2. Description of the problem detected</source>
+          <target>2. Descripción del problema detectado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="2. Descripción del problema detectado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType Section2Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 666532138" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please provide the following information:</source>
+          <target>Les rogamos que indiquen la siguiente información:</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Les rogamos que indiquen la siguiente información:"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType Section3IntroLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 66311116" size-unit="char" translate="yes" xml:space="preserve">
+          <source>3. Root cause analysis and action plan</source>
+          <target>3. Análisis de causa raíz y plan de acción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="3. Análisis de causa raíz y plan de acción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType Section3Lbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 3238020532" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Order / Receipt No.</source>
+          <target>Nº pedido / albarán</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº pedido / albarán"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType SourceDocumentLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 1582893390" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Supplier Incident</source>
+          <target>Incidencia de proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia de proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType TitleLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3070092056 - NamedType 1485212386" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor name</source>
+          <target>Nombre del proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre del proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Incident Vendor PDF - NamedType VendorLbl</note>
         </trans-unit>
         <trans-unit id="Report 4144855433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Credit Memo Report</source>

@@ -101,6 +101,7 @@ permissionset 53100 "JMC CP BASE MGT"
         report "JMC Delete Empty Price Lines" = X,
         report "Sales Invoice Industry Report" = X,
         report "JMC Supplier Incident Report" = X,
+        report "JMC Incident Vendor PDF" = X,
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,

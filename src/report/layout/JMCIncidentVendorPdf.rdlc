@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:DataSourceID>00000000-0000-0000-0000-000000000001</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="Title">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!TitleCaption.Value &amp; " - " &amp; Fields!IncidentNo.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>16pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0in</Top>
+            <Left>0in</Left>
+            <Height>0.4in</Height>
+            <Width>7.67in</Width>
+          </Textbox>
+          <Textbox Name="Section1">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Section1Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.5in</Top>
+            <Left>0in</Left>
+            <Height>0.32in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <BackgroundColor>#404040</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.08in</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="GeneralLabels">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!IncidentCodeCaption.Value &amp; vbCrLf &amp; Fields!DateCaption.Value &amp; vbCrLf &amp; Fields!VendorCaption.Value &amp; vbCrLf &amp; Fields!SourceDocumentCaption.Value &amp; vbCrLf &amp; Fields!LotCaption.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.9in</Top>
+            <Left>0in</Left>
+            <Height>1.15in</Height>
+            <Width>2.25in</Width>
+            <Style>
+              <BackgroundColor>#F2F2F2</BackgroundColor>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.06in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="GeneralValues">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!IncidentNo.Value &amp; vbCrLf &amp; Format(Fields!IncidentDate.Value, "dd/MM/yyyy") &amp; vbCrLf &amp; Fields!VendorName.Value &amp; vbCrLf &amp; Fields!SourceDocument.Value &amp; vbCrLf &amp; Fields!LotNo.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>0.9in</Top>
+            <Left>2.25in</Left>
+            <Height>1.15in</Height>
+            <Width>5.42in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.06in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="ProductsCaption">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!ProductsCaption.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>10pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.15in</Top>
+            <Left>0in</Left>
+            <Height>0.25in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <BackgroundColor>#E7E6E6</BackgroundColor>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="ProductList">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!ProductList.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.4in</Top>
+            <Left>0in</Left>
+            <Height>1.8in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.06in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="Section2">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Section2Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.35in</Top>
+            <Left>0in</Left>
+            <Height>0.32in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <BackgroundColor>#404040</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.08in</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="ProblemDetails">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!DescriptionCaption.Value &amp; vbCrLf &amp; Fields!IncidentDescription.Value &amp; vbCrLf &amp; vbCrLf &amp; Fields!DetectedByCaption.Value &amp; ": " &amp; Fields!DetectedBy.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.75in</Top>
+            <Left>0in</Left>
+            <Height>1.25in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.06in</PaddingTop>
+            </Style>
+          </Textbox>
+          <Textbox Name="Section3">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Section3Caption.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>12pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.15in</Top>
+            <Left>0in</Left>
+            <Height>0.32in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <BackgroundColor>#404040</BackgroundColor>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.08in</PaddingLeft>
+            </Style>
+          </Textbox>
+          <Textbox Name="ActionPlan">
+            <CanGrow>true</CanGrow>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Fields!Section3Intro.Value &amp; vbCrLf &amp; vbCrLf &amp; "- " &amp; Fields!RootCauseText.Value &amp; vbCrLf &amp; vbCrLf &amp; "- " &amp; Fields!CorrectiveActionText.Value &amp; vbCrLf &amp; vbCrLf &amp; "- " &amp; Fields!PreventiveActionText.Value &amp; vbCrLf &amp; vbCrLf &amp; "- " &amp; Fields!ResponsibleText.Value</Value>
+                    <Style>
+                      <FontFamily>Arial</FontFamily>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.55in</Top>
+            <Left>0in</Left>
+            <Height>2in</Height>
+            <Width>7.67in</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+                <Color>#CCCCCC</Color>
+              </Border>
+              <PaddingLeft>0.08in</PaddingLeft>
+              <PaddingTop>0.06in</PaddingTop>
+            </Style>
+          </Textbox>
+        </ReportItems>
+        <Height>8.7in</Height>
+        <Style />
+      </Body>
+      <Width>7.67in</Width>
+      <Page>
+        <PageHeight>11.69in</PageHeight>
+        <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.3in</LeftMargin>
+        <RightMargin>0.3in</RightMargin>
+        <TopMargin>0.3in</TopMargin>
+        <BottomMargin>0.3in</BottomMargin>
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="IncidentNo">
+          <DataField>IncidentNo</DataField>
+        </Field>
+        <Field Name="IncidentDate">
+          <DataField>IncidentDate</DataField>
+        </Field>
+        <Field Name="VendorName">
+          <DataField>VendorName</DataField>
+        </Field>
+        <Field Name="SourceDocument">
+          <DataField>SourceDocument</DataField>
+        </Field>
+        <Field Name="LotNo">
+          <DataField>LotNo</DataField>
+        </Field>
+        <Field Name="IncidentDescription">
+          <DataField>IncidentDescription</DataField>
+        </Field>
+        <Field Name="DetectedBy">
+          <DataField>DetectedBy</DataField>
+        </Field>
+        <Field Name="ProductList">
+          <DataField>ProductList</DataField>
+        </Field>
+        <Field Name="TitleCaption">
+          <DataField>TitleCaption</DataField>
+        </Field>
+        <Field Name="Section1Caption">
+          <DataField>Section1Caption</DataField>
+        </Field>
+        <Field Name="Section2Caption">
+          <DataField>Section2Caption</DataField>
+        </Field>
+        <Field Name="Section3Caption">
+          <DataField>Section3Caption</DataField>
+        </Field>
+        <Field Name="IncidentCodeCaption">
+          <DataField>IncidentCodeCaption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="VendorCaption">
+          <DataField>VendorCaption</DataField>
+        </Field>
+        <Field Name="SourceDocumentCaption">
+          <DataField>SourceDocumentCaption</DataField>
+        </Field>
+        <Field Name="LotCaption">
+          <DataField>LotCaption</DataField>
+        </Field>
+        <Field Name="ProductsCaption">
+          <DataField>ProductsCaption</DataField>
+        </Field>
+        <Field Name="DescriptionCaption">
+          <DataField>DescriptionCaption</DataField>
+        </Field>
+        <Field Name="DetectedByCaption">
+          <DataField>DetectedByCaption</DataField>
+        </Field>
+        <Field Name="Section3Intro">
+          <DataField>Section3Intro</DataField>
+        </Field>
+        <Field Name="RootCauseText">
+          <DataField>RootCauseText</DataField>
+        </Field>
+        <Field Name="CorrectiveActionText">
+          <DataField>CorrectiveActionText</DataField>
+        </Field>
+        <Field Name="PreventiveActionText">
+          <DataField>PreventiveActionText</DataField>
+        </Field>
+        <Field Name="ResponsibleText">
+          <DataField>ResponsibleText</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

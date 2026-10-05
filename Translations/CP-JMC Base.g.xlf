@@ -1968,26 +1968,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Se han registrado %1 linea(s) en registros operativos."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Oper. Rec. Jnl. Mgt - Method RegisterJournalLines - NamedType jmcLinesRegisteredMsg</note>
         </trans-unit>
-        <trans-unit id="Codeunit 983041636 - NamedType 646235782" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Select products from the same vendor to create a supplier incident.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Seleccione productos del mismo proveedor para crear una incidencia."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType MultipleVendorsErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 983041636 - NamedType 2857496992" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The document does not contain item lines.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="El documento no contiene líneas de producto."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoItemLinesErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 983041636 - NamedType 4185921066" size-unit="char" translate="yes" xml:space="preserve">
-          <source>This incident is not linked to a purchase order or an assembly order.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoSourceDocumentErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 983041636 - NamedType 704617987" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The source document line for this product could not be found.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="No se encuentra la línea de producto en el documento de origen."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType SourceDocumentLineErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 647628184 - NamedType 3727982247" size-unit="char" translate="yes" xml:space="preserve">
           <source>Journal batch %2 of template %1 must be empty before creating the payroll entries.</source>
           <note from="Developer" annotates="general" priority="2">ESP="La sección %2 del libro %1 debe estar vacía antes de crear los asientos de nómina."</note>
@@ -2177,6 +2157,26 @@
           <source>There are %1 payrolls with warnings. Do you want to create the journal anyway?</source>
           <note from="Developer" annotates="general" priority="2">ESP="Hay %1 nóminas con avisos. ¿Desea crear el diario igualmente?"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCWarningsQst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 646235782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select products from the same vendor to create a supplier incident.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccione productos del mismo proveedor para crear una incidencia."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType MultipleVendorsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 2857496992" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The document does not contain item lines.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="El documento no contiene líneas de producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoItemLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 4185921066" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This incident is not linked to a purchase order or an assembly order.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoSourceDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 704617987" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The source document line for this product could not be found.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No se encuentra la línea de producto en el documento de origen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType SourceDocumentLineErr</note>
         </trans-unit>
         <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Resource Assignment</source>
@@ -2672,6 +2672,11 @@
           <source>Event Variety</source>
           <note from="Developer" annotates="general" priority="2">ESP="Variedad Evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Eventos API - Control variedadEvento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3546027412 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Accounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuentas por organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Garnishment Account Setup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3251106580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Attachments</source>
@@ -6318,6 +6323,36 @@
           <note from="Developer" annotates="general" priority="2">ESP="Pasivo no corriente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue Non-Current Liability - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Enum 4163207473 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment Authority</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismo embargante"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 451910705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Court</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Juzgado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Court - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otros"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 680292238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Provincial Council</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diputación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Provincial Council - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 3033105415 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Social Security (TGSS)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social (TGSS)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Social Security - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4163207473 - EnumValue 392035718 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Agency (AEAT)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="AEAT"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Tax Agency - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Enum 3111082745 - EnumValue 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer</source>
           <note from="Developer" annotates="general" priority="2">ESP="Cliente"</note>
@@ -6357,6 +6392,156 @@
           <source>Purchase Order</source>
           <note from="Developer" annotates="general" priority="2">ESP="Pedido de compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Source Type - EnumValue Purchase Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Concept Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo concepto nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2473906886 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Advance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Anticipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Advance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2444719103 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bonus</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Primas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Bonus - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1863936113 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Company Social Security</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social a cargo de la empresa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Company SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1686543090 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Employee Loan</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo a empleado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Employee Loan - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1671071299 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Pay Accrual</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Devengo paga extra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Extra Pay Accrual - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 876350389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Extra Pay Provision</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Provisión paga extra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Extra Pay Provision - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1596125630 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Garnishment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Embargo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Garnishment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 430502041 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IRPF Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="HP acreedora por IRPF"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue IRPF Payable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 19041443 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Medical Insurance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguro médico"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Medical Insurance - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2174406897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Pay Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Remuneraciones pendientes de pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Net Pay - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otros"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 2012713197 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other Deduction</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Otras deducciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Other Deduction - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1722162279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment in Kind</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Retribución en especie"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Payment in Kind - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3741321381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Related Party Loan Interest</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo parte vinculada - intereses"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Related Party Loan Interest - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 556150353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Related Party Loan Principal</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Préstamo parte vinculada - amortización"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Related Party Loan Principal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3900201624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salaries and Wages</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Sueldos y salarios"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Salary - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 1459342142 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Self-Employed Social Security</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Seguridad Social autónomos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue Self-Employed SS - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 59596027 - EnumValue 3040601182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Social Security Payable</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Organismos Seguridad Social acreedores"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Concept Type - EnumValue SS Payable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1968908716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Excel Column</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Columna Excel nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Excel Column - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Import Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado importación nóminas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 399134067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Created</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Diario creado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Journal Created - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 3481143665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 3208180638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Processed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Procesado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Processed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 392677356 - EnumValue 2931278654 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Validated</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Validado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Import Status - EnumValue Validated - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Validation Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado validación nómina"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 4065541250 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Correct</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Correcta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Correct - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 2248886284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Error"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Error - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 3481143665 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pending</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Pending - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4144882810 - EnumValue 3955473374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Aviso"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Payroll Validation Status - EnumValue Warning - Property Caption</note>
         </trans-unit>
         <trans-unit id="PermissionSet 1866728888 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>JMC CP Base Management</source>

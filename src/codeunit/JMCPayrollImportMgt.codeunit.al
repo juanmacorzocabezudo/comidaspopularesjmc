@@ -47,8 +47,13 @@ codeunit 53150 "JMC Payroll Import Mgt."
         JMCIssueSeparatorTok: Label '; ', Locked = true;
 
     procedure CreateAndImport(var jmcPayrollHeader: Record "JMC Payroll Import Header"): Boolean
+    var
+        jmcSetup: Record "JMC Payroll Import Setup";
     begin
+        jmcSetup.GetSetup();
         jmcPayrollHeader.Init();
+        jmcPayrollHeader."JMC Journal Template Name" := jmcSetup."JMC Journal Template Name";
+        jmcPayrollHeader."JMC Journal Batch Name" := jmcSetup."JMC Journal Batch Name";
         jmcPayrollHeader.Insert(true);
         Commit();
         ImportExcel(jmcPayrollHeader);
@@ -108,8 +113,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
         jmcPayrollHeader.Get(jmcPayrollHeader."JMC No.");
         jmcPayrollHeader.TestEditable();
         jmcSetup.GetSetup();
-        jmcSetup.TestField("JMC Journal Template Name");
-        jmcSetup.TestField("JMC Journal Batch Name");
+        EnsureJournalSetup(jmcPayrollHeader, jmcSetup);
         InitializeDefaults();
 
         jmcPayrollLine.SetRange("JMC Import No.", jmcPayrollHeader."JMC No.");
@@ -118,7 +122,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
         repeat
             if not EntriesExist(jmcPayrollLine) then
                 GenerateEntries(jmcPayrollLine);
-            ValidateLine(jmcPayrollLine, jmcSetup);
+            ValidateLine(jmcPayrollLine, jmcSetup, jmcPayrollHeader."JMC Journal Template Name");
             jmcPayrollLine.Modify(false);
             case jmcPayrollLine."JMC Validation Status" of
                 jmcPayrollLine."JMC Validation Status"::Error:
@@ -166,10 +170,9 @@ codeunit 53150 "JMC Payroll Import Mgt."
             Error(JMCHasErrorsErr, jmcPayrollHeader."JMC No. of Errors");
 
         jmcSetup.GetSetup();
-        jmcSetup.TestField("JMC Journal Template Name");
-        jmcSetup.TestField("JMC Journal Batch Name");
-        jmcGenJnlTemplate.Get(jmcSetup."JMC Journal Template Name");
-        jmcGenJnlBatch.Get(jmcSetup."JMC Journal Template Name", jmcSetup."JMC Journal Batch Name");
+        EnsureJournalSetup(jmcPayrollHeader, jmcSetup);
+        jmcGenJnlTemplate.Get(jmcPayrollHeader."JMC Journal Template Name");
+        jmcGenJnlBatch.Get(jmcPayrollHeader."JMC Journal Template Name", jmcPayrollHeader."JMC Journal Batch Name");
         if jmcGenJnlBatch."No. Series" = '' then
             jmcSetup.TestField("JMC Document No. Series");
         jmcGenJnlLine.SetRange("Journal Template Name", jmcGenJnlBatch."Journal Template Name");
@@ -227,6 +230,19 @@ codeunit 53150 "JMC Payroll Import Mgt."
             Error(JMCNoJournalErr);
         jmcGenJnlBatch.Get(jmcPayrollHeader."JMC Journal Template Name", jmcPayrollHeader."JMC Journal Batch Name");
         jmcGenJnlManagement.TemplateSelectionFromBatch(jmcGenJnlBatch);
+    end;
+
+    local procedure EnsureJournalSetup(var jmcPayrollHeader: Record "JMC Payroll Import Header"; var jmcSetup: Record "JMC Payroll Import Setup")
+    begin
+        if (jmcPayrollHeader."JMC Journal Template Name" = '') or (jmcPayrollHeader."JMC Journal Batch Name" = '') then begin
+            jmcSetup.TestField("JMC Journal Template Name");
+            jmcSetup.TestField("JMC Journal Batch Name");
+            jmcPayrollHeader."JMC Journal Template Name" := jmcSetup."JMC Journal Template Name";
+            jmcPayrollHeader."JMC Journal Batch Name" := jmcSetup."JMC Journal Batch Name";
+            jmcPayrollHeader.Modify(false);
+        end;
+        jmcPayrollHeader.TestField("JMC Journal Template Name");
+        jmcPayrollHeader.TestField("JMC Journal Batch Name");
     end;
 
     procedure MarkProcessed(var jmcPayrollHeader: Record "JMC Payroll Import Header")
@@ -668,7 +684,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
         jmcPayrollEntry.Insert(false);
     end;
 
-    local procedure ValidateLine(var jmcPayrollLine: Record "JMC Payroll Import Line"; var jmcSetup: Record "JMC Payroll Import Setup")
+    local procedure ValidateLine(var jmcPayrollLine: Record "JMC Payroll Import Line"; var jmcSetup: Record "JMC Payroll Import Setup"; jmcJournalTemplateName: Code[10])
     var
         jmcResource: Record Resource;
         jmcColumnMapping: Record "JMC Payroll Column Mapping";
@@ -702,7 +718,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
         if jmcPayrollLine."JMC Posting Date" = 0D then
             AddIssue(jmcMessage, jmcHasError, jmcHasWarning, true, JMCNoDateErr)
         else
-            if jmcGenJnlCheckLine.DateNotAllowed(jmcPayrollLine."JMC Posting Date", jmcSetup."JMC Journal Template Name") then
+            if jmcGenJnlCheckLine.DateNotAllowed(jmcPayrollLine."JMC Posting Date", jmcJournalTemplateName) then
                 AddIssue(jmcMessage, jmcHasError, jmcHasWarning, true, StrSubstNo(JMCDateNotAllowedErr, jmcPayrollLine."JMC Posting Date"));
 
         foreach jmcOrdinal in Enum::"JMC Payroll Excel Column".Ordinals() do begin

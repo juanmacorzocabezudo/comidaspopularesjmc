@@ -2589,6 +2589,34 @@
           <note from="Developer" annotates="general" priority="2">ESP="Hay %1 nóminas con avisos. ¿Desea crear el diario igualmente?"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCWarningsQst</note>
         </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 646235782" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select products from the same vendor to create a supplier incident.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccione productos del mismo proveedor para crear una incidencia."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType MultipleVendorsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 2857496992" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The document does not contain item lines.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El documento no contiene líneas de producto."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoItemLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 4185921066" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This incident is not linked to a purchase order or an assembly order.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Esta incidencia no está vinculada a un pedido de compra ni a un pedido de ensamblado."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType NoSourceDocumentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 983041636 - NamedType 704617987" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The source document line for this product could not be found.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No se encuentra la línea de producto en el documento de origen."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Supplier Incident Mgt - NamedType SourceDocumentLineErr</note>
+        </trans-unit>
         <trans-unit id="Page 3505042124 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Resource Assignment</source>
           <target>Asignación Recursos Evento</target>
@@ -3188,6 +3216,62 @@
           <target>Cuentas por organismo embargante</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cuentas por organismo embargante"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Garnishment Account Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attachments</source>
+          <target>[NAB: SUGGESTION]Documentos adjuntos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Documentos adjuntos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - NamedType 3223898282" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do you want to delete the selected attachment?</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="¿Desea eliminar el documento adjunto seleccionado?"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - NamedType DeleteAttachmentQst</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - NamedType 2637267728" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select a file to attach.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Seleccione el archivo que desea adjuntar."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - NamedType SelectFileLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - Action 103491744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Add Attachment</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Añadir documento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Action JMC Add Attachment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - Action 3115388400 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete Attachment</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Eliminar documento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Action JMC Delete Attachment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - Action 1189477067 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Download Attachment</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descargar documento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Action JMC Download Attachment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3251106580 - Action 1030753948 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>View Attachment</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ver documento"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Attachments - Action JMC View Attachment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3090762393 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Lots</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Lotes"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Incident Lot Lookup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 79260915 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Internal Notes</source>
@@ -7463,8 +7547,9 @@
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source> </source>
-          <target> </target>
+          <target>[NAB: REVIEW] </target>
           <note from="Developer" annotates="general" priority="2"></note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source contains only white-space, consider using 'Locked = true' to avoid translation of unnecessary texts. This note can be toggled with the setting 'NAB.PreferLockedTranslations'.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC CP Categories - EnumValue   - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2276326627 - EnumValue 2007263779 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -7550,6 +7635,62 @@
           <target>AEAT</target>
           <note from="Developer" annotates="general" priority="2">ESP="AEAT"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Garnishment Authority - EnumValue Tax Agency - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cliente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Customer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 2999086153 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factory Operators</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Operarios fábrica"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Factory Operators - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 3448339824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Other</source>
+          <target>[NAB: SUGGESTION]Otros</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Otro"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Other - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 1065337893 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Producción"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Production - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 1483341903 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quality</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calidad"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Quality - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3111082745 - EnumValue 1484878399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warehouse</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Almacén"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Detected By - EnumValue Warehouse - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 262965409 - EnumValue 1662713252 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assembly Order</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedido de ensamblado"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Source Type - EnumValue Assembly Order - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 262965409 - EnumValue 387971303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Purchase Order</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Pedido de compra"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Incident Source Type - EnumValue Purchase Order - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 59596027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payroll Concept Type</source>

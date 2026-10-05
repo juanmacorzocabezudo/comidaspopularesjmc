@@ -27,7 +27,7 @@ Documentos de referencia:
 
 ## Estructura del Excel
 
-- Formato: `.xlsx`, una hoja. Se lee con `Excel Buffer`.
+- Formato admitido: `.xlsx`, una hoja. Se lee con `Excel Buffer`.
 - En el ejemplo: filas 2–5 de título (`Moneda: Euro`, `PAGA TOTAL`, periodo, empresa), cabecera en la fila 8, datos desde la fila 9, `TOTAL EMPRESA` en la penúltima fila y `TOTAL TRABAJADORES EMPRESA = N` en la última.
 - El código del trabajador viene como texto (`'000001'`) y `FECHA COBRO` como fecha. Aun así, la lectura debe admitir la fecha como número serie de Excel o como texto `dd/mm/aaaa`.
 - La cabecera no está en una fila fija. Hay que localizarla buscando `TRABAJADOR`, `N.I.F.`, `TIPO PAGA` y `FECHA COBRO`. En el ejemplo está en la fila 8.

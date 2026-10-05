@@ -5104,6 +5104,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Action JMC View Incidents - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Control 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Purchase Order Method</source>
+          <target>Forma pedido</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Control JMC Purchase Order Method Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Control 1151955868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Purchase Order Reason</source>
+          <target>Motivo pedido compra</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Control JMC Purchase Order Reason Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3239250589 - Action 2747857051 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
           <source>View all purchase order lines.</source>
           <target>Ver todas las líneas de pedidos de compra.</target>

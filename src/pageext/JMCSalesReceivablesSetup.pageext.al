@@ -95,6 +95,16 @@ pageextension 53123 "JMC Sales & Receivables Setup" extends "Sales & Receivables
                 Caption = 'Event Type Res. Assignment', Comment = 'ESP="Tipo Evento Asig. Recursos"';
                 ToolTip = 'Specifies the event type to use in resource assignment when an event is selected.', Comment = 'ESP="Especifica el tipo de evento a usar en asignación de recursos cuando se selecciona un evento."';
             }
+            field("JMC Person Task Res. Assign."; Rec."JMC Person Task Res. Assign.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the task performed to use in resource assignment when the resource is of type Person.', Comment = 'ESP="Especifica la tarea realizada a usar en asignación de recursos cuando el recurso es de tipo Persona."';
+            }
+            field("JMC Machine Task Res. Assign."; Rec."JMC Machine Task Res. Assign.")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the task performed to use in resource assignment when the resource is of type Machine.', Comment = 'ESP="Especifica la tarea realizada a usar en asignación de recursos cuando el recurso es de tipo Máquina."';
+            }
         }
     }
 }

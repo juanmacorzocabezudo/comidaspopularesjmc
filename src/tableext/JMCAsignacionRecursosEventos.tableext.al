@@ -29,6 +29,16 @@ tableextension 53130 "JMC Asignacion Recursos" extends "Asignacion Recursos Even
                     Rec."JMC Tipo" := SalesSetup."JMC Event Type Res. Assign.";
             end;
         }
+        modify("Codigo Recurso")
+        {
+            trigger OnAfterValidate()
+            var
+                SalesSetup: Record "Sales & Receivables Setup";
+            begin
+                if Rec."Codigo Recurso" <> '' then
+                    Rec."Tarea Realizada" := SalesSetup.GetResAssignmentTask(Rec."Codigo Recurso");
+            end;
+        }
         field(53100; "JMC Event Date"; Date)
         {
             Caption = 'Event Date', Comment = 'ESP="Fecha Evento"';

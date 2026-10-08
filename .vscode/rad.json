@@ -1,1 +1,1 @@
-﻿{"Added":[],"Modified":[],"Removed":[]}
+﻿{"Added":[{"Id":53105,"Kind":12,"Name":"JMC Det. Cust. Ledger API","Namespace":""},{"Id":53104,"Kind":12,"Name":"JMC Customer Ledger Entry API","Namespace":""}],"Modified":[],"Removed":[{"Id":53105,"Kind":16,"Name":"JMC Duplicate Price Lines","Namespace":""},{"Id":53102,"Kind":17,"Name":"JMC Price List Line","Namespace":""},{"Id":53100,"Kind":16,"Name":"JMC Purchase Price List Lines","Namespace":""}]}

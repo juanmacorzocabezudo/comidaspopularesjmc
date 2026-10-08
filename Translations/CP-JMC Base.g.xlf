@@ -4043,6 +4043,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Facturas sin registrar (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
@@ -4307,6 +4317,16 @@
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2462045702 - Control 2415219557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3740874685">
           <source>Specifies if the Industry report should be used when sending this document by email.</source>
@@ -4607,6 +4627,16 @@
           <source>Cannot set status to Inactive because there are price list lines with empty product. Please delete or complete these lines first.</source>
           <note from="Developer" annotates="general" priority="2">ESP="No se puede establecer el estado como Inactivo porque existen líneas de lista de precios con el producto vacío. Por favor, elimine o complete estas líneas primero."</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Header - Change Status - Method OnBeforeValidate - NamedType EmptyLinesErr</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 741081079 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Purchase Order Method</source>

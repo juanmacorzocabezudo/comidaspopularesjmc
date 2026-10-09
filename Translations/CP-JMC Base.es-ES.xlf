@@ -2259,20 +2259,6 @@
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCliente - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 378075566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCompletoCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 4071540476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCompletoModSistema - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 4267566259 - Control 2005353397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Succeeded Company Name</source>
           <target>[NAB: NOT TRANSLATED]</target>
@@ -2293,20 +2279,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreSeccionDiario - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 1506806841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreUsuarioCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 1242101271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreUsuarioModSistema - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 1526511918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No.</source>
@@ -2793,40 +2765,12 @@
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control modificadoPorSistema - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 346927495 - Control 378075566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreCompletoCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 4071540476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreCompletoModSistema - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 346927495 - Control 1756992433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Journal Batch Name</source>
           <target>[NAB: NOT TRANSLATED]</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreSeccionDiario - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 1506806841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreUsuarioCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 1242101271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreUsuarioModSistema - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 346927495 - Control 1358625189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Application No.</source>
@@ -5284,6 +5228,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Añadir productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <target>Imprime el informe adjunto al correo de la incidencia de proveedor.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <target>Informe email proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2444126405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select Item Line</source>
           <target>Seleccionar línea de producto</target>
@@ -5307,6 +5263,18 @@
           <target>Imprimir incidencias</target>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Print Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <target>Imprime el informe adjunto al correo de la incidencia de proveedor.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <target>Informe email proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2208656402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Incident Products</source>
@@ -6082,6 +6050,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Facturas sin registrar (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Specifies the format of the purchase price.</source>
+          <target>Especifica el formato del precio de compra.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Format</source>
+          <target>Formato</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <target>Especifica el peso del producto en kilogramos.</target>
@@ -6399,6 +6379,18 @@
           <target>Familia</target>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Specifies the format of the purchase price.</source>
+          <target>Especifica el formato del precio de compra.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Format</source>
+          <target>Formato</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2462045702 - Control 2415219557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3740874685">
           <source>Specifies if the Industry report should be used when sending this document by email.</source>
@@ -6759,6 +6751,18 @@
           <target>No se puede establecer el estado como Inactivo porque existen líneas de lista de precios con el producto vacío. Por favor, elimine o complete estas líneas primero.</target>
           <note from="Developer" annotates="general" priority="2">ESP="No se puede establecer el estado como Inactivo porque existen líneas de lista de precios con el producto vacío. Por favor, elimine o complete estas líneas primero."</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Header - Change Status - Method OnBeforeValidate - NamedType EmptyLinesErr</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Specifies the format of the purchase price.</source>
+          <target>Especifica el formato del precio de compra.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Format</source>
+          <target>Formato</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 741081079 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Purchase Order Method</source>

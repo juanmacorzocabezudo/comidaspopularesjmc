@@ -1,5 +1,14 @@
 codeunit 53100 "JMC Events"
 {
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Price List Management", 'OnBeforeFindDuplicatePriceListLine', '', false, false)]
+    local procedure OnBeforeFindDuplicatePriceListLine(PriceListLine: Record "Price List Line"; var DuplicatePriceListLine: Record "Price List Line"; AsLineDefaults: Boolean; SearchInside: Boolean)
+    begin
+        if PriceListLine."Price Type" <> PriceListLine."Price Type"::Purchase then
+            exit;
+
+        DuplicatePriceListLine.SetRange("JMC Format", PriceListLine."JMC Format");
+    end;
+
     [EventSubscriber(ObjectType::Table, Database::"Document Attachment", 'OnAfterInitFieldsFromRecRef', '', false, false)]
     local procedure OnAfterInitIncidentAttachmentFields(var DocumentAttachment: Record "Document Attachment"; var RecRef: RecordRef)
     var

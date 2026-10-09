@@ -2573,6 +2573,841 @@
           <note from="Developer" annotates="general" priority="2">ESP="Total ingresos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cronus Statistics - Control TotalIncome - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 4267566259 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Ledger Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimiento de cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimientos de cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3552271746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Open</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abierto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control abierto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2216360505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prepayment</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Anticipo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control anticipo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 382342354 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Profit (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Beneficio (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control beneficioDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4256692925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate Interest</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Calcular intereses"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control calcularIntereses - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2738839733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed by Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cerrado por movimiento nº"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control cerradoPorMovimientoNro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3731750991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 3 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3900660014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 4 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 4"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3262963397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 5 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 5"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2625266780 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 6 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 6"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada6 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1987570163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 7 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 7"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada7 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2156479186 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shortcut Dimension 8 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 8"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada8 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1900638333 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Dimension 1 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión global 1"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionGlobal1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1262941716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Global Dimension 2 Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código dimensión global 2"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionGlobal2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3891292683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código divisa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDivisa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1016373509 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed by Currency Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código divisa cierre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDivisaCierre - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4206776748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Method Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código forma pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoMetodoPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2846220217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reason Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código motivo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoMotivo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3610828675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código origen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoOrigen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 278040486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Special Scheme Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código régimen especial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoRegimenEspecial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4225401382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IC Partner Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código socio IC"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoSocioIC - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 456405471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Terms Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código términos pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoTerminosPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2956017896 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salesperson Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código vendedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoVendedor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1977551605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Created At</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Creado el"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control creadoElSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2721101385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Created By</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Creado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control creadoPorSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2470172992 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipient Bank Account</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Cuenta bancaria destinatario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control cuentaBancariaDestinatario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2246125003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3825132382 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Discount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento factura (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descuentoFacturaDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2661571873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Discount Given (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento pago concedido (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descuentoPagoConcedidoDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 437910174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Payment Discount Possible</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento pago original posible"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descuentoPagoOriginalPosible - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4157069804 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Payment Discount Possible (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento pago original posible (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descuentoPagoOrigPosibleDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 58457641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Payment Discount Possible</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento pago pendiente posible"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control descuentoPagoPendientePosible - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2541412150 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Issued By Third Party</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Emitido por tercero"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control emitidoPorTercero - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 682808134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount (LCY) Statistics</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estadística importe (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control estadisticaImporteDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1386675074 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount (LCY) Statistics</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estadística importe pendiente (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control estadisticaImportePendienteDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4074254026 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dispute Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado de disputa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control estadoDisputa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2693071044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control estadoDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2344979709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exported to Payment File</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Exportado a fichero de pagos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control exportadoFicheroPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1635402802 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adjusted Currency Factor</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor divisa ajustado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control factorDivisaAjustado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3864597336 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Currency Factor</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor divisa original"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control factorDivisaOriginal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2845895821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed at Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha cierre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaCierre - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3052872468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Reporting Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha declaración IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaDeclaracionIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2320109952 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Discount Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha descuento pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaDescuentoPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4122454139 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 471023223 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Promised Pay Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha pago prometida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaPagoPrometida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3641947870 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaRegistro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2180474076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Discount Tolerance Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha tolerancia descuento pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaToleranciaDescuentoPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 501194782 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha vencimiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control fechaVencimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1145565148 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control grupoRegistroCliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1277121165 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimension Set ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id. conjunto dimensiones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control idConjuntoDimensiones - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 975623897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control identificador - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 29810861 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id. liquidación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control idLiquidacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3161749215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Direct Debit Mandate ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id. mandato domiciliación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control idMandatoAdeudoDirecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3121108053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id. usuario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control idUsuario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1526405002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount to Apply</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeALiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4018308875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed by Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe cerrado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeCerradoPor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2951373923 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed by Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe cerrado por (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeCerradoPorDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 615001810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe debe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeDebe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3151620570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe debe (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeDebeDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3868275830 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closed by Currency Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe divisa cierre"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeDivisaCierre - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1367405228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 277116976 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeHaber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2916119448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe haber (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeHaberDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1452536003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe original"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeOriginal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3334393771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Original Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe original (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importeOriginalDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3675906976 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe pendiente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importePendiente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1584211464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe pendiente (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control importePendienteDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2289751229 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closing Interest Calculated</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Intereses de cierre calculados"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control interesesCierreCalculados - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2550543582 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Message to Recipient</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Mensaje al destinatario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control mensajeDestinatario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 116778512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Modified At</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Modificado el"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control modificadoElSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3861523316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Modified By</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Modificado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control modificadoPorSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4255073143 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applying Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimiento liquidador"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control movimientoLiquidador - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2636578134 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimiento revertido nº"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control movimientoRevertidoNro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2855863580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Do Not Send To SII</source>
+          <note from="Developer" annotates="general" priority="2">ESP="No enviar al SII"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control noEnviarAlSII - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2267952263 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2005353397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Succeeded Company Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre empresa sucesora"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreEmpresaSucesora - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2052832122 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Template Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre plantilla diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombrePlantillaDiario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1756992433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreSeccionDiario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1526511918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroCliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1833039638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sell-to Customer No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cliente venta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroClienteVenta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3773172980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balancing Account No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta contrapartida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroCuentaContrapartida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2762321106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 363620899 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>External Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento externo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroDocumentoExterno - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 23284874 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to External Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento externo a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroDocumentoExternoLiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2465337419 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroDocumentoLiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1056762476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº efecto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroEfecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2013009105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Bill No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº efecto a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroEfectoLiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2714545523 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Corrected Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº factura rectificada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroFacturaRectificada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1405526809 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroMovimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2651539666 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº serie"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroSerie - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3589382359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº transacción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numeroTransaccion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 679891784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Succeeded VAT Registration No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº registro IVA empresa sucesora"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control numRegistroIVAEmpSucesora - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2050400755 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Positive</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Positivo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control positivo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1049260401 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Reference</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Referencia pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control referenciaPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2560296286 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>On Hold</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Retenido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control retenido - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 44422220 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Revertido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control revertido - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2930798545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reversed by Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Revertido por movimiento nº"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control revertidoPorMovimientoNro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 666531387 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Situation</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Situación documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control situacionDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2425708660 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Your Reference</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Su referencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control suReferencia - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3276236345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Memo Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo abono"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoAbono - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 258702989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Correction Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo corrección"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoCorreccion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3893007568 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balancing Account Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo cuenta contrapartida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoCuentaContrapartida - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2861118070 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 2293706663 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Document Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo documento a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoDocumentoLiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 420052256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo factura"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoFactura - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1122965353 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo identificación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control tipoIdentificacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4060532378 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accepted Payment Discount Tolerance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia descuento pago aceptada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control toleranciaDescuentoPagoAceptada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 889843256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. Payment Tolerance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia máxima pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control toleranciaMaximaPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4094576190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Accepted Payment Tolerance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia de pago aceptada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control toleranciaPagoAceptada - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 3008764711 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment Tolerance (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia pago (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control toleranciaPagoDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 1838018398 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Issued Reminder Level</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Último nivel de recordatorio emitido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control ultimoNivelRecordatorioEmitido - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4043053829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Ventas (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control ventasDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4267566259 - Control 4194544784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Row Version</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Versión fila"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control versionFilaSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detailed Customer Ledger Entry</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimiento detallado de cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Property EntityCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Detailed Customer Ledger Entries</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimientos detallados de cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Property EntitySetCaption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3891292683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Currency Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código divisa"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control codigoDivisa - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3908553971 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Jurisdiction Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código jurisdicción fiscal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control codigoJurisdiccionFiscal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2846220217 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Reason Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código motivo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control codigoMotivo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3610828675 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Código origen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control codigoOrigen - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1977551605 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Created At</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Creado el"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control creadoElSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2721101385 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Created By</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Creado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control creadoPorSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 58457641 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining Payment Discount Possible</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Descuento pago pendiente posible"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control descuentoPagoPendientePosible - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3474613160 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unapplied</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Desliquidado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control desliquidado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2873603445 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unapplied by Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Desliquidado por movimiento nº"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control desliquidadoPorMovimientoNro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3113377781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Entry Global Dimension 1</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dimensión global 1 movimiento inicial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control dimensionGlobalInicial1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2475681164 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Entry Global Dimension 2</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Dimensión global 2 movimiento inicial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control dimensionGlobalInicial2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2693071044 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Status</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Estado documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control estadoDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 4128079406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Excluded from Calculation</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Excluir del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control excluirDelCalculo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3052872468 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Reporting Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha declaración IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control fechaDeclaracionIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3641947870 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control fechaRegistro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 751291654 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Entry Due Date</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha vencimiento movimiento inicial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control fechaVencimientoMovimientoInicial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3338680256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control grupoRegistro - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 622465232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen. Business Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro negocio general"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control grupoRegistroNegocioGeneral - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 14396112 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Business Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro negocio IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control grupoRegistroNegocioIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2147802178 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Gen. Product Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro producto general"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control grupoRegistroProductoGeneral - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1139852098 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>VAT Product Posting Group</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Grupo registro producto IVA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control grupoRegistroProductoIVA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 975623897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Id</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control identificador - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3121108053 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>User ID</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Id. usuario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control idUsuario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2479931332 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 615001810 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe debe"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeDebe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3151620570 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe debe (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeDebeDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1367405228 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 277116976 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeHaber - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2916119448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount (LCY)</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe haber (DL)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeHaberDL - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2403056655 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ledger Entry Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe movimiento contable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control importeMovimientoContable - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 116778512 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Modified At</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Modificado el"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control modificadoElSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3861523316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Modified By</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Modificado por"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control modificadoPorSistema - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1756992433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Journal Batch Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreSeccionDiario - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1358625189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Application No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº aplicación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroAplicacion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1526511918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroCliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2762321106 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1056762476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bill No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº efecto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroEfecto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2013009105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies-to Bill No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº efecto a liquidar"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroEfectoLiquidar - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1497540733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento de cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroMovimientoCliente - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1118563242 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied Customer Ledger Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento cliente aplicado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroMovimientoClienteAplicado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 1590351875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento detallado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroMovimientoDetallado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3589382359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Transaction No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº transacción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numeroTransaccion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3745891388 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exchange Rate Adjustment Register No.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº registro ajuste tipo cambio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control numRegistroAjusteTipoCambio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 666531387 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Situation</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Situación documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control situacionDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2861118070 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo documento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control tipoDocumento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 3348801709 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Initial Document Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo documento inicial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control tipoDocumentoInicial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2339344221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo movimiento"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control tipoMovimiento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 889843256 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Max. Payment Tolerance</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tolerancia máxima pago"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control toleranciaMaximaPago - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 2673664451 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use Tax</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Usar impuesto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control usarImpuesto - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 346927495 - Control 4194544784 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>System Row Version</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Versión fila"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control versionFilaSistema - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2664101872 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event</source>
           <note from="Developer" annotates="general" priority="2">ESP="Evento"</note>
@@ -4753,6 +5588,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Añadir productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2444126405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select Item Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Seleccionar línea de producto"</note>
@@ -4772,6 +5617,16 @@
           <source>Print Incidents</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Print Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2208656402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Incident Products</source>
@@ -5418,6 +6273,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Facturas sin registrar (DL)"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Statistics FB - Control JMC Unposted Invoices - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1743435045 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1166634681">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
@@ -5628,6 +6493,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Action JMC View Incidents - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Control 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Purchase Order Method</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Forma pedido"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Control JMC Purchase Order Method Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 142967027 - Control 1151955868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 387971303">
+          <source>Purchase Order Reason</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Motivo pedido compra"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order - Control JMC Purchase Order Reason Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3239250589 - Action 2747857051 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3195034673">
           <source>View all purchase order lines.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Ver todas las líneas de pedidos de compra."</note>
@@ -5672,6 +6547,16 @@
           <source>Family</source>
           <note from="Developer" annotates="general" priority="2">ESP="Familia"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Order Subform - Control JMC Shortcut Dimension 2 Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1521382231 - Control 2523788737 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4154795139">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Purchase Price List Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2462045702 - Control 2415219557 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3740874685">
           <source>Specifies if the Industry report should be used when sending this document by email.</source>
@@ -5972,6 +6857,16 @@
           <source>Cannot set status to Inactive because there are price list lines with empty product. Please delete or complete these lines first.</source>
           <note from="Developer" annotates="general" priority="2">ESP="No se puede establecer el estado como Inactivo porque existen líneas de lista de precios con el producto vacío. Por favor, elimine o complete estas líneas primero."</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Header - Change Status - Method OnBeforeValidate - NamedType EmptyLinesErr</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Specifies the format of the purchase price.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el formato del precio de compra."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2565059735 - Field 3367981225 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2964960979">
+          <source>Format</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Price List Line - Field JMC Format - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 741081079 - Field 118410101 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2271228953">
           <source>Purchase Order Method</source>

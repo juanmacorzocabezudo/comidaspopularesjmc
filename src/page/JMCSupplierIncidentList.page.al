@@ -39,6 +39,24 @@ page 53306 "JMC Supplier Incident List"
     {
         area(Processing)
         {
+            action("JMC Vendor Email Report")
+            {
+                ApplicationArea = All;
+                Caption = 'Vendor Email Report', Comment = 'ESP="Informe email proveedor"';
+                ToolTip = 'Print the report attached to the supplier incident email.', Comment = 'ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."';
+                Image = Report;
+                Promoted = true;
+                PromotedCategory = Report;
+
+                trigger OnAction()
+                var
+                    Incident: Record "JMC Supplier Incident";
+                begin
+                    Incident.Copy(Rec);
+                    Incident.SetRecFilter();
+                    Report.Run(Report::"JMC Incident Vendor PDF", true, false, Incident);
+                end;
+            }
             action("JMC Print Incidents")
             {
                 ApplicationArea = All;

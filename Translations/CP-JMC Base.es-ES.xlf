@@ -2259,20 +2259,6 @@
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCliente - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 378075566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCompletoCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 4071540476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreCompletoModSistema - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 4267566259 - Control 2005353397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Succeeded Company Name</source>
           <target>[NAB: NOT TRANSLATED]</target>
@@ -2293,20 +2279,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreSeccionDiario - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 1506806841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreUsuarioCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4267566259 - Control 1242101271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control nombreUsuarioModSistema - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 1526511918 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer No.</source>
@@ -2793,40 +2765,12 @@
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control modificadoPorSistema - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 346927495 - Control 378075566 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreCompletoCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 4071540476 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By Full Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre completo modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreCompletoModSistema - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 346927495 - Control 1756992433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Journal Batch Name</source>
           <target>[NAB: NOT TRANSLATED]</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nombre sección diario"</note>
           <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreSeccionDiario - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 1506806841 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Created By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario creador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreUsuarioCreadorSistema - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 346927495 - Control 1242101271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>System Modified By User Name</source>
-          <target>[NAB: NOT TRANSLATED]</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nombre usuario modificador"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Det. Cust. Ledger API - Control nombreUsuarioModSistema - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 346927495 - Control 1358625189 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Application No.</source>
@@ -5284,6 +5228,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Añadir productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <target>Imprime el informe adjunto al correo de la incidencia de proveedor.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <target>Informe email proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2444126405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select Item Line</source>
           <target>Seleccionar línea de producto</target>
@@ -5307,6 +5263,18 @@
           <target>Imprimir incidencias</target>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Print Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <target>Imprime el informe adjunto al correo de la incidencia de proveedor.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <target>Informe email proveedor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2208656402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Incident Products</source>

@@ -4213,6 +4213,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Añadir productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Add Products - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 790843750 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident Card - Action JMC Vendor Email Report - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2444126405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select Item Line</source>
           <note from="Developer" annotates="general" priority="2">ESP="Seleccionar línea de producto"</note>
@@ -4232,6 +4242,16 @@
           <source>Print Incidents</source>
           <note from="Developer" annotates="general" priority="2">ESP="Imprimir incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Print Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print the report attached to the supplier incident email.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Imprime el informe adjunto al correo de la incidencia de proveedor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 431113152 - Action 4139783054 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Vendor Email Report</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Informe email proveedor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Supplier Incident List - Action JMC Vendor Email Report - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2208656402 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Incident Products</source>

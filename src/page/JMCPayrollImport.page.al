@@ -116,6 +116,22 @@ page 53155 "JMC Payroll Import"
                     CurrPage.Update(false);
                 end;
             }
+            action(RegenerateAllEntries)
+            {
+                Caption = 'Regenerate All Entries', Comment = 'ESP="Regenerar todos los asientos"';
+                ToolTip = 'Recreate the proposed entries for all payrolls in this import from the Excel amounts and concept setup. Manual changes are lost.', Comment = 'ESP="Vuelve a crear las propuestas de asiento de todas las nóminas de esta importación a partir de los importes del Excel y la configuración de conceptos. Se pierden los cambios manuales."';
+                Image = Refresh;
+                Enabled = PageEditable;
+
+                trigger OnAction()
+                var
+                    jmcPayrollImportMgt: Codeunit "JMC Payroll Import Mgt.";
+                begin
+                    CurrPage.SaveRecord();
+                    jmcPayrollImportMgt.RegenerateAllEntries(Rec);
+                    CurrPage.Update(false);
+                end;
+            }
             action(CreateJournal)
             {
                 Caption = 'Create Journal', Comment = 'ESP="Crear diario"';
@@ -200,6 +216,7 @@ page 53155 "JMC Payroll Import"
 
                 actionref(ImportExcel_Promoted; ImportExcel) { }
                 actionref(ValidateImport_Promoted; ValidateImport) { }
+                actionref(RegenerateAllEntries_Promoted; RegenerateAllEntries) { }
                 actionref(CreateJournal_Promoted; CreateJournal) { }
                 actionref(OpenJournal_Promoted; OpenJournal) { }
                 actionref(MarkProcessed_Promoted; MarkProcessed) { }

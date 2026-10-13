@@ -26,6 +26,13 @@ table 53151 "JMC Payroll Concept Setup"
             CalcFormula = lookup("G/L Account".Name where("No." = field("JMC G/L Account No.")));
             Editable = false;
         }
+        field(4; "JMC Posting Side"; Option)
+        {
+            Caption = 'Posting Side', Comment = 'ESP="Debe/Haber"';
+            ToolTip = 'Specifies whether this concept is posted as debit or credit.', Comment = 'ESP="Especifica si este concepto se registra al debe o al haber."';
+            OptionMembers = " ",Debit,Credit;
+            OptionCaption = ' ,Debit,Credit', Comment = 'ESP=" ,Debe,Haber"';
+        }
     }
 
     keys

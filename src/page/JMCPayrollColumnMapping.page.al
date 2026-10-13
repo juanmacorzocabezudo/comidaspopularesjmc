@@ -15,7 +15,6 @@ page 53152 "JMC Payroll Column Mapping"
                 field(ExcelColumn; Rec."JMC Excel Column") { }
                 field(Informative; Rec."JMC Informative") { }
                 field(ConceptType; Rec."JMC Concept Type") { }
-                field(PostingSign; Rec."JMC Posting Sign") { }
                 field(BalancingConceptType; Rec."JMC Balancing Concept Type") { }
             }
         }

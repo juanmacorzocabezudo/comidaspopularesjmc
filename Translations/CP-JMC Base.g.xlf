@@ -403,6 +403,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC G/L Account No. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 1473032545 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies whether this concept is posted as debit or credit.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si este concepto se registra al debe o al haber."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC Posting Side - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 1473032545 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Side</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Debe/Haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC Posting Side - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1769259482 - Field 1473032545 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source> ,Debit,Credit</source>
+          <note from="Developer" annotates="general" priority="2">ESP=" ,Debe,Haber"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Payroll Concept Setup - Field JMC Posting Side - Property OptionCaption</note>
+        </trans-unit>
         <trans-unit id="Table 844012748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payroll Import Entry</source>
           <note from="Developer" annotates="general" priority="2">ESP="Propuesta asiento nómina"</note>
@@ -2087,6 +2102,11 @@
           <source>Payroll %1 %2 - %3</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nómina %1 %2 - %3"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCPayrollDescriptionTxt</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 647628184 - NamedType 1038984601" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The proposed entries of all payrolls in this import will be created again from the Excel amounts and concept setup. All manual changes will be lost. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Se volverán a crear las propuestas de asiento de todas las nóminas de esta importación a partir de los importes del Excel y de la configuración de conceptos. Se perderán todos los cambios manuales. ¿Desea continuar?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Payroll Import Mgt. - NamedType JMCRegenerateAllQst</note>
         </trans-unit>
         <trans-unit id="Codeunit 647628184 - NamedType 1997247426" size-unit="char" translate="yes" xml:space="preserve">
           <source>The proposed entry of the payroll will be created again from the Excel amounts and the manual changes will be lost. Do you want to continue?</source>
@@ -4502,6 +4522,16 @@
           <source>Mark as Processed</source>
           <note from="Developer" annotates="general" priority="2">ESP="Marcar como procesado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action MarkProcessed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2426105785 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recreate the proposed entries for all payrolls in this import from the Excel amounts and concept setup. Manual changes are lost.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Vuelve a crear las propuestas de asiento de todas las nóminas de esta importación a partir de los importes del Excel y la configuración de conceptos. Se pierden los cambios manuales."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action RegenerateAllEntries - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3208457896 - Action 2426105785 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Regenerate All Entries</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Regenerar todos los asientos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Payroll Import - Action RegenerateAllEntries - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3208457896 - Action 580853590 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Show all the payrolls.</source>

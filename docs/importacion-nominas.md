@@ -9,13 +9,13 @@ Busque **Importaciones de nóminas** y abra **Configuración**.
 1. En **Diario**, seleccione la **Plantilla diario** y la **Sección diario** donde se crearán las líneas. Cada importación guarda la plantilla y sección configuradas al crearla.
 2. Configure la **Nº serie documento** si la sección no tiene una serie propia.
 3. Revise la **Tolerancia de cuadre**, usada en las comprobaciones de importes. El valor inicial es 0,01.
-4. Use **Inicializar valores por defecto** para crear los conceptos, organismos y mapeos que falten. Esta acción no cambia los registros existentes.
-5. Abra **Cuentas por concepto** y asigne una cuenta contable a cada concepto que vaya a generar asientos.
+4. Use **Inicializar valores por defecto** para crear los conceptos, organismos y mapeos que falten. También completa el debe/haber de los conceptos aún sin inicializar, sin sobrescribir una elección existente.
+5. Abra **Cuentas por concepto**, revise el **Debe/Haber** propuesto para cada concepto y asigne una cuenta contable.
 6. Abra **Mapeo de columnas** y revise el tratamiento de cada columna del Excel.
 
 En el mapeo, cada columna con importe debe tener un **Tipo concepto** si debe generar líneas contables. Si solo se conserva para consulta y no debe contabilizarse desde esa columna, marque **Informativa**. No marque como informativa una columna cuyo importe deba formar parte del asiento.
 
-Algunas columnas ya tienen un tratamiento predeterminado, como `C.BRUTO`, `SS.EMPRESA`, `TC1`, `IRPF`, `RETENCION`, `LIQUIDO`, `ANTICIPOS`, `C.TOTAL`, `SS.TRAB.`, `BASE S.SOC` y `BASE IRPF`. Las columnas adicionales pueden necesitar configuración según el criterio contable de la empresa. Por ejemplo, `RTOS ESPEC`, `seguro med` y `s.med irpf` deben mapearse a un concepto o marcarse como informativas si no generan asiento.
+Algunas columnas ya tienen un tratamiento predeterminado, como `C.BRUTO`, `SS.EMPRESA`, `TC1`, `IRPF`, `RETENCION`, `LIQUIDO`, `ANTICIPOS`, `C.TOTAL`, `SS.TRAB.`, `BASE S.SOC` y `BASE IRPF`. Las columnas adicionales pueden necesitar configuración según el criterio contable de la empresa. Por ejemplo, `RTOS ESPEC`, `seguro med` y `s.med irpf` deben mapearse a un concepto o marcarse como informativas si no generan asiento. El debe/haber se define en **Cuentas por concepto** y se aplica a todas las líneas generadas para ese concepto, incluidas las contrapartidas.
 
 ## Preparar los datos
 
@@ -35,6 +35,7 @@ Antes de importar, compruebe que los recursos de Business Central tienen informa
 3. Revise el **Estado**, el nombre y el código de gestoría, el recurso relacionado, las fechas y los importes.
 4. Si falta un recurso o el código coincide con varios recursos, corrija el ID en la ficha del recurso o seleccione el recurso correcto manualmente en la línea.
 5. Revise la propuesta de asiento de la nómina seleccionada en la subpágina inferior. Las líneas de propuesta se pueden modificar antes de crear el diario.
+6. Use **Regenerar todos los asientos** en la cabecera para reconstruir las propuestas de todas las nóminas de la importación con los importes del Excel y la configuración actual. Se perderán los cambios manuales de todas las propuestas; después, vuelva a validar.
 
 Si vuelve a importar un fichero en una importación que ya tiene líneas, se pedirá confirmación: las líneas actuales se eliminarán y se sustituirán por las del nuevo fichero.
 
@@ -59,7 +60,7 @@ Si aparece un mensaje como «La columna `RTOS ESPEC` tiene importe pero no tiene
 1. Abra **Configuración > Mapeo de columnas**.
 2. Busque la columna indicada.
 3. Asígnele un **Tipo concepto** y asegúrese de que ese concepto tiene una cuenta en **Cuentas por concepto**; o marque **Informativa** si no debe generar asiento.
-4. En las nóminas afectadas, use **Regenerar asiento** y confirme. Esta acción vuelve a crear la propuesta desde los importes y **pierde los cambios manuales** realizados en ella.
+4. Use **Regenerar todos los asientos** en la cabecera y confirme. Esta acción vuelve a crear todas las propuestas desde los importes del Excel y la configuración actual, y **pierde los cambios manuales** realizados en ellas.
 5. Vuelva a **Validar**.
 
 La validación conserva las propuestas que ya existen; por eso cambiar el mapeo, por sí solo, no añade nuevas líneas a propuestas ya generadas.

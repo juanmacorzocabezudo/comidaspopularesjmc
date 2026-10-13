@@ -43,6 +43,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
         JMCNoJournalErr: Label 'The journal has not been created yet for this payroll import.', Comment = 'ESP="Todavía no se ha creado el diario para esta importación de nóminas."';
         JMCMarkProcessedQst: Label 'Do you want to mark payroll import %1 as processed?', Comment = 'ESP="¿Desea marcar como procesada la importación de nóminas %1?"';
         JMCRegenerateQst: Label 'The proposed entry of the payroll will be created again from the Excel amounts and the manual changes will be lost. Do you want to continue?', Comment = 'ESP="La propuesta de asiento de la nómina se volverá a crear desde los importes del Excel y se perderán los cambios manuales. ¿Desea continuar?"';
+        JMCRegenerateAllQst: Label 'The proposed entries of all payrolls in this import will be created again from the Excel amounts and concept setup. All manual changes will be lost. Do you want to continue?', Comment = 'ESP="Se volverán a crear las propuestas de asiento de todas las nóminas de esta importación a partir de los importes del Excel y de la configuración de conceptos. Se perderán todos los cambios manuales. ¿Desea continuar?"';
         JMCNoSpaceErr: Label 'There is no room to insert a new line after this line. Move the line or renumber the entry lines.', Comment = 'ESP="No hay hueco para insertar una línea después de esta. Mueva la línea o renumere las líneas del asiento."';
         JMCIssueSeparatorTok: Label '; ', Locked = true;
 
@@ -267,6 +268,26 @@ codeunit 53150 "JMC Payroll Import Mgt."
         jmcPayrollLine.Modify(false);
     end;
 
+    procedure RegenerateAllEntries(var jmcPayrollHeader: Record "JMC Payroll Import Header")
+    var
+        jmcPayrollLine: Record "JMC Payroll Import Line";
+    begin
+        jmcPayrollHeader.Get(jmcPayrollHeader."JMC No.");
+        jmcPayrollHeader.TestEditable();
+        jmcPayrollLine.SetRange("JMC Import No.", jmcPayrollHeader."JMC No.");
+        if not jmcPayrollLine.FindSet(true) then
+            exit;
+        if not Confirm(JMCRegenerateAllQst, false) then
+            exit;
+
+        InitializeDefaults();
+        repeat
+            GenerateEntries(jmcPayrollLine);
+            jmcPayrollLine.SetPendingValidation();
+            jmcPayrollLine.Modify(false);
+        until jmcPayrollLine.Next() = 0;
+    end;
+
     procedure SplitEntry(var jmcPayrollEntry: Record "JMC Payroll Import Entry")
     var
         jmcNextEntry: Record "JMC Payroll Import Entry";
@@ -335,8 +356,13 @@ codeunit 53150 "JMC Payroll Import Mgt."
                 if not jmcConceptSetup.Get(Enum::"JMC Payroll Concept Type".FromInteger(jmcOrdinal)) then begin
                     jmcConceptSetup.Init();
                     jmcConceptSetup."JMC Concept Type" := Enum::"JMC Payroll Concept Type".FromInteger(jmcOrdinal);
+                    SetDefaultConceptPostingSide(jmcConceptSetup);
                     jmcConceptSetup.Insert();
-                end;
+                end else
+                    if jmcConceptSetup."JMC Posting Side" = jmcConceptSetup."JMC Posting Side"::" " then begin
+                        SetDefaultConceptPostingSide(jmcConceptSetup);
+                        jmcConceptSetup.Modify(false);
+                    end;
 
         foreach jmcOrdinal in Enum::"JMC Garnishment Authority".Ordinals() do
             if jmcOrdinal <> 0 then
@@ -356,6 +382,25 @@ codeunit 53150 "JMC Payroll Import Mgt."
                 end;
     end;
 
+    local procedure SetDefaultConceptPostingSide(var jmcConceptSetup: Record "JMC Payroll Concept Setup")
+    begin
+        case jmcConceptSetup."JMC Concept Type" of
+            jmcConceptSetup."JMC Concept Type"::"SS Payable",
+            jmcConceptSetup."JMC Concept Type"::"IRPF Payable",
+            jmcConceptSetup."JMC Concept Type"::"Net Pay",
+            jmcConceptSetup."JMC Concept Type"::Advance,
+            jmcConceptSetup."JMC Concept Type"::"Employee Loan",
+            jmcConceptSetup."JMC Concept Type"::"Related Party Loan Principal",
+            jmcConceptSetup."JMC Concept Type"::"Related Party Loan Interest",
+            jmcConceptSetup."JMC Concept Type"::Garnishment,
+            jmcConceptSetup."JMC Concept Type"::"Other Deduction",
+            jmcConceptSetup."JMC Concept Type"::"Extra Pay Provision":
+                jmcConceptSetup."JMC Posting Side" := jmcConceptSetup."JMC Posting Side"::Credit;
+            else
+                jmcConceptSetup."JMC Posting Side" := jmcConceptSetup."JMC Posting Side"::Debit;
+        end;
+    end;
+
     local procedure SetDefaultMapping(var jmcColumnMapping: Record "JMC Payroll Column Mapping")
     begin
         case jmcColumnMapping."JMC Excel Column" of
@@ -364,20 +409,14 @@ codeunit 53150 "JMC Payroll Import Mgt."
             jmcColumnMapping."JMC Excel Column"::"Company SS":
                 jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"Company SS";
             jmcColumnMapping."JMC Excel Column"::TC1:
-                begin
-                    jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"SS Payable";
-                    jmcColumnMapping."JMC Posting Sign" := jmcColumnMapping."JMC Posting Sign"::Reverse;
-                end;
+                jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"SS Payable";
             jmcColumnMapping."JMC Excel Column"::IRPF:
                 jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"IRPF Payable";
             jmcColumnMapping."JMC Excel Column"::Retention,
             jmcColumnMapping."JMC Excel Column"::Discounts:
                 jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"Other Deduction";
             jmcColumnMapping."JMC Excel Column"::"Net Pay":
-                begin
-                    jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"Net Pay";
-                    jmcColumnMapping."JMC Posting Sign" := jmcColumnMapping."JMC Posting Sign"::Reverse;
-                end;
+                jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::"Net Pay";
             jmcColumnMapping."JMC Excel Column"::Advances:
                 jmcColumnMapping."JMC Concept Type" := jmcColumnMapping."JMC Concept Type"::Advance;
             jmcColumnMapping."JMC Excel Column"::"Extra Pay":
@@ -657,8 +696,6 @@ codeunit 53150 "JMC Payroll Import Mgt."
                 if not jmcColumnMapping."JMC Informative" and (jmcColumnMapping."JMC Concept Type" <> jmcColumnMapping."JMC Concept Type"::" ") then begin
                     jmcAmount := jmcPayrollLine.GetColumnAmount(jmcColumnMapping."JMC Excel Column");
                     if jmcAmount <> 0 then begin
-                        if jmcColumnMapping."JMC Posting Sign" = jmcColumnMapping."JMC Posting Sign"::Reverse then
-                            jmcAmount := -jmcAmount;
                         InsertEntry(jmcPayrollLine, jmcEntryLineNo, jmcColumnMapping."JMC Concept Type", jmcColumnMapping."JMC Excel Column", false, jmcAmount);
                         if jmcColumnMapping."JMC Balancing Concept Type" <> jmcColumnMapping."JMC Balancing Concept Type"::" " then
                             InsertEntry(jmcPayrollLine, jmcEntryLineNo, jmcColumnMapping."JMC Balancing Concept Type", jmcColumnMapping."JMC Excel Column", true, -jmcAmount);
@@ -680,8 +717,23 @@ codeunit 53150 "JMC Payroll Import Mgt."
         jmcPayrollEntry."JMC Balancing" := jmcBalancing;
         jmcPayrollEntry."JMC Concept Type" := jmcConceptType;
         jmcPayrollEntry.ProposeAccountAndDescription();
-        jmcPayrollEntry.Validate("JMC Amount", jmcAmount);
+        jmcPayrollEntry.Validate("JMC Amount", GetAmountForPostingSide(jmcConceptType, jmcAmount));
         jmcPayrollEntry.Insert(false);
+    end;
+
+    local procedure GetAmountForPostingSide(jmcConceptType: Enum "JMC Payroll Concept Type"; jmcAmount: Decimal): Decimal
+    var
+        jmcConceptSetup: Record "JMC Payroll Concept Setup";
+    begin
+        if not jmcConceptSetup.Get(jmcConceptType) then
+            exit(jmcAmount);
+        case jmcConceptSetup."JMC Posting Side" of
+            jmcConceptSetup."JMC Posting Side"::Debit:
+                exit(Abs(jmcAmount));
+            jmcConceptSetup."JMC Posting Side"::Credit:
+                exit(-Abs(jmcAmount));
+        end;
+        exit(jmcAmount);
     end;
 
     local procedure ValidateLine(var jmcPayrollLine: Record "JMC Payroll Import Line"; var jmcSetup: Record "JMC Payroll Import Setup"; jmcJournalTemplateName: Code[10])
@@ -732,9 +784,7 @@ codeunit 53150 "JMC Payroll Import Mgt."
                         if jmcColumnMapping."JMC Concept Type" = jmcColumnMapping."JMC Concept Type"::" " then
                             AddIssue(jmcMessage, jmcHasError, jmcHasWarning, true, StrSubstNo(JMCColumnNotMappedErr, GetExcelHeader(jmcExcelColumn)))
                         else begin
-                            jmcExpectedAmount := jmcAmount;
-                            if jmcColumnMapping."JMC Posting Sign" = jmcColumnMapping."JMC Posting Sign"::Reverse then
-                                jmcExpectedAmount := -jmcAmount;
+                            jmcExpectedAmount := Abs(jmcAmount);
                             if Abs(SumColumnEntries(jmcPayrollLine, jmcExcelColumn) - jmcExpectedAmount) > jmcTolerance then
                                 AddIssue(jmcMessage, jmcHasError, jmcHasWarning, false, StrSubstNo(JMCColumnSplitWarn, GetExcelHeader(jmcExcelColumn)));
                         end;
@@ -809,14 +859,18 @@ codeunit 53150 "JMC Payroll Import Mgt."
     local procedure SumColumnEntries(var jmcPayrollLine: Record "JMC Payroll Import Line"; jmcExcelColumn: Enum "JMC Payroll Excel Column"): Decimal
     var
         jmcPayrollEntry: Record "JMC Payroll Import Entry";
+        jmcTotalAmount: Decimal;
     begin
         jmcPayrollEntry.SetCurrentKey("JMC Import No.", "JMC Import Line No.", "JMC Source Column", "JMC Balancing");
         jmcPayrollEntry.SetRange("JMC Import No.", jmcPayrollLine."JMC Import No.");
         jmcPayrollEntry.SetRange("JMC Import Line No.", jmcPayrollLine."JMC Line No.");
         jmcPayrollEntry.SetRange("JMC Source Column", jmcExcelColumn);
         jmcPayrollEntry.SetRange("JMC Balancing", false);
-        jmcPayrollEntry.CalcSums("JMC Amount");
-        exit(jmcPayrollEntry."JMC Amount");
+        if jmcPayrollEntry.FindSet() then
+            repeat
+                jmcTotalAmount += Abs(jmcPayrollEntry."JMC Amount");
+            until jmcPayrollEntry.Next() = 0;
+        exit(jmcTotalAmount);
     end;
 
     local procedure IsDuplicate(var jmcPayrollLine: Record "JMC Payroll Import Line"): Boolean

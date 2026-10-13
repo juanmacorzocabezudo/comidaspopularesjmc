@@ -13,9 +13,17 @@ page 53151 "JMC Payroll Concept Setup"
             repeater(Lines)
             {
                 field(ConceptType; Rec."JMC Concept Type") { }
+                field(PostingSide; Rec."JMC Posting Side") { }
                 field(GLAccountNo; Rec."JMC G/L Account No.") { }
                 field(GLAccountName; Rec."JMC G/L Account Name") { }
             }
         }
     }
+
+    trigger OnOpenPage()
+    var
+        jmcPayrollImportMgt: Codeunit "JMC Payroll Import Mgt.";
+    begin
+        jmcPayrollImportMgt.InitializeDefaults();
+    end;
 }

@@ -1,208 +1,125 @@
-# Análisis de costes indirectos y su repercusión en productos
+# Costes indirectos en Business Central: análisis y propuesta para Comidas Populares
 
-## 1. Resumen ejecutivo
+## Resumen
 
-Business Central no tiene un único mecanismo universal llamado «coste indirecto» que permita introducir cualquier gasto general y lo reparta automáticamente entre todos los productos. El mecanismo depende de qué representa el coste y del método de reposición y valoración del artículo:
+Business Central ofrece mecanismos distintos según se quiera valorar inventario, cargar costes reales de compra o analizar rentabilidad. No hay un reparto automático universal de los gastos generales entre productos.
 
-| Necesidad | Mecanismo estándar más apropiado | ¿Aumenta el coste/valor del producto? |
-| --- | --- | --- |
-| Repartir costes de fabricación o montaje en el coste unitario previsto | Campos **Indirect Cost %** y **Overhead Rate** del artículo, recurso o centro de trabajo, según el elemento del coste; después calcular y mantener los costes estándar | Sí, dentro del cálculo del coste estándar y del coste de producción o montaje, de acuerdo con el setup. |
-| Incorporar flete, aduanas, seguro o manipulación de una compra a los artículos concretos recibidos | **Item Charges** en documentos de compra, asignados a líneas de producto/recepciones | Normalmente sí, como coste de inventario y coste de ventas posterior. **Excepción importante:** para artículos con método **Standard**, el cargo no modifica el coste unitario estándar y se registra como variación de compra. |
-| Registrar alquiler, administración u otro gasto general no trazable a una recepción o consumo concreto | Contabilizar como gasto según la política contable y, si se necesita atribución gerencial, definir una política de reparto/costeo | No se asigna automáticamente a unidades de inventario solo por contabilizar el gasto en una cuenta de mayor. |
-| Mostrar una estimación de coste general en la ficha de una receta CP | Costes generales/adicionales de **BOM Aditional Cost** de CP - Functionality, presentados por la página JMC | La página local calcula EXWORK y beneficio estimados. El código local no demuestra que esto actualice el coste unitario estándar ni los movimientos de valoración. |
+Para Comidas Populares se recomienda mantener **dos circuitos relacionados, pero distintos**:
 
-**Conclusión para Comidas Populares:** hay que decidir primero si se busca (1) valorar cada unidad producida con un coste estándar integral, (2) absorber un coste real ligado a una compra o lote recibido, o (3) analizar rentabilidad incluyendo gastos generales. No son resultados equivalentes y no deben confundirse.
+1. **Catering:** imputar gastos indirectos al evento y, si interesa, distribuirlos entre los menús/productos servidos para conocer su rentabilidad. No cambiar con ello el coste de inventario de artículos que no se están fabricando para stock.
+2. **Recetas elaboradas mediante pedidos de ensamblado:** incluir materiales y recursos en el coste de ensamblado, y añadir la absorción de gastos generales mediante líneas de recurso calculadas para cada pedido. Registrar el ensamblado por el flujo estándar para que el coste llegue al producto terminado.
 
-## 2. Qué significa «repercutir en el producto»
+El coste adicional de receta CP existente sirve para presentar costes y márgenes calculados, pero el código local no demuestra que contabilice esos importes en el inventario. La personalización propuesta debe conservar la trazabilidad entre el coste calculado, el documento de origen y el efecto contable.
 
-Conviene separar cuatro conceptos:
+## 1. Análisis breve del estándar y de la solución actual
 
-1. **Coste previsto/estándar:** coste objetivo de una unidad. Puede componerse de materiales, capacidad, subcontratación y gastos generales. Los costes reales se comparan con esta referencia y las diferencias se analizan como variaciones.
-2. **Coste de inventario real:** valor contabilizado de las entradas de inventario con el método de valoración elegido. Un cargo asignado a una recepción puede elevar ese valor.
-3. **Coste de ventas (COGS):** coste que se reconoce al vender el artículo. Business Central propaga los costes ajustables de las entradas a las salidas según el método de valoración y la aplicación de movimientos.
-4. **Coste de rentabilidad/gestión:** coste analítico que sirve para calcular un margen aunque no modifique el mayor de inventario ni el coste registrado de la unidad.
+### Estándar de Business Central
 
-Que un importe aparezca en un cálculo de receta o de beneficio no demuestra por sí mismo que haya sido capitalizado como existencias, transferido al coste de ventas ni contabilizado en el mayor.
+- Los campos **% de coste indirecto (Indirect Cost %)** y **Tasa de gastos generales (Overhead Rate)** forman parte del cálculo de costes estándar. Su aplicación depende del elemento de coste y de la configuración del artículo, recurso o centro de trabajo.
+- Los **cargos de producto (Item Charges)** sirven para distribuir costes reales de adquisición —por ejemplo, transporte, aduanas y seguro— entre productos o recepciones. Pueden incrementar el valor de inventario y, posteriormente, el coste de los productos vendidos.
+- **Excepción:** si el artículo utiliza el método de coste **Estándar (Standard)**, un cargo de producto no modifica el coste unitario estándar; se registra como variación de compra.
+- Un gasto contabilizado en una cuenta del libro mayor no se asigna automáticamente a las existencias ni a un evento. La empresa debe definir la base de reparto y el proceso.
+- Los pedidos de ensamblado pueden usar componentes y recursos. Su contabilización estándar traslada el coste de los componentes/recursos al artículo ensamblado; no es el mismo proceso de WIP que una orden de producción.
 
-## 3. Mecanismos del estándar de Business Central
+### Lo que muestra el código CP-JMC Base
 
-### 3.1 Método de valoración del artículo
+- [JMC CP BOM Aditional Cost](../src/page/JMCCPBOMAditionalCost.page.al) muestra costes fijos y de producto, coste EXWORK (coste en fábrica) y beneficio. Los cálculos se delegan a `AlxiaAssemblyInfoManagement`, de una dependencia.
+- La integración JMC prevista en [JMC Receta](../src/pageext/JMCReceta.pageext.al) está comentada; el botón JMC **Coste adicional** no ejecuta una acción.
+- Las extensiones de ficha/lista calculan costes de existencias y de compra, pero no suman explícitamente los costes adicionales de receta.
 
-En la ficha del artículo, el campo **Costing Method** determina cómo se valora el inventario y cómo fluye el coste:
+Por tanto, la personalización debe verificar primero en el entorno qué hace la página **Costes Generales** provista por la dependencia y no tratar su coste calculado como coste contabilizado hasta probar el flujo.
 
-- **FIFO:** coste real de las entradas, aplicando primero las más antiguas.
-- **Average:** coste promedio ponderado por el periodo y el alcance configurados.
-- **Specific:** coste concreto de la unidad identificada.
-- **Standard:** coste unitario presupuestado/preestablecido; el coste real se compara con él y las diferencias se registran como variaciones.
-- **LIFO:** aparece entre los métodos documentados por BC, pero no está permitido en muchas jurisdicciones; hay que validar su idoneidad legal y fiscal antes de considerarlo.
+## 2. Propuesta funcional
 
-La elección no es cosmética: cambia el efecto de una compra, de un cargo asignado y de los ajustes sobre existencias y coste de ventas. Microsoft indica que no se puede cambiar libremente el método una vez que existen movimientos del artículo.
+### 2.1 Configuración común de conceptos y tasas
 
-### 3.2 Coste indirecto porcentual y tasa fija de gastos generales
+Crear una configuración JMC de **conceptos de coste indirecto**, separada de los movimientos contabilizados. Como mínimo, cada concepto debería indicar:
 
-Para los costes estándar, BC contempla componentes directos e indirectos. Según el origen, la configuración relevante está en:
+- código, descripción, estado y vigencia;
+- ámbito: **Catering**, **Ensamblado** o ambos;
+- clase: **fijo por evento/pedido**, **por comensal**, **por unidad ensamblada**, **por hora/recurso** o **porcentaje**;
+- base del porcentaje (por ejemplo, coste directo de materiales o coste directo de recursos), evitando bases ambiguas;
+- unidad de medida y coste/tasa;
+- criterio de distribución cuando el gasto se comparte entre varios productos;
+- cuenta contable o recurso asociado, cuando el importe vaya a formar parte del coste contabilizado.
 
-- **Artículo:** coste estándar, porcentaje de coste indirecto (**Indirect Cost %**) y tasa fija de gastos generales (**Overhead Rate**) cuando corresponda.
-- **Recurso de montaje:** costes de capacidad asociados al recurso.
-- **Centro de trabajo o máquina de producción:** coste directo por capacidad y componentes indirectos/fijos asociados a las operaciones de la ruta.
-- **Subcontratación:** costes directos e indirectos configurados para el centro de trabajo que representa la operación subcontratada.
-- **BOM/receta y ruta:** cantidades de materiales y consumibles, operaciones, tiempos y lotes que alimentan el cálculo del producto terminado.
+Permitir vigencias para actualizar tasas futuras sin alterar los cálculos históricos. Las tasas porcentuales deben definir explícitamente qué costes incluye su base y evitar el doble cómputo de conceptos ya incluidos en el coste directo.
 
-En términos operativos, el porcentaje aplica sobre la base de coste que determina el cálculo estándar y la tasa fija añade el importe fijo previsto por unidad. La base concreta depende del componente y de la configuración; no debe asumirse que el porcentaje se aplica siempre solo al coste de compra directo.
+### 2.2 Catering: coste indirecto del evento y del menú servido
 
-El ejemplo oficial de Microsoft para un producto fabricado ilustra la composición:
+La entidad de imputación principal debe ser el **evento**, porque preparación, transporte, montaje, limpieza y coordinación suelen beneficiar al servicio completo, no a una unidad de inventario.
 
-- Material directo: 20
-- Material no inventariable: 12
-- Capacidad: 27
-- Subcontratación: 7
-- Gastos generales de capacidad: 2
-- Gastos generales de fabricación: 10 % de los componentes incluidos en su base, más una tasa fija de 3; en ese ejemplo son 9,80
-- **Coste estándar total: 77,80**
+1. Registrar o importar el coste real del evento desde las líneas de recursos, compras/facturas u otras fuentes configuradas.
+2. Asociar el coste al número de evento y conservar la referencia al documento origen.
+3. Repartir el coste común usando un criterio definido por concepto: importe fijo por evento, comensales, unidades servidas, horas de recurso o porcentaje del coste directo.
+4. Si el evento incluye varios productos/menús, asignarles su parte y calcular margen por producto y por evento.
+5. Mostrar coste directo, coste indirecto asignado, coste total y margen en consultas del evento y, si procede, en las líneas comerciales.
 
-Es un ejemplo de fabricación y no una fórmula universal para todas las fichas, métodos de reposición o configuraciones.
+**Recomendación contable:** tratar este reparto como analítico para medir rentabilidad del catering; no incrementar el coste de inventario de los productos por el mero hecho de servirlos en un evento. Para fletes u otros costes reales de compra ligados a existencias, usar Item Charges en el circuito de compras.
 
-### 3.3 Cálculo y mantenimiento de costes estándar
+### 2.3 Recetas: coste indirecto en pedidos de ensamblado
 
-La práctica estándar consiste en configurar los componentes, calcular/revisar el coste propuesto (por ejemplo, con las herramientas de costes estándar y el análisis de componentes del BOM) y actualizar el coste estándar deliberadamente. El cálculo de componentes de un producto terminado puede incluir subensamblados y costes de distintos niveles.
+Usar el pedido de ensamblado como documento que concreta la producción y permite ligar cantidades reales, producto terminado y costes:
 
-El coste estándar se mantiene como una referencia. Una compra o una producción real más cara o más barata no implica que cada contabilización reescriba automáticamente el estándar; la diferencia se analiza como variación, de acuerdo con el método y el flujo de registro. Para productos ensamblados o fabricados, los costes y variaciones se reflejan a través del proceso de contabilización correspondiente.
+1. Mantener ingredientes y consumibles como componentes de la lista de materiales de ensamblado.
+2. Representar la mano de obra o servicios medibles con **recursos** en la lista de materiales o en el pedido; capturar cantidades/horas cuando existan datos fiables.
+3. Para gastos generales de cocina compartidos —energía, uso de instalaciones u otros— calcular el importe del pedido según una regla aprobada: por unidad producida, por lote, por hora o porcentaje de una base explícita.
+4. Añadir al pedido las líneas de recurso que correspondan antes de registrar el ensamblado, distribuyendo costes fijos del lote entre la cantidad terminada cuando proceda.
+5. Registrar el pedido por el proceso estándar. El coste de salida del producto debe incluir los componentes y recursos aplicables; contrastar el resultado en movimientos de producto, movimientos de valor y valoración.
+6. Guardar en las líneas creadas el código de concepto y la tasa aplicada, para poder explicar y auditar el importe.
 
-### 3.4 Item Charges: coste real de compra asignable
+La personalización no debe escribir directamente en el coste unitario del artículo ni crear ajustes de inventario manuales sin una contabilización estándar. Si un importe solo sirve para rentabilidad y no debe capitalizarse, mostrarlo como **coste analítico no inventariable** y mantenerlo separado.
 
-Los **Item Charges** están diseñados para añadir costes comerciales directamente relacionados con artículos o recepciones, por ejemplo:
+## 3. Diseño técnico recomendado
 
-- transporte/flete de entrada;
-- aranceles y aduanas;
-- seguro;
-- manipulación.
+Mantener el diseño pequeño y trazable:
 
-Se crean códigos de cargo con su configuración contable y se añaden a una factura u otro documento de compra como tipo **Charge (Item)**. Desde **Item Charge Assignment**, el importe puede distribuirse entre las líneas de artículos relacionadas —por ejemplo, por cantidad, importe, peso o volumen, según las opciones disponibles—:
+- **Configuración de coste indirecto:** concepto, ámbito, tipo de cálculo, base, tasa, vigencia y recurso/cuenta asociado.
+- **Imputación de coste:** evento o pedido de ensamblado, producto, concepto, cantidad/base, tasa, importe, documento origen y estado.
+- **Procesador de cálculo:** obtiene la base real del evento o pedido, calcula el importe y valida que no se haya aplicado ya.
+- **Integración de catering:** calcula y consulta el reparto por evento/producto sin alterar inventario.
+- **Integración de ensamblado:** propone líneas de recurso en el pedido antes del registro; el usuario revisa y contabiliza con el flujo estándar.
+- **Consulta de rentabilidad:** muestra costes directos e indirectos por separado, total, margen y referencias origen.
 
-1. En el mismo documento que contiene los artículos, antes de registrarlo; o
-2. En una factura separada, vinculando el cargo a una recepción de compra ya registrada.
+Las tasas deben copiarse a cada imputación al calcularla. Así, un cambio de configuración no reescribe eventos ni ensamblados históricos. Debe existir control de duplicados, redondeo, reejecución y cancelación; toda modificación posterior al registro debe seguir el mecanismo estándar de corrección, no editar silenciosamente los movimientos contabilizados.
 
-Al registrar, BC añade el importe como una **Value Entry** relacionada con el movimiento de inventario original; no necesita crear otro movimiento de artículo. La valoración y el coste de ventas se ajustan según el método de coste y la aplicación de movimientos.
+## 4. Alcance y fases sugeridas
 
-**Excepción para coste estándar:** Microsoft documenta que asignar un Item Charge a un artículo con método **Standard** no cambia su coste unitario estándar. El cargo se contabiliza como variación de compra porque el estándar permanece fijo. Por eso, para este método, un cargo real de transporte no debe interpretarse como una actualización automática del unit cost.
+**Fase 1 — Validación funcional:** identificar los conceptos de coste, asignar cada uno a catering o ensamblado, acordar bases/tasas y comprobar el método de coste de los artículos. Probar con una receta y un evento representativos.
 
-Los cargos de salida asignados a envíos de venta pueden ser no inventariables: se registran para análisis de coste/rentabilidad, pero no aumentan el valor de las existencias.
+**Fase 2 — Catering analítico:** imputar costes al evento y distribuirlos a productos/menús con informes de margen. Esta fase no cambia la valoración del inventario.
 
-### 3.5 Ajuste de costes
+**Fase 3 — Coste de ensamblado contabilizado:** configurar recursos y calcular líneas para los pedidos de ensamblado. Validar cuidadosamente el resultado contable e inventariable antes de desplegarlo.
 
-El proceso **Adjust Cost – Item Entries** propaga ajustes de coste desde las entradas origen hasta las salidas relacionadas y actualiza el coste de ventas cuando corresponde. BC requiere ajustar los costes antes de conciliar correctamente los movimientos de valor con el mayor. En Average, además, el coste promedio depende del periodo y del alcance de cálculo establecidos.
+**Fase 4 — Integración de compras:** normalizar el uso de Item Charges para transporte, aduanas y costes de compra atribuibles a recepciones, con pruebas específicas para artículos de coste estándar.
 
-Por consiguiente, el efecto final de un cargo en productos ya vendidos puede requerir el ajuste de costes y la contabilización/conciliación correspondiente; no es necesariamente un cambio aislado del campo de coste que se vea de inmediato en una ficha.
+## 5. Pruebas de aceptación
 
-## 4. Diferencia entre montaje y fabricación
-
-- **Montaje:** combina componentes y, cuando corresponde, recursos. Su flujo de coste es más sencillo y no utiliza el mismo ciclo de inventario WIP de una orden de producción.
-- **Producción:** consume materiales, capacidad y potencialmente subcontratación; acumula costes en WIP y los transfiere a producto terminado al completar la orden. Las variaciones y el ajuste de costes son parte del flujo.
-
-Por ello, una receta CP basada en **Assembly BOM** no equivale sin más a una **Production BOM + Routing** de fabricación. Si Comidas Populares necesita absorber tiempo de mano de obra o costes de cocina/centro productivo al producto fabricado, hay que validar primero qué mecanismo de montaje/producción utiliza realmente cada artículo y si el dato se registra en el proceso estándar o solo se calcula para análisis.
-
-## 5. Dónde se mantienen en Business Central
-
-Los nombres exactos de acciones pueden variar según la versión, perfil y localización, pero el recorrido estándar es:
-
-### Coste estándar / indirecto de material
-
-1. Buscar **Items** y abrir la ficha del artículo.
-2. Revisar **Costing Method**, **Standard Cost**, **Indirect Cost %** y **Overhead Rate** en los campos/secciones de costes de la ficha.
-3. Para artículos ensamblados/fabricados, revisar también la **Assembly BOM** o **Production BOM**, la ruta (si aplica), los recursos/centros de trabajo y sus costes.
-4. Calcular y revisar el coste propuesto con las hojas/funciones de coste estándar y, una vez validado, aplicar el nuevo estándar.
-
-### Coste real de compra ligado al producto
-
-1. Preparar la factura de compra con la línea de cargo **Charge (Item)**.
-2. Abrir **Item Charge Assignment** y asignar el importe a líneas de artículo/recepción concretas.
-3. Registrar el documento y, si procede, ejecutar el ajuste de costes y revisar los movimientos de valor.
-
-El cargo puede venir en la factura original de compra o llegar después, en una factura separada del transportista u otro proveedor.
-
-### Gastos generales no ligados a productos concretos
-
-Un asiento de gasto normal a una cuenta de mayor registra el gasto financiero, pero no crea por sí mismo una asignación a cada unidad de inventario. Si se quiere incorporar a coste de producto, hace falta definir una política de absorción (por ejemplo, una tasa de capacidad/fabricación) y configurar/ejecutar el proceso que la materialice. Si solo se requiere rentabilidad de gestión, puede conservarse como coste analítico sin modificar la valoración inventariable.
-
-## 6. Qué demuestra el código CP-JMC Base
-
-### 6.1 Costes de receta CP
-
-La página [JMC CP BOM Aditional Cost](../src/page/JMCCPBOMAditionalCost.page.al) muestra líneas de la tabla externa **BOM Aditional Cost**, que dispone de campos como artículo, versión de BOM, tipo, valor y opciones de aplicación. En la pantalla se muestran:
-
-- coste de BOM/receta «fijado» y costes generales fijos;
-- coste de BOM/receta calculado para el producto y costes generales de producto;
-- coste EXWORK resultante y beneficio/porcentaje de beneficio estimados.
-
-Las expresiones locales suman los costes generales al coste de receta para presentar el EXWORK y restan ese importe del precio unitario para estimar el beneficio. El porcentaje que calcula el código usa el coste como denominador; por tanto, es un **recargo sobre coste**, no un margen sobre ventas.
-
-La implementación de los cálculos se delega a `AlxiaAssemblyInfoManagement`, de CP - Functionality. Este código local permite confirmar qué resultados expone la página, pero no la fórmula completa que aplica la dependencia ni si lleva los datos a Value Entries, Unit Cost o al mayor.
-
-### 6.2 Disponibilidad de la integración personalizada
-
-La extensión [JMC Receta](../src/pageext/JMCReceta.pageext.al) contiene, dentro de un bloque comentado, la intención de insertar la página JMC en Receta y añadir una acción JMC que abra los costes filtrados por artículo y versión 0. Ese bloque no está activo.
-
-La acción **Additional Cost** de la página JMC tiene un `OnAction` vacío, con comentario de que no está implementada. No es una ruta operativa para añadir costes mediante plantilla.
-
-Los símbolos de las dependencias muestran una página **Receta** con la acción **BOMCost** (caption **Costes Generales**) y una página externa **BOM Aditional Cost**. Esto apunta a que la entrada estándar actual del entorno CP se proporciona por la dependencia y no por la extensión JMC comentada. La disponibilidad efectiva requiere validarlo en el entorno Business Central.
-
-### 6.3 Costes visibles en ficha/lista de artículo
-
-Las extensiones locales [JMC Item Card](../src/pageext/JMCItemCard.pageext.al) y [JMC Item List](../src/pageext/JMCItemList.pageext.al) muestran:
-
-- coste unitario de existencias calculado desde movimientos con cantidad pendiente y sus Value Entries;
-- coste medio de compra del último año, calculado a partir de `Direct Unit Cost` en facturas registradas;
-- último coste directo de compra guardado en un campo de extensión.
-
-Las rutinas locales no leen **BOM Aditional Cost** ni suman los costes generales de la receta. El campo de último coste directo se describe expresamente como dato derivado de compras. Así, no hay evidencia en este repositorio de que los costes generales CP actualicen estos indicadores.
-
-## 7. Recomendación para Comidas Populares
-
-Antes de decidir cómo introducir cada coste, clasificarlo:
-
-| Tipo de coste | Tratamiento recomendado |
-| --- | --- |
-| Ingrediente/material comprado y su coste normal | Artículo con método de valoración acordado; revisar factura, costes directos y ajuste de costes. |
-| Flete/aduana/seguro atribuible a una compra o recepción | Item Charge asignado a los artículos/recepciones que lo originan. Comprobar si el artículo es Standard: en ese caso se registra variación y no se modifica el unit cost estándar. |
-| Mano de obra, energía u overhead de cocina/fabricación | Si se quiere absorber de forma repetible al coste unitario, definir los componentes de capacidad/overhead del montaje o fabricación y mantener el coste estándar. Confirmar si las recetas actuales son Assembly BOM o Production BOM + Routing. |
-| Alquiler, administración, costes generales no trazables | No esperar que una línea de gasto de mayor altere automáticamente el coste inventariable. Definir si se desea absorción de fabricación o solo imputación gerencial. |
-| Coste comercial/analítico específico de una receta | El coste adicional de BOM CP puede dar una estimación de coste y margen; validar la dependencia y tratarlo como analítico hasta comprobar que se registra como coste inventariable. |
-
-### Pruebas de aceptación propuestas
-
-En una empresa de prueba, comparar un producto antes/después y verificar:
-
-1. Ficha de artículo: método, coste estándar, coste unitario e indirect cost/overhead configurados.
-2. Coste calculado y componentes de coste del BOM/receta.
-3. Tras registrar producción/montaje: consumos, capacidad, salida, Value Entries y variaciones.
-4. Tras asignar un Item Charge: Value Entry relacionada, coste del movimiento y efecto en el coste de ventas de unidades ya vendidas, después del ajuste de costes.
-5. Para la página CP: importe de la línea de coste, EXWORK/margen de la pantalla JMC, y confirmar si cambia o no el coste unitario y los movimientos de valor.
-6. Conciliación entre valoración de inventario y mayor, sin interpretar como equivalentes el coste de gestión y el coste contabilizado.
-
-## 8. Límites y supuestos
-
-- La parte local estática se ha analizado en CP-JMC Base; no se dispone aquí del código fuente de **CP - Functionality**, **CP - Feature** ni de todas las apps externas declaradas en `app.json`.
-- La fórmula exacta de `AlxiaAssemblyInfoManagement`, la acción externa **BOMCost** y cualquier lógica de actualización de artículos requieren inspección del paquete/fuente de la dependencia o una prueba en el entorno.
-- Los nombres de menús y campos pueden cambiar por versión, perfil y localización. Los nombres de los campos estándar se citan en inglés para facilitar su localización en BC.
-- Este documento describe capacidades funcionales, no sustituye la definición de política contable, fiscal ni de valoración aprobada por la empresa.
-
-## 9. Fuentes
-
-Documentación oficial de Microsoft Learn consultada el 14 de octubre de 2026:
-
-1. [Use item charges to account for extra trade costs](https://learn.microsoft.com/en-us/dynamics365/business-central/payables-how-assign-item-charges) — asignación de cargos, efecto sobre inventario y coste de ventas, Value Entries y excepción de coste estándar.
-2. [About calculating standard cost](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-about-calculating-standard-cost) — componentes de coste estándar en compra, montaje y producción, y desglose de overhead.
-3. [Design details: Costing methods](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-costing-methods) — efecto de los métodos de valoración FIFO, Average, Specific y Standard.
-4. [Design details: Inventory costing](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-inventory-costing) — conceptos y principios generales de valoración.
-5. [Design details: Cost adjustment](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-cost-adjustment) — ajuste de costes y propagación a coste de ventas.
-6. [Design details: Average cost](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-average-cost) — coste promedio periódico y su configuración.
-7. [Design details: Production order posting](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-production-order-posting) — acumulación de WIP y transferencia de coste a producto terminado en producción.
-
-Fuentes del repositorio:
-
-- [`app.json`](../app.json)
-- [`JMC CP BOM Aditional Cost`](../src/page/JMCCPBOMAditionalCost.page.al)
-- [`JMC Receta`](../src/pageext/JMCReceta.pageext.al)
-- [`JMC Item Card`](../src/pageext/JMCItemCard.pageext.al)
-- [`JMC Item List`](../src/pageext/JMCItemList.pageext.al)
-- [`JMC Item`](../src/tableext/JMCItem.tableext.al)
+- Un evento distribuye el coste común según la base configurada; el total asignado coincide con el coste del evento y no duplica líneas origen.
+- La consulta muestra margen del evento y de sus productos/menús, y distingue importes analíticos de costes inventariables.
+- Un pedido de ensamblado incorpora materiales y recursos esperados; el importe indirecto, cantidad terminada y coste unitario resultante son trazables.
+- Registrar, ajustar y conciliar el ensamblado no genera diferencias inesperadas entre valoración de inventario y libro mayor.
+- Una repetición del cálculo no duplica costes; la modificación de tasas solo afecta a nuevos cálculos.
+- Un Item Charge de compra actualiza el coste según el método de valoración y, para el método estándar, produce la variación esperada sin modificar el estándar.
+
+## 6. Supuestos y fuentes
+
+La propuesta se basa en el código local CP-JMC Base y en la documentación estándar de Business Central. No se dispone aquí del código de **CP - Functionality** ni de la implementación completa de la página externa de costes de receta. Antes de construir, hay que confirmar en el entorno qué campos, cálculos y contabilizaciones realiza esa dependencia y validar la política de capitalización con el responsable financiero.
+
+Documentación oficial:
+
+- [Costes de compra adicionales y cargos de producto](https://learn.microsoft.com/en-us/dynamics365/business-central/payables-how-assign-item-charges)
+- [Cálculo del coste estándar](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-about-calculating-standard-cost)
+- [Métodos de coste](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-costing-methods)
+- [Ajuste de costes de inventario](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-cost-adjustment)
+- [Registro de órdenes de producción](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-production-order-posting)
+
+Código revisado:
+
+- [JMC CP BOM Aditional Cost](../src/page/JMCCPBOMAditionalCost.page.al)
+- [JMC Receta](../src/pageext/JMCReceta.pageext.al)
+- [JMC Assembly Order](../src/pageext/JMCAssemblyOrder.pageext.al)
+- [JMC Item Card](../src/pageext/JMCItemCard.pageext.al)
+- [JMC Item List](../src/pageext/JMCItemList.pageext.al)
+- [JMC Item](../src/tableext/JMCItem.tableext.al)
+- [app.json](../app.json)

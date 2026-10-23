@@ -1,125 +1,109 @@
-# Costes indirectos en Business Central: análisis y propuesta para Comidas Populares
+# Requerimientos del módulo de costes indirectos / estructura
 
-## Resumen
+**Ámbito:** Catering e Industria de Comidas Populares. La elaboración de recetas se realiza mediante **pedidos de ensamblado**. Este documento define el desarrollo solicitado, tomando como base el Excel del CEO y las aclaraciones del 22/10/2026.
 
-Business Central ofrece mecanismos distintos según se quiera valorar inventario, cargar costes reales de compra o analizar rentabilidad. No hay un reparto automático universal de los gastos generales entre productos.
+## 1. Objetivo y alcance
 
-Para Comidas Populares se recomienda mantener **dos circuitos relacionados, pero distintos**:
+Calcular periódicamente la estructura por producto y centro de coste, comparar **dos métodos de reparto simultáneos**, simular cantidades y consultar su repercusión en recetas, eventos y movimientos de producto.
 
-1. **Catering:** imputar gastos indirectos al evento y, si interesa, distribuirlos entre los menús/productos servidos para conocer su rentabilidad. No cambiar con ello el coste de inventario de artículos que no se están fabricando para stock.
-2. **Recetas elaboradas mediante pedidos de ensamblado:** incluir materiales y recursos en el coste de ensamblado, y añadir la absorción de gastos generales mediante líneas de recurso calculadas para cada pedido. Registrar el ensamblado por el flujo estándar para que el coste llegue al producto terminado.
+Se propone una primera versión **analítica y trazable**: añadir información de estructura sin modificar los importes estándar del inventario ni los precios de venta. Reflejar el coste en un movimiento analítico vinculado al movimiento de producto no equivale a modificar su valoración contable. La capitalización de estructura requerirá una aprobación y un alcance contable independientes.
 
-El coste adicional de receta CP existente sirve para presentar costes y márgenes calculados, pero el código local no demuestra que contabilice esos importes en el inventario. La personalización propuesta debe conservar la trazabilidad entre el coste calculado, el documento de origen y el efecto contable.
+## 2. Configuración y fuentes
 
-## 1. Análisis breve del estándar y de la solución actual
+- **Cuentas contables:** reutilizar la clasificación fijo/variable existente y añadir inclusión explícita en el modelo y destino **industrial** o **gestión adicional**. Seleccionar las cuentas de detalle de ocho dígitos utilizadas por la empresa.
+- **Gasto neto:** movimientos contables del periodo menos costes directos ya imputados. Deducir de sueldos el personal operativo y de suministros el consumo de máquinas ya incorporado a los ensamblados, con reglas identificables por cuenta/recurso.
+- **Producción:** costes de ensamblados registrados del periodo, sin la estructura que calcula el propio módulo; **CA = Catering**, **PT = Industria**. Los productos intermedios **PI** no deben duplicarse si su coste ya está contenido en el producto final.
+- **Ventas:** cantidades netas de abonos por producto y unidad equivalente. «Contra ventas» significa **unidades vendidas**, no importe de facturación.
+- **Receta:** coste unitario de la lista de materiales, con fecha y fuente guardadas. No utilizar un coste que incluya de nuevo la estructura del modelo.
+- **Equivalencias y prioridades:** conversiones por producto entre ración, kg y formato comercial; niveles 1 a 5, inicialmente 1, con factores aprobados decrecientes. No inventar conversiones ni pesos.
 
-### Estándar de Business Central
+Todos los datos deben corresponder al mismo periodo y alcance. Los gastos de gestión son adicionales al industrial: el coste completo no debe sumar dos veces el mismo gasto.
 
-- Los campos **% de coste indirecto (Indirect Cost %)** y **Tasa de gastos generales (Overhead Rate)** forman parte del cálculo de costes estándar. Su aplicación depende del elemento de coste y de la configuración del artículo, recurso o centro de trabajo.
-- Los **cargos de producto (Item Charges)** sirven para distribuir costes reales de adquisición —por ejemplo, transporte, aduanas y seguro— entre productos o recepciones. Pueden incrementar el valor de inventario y, posteriormente, el coste de los productos vendidos.
-- **Excepción:** si el artículo utiliza el método de coste **Estándar (Standard)**, un cargo de producto no modifica el coste unitario estándar; se registra como variación de compra.
-- Un gasto contabilizado en una cuenta del libro mayor no se asigna automáticamente a las existencias ni a un evento. La empresa debe definir la base de reparto y el proceso.
-- Los pedidos de ensamblado pueden usar componentes y recursos. Su contabilización estándar traslada el coste de los componentes/recursos al artículo ensamblado; no es el mismo proceso de WIP que una orden de producción.
+## 3. Reparto por centros de coste
 
-### Lo que muestra el código CP-JMC Base
+Configurar centros y vincular a ellos gastos, recursos/máquinas y productos. Reutilizar los centros existentes en las dependencias CP si cubren esta necesidad; usar una dimensión configurable para identificar el centro en los movimientos, sin codificar un nombre fijo.
 
-- [JMC CP BOM Aditional Cost](../src/page/JMCCPBOMAditionalCost.page.al) muestra costes fijos y de producto, coste EXWORK (coste en fábrica) y beneficio. Los cálculos se delegan a `AlxiaAssemblyInfoManagement`, de una dependencia.
-- La integración JMC prevista en [JMC Receta](../src/pageext/JMCReceta.pageext.al) está comentada; el botón JMC **Coste adicional** no ejecuta una acción.
-- Las extensiones de ficha/lista calculan costes de existencias y de compra, pero no suman explícitamente los costes adicionales de receta.
+1. Asignar cada gasto al centro correspondiente. Los gastos comunes se distribuyen mediante porcentajes documentados que sumen el 100 %; lo no asignado queda visible.
+2. Para una máquina, determinar los productos elegibles por su uso en recetas o recursos de ensamblados registrados. Conservar la fuente de esa relación; no basta con pertenecer a la misma familia.
+3. Repartir la estructura del centro solo entre negocios y productos elegibles. Un producto que no utiliza esa máquina recibe **cero** de ese centro en ambos métodos, aunque tenga ventas.
+4. Dentro del centro, ponderar Catering/Industria por su coste de ensamblado elegible; después aplicar los dos métodos a los productos correspondientes.
+5. Si un producto usa varios centros, sumar sus asignaciones sin duplicar el gasto. No combinar centros con unidades no comparables sin equivalencias aprobadas.
 
-Por tanto, la personalización debe verificar primero en el entorno qué hace la página **Costes Generales** provista por la dependencia y no tratar su coste calculado como coste contabilizado hasta probar el flujo.
+**Ejemplo:** el mantenimiento del horno se reparte solo entre las recetas que pasan por él; no se carga a una receta fría. Administración puede pertenecer a un centro común con alcance más amplio.
 
-## 2. Propuesta funcional
+## 4. Modelo de costes indirectos: dos métodos obligatorios
 
-### 2.1 Configuración común de conceptos y tasas
+Crear una página con **cabecera por periodo/versión** y detalle por producto, centro y método. Debe mostrar origen contable, deducciones, gasto neto, unidades equivalentes, coste de receta, prioridad y los siguientes resultados en paralelo:
 
-Crear una configuración JMC de **conceptos de coste indirecto**, separada de los movimientos contabilizados. Como mínimo, cada concepto debería indicar:
+| Método | Base por producto |
+| --- | --- |
+| **Contra ventas** | Unidades vendidas netas equivalentes × factor de prioridad |
+| **Contra receta** | Unidades vendidas netas equivalentes × coste unitario de receta × factor de prioridad |
 
-- código, descripción, estado y vigencia;
-- ámbito: **Catering**, **Ensamblado** o ambos;
-- clase: **fijo por evento/pedido**, **por comensal**, **por unidad ensamblada**, **por hora/recurso** o **porcentaje**;
-- base del porcentaje (por ejemplo, coste directo de materiales o coste directo de recursos), evitando bases ambiguas;
-- unidad de medida y coste/tasa;
-- criterio de distribución cuando el gasto se comparte entre varios productos;
-- cuenta contable o recurso asociado, cuando el importe vaya a formar parte del coste contabilizado.
+Para cada centro, negocio y destino industrial/gestión:
 
-Permitir vigencias para actualizar tasas futuras sin alterar los cálculos históricos. Las tasas porcentuales deben definir explícitamente qué costes incluye su base y evitar el doble cómputo de conceptos ya incluidos en el coste directo.
+`Importe asignado al producto = estructura del grupo × base del producto / suma de bases elegibles`
 
-### 2.2 Catering: coste indirecto del evento y del menú servido
+`Coste indirecto unitario = importe asignado / unidades vendidas netas equivalentes`
 
-La entidad de imputación principal debe ser el **evento**, porque preparación, transporte, montaje, limpieza y coordinación suelen beneficiar al servicio completo, no a una unidad de inventario.
+Cada método reparte **el mismo fondo de estructura de forma alternativa**. Nunca se suman sus resultados. Mostrar, para ambos, importe industrial, gestión adicional, estructura total, porcentaje sobre receta y **EXWORK = receta + industrial + gestión adicional**.
 
-1. Registrar o importar el coste real del evento desde las líneas de recursos, compras/facturas u otras fuentes configuradas.
-2. Asociar el coste al número de evento y conservar la referencia al documento origen.
-3. Repartir el coste común usando un criterio definido por concepto: importe fijo por evento, comensales, unidades servidas, horas de recurso o porcentaje del coste directo.
-4. Si el evento incluye varios productos/menús, asignarles su parte y calcular margen por producto y por evento.
-5. Mostrar coste directo, coste indirecto asignado, coste total y margen en consultas del evento y, si procede, en las líneas comerciales.
+Una base total nula o negativa, equivalencias ausentes o residuales negativos debe generar una incidencia y bloquear la publicación del cálculo afectado. Los productos sin ventas quedan sin tasa calculable en estos métodos y se identifican como tales; no asignarles un cero ficticio. Conciliar gasto repartido más pendiente con gasto neto y distribuir los residuos de redondeo de forma trazable.
 
-**Recomendación contable:** tratar este reparto como analítico para medir rentabilidad del catering; no incrementar el coste de inventario de los productos por el mero hecho de servirlos en un evento. Para fletes u otros costes reales de compra ligados a existencias, usar Item Charges en el circuito de compras.
+## 5. Simulador desde el modelo
 
-### 2.3 Recetas: coste indirecto en pedidos de ensamblado
+Añadir la acción **Simular coste de estructura**:
 
-Usar el pedido de ensamblado como documento que concreta la producción y permite ligar cantidades reales, producto terminado y costes:
+- **Entradas:** versión calculada, producto, cantidad y unidad de medida; filtros de periodo de origen, negocio y centro de coste, con desglose industrial/gestión.
+- **Cálculo:** convertir la cantidad a la unidad de la tasa y multiplicarla por los costes unitarios anteriores de ambos métodos.
+- **Salidas:** coste indirecto unitario y total, desglose por centro, EXWORK y diferencia entre métodos, con versión y filtros utilizados.
+- **Reglas:** no modificar modelos, productos ni movimientos. Los filtros seleccionan tasas existentes; **no redistribuyen todo el gasto sobre el subconjunto filtrado**. Una simulación con tasas distintas requiere calcular otra versión.
 
-1. Mantener ingredientes y consumibles como componentes de la lista de materiales de ensamblado.
-2. Representar la mano de obra o servicios medibles con **recursos** en la lista de materiales o en el pedido; capturar cantidades/horas cuando existan datos fiables.
-3. Para gastos generales de cocina compartidos —energía, uso de instalaciones u otros— calcular el importe del pedido según una regla aprobada: por unidad producida, por lote, por hora o porcentaje de una base explícita.
-4. Añadir al pedido las líneas de recurso que correspondan antes de registrar el ensamblado, distribuyendo costes fijos del lote entre la cantidad terminada cuando proceda.
-5. Registrar el pedido por el proceso estándar. El coste de salida del producto debe incluir los componentes y recursos aplicables; contrastar el resultado en movimientos de producto, movimientos de valor y valoración.
-6. Guardar en las líneas creadas el código de concepto y la tasa aplicada, para poder explicar y auditar el importe.
+Ejemplo: si las tasas históricas son 0,30 €/ración contra ventas y 0,45 €/ración contra receta, simular 100 raciones devuelve 30 € y 45 € de estructura. Para 10 barquetas de 2,5 kg con tasa en €/kg, utilizar 25 kg. Si no existe tasa o equivalencia, informar del motivo y no presentar un resultado válido.
 
-La personalización no debe escribir directamente en el coste unitario del artículo ni crear ajustes de inventario manuales sin una contabilización estándar. Si un importe solo sirve para rentabilidad y no debe capitalizarse, mostrarlo como **coste analítico no inventariable** y mantenerlo separado.
+## 6. Cálculo periódico y publicación
 
-## 3. Diseño técnico recomendado
+**Recomendación: usar la cola de proyectos de BC**, con una tarea programada por empresa y periodicidad configurable:
 
-Mantener el diseño pequeño y trazable:
+1. Proponer cálculo **mensual**, después del cierre y ajuste de costes de los ensamblados; programación diaria opcional para borradores provisionales.
+2. La tarea recoge fuentes del periodo, calcula ambos métodos y genera/actualiza un **borrador** con detalle e incidencias. También se podrá ejecutar manualmente desde el modelo.
+3. Un responsable revisa y **publica** la versión, indicando vigencia de aplicación. La tarea no sustituye automáticamente los costes publicados.
+4. Bloquear ejecuciones concurrentes del mismo periodo. Repetir una ejecución no debe duplicar importes ni alterar versiones publicadas.
+5. Si llegan facturas o ajustes tardíos, crear una nueva versión para revisión. Mantener históricos, registro de ejecución y errores consultables; no modificar silenciosamente costes aplicados.
 
-- **Configuración de coste indirecto:** concepto, ámbito, tipo de cálculo, base, tasa, vigencia y recurso/cuenta asociado.
-- **Imputación de coste:** evento o pedido de ensamblado, producto, concepto, cantidad/base, tasa, importe, documento origen y estado.
-- **Procesador de cálculo:** obtiene la base real del evento o pedido, calcula el importe y valida que no se haya aplicado ya.
-- **Integración de catering:** calcula y consulta el reparto por evento/producto sin alterar inventario.
-- **Integración de ensamblado:** propone líneas de recurso en el pedido antes del registro; el usuario revisa y contabiliza con el flujo estándar.
-- **Consulta de rentabilidad:** muestra costes directos e indirectos por separado, total, margen y referencias origen.
+Ejemplo: cerrar septiembre, calcular y revisar su modelo y publicarlo con vigencia desde octubre. Evitar vigencias solapadas para un mismo negocio/centro; sin modelo vigente, dejar la imputación pendiente con aviso visible, no utilizar tasas de otro periodo sin autorización.
 
-Las tasas deben copiarse a cada imputación al calcularla. Así, un cambio de configuración no reescribe eventos ni ensamblados históricos. Debe existir control de duplicados, redondeo, reejecución y cancelación; toda modificación posterior al registro debe seguir el mecanismo estándar de corrección, no editar silenciosamente los movimientos contabilizados.
+## 7. Dónde y cómo aplicar el coste
 
-## 4. Alcance y fases sugeridas
+| Superficie | Requerimiento |
+| --- | --- |
+| **Ficha de producto y Recetas** | Mostrar ambas tasas vigentes, industrial/gestión, EXWORK, unidad, prioridad y versión. Acceso al desglose por centros y al histórico. Campos calculados o vinculados, no edición libre del resultado. |
+| **Pedido de ensamblado** | Mostrar la estructura estimada para la cantidad del pedido con ambos métodos, separada del coste estándar de componentes y recursos. No añadir recursos que dupliquen costes. |
+| **Movimientos de producto** | Crear movimientos analíticos JMC de estructura vinculados al número de movimiento estándar, producto, centro, método, cantidad, tasa, importe y versión. Consultarlos desde la página de movimientos. |
+| **Catering / eventos** | Mostrar estructura por producto servido y total del evento con ambos métodos. Si el evento consume productos ya imputados, reutilizar su atribución; no volver a cargar la misma estructura. |
 
-**Fase 1 — Validación funcional:** identificar los conceptos de coste, asignar cada uno a catering o ensamblado, acordar bases/tasas y comprobar el método de coste de los artículos. Probar con una receta y un evento representativos.
+Para los movimientos se propone aplicar las tasas publicadas a **salidas por venta y entradas de producto terminado por ensamblado** según su fecha de registro. Distinguir fabricación y venta como vistas de análisis: no sumar ambas como dos gastos del mismo producto. Un movimiento con varios centros tendrá detalle por centro y método.
 
-**Fase 2 — Catering analítico:** imputar costes al evento y distribuirlos a productos/menús con informes de margen. Esta fase no cambia la valoración del inventario.
+Guardar la tasa aplicada y sus referencias al registrar; un cambio posterior del modelo no altera el histórico. Para abonos/correcciones vinculados, revertir proporcionalmente la imputación original y su tasa; cualquier regularización histórica debe ser explícita y conservar el origen. La carga inicial de movimientos anteriores se hará mediante una acción controlada, sin duplicados.
 
-**Fase 3 — Coste de ensamblado contabilizado:** configurar recursos y calcular líneas para los pedidos de ensamblado. Validar cuidadosamente el resultado contable e inventariable antes de desplegarlo.
+**Límite contable:** no escribir en el coste unitario estándar, modificar movimientos de valor ni generar asientos automáticamente. Si se decide capitalizar parte de la estructura industrial, diseñar su registro estándar según el método de valoración antes de ampliar este alcance; gestión no se capitaliza por defecto.
 
-**Fase 4 — Integración de compras:** normalizar el uso de Item Charges para transporte, aduanas y costes de compra atribuibles a recepciones, con pruebas específicas para artículos de coste estándar.
+## 8. Entregables y aceptación
 
-## 5. Pruebas de aceptación
+**Desarrollo:** configuración de centros y deducciones; cabecera/detalle del modelo y versiones; cálculo manual/programado; simulador; extensión de producto/Recetas y documentos; movimientos analíticos y consulta de conciliación.
 
-- Un evento distribuye el coste común según la base configurada; el total asignado coincide con el coste del evento y no duplica líneas origen.
-- La consulta muestra margen del evento y de sus productos/menús, y distingue importes analíticos de costes inventariables.
-- Un pedido de ensamblado incorpora materiales y recursos esperados; el importe indirecto, cantidad terminada y coste unitario resultante son trazables.
-- Registrar, ajustar y conciliar el ensamblado no genera diferencias inesperadas entre valoración de inventario y libro mayor.
-- Una repetición del cálculo no duplica costes; la modificación de tasas solo afecta a nuevos cálculos.
-- Un Item Charge de compra actualiza el coste según el método de valoración y, para el método estándar, produce la variación esperada sin modificar el estándar.
+**Validación mínima:**
 
-## 6. Supuestos y fuentes
+- Ambos métodos concilian por separado con el mismo fondo; nunca se suman entre sí.
+- La máquina solo repercute en productos elegibles; se excluyen duplicados de personal, suministros y PI.
+- Simulador, equivalencias y redondeos reproducen los resultados de prueba.
+- La cola deja borradores revisables, registra errores y no altera versiones publicadas.
+- Producto, receta y movimientos permiten consultar tasas, centros y versión de origen; correcciones revierten sin duplicar.
+- La aplicación analítica no cambia inventario ni precios. Comparar informes de fabricación y venta no duplica estructura.
 
-La propuesta se basa en el código local CP-JMC Base y en la documentación estándar de Business Central. No se dispone aquí del código de **CP - Functionality** ni de la implementación completa de la página externa de costes de receta. Antes de construir, hay que confirmar en el entorno qué campos, cálculos y contabilizaciones realiza esa dependencia y validar la política de capitalización con el responsable financiero.
+**Pendiente de aprobación antes de desarrollar:** factores de prioridad, dimensión y relación de centros, fecha/fuente del coste de receta y calendario de cierre. La periodicidad mensual y la aplicación analítica a movimientos son las recomendaciones de este documento. Las amortizaciones específicas siguen fuera de esta fase.
 
-Documentación oficial:
+## Referencias
 
-- [Costes de compra adicionales y cargos de producto](https://learn.microsoft.com/en-us/dynamics365/business-central/payables-how-assign-item-charges)
-- [Cálculo del coste estándar](https://learn.microsoft.com/en-us/dynamics365/business-central/finance-about-calculating-standard-cost)
-- [Métodos de coste](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-costing-methods)
-- [Ajuste de costes de inventario](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-cost-adjustment)
-- [Registro de órdenes de producción](https://learn.microsoft.com/en-us/dynamics365/business-central/design-details-production-order-posting)
-
-Código revisado:
-
-- [JMC CP BOM Aditional Cost](../src/page/JMCCPBOMAditionalCost.page.al)
-- [JMC Receta](../src/pageext/JMCReceta.pageext.al)
-- [JMC Assembly Order](../src/pageext/JMCAssemblyOrder.pageext.al)
-- [JMC Item Card](../src/pageext/JMCItemCard.pageext.al)
-- [JMC Item List](../src/pageext/JMCItemList.pageext.al)
-- [JMC Item](../src/tableext/JMCItem.tableext.al)
-- [app.json](../app.json)
+- [Excel del CEO](../../Costes%20de%20estructura.xlsx). Usar sus reglas de negocio, no copiar las fórmulas ilustrativas que igualan el fondo de estructura al coste total de receta.
+- Código existente: [cuentas](../src/tableext/JMCGLAccount.tableext.al), [recursos](../src/tableext/JMCResource.tableext.al), [costes de receta](../src/page/JMCCPBOMAditionalCost.page.al) y [Recetas](../src/pageext/JMCReceta.pageext.al). Validar las integraciones CP antes de reutilizarlas; no se presupone su contabilización interna.

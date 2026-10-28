@@ -5728,6 +5728,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Control 3948035079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Specifies the total number of adults and children attending the event.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total de adultos y niños que asisten al evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Control JMC Total People - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Control 3948035079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Total People</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total personas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Control JMC Total People - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
@@ -5802,6 +5812,16 @@
           <source>Event Details</source>
           <note from="Developer" annotates="general" priority="2">ESP="Detalles evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Action JMC Detalles evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 398337721 - Control 3948035079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
+          <source>Specifies the total number of adults and children attending the event.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el total de adultos y niños que asisten al evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Control JMC Total People - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 398337721 - Control 3948035079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
+          <source>Total People</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Total personas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Control JMC Total People - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 1269436925 - Control 1698979542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2854365759">
           <source>Related Incident</source>

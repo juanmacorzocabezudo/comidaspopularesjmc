@@ -1,5 +1,28 @@
 pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
-{/*
+{
+    layout
+    {
+        addbefore("Total Adultos")
+        {
+            field("JMC Total People"; Rec."Total Adultos" + Rec."Total Ninos")
+            {
+                ApplicationArea = All;
+                Caption = 'Total People', Comment = 'ESP="Total personas"';
+                ToolTip = 'Specifies the total number of adults and children attending the event.', Comment = 'ESP="Especifica el total de adultos y niños que asisten al evento."';
+                Editable = false;
+            }
+        }
+        modify("Total Adultos")
+        {
+            Visible = false;
+        }
+        modify("Total Ninos")
+        {
+            Visible = false;
+        }
+    }
+
+    /*
     actions
     {
         modify("Cambiar Estado")

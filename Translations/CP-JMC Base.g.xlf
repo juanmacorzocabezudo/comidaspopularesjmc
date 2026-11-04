@@ -5728,6 +5728,31 @@
           <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 3897991705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Menu</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control JMC Menu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4020108293 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4177159656">
+          <source>Menu</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Menu - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2121355448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2672742107">
+          <source>Menu</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Menu Part - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Action 3897991705 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Opens the adult and child menus for the event.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Abre los menús de adultos y niños del evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Action JMC Menu - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Action 3897991705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Menu</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Menú"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Action JMC Menu - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4079354366 - Control 3948035079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
           <source>Specifies the total number of adults and children attending the event.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el total de adultos y niños que asisten al evento."</note>

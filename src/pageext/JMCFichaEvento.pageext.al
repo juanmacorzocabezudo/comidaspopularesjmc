@@ -22,6 +22,34 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
         }
     }
 
+    actions
+    {
+        modify("Menú Adultos")
+        {
+            Visible = false;
+        }
+        modify("Menú Niños")
+        {
+            Visible = false;
+        }
+        addafter("Menú Adultos")
+        {
+            action("JMC Menu")
+            {
+                ApplicationArea = All;
+                Caption = 'Menu', Comment = 'ESP="Menú"';
+                ToolTip = 'Opens the adult and child menus for the event.', Comment = 'ESP="Abre los menús de adultos y niños del evento."';
+                Image = SalesPurchaseTeam;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                RunObject = page "Menu Adulto";
+                RunPageLink = "Codigo Evento" = field("Codigo Evento"), Tipo = filter(Adulto | Niño);
+                RunPageView = sorting("Codigo Evento", Linea) order(ascending) where(Tipo = filter(Adulto | Niño), Cantidad = filter(<> 0));
+            }
+        }
+    }
+
     /*
     actions
     {

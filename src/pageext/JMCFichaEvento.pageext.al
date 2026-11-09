@@ -20,6 +20,30 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
         {
             Visible = false;
         }
+        modify("Coste Menu Adulto")
+        {
+            Visible = false;
+        }
+        modify("Coste Menu Nino")
+        {
+            Visible = false;
+        }
+        modify("Coste Menu Otros")
+        {
+            Visible = false;
+        }
+        modify("Precio Menu Adulto")
+        {
+            Visible = false;
+        }
+        modify("Precio Menu Nino")
+        {
+            Visible = false;
+        }
+        modify("Precio Otros Menus")
+        {
+            Visible = false;
+        }
     }
 
     actions
@@ -45,7 +69,7 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
                 PromotedIsBig = true;
                 RunObject = page "Menu Adulto";
                 RunPageLink = "Codigo Evento" = field("Codigo Evento"), Tipo = filter(Adulto | Niño);
-                RunPageView = sorting("Codigo Evento", Linea) order(ascending) where(Tipo = filter(Adulto | Niño), Cantidad = filter(<> 0));
+                RunPageView = sorting("Codigo Evento", Linea) order(ascending) where(Tipo = filter(Adulto | Niño));
             }
         }
     }

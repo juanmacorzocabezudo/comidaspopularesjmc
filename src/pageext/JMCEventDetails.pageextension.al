@@ -4,11 +4,11 @@ pageextension 53107 "JMC Event Details" extends AlxiaMenuCard
     {
         modify(MenuAdulto)
         {
-            Visible = false;
+            Visible = JMCShowLegacyMenuParts;
         }
         modify(MenuNino)
         {
-            Visible = false;
+            Visible = JMCShowLegacyMenuParts;
         }
         addafter(MenuAdulto)
         {
@@ -18,8 +18,16 @@ pageextension 53107 "JMC Event Details" extends AlxiaMenuCard
                 Caption = 'Menu', Comment = 'ESP="Menú"';
                 UpdatePropagation = Both;
                 SubPageLink = "Codigo Evento" = field("Codigo Evento"), Tipo = filter(Adulto | Niño);
-                SubPageView = sorting("Codigo Evento", Linea) order(ascending) where(Tipo = filter(Adulto | Niño), Cantidad = filter(<> 0));
+                SubPageView = sorting("Codigo Evento", Linea) order(ascending) where(Tipo = filter(Adulto | Niño));
             }
         }
     }
+
+    var
+        JMCShowLegacyMenuParts: Boolean;
+
+    trigger OnOpenPage()
+    begin
+        JMCShowLegacyMenuParts := false;
+    end;
 }

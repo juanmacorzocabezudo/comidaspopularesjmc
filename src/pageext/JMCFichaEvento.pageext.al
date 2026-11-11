@@ -2,14 +2,37 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
 {
     layout
     {
+        modify("Codigo Cliente")
+        {
+            trigger OnAfterValidate()
+            var
+                Customer: Record Customer;
+            begin
+                if Rec."Codigo Cliente" = '' then
+                    Rec.Validate("JMC Customer Type", '')
+                else begin
+                    Customer.Get(Rec."Codigo Cliente");
+                    Rec.Validate("JMC Customer Type", Customer."JMC Customer Type");
+                end;
+            end;
+        }
         addbefore("Total Adultos")
         {
-            field("JMC Total People"; Rec."Total Adultos" + Rec."Total Ninos")
+            field("JMC Total People"; Format(Rec."Total Adultos" + Rec."Total Ninos"))
             {
                 ApplicationArea = All;
                 Caption = 'Total People', Comment = 'ESP="Total personas"';
                 ToolTip = 'Specifies the total number of adults and children attending the event.', Comment = 'ESP="Especifica el total de adultos y niños que asisten al evento."';
                 Editable = false;
+            }
+        }
+        addlast("Contacto / Cliente")
+        {
+            field("JMC Customer Type"; Rec."JMC Customer Type")
+            {
+                ApplicationArea = All;
+                Caption = 'Customer Type', Comment = 'ESP="Tipo Cliente"';
+                ToolTip = 'Specifies the customer type copied from the selected customer. You can change it for this event.', Comment = 'ESP="Especifica el tipo de cliente copiado del cliente seleccionado. Puede cambiarlo para este evento."';
             }
         }
         modify("Total Adultos")
@@ -44,6 +67,14 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
         {
             Visible = false;
         }
+        modify(PorcBeneficio)
+        {
+            ToolTip = 'Shows the real benefit percentage: (total event amount - total cost) / total event amount x 100.', Comment = 'ESP="Muestra el porcentaje de beneficio real: (importe total del evento - coste total) / importe total del evento x 100."';
+        }
+        modify(gfu_PorcBeneficioTeorico)
+        {
+            ToolTip = 'Shows the theoretical cost percentage: total cost / total event amount x 100.', Comment = 'ESP="Muestra el porcentaje de coste teórico: coste total / importe total del evento x 100."';
+        }
     }
 
     actions
@@ -73,6 +104,12 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
             }
         }
     }
+
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+        if Rec."Plantilla Cliente" = '' then
+            Rec.Validate("Plantilla Cliente", 'CLIENTE');
+    end;
 
     /*
     actions

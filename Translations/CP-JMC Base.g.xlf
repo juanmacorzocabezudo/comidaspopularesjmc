@@ -5638,6 +5638,16 @@
           <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Assembly Order - Action JMC View Incidents - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2886856184 - Control 2226395308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Specifies the customer type.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de cliente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Card - Control JMC Customer Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2886856184 - Control 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 523354100">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Card - Control JMC Customer Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 1485145298 - Control 3602903923 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3713263949">
           <source>Especifica el crédito disponible calculado como: Límite de crédito - (Ofertas pendientes + Pedidos abiertos + Pedidos lanzados + Facturas pendientes + Facturas sin registrar).</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -5728,6 +5738,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="Formato"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Duplicate Price Lines - Control JMCFormat - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 3692435980 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Costs and Amounts</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Costes e Importes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control JMCEventCosts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 373078876 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Total Indirect Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total Indirecto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control Coste Total Recursos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 1589466587 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Total Cost</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste Total"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control Coste Total Visualizado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 2326183790 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Shows the theoretical cost percentage: total cost / total event amount x 100.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje de coste teórico: coste total / importe total del evento x 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control gfu_PorcBeneficioTeorico - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 2326183790 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>% Theoretical Benefit</source>
+          <note from="Developer" annotates="general" priority="2">ESP="% Beneficio Teórico"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control gfu_PorcBeneficioTeorico - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 2575859706 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Benefit Amount</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe Beneficio"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control ImporteBeneficio - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 1101060020 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>Shows the real benefit percentage: (total event amount - total cost) / total event amount x 100.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje de beneficio real: (importe total del evento - coste total) / importe total del evento x 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control PorcBeneficio - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3755835294 - Control 1101060020 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
+          <source>% Real Benefit</source>
+          <note from="Developer" annotates="general" priority="2">ESP="% Beneficio Real"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Event Details - Control PorcBeneficio - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3755835294 - Control 3897991705 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1510571230">
           <source>Menu</source>
           <note from="Developer" annotates="general" priority="2">ESP="Menú"</note>
@@ -5762,6 +5812,26 @@
           <source>Total People</source>
           <note from="Developer" annotates="general" priority="2">ESP="Total personas"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Control JMC Total People - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Control 2226395308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Specifies the customer type copied from the selected customer. You can change it for this event.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de cliente copiado del cliente seleccionado. Puede cambiarlo para este evento."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Control JMC Customer Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Control 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Control JMC Customer Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Change 2326183790 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Shows the theoretical cost percentage: total cost / total event amount x 100.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje de coste teórico: coste total / importe total del evento x 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Change gfu_PorcBeneficioTeorico - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4079354366 - Change 1101060020 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2591562834">
+          <source>Shows the real benefit percentage: (total event amount - total cost) / total event amount x 100.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje de beneficio real: (importe total del evento - coste total) / importe total del evento x 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Ficha Evento - Change PorcBeneficio - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
@@ -6297,6 +6367,16 @@
           <source>Year</source>
           <note from="Developer" annotates="general" priority="2">ESP="Año"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Asignacion Recursos - Field JMC Year - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 1592647244 - Field 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1994964448">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Customer - Field JMC Customer Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 2602508561 - Field 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Evento - Field JMC Customer Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2602508561 - Field 1403531422 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 2497411309">
           <source>Status Semaphore</source>

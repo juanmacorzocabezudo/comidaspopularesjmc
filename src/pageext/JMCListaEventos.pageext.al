@@ -4,7 +4,7 @@ pageextension 53104 "JMC Lista Eventos" extends "Lista de Eventos"
     {
         addbefore("Total Adultos")
         {
-            field("JMC Total People"; Rec."Total Adultos" + Rec."Total Ninos")
+            field("JMC Total People"; Format(Rec."Total Adultos" + Rec."Total Ninos"))
             {
                 ApplicationArea = All;
                 Caption = 'Total People', Comment = 'ESP="Total personas"';

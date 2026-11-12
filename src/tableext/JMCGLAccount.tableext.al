@@ -11,6 +11,13 @@ tableextension 53103 "JMC G/L Account" extends "G/L Account"
         {
             Caption = 'Cost Type', Comment = 'ESP="Tipo coste"';
             DataClassification = CustomerContent;
+            InitValue = " ";
+        }
+        field(53103; "JMC Cost Classification"; Enum "JMC Cost Classification")
+        {
+            Caption = 'Cost Classification', Comment = 'ESP="Clasificación del coste"';
+            DataClassification = CustomerContent;
+            InitValue = " ";
         }
     }
 }

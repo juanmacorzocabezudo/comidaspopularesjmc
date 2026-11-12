@@ -11,6 +11,7 @@ Se propone una primera versión **analítica y trazable**: añadir información 
 ## 2. Configuración y fuentes
 
 - **Cuentas contables:** reutilizar la clasificación fijo/variable existente y añadir inclusión explícita en el modelo y destino **industrial** o **gestión adicional**. Seleccionar las cuentas de detalle de ocho dígitos utilizadas por la empresa.
+- **Primer paso implementado:** la ficha de cuenta y el plan de cuentas muestran **Tipo coste** (en blanco/Fijo/Variable) y **Clasificación del coste** (en blanco/Coste industrial de fabricación/Coste completo de gestión). En ambos enumerados, el blanco ocupa el valor 0 y las otras opciones los valores 1 y 2, respectivamente. Ambos campos se inicializan en blanco. La renumeración se ha autorizado al no existir datos que conservar; no incorpora migración de clasificaciones anteriores. Esta clasificación todavía no calcula ni registra costes.
 - **Gasto neto:** movimientos contables del periodo menos costes directos ya imputados. Deducir de sueldos el personal operativo y de suministros el consumo de máquinas ya incorporado a los ensamblados, con reglas identificables por cuenta/recurso.
 - **Producción:** costes de ensamblados registrados del periodo, sin la estructura que calcula el propio módulo; **CA = Catering**, **PT = Industria**. Los productos intermedios **PI** no deben duplicarse si su coste ya está contenido en el producto final.
 - **Ventas:** cantidades netas de abonos por producto y unidad equivalente. «Contra ventas» significa **unidades vendidas**, no importe de facturación.
@@ -32,6 +33,8 @@ Configurar centros y vincular a ellos gastos, recursos/máquinas y productos. Re
 **Ejemplo:** el mantenimiento del horno se reparte solo entre las recetas que pasan por él; no se carga a una receta fría. Administración puede pertenecer a un centro común con alcance más amplio.
 
 ## 4. Modelo de costes indirectos: dos métodos obligatorios
+
+**Paso manual implementado:** buscar **Modelos de costes**, crear una cabecera con código manual y cumplimentar el gasto total, porcentajes y repartos Catering/Alimentación. Añadir líneas por producto, unidad de medida y método (contra ventas/contra receta), con los campos de la imagen del CEO. La descripción y la unidad base se copian al seleccionar el producto; los costes, porcentajes y EXWORK se introducen manualmente, sin fórmulas ni conversión al cambiar la unidad. La prioridad comienza en 1 y admite 1–5. No se permite repetir producto/unidad/método en un mismo modelo. Eliminar un modelo elimina sus líneas; no se puede cambiar su código si tiene líneas. Todavía no incluye periodos, publicación, simulador ni aplicación a movimientos.
 
 Crear una página con **cabecera por periodo/versión** y detalle por producto, centro y método. Debe mostrar origen contable, deducciones, gasto neto, unidades equivalentes, coste de receta, prioridad y los siguientes resultados en paralelo:
 

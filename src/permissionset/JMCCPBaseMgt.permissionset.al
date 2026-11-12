@@ -26,6 +26,9 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "Price List Line" = RIMD,
 
         // Tablas JMC personalizadas
+        tabledata "JMC Cost Model" = RIMD,
+        tabledata "JMC Cost Model Line" = RIMD,
+        tabledata "Item Unit of Measure" = R,
         tabledata "JMC Purchase Order Method" = RIMD,
         tabledata "JMC Purchase Order Reason" = RIMD,
         tabledata "JMC Cronus" = RIMD,
@@ -62,6 +65,9 @@ permissionset 53100 "JMC CP BASE MGT"
         page "Item Ledger Entries" = X,
 
         // Páginas JMC personalizadas
+        page "JMC Cost Models" = X,
+        page "JMC Cost Model Card" = X,
+        page "JMC Cost Model Lines" = X,
         page "JMC Purchase Order Methods" = X,
         page "JMC Purchase Order Reasons" = X,
         page "JMC Cronus" = X,

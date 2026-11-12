@@ -1586,12 +1586,12 @@ Medida</Value>
                         <TablixCell>
                           <CellContents>
                             <Textbox Name="ValueIVA">
-                              <CanGrow>false</CanGrow>
+                              <CanGrow>true</CanGrow>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value>=Format(First(Fields!VATPct_SalesInvoiceLine.Value, "DataSet_Result"), "0") &amp; "%"</Value>
+                                      <Value>=First(Fields!JMCVATPercentages.Value, "DataSet_Result")</Value>
                                       <Style>
                                         <FontFamily>Arial</FontFamily>
                                         <FontSize>8pt</FontSize>
@@ -2432,6 +2432,9 @@ Medida</Value>
         </Field>
         <Field Name="TotalAmountFormat">
           <DataField>TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="JMCVATPercentages">
+          <DataField>JMCVATPercentages</DataField>
         </Field>
         <Field Name="Type_SalesInvoiceLine">
           <DataField>Type_SalesInvoiceLine</DataField>

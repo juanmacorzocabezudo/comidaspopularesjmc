@@ -2,8 +2,8 @@ table 53102 "JMC Cost Model"
 {
     Caption = 'Cost Model', Comment = 'ESP="Modelo de costes"';
     DataClassification = CustomerContent;
-    LookupPageId = "JMC Cost Models";
-    DrillDownPageId = "JMC Cost Models";
+    LookupPageId = "JMC Cost Model Card";
+    DrillDownPageId = "JMC Cost Model Card";
 
     fields
     {
@@ -11,7 +11,6 @@ table 53102 "JMC Cost Model"
         {
             Caption = 'Code', Comment = 'ESP="Código"';
             NotBlank = true;
-            ToolTip = 'Specifies the manually assigned code of the cost model.', Comment = 'ESP="Especifica el código asignado manualmente al modelo de costes."';
         }
         field(2; "JMC Description"; Text[100])
         {
@@ -63,8 +62,14 @@ table 53102 "JMC Cost Model"
     }
 
     trigger OnInsert()
+    var
+        jmcExistingCostModel: Record "JMC Cost Model";
+        jmcSingleModelErr: Label 'Only one cost model is allowed per company.', Comment = 'ESP="Solo se permite un modelo de costes por empresa."';
     begin
-        TestField("JMC Code");
+        TestField("JMC Code", 'GENERAL');
+        jmcExistingCostModel.LockTable();
+        if not jmcExistingCostModel.IsEmpty() then
+            Error(jmcSingleModelErr);
     end;
 
     trigger OnDelete()

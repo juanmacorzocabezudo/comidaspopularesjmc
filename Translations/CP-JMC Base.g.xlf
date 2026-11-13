@@ -8,6 +8,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Modelo de costes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Method 2451657066 - NamedType 1017762944" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Only one cost model is allowed per company.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Solo se permite un modelo de costes por empresa."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Method OnInsert - NamedType jmcSingleModelErr</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Method 804474859 - NamedType 3074098306" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot rename a cost model that has lines.</source>
           <note from="Developer" annotates="general" priority="2">ESP="No se puede cambiar el código de un modelo de costes que tiene líneas."</note>
@@ -32,11 +37,6 @@
           <source>Catering Structure %</source>
           <note from="Developer" annotates="general" priority="2">ESP="% estructura Catering"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Structure Pct. - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Table 4267268924 - Field 3870862051 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the manually assigned code of the cost model.</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el código asignado manualmente al modelo de costes."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 3870862051 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Code</source>
@@ -1333,6 +1333,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Modelo de costes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 455107400 - Method 716454850 - NamedType 3104285503" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Multiple cost models exist. Resolve them before opening the cost model; no data has been changed.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Existen varios modelos de costes. Resuélvalos antes de abrir el modelo; no se ha modificado ningún dato."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Method OnOpenPage - NamedType jmcMultipleModelsErr</note>
+        </trans-unit>
         <trans-unit id="Page 455107400 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2">ESP="General"</note>
@@ -1347,11 +1352,6 @@
           <source>Products</source>
           <note from="Developer" annotates="general" priority="2">ESP="Productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 851812093 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Cost Models</source>
-          <note from="Developer" annotates="general" priority="2">ESP="Modelos de costes"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Models - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>

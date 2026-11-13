@@ -4,6 +4,9 @@ page 53109 "JMC Cost Model Card"
     PageType = Document;
     SourceTable = "JMC Cost Model";
     ApplicationArea = All;
+    UsageCategory = Administration;
+    InsertAllowed = false;
+    DeleteAllowed = false;
 
     layout
     {
@@ -13,10 +16,6 @@ page 53109 "JMC Cost Model Card"
             {
                 Caption = 'General', Comment = 'ESP="General"';
 
-                field("JMC Code"; Rec."JMC Code")
-                {
-                    ApplicationArea = All;
-                }
                 field("JMC Description"; Rec."JMC Description")
                 {
                     ApplicationArea = All;
@@ -54,4 +53,24 @@ page 53109 "JMC Cost Model Card"
             }
         }
     }
+
+    trigger OnOpenPage()
+    var
+        jmcModelCode: Code[20];
+        jmcMultipleModelsErr: Label 'Multiple cost models exist. Resolve them before opening the cost model; no data has been changed.', Comment = 'ESP="Existen varios modelos de costes. Resuélvalos antes de abrir el modelo; no se ha modificado ningún dato."';
+    begin
+        Rec.Reset();
+        Rec.LockTable();
+        if Rec.FindFirst() then begin
+            jmcModelCode := Rec."JMC Code";
+            if Rec.Next() <> 0 then
+                Error(jmcMultipleModelsErr);
+            Rec.Get(jmcModelCode);
+        end else begin
+            Rec.Init();
+            Rec."JMC Code" := 'GENERAL';
+            Rec.Insert(true);
+        end;
+        Rec.SetRange("JMC Code", Rec."JMC Code");
+    end;
 }

@@ -34,9 +34,9 @@ Configurar centros y vincular a ellos gastos, recursos/máquinas y productos. Re
 
 ## 4. Modelo de costes indirectos: dos métodos obligatorios
 
-**Paso manual implementado:** buscar **Modelos de costes**, crear una cabecera con código manual y cumplimentar el gasto total, porcentajes y repartos Catering/Alimentación. Añadir líneas por producto, unidad de medida y método (contra ventas/contra receta), con los campos de la imagen del CEO. La descripción y la unidad base se copian al seleccionar el producto; los costes, porcentajes y EXWORK se introducen manualmente, sin fórmulas ni conversión al cambiar la unidad. La prioridad comienza en 1 y admite 1–5. No se permite repetir producto/unidad/método en un mismo modelo. Eliminar un modelo elimina sus líneas; no se puede cambiar su código si tiene líneas. Todavía no incluye periodos, publicación, simulador ni aplicación a movimientos.
+**Paso manual implementado:** buscar **Modelo de costes** para abrir la ficha de la única cabecera por empresa. Si no existe se crea automáticamente; si ya existe una, se conserva su código y sus líneas. Si existen varias, se informa del conflicto sin modificar datos. Cumplimentar el gasto total, porcentajes y repartos Catering/Alimentación y añadir líneas por producto, unidad de medida y método (contra ventas/contra receta). La descripción y la unidad base se copian al seleccionar el producto; los costes, porcentajes y EXWORK se introducen manualmente, sin fórmulas ni conversión al cambiar la unidad. La prioridad comienza en 1 y admite 1–5. No se permite repetir producto/unidad/método. Todavía no incluye periodos, publicación, simulador ni aplicación a movimientos.
 
-Crear una página con **cabecera por periodo/versión** y detalle por producto, centro y método. Debe mostrar origen contable, deducciones, gasto neto, unidades equivalentes, coste de receta, prioridad y los siguientes resultados en paralelo:
+En una fase posterior, conservar el histórico por periodo/versión sin crear más cabeceras globales, y disponer del detalle por producto, centro y método. Debe mostrar origen contable, deducciones, gasto neto, unidades equivalentes, coste de receta, prioridad y los siguientes resultados en paralelo:
 
 | Método | Base por producto |
 | --- | --- |

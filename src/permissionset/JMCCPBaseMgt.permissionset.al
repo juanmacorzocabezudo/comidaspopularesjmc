@@ -65,7 +65,6 @@ permissionset 53100 "JMC CP BASE MGT"
         page "Item Ledger Entries" = X,
 
         // Páginas JMC personalizadas
-        page "JMC Cost Models" = X,
         page "JMC Cost Model Card" = X,
         page "JMC Cost Model Lines" = X,
         page "JMC Purchase Order Methods" = X,

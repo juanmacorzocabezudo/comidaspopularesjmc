@@ -4,6 +4,10 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
     {
         addafter(Formato)
         {
+            field("JMC Priority Level"; Rec."JMC Priority Level")
+            {
+                ApplicationArea = All;
+            }
             field("JMC Weight"; Rec."JMC Weight")
             {
                 ApplicationArea = All;

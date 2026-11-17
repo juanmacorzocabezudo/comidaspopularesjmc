@@ -21,10 +21,34 @@
           <note from="Developer" annotates="general" priority="2">ESP="No se puede cambiar el código de un modelo de costes que tiene líneas."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Method OnRename - NamedType jmcRenameWithLinesErr</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1517079439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Account Filter</source>
+          <target>Filtro de cuentas del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtro de cuentas del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Account Filter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1484277635 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated At</source>
+          <target>Fecha y hora del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha y hora del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Calculated At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2058016736 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indicates that model inputs and priority factors have not changed. Later changes to ledger entries or recipes are not monitored; recalculate to refresh source data.</source>
+          <target>Indica que no han cambiado las entradas del modelo ni los factores. No se supervisan cambios posteriores en movimientos o recetas; recalcule para actualizar las fuentes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Indica que no han cambiado las entradas del modelo ni los factores. No se supervisan cambios posteriores en movimientos o recetas; recalcule para actualizar las fuentes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Calculation Current - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2058016736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model Unchanged Since Calculation</source>
+          <target>Modelo sin cambios desde el cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Modelo sin cambios desde el cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Calculation Current - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2025634367 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the structure cost allocated to catering manually.</source>
-          <target>Especifica el gasto de estructura asignado manualmente a Catering.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el gasto de estructura asignado manualmente a Catering."</note>
+          <source>Specifies the total structure cost multiplied by the catering percentage.</source>
+          <target>Especifica el gasto de estructura total multiplicado por el porcentaje de Catering.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el gasto de estructura total multiplicado por el porcentaje de Catering."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Allocation - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2025634367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -33,10 +57,22 @@
           <note from="Developer" annotates="general" priority="2">ESP="Reparto Catering"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Allocation - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2232789039 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net actual cost of final assembly outputs in the period with LINEA = CATERING, including cost adjustments available when calculated.</source>
+          <target>Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = CATERING, incluidos los ajustes de coste disponibles al calcular.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = CATERING, incluidos los ajustes de coste disponibles al calcular."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Production Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2232789039 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Catering Production Cost</source>
+          <target>Coste de producción Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de producción Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Production Cost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1234531651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the catering allocation percentage. No amounts are calculated automatically.</source>
-          <target>Especifica el porcentaje de reparto de Catering. No se calculan importes automáticamente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje de reparto de Catering. No se calculan importes automáticamente."</note>
+          <source>Specifies the catering share of actual production cost, calculated from the business line dimension of posted assembly outputs.</source>
+          <target>Especifica la proporción de Catering sobre el coste real de producción, calculada a partir de la dimensión de línea de negocio de las salidas de ensamblado registradas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la proporción de Catering sobre el coste real de producción, calculada a partir de la dimensión de línea de negocio de las salidas de ensamblado registradas."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Structure Pct. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1234531651 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -63,10 +99,28 @@
           <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Description - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 93412081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Ending Date</source>
+          <target>Fecha final del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha final del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Ending Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 380415704 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Industrial Fund</source>
+          <target>Fondo industrial fijo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo industrial fijo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Fixed Industrial Fund - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 351415612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Management Fund</source>
+          <target>Fondo de gestión fijo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo de gestión fijo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Fixed Management Fund - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 135606738 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the structure cost allocated to industry manually.</source>
-          <target>Especifica el gasto de estructura asignado manualmente a Alimentación.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el gasto de estructura asignado manualmente a Alimentación."</note>
+          <source>Specifies the remaining structure cost allocated to industry after rounding.</source>
+          <target>Especifica el gasto de estructura restante asignado a Alimentación tras el redondeo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el gasto de estructura restante asignado a Alimentación tras el redondeo."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Allocation - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 135606738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -75,10 +129,22 @@
           <note from="Developer" annotates="general" priority="2">ESP="Reparto Alimentación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Allocation - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1662116010 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net actual cost of final assembly outputs in the period with LINEA = ALIMENTACION, including cost adjustments available when calculated.</source>
+          <target>Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = ALIMENTACION, incluidos los ajustes de coste disponibles al calcular.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = ALIMENTACION, incluidos los ajustes de coste disponibles al calcular."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Production Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1662116010 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry Production Cost</source>
+          <target>Coste de producción Alimentación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de producción Alimentación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Production Cost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2460935446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the industry allocation percentage entered manually.</source>
-          <target>Especifica el porcentaje de reparto de Alimentación introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje de reparto de Alimentación introducido manualmente."</note>
+          <source>Specifies the industry share of actual production cost, calculated from the business line dimension of posted assembly outputs.</source>
+          <target>Especifica la proporción de Alimentación sobre el coste real de producción, calculada a partir de la dimensión de línea de negocio de las salidas de ensamblado registradas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la proporción de Alimentación sobre el coste real de producción, calculada a partir de la dimensión de línea de negocio de las salidas de ensamblado registradas."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Structure Pct. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2460935446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -87,10 +153,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="% estructura Alimentación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Structure Pct. - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1365618681 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Business Dimension</source>
+          <target>Dimensión de línea de negocio de producción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Dimensión de línea de negocio de producción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Production Dimension - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 167503600 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipe: Unallocated Industrial</source>
+          <target>Receta: industrial pendiente de reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta: industrial pendiente de reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Recipe Pending Industrial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1241392772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipe: Unallocated Management</source>
+          <target>Receta: gestión pendiente de reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Receta: gestión pendiente de reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Recipe Pending Management - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 3554293216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales: Unallocated Industrial</source>
+          <target>Ventas: industrial pendiente de reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ventas: industrial pendiente de reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Sales Pending Industrial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1564850580 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sales: Unallocated Management</source>
+          <target>Ventas: gestión pendiente de reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Ventas: gestión pendiente de reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Sales Pending Management - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 196607828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Starting Date</source>
+          <target>Fecha inicial del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha inicial del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Starting Date - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1639142500 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the total structure cost entered manually.</source>
-          <target>Especifica el gasto de estructura total introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el gasto de estructura total introducido manualmente."</note>
+          <source>Specifies the net fixed structure cost read from configured G/L accounts for the calculation period. Variable costs are excluded.</source>
+          <target>Especifica el coste fijo neto de estructura obtenido de las cuentas contables configuradas para el periodo del cálculo. Se excluyen los costes variables.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste fijo neto de estructura obtenido de las cuentas contables configuradas para el periodo del cálculo. Se excluyen los costes variables."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Total Structure Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1639142500 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -99,11 +201,35 @@
           <note from="Developer" annotates="general" priority="2">ESP="Gasto de estructura total"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Total Structure Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 3790991768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variable Industrial Fund</source>
+          <target>Fondo industrial variable</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo industrial variable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Variable Industrial Fund - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 156093436 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Variable Management Fund</source>
+          <target>Fondo de gestión variable</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo de gestión variable"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Variable Management Fund - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cost Model Line</source>
           <target>Línea modelo de costes</target>
           <note from="Developer" annotates="general" priority="2">ESP="Línea modelo de costes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Method 117422397 - NamedType 2035628285" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter a nonzero recipe cost before entering industrial or management amounts, so their percentages can be calculated.</source>
+          <target>Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Method RecalculateCosts - NamedType jmcRecipeCostRequiredErr</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2195524267 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eligible for Allocation</source>
+          <target>Apto para reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Apto para reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Allocation Eligible - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 546674941 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies whether the line represents allocation against sales or recipe cost.</source>
@@ -117,10 +243,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="Método de reparto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Allocation Method - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2342808682 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applied Priority Factor</source>
+          <target>Factor de prioridad aplicado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor de prioridad aplicado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Applied Priority Factor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 4248002052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the allocation for this item and sales unit within this alternative method. Amounts are not repeated across units.</source>
+          <target>Especifica el reparto de este producto y unidad de venta dentro de este método alternativo. Los importes no se repiten entre unidades.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el reparto de este producto y unidad de venta dentro de este método alternativo. Los importes no se repiten entre unidades."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Industrial Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 4248002052 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assigned Industrial Amount</source>
+          <target>Importe industrial asignado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe industrial asignado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Industrial Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 4073716608 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assigned Management Amount</source>
+          <target>Importe de gestión asignado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de gestión asignado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Management Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 1880327288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Explains why no allocation was calculated. Zero structure amounts on a line with an issue are not a valid zero cost.</source>
+          <target>Explica por qué no se ha calculado el reparto. Los importes de estructura a cero en una línea con incidencia no representan un coste cero válido.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Explica por qué no se ha calculado el reparto. Los importes de estructura a cero en una línea con incidencia no representan un coste cero válido."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Calculation Issue - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 1880327288 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Issue</source>
+          <target>Incidencia del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Calculation Issue - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Field 4025560776 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies whether the cost is expressed as an amount or a percentage. No conversion is performed.</source>
-          <target>Especifica si el coste se expresa como importe o porcentaje. No se realiza ninguna conversión.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica si el coste se expresa como importe o porcentaje. No se realiza ninguna conversión."</note>
+          <source>Specifies whether amounts or percentages of recipe cost are entered. The other values are calculated.</source>
+          <target>Especifica si se introducen importes o porcentajes sobre el coste de receta. Los otros valores se calculan.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica si se introducen importes o porcentajes sobre el coste de receta. Los otros valores se calculan."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Cost Value Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 4025560776 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -130,9 +292,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Cost Value Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1748119917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the EXWORK cost entered manually. It does not update the item standard cost.</source>
-          <target>Especifica el coste EXWORK introducido manualmente. No actualiza el coste estándar del producto.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste EXWORK introducido manualmente. No actualiza el coste estándar del producto."</note>
+          <source>Specifies recipe cost plus industrial cost plus additional management cost. It does not update the item standard cost.</source>
+          <target>Especifica el coste de receta más el industrial y la gestión adicional. No actualiza el coste estándar del producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de receta más el industrial y la gestión adicional. No actualiza el coste estándar del producto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC EXWORK Standard - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1748119917 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -142,9 +304,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC EXWORK Standard - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1058431996 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the industrial cost amount per selected unit, entered manually.</source>
-          <target>Especifica el importe del coste industrial por unidad seleccionada, introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe del coste industrial por unidad seleccionada, introducido manualmente."</note>
+          <source>Specifies the industrial cost per selected unit. Enter it when the cost type is Amount.</source>
+          <target>Especifica el coste industrial por unidad seleccionada. Se introduce cuando el tipo de coste es Importe.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste industrial por unidad seleccionada. Se introduce cuando el tipo de coste es Importe."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Industrial Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1058431996 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -154,9 +316,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Industrial Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 636923267 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the industrial cost percentage entered manually.</source>
-          <target>Especifica el porcentaje de coste industrial introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje de coste industrial introducido manualmente."</note>
+          <source>Specifies the industrial percentage of recipe cost. Enter it when the cost type is Percentage.</source>
+          <target>Especifica el porcentaje industrial sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje industrial sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Industrial Cost Pct. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 636923267 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -196,9 +358,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Line No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 3004510136 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the management cost amount per selected unit, entered manually.</source>
-          <target>Especifica el importe del coste de gestión por unidad seleccionada, introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe del coste de gestión por unidad seleccionada, introducido manualmente."</note>
+          <source>Specifies the additional management cost per selected unit. Enter it when the cost type is Amount.</source>
+          <target>Especifica el coste de gestión adicional por unidad seleccionada. Se introduce cuando el tipo de coste es Importe.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de gestión adicional por unidad seleccionada. Se introduce cuando el tipo de coste es Importe."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Management Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 3004510136 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -208,9 +370,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Management Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 274306591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the management cost percentage entered manually.</source>
-          <target>Especifica el porcentaje de coste de gestión introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje de coste de gestión introducido manualmente."</note>
+          <source>Specifies the additional management percentage of recipe cost. Enter it when the cost type is Percentage.</source>
+          <target>Especifica el porcentaje de gestión adicional sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje de gestión adicional sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Management Cost Pct. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 274306591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -225,10 +387,34 @@
           <note from="Developer" annotates="general" priority="2">ESP="Código modelo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Model Code - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 175839514 - Field 933479880 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the net base quantity of sales posted in this line's unit. Sales in other units of the same item are not included.</source>
+          <target>Especifica la cantidad base neta de las ventas registradas en la unidad de esta línea. No incluye ventas en otras unidades del mismo producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad base neta de las ventas registradas en la unidad de esta línea. No incluye ventas en otras unidades del mismo producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Net Sales Base Qty. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 933479880 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net Sales Quantity (Base)</source>
+          <target>Cantidad neta de venta (base)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad neta de venta (base)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Net Sales Base Qty. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2916614756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies net quantities sold in this unit during the calculation period, using each posted conversion factor. Returns subtract and uninvoiced shipments are included.</source>
+          <target>Especifica las cantidades netas vendidas en esta unidad durante el periodo, usando cada factor de conversión registrado. Las devoluciones restan y se incluyen envíos sin facturar.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica las cantidades netas vendidas en esta unidad durante el periodo, usando cada factor de conversión registrado. Las devoluciones restan y se incluyen envíos sin facturar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Net Sales Quantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2916614756 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated Net Sales Quantity</source>
+          <target>Cantidad neta de venta calculada</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad neta de venta calculada"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Net Sales Quantity - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Field 2146308772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the priority from 1 to 5. All lines start at 1. No redistribution is performed yet.</source>
-          <target>Especifica la prioridad del 1 al 5. Todas las líneas comienzan en 1. Todavía no se realiza ningún reparto.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la prioridad del 1 al 5. Todas las líneas comienzan en 1. Todavía no se realiza ningún reparto."</note>
+          <source>Specifies the item priority copied from its card when calculating. Configure the approved factor for levels 1 to 5.</source>
+          <target>Especifica la prioridad del producto copiada de su ficha al calcular. Configure el factor aprobado para los niveles del 1 al 5.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la prioridad del producto copiada de su ficha al calcular. Configure el factor aprobado para los niveles del 1 al 5."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Priority Level - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 2146308772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -238,9 +424,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 969878873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the recipe cost per selected unit of measure, entered manually.</source>
-          <target>Especifica el coste de receta por unidad de medida seleccionada, introducido manualmente.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de receta por unidad de medida seleccionada, introducido manualmente."</note>
+          <source>Specifies the recipe cost per selected unit, entered manually or read from the current recipe by Calculate All Costs.</source>
+          <target>Especifica el coste de receta por unidad seleccionada, introducido manualmente o leído de la receta actual mediante Calcular todos los costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de receta por unidad seleccionada, introducido manualmente o leído de la receta actual mediante Calcular todos los costes."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Recipe BOM Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 969878873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -250,9 +436,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Recipe BOM Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1292481930 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the item unit of measure to which the manually entered costs apply. Changing it does not convert costs.</source>
-          <target>Especifica la unidad del producto a la que corresponden los costes introducidos. Cambiarla no convierte los costes.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la unidad del producto a la que corresponden los costes introducidos. Cambiarla no convierte los costes."</note>
+          <source>Specifies the unit used in this line's posted sales. Quantities and allocations belong only to this item and unit.</source>
+          <target>Especifica la unidad utilizada en las ventas registradas de esta línea. Las cantidades y los repartos corresponden solo a este producto y unidad.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la unidad utilizada en las ventas registradas de esta línea. Las cantidades y los repartos corresponden solo a este producto y unidad."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Unit of Measure Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1292481930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -260,6 +446,48 @@
           <target>Unidad de medida</target>
           <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Unit of Measure Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cost Priority Factor</source>
+          <target>Factor de prioridad de costes</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor de prioridad de costes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Method 659155301 - NamedType 542334031" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Use priorities 1 to 5 and positive, strictly decreasing factors.</source>
+          <target>Utilice prioridades del 1 al 5 y factores positivos estrictamente decrecientes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Utilice prioridades del 1 al 5 y factores positivos estrictamente decrecientes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Method CheckFactor - NamedType jmcInvalidFactorErr</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Method 804474859 - NamedType 2347582219" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Delete and recreate the priority factor instead of renaming it.</source>
+          <target>Elimine y vuelva a crear el factor de prioridad en lugar de cambiar su nivel.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Elimine y vuelva a crear el factor de prioridad en lugar de cambiar su nivel."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Method OnRename - NamedType jmcRenameErr</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Field 1583595163 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the approved positive weight. Factors must decrease as the priority number increases. No values are assigned automatically.</source>
+          <target>Especifica el peso positivo aprobado. Los factores deben disminuir al aumentar el número de prioridad. No se asignan valores automáticamente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso positivo aprobado. Los factores deben disminuir al aumentar el número de prioridad. No se asignan valores automáticamente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Field JMC Factor - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Field 1583595163 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factor</source>
+          <target>Factor</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Field JMC Factor - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Field 2146308772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the priority, from 1 (highest) to 5 (lowest).</source>
+          <target>Especifica la prioridad, de 1 (mayor) a 5 (menor).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la prioridad, de 1 (mayor) a 5 (menor)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Field JMC Priority Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 120709060 - Field 2146308772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Priority Level</source>
+          <target>Nivel de prioridad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nivel de prioridad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Priority Factor - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3452581174 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cronus</source>
@@ -1353,6 +1581,114 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Tipo - Field Descripcion - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 980909052 - NamedType 2466489169" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item %1 is not identified as CA (Catering) or PT (Industry). Review the model scope; no business is assigned by default.</source>
+          <target>El producto %1 no se identifica como CA (Catering) o PT (Alimentación). Revise los productos del modelo; no se asigna un negocio por defecto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no se identifica como CA (Catering) o PT (Alimentación). Revise los productos del modelo; no se asigna un negocio por defecto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method BusinessIndex - NamedType jmcBusinessErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1592581304 - NamedType 394188713" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Enter a starting date and ending date in chronological order, without closing dates.</source>
+          <target>Introduzca fechas inicial y final en orden cronológico, sin fechas de cierre.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Introduzca fechas inicial y final en orden cronológico, sin fechas de cierre."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method Calculate - NamedType jmcInvalidDatesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 129846437 - NamedType 230997546" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There are no unblocked items to include in the cost model.</source>
+          <target>No hay productos no bloqueados para incluir en el modelo de costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No hay productos no bloqueados para incluir en el modelo de costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method LoadLines - NamedType jmcNoItemsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 966289981" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Configure a positive approved factor for priority %1 in Cost Priority Factors.</source>
+          <target>Configure un factor positivo aprobado para la prioridad %1 en Factores de prioridad de costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Configure un factor positivo aprobado para la prioridad %1 en Factores de prioridad de costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcPriorityErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 3846964698" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Set a priority from 1 to 5 on the item card for item %1.</source>
+          <target>Configure una prioridad del 1 al 5 en la ficha del producto %1.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Configure una prioridad del 1 al 5 en la ficha del producto %1."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcItemPriorityErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 3366273259" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No allocation: the item is not identified as CA (Catering) or PT (Industry).</source>
+          <target>Sin reparto: el producto no se identifica como CA (Catering) o PT (Alimentación).</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Sin reparto: el producto no se identifica como CA (Catering) o PT (Alimentación)."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcBusinessIssueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 188002875" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No allocation: the selected unit of measure is missing or has no positive conversion factor.</source>
+          <target>Sin reparto: falta la unidad de medida seleccionada o no tiene un factor de conversión positivo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Sin reparto: falta la unidad de medida seleccionada o no tiene un factor de conversión positivo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcUnitIssueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 886498851" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item %1 has no positive net sales quantity for unit %2 in the period (%3). No unit allocation can be calculated.</source>
+          <target>El producto %1 no tiene cantidad neta de venta positiva para la unidad %2 en el periodo (%3). No puede calcularse su reparto unitario.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no tiene cantidad neta de venta positiva para la unidad %2 en el periodo (%3). No puede calcularse su reparto unitario."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcSalesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 323097924 - NamedType 2765435902" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account %1 has only one cost category filled in. Complete both fields or clear both before calculating.</source>
+          <target>La cuenta %1 solo tiene una categoría de coste informada. Complete ambos campos o vacíe ambos antes de calcular.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="La cuenta %1 solo tiene una categoría de coste informada. Complete ambos campos o vacíe ambos antes de calcular."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadFunds - NamedType jmcPartialErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 323097924 - NamedType 3904072030" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No non-closing ledger entries were found for configured fixed-cost accounts in this period and account filter.</source>
+          <target>No se han encontrado movimientos contables sin cierre de cuentas configuradas de coste fijo para este periodo y filtro.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No se han encontrado movimientos contables sin cierre de cuentas configuradas de coste fijo para este periodo y filtro."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadFunds - NamedType jmcNoEntriesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 323097924 - NamedType 2146577694" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The fund for cost type %1 and classification %2 is negative (%3). Review accounts, signs and period; credits are not converted to expenses.</source>
+          <target>El fondo del tipo de coste %1 y clasificación %2 es negativo (%3). Revise cuentas, signos y periodo; los abonos no se convierten en gastos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El fondo del tipo de coste %1 y clasificación %2 es negativo (%3). Revise cuentas, signos y periodo; los abonos no se convierten en gastos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadFunds - NamedType jmcNegativeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1100418251 - NamedType 1906070057" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assembly output entry %1 (item %2) has LINEA value %3, not CATERING or ALIMENTACION.</source>
+          <target>El movimiento de salida de ensamblado %1 (producto %2) tiene el valor LINEA %3, distinto de CATERING o ALIMENTACION.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El movimiento de salida de ensamblado %1 (producto %2) tiene el valor LINEA %3, distinto de CATERING o ALIMENTACION."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadProductionCosts - NamedType jmcUnknownBusinessErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1100418251 - NamedType 1470891171" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net actual production cost for LINEA = %1 is negative (%2). Review assembly output reversals and cost adjustments for the period.</source>
+          <target>El coste real neto de producción para LINEA = %1 es negativo (%2). Revise las reversiones de salidas de ensamblado y los ajustes de coste del periodo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El coste real neto de producción para LINEA = %1 es negativo (%2). Revise las reversiones de salidas de ensamblado y los ajustes de coste del periodo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadProductionCosts - NamedType jmcNegativeProductionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1100418251 - NamedType 1235648189" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No positive net actual production cost was found for final assembly outputs (CA/PT) in this period. Business percentages cannot be calculated.</source>
+          <target>No se ha encontrado coste real neto de producción positivo de salidas de ensamblado finales (CA/PT) en este periodo. No pueden calcularse los porcentajes por negocio.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No se ha encontrado coste real neto de producción positivo de salidas de ensamblado finales (CA/PT) en este periodo. No pueden calcularse los porcentajes por negocio."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadProductionCosts - NamedType jmcNoProductionErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1483634731 - NamedType 3460514931" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item %1 has no positive current recipe BOM cost. Review its non-subcontracted components, resources and costs.</source>
+          <target>El producto %1 no tiene coste positivo de receta LM actual. Revise sus componentes no subcontratados, recursos y costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no tiene coste positivo de receta LM actual. Revise sus componentes no subcontratados, recursos y costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadRecipeCost - NamedType jmcRecipeErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1483634731 - NamedType 4203742142" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No allocation: the item base unit is missing or its conversion factor is not 1.</source>
+          <target>Sin reparto: falta la unidad base del producto o su factor de conversión no es 1.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Sin reparto: falta la unidad base del producto o su factor de conversión no es 1."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadRecipeCost - NamedType jmcBaseIssueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1483634731 - NamedType 4192306425" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No allocation: recipe component %1 is missing or has an invalid unit conversion.</source>
+          <target>Sin reparto: falta el componente %1 de la receta o su conversión de unidad no es válida.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Sin reparto: falta el componente %1 de la receta o su conversión de unidad no es válida."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadRecipeCost - NamedType jmcBOMIssueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 3098207761 - NamedType 2459911761" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No allocation: sale entry %1 has no unit of measure or positive posted conversion factor.</source>
+          <target>Sin reparto: el movimiento de venta %1 no tiene unidad de medida o conversión registrada positiva.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Sin reparto: el movimiento de venta %1 no tiene unidad de medida o conversión registrada positiva."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadSalesQuantities - NamedType jmcConversionIssueLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3330172492 - Method 3832868089 - NamedType 4000788090" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please find attached sales invoice %1.</source>
           <target>Se adjunta la factura de venta %1.</target>
@@ -1611,17 +1947,449 @@
           <note from="Developer" annotates="general" priority="2">ESP="General"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control General - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 455107400 - Control 3317890405 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last Comparative Calculation</source>
+          <target>Último cálculo comparativo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Último cálculo comparativo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control LastCalculation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1152022503 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Against Recipe</source>
+          <target>Contra receta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Contra receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control RecipeLines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 2039904471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Against Sales</source>
+          <target>Contra ventas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Contra ventas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control SalesLines - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 455107400 - Control 2369427383 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Structure Allocation</source>
           <target>Reparto de estructura</target>
           <note from="Developer" annotates="general" priority="2">ESP="Reparto de estructura"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control Structure - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1181343548 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Allocation</source>
+          <target>Reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control Allocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 937455063 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculates accounting funds and both product allocations for review, replacing model results only. It does not apply costs outside the model.</source>
+          <target>Calcula los fondos contables y ambos repartos por producto para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calcula los fondos contables y ambos repartos por producto para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action CalculateAllCosts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 937455063 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate All Costs</source>
+          <target>Calcular todos los costes</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calcular todos los costes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action CalculateAllCosts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 11253824 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Defines the approved decreasing factors for priorities 1 to 5. No factor values are assumed.</source>
+          <target>Define los factores decrecientes aprobados para las prioridades del 1 al 5. No se presupone ningún valor.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Define los factores decrecientes aprobados para las prioridades del 1 al 5. No se presupone ningún valor."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action PriorityFactors - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 11253824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Priority Factors</source>
+          <target>Factores de prioridad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factores de prioridad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action PriorityFactors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 101987764 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulates a product quantity using both saved allocation methods, without recalculating or changing model costs.</source>
+          <target>Simula una cantidad de producto con ambos métodos de reparto guardados, sin recalcular ni cambiar los costes del modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Simula una cantidad de producto con ambos métodos de reparto guardados, sin recalcular ni cambiar los costes del modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action SimulateStructureCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 101987764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulate Structure Cost</source>
+          <target>Simular coste de estructura</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Simular coste de estructura"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action SimulateStructureCost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2573794215 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Products</source>
           <target>Productos</target>
           <note from="Developer" annotates="general" priority="2">ESP="Productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Structure Cost Simulator</source>
+          <target>Simulador de costes de estructura</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Simulador de costes de estructura"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - NamedType 1130346183" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This model has no saved product lines to simulate.</source>
+          <target>Este modelo no tiene líneas de producto guardadas para simular.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Este modelo no tiene líneas de producto guardadas para simular."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCNoLinesErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - NamedType 3892665973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item %1 has no saved lines in this model.</source>
+          <target>El producto %1 no tiene líneas guardadas en este modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no tiene líneas guardadas en este modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCNoProductErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - NamedType 2330629040" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Uses saved model rates, not current recipes or priority factors. Does not recalculate or save costs.</source>
+          <target>Utiliza las tasas guardadas del modelo, no las recetas ni los factores de prioridad actuales. No recalcula ni guarda costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Utiliza las tasas guardadas del modelo, no las recetas ni los factores de prioridad actuales. No recalcula ni guarda costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCScopeLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - NamedType 2849945952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The model has changed since calculation. This simulation uses the saved values, which may have been edited; it does not recalculate them.</source>
+          <target>El modelo ha cambiado desde el cálculo. Esta simulación utiliza los valores guardados, que pueden haberse editado; no los recalcula.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El modelo ha cambiado desde el cálculo. Esta simulación utiliza los valores guardados, que pueden haberse editado; no los recalcula."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCWarningLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Method 1133982615 - NamedType 1322460743" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No valid saved rate exists for this product, unit and method. Review its model line before simulating.</source>
+          <target>No existe una tasa guardada válida para este producto, unidad y método. Revise su línea del modelo antes de simular.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No existe una tasa guardada válida para este producto, unidad y método. Revise su línea del modelo antes de simular."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Method ReadSavedRate - NamedType jmcNoRateLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Method 2022285351 - NamedType 287853909" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The model changed while loading the simulator. Open the simulator again to use a consistent saved calculation.</source>
+          <target>El modelo cambió mientras se cargaba el simulador. Abra el simulador de nuevo para utilizar un cálculo guardado coherente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El modelo cambió mientras se cargaba el simulador. Abra el simulador de nuevo para utilizar un cálculo guardado coherente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Method SetModel - NamedType jmcChangedErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Method 1180502355 - NamedType 2223909522" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No saved model line exists for item %1 and unit %2. Select a saved product and unit; rates from another unit are not substituted.</source>
+          <target>No existe una línea guardada del modelo para el producto %1 y la unidad %2. Seleccione un producto y unidad guardados; no se sustituyen tasas de otra unidad.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="No existe una línea guardada del modelo para el producto %1 y la unidad %2. Seleccione un producto y unidad guardados; no se sustituyen tasas de otra unidad."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Method ValidateSavedPair - NamedType jmcNoUnitErr</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 459565732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Against Recipe</source>
+          <target>Contra receta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Contra receta"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control Recipe - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 4080002391 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulation Issue</source>
+          <target>Incidencia de la simulación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia de la simulación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeIssue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 558031856 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the rounded recipe amount plus the simulated structure amount. It is not a sales price.</source>
+          <target>Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeEXWORKAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 558031856 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated EXWORK Amount</source>
+          <target>Importe EXWORK simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe EXWORK simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeEXWORKAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1620214825 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies quantity multiplied by the saved industrial unit cost, rounded in local currency.</source>
+          <target>Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeIndustrialAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1620214825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Industrial Amount</source>
+          <target>Importe industrial simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe industrial simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeIndustrialAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3917188834 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved industrial rate per selected unit.</source>
+          <target>Especifica la tasa industrial guardada por unidad seleccionada.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la tasa industrial guardada por unidad seleccionada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeIndustrialUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3917188834 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industrial Cost per Unit</source>
+          <target>Coste industrial por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste industrial por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeIndustrialUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1474857613 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies quantity multiplied by the saved additional management unit cost, rounded in local currency.</source>
+          <target>Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeManagementAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1474857613 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Management Amount</source>
+          <target>Importe de gestión simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de gestión simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeManagementAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1853321798 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved additional management rate per selected unit.</source>
+          <target>Especifica la tasa adicional de gestión guardada por unidad seleccionada.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la tasa adicional de gestión guardada por unidad seleccionada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeManagementUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1853321798 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Management Cost per Unit</source>
+          <target>Coste de gestión por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de gestión por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeManagementUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1915103199 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies simulated industrial plus additional management amounts. Do not add the two alternative methods.</source>
+          <target>Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeStructureAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1915103199 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Structure Amount</source>
+          <target>Importe de estructura simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de estructura simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeStructureAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2687062019 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved recipe cost per selected unit. The current recipe is not read.</source>
+          <target>Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2687062019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipe Cost per Unit</source>
+          <target>Coste de receta por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de receta por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCRecipeUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1406942772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Against Sales</source>
+          <target>Contra ventas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Contra ventas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control Sales - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1865786535 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulation Issue</source>
+          <target>Incidencia de la simulación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia de la simulación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIssue - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 821161536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the rounded recipe amount plus the simulated structure amount. It is not a sales price.</source>
+          <target>Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesEXWORKAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 821161536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated EXWORK Amount</source>
+          <target>Importe EXWORK simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe EXWORK simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesEXWORKAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3398407001 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies quantity multiplied by the saved industrial unit cost, rounded in local currency.</source>
+          <target>Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIndustrialAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3398407001 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Industrial Amount</source>
+          <target>Importe industrial simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe industrial simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIndustrialAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3945523986 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved industrial rate per selected unit.</source>
+          <target>Especifica la tasa industrial guardada por unidad seleccionada.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la tasa industrial guardada por unidad seleccionada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIndustrialUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3945523986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industrial Cost per Unit</source>
+          <target>Coste industrial por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste industrial por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIndustrialUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2436644061 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies quantity multiplied by the saved additional management unit cost, rounded in local currency.</source>
+          <target>Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesManagementAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2436644061 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Management Amount</source>
+          <target>Importe de gestión simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de gestión simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesManagementAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 377270998 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved additional management rate per selected unit.</source>
+          <target>Especifica la tasa adicional de gestión guardada por unidad seleccionada.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la tasa adicional de gestión guardada por unidad seleccionada."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesManagementUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 377270998 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Management Cost per Unit</source>
+          <target>Coste de gestión por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de gestión por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesManagementUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2635786771 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved recipe cost per selected unit. The current recipe is not read.</source>
+          <target>Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesRecipeUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2635786771 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recipe Cost per Unit</source>
+          <target>Coste de receta por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de receta por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesRecipeUnitCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 360589359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies simulated industrial plus additional management amounts. Do not add the two alternative methods.</source>
+          <target>Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesStructureAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 360589359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Structure Amount</source>
+          <target>Importe de estructura simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de estructura simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesStructureAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 142396808 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Saved Calculation</source>
+          <target>Cálculo guardado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cálculo guardado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control SavedCalculation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2963697043 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies when the last full model calculation was saved.</source>
+          <target>Especifica cuándo se guardó el último cálculo completo del modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica cuándo se guardó el último cálculo completo del modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCCalculatedAt - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2963697043 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculated At</source>
+          <target>Fecha y hora del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha y hora del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCCalculatedAt - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3729709577 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the ending date of the saved calculation period.</source>
+          <target>Especifica la fecha final del periodo del cálculo guardado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fecha final del periodo del cálculo guardado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCEndingDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3729709577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Ending Date</source>
+          <target>Fecha final del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha final del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCEndingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3895926466 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the model whose saved rates are used. No new allocation is calculated.</source>
+          <target>Especifica el modelo cuyas tasas guardadas se utilizan. No se calcula un nuevo reparto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el modelo cuyas tasas guardadas se utilizan. No se calcula un nuevo reparto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCModelCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3895926466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Model Code</source>
+          <target>Código modelo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Código modelo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCModelCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2409047914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Scope</source>
+          <target>Alcance</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Alcance"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCScope - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2240390404 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the starting date of the saved calculation period.</source>
+          <target>Especifica la fecha inicial del periodo del cálculo guardado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la fecha inicial del periodo del cálculo guardado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCStartingDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2240390404 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation Starting Date</source>
+          <target>Fecha inicial del cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha inicial del cálculo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCStartingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3897903706 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warning</source>
+          <target>Advertencia</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Advertencia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCWarning - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2341049317 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulation</source>
+          <target>Simulación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Simulación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control Simulation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1600664313 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the product description saved in the model, not the current item master.</source>
+          <target>Especifica la descripción del producto guardada en el modelo, no la del maestro actual.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción del producto guardada en el modelo, no la del maestro actual."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCItemDescription - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1600664313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Description</source>
+          <target>Descripción</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCItemDescription - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2493381316 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved product to simulate. The lookup lists only product and unit combinations in this model.</source>
+          <target>Especifica el producto guardado que desea simular. La consulta solo muestra combinaciones de producto y unidad de este modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el producto guardado que desea simular. La consulta solo muestra combinaciones de producto y unidad de este modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCItemNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 2493381316 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item No.</source>
+          <target>Nº producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCItemNo - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3682639889 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity in the selected sales unit. It multiplies saved unit costs without redistributing the model fund.</source>
+          <target>Especifica la cantidad en la unidad de venta seleccionada. Multiplica los costes unitarios guardados sin redistribuir el fondo del modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad en la unidad de venta seleccionada. Multiplica los costes unitarios guardados sin redistribuir el fondo del modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCQuantity - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3682639889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Quantity</source>
+          <target>Cantidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCQuantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3605906729 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the saved sales unit. Rates from other units are not converted or substituted.</source>
+          <target>Especifica la unidad de venta guardada. No se convierten ni sustituyen tasas de otras unidades.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la unidad de venta guardada. No se convierten ni sustituyen tasas de otras unidades."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCUnitCode - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3605906729 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unit of Measure Code</source>
+          <target>Unidad de medida</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de medida"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCUnitCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2071821733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cost Priority Factors</source>
+          <target>Factores de prioridad de costes</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factores de prioridad de costes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Priority Factors - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1694016594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Saved Products and Units</source>
+          <target>Productos y unidades guardados</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Productos y unidades guardados"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Simulation Lookup - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1204517243 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BOM Additional Cost</source>
@@ -6801,6 +7569,84 @@
           <note from="Developer" annotates="general" priority="2">ESP="Confirmar activación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Activate Price List Lines - Control ConfirmActivation - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Report 4104558529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate All Costs</source>
+          <target>Calcular todos los costes</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calcular todos los costes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Method 2736589801 - NamedType 2214847084" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Both allocation blocks have been calculated in the model. Items, recipes, documents and ledger entries have not been modified. Review each method separately; never add their results together.</source>
+          <target>Se han calculado ambos bloques de reparto en el modelo. No se han modificado productos, recetas, documentos ni movimientos. Revise cada método por separado; nunca sume sus resultados.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Se han calculado ambos bloques de reparto en el modelo. No se han modificado productos, recetas, documentos ni movimientos. Revise cada método por separado; nunca sume sus resultados."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Method OnPostReport - NamedType jmcCompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Method 2736589801 - NamedType 907055722" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation saved for review. Lines with issues and no allocation: %1. Review Calculation Issue and the unallocated funds in the header. Each method reconciles allocated plus unallocated amounts. No item or ledger data has been changed.</source>
+          <target>Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. Cada método concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. Cada método concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Method OnPostReport - NamedType jmcPartialMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Method 1544076788 - NamedType 1186835269" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm that this is a comparative test calculation for model review only and check the account filter.</source>
+          <target>Confirme que es un cálculo comparativo de pruebas solo para revisión en el modelo y compruebe el filtro de cuentas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirme que es un cálculo comparativo de pruebas solo para revisión en el modelo y compruebe el filtro de cuentas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Method OnPreReport - NamedType jmcConfirmErr</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculation for Model Review Only</source>
+          <target>Cálculo solo para revisión en el modelo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cálculo solo para revisión en el modelo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 2894914891 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the account number filter; only configured fixed-cost accounts contribute to structure. Variable accounts are excluded. Test categorization includes fictitious balance and income accounts. Select only suitable accounts; mixed-cost deductions are not implemented.</source>
+          <target>Especifica el filtro de números de cuenta; solo aportan estructura las cuentas configuradas de coste fijo. Se excluyen las variables. La categorización de pruebas incluye cuentas ficticias de balance e ingresos. Seleccione solo las adecuadas; no se implementan deducciones de costes mixtos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el filtro de números de cuenta; solo aportan estructura las cuentas configuradas de coste fijo. Se excluyen las variables. La categorización de pruebas incluye cuentas ficticias de balance e ingresos. Seleccione solo las adecuadas; no se implementan deducciones de costes mixtos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control AccountFilter - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 2894914891 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G/L Account Filter</source>
+          <target>Filtro de cuentas contables</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Filtro de cuentas contables"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control AccountFilter - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 3440492824 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirms replacement of model results only, using the business split calculated from actual assembly production costs by LINEA dimension, current recipes and configured priority factors. No cost-center eligibility or direct-cost deductions are implemented. Source data is not modified.</source>
+          <target>Confirma sustituir solo los resultados del modelo con el reparto por negocio calculado del coste real de producción de ensamblados por dimensión LINEA, recetas actuales y factores configurados. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirma sustituir solo los resultados del modelo con el reparto por negocio calculado del coste real de producción de ensamblados por dimensión LINEA, recetas actuales y factores configurados. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control ConfirmReviewOnly - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 3440492824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm Comparative Test Calculation</source>
+          <target>Confirmar cálculo comparativo de pruebas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirmar cálculo comparativo de pruebas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control ConfirmReviewOnly - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 3592094765 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the last posting date. Accounting closing entries are excluded.</source>
+          <target>Especifica la última fecha de registro. Se excluyen los asientos contables de cierre.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la última fecha de registro. Se excluyen los asientos contables de cierre."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control EndingDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 3592094765 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ending Date</source>
+          <target>Fecha final</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha final"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control EndingDate - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 543275552 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the first posting date for ledger entries and net sale quantities. Recipe costs are read from the current recipe, not historical costs.</source>
+          <target>Especifica la primera fecha de registro de movimientos y cantidades netas de venta. Los costes de receta se leen de la receta actual, no de costes históricos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la primera fecha de registro de movimientos y cantidades netas de venta. Los costes de receta se leen de la receta actual, no de costes históricos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control StartingDate - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 543275552 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Starting Date</source>
+          <target>Fecha inicial</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha inicial"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control StartingDate - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 3538701464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Delete Archived Events</source>
           <target>Eliminar eventos archivados</target>
@@ -7082,6 +7928,66 @@
           <target>Opciones</target>
           <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Sales Shipment Report - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test G/L Cost Categorization</source>
+          <target>Categorizar costes contables (pruebas)</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Categorizar costes contables (pruebas)"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - NamedType 1931926348" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Test categorization completed. Updated: %1. Preserved (both fields already filled): %2. Excluded (account code is not eight numeric digits): %3.</source>
+          <target>Categorización de pruebas completada. Actualizadas: %1. Conservadas (ambos campos ya informados): %2. Excluidas (el código de cuenta no tiene ocho dígitos numéricos): %3.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Categorización de pruebas completada. Actualizadas: %1. Conservadas (ambos campos ya informados): %2. Excluidas (el código de cuenta no tiene ocho dígitos numéricos): %3."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - NamedType JMCCompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - NamedType 1447225049" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Select Confirm Test Categorization before running this report.</source>
+          <target>Marque Confirmar categorización de pruebas antes de ejecutar este informe.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Marque Confirmar categorización de pruebas antes de ejecutar este informe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - NamedType JMCConfirmationRequiredErr</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - NamedType 2283737886" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This test report cannot run in a production environment. Cost accounts must be categorized by the customer.</source>
+          <target>Este informe de pruebas no se puede ejecutar en un entorno de producción. El cliente debe categorizar las cuentas de costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Este informe de pruebas no se puede ejecutar en un entorno de producción. El cliente debe categorizar las cuentas de costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - NamedType JMCProductionErr</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - NamedType 3797326973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>All account types and prefixes are eligible if the code has eight numeric digits. 60/61 and 628: variable industrial. 64 and 621/622: fixed industrial. All others: fixed management. Missing fields are completed independently. Clear account filters to process every account.</source>
+          <target>Se admiten todos los tipos de cuenta y prefijos si el código tiene ocho dígitos numéricos. 60/61 y 628: variable industrial. 64 y 621/622: fijo industrial. Resto: fijo de gestión. Los campos vacíos se completan de forma independiente. Quite los filtros de cuenta para procesarlas todas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Se admiten todos los tipos de cuenta y prefijos si el código tiene ocho dígitos numéricos. 60/61 y 628: variable industrial. 64 y 621/622: fijo industrial. Resto: fijo de gestión. Los campos vacíos se completan de forma independiente. Quite los filtros de cuenta para procesarlas todas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - NamedType JMCRulesLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - NamedType 2849945952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TEST DATA ONLY. All eight-digit account codes are categorized, including balance sheet, revenue and direct cost accounts. These fictitious categories must not be used for real structure allocation. Only blank fields are filled. No ledger entries are changed. Production categorization is the customer responsibility.</source>
+          <target>SOLO DATOS DE PRUEBA. Se categorizan todos los códigos de cuenta de ocho dígitos, incluidas cuentas de balance, ingresos y costes directos. Estas categorías ficticias no deben utilizarse para repartir estructura real. Solo se completan campos vacíos. No se modifican movimientos contables. La categorización de producción corresponde al cliente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="SOLO DATOS DE PRUEBA. Se categorizan todos los códigos de cuenta de ocho dígitos, incluidas cuentas de balance, ingresos y costes directos. Estas categorías ficticias no deben utilizarse para repartir estructura real. Solo se completan campos vacíos. No se modifican movimientos contables. La categorización de producción corresponde al cliente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - NamedType JMCWarningLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - Control 419426744 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Information</source>
+          <target>Información</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Información"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - Control Information - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Opciones</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - Control 527689644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fills missing cost categories for all filtered accounts with eight numeric digits, regardless of account type or prefix. Existing values are preserved.</source>
+          <target>Completa las categorías de coste vacías de todas las cuentas filtradas de ocho dígitos numéricos, sin limitar por tipo de cuenta ni prefijo. Conserva los valores existentes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Completa las categorías de coste vacías de todas las cuentas filtradas de ocho dígitos numéricos, sin limitar por tipo de cuenta ni prefijo. Conserva los valores existentes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - Control JMCConfirmClassification - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 3513288990 - Control 527689644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Confirm Test Categorization</source>
+          <target>Confirmar categorización de pruebas</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirmar categorización de pruebas"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Seed G/L Cost Categories - Control JMCConfirmClassification - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 1513273684 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Supplier Incident Report</source>
@@ -8372,6 +9278,18 @@
           <target>Nº última factura compra</target>
           <note from="Developer" annotates="general" priority="2">ESP="Nº última factura compra"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Last Purch. Invoice No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 2146308772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Specifies the item priority for structure allocation, from 1 to 5. The default is 1. Changes apply when model costs are recalculated.</source>
+          <target>Especifica la prioridad del producto para el reparto de estructura, del 1 al 5. El valor predeterminado es 1. Los cambios se aplican al recalcular los costes del modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la prioridad del producto para el reparto de estructura, del 1 al 5. El valor predeterminado es 1. Los cambios se aplican al recalcular los costes del modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Priority Level - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 2146308772 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Priority Level</source>
+          <target>Nivel de prioridad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nivel de prioridad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 4200125043 - Field 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>Weight</source>

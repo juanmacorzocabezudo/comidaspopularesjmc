@@ -16,6 +16,8 @@ permissionset 53100 "JMC CP BASE MGT"
 
         // Tablas relacionadas necesarias para compras y eventos
         tabledata "G/L Account" = RIMD,
+        tabledata "G/L Entry" = R,
+        tabledata "BOM Component" = R,
         tabledata "Resource" = RIMD,
         tabledata "Item" = RIMD,
         tabledata "Vendor" = RIMD,
@@ -28,7 +30,12 @@ permissionset 53100 "JMC CP BASE MGT"
         // Tablas JMC personalizadas
         tabledata "JMC Cost Model" = RIMD,
         tabledata "JMC Cost Model Line" = RIMD,
+        tabledata "JMC Cost Priority Factor" = RIMD,
         tabledata "Item Unit of Measure" = R,
+        tabledata "General Ledger Setup" = R,
+        tabledata Dimension = R,
+        tabledata "Dimension Value" = R,
+        tabledata "Dimension Set Entry" = R,
         tabledata "JMC Purchase Order Method" = RIMD,
         tabledata "JMC Purchase Order Reason" = RIMD,
         tabledata "JMC Cronus" = RIMD,
@@ -67,6 +74,9 @@ permissionset 53100 "JMC CP BASE MGT"
         // Páginas JMC personalizadas
         page "JMC Cost Model Card" = X,
         page "JMC Cost Model Lines" = X,
+        page "JMC Cost Priority Factors" = X,
+        page "JMC Cost Model Simulator" = X,
+        page "JMC Cost Simulation Lookup" = X,
         page "JMC Purchase Order Methods" = X,
         page "JMC Purchase Order Reasons" = X,
         page "JMC Cronus" = X,
@@ -100,6 +110,8 @@ permissionset 53100 "JMC CP BASE MGT"
 
 
         // Reports JMC
+        report "JMC Seed G/L Cost Categories" = X,
+        report "JMC Calculate Model Costs" = X,
         report "JMC Delete Archived Events" = X,
         report "JMC Update Item Weights" = X,
         report "JMC Activate Price List Lines" = X,
@@ -110,6 +122,8 @@ permissionset 53100 "JMC CP BASE MGT"
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,
+        codeunit "JMC Cost Model Calculation" = X,
+        codeunit AlxiaAssemblyInfoManagement = X,
         codeunit "JMC Oper. Rec. Jnl. Mgt" = X,
         codeunit "JMC Supplier Incident Mgt" = X,
         codeunit "JMC Incident Vendor Reminder" = X,

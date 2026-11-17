@@ -26,5 +26,14 @@ tableextension 53115 "JMC Item" extends Item
             Editable = false;
             TableRelation = "Purch. Inv. Header";
         }
+        field(53103; "JMC Priority Level"; Integer)
+        {
+            Caption = 'Priority Level', Comment = 'ESP="Nivel de prioridad"';
+            ToolTip = 'Specifies the item priority for structure allocation, from 1 to 5. The default is 1. Changes apply when model costs are recalculated.', Comment = 'ESP="Especifica la prioridad del producto para el reparto de estructura, del 1 al 5. El valor predeterminado es 1. Los cambios se aplican al recalcular los costes del modelo."';
+            DataClassification = CustomerContent;
+            InitValue = 1;
+            MinValue = 1;
+            MaxValue = 5;
+        }
     }
 }

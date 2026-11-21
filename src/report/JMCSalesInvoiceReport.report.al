@@ -139,6 +139,9 @@ report 53107 "Sales Invoice Industry Report"
             column(TotalAmount; TotalAmount)
             {
             }
+            column(JMCVATPercentages; JMCVATPercentages)
+            {
+            }
 
             dataitem(SalesInvoiceLine; "Sales Invoice Line")
             {
@@ -195,6 +198,8 @@ report 53107 "Sales Invoice Industry Report"
             var
                 PaymentTerms: Record "Payment Terms";
             begin
+                CalculateVATPercentages();
+
                 // Get Payment Terms Description
                 PaymentTermsDescription := '';
                 if PaymentTerms.Get("Payment Terms Code") then
@@ -234,6 +239,34 @@ report 53107 "Sales Invoice Industry Report"
         SalesSetup.CalcFields("JMC Sales Doc Insurance Logo");
     end;
 
+    local procedure CalculateVATPercentages()
+    var
+        jmcSalesInvoiceLine: Record "Sales Invoice Line";
+        jmcDistinctVATRates: List of [Decimal];
+        jmcVATPercentage: Decimal;
+        jmcLowestVATPercentage: Decimal;
+    begin
+        Clear(JMCVATPercentages);
+        jmcSalesInvoiceLine.SetRange("Document No.", SalesInvoiceHeader."No.");
+        jmcSalesInvoiceLine.SetFilter(Type, '<>%1', jmcSalesInvoiceLine.Type::" ");
+        if jmcSalesInvoiceLine.FindSet() then
+            repeat
+                if not jmcDistinctVATRates.Contains(jmcSalesInvoiceLine."VAT %") then
+                    jmcDistinctVATRates.Add(jmcSalesInvoiceLine."VAT %");
+            until jmcSalesInvoiceLine.Next() = 0;
+
+        while jmcDistinctVATRates.Count() > 0 do begin
+            jmcLowestVATPercentage := jmcDistinctVATRates.Get(1);
+            foreach jmcVATPercentage in jmcDistinctVATRates do
+                if jmcVATPercentage < jmcLowestVATPercentage then
+                    jmcLowestVATPercentage := jmcVATPercentage;
+            if JMCVATPercentages <> '' then
+                JMCVATPercentages += ' - ';
+            JMCVATPercentages += Format(jmcLowestVATPercentage, 0, '<Precision,0:5><Standard Format,0>') + '%';
+            jmcDistinctVATRates.Remove(jmcLowestVATPercentage);
+        end;
+    end;
+
     var
         CompanyInfo: Record "Company Information";
         SalesSetup: Record "Sales & Receivables Setup";
@@ -243,5 +276,6 @@ report 53107 "Sales Invoice Industry Report"
         SubtotalAmount: Decimal;
         TotalVATAmount: Decimal;
         TotalAmount: Decimal;
+        JMCVATPercentages: Text;
 }
 

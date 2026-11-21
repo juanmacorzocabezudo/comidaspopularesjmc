@@ -13,6 +13,7 @@ page 53101 JMCAlxControlVentasAbonos
             repeater(General)
             {
                 field("Cliente No"; Rec."Cliente No") { }
+                field("Tipo Cliente"; Rec."Tipo Cliente") { }
                 field("Nombre"; Rec.Nombre) { }
                 field("Dirección"; Rec."Dirección") { }
                 field("Dirección 2"; Rec."Dirección 2") { }
@@ -114,12 +115,15 @@ page 53101 JMCAlxControlVentasAbonos
         FactVentasQuery: Query AlxSalesInvoiceLine;
         AbonVentasQuery: Query JMCAlxSalesCrMemoLine;
         Item: Record Item;
+        Customer: Record Customer;
     begin
         if FactVentasQuery.Open() then begin
             while FactVentasQuery.Read() do begin
                 Rec.Init();
                 Rec."Line No." := Rec."Line No." + 1;
                 Rec."Cliente No" := FactVentasQuery.SelltoCustomerNo;
+                if Customer.Get(FactVentasQuery.SelltoCustomerNo) then
+                    Rec."Tipo Cliente" := Customer."JMC Customer Type";
                 Rec.Nombre := FactVentasQuery.SelltoCustomerName;
                 Rec."Dirección" := FactVentasQuery.SelltoAddress;
                 Rec."Dirección 2" := FactVentasQuery.SelltoAddress2;
@@ -225,6 +229,8 @@ page 53101 JMCAlxControlVentasAbonos
                 Rec.Init();
                 Rec."Line No." := Rec."Line No." + 1;
                 Rec."Cliente No" := AbonVentasQuery.SelltoCustomerNo;
+                if Customer.Get(AbonVentasQuery.SelltoCustomerNo) then
+                    Rec."Tipo Cliente" := Customer."JMC Customer Type";
                 Rec.Nombre := AbonVentasQuery.SelltoCustomerName;
                 Rec."Dirección" := AbonVentasQuery.SelltoAddress;
                 Rec."Dirección 2" := AbonVentasQuery.SelltoAddress2;

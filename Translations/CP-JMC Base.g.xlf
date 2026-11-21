@@ -1638,6 +1638,11 @@
           <note from="Developer" annotates="general" priority="2">ESP="Termino Pago"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Terminos Pago - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 4257284594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Tipo Cliente - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1831575858 - Field 2832857678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Type</source>
           <note from="Developer" annotates="general" priority="2">ESP="Tipo Documento"</note>

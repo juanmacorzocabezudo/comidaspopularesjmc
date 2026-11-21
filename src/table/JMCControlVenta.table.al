@@ -234,6 +234,12 @@ table 53100 JMCAlxControlVenta
             Caption = 'Format Weight', Comment = 'ESP="Peso Formato"';
             DecimalPlaces = 0 : 5;
         }
+        field(58; "Tipo Cliente"; Code[20])
+        {
+            Caption = 'Customer Type', Comment = 'ESP="Tipo Cliente"';
+            TableRelation = "Dimension Value".Code where("Dimension Code" = const('TIPO CLIENTE'));
+            DataClassification = CustomerContent;
+        }
     }
     keys
     {

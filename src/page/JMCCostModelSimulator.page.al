@@ -113,7 +113,7 @@ page 53126 "JMC Cost Model Simulator"
                 {
                     Caption = 'Quantity', Comment = 'ESP="Cantidad"';
                     ApplicationArea = All;
-                    DecimalPlaces = 0 : 5;
+                    DecimalPlaces = 2 : 2;
                     MinValue = 0;
                     ToolTip = 'Specifies the quantity in the selected sales unit. It multiplies saved unit costs without redistributing the model fund.', Comment = 'ESP="Especifica la cantidad en la unidad de venta seleccionada. Multiplica los costes unitarios guardados sin redistribuir el fondo del modelo."';
 
@@ -125,7 +125,7 @@ page 53126 "JMC Cost Model Simulator"
             }
             group(Sales)
             {
-                Caption = 'Against Sales', Comment = 'ESP="Contra ventas"';
+                Caption = 'Calculation Against Products', Comment = 'ESP="Cálculo contra productos"';
                 Editable = false;
                 Visible = JMCHasSelection;
 
@@ -147,121 +147,51 @@ page 53126 "JMC Cost Model Simulator"
                     {
                         Caption = 'Recipe Cost per Unit', Comment = 'ESP="Coste de receta por unidad"';
                         ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
+                        Visible = false;
+                        DecimalPlaces = 2 : 2;
                         ToolTip = 'Specifies the saved recipe cost per selected unit. The current recipe is not read.', Comment = 'ESP="Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual."';
                     }
                     field(JMCSalesIndustrialUnitCost; JMCSalesLine."JMC Industrial Cost")
                     {
                         Caption = 'Industrial Cost per Unit', Comment = 'ESP="Coste industrial por unidad"';
                         ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
-                        ToolTip = 'Specifies the saved industrial rate per selected unit.', Comment = 'ESP="Especifica la tasa industrial guardada por unidad seleccionada."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies the final manual expense per unit allocated in the original industrial proportion.', Comment = 'ESP="Especifica el gasto final manual por unidad distribuido en la proporción industrial original."';
                     }
                     field(JMCSalesManagementUnitCost; JMCSalesLine."JMC Management Cost")
                     {
                         Caption = 'Management Cost per Unit', Comment = 'ESP="Coste de gestión por unidad"';
                         ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
-                        ToolTip = 'Specifies the saved additional management rate per selected unit.', Comment = 'ESP="Especifica la tasa adicional de gestión guardada por unidad seleccionada."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies the final manual expense per unit allocated in the original management proportion.', Comment = 'ESP="Especifica el gasto final manual por unidad distribuido en la proporción de gestión original."';
                     }
                     field(JMCSalesIndustrialAmount; JMCSalesIndustrial)
                     {
                         Caption = 'Simulated Industrial Amount', Comment = 'ESP="Importe industrial simulado"';
                         ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies quantity multiplied by the saved industrial unit cost, rounded in local currency.', Comment = 'ESP="Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies quantity multiplied by the effective industrial rate from final manual expense, rounded to 0.01.', Comment = 'ESP="Especifica la cantidad por la tasa industrial efectiva del gasto final manual, redondeada a 0,01."';
                     }
                     field(JMCSalesManagementAmount; JMCSalesManagement)
                     {
                         Caption = 'Simulated Management Amount', Comment = 'ESP="Importe de gestión simulado"';
                         ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies quantity multiplied by the saved additional management unit cost, rounded in local currency.', Comment = 'ESP="Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies quantity multiplied by the effective management rate from final manual expense, rounded to 0.01.', Comment = 'ESP="Especifica la cantidad por la tasa de gestión efectiva del gasto final manual, redondeada a 0,01."';
                     }
                     field(JMCSalesStructureAmount; JMCSalesStructure)
                     {
                         Caption = 'Simulated Structure Amount', Comment = 'ESP="Importe de estructura simulado"';
                         ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies simulated industrial plus additional management amounts. Do not add the two alternative methods.', Comment = 'ESP="Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies simulated industrial plus additional management amounts.', Comment = 'ESP="Especifica la suma de los importes industrial y adicional de gestión simulados."';
                     }
                     field(JMCSalesEXWORKAmount; JMCSalesEXWORK)
                     {
                         Caption = 'Simulated EXWORK Amount', Comment = 'ESP="Importe EXWORK simulado"';
                         ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies the rounded recipe amount plus the simulated structure amount. It is not a sales price.', Comment = 'ESP="Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta."';
-                    }
-                }
-            }
-            group(Recipe)
-            {
-                Caption = 'Against Recipe', Comment = 'ESP="Contra receta"';
-                Editable = false;
-                Visible = JMCHasSelection;
-
-                field(JMCRecipeIssue; JMCRecipeIssue)
-                {
-                    Caption = 'Simulation Issue', Comment = 'ESP="Incidencia de la simulación"';
-                    ApplicationArea = All;
-                    MultiLine = true;
-                    Visible = not JMCRecipeAvailable;
-                    Style = Attention;
-                    StyleExpr = true;
-                }
-                group(RecipeResults)
-                {
-                    ShowCaption = false;
-                    Visible = JMCRecipeAvailable;
-
-                    field(JMCRecipeUnitCost; JMCRecipeLine."JMC Recipe BOM Cost")
-                    {
-                        Caption = 'Recipe Cost per Unit', Comment = 'ESP="Coste de receta por unidad"';
-                        ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
-                        ToolTip = 'Specifies the saved recipe cost per selected unit. The current recipe is not read.', Comment = 'ESP="Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual."';
-                    }
-                    field(JMCRecipeIndustrialUnitCost; JMCRecipeLine."JMC Industrial Cost")
-                    {
-                        Caption = 'Industrial Cost per Unit', Comment = 'ESP="Coste industrial por unidad"';
-                        ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
-                        ToolTip = 'Specifies the saved industrial rate per selected unit.', Comment = 'ESP="Especifica la tasa industrial guardada por unidad seleccionada."';
-                    }
-                    field(JMCRecipeManagementUnitCost; JMCRecipeLine."JMC Management Cost")
-                    {
-                        Caption = 'Management Cost per Unit', Comment = 'ESP="Coste de gestión por unidad"';
-                        ApplicationArea = All;
-                        DecimalPlaces = 0 : 5;
-                        ToolTip = 'Specifies the saved additional management rate per selected unit.', Comment = 'ESP="Especifica la tasa adicional de gestión guardada por unidad seleccionada."';
-                    }
-                    field(JMCRecipeIndustrialAmount; JMCRecipeIndustrial)
-                    {
-                        Caption = 'Simulated Industrial Amount', Comment = 'ESP="Importe industrial simulado"';
-                        ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies quantity multiplied by the saved industrial unit cost, rounded in local currency.', Comment = 'ESP="Especifica la cantidad multiplicada por el coste industrial unitario guardado, redondeada en moneda local."';
-                    }
-                    field(JMCRecipeManagementAmount; JMCRecipeManagement)
-                    {
-                        Caption = 'Simulated Management Amount', Comment = 'ESP="Importe de gestión simulado"';
-                        ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies quantity multiplied by the saved additional management unit cost, rounded in local currency.', Comment = 'ESP="Especifica la cantidad multiplicada por el coste unitario adicional de gestión guardado, redondeada en moneda local."';
-                    }
-                    field(JMCRecipeStructureAmount; JMCRecipeStructure)
-                    {
-                        Caption = 'Simulated Structure Amount', Comment = 'ESP="Importe de estructura simulado"';
-                        ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies simulated industrial plus additional management amounts. Do not add the two alternative methods.', Comment = 'ESP="Especifica la suma de los importes industrial y adicional de gestión simulados. No sume los dos métodos alternativos."';
-                    }
-                    field(JMCRecipeEXWORKAmount; JMCRecipeEXWORK)
-                    {
-                        Caption = 'Simulated EXWORK Amount', Comment = 'ESP="Importe EXWORK simulado"';
-                        ApplicationArea = All;
-                        AutoFormatType = 1;
-                        ToolTip = 'Specifies the rounded recipe amount plus the simulated structure amount. It is not a sales price.', Comment = 'ESP="Especifica el importe de receta redondeado más el importe de estructura simulado. No es un precio de venta."';
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies the simulated industrial plus additional management amounts, without recipe cost. It is not a sales price.', Comment = 'ESP="Especifica los importes industrial y adicional de gestión simulados, sin incluir el coste de receta. No es un precio de venta."';
                     }
                 }
             }
@@ -278,14 +208,10 @@ page 53126 "JMC Cost Model Simulator"
     var
         jmcLine: Record "JMC Cost Model Line";
         jmcCheckModel: Record "JMC Cost Model";
-        jmcGLSetup: Record "General Ledger Setup";
         jmcChangedErr: Label 'The model changed while loading the simulator. Open the simulator again to use a consistent saved calculation.', Comment = 'ESP="El modelo cambió mientras se cargaba el simulador. Abra el simulador de nuevo para utilizar un cálculo guardado coherente."';
     begin
         JMCModel.Get(jmcModelCode);
         JMCModel.TestField("JMC Calculated At");
-        jmcGLSetup.Get();
-        jmcGLSetup.TestField("Amount Rounding Precision");
-        JMCRoundingPrecision := jmcGLSetup."Amount Rounding Precision";
         JMCSavedLines.Reset();
         JMCSavedLines.DeleteAll(false);
         JMCPairs.Reset();
@@ -293,6 +219,7 @@ page 53126 "JMC Cost Model Simulator"
         JMCPairs.SetCurrentKey("JMC Model Code", "JMC Item No.", "JMC Unit of Measure Code", "JMC Allocation Method");
         JMCPairs.SetRange("JMC Model Code", jmcModelCode);
         jmcLine.SetRange("JMC Model Code", jmcModelCode);
+        jmcLine.SetRange("JMC Allocation Method", jmcLine."JMC Allocation Method"::Sales);
         if not jmcLine.FindSet() then
             Error(JMCNoLinesErr);
         repeat
@@ -353,12 +280,9 @@ page 53126 "JMC Cost Model Simulator"
         JMCHasSelection := JMCItemNo <> '';
         if JMCHasSelection then begin
             ValidateSavedPair();
-            JMCSalesAvailable := ReadSavedRate(Enum::"JMC Cost Allocation Method"::Sales, JMCSalesLine, JMCSalesIssue);
-            JMCRecipeAvailable := ReadSavedRate(Enum::"JMC Cost Allocation Method"::Recipe, JMCRecipeLine, JMCRecipeIssue);
+            JMCSalesAvailable := ReadSavedRate(JMCSalesLine, JMCSalesIssue);
             if JMCSalesAvailable then
                 CalculateAmounts(JMCSalesLine, JMCSalesIndustrial, JMCSalesManagement, JMCSalesStructure, JMCSalesEXWORK);
-            if JMCRecipeAvailable then
-                CalculateAmounts(JMCRecipeLine, JMCRecipeIndustrial, JMCRecipeManagement, JMCRecipeStructure, JMCRecipeEXWORK);
         end;
         CurrPage.Update(false);
     end;
@@ -367,29 +291,23 @@ page 53126 "JMC Cost Model Simulator"
     begin
         Clear(JMCItemDescription);
         Clear(JMCSalesLine);
-        Clear(JMCRecipeLine);
         Clear(JMCSalesIssue);
-        Clear(JMCRecipeIssue);
         Clear(JMCSalesIndustrial);
         Clear(JMCSalesManagement);
         Clear(JMCSalesStructure);
         Clear(JMCSalesEXWORK);
-        Clear(JMCRecipeIndustrial);
-        Clear(JMCRecipeManagement);
-        Clear(JMCRecipeStructure);
-        Clear(JMCRecipeEXWORK);
         JMCSalesAvailable := false;
-        JMCRecipeAvailable := false;
     end;
 
-    local procedure ReadSavedRate(jmcMethod: Enum "JMC Cost Allocation Method"; var jmcLine: Record "JMC Cost Model Line"; var jmcIssue: Text[250]): Boolean
+    local procedure ReadSavedRate(var jmcLine: Record "JMC Cost Model Line"; var jmcIssue: Text[250]): Boolean
     var
-        jmcNoRateLbl: Label 'No valid saved rate exists for this product, unit and method. Review its model line before simulating.', Comment = 'ESP="No existe una tasa guardada válida para este producto, unidad y método. Revise su línea del modelo antes de simular."';
+        jmcNoRateLbl: Label 'No valid saved rate exists for this product and unit. Review its model line before simulating.', Comment = 'ESP="No existe una tasa guardada válida para este producto y unidad. Revise su línea del modelo antes de simular."';
+        jmcOriginalExpense: Decimal;
     begin
         JMCSavedLines.Reset();
         JMCSavedLines.SetRange("JMC Item No.", JMCItemNo);
         JMCSavedLines.SetRange("JMC Unit of Measure Code", JMCUnitCode);
-        JMCSavedLines.SetRange("JMC Allocation Method", jmcMethod);
+        JMCSavedLines.SetRange("JMC Allocation Method", JMCSavedLines."JMC Allocation Method"::Sales);
         if not JMCSavedLines.FindFirst() then begin
             jmcIssue := jmcNoRateLbl;
             exit(false);
@@ -402,15 +320,28 @@ page 53126 "JMC Cost Model Simulator"
                 jmcIssue := jmcNoRateLbl;
             exit(false);
         end;
+        if not jmcLine."JMC Manual Totals Ready" or not jmcLine."JMC Structure Totals Ready" then begin
+            jmcIssue := JMCRecalculateManualLbl;
+            exit(false);
+        end;
+        jmcOriginalExpense := jmcLine."JMC Industrial Cost" + jmcLine."JMC Management Cost";
+        if (jmcOriginalExpense = 0) and (jmcLine.GetFinalExpenseAmount() <> 0) then begin
+            jmcIssue := JMCNoSplitLbl;
+            exit(false);
+        end;
+        if jmcOriginalExpense <> 0 then begin
+            jmcLine."JMC Industrial Cost" := jmcLine.GetFinalExpenseAmount() * jmcLine."JMC Industrial Cost" / jmcOriginalExpense;
+            jmcLine."JMC Management Cost" := jmcLine.GetFinalExpenseAmount() - jmcLine."JMC Industrial Cost";
+        end;
         exit(true);
     end;
 
     local procedure CalculateAmounts(jmcLine: Record "JMC Cost Model Line"; var jmcIndustrial: Decimal; var jmcManagement: Decimal; var jmcStructure: Decimal; var jmcEXWORK: Decimal)
     begin
-        jmcIndustrial := Round(JMCQuantity * jmcLine."JMC Industrial Cost", JMCRoundingPrecision);
-        jmcManagement := Round(JMCQuantity * jmcLine."JMC Management Cost", JMCRoundingPrecision);
+        jmcIndustrial := Round(JMCQuantity * jmcLine."JMC Industrial Cost", 0.01);
+        jmcManagement := Round(JMCQuantity * jmcLine."JMC Management Cost", 0.01);
         jmcStructure := jmcIndustrial + jmcManagement;
-        jmcEXWORK := Round(JMCQuantity * jmcLine."JMC Recipe BOM Cost", JMCRoundingPrecision) + jmcStructure;
+        jmcEXWORK := jmcStructure;
     end;
 
     var
@@ -418,28 +349,22 @@ page 53126 "JMC Cost Model Simulator"
         JMCSavedLines: Record "JMC Cost Model Line" temporary;
         JMCPairs: Record "JMC Cost Model Line" temporary;
         JMCSalesLine: Record "JMC Cost Model Line";
-        JMCRecipeLine: Record "JMC Cost Model Line";
         JMCItemNo: Code[20];
         JMCUnitCode: Code[10];
         JMCItemDescription: Text[100];
         JMCQuantity: Decimal;
-        JMCRoundingPrecision: Decimal;
         JMCSalesIndustrial: Decimal;
         JMCSalesManagement: Decimal;
         JMCSalesStructure: Decimal;
         JMCSalesEXWORK: Decimal;
-        JMCRecipeIndustrial: Decimal;
-        JMCRecipeManagement: Decimal;
-        JMCRecipeStructure: Decimal;
-        JMCRecipeEXWORK: Decimal;
         JMCHasSelection: Boolean;
         JMCSalesAvailable: Boolean;
-        JMCRecipeAvailable: Boolean;
         JMCShowWarning: Boolean;
         JMCSalesIssue: Text[250];
-        JMCRecipeIssue: Text[250];
         JMCScopeLbl: Label 'Uses saved model rates, not current recipes or priority factors. Does not recalculate or save costs.', Comment = 'ESP="Utiliza las tasas guardadas del modelo, no las recetas ni los factores de prioridad actuales. No recalcula ni guarda costes."';
         JMCWarningLbl: Label 'The model has changed since calculation. This simulation uses the saved values, which may have been edited; it does not recalculate them.', Comment = 'ESP="El modelo ha cambiado desde el cálculo. Esta simulación utiliza los valores guardados, que pueden haberse editado; no los recalcula."';
         JMCNoProductErr: Label 'Item %1 has no saved lines in this model.', Comment = 'ESP="El producto %1 no tiene líneas guardadas en este modelo."';
         JMCNoLinesErr: Label 'This model has no saved product lines to simulate.', Comment = 'ESP="Este modelo no tiene líneas de producto guardadas para simular."';
+        JMCRecalculateManualLbl: Label 'Recalculate the model to initialize final manual totals before simulating this line.', Comment = 'ESP="Recalcule el modelo para inicializar los totales finales manuales antes de simular esta línea."';
+        JMCNoSplitLbl: Label 'The calculated expense is zero, so a positive manual expense cannot be split proportionally between industrial and management costs.', Comment = 'ESP="El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre industrial y gestión."';
 }

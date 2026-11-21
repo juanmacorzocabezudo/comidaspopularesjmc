@@ -21,7 +21,7 @@ table 53102 "JMC Cost Model"
         field(10; "JMC Total Structure Cost"; Decimal)
         {
             Caption = 'Total Structure Cost', Comment = 'ESP="Gasto de estructura total"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies the net fixed structure cost read from configured G/L accounts for the calculation period. Variable costs are excluded.', Comment = 'ESP="Especifica el coste fijo neto de estructura obtenido de las cuentas contables configuradas para el periodo del cálculo. Se excluyen los costes variables."';
 
@@ -61,16 +61,16 @@ table 53102 "JMC Cost Model"
         field(13; "JMC Catering Allocation"; Decimal)
         {
             Caption = 'Catering Allocation', Comment = 'ESP="Reparto Catering"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies the total structure cost multiplied by the catering percentage.', Comment = 'ESP="Especifica el gasto de estructura total multiplicado por el porcentaje de Catering."';
         }
         field(14; "JMC Industry Allocation"; Decimal)
         {
             Caption = 'Industry Allocation', Comment = 'ESP="Reparto Alimentación"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies the remaining structure cost allocated to industry after rounding.', Comment = 'ESP="Especifica el gasto de estructura restante asignado a Alimentación tras el redondeo."';
+            ToolTip = 'Specifies the remaining structure cost allocated to industry after the Catering share.', Comment = 'ESP="Especifica el gasto de estructura restante asignado a Alimentación tras la parte de Catering."';
         }
         field(20; "JMC Starting Date"; Date)
         {
@@ -101,68 +101,74 @@ table 53102 "JMC Cost Model"
         field(25; "JMC Fixed Industrial Fund"; Decimal)
         {
             Caption = 'Fixed Industrial Fund', Comment = 'ESP="Fondo industrial fijo"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(26; "JMC Variable Industrial Fund"; Decimal)
         {
             Caption = 'Variable Industrial Fund', Comment = 'ESP="Fondo industrial variable"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(27; "JMC Fixed Management Fund"; Decimal)
         {
             Caption = 'Fixed Management Fund', Comment = 'ESP="Fondo de gestión fijo"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(28; "JMC Variable Management Fund"; Decimal)
         {
             Caption = 'Variable Management Fund', Comment = 'ESP="Fondo de gestión variable"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(29; "JMC Sales Pending Industrial"; Decimal)
         {
-            Caption = 'Sales: Unallocated Industrial', Comment = 'ESP="Ventas: industrial pendiente de reparto"';
-            AutoFormatType = 1;
+            Caption = 'Unallocated Industrial', Comment = 'ESP="Industrial pendiente de reparto"';
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(30; "JMC Sales Pending Management"; Decimal)
         {
-            Caption = 'Sales: Unallocated Management', Comment = 'ESP="Ventas: gestión pendiente de reparto"';
-            AutoFormatType = 1;
+            Caption = 'Unallocated Management', Comment = 'ESP="Gestión pendiente de reparto"';
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(31; "JMC Recipe Pending Industrial"; Decimal)
         {
             Caption = 'Recipe: Unallocated Industrial', Comment = 'ESP="Receta: industrial pendiente de reparto"';
-            AutoFormatType = 1;
+            ObsoleteState = Pending;
+            ObsoleteReason = 'The cost model no longer has an allocation against recipe.';
+            ObsoleteTag = '27.5.0.50';
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(32; "JMC Recipe Pending Management"; Decimal)
         {
             Caption = 'Recipe: Unallocated Management', Comment = 'ESP="Receta: gestión pendiente de reparto"';
-            AutoFormatType = 1;
+            ObsoleteState = Pending;
+            ObsoleteReason = 'The cost model no longer has an allocation against recipe.';
+            ObsoleteTag = '27.5.0.50';
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(33; "JMC Catering Production Cost"; Decimal)
         {
             Caption = 'Catering Production Cost', Comment = 'ESP="Coste de producción Catering"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies the net actual cost of final assembly outputs in the period with LINEA = CATERING, including cost adjustments available when calculated.', Comment = 'ESP="Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = CATERING, incluidos los ajustes de coste disponibles al calcular."';
         }
         field(34; "JMC Industry Production Cost"; Decimal)
         {
             Caption = 'Industry Production Cost', Comment = 'ESP="Coste de producción Alimentación"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies the net actual cost of final assembly outputs in the period with LINEA = ALIMENTACION, including cost adjustments available when calculated.', Comment = 'ESP="Especifica el coste real neto de las salidas de ensamblado finales del periodo con LINEA = ALIMENTACION, incluidos los ajustes de coste disponibles al calcular."';
         }
         field(35; "JMC Production Dimension"; Code[20])
         {
-            Caption = 'Production Business Dimension', Comment = 'ESP="Dimensión de línea de negocio de producción"';
+            Caption = 'LINEA Dimension', Comment = 'ESP="DIMENSION LINEA"';
             TableRelation = Dimension.Code;
             Editable = false;
         }
@@ -191,29 +197,33 @@ table 53102 "JMC Cost Model"
     trigger OnDelete()
     var
         jmcCostModelLine: Record "JMC Cost Model Line";
+        jmcDetail: Codeunit "JMC Cost Calculation Detail";
     begin
         jmcCostModelLine.SetRange("JMC Model Code", "JMC Code");
         jmcCostModelLine.DeleteAll(true);
+        jmcDetail.DeleteSaved("JMC Code");
     end;
 
     trigger OnRename()
     var
         jmcCostModelLine: Record "JMC Cost Model Line";
+        jmcDetail: Record "JMC Cost Calculation Detail";
         jmcRenameWithLinesErr: Label 'You cannot rename a cost model that has lines.', Comment = 'ESP="No se puede cambiar el código de un modelo de costes que tiene líneas."';
+        jmcRenameWithDetailErr: Label 'You cannot rename a cost model that has saved calculation detail.', Comment = 'ESP="No se puede cambiar el código de un modelo de costes que tiene detalle de cálculo guardado."';
     begin
         TestField("JMC Code");
         jmcCostModelLine.SetRange("JMC Model Code", xRec."JMC Code");
         if not jmcCostModelLine.IsEmpty() then
             Error(jmcRenameWithLinesErr);
+        jmcDetail.SetRange("JMC Model Code", xRec."JMC Code");
+        if not jmcDetail.IsEmpty() then
+            Error(jmcRenameWithDetailErr);
     end;
 
     procedure RecalculateAllocations()
     var
-        jmcGLSetup: Record "General Ledger Setup";
         jmcProductionCost: Decimal;
     begin
-        jmcGLSetup.Get();
-        jmcGLSetup.TestField("Amount Rounding Precision");
         if "JMC Catering Production Cost" < 0 then
             FieldError("JMC Catering Production Cost");
         if "JMC Industry Production Cost" < 0 then
@@ -228,7 +238,7 @@ table 53102 "JMC Cost Model"
         end;
         "JMC Catering Structure Pct." := "JMC Catering Production Cost" / jmcProductionCost * 100;
         "JMC Industry Structure Pct." := 100 - "JMC Catering Structure Pct.";
-        "JMC Catering Allocation" := Round("JMC Total Structure Cost" * "JMC Catering Structure Pct." / 100, jmcGLSetup."Amount Rounding Precision");
-        "JMC Industry Allocation" := Round("JMC Total Structure Cost", jmcGLSetup."Amount Rounding Precision") - "JMC Catering Allocation";
+        "JMC Catering Allocation" := Round("JMC Total Structure Cost" * "JMC Catering Structure Pct." / 100, 0.01);
+        "JMC Industry Allocation" := Round("JMC Total Structure Cost", 0.01) - "JMC Catering Allocation";
     end;
 }

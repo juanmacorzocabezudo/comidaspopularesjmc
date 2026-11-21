@@ -17,7 +17,7 @@ table 53103 "JMC Cost Model Line"
         field(3; "JMC Allocation Method"; Enum "JMC Cost Allocation Method")
         {
             Caption = 'Allocation Method', Comment = 'ESP="Método de reparto"';
-            ToolTip = 'Specifies whether the line represents allocation against sales or recipe cost.', Comment = 'ESP="Especifica si la línea corresponde al reparto contra ventas o contra receta."';
+            ToolTip = 'Identifies the calculation of this line. The model only has the calculation against products.', Comment = 'ESP="Identifica el cálculo de esta línea. El modelo solo dispone del cálculo contra productos."';
         }
         field(4; "JMC Item No."; Code[20])
         {
@@ -37,6 +37,8 @@ table 53103 "JMC Cost Model Line"
                     "JMC Item Description" := jmcItem.Description;
                     Validate("JMC Unit of Measure Code", jmcItem."Base Unit of Measure");
                 end;
+                "JMC Cost Value Type" := "JMC Cost Value Type"::Amount;
+                RequireLineRecalculation();
             end;
         }
         field(5; "JMC Item Description"; Text[100])
@@ -50,12 +52,19 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Unit of Measure Code', Comment = 'ESP="Unidad de medida"';
             TableRelation = "Item Unit of Measure".Code where("Item No." = field("JMC Item No."));
             ToolTip = 'Specifies the unit used in this line''s posted sales. Quantities and allocations belong only to this item and unit.', Comment = 'ESP="Especifica la unidad utilizada en las ventas registradas de esta línea. Las cantidades y los repartos corresponden solo a este producto y unidad."';
+
+            trigger OnValidate()
+            begin
+                if "JMC Unit of Measure Code" <> xRec."JMC Unit of Measure Code" then
+                    RequireLineRecalculation();
+            end;
         }
         field(7; "JMC Recipe BOM Cost"; Decimal)
         {
             Caption = 'Recipe BOM Cost', Comment = 'ESP="Coste receta LM"';
-            DecimalPlaces = 0 : 5;
-            ToolTip = 'Specifies the recipe cost per selected unit, entered manually or read from the current recipe by Calculate All Costs.', Comment = 'ESP="Especifica el coste de receta por unidad seleccionada, introducido manualmente o leído de la receta actual mediante Calcular todos los costes."';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Specifies recipe cost per selected unit saved by Calculate All Costs. It is kept for reference and is not part of the structure totals.', Comment = 'ESP="Especifica el coste de receta por unidad seleccionada guardado al calcular todos los costes. Se conserva como referencia y no forma parte de los totales de estructura."';
 
             trigger OnValidate()
             begin
@@ -65,39 +74,34 @@ table 53103 "JMC Cost Model Line"
         field(8; "JMC Cost Value Type"; Enum "JMC Cost Value Type")
         {
             Caption = 'Cost Type', Comment = 'ESP="Tipo coste"';
-            ToolTip = 'Specifies whether amounts or percentages of recipe cost are entered. The other values are calculated.', Comment = 'ESP="Especifica si se introducen importes o porcentajes sobre el coste de receta. Los otros valores se calculan."';
-
-            trigger OnValidate()
-            var
-                jmcNewValueType: Enum "JMC Cost Value Type";
-            begin
-                if "JMC Cost Value Type" <> xRec."JMC Cost Value Type" then begin
-                    jmcNewValueType := "JMC Cost Value Type";
-                    "JMC Cost Value Type" := xRec."JMC Cost Value Type";
-                    RecalculateCosts();
-                    "JMC Cost Value Type" := jmcNewValueType;
-                end;
-                RecalculateCosts();
-            end;
+            Editable = false;
+            InitValue = Amount;
+            ToolTip = 'Shows the cost type of structure cost C01 in the recipe: Amount in euros or Percentage of the recipe cost. It is read from the recipe when the model is calculated and cannot be edited here. For Percentage, Total Cost, Final Manual Cost and Cost Difference are expressed as percentages.', Comment = 'ESP="Muestra el tipo de coste del coste de estructura C01 de la receta: Importe en euros o Porcentaje sobre el coste de receta. Se lee de la receta al calcular el modelo y no se puede editar aquí. Con Porcentaje, Total coste, Coste final manual y Diferencia de coste se expresan en porcentaje."';
         }
         field(9; "JMC Priority Level"; Integer)
         {
             Caption = 'Priority Level', Comment = 'ESP="Nivel de prioridad"';
-            Editable = false;
             InitValue = 1;
             MinValue = 1;
             MaxValue = 5;
-            ToolTip = 'Specifies the item priority copied from its card when calculating. Configure the approved factor for levels 1 to 5.', Comment = 'ESP="Especifica la prioridad del producto copiada de su ficha al calcular. Configure el factor aprobado para los niveles del 1 al 5."';
+            Editable = false;
+            ToolTip = 'Specifies the priority of the item, from 1 to 5, copied from the item card when the model is calculated. It cannot be edited here; change it on the item card.', Comment = 'ESP="Especifica la prioridad del producto, del 1 al 5, copiada de la ficha del producto al calcular el modelo. No se puede editar aquí; cámbiela en la ficha del producto."';
+
+            trigger OnValidate()
+            begin
+                if ("JMC Priority Level" < 1) or ("JMC Priority Level" > 5) then
+                    FieldError("JMC Priority Level");
+            end;
         }
         field(10; "JMC Industrial Cost"; Decimal)
         {
             Caption = 'Industrial Cost', Comment = 'ESP="Coste industrial"';
-            DecimalPlaces = 0 : 5;
-            ToolTip = 'Specifies the industrial cost per selected unit. Enter it when the cost type is Amount.', Comment = 'ESP="Especifica el coste industrial por unidad seleccionada. Se introduce cuando el tipo de coste es Importe."';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Specifies the original calculated industrial cost per selected unit, before final manual adjustments.', Comment = 'ESP="Especifica el coste industrial calculado original por unidad seleccionada, antes de los ajustes manuales finales."';
 
             trigger OnValidate()
             begin
-                TestField("JMC Cost Value Type", "JMC Cost Value Type"::Amount);
                 RecalculateCosts();
             end;
         }
@@ -105,23 +109,23 @@ table 53103 "JMC Cost Model Line"
         {
             Caption = 'Industrial Cost %', Comment = 'ESP="% CI"';
             DecimalPlaces = 2 : 2;
-            ToolTip = 'Specifies the industrial percentage of recipe cost. Enter it when the cost type is Percentage.', Comment = 'ESP="Especifica el porcentaje industrial sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje."';
+            Editable = false;
+            ToolTip = 'Specifies the original calculated industrial cost as a percentage of recipe cost.', Comment = 'ESP="Especifica el coste industrial calculado original como porcentaje del coste de receta."';
 
             trigger OnValidate()
             begin
-                TestField("JMC Cost Value Type", "JMC Cost Value Type"::Percentage);
                 RecalculateCosts();
             end;
         }
         field(12; "JMC Management Cost"; Decimal)
         {
             Caption = 'Full Management Cost', Comment = 'ESP="Coste completo de gestión"';
-            DecimalPlaces = 0 : 5;
-            ToolTip = 'Specifies the additional management cost per selected unit. Enter it when the cost type is Amount.', Comment = 'ESP="Especifica el coste de gestión adicional por unidad seleccionada. Se introduce cuando el tipo de coste es Importe."';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Specifies the original calculated additional management cost per selected unit, before final manual adjustments.', Comment = 'ESP="Especifica el coste de gestión adicional calculado original por unidad seleccionada, antes de los ajustes manuales finales."';
 
             trigger OnValidate()
             begin
-                TestField("JMC Cost Value Type", "JMC Cost Value Type"::Amount);
                 RecalculateCosts();
             end;
         }
@@ -129,45 +133,45 @@ table 53103 "JMC Cost Model Line"
         {
             Caption = 'Management Cost %', Comment = 'ESP="% CG"';
             DecimalPlaces = 2 : 2;
-            ToolTip = 'Specifies the additional management percentage of recipe cost. Enter it when the cost type is Percentage.', Comment = 'ESP="Especifica el porcentaje de gestión adicional sobre el coste de receta. Se introduce cuando el tipo de coste es Porcentaje."';
+            Editable = false;
+            ToolTip = 'Specifies the original calculated additional management cost as a percentage of recipe cost.', Comment = 'ESP="Especifica el coste de gestión adicional calculado original como porcentaje del coste de receta."';
 
             trigger OnValidate()
             begin
-                TestField("JMC Cost Value Type", "JMC Cost Value Type"::Percentage);
                 RecalculateCosts();
             end;
         }
         field(14; "JMC EXWORK Standard"; Decimal)
         {
             Caption = 'EXWORK Standard', Comment = 'ESP="EXWORK estándar"';
-            DecimalPlaces = 0 : 5;
+            DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies recipe cost plus industrial cost plus additional management cost. It does not update the item standard cost.', Comment = 'ESP="Especifica el coste de receta más el industrial y la gestión adicional. No actualiza el coste estándar del producto."';
+            ToolTip = 'Specifies industrial cost plus additional management cost, without recipe cost. It does not update the item standard cost.', Comment = 'ESP="Especifica el coste industrial más la gestión adicional, sin incluir el coste de receta. No actualiza el coste estándar del producto."';
         }
         field(20; "JMC Net Sales Quantity"; Decimal)
         {
             Caption = 'Calculated Net Sales Quantity', Comment = 'ESP="Cantidad neta de venta calculada"';
-            DecimalPlaces = 0 : 5;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies net quantities sold in this unit during the calculation period, using each posted conversion factor. Returns subtract and uninvoiced shipments are included.', Comment = 'ESP="Especifica las cantidades netas vendidas en esta unidad durante el periodo, usando cada factor de conversión registrado. Las devoluciones restan y se incluyen envíos sin facturar."';
         }
         field(21; "JMC Applied Priority Factor"; Decimal)
         {
             Caption = 'Applied Priority Factor', Comment = 'ESP="Factor de prioridad aplicado"';
-            DecimalPlaces = 0 : 5;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(22; "JMC Assigned Industrial Cost"; Decimal)
         {
             Caption = 'Assigned Industrial Amount', Comment = 'ESP="Importe industrial asignado"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies the allocation for this item and sales unit within this alternative method. Amounts are not repeated across units.', Comment = 'ESP="Especifica el reparto de este producto y unidad de venta dentro de este método alternativo. Los importes no se repiten entre unidades."';
+            ToolTip = 'Specifies the allocation for this item and sales unit in the calculation against products. Amounts are not repeated across units.', Comment = 'ESP="Especifica el reparto de este producto y unidad de venta en el cálculo contra productos. Los importes no se repiten entre unidades."';
         }
         field(23; "JMC Assigned Management Cost"; Decimal)
         {
             Caption = 'Assigned Management Amount', Comment = 'ESP="Importe de gestión asignado"';
-            AutoFormatType = 1;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(24; "JMC Calculation Issue"; Text[250])
@@ -184,9 +188,45 @@ table 53103 "JMC Cost Model Line"
         field(26; "JMC Net Sales Base Qty."; Decimal)
         {
             Caption = 'Net Sales Quantity (Base)', Comment = 'ESP="Cantidad neta de venta (base)"';
-            DecimalPlaces = 0 : 5;
+            DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies the net base quantity of sales posted in this line''s unit. Sales in other units of the same item are not included.', Comment = 'ESP="Especifica la cantidad base neta de las ventas registradas en la unidad de esta línea. No incluye ventas en otras unidades del mismo producto."';
+        }
+        field(28; "JMC Total Cost"; Decimal)
+        {
+            Caption = 'TOTAL COST', Comment = 'ESP="TOTAL COSTE"';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Specifies calculated industrial cost plus full management cost, excluding recipe cost. For the Amount type it is in euros per line unit; for the Percentage type it is the sum of the industrial and management percentages of the recipe cost.', Comment = 'ESP="Especifica el coste industrial más el coste completo de gestión calculados, sin incluir la receta. Con el tipo Importe está en euros por unidad de la línea; con el tipo Porcentaje es la suma de los porcentajes industrial y de gestión sobre el coste de receta."';
+        }
+        field(30; "JMC Final Cost"; Decimal)
+        {
+            Caption = 'Final Manual Cost', Comment = 'ESP="Coste final manual"';
+            DecimalPlaces = 2 : 2;
+            MinValue = 0;
+            ToolTip = 'Specifies the structure cost kept for this line. It comes from structure cost C01 of the recipe when the model is calculated: euros per line unit for the Amount type, or the percentage itself for the Percentage type. You can edit it and send it back to the recipe with Apply Final Cost to Recipe. Recalculating reads it from the recipe again.', Comment = 'ESP="Especifica el coste de estructura que se mantiene para esta línea. Procede del coste de estructura C01 de la receta al calcular el modelo: euros por unidad de la línea con el tipo Importe, o el propio porcentaje con el tipo Porcentaje. Puede editarlo y devolverlo a la receta con Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta."';
+
+            trigger OnValidate()
+            begin
+                TestManualTotals();
+            end;
+        }
+        field(33; "JMC Cost Difference"; Decimal)
+        {
+            Caption = 'Cost Difference', Comment = 'ESP="Diferencia de coste"';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Shows TOTAL COST minus Final Manual Cost. A positive value means the calculated cost is higher than the cost kept in the recipe. It is in euros per line unit for the Amount type and in percentage points for the Percentage type.', Comment = 'ESP="Muestra TOTAL COSTE menos Coste final manual. Un valor positivo indica que el coste calculado es mayor que el coste que se mantiene en la receta. Está en euros por unidad de la línea con el tipo Importe y en puntos porcentuales con el tipo Porcentaje."';
+        }
+        field(31; "JMC Manual Totals Ready"; Boolean)
+        {
+            Caption = 'Manual Totals Initialized', Comment = 'ESP="Totales manuales inicializados"';
+            Editable = false;
+        }
+        field(32; "JMC Structure Totals Ready"; Boolean)
+        {
+            Caption = 'Structure-only Totals Initialized', Comment = 'ESP="Totales sin receta inicializados"';
+            Editable = false;
         }
     }
 
@@ -222,6 +262,8 @@ table 53103 "JMC Cost Model Line"
     trigger OnModify()
     begin
         RecalculateCosts();
+        if "JMC Manual Totals Ready" and "JMC Structure Totals Ready" then
+            Validate("JMC Final Cost");
         InvalidateCalculation("JMC Model Code");
     end;
 
@@ -251,25 +293,64 @@ table 53103 "JMC Cost Model Line"
     var
         jmcRecipeCostRequiredErr: Label 'Enter a nonzero recipe cost before entering industrial or management amounts, so their percentages can be calculated.', Comment = 'ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes."';
     begin
-        case "JMC Cost Value Type" of
-            "JMC Cost Value Type"::Amount:
-                begin
-                    if "JMC Recipe BOM Cost" = 0 then begin
-                        if ("JMC Industrial Cost" <> 0) or ("JMC Management Cost" <> 0) then
-                            Error(jmcRecipeCostRequiredErr);
-                        "JMC Industrial Cost Pct." := 0;
-                        "JMC Management Cost Pct." := 0;
-                    end else begin
-                        "JMC Industrial Cost Pct." := Round("JMC Industrial Cost" / "JMC Recipe BOM Cost" * 100, 0.00001);
-                        "JMC Management Cost Pct." := Round("JMC Management Cost" / "JMC Recipe BOM Cost" * 100, 0.00001);
-                    end;
-                end;
-            "JMC Cost Value Type"::Percentage:
-                begin
-                    "JMC Industrial Cost" := Round("JMC Recipe BOM Cost" * "JMC Industrial Cost Pct." / 100, 0.00001);
-                    "JMC Management Cost" := Round("JMC Recipe BOM Cost" * "JMC Management Cost Pct." / 100, 0.00001);
-                end;
+        if "JMC Recipe BOM Cost" = 0 then begin
+            if ("JMC Industrial Cost" <> 0) or ("JMC Management Cost" <> 0) then
+                Error(jmcRecipeCostRequiredErr);
+            "JMC Industrial Cost Pct." := 0;
+            "JMC Management Cost Pct." := 0;
+        end else begin
+            "JMC Industrial Cost Pct." := "JMC Industrial Cost" / "JMC Recipe BOM Cost" * 100;
+            "JMC Management Cost Pct." := "JMC Management Cost" / "JMC Recipe BOM Cost" * 100;
         end;
-        "JMC EXWORK Standard" := "JMC Recipe BOM Cost" + "JMC Industrial Cost" + "JMC Management Cost";
+        if "JMC Cost Value Type" = "JMC Cost Value Type"::Percentage then
+            "JMC Total Cost" := "JMC Industrial Cost Pct." + "JMC Management Cost Pct."
+        else
+            "JMC Total Cost" := "JMC Industrial Cost" + "JMC Management Cost";
+        "JMC EXWORK Standard" := "JMC Industrial Cost" + "JMC Management Cost";
+        if "JMC Manual Totals Ready" and "JMC Structure Totals Ready" then
+            "JMC Cost Difference" := "JMC Total Cost" - "JMC Final Cost"
+        else
+            "JMC Cost Difference" := 0;
+    end;
+
+    procedure ResetFinalTotals()
+    begin
+        RecalculateCosts();
+        "JMC Manual Totals Ready" := "JMC Allocation Eligible" and ("JMC Calculation Issue" = '');
+        "JMC Structure Totals Ready" := "JMC Manual Totals Ready";
+        // The final manual cost was read from recipe cost C01 while preparing the line.
+        if not "JMC Manual Totals Ready" then
+            "JMC Final Cost" := 0;
+        RecalculateCosts();
+    end;
+
+    local procedure RequireLineRecalculation()
+    var
+        jmcChangedLbl: Label 'Recalculate the model after changing the item or unit.', Comment = 'ESP="Recalcule el modelo tras cambiar el producto o la unidad."';
+    begin
+        "JMC Manual Totals Ready" := false;
+        "JMC Structure Totals Ready" := false;
+        "JMC Allocation Eligible" := false;
+        "JMC Calculation Issue" := jmcChangedLbl;
+    end;
+
+    procedure TestManualTotals()
+    var
+        jmcRecalculateErr: Label 'Calculate this model again before editing, simulating or applying final totals for this line. The line must be eligible and have no calculation issue.', Comment = 'ESP="Calcule de nuevo este modelo antes de editar, simular o aplicar los totales finales de esta línea. Debe ser apta y no tener incidencias."';
+    begin
+        if not "JMC Manual Totals Ready" or not "JMC Structure Totals Ready" or not "JMC Allocation Eligible" or ("JMC Calculation Issue" <> '') then
+            Error(jmcRecalculateErr);
+        TestField("JMC Recipe BOM Cost");
+        if "JMC Final Cost" < 0 then
+            FieldError("JMC Final Cost");
+    end;
+
+    procedure GetFinalExpenseAmount(): Decimal
+    begin
+        TestManualTotals();
+        // Euros per line unit; a percentage is applied to the saved recipe cost of the same unit.
+        if "JMC Cost Value Type" = "JMC Cost Value Type"::Percentage then
+            exit("JMC Final Cost" * "JMC Recipe BOM Cost" / 100);
+        exit("JMC Final Cost");
     end;
 }

@@ -19,6 +19,7 @@ page 53109 "JMC Cost Model Card"
                 field("JMC Description"; Rec."JMC Description")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Enter a name that helps you identify this cost model. Changing the name does not calculate or apply costs.', Comment = 'ESP="Escriba un nombre que le ayude a identificar este modelo de costes. Cambiar el nombre no calcula ni aplica costes."';
                 }
             }
             group(Structure)
@@ -35,26 +36,68 @@ page 53109 "JMC Cost Model Card"
                         field("JMC Total Structure Cost"; Rec."JMC Total Structure Cost")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the fixed industrial and management expenses included in the last calculation. Variable expenses and recipe cost are excluded. Select the amount to see its saved breakdown.', Comment = 'ESP="Muestra la suma de los gastos fijos industriales y de gestión incluidos en el último cálculo. No incluye gastos variables ni el coste de receta. Pulse el importe para ver su desglose guardado."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Total Structure Cost"));
+                            end;
                         }
                         field("JMC Catering Structure Pct."; Rec."JMC Catering Structure Pct.")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the share of total production cost that belongs to Catering. This percentage determines its share of structure expenses. Select the value to see how it was calculated.', Comment = 'ESP="Muestra qué parte del coste total de producción corresponde a Catering. Este porcentaje determina qué parte de los gastos de estructura le corresponde. Pulse el valor para ver cómo se calculó."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Catering Structure Pct."));
+                            end;
                         }
                         field("JMC Industry Structure Pct."; Rec."JMC Industry Structure Pct.")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the share of production cost that belongs to Alimentacion. It is the percentage remaining after Catering and determines its share of structure expenses. Select the value to see the breakdown.', Comment = 'ESP="Muestra qué parte del coste de producción corresponde a Alimentación. Es el porcentaje que queda hasta el cien por cien después de Catering y determina su parte de los gastos de estructura. Pulse el valor para ver el desglose."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Industry Structure Pct."));
+                            end;
                         }
                         field("JMC Catering Production Cost"; Rec."JMC Catering Production Cost")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the actual production cost of final products posted in the period under LINEA = CATERING. It includes cost adjustments available when calculated. It is used to split expenses and is not another expense to add.', Comment = 'ESP="Muestra el coste real de producción de los productos finales registrados en el periodo con LINEA = CATERING. Incluye los ajustes disponibles al calcular. Sirve para repartir los gastos y no es otro gasto que deba sumar."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Catering Production Cost"));
+                            end;
                         }
                         field("JMC Industry Production Cost"; Rec."JMC Industry Production Cost")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the actual production cost of final products posted in the period under LINEA = ALIMENTACION. It includes cost adjustments available when calculated. It is used to split expenses and is not another expense to add.', Comment = 'ESP="Muestra el coste real de producción de los productos finales registrados en el periodo con LINEA = ALIMENTACION. Incluye los ajustes disponibles al calcular. Sirve para repartir los gastos y no es otro gasto que deba sumar."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Industry Production Cost"));
+                            end;
                         }
                         field("JMC Production Dimension"; Rec."JMC Production Dimension")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the dimension used to distinguish Catering production from Alimentacion production. The calculation reads LINEA from each posted production entry. Select the value to see included and excluded entries.', Comment = 'ESP="Muestra la dimensión utilizada para distinguir la producción de Catering de la de Alimentación. El cálculo lee LINEA en cada movimiento de producción registrado. Pulse el valor para ver los movimientos incluidos y excluidos."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Production Dimension"));
+                            end;
                         }
                     }
                     group(Allocation)
@@ -64,10 +107,24 @@ page 53109 "JMC Cost Model Card"
                         field("JMC Catering Allocation"; Rec."JMC Catering Allocation")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the structure expenses assigned to Catering using its production percentage. The calculation against products distributes this amount among eligible CA products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Catering según su porcentaje de producción. El cálculo contra productos reparte este importe entre los productos CA aptos."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Catering Allocation"));
+                            end;
                         }
                         field("JMC Industry Allocation"; Rec."JMC Industry Allocation")
                         {
                             ApplicationArea = All;
+                            ToolTip = 'Shows the structure expenses assigned to Alimentacion after the Catering share. The calculation against products distributes this amount among eligible PT products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Alimentación tras descontar la parte de Catering. El cálculo contra productos reparte este importe entre los productos PT aptos."';
+                            DrillDown = true;
+
+                            trigger OnDrillDown()
+                            begin
+                                ShowSummaryDetail(Rec.FieldNo("JMC Industry Allocation"));
+                            end;
                         }
                     }
                 }
@@ -80,71 +137,91 @@ page 53109 "JMC Cost Model Card"
                 field("JMC Calculated At"; Rec."JMC Calculated At")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows when Calculate All Costs last completed successfully. Opening the model does not update this date or its results.', Comment = 'ESP="Muestra cuándo terminó correctamente la última ejecución de Calcular todos los costes. Abrir el modelo no actualiza esta fecha ni sus resultados."';
                 }
                 field("JMC Calculation Current"; Rec."JMC Calculation Current")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'A check mark means that model inputs and priority percentages have not changed since calculation. It does not detect later changes to entries or recipes. Run Calculate All Costs to refresh the results.', Comment = 'ESP="La marca indica que no se han cambiado los datos del modelo ni los porcentajes de prioridad desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar los resultados."';
                 }
                 field("JMC Starting Date"; Rec."JMC Starting Date")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the first posting date included in the saved calculation. Accounting expenses and sales and production entries are read from this date through the ending date.', Comment = 'ESP="Muestra la primera fecha de registro incluida en el cálculo guardado. Se consultan los gastos contables y los movimientos de venta y producción desde esta fecha hasta la fecha final."';
                 }
                 field("JMC Ending Date"; Rec."JMC Ending Date")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the last posting date included in the saved calculation. Change the period in Calculate All Costs to calculate different dates.', Comment = 'ESP="Muestra la última fecha de registro incluida en el cálculo guardado. Para calcular otras fechas debe cambiar el periodo en Calcular todos los costes."';
                 }
                 field("JMC Account Filter"; Rec."JMC Account Filter")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows which account numbers were considered for expenses. Blank means no account number restriction. Only accounts configured as fixed industrial or management expenses are included. This filter does not restrict sales or production.', Comment = 'ESP="Muestra qué números de cuenta se tuvieron en cuenta para los gastos. Si está vacío no se limita el número de cuenta. Solo se incluyen las cuentas configuradas como gastos fijos industriales o de gestión. Este filtro no limita las ventas ni la producción."';
                 }
                 field("JMC Fixed Industrial Fund"; Rec."JMC Fixed Industrial Fund")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the net amount of fixed industrial expenses selected from accounting for the period. Credit entries reduce this amount. It is part of total structure cost. Select the amount to see the included entries.', Comment = 'ESP="Muestra el importe neto de los gastos industriales fijos seleccionados de contabilidad para el periodo. Los abonos reducen este importe. Forma parte del gasto de estructura total. Pulse el importe para ver los movimientos incluidos."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Fixed Industrial Fund"));
+                    end;
                 }
                 field("JMC Variable Industrial Fund"; Rec."JMC Variable Industrial Fund")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'This hidden field is retained for compatibility with earlier results. New calculations leave it at zero because variable industrial expenses are not allocated.', Comment = 'ESP="Este campo oculto se conserva por compatibilidad con resultados anteriores. Los nuevos cálculos lo dejan a cero porque no se reparten gastos industriales variables."';
                     Visible = false;
                 }
                 field("JMC Fixed Management Fund"; Rec."JMC Fixed Management Fund")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the net amount of fixed management expenses selected from accounting for the period. Credit entries reduce this amount. It is part of total structure cost. Select the amount to see the included entries.', Comment = 'ESP="Muestra el importe neto de los gastos de gestión fijos seleccionados de contabilidad para el periodo. Los abonos reducen este importe. Forma parte del gasto de estructura total. Pulse el importe para ver los movimientos incluidos."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Fixed Management Fund"));
+                    end;
                 }
                 field("JMC Variable Management Fund"; Rec."JMC Variable Management Fund")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'This hidden field is retained for compatibility with earlier results. New calculations leave it at zero because variable management expenses are not allocated.', Comment = 'ESP="Este campo oculto se conserva por compatibilidad con resultados anteriores. Los nuevos cálculos lo dejan a cero porque no se reparten gastos de gestión variables."';
                     Visible = false;
                 }
                 field("JMC Sales Pending Industrial"; Rec."JMC Sales Pending Industrial")
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Shows the industrial expenses that could not be distributed in the calculation against products. This amount is not included in product allocations. Select it to see which business has pending expenses and the lines that could not receive an allocation.', Comment = 'ESP="Muestra los gastos industriales que no se han podido repartir en el cálculo contra productos. Este importe no está incluido en lo asignado a los productos. Púlselo para ver qué negocio tiene gastos pendientes y las líneas que no han podido recibir reparto."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Sales Pending Industrial"));
+                    end;
                 }
                 field("JMC Sales Pending Management"; Rec."JMC Sales Pending Management")
                 {
                     ApplicationArea = All;
-                }
-                field("JMC Recipe Pending Industrial"; Rec."JMC Recipe Pending Industrial")
-                {
-                    ApplicationArea = All;
-                }
-                field("JMC Recipe Pending Management"; Rec."JMC Recipe Pending Management")
-                {
-                    ApplicationArea = All;
+                    ToolTip = 'Shows the management expenses that could not be distributed in the calculation against products. This amount is not included in product allocations. Select it to see which business has pending expenses and the lines that could not receive an allocation.', Comment = 'ESP="Muestra los gastos de gestión que no se han podido repartir en el cálculo contra productos. Este importe no está incluido en lo asignado a los productos. Púlselo para ver qué negocio tiene gastos pendientes y las líneas que no han podido recibir reparto."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Sales Pending Management"));
+                    end;
                 }
             }
             part(SalesLines; "JMC Cost Model Lines")
             {
-                Caption = 'Against Sales', Comment = 'ESP="Contra ventas"';
+                Caption = 'Calculation Against Products', Comment = 'ESP="Cálculo contra productos"';
                 ApplicationArea = All;
                 UpdatePropagation = Both;
                 SubPageLink = "JMC Model Code" = field("JMC Code"), "JMC Allocation Method" = const(Sales);
-            }
-            part(RecipeLines; "JMC Cost Model Lines")
-            {
-                Caption = 'Against Recipe', Comment = 'ESP="Contra receta"';
-                ApplicationArea = All;
-                UpdatePropagation = Both;
-                SubPageLink = "JMC Model Code" = field("JMC Code"), "JMC Allocation Method" = const(Recipe);
             }
         }
     }
@@ -156,7 +233,7 @@ page 53109 "JMC Cost Model Card"
             action(CalculateAllCosts)
             {
                 Caption = 'Calculate All Costs', Comment = 'ESP="Calcular todos los costes"';
-                ToolTip = 'Calculates accounting funds and both product allocations for review, replacing model results only. It does not apply costs outside the model.', Comment = 'ESP="Calcula los fondos contables y ambos repartos por producto para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo."';
+                ToolTip = 'Calculates accounting funds and the allocation against products for review, replacing model results only. It does not apply costs outside the model.', Comment = 'ESP="Calcula los fondos contables y el reparto contra productos para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo."';
                 ApplicationArea = All;
                 Image = Calculate;
 
@@ -176,7 +253,7 @@ page 53109 "JMC Cost Model Card"
             action(PriorityFactors)
             {
                 Caption = 'Priority Factors', Comment = 'ESP="Factores de prioridad"';
-                ToolTip = 'Defines the approved decreasing factors for priorities 1 to 5. No factor values are assumed.', Comment = 'ESP="Define los factores decrecientes aprobados para las prioridades del 1 al 5. No se presupone ningún valor."';
+                ToolTip = 'Defines the percentage of cost allocation for each priority from 1 to 5. Priority 1 is 100 percent by default and lower priorities receive a smaller share.', Comment = 'ESP="Define el porcentaje de reparto de costes de cada prioridad, del 1 al 5. La prioridad 1 es el 100 % de forma predeterminada y las siguientes reciben una parte menor."';
                 ApplicationArea = All;
                 Image = Setup;
                 RunObject = page "JMC Cost Priority Factors";
@@ -184,7 +261,7 @@ page 53109 "JMC Cost Model Card"
             action(SimulateStructureCost)
             {
                 Caption = 'Simulate Structure Cost', Comment = 'ESP="Simular coste de estructura"';
-                ToolTip = 'Simulates a product quantity using both saved allocation methods, without recalculating or changing model costs.', Comment = 'ESP="Simula una cantidad de producto con ambos métodos de reparto guardados, sin recalcular ni cambiar los costes del modelo."';
+                ToolTip = 'Simulates a product quantity using the saved calculation against products, without recalculating or changing model costs.', Comment = 'ESP="Simula una cantidad de producto con el cálculo contra productos guardado, sin recalcular ni cambiar los costes del modelo."';
                 ApplicationArea = All;
                 Image = Calculate;
 
@@ -212,6 +289,16 @@ page 53109 "JMC Cost Model Card"
             }
         }
     }
+
+    local procedure ShowSummaryDetail(jmcFieldNo: Integer)
+    var
+        jmcDetail: Page "JMC Cost Calculation Detail";
+    begin
+        CurrPage.SaveRecord();
+        Commit();
+        jmcDetail.SetSummary(Rec."JMC Code", jmcFieldNo);
+        jmcDetail.RunModal();
+    end;
 
     trigger OnOpenPage()
     var

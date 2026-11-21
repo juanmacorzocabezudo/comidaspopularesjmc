@@ -14,6 +14,12 @@ tableextension 53100 "JMC Evento" extends Evento
             Caption = 'Status Semaphore', Comment = 'ESP="Estado Semáforo"';
             Editable = false;
         }
+        field(53102; "JMC Customer Type"; Code[20])
+        {
+            Caption = 'Customer Type', Comment = 'ESP="Tipo Cliente"';
+            TableRelation = "Dimension Value".Code where("Dimension Code" = const('TIPO CLIENTE'));
+            DataClassification = CustomerContent;
+        }
     }
 
     fieldgroups

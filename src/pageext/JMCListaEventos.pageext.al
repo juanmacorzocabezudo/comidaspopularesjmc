@@ -2,14 +2,28 @@ pageextension 53104 "JMC Lista Eventos" extends "Lista de Eventos"
 {
     layout
     {
+        addafter(Descripcion)
+        {
+            field("JMC Customer Type"; Rec."JMC Customer Type")
+            {
+                ApplicationArea = All;
+                Caption = 'Customer Type', Comment = 'ESP="Tipo Cliente"';
+                ToolTip = 'Specifies the customer type.', Comment = 'ESP="Especifica el tipo de cliente."';
+            }
+        }
         addbefore("Total Adultos")
         {
-            field("JMC Total People"; Format(Rec."Total Adultos" + Rec."Total Ninos"))
+            field("JMC Total People"; JMCTotalPeople)
             {
                 ApplicationArea = All;
                 Caption = 'Total People', Comment = 'ESP="Total personas"';
                 ToolTip = 'Specifies the total number of adults and children attending the event.', Comment = 'ESP="Especifica el total de adultos y niños que asisten al evento."';
-                Editable = false;
+
+                trigger OnValidate()
+                begin
+                    Rec.Validate("Total Adultos", JMCTotalPeople - Rec."Total Ninos");
+                    JMCTotalPeople := Rec."Total Adultos" + Rec."Total Ninos";
+                end;
             }
         }
         modify("Total Adultos")
@@ -38,4 +52,12 @@ pageextension 53104 "JMC Lista Eventos" extends "Lista de Eventos"
             }
         }
     }
+
+    var
+        JMCTotalPeople: Integer;
+
+    trigger OnAfterGetRecord()
+    begin
+        JMCTotalPeople := Rec."Total Adultos" + Rec."Total Ninos";
+    end;
 }

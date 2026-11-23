@@ -18,12 +18,17 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
         }
         addbefore("Total Adultos")
         {
-            field("JMC Total People"; Format(Rec."Total Adultos" + Rec."Total Ninos"))
+            field("JMC Total People"; JMCTotalPeople)
             {
                 ApplicationArea = All;
                 Caption = 'Total People', Comment = 'ESP="Total personas"';
                 ToolTip = 'Specifies the total number of adults and children attending the event.', Comment = 'ESP="Especifica el total de adultos y niños que asisten al evento."';
-                Editable = false;
+
+                trigger OnValidate()
+                begin
+                    Rec.Validate("Total Adultos", JMCTotalPeople - Rec."Total Ninos");
+                    JMCTotalPeople := Rec."Total Adultos" + Rec."Total Ninos";
+                end;
             }
         }
         addlast("Contacto / Cliente")
@@ -105,8 +110,17 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
         }
     }
 
+    var
+        JMCTotalPeople: Integer;
+
+    trigger OnAfterGetRecord()
+    begin
+        JMCTotalPeople := Rec."Total Adultos" + Rec."Total Ninos";
+    end;
+
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
+        JMCTotalPeople := 0;
         if Rec."Plantilla Cliente" = '' then
             Rec.Validate("Plantilla Cliente", 'CLIENTE');
     end;

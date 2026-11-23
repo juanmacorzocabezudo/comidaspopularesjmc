@@ -17,6 +17,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcCostModel.Get(jmcModelCode);
         ReadProductionCosts(jmcCostModel, jmcStartingDate, jmcEndingDate);
         ReadFunds(jmcCostModel, jmcStartingDate, jmcEndingDate, jmcAccountFilter);
+        ReadFixedResourceCosts(jmcCostModel, jmcStartingDate, jmcEndingDate);
         LoadLines(jmcModelCode);
         PrepareBases();
         AllocateFunds(jmcCostModel);
@@ -65,6 +66,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         Clear(JMCProductionQuantities);
         Clear(JMCSalesBaseTotals);
         Clear(JMCBases);
+        Clear(JMCBusinessQuantityBases);
         Clear(JMCSalesGroupRecipeBases);
         Clear(JMCSalesGroupQuantityBases);
         Clear(JMCSalesGroupKeys);
@@ -196,6 +198,33 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcCostModel."JMC Fixed Management Fund" := jmcFunds[2];
         jmcCostModel."JMC Variable Management Fund" := 0;
         jmcCostModel.Validate("JMC Total Structure Cost", jmcFunds[1] + jmcFunds[2]);
+    end;
+
+    local procedure ReadFixedResourceCosts(var jmcCostModel: Record "JMC Cost Model"; jmcStartingDate: Date; jmcEndingDate: Date)
+    var
+        jmcResourceEntry: Record "Res. Ledger Entry";
+        jmcResource: Record Resource;
+        jmcResourceCost: Decimal;
+        jmcResourceMissingErr: Label 'Resource %1 used in assembly resource entry %2 no longer exists. Fixed resource costs cannot be calculated.', Comment = 'ESP="El recurso %1 utilizado en el movimiento de recursos de ensamblado %2 ya no existe. No se pueden calcular los costes de recursos fijos."';
+        jmcNegativeCostErr: Label 'The net fixed resource personnel cost for assembly orders is negative (%1). Review resource usage and adjustments for the period.', Comment = 'ESP="El coste neto de personal de recursos fijos de los pedidos de ensamblado es negativo (%1). Revise los consumos y ajustes de recursos del periodo."';
+    begin
+        jmcResourceEntry.SetRange("Entry Type", jmcResourceEntry."Entry Type"::Usage);
+        jmcResourceEntry.SetRange("Order Type", jmcResourceEntry."Order Type"::Assembly);
+        jmcResourceEntry.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
+        jmcResourceEntry.SetLoadFields("Entry No.", "Posting Date", "Document No.", "Resource No.", Quantity, "Total Cost");
+        jmcResource.SetLoadFields(Name, "JMC Cost Type");
+        if jmcResourceEntry.FindSet() then
+            repeat
+                if not jmcResource.Get(jmcResourceEntry."Resource No.") then
+                    Error(jmcResourceMissingErr, jmcResourceEntry."Resource No.", jmcResourceEntry."Entry No.");
+                if jmcResource."JMC Cost Type" = jmcResource."JMC Cost Type"::Fixed then begin
+                    jmcResourceCost += jmcResourceEntry."Total Cost";
+                    JMCDetail.AddResource(jmcResourceEntry, jmcResource);
+                end;
+            until jmcResourceEntry.Next() = 0;
+        if jmcResourceCost < 0 then
+            Error(jmcNegativeCostErr, jmcResourceCost);
+        jmcCostModel."JMC Fixed Resource Cost" := RoundAmount(jmcResourceCost);
     end;
 
     local procedure LoadLines(jmcModelCode: Code[20])
@@ -375,8 +404,10 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines."JMC Applied Priority Factor" := 0;
         JMCTempLines."JMC Assigned Industrial Cost" := 0;
         JMCTempLines."JMC Assigned Management Cost" := 0;
+        JMCTempLines."JMC Assigned Personnel Cost" := 0;
         JMCTempLines."JMC Industrial Cost" := 0;
         JMCTempLines."JMC Management Cost" := 0;
+        JMCTempLines."JMC Personnel Cost" := 0;
         JMCTempLines."JMC Cost Value Type" := JMCTempLines."JMC Cost Value Type"::Amount;
         JMCTempLines."JMC Final Cost" := 0;
         JMCTempLines."JMC Cost Difference" := 0;
@@ -469,8 +500,10 @@ codeunit 53104 "JMC Cost Model Calculation"
     begin
         JMCTempLines."JMC Assigned Industrial Cost" := 0;
         JMCTempLines."JMC Assigned Management Cost" := 0;
+        JMCTempLines."JMC Assigned Personnel Cost" := 0;
         JMCTempLines."JMC Industrial Cost" := 0;
         JMCTempLines."JMC Management Cost" := 0;
+        JMCTempLines."JMC Personnel Cost" := 0;
         JMCTempLines."JMC Allocation Eligible" := JMCTempLines."JMC Calculation Issue" = '';
         if JMCTempLines."JMC Allocation Eligible" and (JMCTempLines."JMC Theoretical Production Qty." <= 0) then begin
             JMCTempLines."JMC Calculation Issue" := jmcNoProductionLbl;
@@ -500,6 +533,7 @@ codeunit 53104 "JMC Cost Model Calculation"
                 JMCSalesGroupRecipeBases.Set(jmcGroupKey, JMCSalesGroupRecipeBases.Get(jmcGroupKey) + jmcRecipeValue);
                 JMCSalesGroupQuantityBases.Set(jmcGroupKey, JMCSalesGroupQuantityBases.Get(jmcGroupKey) + JMCTempLines."JMC Theoretical Production Qty.");
                 JMCBases[jmcBusiness] += jmcRecipeValue;
+                JMCBusinessQuantityBases[jmcBusiness] += JMCTempLines."JMC Theoretical Production Qty." * JMCTempLines."JMC Production Unit Factor";
             end;
         until JMCTempLines.Next() = 0;
     end;
@@ -622,6 +656,65 @@ codeunit 53104 "JMC Cost Model Calculation"
         end;
         jmcCostModel."JMC Sales Pending Industrial" := JMCPendingFunds[1];
         jmcCostModel."JMC Sales Pending Management" := JMCPendingFunds[2];
+        AllocateResourceCosts(jmcCostModel);
+    end;
+
+    local procedure AllocateResourceCosts(var jmcCostModel: Record "JMC Cost Model")
+    var
+        jmcResourceFunds: array[2] of Decimal;
+        jmcBusiness: Integer;
+        jmcPending: Decimal;
+    begin
+        jmcResourceFunds[1] := RoundAmount(jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Catering Resource Pct." / 100);
+        jmcResourceFunds[2] := jmcCostModel."JMC Fixed Resource Cost" - jmcResourceFunds[1];
+        jmcCostModel."JMC Catering Resource Allocation" := jmcResourceFunds[1];
+        jmcCostModel."JMC Industry Resource Allocation" := jmcResourceFunds[2];
+        jmcCostModel."JMC Resource Cost Pending" := 0;
+        JMCDetail.AddResourceBusinessFund(1, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Catering Resource Pct.", 'A * B / 100', jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Catering Resource Pct." / 100, jmcResourceFunds[1]);
+        JMCDetail.AddResourceBusinessFund(2, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Industry Resource Pct.", 'A * B / 100', jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Industry Resource Pct." / 100, jmcResourceFunds[2]);
+        for jmcBusiness := 1 to 2 do
+            if jmcResourceFunds[jmcBusiness] <> 0 then
+                if JMCBusinessQuantityBases[jmcBusiness] > 0 then
+                    AllocateResourceLines(jmcBusiness, jmcResourceFunds[jmcBusiness])
+                else begin
+                    jmcPending += jmcResourceFunds[jmcBusiness];
+                    JMCDetail.AddResourcePending(jmcBusiness, jmcResourceFunds[jmcBusiness]);
+                end;
+        jmcCostModel."JMC Resource Cost Pending" := jmcPending;
+    end;
+
+    local procedure AllocateResourceLines(jmcBusiness: Integer; jmcResourceFund: Decimal)
+    var
+        jmcRemaining: Decimal;
+        jmcWeight: Decimal;
+        jmcAssigned: Decimal;
+        jmcCount: Integer;
+    begin
+        JMCTempLines.Reset();
+        JMCTempLines.SetRange("JMC Allocation Eligible", true);
+        JMCTempLines.SetRange("JMC Allocation Method", JMCTempLines."JMC Allocation Method"::Sales);
+        if jmcBusiness = 1 then
+            JMCTempLines.SetFilter("JMC Item No.", 'CA*')
+        else
+            JMCTempLines.SetFilter("JMC Item No.", 'PT*');
+        jmcCount := JMCTempLines.Count();
+        jmcRemaining := jmcResourceFund;
+        if JMCTempLines.FindSet() then
+            repeat
+                jmcWeight := JMCTempLines."JMC Theoretical Production Qty." * JMCTempLines."JMC Production Unit Factor";
+                if jmcCount = 1 then
+                    jmcAssigned := jmcRemaining
+                else begin
+                    jmcAssigned := RoundAmount(jmcResourceFund * jmcWeight / JMCBusinessQuantityBases[jmcBusiness]);
+                    jmcAssigned := Minimum(jmcAssigned, jmcRemaining);
+                end;
+                JMCTempLines."JMC Assigned Personnel Cost" := jmcAssigned;
+                JMCTempLines."JMC Personnel Cost" := jmcAssigned / JMCTempLines."JMC Theoretical Production Qty.";
+                JMCDetail.AddResourceAllocation(JMCTempLines, jmcBusiness, jmcWeight, JMCBusinessQuantityBases[jmcBusiness], jmcResourceFund, jmcAssigned);
+                JMCTempLines.Modify(false);
+                jmcRemaining -= jmcAssigned;
+                jmcCount -= 1;
+            until JMCTempLines.Next() = 0;
     end;
 
     local procedure AllocateLines(jmcBusiness: Integer; jmcUnitCode: Code[10]; jmcIndustrialFund: Decimal; jmcManagementFund: Decimal)
@@ -739,6 +832,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCProductionQuantities: Dictionary of [Code[20], Decimal];
         JMCSalesBaseTotals: Dictionary of [Code[20], Decimal];
         JMCBases: array[2] of Decimal;
+        JMCBusinessQuantityBases: array[2] of Decimal;
         JMCSalesGroupRecipeBases: Dictionary of [Text, Decimal];
         JMCSalesGroupQuantityBases: Dictionary of [Text, Decimal];
         JMCSalesGroupKeys: List of [Text];

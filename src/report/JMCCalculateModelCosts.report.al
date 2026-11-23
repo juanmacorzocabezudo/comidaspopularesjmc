@@ -49,6 +49,12 @@ report 53111 "JMC Calculate Model Costs"
                         ApplicationArea = All;
                         MultiLine = true;
                     }
+                    field(JMCResourceRules; JMCResourceRulesLbl)
+                    {
+                        Caption = 'Fixed Resource Selection', Comment = 'ESP="Selección de recursos fijos"';
+                        ApplicationArea = All;
+                        MultiLine = true;
+                    }
                     field(JMCProductionRules; JMCProductionRulesLbl)
                     {
                         Caption = 'Production Selection', Comment = 'ESP="Selección de producción"';
@@ -118,13 +124,13 @@ report 53111 "JMC Calculate Model Costs"
         jmcModel: Record "JMC Cost Model";
         jmcIssueCount: Integer;
         jmcCompletedMsg: Label 'The calculation against products has been saved in the model. Items, recipes, documents and ledger entries have not been modified.', Comment = 'ESP="Se ha guardado el cálculo contra productos en el modelo. No se han modificado productos, recetas, documentos ni movimientos."';
-        jmcPartialMsg: Label 'Calculation saved for review. Lines with issues and no allocation: %1. Review Calculation Issue and the unallocated funds in the header. The allocation reconciles allocated plus unallocated amounts. No item or ledger data has been changed.', Comment = 'ESP="Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos."';
+        jmcPartialMsg: Label 'Calculation saved for review. Lines with issues and no allocation: %1. Review Calculation Issue and the unallocated accounting and personnel funds in the header. The allocation reconciles allocated plus unallocated amounts. No item or ledger data has been changed.', Comment = 'ESP="Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos contables y de personal pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos."';
     begin
         jmcLine.SetRange("JMC Model Code", JMCModelCode);
         jmcLine.SetFilter("JMC Calculation Issue", '<>%1', '');
         jmcIssueCount := jmcLine.Count();
         jmcModel.Get(JMCModelCode);
-        if (jmcIssueCount > 0) or (jmcModel."JMC Sales Pending Industrial" <> 0) or (jmcModel."JMC Sales Pending Management" <> 0) then
+        if (jmcIssueCount > 0) or (jmcModel."JMC Sales Pending Industrial" <> 0) or (jmcModel."JMC Sales Pending Management" <> 0) or (jmcModel."JMC Resource Cost Pending" <> 0) then
             Message(jmcPartialMsg, jmcIssueCount)
         else
             Message(jmcCompletedMsg);
@@ -149,6 +155,7 @@ report 53111 "JMC Calculate Model Costs"
         JMCAccountFilter: Text[250];
         JMCConfirmReviewOnly: Boolean;
         JMCAccountingRulesLbl: Label 'Selected dates and account number filter; fixed accounts classified as industrial or management. Variable and wholly unclassified accounts are excluded; incomplete fixed/blank-type classifications cause an error. Closing entries are excluded. Signed amounts are retained; negative funds or no configured entries cause an error.', Comment = 'ESP="Fechas y filtro de cuentas indicados; cuentas fijas clasificadas como industrial o gestión. Se excluyen variables y cuentas sin ambas categorías; las clasificaciones incompletas de tipo fijo o vacío dan error. Se excluyen asientos de cierre. Se respetan los signos; fondos negativos o ausencia de movimientos configurados dan error."';
+        JMCResourceRulesLbl: Label 'Resource Ledger Entry: Usage, Order Type Assembly, fixed resource type and selected posting dates. Costs are split by the configured Industry/Catering percentages, then allocated over eligible production quantities in base units. Personnel remains a separate component included in each line''s Total Cost and EXWORK.', Comment = 'ESP="Movimientos de recursos: Consumo, tipo de pedido Ensamblado, recurso de tipo fijo y fechas de registro indicadas. Los costes se dividen según los porcentajes configurados de Alimentación/Catering y se reparten sobre cantidades de fabricación aptas en unidad base. El personal sigue siendo una partida independiente incluida en Total coste y EXWORK de cada línea."';
         JMCProductionRulesLbl: Label 'Item Ledger Entry: Assembly Output, selected posting dates, item number CA* or PT*, nonzero actual cost. PI intermediates are excluded. Includes reversals and available cost adjustments, even later adjustments; currently blocked items are not excluded from historical production.', Comment = 'ESP="Movimiento producto: Salida de ensamblado, fechas de registro indicadas, producto CA* o PT*, coste real distinto de cero. Se excluyen intermedios PI. Incluye reversiones y ajustes de coste disponibles, incluso posteriores; no se excluyen productos actualmente bloqueados de la producción histórica."';
         JMCDimensionRulesLbl: Label 'Dimension LINEA: CATERING or ALIMENTACION on the production movement. Missing/blank LINEA is ignored; any other nonblank value with nonzero final output cost causes an error. Business net costs must be nonnegative and their total positive.', Comment = 'ESP="Dimensión LINEA: CATERING o ALIMENTACION en el movimiento de producción. Se ignora LINEA ausente o vacía; otro valor no vacío con coste final distinto de cero da error. Los costes netos por negocio deben ser no negativos y su suma positiva."';
         JMCProductRulesLbl: Label 'All currently unblocked items, with separate rows for sales units used in the period. When no positive net sales exist, production is assigned to the base unit. Only CA* and PT* can receive allocations.', Comment = 'ESP="Todos los productos actualmente no bloqueados, separados por las unidades de venta utilizadas en el periodo. Sin ventas netas positivas, la fabricación se asigna a la unidad base. Solo CA* y PT* pueden recibir reparto."';

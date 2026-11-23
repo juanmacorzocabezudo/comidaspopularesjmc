@@ -269,6 +269,30 @@ table 53103 "JMC Cost Model Line"
             DataClassification = CustomerContent;
             Editable = false;
         }
+        field(39; "JMC Personnel Cost"; Decimal)
+        {
+            Caption = 'Personnel Cost', Comment = 'ESP="Coste de personal"';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Shows fixed resource personnel cost per unit allocated to this product line.', Comment = 'ESP="Muestra el coste fijo de personal por unidad asignado a esta línea de producto."';
+        }
+        field(40; "JMC Personnel Cost Pct."; Decimal)
+        {
+            Caption = 'Personnel Cost %', Comment = 'ESP="% coste de personal"';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 2;
+            Editable = false;
+            ToolTip = 'Shows personnel cost as a percentage of the recipe cost for the same unit.', Comment = 'ESP="Muestra el coste de personal como porcentaje del coste de receta para la misma unidad."';
+        }
+        field(41; "JMC Assigned Personnel Cost"; Decimal)
+        {
+            Caption = 'Assigned Personnel Amount', Comment = 'ESP="Importe de personal asignado"';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+            ToolTip = 'Shows the total fixed resource personnel amount allocated to this product and unit for the whole period.', Comment = 'ESP="Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo."';
+        }
     }
 
     keys
@@ -332,22 +356,24 @@ table 53103 "JMC Cost Model Line"
 
     procedure RecalculateCosts()
     var
-        jmcRecipeCostRequiredErr: Label 'Enter a nonzero recipe cost before entering industrial or management amounts, so their percentages can be calculated.', Comment = 'ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes."';
+        jmcRecipeCostRequiredErr: Label 'Enter a nonzero recipe cost before entering industrial, management or personnel amounts, so their percentages can be calculated.', Comment = 'ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales, de gestión o de personal para poder calcular sus porcentajes."';
     begin
         if "JMC Recipe BOM Cost" = 0 then begin
-            if ("JMC Industrial Cost" <> 0) or ("JMC Management Cost" <> 0) then
+            if ("JMC Industrial Cost" <> 0) or ("JMC Management Cost" <> 0) or ("JMC Personnel Cost" <> 0) then
                 Error(jmcRecipeCostRequiredErr);
             "JMC Industrial Cost Pct." := 0;
             "JMC Management Cost Pct." := 0;
+            "JMC Personnel Cost Pct." := 0;
         end else begin
             "JMC Industrial Cost Pct." := "JMC Industrial Cost" / "JMC Recipe BOM Cost" * 100;
             "JMC Management Cost Pct." := "JMC Management Cost" / "JMC Recipe BOM Cost" * 100;
+            "JMC Personnel Cost Pct." := "JMC Personnel Cost" / "JMC Recipe BOM Cost" * 100;
         end;
         if "JMC Cost Value Type" = "JMC Cost Value Type"::Percentage then
-            "JMC Total Cost" := "JMC Industrial Cost Pct." + "JMC Management Cost Pct."
+            "JMC Total Cost" := "JMC Industrial Cost Pct." + "JMC Management Cost Pct." + "JMC Personnel Cost Pct."
         else
-            "JMC Total Cost" := "JMC Industrial Cost" + "JMC Management Cost";
-        "JMC EXWORK Standard" := "JMC Industrial Cost" + "JMC Management Cost";
+            "JMC Total Cost" := "JMC Industrial Cost" + "JMC Management Cost" + "JMC Personnel Cost";
+        "JMC EXWORK Standard" := "JMC Industrial Cost" + "JMC Management Cost" + "JMC Personnel Cost";
         if "JMC Manual Totals Ready" and "JMC Structure Totals Ready" then
             "JMC Cost Difference" := "JMC Total Cost" - "JMC Final Cost"
         else

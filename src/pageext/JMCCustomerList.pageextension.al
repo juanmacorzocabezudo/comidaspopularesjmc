@@ -1,4 +1,4 @@
-pageextension 53111 "JMC Customer List" extends "Customer List"
+pageextension 53130 "JMC Customer List" extends "Customer List"
 {
     layout
     {

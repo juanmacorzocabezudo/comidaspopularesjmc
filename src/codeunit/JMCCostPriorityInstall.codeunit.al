@@ -26,6 +26,26 @@ codeunit 53105 "JMC Cost Priority Install"
             RestoreDefaultPercentages();
             jmcUpgradeTag.SetUpgradeTag(jmcPercentageTagLbl);
         end;
+        InitializeResourceCostPercentages();
+    end;
+
+    local procedure InitializeResourceCostPercentages()
+    var
+        jmcCostModel: Record "JMC Cost Model";
+        jmcUpgradeTag: Codeunit "Upgrade Tag";
+        jmcResourcePercentageTagLbl: Label 'JMC-FixedResourceCostPercentages-20261123', Locked = true;
+    begin
+        if jmcUpgradeTag.HasUpgradeTag(jmcResourcePercentageTagLbl) then
+            exit;
+        if jmcCostModel.Get('GENERAL') then
+            if (jmcCostModel."JMC Industry Resource Pct." = 0) and
+               (jmcCostModel."JMC Catering Resource Pct." = 0)
+            then begin
+                jmcCostModel.Validate("JMC Industry Resource Pct.", 50);
+                jmcCostModel.Validate("JMC Catering Resource Pct.", 50);
+                jmcCostModel.Modify(false);
+            end;
+        jmcUpgradeTag.SetUpgradeTag(jmcResourcePercentageTagLbl);
     end;
 
     procedure RestoreDefaultPercentages()

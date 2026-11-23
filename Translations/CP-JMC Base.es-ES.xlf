@@ -94,9 +94,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1635896127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Identifies what this row explains: a source movement, a business fund, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.</source>
-          <target>Indica qué explica esta fila: un movimiento de origen, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Indica qué explica esta fila: un movimiento de origen, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."</note>
+          <source>Identifies what this row explains: an accounting, production or resource movement, a business fund, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.</source>
+          <target>[NAB: REVIEW]Indica qué explica esta fila: un movimiento de origen, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Indica qué explica esta fila: un movimiento contable, de producción o de recursos, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Detail Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1635896127 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -106,9 +107,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Detail Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1635896127 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Fund</source>
-          <target>Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio"</note>
+          <source>Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Fund,Resource,Resource Fund,Resource Allocation,Resource Pending</source>
+          <target>[NAB: REVIEW]Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio,Recurso,Fondo de recursos,Reparto de recursos,Recursos pendientes"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">source and target has different number of option captions.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Detail Type - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 521954016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -291,6 +293,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Resultado antes de redondeo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Raw Result - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 822719801 - Field 231317795 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Identifies the resource on a saved assembly usage entry.</source>
+          <target>Identifica el recurso en el movimiento de consumo de ensamblado guardado.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Identifica el recurso en el movimiento de consumo de ensamblado guardado."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Resource No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 822719801 - Field 231317795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Saved Resource No.</source>
+          <target>Nº recurso guardado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso guardado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Resource No. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 822719801 - Field 282542511 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows how much this row contributes. In product allocations it is the money assigned to the product. Do not add different levels together, because that would count the same money more than once.</source>
           <target>Muestra cuánto aporta esta fila. En repartos a productos es el dinero asignado al producto. No sume niveles distintos, porque contaría el mismo dinero más de una vez.</target>
@@ -334,9 +348,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1456843406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the source movement number for accounting and production rows, or the model line number for product allocations. It is not a document number. A zero means no source number applies.</source>
-          <target>Es el número del movimiento en filas contables y de producción, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Es el número del movimiento en filas contables y de producción, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen."</note>
+          <source>Shows the source movement number for accounting, production and resource rows, or the model line number for product allocations. It is not a document number. A zero means no source number applies.</source>
+          <target>[NAB: REVIEW]Es el número del movimiento en filas contables y de producción, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Es el número del movimiento en filas contables, de producción y de recursos, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1456843406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -393,6 +408,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="No se puede cambiar el código de un modelo de costes que tiene detalle de cálculo guardado."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Method OnRename - NamedType jmcRenameWithDetailErr</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Method 3233705860 - NamedType 2141819953" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry and Catering percentages must add up to 100.</source>
+          <target>Los porcentajes de Alimentación y Catering deben sumar 100.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Los porcentajes de Alimentación y Catering deben sumar 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Method SetResourceCostPercentages - NamedType jmcInvalidPctErr</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1517079439 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculation Account Filter</source>
           <target>Filtro de cuentas del cálculo</target>
@@ -440,6 +461,24 @@
           <target>Coste de producción Catering</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste de producción Catering"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Production Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1033731345 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Catering Personnel Cost Fund</source>
+          <target>Fondo de personal Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo de personal Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Resource Allocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1456183786 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the share of fixed resource personnel cost allocated to Catering. Change this percentage through Resource Cost Distribution.</source>
+          <target>Especifica la proporción del coste fijo de personal asignada a Catering. Cambie este porcentaje desde Distribución del coste de personal.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la proporción del coste fijo de personal asignada a Catering. Cambie este porcentaje desde Distribución del coste de personal."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Resource Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1456183786 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Catering Personnel Cost %</source>
+          <target>% personal Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% personal Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Catering Resource Pct. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 1234531651 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the catering share of actual production cost, calculated from the business line dimension of posted assembly outputs.</source>
@@ -489,6 +528,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fondo de gestión fijo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Fixed Management Fund - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 4042435045 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the fixed resource usage cost posted for assembly orders during the calculation period.</source>
+          <target>Muestra el coste de uso de recursos fijos registrado para pedidos de ensamblado durante el periodo del cálculo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste de uso de recursos fijos registrado para pedidos de ensamblado durante el periodo del cálculo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Fixed Resource Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 4042435045 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Resource Personnel Cost</source>
+          <target>Coste fijo de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste fijo de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Fixed Resource Cost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 4267268924 - Field 135606738 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the remaining structure cost allocated to industry after the Catering share.</source>
           <target>Especifica el gasto de estructura restante asignado a Alimentación tras la parte de Catering.</target>
@@ -512,6 +563,24 @@
           <target>Coste de producción Alimentación</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste de producción Alimentación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Production Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1316646168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry Personnel Cost Fund</source>
+          <target>Fondo de personal Alimentación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fondo de personal Alimentación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Resource Allocation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2571075135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the share of fixed resource personnel cost allocated to Industry. Change this percentage through Resource Cost Distribution.</source>
+          <target>Especifica la proporción del coste fijo de personal asignada a Alimentación. Cambie este porcentaje desde Distribución del coste de personal.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la proporción del coste fijo de personal asignada a Alimentación. Cambie este porcentaje desde Distribución del coste de personal."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Resource Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 2571075135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry Personnel Cost %</source>
+          <target>% personal Alimentación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% personal Alimentación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Industry Resource Pct. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2460935446 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the industry share of actual production cost, calculated from the business line dimension of posted assembly outputs.</source>
@@ -542,6 +611,12 @@
           <target>Receta: gestión pendiente de reparto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Receta: gestión pendiente de reparto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Recipe Pending Management - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 4267268924 - Field 1954227278 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Unallocated Personnel Cost</source>
+          <target>Coste de personal pendiente de reparto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de personal pendiente de reparto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Resource Cost Pending - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 3554293216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Unallocated Industrial</source>
@@ -592,9 +667,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Method 117422397 - NamedType 2035628285" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Enter a nonzero recipe cost before entering industrial or management amounts, so their percentages can be calculated.</source>
-          <target>Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes."</note>
+          <source>Enter a nonzero recipe cost before entering industrial, management or personnel amounts, so their percentages can be calculated.</source>
+          <target>[NAB: REVIEW]Introduzca un coste de receta distinto de cero antes de introducir importes industriales o de gestión para poder calcular sus porcentajes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Introduzca un coste de receta distinto de cero antes de introducir importes industriales, de gestión o de personal para poder calcular sus porcentajes."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Method RecalculateCosts - NamedType jmcRecipeCostRequiredErr</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Method 1696073767 - NamedType 757207064" size-unit="char" translate="yes" xml:space="preserve">
@@ -656,6 +732,18 @@
           <target>Importe de gestión asignado</target>
           <note from="Developer" annotates="general" priority="2">ESP="Importe de gestión asignado"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Management Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2521549399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the total fixed resource personnel amount allocated to this product and unit for the whole period.</source>
+          <target>Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Personnel Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2521549399 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Assigned Personnel Amount</source>
+          <target>Importe de personal asignado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de personal asignado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Assigned Personnel Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1880327288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Explains why no allocation was calculated. Zero structure amounts on a line with an issue are not a valid zero cost.</source>
@@ -830,6 +918,30 @@
           <target>Cantidad neta de venta calculada</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cantidad neta de venta calculada"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Net Sales Quantity - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 132509327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows fixed resource personnel cost per unit allocated to this product line.</source>
+          <target>Muestra el coste fijo de personal por unidad asignado a esta línea de producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste fijo de personal por unidad asignado a esta línea de producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Personnel Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 132509327 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel Cost</source>
+          <target>Coste de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Personnel Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 3862213104 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows personnel cost as a percentage of the recipe cost for the same unit.</source>
+          <target>Muestra el coste de personal como porcentaje del coste de receta para la misma unidad.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste de personal como porcentaje del coste de receta para la misma unidad."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Personnel Cost Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 3862213104 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel Cost %</source>
+          <target>% coste de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% coste de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Personnel Cost Pct. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 2146308772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the priority of the item, from 1 to 5, copied from the item card when the model is calculated. It cannot be edited here; change it on the item card.</source>
@@ -2075,6 +2187,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="El negocio no tiene base positiva apta para repartir."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Calculation Detail - Method AddPending - NamedType jmcNoBaseLbl</note>
         </trans-unit>
+        <trans-unit id="Codeunit 822719801 - Method 3695013640 - NamedType 1259221798" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The business has no positive eligible production quantity for fixed resource personnel cost.</source>
+          <target>El negocio no tiene una cantidad de fabricación positiva apta para repartir el coste fijo de personal.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El negocio no tiene una cantidad de fabricación positiva apta para repartir el coste fijo de personal."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Calculation Detail - Method AddResourcePending - NamedType jmcNoBaseLbl</note>
+        </trans-unit>
         <trans-unit id="Codeunit 822719801 - Method 3865570867 - NamedType 3056673871" size-unit="char" translate="yes" xml:space="preserve">
           <source>The saved breakdown does not reconcile with the calculated model. The calculation has not been saved.</source>
           <target>El desglose no concilia con el modelo calculado. El cálculo no se ha guardado.</target>
@@ -2134,6 +2252,18 @@
           <target>Las devoluciones del producto %1 superan sus ventas para la unidad %2 en el periodo calculado.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Las devoluciones del producto %1 superan sus ventas para la unidad %2 en el periodo calculado."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcReturnsLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 2006816106 - NamedType 1857111897" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource %1 used in assembly resource entry %2 no longer exists. Fixed resource costs cannot be calculated.</source>
+          <target>El recurso %1 utilizado en el movimiento de recursos de ensamblado %2 ya no existe. No se pueden calcular los costes de recursos fijos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El recurso %1 utilizado en el movimiento de recursos de ensamblado %2 ya no existe. No se pueden calcular los costes de recursos fijos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadFixedResourceCosts - NamedType jmcResourceMissingErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 2006816106 - NamedType 611807091" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The net fixed resource personnel cost for assembly orders is negative (%1). Review resource usage and adjustments for the period.</source>
+          <target>El coste neto de personal de recursos fijos de los pedidos de ensamblado es negativo (%1). Revise los consumos y ajustes de recursos del periodo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El coste neto de personal de recursos fijos de los pedidos de ensamblado es negativo (%1). Revise los consumos y ajustes de recursos del periodo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadFixedResourceCosts - NamedType jmcNegativeCostErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1341866227 - Method 323097924 - NamedType 2765435902" size-unit="char" translate="yes" xml:space="preserve">
           <source>Account %1 has only one cost category filled in. Complete both fields or clear both before calculating.</source>
@@ -2519,6 +2649,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste de gestión pendiente en Alimentación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcManagementIndustryLbl</note>
         </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3069289951" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel Cost Pending in Catering</source>
+          <target>Coste de personal pendiente en Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de personal pendiente en Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourceCateringLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3218461362" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel Cost Pending in Industry</source>
+          <target>Coste de personal pendiente en Alimentación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de personal pendiente en Alimentación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourceIndustryLbl</note>
+        </trans-unit>
         <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3674222698" size-unit="char" translate="yes" xml:space="preserve">
           <source>Adds the fixed industrial and management funds. The rows below show the G/L entries that make up this total.</source>
           <target>Suma los fondos fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total.</target>
@@ -2572,6 +2714,24 @@
           <target>Suma el dinero que queda sin repartir en Catering y Alimentación en el cálculo contra productos. Debajo se muestran los importes pendientes y los motivos por los que algunos productos no participan. Las filas de productos excluidos explican el motivo; no se suman al pendiente.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Suma el dinero que queda sin repartir en Catering y Alimentación en el cálculo contra productos. Debajo se muestran los importes pendientes y los motivos por los que algunos productos no participan. Las filas de productos excluidos explican el motivo; no se suman al pendiente."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcSalesPendingGuideLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 31878767" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adds fixed resource usage costs from assembly orders in the selected period. The rows below show the resource ledger entries included in this amount.</source>
+          <target>Suma los costes de uso de recursos fijos de pedidos de ensamblado del periodo seleccionado. Las filas de abajo muestran los movimientos de recursos incluidos en este importe.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Suma los costes de uso de recursos fijos de pedidos de ensamblado del periodo seleccionado. Las filas de abajo muestran los movimientos de recursos incluidos en este importe."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourceCostGuideLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3452056353" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Applies the configured percentage of fixed resource personnel cost to this business. The lines below show the saved fund and how it was assigned to eligible products or left pending.</source>
+          <target>Aplica a este negocio el porcentaje configurado del coste fijo de personal de recursos. Las líneas de abajo muestran el fondo guardado y cómo se asignó a productos aptos o quedó pendiente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Aplica a este negocio el porcentaje configurado del coste fijo de personal de recursos. Las líneas de abajo muestran el fondo guardado y cómo se asignó a productos aptos o quedó pendiente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourceFundGuideLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3001198131" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Adds fixed resource personnel cost that could not be assigned because the business had no eligible production quantity. The rows below show which business has the pending amount.</source>
+          <target>Suma el coste fijo de personal de recursos que no se pudo asignar porque el negocio no tenía cantidad de fabricación apta. Las filas de abajo indican qué negocio tiene el importe pendiente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Suma el coste fijo de personal de recursos que no se pudo asignar porque el negocio no tenía cantidad de fabricación apta. Las filas de abajo indican qué negocio tiene el importe pendiente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourcePendingGuideLbl</note>
         </trans-unit>
         <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 2463515320" size-unit="char" translate="yes" xml:space="preserve">
           <source>LINEA identifies the business of each production movement: CATERING or ALIMENTACION. Only included rows count towards the percentages. Movements with no business are not counted; their exclusion reason appears below.</source>
@@ -2891,6 +3051,48 @@
           <note from="Developer" annotates="general" priority="2">ESP="Este campo oculto se conserva por compatibilidad con resultados anteriores. Los nuevos cálculos lo dejan a cero porque no se reparten gastos de gestión variables."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Variable Management Fund - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 455107400 - Control 3287605523 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Resource Personnel</source>
+          <target>Personal de recursos fijos</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Personal de recursos fijos"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control PersonnelCost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1033731345 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the fixed resource personnel fund assigned to Catering before allocation to products.</source>
+          <target>Muestra el fondo de personal de recursos fijos asignado a Catering antes de repartirlo entre productos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el fondo de personal de recursos fijos asignado a Catering antes de repartirlo entre productos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Catering Resource Allocation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1456183786 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the percentage of fixed resource personnel cost allocated to Catering. Use Resource Cost Distribution to change it.</source>
+          <target>Muestra el porcentaje del coste fijo de personal asignado a Catering. Utilice Distribución del coste de personal para cambiarlo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje del coste fijo de personal asignado a Catering. Utilice Distribución del coste de personal para cambiarlo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Catering Resource Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 4042435045 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows fixed resource usage costs posted for assembly orders in the calculation period. Select the amount to review its source entries and allocation.</source>
+          <target>Muestra los costes de uso de recursos fijos registrados para pedidos de ensamblado en el periodo del cálculo. Pulse el importe para consultar los movimientos de origen y su reparto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra los costes de uso de recursos fijos registrados para pedidos de ensamblado en el periodo del cálculo. Pulse el importe para consultar los movimientos de origen y su reparto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Fixed Resource Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1316646168 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the fixed resource personnel fund assigned to Industry before allocation to products.</source>
+          <target>Muestra el fondo de personal de recursos fijos asignado a Alimentación antes de repartirlo entre productos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el fondo de personal de recursos fijos asignado a Alimentación antes de repartirlo entre productos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Industry Resource Allocation - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 2571075135 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the percentage of fixed resource personnel cost allocated to Industry. Use Resource Cost Distribution to change it.</source>
+          <target>Muestra el porcentaje del coste fijo de personal asignado a Alimentación. Utilice Distribución del coste de personal para cambiarlo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje del coste fijo de personal asignado a Alimentación. Utilice Distribución del coste de personal para cambiarlo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Industry Resource Pct. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Control 1954227278 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows fixed resource personnel cost that could not be allocated because a business had no eligible production quantity.</source>
+          <target>Muestra el coste fijo de personal que no se pudo repartir porque un negocio no tenía cantidad de fabricación apta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste fijo de personal que no se pudo repartir porque un negocio no tenía cantidad de fabricación apta."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Resource Cost Pending - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 455107400 - Control 2039904471 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculation Against Products</source>
           <target>Cálculo contra productos</target>
@@ -2969,6 +3171,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Calcular todos los costes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action CalculateAllCosts - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 455107400 - Action 3616989181 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sets how fixed resource personnel costs from assembly orders are split between Industry and Catering. The percentages must add up to 100.</source>
+          <target>Establece cómo se reparte entre Alimentación y Catering el coste fijo de personal de los pedidos de ensamblado. Los porcentajes deben sumar 100.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Establece cómo se reparte entre Alimentación y Catering el coste fijo de personal de los pedidos de ensamblado. Los porcentajes deben sumar 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action ResourceCostDistribution - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 455107400 - Action 3616989181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Cost Distribution</source>
+          <target>Distribución del coste de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Distribución del coste de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action ResourceCostDistribution - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 455107400 - Action 101987764 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Simulates a product quantity using the saved calculation against products, without recalculating or changing model costs.</source>
           <target>Simula una cantidad de producto con el cálculo contra productos guardado, sin recalcular ni cambiar los costes del modelo.</target>
@@ -3011,6 +3225,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Muestra el gasto de gestión total asignado a este producto y unidad para todo el periodo. No es un coste unitario. Estos importes pueden sumarse entre las líneas del cálculo."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Assigned Management Cost - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 2521549399 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the total fixed resource personnel amount assigned to this product and unit for the whole period. It is a separate component included in Total Cost.</source>
+          <target>Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo. Es una partida independiente incluida en Total coste.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo. Es una partida independiente incluida en Total coste."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Assigned Personnel Cost - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2573794215 - Control 1880327288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Explains why this product and unit could not receive an allocation. Correct the quantity and recalculate costs, or calculate all costs again to refresh the source data.</source>
           <target>Explica por qué este producto y unidad no han podido recibir reparto. Corrija la cantidad y recalcule costes, o calcule todos los costes para actualizar los datos de origen.</target>
@@ -3030,9 +3250,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Cost Value Type - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 1748119917 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows calculated industrial cost plus full management cost per row unit, without recipe cost. It does not use Final Manual Cost and does not update the standard cost on the product card.</source>
-          <target>Muestra el coste industrial más el coste completo de gestión calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste industrial más el coste completo de gestión calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto."</note>
+          <source>Shows calculated industrial, full management and fixed resource personnel costs per row unit, without recipe cost. It does not use Final Manual Cost and does not update the standard cost on the product card.</source>
+          <target>[NAB: REVIEW]Muestra el coste industrial más el coste completo de gestión calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra los costes industrial, completo de gestión y fijo de personal calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC EXWORK Standard - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 815121829 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -3089,6 +3310,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Muestra las ventas netas del periodo en la unidad de esta línea, incluidos envíos pendientes de facturar. Las ventas determinan el reparto de la fabricación entre las unidades de venta del producto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Net Sales Quantity - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 132509327 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows fixed resource personnel cost per unit, kept as a separate cost component and included in Total Cost and EXWORK Standard.</source>
+          <target>Muestra el coste fijo de personal de recursos por unidad, como partida independiente incluida en Total coste y EXWORK estándar.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste fijo de personal de recursos por unidad, como partida independiente incluida en Total coste y EXWORK estándar."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Personnel Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 3862213104 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows personnel cost as a percentage of recipe cost for the same unit.</source>
+          <target>Muestra el coste de personal como porcentaje del coste de receta para la misma unidad.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste de personal como porcentaje del coste de receta para la misma unidad."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Personnel Cost Pct. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2573794215 - Control 969878873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the recipe cost read when the model was calculated and expressed per row unit. It is hidden by default and is not part of the structure totals.</source>
           <target>Muestra el coste de receta leído al calcular el modelo y expresado por unidad de la línea. Está oculto de forma predeterminada y no forma parte de los totales de estructura.</target>
@@ -3102,9 +3335,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Theoretical Production Qty. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 959360631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the calculated industrial cost plus full management cost, without recipe cost. It is in euros per row unit for the Amount type and the sum of the industrial and management percentages for the Percentage type. Compare it with Final Manual Cost.</source>
-          <target>Muestra el coste industrial más el coste completo de gestión calculados, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de los porcentajes industrial y de gestión con el tipo Porcentaje. Compárelo con Coste final manual.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste industrial más el coste completo de gestión calculados, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de los porcentajes industrial y de gestión con el tipo Porcentaje. Compárelo con Coste final manual."</note>
+          <source>Shows the calculated industrial, full management and fixed resource personnel costs, without recipe cost. It is in euros per row unit for the Amount type and the sum of their percentages for the Percentage type. Compare it with Final Manual Cost.</source>
+          <target>[NAB: REVIEW]Muestra el coste industrial más el coste completo de gestión calculados, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de los porcentajes industrial y de gestión con el tipo Porcentaje. Compárelo con Coste final manual.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra los costes industrial, completo de gestión y fijo de personal de recursos, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de sus porcentajes con el tipo Porcentaje. Compárelo con Coste final manual."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Total Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 1292481930 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -3180,9 +3414,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCNoProductErr</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - NamedType 97197151" size-unit="char" translate="yes" xml:space="preserve">
-          <source>The calculated expense is zero, so a positive manual expense cannot be split proportionally between industrial and management costs.</source>
-          <target>El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre industrial y gestión.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre industrial y gestión."</note>
+          <source>The calculated expense is zero, so a positive manual expense cannot be split proportionally between industrial, management and personnel costs.</source>
+          <target>[NAB: REVIEW]El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre industrial y gestión.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre costes industrial, de gestión y personal."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - NamedType JMCNoSplitLbl</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - NamedType 993586385" size-unit="char" translate="yes" xml:space="preserve">
@@ -3234,9 +3469,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesIssue - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - Control 821161536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the simulated industrial plus additional management amounts, without recipe cost. It is not a sales price.</source>
-          <target>Especifica los importes industrial y adicional de gestión simulados, sin incluir el coste de receta. No es un precio de venta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica los importes industrial y adicional de gestión simulados, sin incluir el coste de receta. No es un precio de venta."</note>
+          <source>Specifies the simulated industrial, additional management and personnel amounts, without recipe cost. It is not a sales price.</source>
+          <target>[NAB: REVIEW]Especifica los importes industrial y adicional de gestión simulados, sin incluir el coste de receta. No es un precio de venta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica los importes industrial, adicional de gestión y personal simulados, sin incluir el coste de receta. No es un precio de venta."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesEXWORKAmount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - Control 821161536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3293,6 +3529,30 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste de gestión por unidad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesManagementUnitCost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3351798654 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the simulated fixed resource personnel amount.</source>
+          <target>Especifica el importe simulado de personal de recursos fijos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el importe simulado de personal de recursos fijos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesPersonnelAmount - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 3351798654 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulated Personnel Amount</source>
+          <target>Importe de personal simulado</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe de personal simulado"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesPersonnelAmount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1895762853 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the fixed resource personnel cost per unit, kept separately and included in the total.</source>
+          <target>Especifica el coste fijo de personal de recursos por unidad, como partida independiente incluida en el total.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste fijo de personal de recursos por unidad, como partida independiente incluida en el total."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesPersonnelUnitCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2661656842 - Control 1895762853 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel Cost per Unit</source>
+          <target>Coste de personal por unidad</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste de personal por unidad"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesPersonnelUnitCost - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2661656842 - Control 2635786771 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies the saved recipe cost per selected unit. The current recipe is not read.</source>
           <target>Especifica el coste de receta guardado por unidad seleccionada. No se consulta la receta actual.</target>
@@ -3306,9 +3566,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesRecipeUnitCost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - Control 360589359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies simulated industrial plus additional management amounts.</source>
-          <target>Especifica la suma de los importes industrial y adicional de gestión simulados.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica la suma de los importes industrial y adicional de gestión simulados."</note>
+          <source>Specifies simulated industrial, additional management and personnel amounts.</source>
+          <target>[NAB: REVIEW]Especifica la suma de los importes industrial y adicional de gestión simulados.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la suma de los importes industrial, adicional de gestión y personal simulados."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Simulator - Control JMCSalesStructureAmount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - Control 360589359 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -3853,65 +4114,56 @@
         </trans-unit>
         <trans-unit id="Page 4267566259 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Ledger Entry</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Movimiento de cliente</target>
           <note from="Developer" annotates="general" priority="2">ESP="Movimiento de cliente"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Property EntityCaption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Property 631549417" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer Ledger Entries</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Movimientos de cliente</target>
           <note from="Developer" annotates="general" priority="2">ESP="Movimientos de cliente"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Property EntitySetCaption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 3552271746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Abierto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Abierto"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control abierto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 2216360505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prepayment</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Anticipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Anticipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control anticipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 382342354 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Profit (LCY)</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Beneficio (DL)</target>
           <note from="Developer" annotates="general" priority="2">ESP="Beneficio (DL)"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control beneficioDL - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 4256692925 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculate Interest</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Calcular intereses</target>
           <note from="Developer" annotates="general" priority="2">ESP="Calcular intereses"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control calcularIntereses - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 2738839733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Closed by Entry No.</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Cerrado por movimiento nº</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cerrado por movimiento nº"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control cerradoPorMovimientoNro - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 3731750991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shortcut Dimension 3 Code</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Código dimensión abreviada 3</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 3"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada3 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 3900660014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shortcut Dimension 4 Code</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>Código dimensión abreviada 4</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 4"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Customer Ledger Entry API - Control codigoDimensionAbreviada4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4267566259 - Control 3262963397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -7522,6 +7774,48 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Assignment API - Control unidadMedida - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1798014313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Cost Distribution</source>
+          <target>Distribución del coste de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Distribución del coste de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Method 4177352842 - NamedType 2141819953" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry and Catering percentages must add up to 100.</source>
+          <target>Los porcentajes de Alimentación y Catering deben sumar 100.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Los porcentajes de Alimentación y Catering deben sumar 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Method OnQueryClosePage - NamedType jmcInvalidPctErr</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Control 2582241373 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Resource Personnel Cost</source>
+          <target>Coste fijo de personal</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste fijo de personal"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Control Percentages - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Control 2349934967 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the percentage allocated to Catering. The Industry percentage is the remainder needed to total 100.</source>
+          <target>Especifica el porcentaje asignado a Catering. El porcentaje de Alimentación será el restante hasta sumar 100.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje asignado a Catering. El porcentaje de Alimentación será el restante hasta sumar 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Control JMCCateringPercentage - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Control 2349934967 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Catering %</source>
+          <target>% Catering</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% Catering"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Control JMCCateringPercentage - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Control 2290996722 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the percentage allocated to Industry. The Catering percentage is the remainder needed to total 100.</source>
+          <target>Especifica el porcentaje asignado a Alimentación. El porcentaje de Catering será el restante hasta sumar 100.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el porcentaje asignado a Alimentación. El porcentaje de Catering será el restante hasta sumar 100."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Control JMCIndustryPercentage - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1798014313 - Control 2290996722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Industry %</source>
+          <target>% Alimentación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="% Alimentación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Resource Cost Distribution - Control JMCIndustryPercentage - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2894705026 - Property 3446740159" size-unit="char" translate="yes" xml:space="preserve">
           <source>Event Supplement</source>
           <target>Suplemento Evento</target>
@@ -7820,16 +8114,14 @@
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 3552271746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Open</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>[NAB: SUGGESTION]Abierto</target>
           <note from="Developer" annotates="general" priority="2">ESP="Abierto"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Vendor Ledger Entry API - Control abierto - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 2216360505 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Prepayment</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>[NAB: SUGGESTION]Anticipo</target>
           <note from="Developer" annotates="general" priority="2">ESP="Anticipo"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Vendor Ledger Entry API - Control anticipo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 2000082866 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -7841,9 +8133,8 @@
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 2738839733 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Closed by Entry No.</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>[NAB: SUGGESTION]Cerrado por movimiento nº</target>
           <note from="Developer" annotates="general" priority="2">ESP="Cerrado por movimiento nº"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Vendor Ledger Entry API - Control cerradoPorMovimientoNro - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 1628502926 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -7855,16 +8146,14 @@
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 3731750991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shortcut Dimension 3 Code</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>[NAB: SUGGESTION]Código dimensión abreviada 3</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 3"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Vendor Ledger Entry API - Control codigoDimensionAbreviada3 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 3900660014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shortcut Dimension 4 Code</source>
-          <target>[NAB: NOT TRANSLATED]</target>
+          <target>[NAB: SUGGESTION]Código dimensión abreviada 4</target>
           <note from="Developer" annotates="general" priority="2">ESP="Código dimensión abreviada 4"</note>
-          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Vendor Ledger Entry API - Control codigoDimensionAbreviada4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2920588539 - Control 3262963397 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -8693,6 +8982,13 @@
           <note from="Developer" annotates="general" priority="2">ESP="Componente lista materiales actual de cada producto padre, Maquila = No. Los componentes de producto usan coste estándar y su conversión actual; los recursos, coste unitario. Sin filtro histórico de receta/fecha ni costes generales adicionales. La conversión de unidad base debe ser 1; componentes/recursos ausentes o conversiones inválidas generan incidencias."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCRecipeRulesLbl</note>
         </trans-unit>
+        <trans-unit id="Report 4104558529 - NamedType 414612395" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resource Ledger Entry: Usage, Order Type Assembly, fixed resource type and selected posting dates. Costs are split by the configured Industry/Catering percentages, then allocated over eligible production quantities in base units. Personnel remains a separate component included in each line's Total Cost and EXWORK.</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Movimientos de recursos: Consumo, tipo de pedido Ensamblado, recurso de tipo fijo y fechas de registro indicadas. Los costes se dividen según los porcentajes configurados de Alimentación/Catering y se reparten sobre cantidades de fabricación aptas en unidad base. El personal sigue siendo una partida independiente incluida en Total coste y EXWORK de cada línea."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCResourceRulesLbl</note>
+        </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 2933883501" size-unit="char" translate="yes" xml:space="preserve">
           <source>Item Ledger Entry: Sale, selected posting dates, nonzero quantity, grouped by item and posted unit. Returns subtract; shipments not yet invoiced are included. Uses posted conversion factors, not current ones; missing units or nonpositive posted factors produce line issues. Sales revenue is not used.</source>
           <target>Movimiento producto: Venta, fechas de registro indicadas, cantidad distinta de cero, agrupado por producto y unidad registrada. Las devoluciones restan; incluye envíos pendientes de facturar. Usa factores registrados, no actuales; unidades ausentes o factores registrados no positivos generan incidencias. No utiliza ingresos de venta.</target>
@@ -8712,9 +9008,10 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Method OnPostReport - NamedType jmcCompletedMsg</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - Method 2736589801 - NamedType 907055722" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Calculation saved for review. Lines with issues and no allocation: %1. Review Calculation Issue and the unallocated funds in the header. The allocation reconciles allocated plus unallocated amounts. No item or ledger data has been changed.</source>
-          <target>Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos."</note>
+          <source>Calculation saved for review. Lines with issues and no allocation: %1. Review Calculation Issue and the unallocated accounting and personnel funds in the header. The allocation reconciles allocated plus unallocated amounts. No item or ledger data has been changed.</source>
+          <target>[NAB: REVIEW]Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cálculo guardado para revisión. Líneas con incidencia y sin reparto: %1. Revise Incidencia del cálculo y los fondos contables y de personal pendientes en cabecera. El reparto concilia lo asignado más lo pendiente. No se han modificado productos ni movimientos."</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Source has been modified.</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Method OnPostReport - NamedType jmcPartialMsg</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - Method 1544076788 - NamedType 1186835269" size-unit="char" translate="yes" xml:space="preserve">
@@ -8770,6 +9067,13 @@
           <target>Selección de componentes de receta</target>
           <note from="Developer" annotates="general" priority="2">ESP="Selección de componentes de receta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control JMCRecipeRules - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 4104558529 - Control 478661949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed Resource Selection</source>
+          <target>[NAB: NOT TRANSLATED]</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Selección de recursos fijos"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">New translation.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control JMCResourceRules - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - Control 1144752555 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Movement Selection</source>

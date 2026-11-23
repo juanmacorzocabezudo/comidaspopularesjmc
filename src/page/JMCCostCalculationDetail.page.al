@@ -105,6 +105,7 @@ page 53128 "JMC Cost Calculation Detail"
                 field("JMC Posting Date"; Rec."JMC Posting Date") { ApplicationArea = All; }
                 field("JMC Document No."; Rec."JMC Document No.") { ApplicationArea = All; }
                 field("JMC Account No."; Rec."JMC Account No.") { ApplicationArea = All; }
+                field("JMC Resource No."; Rec."JMC Resource No.") { ApplicationArea = All; }
                 field("JMC Item No."; Rec."JMC Item No.") { ApplicationArea = All; }
                 field("JMC Description"; Rec."JMC Description") { ApplicationArea = All; }
                 field("JMC Business"; Rec."JMC Business") { ApplicationArea = All; }
@@ -161,6 +162,7 @@ page 53128 "JMC Cost Calculation Detail"
                 var
                     jmcGLEntry: Record "G/L Entry";
                     jmcItemEntry: Record "Item Ledger Entry";
+                    jmcResourceEntry: Record "Res. Ledger Entry";
                 begin
                     case Rec."JMC Detail Type" of
                         Rec."JMC Detail Type"::Accounting:
@@ -174,6 +176,12 @@ page 53128 "JMC Cost Calculation Detail"
                                 jmcItemEntry.Get(Rec."JMC Source Entry No.");
                                 jmcItemEntry.SetRecFilter();
                                 Page.RunModal(Page::"Item Ledger Entries", jmcItemEntry);
+                            end;
+                        Rec."JMC Detail Type"::Resource:
+                            begin
+                                jmcResourceEntry.Get(Rec."JMC Source Entry No.");
+                                jmcResourceEntry.SetRecFilter();
+                                Page.RunModal(Page::"Resource Ledger Entries", jmcResourceEntry);
                             end;
                     end;
                 end;
@@ -197,7 +205,7 @@ page 53128 "JMC Cost Calculation Detail"
 
     trigger OnAfterGetCurrRecord()
     begin
-        JMCSourceAvailable := Rec."JMC Detail Type" in [Rec."JMC Detail Type"::Accounting, Rec."JMC Detail Type"::Production];
+        JMCSourceAvailable := Rec."JMC Detail Type" in [Rec."JMC Detail Type"::Accounting, Rec."JMC Detail Type"::Production, Rec."JMC Detail Type"::Resource];
     end;
 
     procedure SetSummary(jmcModelCode: Code[20]; jmcFieldNo: Integer)
@@ -252,6 +260,8 @@ page 53128 "JMC Cost Calculation Detail"
         jmcIndustrialIndustryLbl: Label 'Industrial Cost Pending in Industry', Comment = 'ESP="Coste industrial pendiente en Alimentación"';
         jmcManagementCateringLbl: Label 'Management Cost Pending in Catering', Comment = 'ESP="Coste de gestión pendiente en Catering"';
         jmcManagementIndustryLbl: Label 'Management Cost Pending in Industry', Comment = 'ESP="Coste de gestión pendiente en Alimentación"';
+        jmcResourceCateringLbl: Label 'Personnel Cost Pending in Catering', Comment = 'ESP="Coste de personal pendiente en Catering"';
+        jmcResourceIndustryLbl: Label 'Personnel Cost Pending in Industry', Comment = 'ESP="Coste de personal pendiente en Alimentación"';
         jmcTotalGuideLbl: Label 'Adds the fixed industrial and management funds. The rows below show the G/L entries that make up this total.', Comment = 'ESP="Suma los fondos fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total."';
         jmcIndustrialGuideLbl: Label 'Adds the amounts posted to the fixed industrial accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas industriales fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
         jmcManagementGuideLbl: Label 'Adds the amounts posted to the fixed management accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas de gestión fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
@@ -261,6 +271,9 @@ page 53128 "JMC Cost Calculation Detail"
         jmcCateringFundGuideLbl: Label 'Multiplies the total structure cost by the Catering percentage to obtain the money available for this business.', Comment = 'ESP="Multiplica el gasto total de estructura por el porcentaje de Catering para obtener el dinero que corresponde a este negocio."';
         jmcIndustryFundGuideLbl: Label 'Subtracts the Catering allocation from the total structure cost. Industry receives the remaining amount.', Comment = 'ESP="Resta al gasto total de estructura el importe de Catering. Alimentación recibe el resto."';
         jmcSalesPendingGuideLbl: Label 'Adds the money still unallocated in Catering and Industry in the calculation against products. Below you can see the pending amounts and the reasons some products could not participate. Excluded product rows explain the reasons; do not add them to the pending amounts.', Comment = 'ESP="Suma el dinero que queda sin repartir en Catering y Alimentación en el cálculo contra productos. Debajo se muestran los importes pendientes y los motivos por los que algunos productos no participan. Las filas de productos excluidos explican el motivo; no se suman al pendiente."';
+        jmcResourceCostGuideLbl: Label 'Adds fixed resource usage costs from assembly orders in the selected period. The rows below show the resource ledger entries included in this amount.', Comment = 'ESP="Suma los costes de uso de recursos fijos de pedidos de ensamblado del periodo seleccionado. Las filas de abajo muestran los movimientos de recursos incluidos en este importe."';
+        jmcResourceFundGuideLbl: Label 'Applies the configured percentage of fixed resource personnel cost to this business. The lines below show the saved fund and how it was assigned to eligible products or left pending.', Comment = 'ESP="Aplica a este negocio el porcentaje configurado del coste fijo de personal de recursos. Las líneas de abajo muestran el fondo guardado y cómo se asignó a productos aptos o quedó pendiente."';
+        jmcResourcePendingGuideLbl: Label 'Adds fixed resource personnel cost that could not be assigned because the business had no eligible production quantity. The rows below show which business has the pending amount.', Comment = 'ESP="Suma el coste fijo de personal de recursos que no se pudo asignar porque el negocio no tenía cantidad de fabricación apta. Las filas de abajo indican qué negocio tiene el importe pendiente."';
         jmcDimensionGuideLbl: Label 'LINEA identifies the business of each production movement: CATERING or ALIMENTACION. Only included rows count towards the percentages. Movements with no business are not counted; their exclusion reason appears below.', Comment = 'ESP="LINEA identifica el negocio de cada movimiento de producción: CATERING o ALIMENTACION. Solo cuentan para los porcentajes las filas incluidas. Los movimientos sin negocio no cuentan; debajo se indica por qué se han excluido."';
         jmcAllocationGuideLbl: Label 'Business Fund, Unit Group and Allocation rows are steps of the same calculation, not extra amounts. Do not add them together. Allocation rows show what each product receives.', Comment = 'ESP="Las filas Fondo del negocio, Grupo de unidad y Reparto son pasos del mismo cálculo, no importes adicionales. No las sume entre sí. Las filas Reparto muestran lo que recibe cada producto."';
         jmcSnapshotGuideLbl: Label 'These are the values saved at the last calculation. Later changes and manual adjustments are not included. Opening this page does not recalculate anything.', Comment = 'ESP="Son los datos guardados en el último cálculo. No incluyen cambios posteriores ni ajustes manuales. Abrir esta página no vuelve a calcular nada."';
@@ -333,6 +346,26 @@ page 53128 "JMC Cost Calculation Detail"
                     JMCOperandBCaption := jmcManagementIndustryLbl;
                     JMCGuidance := jmcSalesPendingGuideLbl;
                 end;
+            jmcModel.FieldNo("JMC Fixed Resource Cost"):
+                begin
+                    JMCOperandACaption := jmcModel.FieldCaption("JMC Fixed Resource Cost");
+                    JMCGuidance := jmcResourceCostGuideLbl;
+                end;
+            jmcModel.FieldNo("JMC Industry Resource Allocation"), jmcModel.FieldNo("JMC Catering Resource Allocation"):
+                begin
+                    JMCOperandACaption := jmcModel.FieldCaption("JMC Fixed Resource Cost");
+                    if jmcFieldNo = jmcModel.FieldNo("JMC Industry Resource Allocation") then
+                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Industry Resource Pct.")
+                    else
+                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Catering Resource Pct.");
+                    JMCGuidance := jmcResourceFundGuideLbl;
+                end;
+            jmcModel.FieldNo("JMC Resource Cost Pending"):
+                begin
+                    JMCOperandACaption := jmcResourceCateringLbl;
+                    JMCOperandBCaption := jmcResourceIndustryLbl;
+                    JMCGuidance := jmcResourcePendingGuideLbl;
+                end;
             else
                 Error(jmcUnknownErr, jmcFieldNo);
         end;
@@ -398,6 +431,13 @@ page 53128 "JMC Cost Calculation Detail"
                 exit((jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Production) and (jmcDetail."JMC Business" = 'CATERING'));
             34:
                 exit((jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Production) and (jmcDetail."JMC Business" = 'ALIMENTACION'));
+            36:
+                exit(jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Resource);
+            39, 40:
+                exit((jmcDetail."JMC Detail Type" in [jmcDetail."JMC Detail Type"::"Resource Fund", jmcDetail."JMC Detail Type"::"Resource Allocation", jmcDetail."JMC Detail Type"::"Resource Pending"]) and
+                     (((jmcFieldNo = 39) and (jmcDetail."JMC Business" = 'ALIMENTACION')) or ((jmcFieldNo = 40) and (jmcDetail."JMC Business" = 'CATERING'))));
+            41:
+                exit(jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::"Resource Pending");
             13, 14:
                 exit((jmcDetail."JMC Detail Type" in [jmcDetail."JMC Detail Type"::Allocation, jmcDetail."JMC Detail Type"::"Unit Group", jmcDetail."JMC Detail Type"::"Business Fund", jmcDetail."JMC Detail Type"::Pending]) and
                      (((jmcFieldNo = 13) and (jmcDetail."JMC Business" = 'CATERING')) or ((jmcFieldNo = 14) and (jmcDetail."JMC Business" = 'ALIMENTACION'))));

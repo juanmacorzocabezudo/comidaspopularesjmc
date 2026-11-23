@@ -32,7 +32,7 @@ page 53124 "JMC Cost Model Lines"
                 field("JMC Total Cost"; Rec."JMC Total Cost")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the calculated industrial cost plus full management cost, without recipe cost. It is in euros per row unit for the Amount type and the sum of the industrial and management percentages for the Percentage type. Compare it with Final Manual Cost.', Comment = 'ESP="Muestra el coste industrial más el coste completo de gestión calculados, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de los porcentajes industrial y de gestión con el tipo Porcentaje. Compárelo con Coste final manual."';
+                    ToolTip = 'Shows the calculated industrial, full management and fixed resource personnel costs, without recipe cost. It is in euros per row unit for the Amount type and the sum of their percentages for the Percentage type. Compare it with Final Manual Cost.', Comment = 'ESP="Muestra los costes industrial, completo de gestión y fijo de personal de recursos, sin coste de receta. Está en euros por unidad de la línea con el tipo Importe y es la suma de sus porcentajes con el tipo Porcentaje. Compárelo con Coste final manual."';
                 }
                 field("JMC Final Cost"; Rec."JMC Final Cost")
                 {
@@ -105,10 +105,20 @@ page 53124 "JMC Cost Model Lines"
                     ApplicationArea = All;
                     ToolTip = 'Shows management cost as a percentage of recipe cost for the same unit. For example 10 percent means management cost is one tenth of recipe cost. It is only a comparison and is not an extra cost to add.', Comment = 'ESP="Muestra el coste de gestión como porcentaje del coste de receta para la misma unidad. Por ejemplo un diez por ciento significa que el coste de gestión es la décima parte del coste de receta. Es solo una comparación y no otro coste que deba sumar."';
                 }
+                field("JMC Personnel Cost"; Rec."JMC Personnel Cost")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows fixed resource personnel cost per unit, kept as a separate cost component and included in Total Cost and EXWORK Standard.', Comment = 'ESP="Muestra el coste fijo de personal de recursos por unidad, como partida independiente incluida en Total coste y EXWORK estándar."';
+                }
+                field("JMC Personnel Cost Pct."; Rec."JMC Personnel Cost Pct.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows personnel cost as a percentage of recipe cost for the same unit.', Comment = 'ESP="Muestra el coste de personal como porcentaje del coste de receta para la misma unidad."';
+                }
                 field("JMC EXWORK Standard"; Rec."JMC EXWORK Standard")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows calculated industrial cost plus full management cost per row unit, without recipe cost. It does not use Final Manual Cost and does not update the standard cost on the product card.', Comment = 'ESP="Muestra el coste industrial más el coste completo de gestión calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto."';
+                    ToolTip = 'Shows calculated industrial, full management and fixed resource personnel costs per row unit, without recipe cost. It does not use Final Manual Cost and does not update the standard cost on the product card.', Comment = 'ESP="Muestra los costes industrial, completo de gestión y fijo de personal calculados por unidad de la línea, sin incluir el coste de receta. No utiliza Coste final manual ni actualiza el coste estándar de la ficha del producto."';
                 }
                 field("JMC Net Sales Quantity"; Rec."JMC Net Sales Quantity")
                 {
@@ -129,6 +139,11 @@ page 53124 "JMC Cost Model Lines"
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows the total management expense assigned to this product and unit for the whole period. It is not a unit cost. These amounts can be added across the lines of the calculation.', Comment = 'ESP="Muestra el gasto de gestión total asignado a este producto y unidad para todo el periodo. No es un coste unitario. Estos importes pueden sumarse entre las líneas del cálculo."';
+                }
+                field("JMC Assigned Personnel Cost"; Rec."JMC Assigned Personnel Cost")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the total fixed resource personnel amount assigned to this product and unit for the whole period. It is a separate component included in Total Cost.', Comment = 'ESP="Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo. Es una partida independiente incluida en Total coste."';
                 }
             }
         }
@@ -158,7 +173,7 @@ page 53124 "JMC Cost Model Lines"
                     jmcModel.Get(Rec."JMC Model Code");
                     jmcLine.SetRange("JMC Model Code", Rec."JMC Model Code");
                     jmcLine.SetFilter("JMC Calculation Issue", '<>%1', '');
-                    if (not jmcLine.IsEmpty()) or (jmcModel."JMC Sales Pending Industrial" <> 0) or (jmcModel."JMC Sales Pending Management" <> 0) then
+                    if (not jmcLine.IsEmpty()) or (jmcModel."JMC Sales Pending Industrial" <> 0) or (jmcModel."JMC Sales Pending Management" <> 0) or (jmcModel."JMC Resource Cost Pending" <> 0) then
                         Message(jmcPartialLbl, jmcLine.Count())
                     else
                         Message(jmcCompletedLbl);

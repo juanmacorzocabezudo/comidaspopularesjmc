@@ -165,6 +165,13 @@ page 53126 "JMC Cost Model Simulator"
                         DecimalPlaces = 2 : 2;
                         ToolTip = 'Specifies the final manual expense per unit allocated in the original management proportion.', Comment = 'ESP="Especifica el gasto final manual por unidad distribuido en la proporción de gestión original."';
                     }
+                    field(JMCSalesPersonnelUnitCost; JMCSalesLine."JMC Personnel Cost")
+                    {
+                        Caption = 'Personnel Cost per Unit', Comment = 'ESP="Coste de personal por unidad"';
+                        ApplicationArea = All;
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies the fixed resource personnel cost per unit, kept separately and included in the total.', Comment = 'ESP="Especifica el coste fijo de personal de recursos por unidad, como partida independiente incluida en el total."';
+                    }
                     field(JMCSalesIndustrialAmount; JMCSalesIndustrial)
                     {
                         Caption = 'Simulated Industrial Amount', Comment = 'ESP="Importe industrial simulado"';
@@ -179,19 +186,26 @@ page 53126 "JMC Cost Model Simulator"
                         DecimalPlaces = 2 : 2;
                         ToolTip = 'Specifies quantity multiplied by the effective management rate from final manual expense, rounded to 0.01.', Comment = 'ESP="Especifica la cantidad por la tasa de gestión efectiva del gasto final manual, redondeada a 0,01."';
                     }
+                    field(JMCSalesPersonnelAmount; JMCSalesPersonnel)
+                    {
+                        Caption = 'Simulated Personnel Amount', Comment = 'ESP="Importe de personal simulado"';
+                        ApplicationArea = All;
+                        DecimalPlaces = 2 : 2;
+                        ToolTip = 'Specifies the simulated fixed resource personnel amount.', Comment = 'ESP="Especifica el importe simulado de personal de recursos fijos."';
+                    }
                     field(JMCSalesStructureAmount; JMCSalesStructure)
                     {
                         Caption = 'Simulated Structure Amount', Comment = 'ESP="Importe de estructura simulado"';
                         ApplicationArea = All;
                         DecimalPlaces = 2 : 2;
-                        ToolTip = 'Specifies simulated industrial plus additional management amounts.', Comment = 'ESP="Especifica la suma de los importes industrial y adicional de gestión simulados."';
+                        ToolTip = 'Specifies simulated industrial, additional management and personnel amounts.', Comment = 'ESP="Especifica la suma de los importes industrial, adicional de gestión y personal simulados."';
                     }
                     field(JMCSalesEXWORKAmount; JMCSalesEXWORK)
                     {
                         Caption = 'Simulated EXWORK Amount', Comment = 'ESP="Importe EXWORK simulado"';
                         ApplicationArea = All;
                         DecimalPlaces = 2 : 2;
-                        ToolTip = 'Specifies the simulated industrial plus additional management amounts, without recipe cost. It is not a sales price.', Comment = 'ESP="Especifica los importes industrial y adicional de gestión simulados, sin incluir el coste de receta. No es un precio de venta."';
+                        ToolTip = 'Specifies the simulated industrial, additional management and personnel amounts, without recipe cost. It is not a sales price.', Comment = 'ESP="Especifica los importes industrial, adicional de gestión y personal simulados, sin incluir el coste de receta. No es un precio de venta."';
                     }
                 }
             }
@@ -282,7 +296,7 @@ page 53126 "JMC Cost Model Simulator"
             ValidateSavedPair();
             JMCSalesAvailable := ReadSavedRate(JMCSalesLine, JMCSalesIssue);
             if JMCSalesAvailable then
-                CalculateAmounts(JMCSalesLine, JMCSalesIndustrial, JMCSalesManagement, JMCSalesStructure, JMCSalesEXWORK);
+                CalculateAmounts(JMCSalesLine, JMCSalesIndustrial, JMCSalesManagement, JMCSalesPersonnel, JMCSalesStructure, JMCSalesEXWORK);
         end;
         CurrPage.Update(false);
     end;
@@ -294,6 +308,7 @@ page 53126 "JMC Cost Model Simulator"
         Clear(JMCSalesIssue);
         Clear(JMCSalesIndustrial);
         Clear(JMCSalesManagement);
+        Clear(JMCSalesPersonnel);
         Clear(JMCSalesStructure);
         Clear(JMCSalesEXWORK);
         JMCSalesAvailable := false;
@@ -324,23 +339,25 @@ page 53126 "JMC Cost Model Simulator"
             jmcIssue := JMCRecalculateManualLbl;
             exit(false);
         end;
-        jmcOriginalExpense := jmcLine."JMC Industrial Cost" + jmcLine."JMC Management Cost";
+        jmcOriginalExpense := jmcLine."JMC Industrial Cost" + jmcLine."JMC Management Cost" + jmcLine."JMC Personnel Cost";
         if (jmcOriginalExpense = 0) and (jmcLine.GetFinalExpenseAmount() <> 0) then begin
             jmcIssue := JMCNoSplitLbl;
             exit(false);
         end;
         if jmcOriginalExpense <> 0 then begin
             jmcLine."JMC Industrial Cost" := jmcLine.GetFinalExpenseAmount() * jmcLine."JMC Industrial Cost" / jmcOriginalExpense;
-            jmcLine."JMC Management Cost" := jmcLine.GetFinalExpenseAmount() - jmcLine."JMC Industrial Cost";
+            jmcLine."JMC Management Cost" := jmcLine.GetFinalExpenseAmount() * jmcLine."JMC Management Cost" / jmcOriginalExpense;
+            jmcLine."JMC Personnel Cost" := jmcLine.GetFinalExpenseAmount() - jmcLine."JMC Industrial Cost" - jmcLine."JMC Management Cost";
         end;
         exit(true);
     end;
 
-    local procedure CalculateAmounts(jmcLine: Record "JMC Cost Model Line"; var jmcIndustrial: Decimal; var jmcManagement: Decimal; var jmcStructure: Decimal; var jmcEXWORK: Decimal)
+    local procedure CalculateAmounts(jmcLine: Record "JMC Cost Model Line"; var jmcIndustrial: Decimal; var jmcManagement: Decimal; var jmcPersonnel: Decimal; var jmcStructure: Decimal; var jmcEXWORK: Decimal)
     begin
         jmcIndustrial := Round(JMCQuantity * jmcLine."JMC Industrial Cost", 0.01);
         jmcManagement := Round(JMCQuantity * jmcLine."JMC Management Cost", 0.01);
-        jmcStructure := jmcIndustrial + jmcManagement;
+        jmcPersonnel := Round(JMCQuantity * jmcLine."JMC Personnel Cost", 0.01);
+        jmcStructure := jmcIndustrial + jmcManagement + jmcPersonnel;
         jmcEXWORK := jmcStructure;
     end;
 
@@ -355,6 +372,7 @@ page 53126 "JMC Cost Model Simulator"
         JMCQuantity: Decimal;
         JMCSalesIndustrial: Decimal;
         JMCSalesManagement: Decimal;
+        JMCSalesPersonnel: Decimal;
         JMCSalesStructure: Decimal;
         JMCSalesEXWORK: Decimal;
         JMCHasSelection: Boolean;
@@ -366,5 +384,5 @@ page 53126 "JMC Cost Model Simulator"
         JMCNoProductErr: Label 'Item %1 has no saved lines in this model.', Comment = 'ESP="El producto %1 no tiene líneas guardadas en este modelo."';
         JMCNoLinesErr: Label 'This model has no saved product lines to simulate.', Comment = 'ESP="Este modelo no tiene líneas de producto guardadas para simular."';
         JMCRecalculateManualLbl: Label 'Recalculate the model to initialize final manual totals before simulating this line.', Comment = 'ESP="Recalcule el modelo para inicializar los totales finales manuales antes de simular esta línea."';
-        JMCNoSplitLbl: Label 'The calculated expense is zero, so a positive manual expense cannot be split proportionally between industrial and management costs.', Comment = 'ESP="El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre industrial y gestión."';
+        JMCNoSplitLbl: Label 'The calculated expense is zero, so a positive manual expense cannot be split proportionally between industrial, management and personnel costs.', Comment = 'ESP="El gasto calculado es cero; no se puede desglosar proporcionalmente un gasto manual positivo entre costes industrial, de gestión y personal."';
 }

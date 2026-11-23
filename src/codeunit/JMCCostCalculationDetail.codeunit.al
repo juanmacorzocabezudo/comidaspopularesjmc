@@ -10,8 +10,11 @@ codeunit 53108 "JMC Cost Calculation Detail"
         JMCEntryNo := 0;
         Clear(JMCAccounting);
         Clear(JMCProduction);
+        Clear(JMCResourceTotal);
         Clear(JMCAllocated);
         Clear(JMCPending);
+        Clear(JMCResourceAllocated);
+        Clear(JMCResourcePending);
     end;
 
     procedure InitializeSavedSources(jmcSelectedModelCode: Code[20])
@@ -20,17 +23,21 @@ codeunit 53108 "JMC Cost Calculation Detail"
     begin
         Initialize(jmcSelectedModelCode);
         jmcSaved.SetRange("JMC Model Code", jmcSelectedModelCode);
-        jmcSaved.SetFilter("JMC Detail Type", '%1|%2', jmcSaved."JMC Detail Type"::Accounting, jmcSaved."JMC Detail Type"::Production);
+        jmcSaved.SetFilter("JMC Detail Type", '%1|%2|%3', jmcSaved."JMC Detail Type"::Accounting, jmcSaved."JMC Detail Type"::Production, jmcSaved."JMC Detail Type"::Resource);
         if jmcSaved.FindSet() then
             repeat
                 NewDetail();
                 JMCBuffer.TransferFields(jmcSaved, false);
                 JMCBuffer.Insert(false);
-                if jmcSaved."JMC Detail Type" = jmcSaved."JMC Detail Type"::Accounting then
-                    JMCAccounting[jmcSaved."JMC Classification".AsInteger()] += jmcSaved."JMC Source Amount"
-                else
-                    if jmcSaved."JMC Included" then
-                        JMCProduction[BusinessIndex(jmcSaved."JMC Business")] += jmcSaved."JMC Source Amount";
+                case jmcSaved."JMC Detail Type" of
+                    jmcSaved."JMC Detail Type"::Accounting:
+                        JMCAccounting[jmcSaved."JMC Classification".AsInteger()] += jmcSaved."JMC Source Amount";
+                    jmcSaved."JMC Detail Type"::Production:
+                        if jmcSaved."JMC Included" then
+                            JMCProduction[BusinessIndex(jmcSaved."JMC Business")] += jmcSaved."JMC Source Amount";
+                    jmcSaved."JMC Detail Type"::Resource:
+                        JMCResourceTotal += jmcSaved."JMC Source Amount";
+                end;
             until jmcSaved.Next() = 0;
     end;
 
@@ -95,6 +102,67 @@ codeunit 53108 "JMC Cost Calculation Detail"
             JMCProduction[BusinessIndex(jmcBusiness)] += jmcEntry."Cost Amount (Actual)";
         end;
         JMCBuffer.Insert(false);
+    end;
+
+    procedure AddResource(jmcEntry: Record "Res. Ledger Entry"; jmcResource: Record Resource)
+    begin
+        NewDetail();
+        JMCBuffer."JMC Detail Type" := JMCBuffer."JMC Detail Type"::Resource;
+        JMCBuffer."JMC Source Entry No." := jmcEntry."Entry No.";
+        JMCBuffer."JMC Posting Date" := jmcEntry."Posting Date";
+        JMCBuffer."JMC Document No." := jmcEntry."Document No.";
+        JMCBuffer."JMC Resource No." := jmcEntry."Resource No.";
+        JMCBuffer."JMC Description" := CopyStr(jmcResource.Name + ': ' + jmcEntry.Description, 1, MaxStrLen(JMCBuffer."JMC Description"));
+        JMCBuffer."JMC Source Amount" := jmcEntry."Total Cost";
+        JMCBuffer."JMC Quantity" := jmcEntry.Quantity;
+        JMCBuffer."JMC Included" := true;
+        JMCBuffer."JMC Raw Result" := jmcEntry."Total Cost";
+        JMCBuffer."JMC Result" := jmcEntry."Total Cost";
+        JMCBuffer.Insert(false);
+        JMCResourceTotal += jmcEntry."Total Cost";
+    end;
+
+    procedure AddResourceBusinessFund(jmcBusiness: Integer; jmcResourceCost: Decimal; jmcPercentage: Decimal; jmcFormula: Text; jmcRaw: Decimal; jmcResult: Decimal)
+    begin
+        NewDetail();
+        JMCBuffer."JMC Detail Type" := JMCBuffer."JMC Detail Type"::"Resource Fund";
+        JMCBuffer."JMC Business" := BusinessCode(jmcBusiness);
+        JMCBuffer."JMC Included" := true;
+        SetCalculation(jmcResourceCost, jmcPercentage, 0, jmcFormula, jmcRaw, jmcResult);
+        JMCBuffer.Insert(false);
+    end;
+
+    procedure AddResourceAllocation(jmcLine: Record "JMC Cost Model Line"; jmcBusiness: Integer; jmcWeight: Decimal; jmcBase: Decimal; jmcFund: Decimal; jmcResult: Decimal)
+    begin
+        NewDetail();
+        JMCBuffer."JMC Detail Type" := JMCBuffer."JMC Detail Type"::"Resource Allocation";
+        JMCBuffer."JMC Source Entry No." := jmcLine."JMC Line No.";
+        JMCBuffer."JMC Item No." := jmcLine."JMC Item No.";
+        JMCBuffer."JMC Description" := jmcLine."JMC Item Description";
+        JMCBuffer."JMC Unit Code" := jmcLine."JMC Unit of Measure Code";
+        JMCBuffer."JMC Business" := BusinessCode(jmcBusiness);
+        JMCBuffer."JMC Method" := jmcLine."JMC Allocation Method";
+        JMCBuffer."JMC Quantity" := jmcLine."JMC Theoretical Production Qty.";
+        JMCBuffer."JMC Base Quantity" := jmcWeight;
+        JMCBuffer."JMC Included" := jmcLine."JMC Allocation Eligible";
+        SetCalculation(jmcWeight, jmcBase, jmcFund, 'C * A / B', jmcFund * jmcWeight / jmcBase, jmcResult);
+        JMCBuffer.Insert(false);
+        JMCResourceAllocated[jmcBusiness] += jmcResult;
+    end;
+
+    procedure AddResourcePending(jmcBusiness: Integer; jmcAmount: Decimal)
+    var
+        jmcNoBaseLbl: Label 'The business has no positive eligible production quantity for fixed resource personnel cost.', Comment = 'ESP="El negocio no tiene una cantidad de fabricación positiva apta para repartir el coste fijo de personal."';
+    begin
+        NewDetail();
+        JMCBuffer."JMC Detail Type" := JMCBuffer."JMC Detail Type"::"Resource Pending";
+        JMCBuffer."JMC Business" := BusinessCode(jmcBusiness);
+        JMCBuffer."JMC Method" := Enum::"JMC Cost Allocation Method"::Sales;
+        JMCBuffer."JMC Included" := true;
+        JMCBuffer."JMC Issue" := jmcNoBaseLbl;
+        SetCalculation(jmcAmount, 0, 0, 'A', jmcAmount, jmcAmount);
+        JMCBuffer.Insert(false);
+        JMCResourcePending[jmcBusiness] += jmcAmount;
     end;
 
     procedure AddAllocation(jmcLine: Record "JMC Cost Model Line"; jmcWeight: Decimal; jmcBase: Decimal; jmcIndustrialFund: Decimal; jmcManagementFund: Decimal; jmcBaseRecipeCost: Decimal)
@@ -206,14 +274,22 @@ codeunit 53108 "JMC Cost Calculation Detail"
         if Differs(Round(JMCAccounting[1], 0.01), jmcModel."JMC Fixed Industrial Fund") or
            Differs(Round(JMCAccounting[2], 0.01), jmcModel."JMC Fixed Management Fund") or
            Differs(JMCProduction[1], jmcModel."JMC Catering Production Cost") or
-           Differs(JMCProduction[2], jmcModel."JMC Industry Production Cost")
+           Differs(JMCProduction[2], jmcModel."JMC Industry Production Cost") or
+           Differs(Round(JMCResourceTotal, 0.01), jmcModel."JMC Fixed Resource Cost")
         then
             Error(jmcMismatchErr);
-        for jmcCategory := 1 to 2 do
+        for jmcCategory := 1 to 2 do begin
             if Differs(JMCAllocated[1, jmcCategory] + JMCAllocated[2, jmcCategory] +
                        JMCPending[1, jmcCategory] + JMCPending[2, jmcCategory], Round(JMCAccounting[jmcCategory], 0.01))
             then
                 Error(jmcMismatchErr);
+            if jmcCategory = 1 then begin
+                if Differs(JMCResourceAllocated[jmcCategory] + JMCResourcePending[jmcCategory], jmcModel."JMC Catering Resource Allocation") then
+                    Error(jmcMismatchErr);
+            end else
+                if Differs(JMCResourceAllocated[jmcCategory] + JMCResourcePending[jmcCategory], jmcModel."JMC Industry Resource Allocation") then
+                    Error(jmcMismatchErr);
+        end;
         AddSummaries(jmcModel);
         jmcDetail.LockTable();
         DeleteSaved(jmcModel."JMC Code");
@@ -230,7 +306,7 @@ codeunit 53108 "JMC Cost Calculation Detail"
         jmcDetail.Reset();
         jmcDetail.SetRange("JMC Model Code", jmcModel."JMC Code");
         jmcDetail.SetRange("JMC Detail Type", jmcDetail."JMC Detail Type"::Formula);
-        if jmcDetail.Count() <> 12 then
+        if jmcDetail.Count() <> 16 then
             Error(jmcMismatchErr);
         DeleteSaved('');
     end;
@@ -257,6 +333,10 @@ codeunit 53108 "JMC Cost Calculation Detail"
         AddSummary(jmcModel.FieldNo("JMC Production Dimension"), JMCProduction[1], JMCProduction[2], 'LINEA: CATERING | ALIMENTACION', 0, 0);
         AddSummary(jmcModel.FieldNo("JMC Sales Pending Industrial"), JMCPending[1, 1], JMCPending[2, 1], 'A + B', JMCPending[1, 1] + JMCPending[2, 1], jmcModel."JMC Sales Pending Industrial");
         AddSummary(jmcModel.FieldNo("JMC Sales Pending Management"), JMCPending[1, 2], JMCPending[2, 2], 'A + B', JMCPending[1, 2] + JMCPending[2, 2], jmcModel."JMC Sales Pending Management");
+        AddSummary(jmcModel.FieldNo("JMC Fixed Resource Cost"), JMCResourceTotal, 0, 'A', JMCResourceTotal, jmcModel."JMC Fixed Resource Cost");
+        AddSummary(jmcModel.FieldNo("JMC Industry Resource Allocation"), jmcModel."JMC Fixed Resource Cost", jmcModel."JMC Industry Resource Pct.", 'A * B / 100', jmcModel."JMC Fixed Resource Cost" * jmcModel."JMC Industry Resource Pct." / 100, jmcModel."JMC Industry Resource Allocation");
+        AddSummary(jmcModel.FieldNo("JMC Catering Resource Allocation"), jmcModel."JMC Fixed Resource Cost", jmcModel."JMC Catering Resource Pct.", 'A * B / 100', jmcModel."JMC Fixed Resource Cost" * jmcModel."JMC Catering Resource Pct." / 100, jmcModel."JMC Catering Resource Allocation");
+        AddSummary(jmcModel.FieldNo("JMC Resource Cost Pending"), JMCResourcePending[1], JMCResourcePending[2], 'A + B', JMCResourcePending[1] + JMCResourcePending[2], jmcModel."JMC Resource Cost Pending");
     end;
 
     local procedure AddSummary(jmcFieldNo: Integer; jmcA: Decimal; jmcB: Decimal; jmcFormula: Text; jmcRaw: Decimal; jmcResult: Decimal)
@@ -319,7 +399,10 @@ codeunit 53108 "JMC Cost Calculation Detail"
         JMCEntryNo: Integer;
         JMCAccounting: array[2] of Decimal;
         JMCProduction: array[2] of Decimal;
+        JMCResourceTotal: Decimal;
         JMCAllocated: array[2, 2] of Decimal;
         JMCPending: array[2, 2] of Decimal;
+        JMCResourceAllocated: array[2] of Decimal;
+        JMCResourcePending: array[2] of Decimal;
         JMCBusinessErr: Label 'The breakdown business must be CATERING or ALIMENTACION.', Comment = 'ESP="El negocio del desglose debe ser CATERING o ALIMENTACION."';
 }

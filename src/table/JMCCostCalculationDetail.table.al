@@ -21,14 +21,14 @@ table 53105 "JMC Cost Calculation Detail"
         field(4; "JMC Detail Type"; Option)
         {
             Caption = 'Breakdown Level', Comment = 'ESP="Nivel del desglose"';
-            ToolTip = 'Identifies what this row explains: a source movement, a business fund, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.', Comment = 'ESP="Indica qué explica esta fila: un movimiento de origen, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."';
-            OptionMembers = Formula,Accounting,Production,Allocation,Pending,"Unit Group","Business Fund";
-            OptionCaption = 'Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Fund', Comment = 'ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio"';
+            ToolTip = 'Identifies what this row explains: an accounting, production or resource movement, a business fund, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.', Comment = 'ESP="Indica qué explica esta fila: un movimiento contable, de producción o de recursos, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."';
+            OptionMembers = Formula,Accounting,Production,Allocation,Pending,"Unit Group","Business Fund",Resource,"Resource Fund","Resource Allocation","Resource Pending";
+            OptionCaption = 'Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Fund,Resource,Resource Fund,Resource Allocation,Resource Pending', Comment = 'ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio,Recurso,Fondo de recursos,Reparto de recursos,Recursos pendientes"';
         }
         field(5; "JMC Source Entry No."; Integer)
         {
             Caption = 'Saved Source Entry or Line No.', Comment = 'ESP="Nº movimiento o línea de origen guardados"';
-            ToolTip = 'Shows the source movement number for accounting and production rows, or the model line number for product allocations. It is not a document number. A zero means no source number applies.', Comment = 'ESP="Es el número del movimiento en filas contables y de producción, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen."';
+            ToolTip = 'Shows the source movement number for accounting, production and resource rows, or the model line number for product allocations. It is not a document number. A zero means no source number applies.', Comment = 'ESP="Es el número del movimiento en filas contables, de producción y de recursos, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen."';
         }
         field(6; "JMC Posting Date"; Date)
         {
@@ -183,6 +183,12 @@ table 53105 "JMC Cost Calculation Detail"
         {
             Caption = 'Saved Item Priority Level', Comment = 'ESP="Nivel de prioridad del producto guardado"';
             ToolTip = 'Shows the priority from 1 to 5 that the item had on its card when calculating. It selects the percentage applied to the distribution. Changing the priority later does not change this saved breakdown.', Comment = 'ESP="Es la prioridad del 1 al 5 que tenía el producto en su ficha al calcular. Determina el porcentaje aplicado al reparto. Cambiar la prioridad después no modifica este desglose guardado."';
+        }
+        field(35; "JMC Resource No."; Code[20])
+        {
+            Caption = 'Saved Resource No.', Comment = 'ESP="Nº recurso guardado"';
+            TableRelation = Resource."No.";
+            ToolTip = 'Identifies the resource on a saved assembly usage entry.', Comment = 'ESP="Identifica el recurso en el movimiento de consumo de ensamblado guardado."';
         }
     }
 

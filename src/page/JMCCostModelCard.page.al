@@ -129,6 +129,66 @@ page 53109 "JMC Cost Model Card"
                     }
                 }
             }
+            group(PersonnelCost)
+            {
+                Caption = 'Fixed Resource Personnel', Comment = 'ESP="Personal de recursos fijos"';
+                Editable = false;
+
+                field("JMC Fixed Resource Cost"; Rec."JMC Fixed Resource Cost")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows fixed resource usage costs posted for assembly orders in the calculation period. Select the amount to review its source entries and allocation.', Comment = 'ESP="Muestra los costes de uso de recursos fijos registrados para pedidos de ensamblado en el periodo del cálculo. Pulse el importe para consultar los movimientos de origen y su reparto."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Fixed Resource Cost"));
+                    end;
+                }
+                field("JMC Industry Resource Pct."; Rec."JMC Industry Resource Pct.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the percentage of fixed resource personnel cost allocated to Industry. Use Resource Cost Distribution to change it.', Comment = 'ESP="Muestra el porcentaje del coste fijo de personal asignado a Alimentación. Utilice Distribución del coste de personal para cambiarlo."';
+                }
+                field("JMC Catering Resource Pct."; Rec."JMC Catering Resource Pct.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the percentage of fixed resource personnel cost allocated to Catering. Use Resource Cost Distribution to change it.', Comment = 'ESP="Muestra el porcentaje del coste fijo de personal asignado a Catering. Utilice Distribución del coste de personal para cambiarlo."';
+                }
+                field("JMC Industry Resource Allocation"; Rec."JMC Industry Resource Allocation")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the fixed resource personnel fund assigned to Industry before allocation to products.', Comment = 'ESP="Muestra el fondo de personal de recursos fijos asignado a Alimentación antes de repartirlo entre productos."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Industry Resource Allocation"));
+                    end;
+                }
+                field("JMC Catering Resource Allocation"; Rec."JMC Catering Resource Allocation")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows the fixed resource personnel fund assigned to Catering before allocation to products.', Comment = 'ESP="Muestra el fondo de personal de recursos fijos asignado a Catering antes de repartirlo entre productos."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Catering Resource Allocation"));
+                    end;
+                }
+                field("JMC Resource Cost Pending"; Rec."JMC Resource Cost Pending")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows fixed resource personnel cost that could not be allocated because a business had no eligible production quantity.', Comment = 'ESP="Muestra el coste fijo de personal que no se pudo repartir porque un negocio no tenía cantidad de fabricación apta."';
+                    DrillDown = true;
+
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Resource Cost Pending"));
+                    end;
+                }
+            }
             group(LastCalculation)
             {
                 Caption = 'Last Comparative Calculation', Comment = 'ESP="Último cálculo comparativo"';
@@ -250,6 +310,28 @@ page 53109 "JMC Cost Model Card"
                     CurrPage.Update(false);
                 end;
             }
+            action(ResourceCostDistribution)
+            {
+                Caption = 'Resource Cost Distribution', Comment = 'ESP="Distribución del coste de personal"';
+                ToolTip = 'Sets how fixed resource personnel costs from assembly orders are split between Industry and Catering. The percentages must add up to 100.', Comment = 'ESP="Establece cómo se reparte entre Alimentación y Catering el coste fijo de personal de los pedidos de ensamblado. Los porcentajes deben sumar 100."';
+                ApplicationArea = All;
+                Image = Setup;
+
+                trigger OnAction()
+                var
+                    jmcDistributionPage: Page "JMC Resource Cost Distribution";
+                    jmcIndustryPct: Decimal;
+                    jmcCateringPct: Decimal;
+                begin
+                    CurrPage.SaveRecord();
+                    jmcDistributionPage.SetPercentages(Rec."JMC Industry Resource Pct.", Rec."JMC Catering Resource Pct.");
+                    if jmcDistributionPage.RunModal() = Action::OK then begin
+                        jmcDistributionPage.GetPercentages(jmcIndustryPct, jmcCateringPct);
+                        Rec.SetResourceCostPercentages(jmcIndustryPct, jmcCateringPct);
+                        CurrPage.Update(false);
+                    end;
+                end;
+            }
             action(SimulateStructureCost)
             {
                 Caption = 'Simulate Structure Cost', Comment = 'ESP="Simular coste de estructura"';
@@ -271,6 +353,9 @@ page 53109 "JMC Cost Model Card"
         area(Promoted)
         {
             actionref(CalculateAllCostsPromoted; CalculateAllCosts)
+            {
+            }
+            actionref(ResourceCostDistributionPromoted; ResourceCostDistribution)
             {
             }
             actionref(SimulateStructureCostPromoted; SimulateStructureCost)

@@ -20,6 +20,7 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "BOM Component" = R,
         tabledata "BOM Aditional Cost" = RM,
         tabledata "Resource" = RIMD,
+        tabledata "Res. Ledger Entry" = R,
         tabledata "Item" = RIMD,
         tabledata "Vendor" = RIMD,
         tabledata "Item Ledger Entry" = RIMD,
@@ -71,10 +72,12 @@ permissionset 53100 "JMC CP BASE MGT"
         page "G/L Account Card" = X,
         page "Chart of Accounts" = X,
         page "Resource Card" = X,
+        page "Resource Ledger Entries" = X,
         page "Item Ledger Entries" = X,
 
         // Páginas JMC personalizadas
         page "JMC Cost Model Card" = X,
+        page "JMC Resource Cost Distribution" = X,
         page "JMC Cost Model Lines" = X,
         page "JMC Cost Priority Factors" = X,
         page "JMC Cost Model Simulator" = X,

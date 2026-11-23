@@ -194,7 +194,7 @@ table 53103 "JMC Cost Model Line"
         }
         field(28; "JMC Total Cost"; Decimal)
         {
-            Caption = 'TOTAL COST', Comment = 'ESP="TOTAL COSTE"';
+            Caption = 'Total Cost', Comment = 'ESP="Total coste"';
             DecimalPlaces = 2 : 2;
             Editable = false;
             ToolTip = 'Specifies calculated industrial cost plus full management cost, excluding recipe cost. For the Amount type it is in euros per line unit; for the Percentage type it is the sum of the industrial and management percentages of the recipe cost.', Comment = 'ESP="Especifica el coste industrial más el coste completo de gestión calculados, sin incluir la receta. Con el tipo Importe está en euros por unidad de la línea; con el tipo Porcentaje es la suma de los porcentajes industrial y de gestión sobre el coste de receta."';
@@ -204,7 +204,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Final Manual Cost', Comment = 'ESP="Coste final manual"';
             DecimalPlaces = 2 : 2;
             MinValue = 0;
-            ToolTip = 'Specifies the structure cost kept for this line. It comes from structure cost C01 of the recipe when the model is calculated: euros per line unit for the Amount type, or the percentage itself for the Percentage type. You can edit it and send it back to the recipe with Apply Final Cost to Recipe. Recalculating reads it from the recipe again.', Comment = 'ESP="Especifica el coste de estructura que se mantiene para esta línea. Procede del coste de estructura C01 de la receta al calcular el modelo: euros por unidad de la línea con el tipo Importe, o el propio porcentaje con el tipo Porcentaje. Puede editarlo y devolverlo a la receta con Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta."';
+            ToolTip = 'Specifies the structure cost retained for this line. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Apply Final Cost to Recipe writes it to the recipe.', Comment = 'ESP="Especifica el coste de estructura que se mantiene para esta línea. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Aplicar coste final a receta lo escribe en la receta."';
 
             trigger OnValidate()
             begin
@@ -226,6 +226,47 @@ table 53103 "JMC Cost Model Line"
         field(32; "JMC Structure Totals Ready"; Boolean)
         {
             Caption = 'Structure-only Totals Initialized', Comment = 'ESP="Totales sin receta inicializados"';
+            Editable = false;
+        }
+        field(34; "JMC Actual Production Qty."; Decimal)
+        {
+            Caption = 'Actual Production Quantity', Comment = 'ESP="Cantidad real fabricación"';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            Editable = false;
+        }
+        field(35; "JMC Theoretical Production Qty."; Decimal)
+        {
+            Caption = 'Theoretical Production Quantity', Comment = 'ESP="Cantidad teórica fabricación"';
+            ToolTip = 'Specifies the production quantity used when recalculating costs, in the unit of this line. Zero excludes the line from allocation.', Comment = 'ESP="Especifica la cantidad de fabricación utilizada al recalcular costes, en la unidad de esta línea. El cero excluye la línea del reparto."';
+            DataClassification = CustomerContent;
+            DecimalPlaces = 0 : 5;
+            MinValue = 0;
+
+            trigger OnValidate()
+            begin
+                if "JMC Theoretical Production Qty." <> xRec."JMC Theoretical Production Qty." then begin
+                    "JMC Manual Totals Ready" := false;
+                    "JMC Structure Totals Ready" := false;
+                end;
+            end;
+        }
+        field(36; "JMC Production Unit Factor"; Decimal)
+        {
+            Caption = 'Production Unit Factor', Comment = 'ESP="Factor de unidad de fabricación"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(37; "JMC Source Calculation Issue"; Text[250])
+        {
+            Caption = 'Source Calculation Issue', Comment = 'ESP="Incidencia del cálculo de origen"';
+            DataClassification = CustomerContent;
+            Editable = false;
+        }
+        field(38; "JMC Production Inputs Ready"; Boolean)
+        {
+            Caption = 'Production Inputs Ready', Comment = 'ESP="Datos de fabricación preparados"';
+            DataClassification = CustomerContent;
             Editable = false;
         }
     }
@@ -318,9 +359,6 @@ table 53103 "JMC Cost Model Line"
         RecalculateCosts();
         "JMC Manual Totals Ready" := "JMC Allocation Eligible" and ("JMC Calculation Issue" = '');
         "JMC Structure Totals Ready" := "JMC Manual Totals Ready";
-        // The final manual cost was read from recipe cost C01 while preparing the line.
-        if not "JMC Manual Totals Ready" then
-            "JMC Final Cost" := 0;
         RecalculateCosts();
     end;
 
@@ -332,6 +370,7 @@ table 53103 "JMC Cost Model Line"
         "JMC Structure Totals Ready" := false;
         "JMC Allocation Eligible" := false;
         "JMC Calculation Issue" := jmcChangedLbl;
+        "JMC Production Inputs Ready" := false;
     end;
 
     procedure TestManualTotals()

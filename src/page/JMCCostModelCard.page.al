@@ -142,7 +142,7 @@ page 53109 "JMC Cost Model Card"
                 field("JMC Calculation Current"; Rec."JMC Calculation Current")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'A check mark means that model inputs and priority percentages have not changed since calculation. It does not detect later changes to entries or recipes. Run Calculate All Costs to refresh the results.', Comment = 'ESP="La marca indica que no se han cambiado los datos del modelo ni los porcentajes de prioridad desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar los resultados."';
+                    ToolTip = 'A check mark means that model inputs have not changed since calculation. It does not detect later changes to entries or recipes. Run Calculate All Costs to refresh the source data.', Comment = 'ESP="La marca indica que no se han cambiado los datos del modelo desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar las fuentes."';
                 }
                 field("JMC Starting Date"; Rec."JMC Starting Date")
                 {
@@ -250,14 +250,6 @@ page 53109 "JMC Cost Model Card"
                     CurrPage.Update(false);
                 end;
             }
-            action(PriorityFactors)
-            {
-                Caption = 'Priority Factors', Comment = 'ESP="Factores de prioridad"';
-                ToolTip = 'Defines the percentage of cost allocation for each priority from 1 to 5. Priority 1 is 100 percent by default and lower priorities receive a smaller share.', Comment = 'ESP="Define el porcentaje de reparto de costes de cada prioridad, del 1 al 5. La prioridad 1 es el 100 % de forma predeterminada y las siguientes reciben una parte menor."';
-                ApplicationArea = All;
-                Image = Setup;
-                RunObject = page "JMC Cost Priority Factors";
-            }
             action(SimulateStructureCost)
             {
                 Caption = 'Simulate Structure Cost', Comment = 'ESP="Simular coste de estructura"';
@@ -279,9 +271,6 @@ page 53109 "JMC Cost Model Card"
         area(Promoted)
         {
             actionref(CalculateAllCostsPromoted; CalculateAllCosts)
-            {
-            }
-            actionref(PriorityFactorsPromoted; PriorityFactors)
             {
             }
             actionref(SimulateStructureCostPromoted; SimulateStructureCost)

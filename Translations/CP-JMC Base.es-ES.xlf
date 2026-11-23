@@ -28,9 +28,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Account No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2080833486 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows net sales converted to the product base unit using the conversions recorded on the sales movements. It lets the calculation compare different sales formats of the same product.</source>
-          <target>Es la venta neta convertida a la unidad base del producto con las conversiones de los movimientos de venta. Permite que el cálculo compare distintos formatos de venta del mismo producto.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Es la venta neta convertida a la unidad base del producto con las conversiones de los movimientos de venta. Permite que el cálculo compare distintos formatos de venta del mismo producto."</note>
+          <source>Shows the production quantity used for the allocation converted to the product base unit.</source>
+          <target>Muestra la cantidad de fabricación utilizada para el reparto convertida a la unidad base del producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra la cantidad de fabricación utilizada para el reparto convertida a la unidad base del producto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Base Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2080833486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -268,9 +268,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1857481897 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows production quantity in the product base unit; for allocations it shows net sales quantity in its sales unit, after returns. Do not add kilograms, boxes or other different units together.</source>
-          <target>En producción es la cantidad en la unidad base del producto; en repartos es la cantidad vendida en su unidad de venta, descontando devoluciones. No sume kilos, cajas u otras unidades diferentes entre sí.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="En producción es la cantidad en la unidad base del producto; en repartos es la cantidad vendida en su unidad de venta, descontando devoluciones. No sume kilos, cajas u otras unidades diferentes entre sí."</note>
+          <source>Shows the production movement quantity in the base unit, or the production quantity used for an allocation in its line unit. Do not add different units together.</source>
+          <target>Muestra la cantidad del movimiento de producción en unidad base o la cantidad de fabricación utilizada para un reparto en la unidad de la línea. No sume unidades diferentes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra la cantidad del movimiento de producción en unidad base o la cantidad de fabricación utilizada para un reparto en la unidad de la línea. No sume unidades diferentes."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1857481897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -406,9 +406,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Calculated At - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2058016736 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Indicates that model inputs and priority factors have not changed. Later changes to ledger entries or recipes are not monitored; recalculate to refresh source data.</source>
-          <target>Indica que no han cambiado las entradas del modelo ni los factores. No se supervisan cambios posteriores en movimientos o recetas; recalcule para actualizar las fuentes.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Indica que no han cambiado las entradas del modelo ni los factores. No se supervisan cambios posteriores en movimientos o recetas; recalcule para actualizar las fuentes."</note>
+          <source>Indicates that model inputs have not changed. Later changes to ledger entries or recipes are not monitored; calculate all costs to refresh source data.</source>
+          <target>Indica que no han cambiado los datos del modelo. No se supervisan cambios posteriores en movimientos o recetas; calcule todos los costes para actualizar las fuentes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Indica que no han cambiado los datos del modelo. No se supervisan cambios posteriores en movimientos o recetas; calcule todos los costes para actualizar las fuentes."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model - Field JMC Calculation Current - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Field 2058016736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -609,6 +609,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Calcule de nuevo este modelo antes de editar, simular o aplicar los totales finales de esta línea. Debe ser apta y no tener incidencias."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Method TestManualTotals - NamedType jmcRecalculateErr</note>
         </trans-unit>
+        <trans-unit id="Table 175839514 - Field 3610847597 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Actual Production Quantity</source>
+          <target>Cantidad real fabricación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad real fabricación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Actual Production Qty. - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Field 2195524267 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Eligible for Allocation</source>
           <target>Apto para reparto</target>
@@ -700,9 +706,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC EXWORK Standard - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 815121829 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the structure cost kept for this line. It comes from structure cost C01 of the recipe when the model is calculated: euros per line unit for the Amount type, or the percentage itself for the Percentage type. You can edit it and send it back to the recipe with Apply Final Cost to Recipe. Recalculating reads it from the recipe again.</source>
-          <target>Especifica el coste de estructura que se mantiene para esta línea. Procede del coste de estructura C01 de la receta al calcular el modelo: euros por unidad de la línea con el tipo Importe, o el propio porcentaje con el tipo Porcentaje. Puede editarlo y devolverlo a la receta con Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de estructura que se mantiene para esta línea. Procede del coste de estructura C01 de la receta al calcular el modelo: euros por unidad de la línea con el tipo Importe, o el propio porcentaje con el tipo Porcentaje. Puede editarlo y devolverlo a la receta con Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta."</note>
+          <source>Specifies the structure cost retained for this line. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Apply Final Cost to Recipe writes it to the recipe.</source>
+          <target>Especifica el coste de estructura que se mantiene para esta línea. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Aplicar coste final a receta lo escribe en la receta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el coste de estructura que se mantiene para esta línea. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Aplicar coste final a receta lo escribe en la receta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Final Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 815121829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -837,6 +843,18 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nivel de prioridad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 175839514 - Field 1577872371 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Inputs Ready</source>
+          <target>Datos de fabricación preparados</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Datos de fabricación preparados"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Production Inputs Ready - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 3847855352 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production Unit Factor</source>
+          <target>Factor de unidad de fabricación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Factor de unidad de fabricación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Production Unit Factor - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Field 969878873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies recipe cost per selected unit saved by Calculate All Costs. It is kept for reference and is not part of the structure totals.</source>
           <target>Especifica el coste de receta por unidad seleccionada guardado al calcular todos los costes. Se conserva como referencia y no forma parte de los totales de estructura.</target>
@@ -849,11 +867,29 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste receta LM"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Recipe BOM Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 175839514 - Field 2773529659 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Source Calculation Issue</source>
+          <target>Incidencia del cálculo de origen</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Incidencia del cálculo de origen"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Source Calculation Issue - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 175839514 - Field 881845845 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Structure-only Totals Initialized</source>
           <target>Totales sin receta inicializados</target>
           <note from="Developer" annotates="general" priority="2">ESP="Totales sin receta inicializados"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Structure Totals Ready - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 1549703337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the production quantity used when recalculating costs, in the unit of this line. Zero excludes the line from allocation.</source>
+          <target>Especifica la cantidad de fabricación utilizada al recalcular costes, en la unidad de esta línea. El cero excluye la línea del reparto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad de fabricación utilizada al recalcular costes, en la unidad de esta línea. El cero excluye la línea del reparto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Theoretical Production Qty. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Table 175839514 - Field 1549703337 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Theoretical Production Quantity</source>
+          <target>Cantidad teórica fabricación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad teórica fabricación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Theoretical Production Qty. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 959360631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Specifies calculated industrial cost plus full management cost, excluding recipe cost. For the Amount type it is in euros per line unit; for the Percentage type it is the sum of the industrial and management percentages of the recipe cost.</source>
@@ -862,9 +898,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Total Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 959360631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>TOTAL COST</source>
-          <target>TOTAL COSTE</target>
-          <note from="Developer" annotates="general" priority="2">ESP="TOTAL COSTE"</note>
+          <source>Total Cost</source>
+          <target>Total coste</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Total coste"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Model Line - Field JMC Total Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 175839514 - Field 1292481930 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -1965,6 +2001,14 @@
           <note from="Developer" annotates="general" priority="2">ESP="Termino Pago"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Terminos Pago - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 4257284594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <target>[NAB: SUGGESTION]Tipo cliente</target>
+          <target>[NAB: SUGGESTION]Tipo Cliente</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Tipo Cliente - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1831575858 - Field 2832857678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Type</source>
           <target>Tipo Documento</target>
@@ -2067,18 +2111,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Falta el coste de estructura C01 en la receta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcMissingC01Lbl</note>
         </trans-unit>
-        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 966289981" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Review the percentage for priority %1.</source>
-          <target>Revise el porcentaje de la prioridad %1.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Revise el porcentaje de la prioridad %1."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcPriorityErr</note>
-        </trans-unit>
-        <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 3846964698" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Set a priority from 1 to 5 on the item card of item %1.</source>
-          <target>Indique una prioridad del 1 al 5 en la ficha del producto %1.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Indique una prioridad del 1 al 5 en la ficha del producto %1."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method PrepareLine - NamedType jmcItemPriorityErr</note>
-        </trans-unit>
         <trans-unit id="Codeunit 1341866227 - Method 3754197545 - NamedType 3366273259" size-unit="char" translate="yes" xml:space="preserve">
           <source>The item's business could not be identified.</source>
           <target>No se ha podido identificar el negocio del producto.</target>
@@ -2174,6 +2206,18 @@
           <target>Revise la unidad de medida del movimiento de venta %1.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Revise la unidad de medida del movimiento de venta %1."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method ReadSalesQuantities - NamedType jmcConversionIssueLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 793749564 - NamedType 701341319" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Calculate all costs again before recalculating production quantities. The saved calculation inputs are incomplete or a product line was changed.</source>
+          <target>Calcule todos los costes de nuevo antes de recalcular las cantidades de fabricación. Los datos guardados están incompletos o se ha modificado una línea de producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Calcule todos los costes de nuevo antes de recalcular las cantidades de fabricación. Los datos guardados están incompletos o se ha modificado una línea de producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method RecalculateProduction - NamedType jmcSnapshotErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1341866227 - Method 1631486024 - NamedType 790749824" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Production quantity must be positive to allocate costs.</source>
+          <target>La cantidad de fabricación debe ser positiva para repartir costes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="La cantidad de fabricación debe ser positiva para repartir costes."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Cost Model Calculation - Method SetProductionEligibility - NamedType jmcNoProductionLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 3330172492 - Method 3832868089 - NamedType 4000788090" size-unit="char" translate="yes" xml:space="preserve">
           <source>Please find attached sales invoice %1.</source>
@@ -2318,6 +2362,12 @@
           <target>El tipo de coste de C01 del producto %1 es distinto del de la línea del modelo. Calcule de nuevo el modelo antes de aplicar el coste final. No se ha cambiado la receta.</target>
           <note from="Developer" annotates="general" priority="2">ESP="El tipo de coste de C01 del producto %1 es distinto del de la línea del modelo. Calcule de nuevo el modelo antes de aplicar el coste final. No se ha cambiado la receta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Structure Recipe Costs - Method ApplyLine - NamedType jmcTypeChangedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4211364099 - Method 212610950 - NamedType 2700139070" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The saved unit conversion is missing. Calculate all costs again before applying the final cost.</source>
+          <target>Falta la conversión de unidad guardada. Calcule todos los costes de nuevo antes de aplicar el coste final.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Falta la conversión de unidad guardada. Calcule todos los costes de nuevo antes de aplicar el coste final."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit JMC Structure Recipe Costs - Method ApplyLine - NamedType jmcUnitFactorErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 983041636 - NamedType 646235782" size-unit="char" translate="yes" xml:space="preserve">
           <source>Select products from the same vendor to create a supplier incident.</source>
@@ -2788,9 +2838,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Calculated At - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 455107400 - Control 2058016736 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>A check mark means that model inputs and priority percentages have not changed since calculation. It does not detect later changes to entries or recipes. Run Calculate All Costs to refresh the results.</source>
-          <target>La marca indica que no se han cambiado los datos del modelo ni los porcentajes de prioridad desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar los resultados.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="La marca indica que no se han cambiado los datos del modelo ni los porcentajes de prioridad desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar los resultados."</note>
+          <source>A check mark means that model inputs have not changed since calculation. It does not detect later changes to entries or recipes. Run Calculate All Costs to refresh the source data.</source>
+          <target>La marca indica que no se han cambiado los datos del modelo desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar las fuentes.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="La marca indica que no se han cambiado los datos del modelo desde el cálculo. No detecta cambios posteriores en movimientos o recetas. Ejecute Calcular todos los costes para actualizar las fuentes."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Control JMC Calculation Current - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 455107400 - Control 93412081 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -2919,18 +2969,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Calcular todos los costes"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action CalculateAllCosts - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 455107400 - Action 11253824 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Defines the percentage of cost allocation for each priority from 1 to 5. Priority 1 is 100 percent by default and lower priorities receive a smaller share.</source>
-          <target>Define el porcentaje de reparto de costes de cada prioridad, del 1 al 5. La prioridad 1 es el 100 % de forma predeterminada y las siguientes reciben una parte menor.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Define el porcentaje de reparto de costes de cada prioridad, del 1 al 5. La prioridad 1 es el 100 % de forma predeterminada y las siguientes reciben una parte menor."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action PriorityFactors - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 455107400 - Action 11253824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Priority Factors</source>
-          <target>Factores de prioridad</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Factores de prioridad"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Card - Action PriorityFactors - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 455107400 - Action 101987764 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Simulates a product quantity using the saved calculation against products, without recalculating or changing model costs.</source>
           <target>Simula una cantidad de producto con el cálculo contra productos guardado, sin recalcular ni cambiar los costes del modelo.</target>
@@ -2949,17 +2987,17 @@
           <note from="Developer" annotates="general" priority="2">ESP="Productos"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 3610847597 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows net production in the period allocated to this sales unit in proportion to net base sales. When there are no sales, it is shown in the base unit.</source>
+          <target>Muestra la fabricación neta del periodo asignada a esta unidad de venta proporcionalmente a las ventas netas en unidad base. Si no hay ventas se muestra en unidad base.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra la fabricación neta del periodo asignada a esta unidad de venta proporcionalmente a las ventas netas en unidad base. Si no hay ventas se muestra en unidad base."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Actual Production Qty. - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 2573794215 - Control 2195524267 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>A check mark means that this row met the conditions to receive expenses in the last calculation. If it is not checked then read Calculation Issue. A zero cost on an ineligible row is not a valid calculated cost.</source>
           <target>La marca indica que esta línea cumplió las condiciones para recibir gastos en el último cálculo. Si no está marcada consulte Incidencia del cálculo. Un coste a cero en una línea no apta no es un coste calculado válido.</target>
           <note from="Developer" annotates="general" priority="2">ESP="La marca indica que esta línea cumplió las condiciones para recibir gastos en el último cálculo. Si no está marcada consulte Incidencia del cálculo. Un coste a cero en una línea no apta no es un coste calculado válido."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Allocation Eligible - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2573794215 - Control 2342808682 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the priority percentage used in the last calculation as a multiplier, for example 1 for 100 percent and 0.8 for 80 percent. A larger value gives more share of the expenses. If you change the item priority or the percentages, calculate again to update this value.</source>
-          <target>Muestra el porcentaje de la prioridad utilizado en el último cálculo como multiplicador, por ejemplo 1 para el 100 % y 0,8 para el 80 %. Un valor mayor da más parte de los gastos. Si cambia la prioridad del producto o los porcentajes, debe volver a calcular para actualizar este valor.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el porcentaje de la prioridad utilizado en el último cálculo como multiplicador, por ejemplo 1 para el 100 % y 0,8 para el 80 %. Un valor mayor da más parte de los gastos. Si cambia la prioridad del producto o los porcentajes, debe volver a calcular para actualizar este valor."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Applied Priority Factor - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 4248002052 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the total industrial expense assigned to this product and unit for the whole period. It is not a unit cost. These amounts can be added across the lines of the calculation.</source>
@@ -2974,10 +3012,16 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Assigned Management Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 1880327288 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Explains why this product and unit could not receive an allocation. Correct the cause and run Calculate All Costs again to update the row.</source>
-          <target>Explica por qué este producto y unidad no han podido recibir reparto. Corrija la causa y ejecute de nuevo Calcular todos los costes para actualizar la línea.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Explica por qué este producto y unidad no han podido recibir reparto. Corrija la causa y ejecute de nuevo Calcular todos los costes para actualizar la línea."</note>
+          <source>Explains why this product and unit could not receive an allocation. Correct the quantity and recalculate costs, or calculate all costs again to refresh the source data.</source>
+          <target>Explica por qué este producto y unidad no han podido recibir reparto. Corrija la cantidad y recalcule costes, o calcule todos los costes para actualizar los datos de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Explica por qué este producto y unidad no han podido recibir reparto. Corrija la cantidad y recalcule costes, o calcule todos los costes para actualizar los datos de origen."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Calculation Issue - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 3589282524 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cost Difference</source>
+          <target>Diferencia coste</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Diferencia coste"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Cost Difference - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 4025560776 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows whether structure cost C01 in the recipe is an Amount in euros or a Percentage of the recipe cost. It is read from the recipe when the model is calculated. With Percentage, Total Cost, Final Manual Cost and Cost Difference are percentages.</source>
@@ -2992,15 +3036,15 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC EXWORK Standard - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 815121829 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the structure cost kept in the recipe for this row, read from structure cost C01 when the model was calculated: euros per row unit, or the percentage itself for the Percentage type. You can edit it, but the change reaches the recipe only through Apply Final Cost to Recipe. Recalculating reads it from the recipe again.</source>
-          <target>Muestra el coste de estructura que se mantiene en la receta para esta línea, leído del coste de estructura C01 al calcular el modelo: euros por unidad de la línea, o el propio porcentaje con el tipo Porcentaje. Puede editarlo, pero el cambio solo llega a la receta mediante Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste de estructura que se mantiene en la receta para esta línea, leído del coste de estructura C01 al calcular el modelo: euros por unidad de la línea, o el propio porcentaje con el tipo Porcentaje. Puede editarlo, pero el cambio solo llega a la receta mediante Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta."</note>
+          <source>Shows the manual structure cost. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Changes reach the recipe only through Apply Final Cost to Recipe.</source>
+          <target>Muestra el coste manual de estructura. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Los cambios solo llegan a la receta mediante Aplicar coste final a receta.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste manual de estructura. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Los cambios solo llegan a la receta mediante Aplicar coste final a receta."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Final Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 1058431996 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the industrial amount assigned to this row divided by its net sales quantity. It is a cost per row unit and is included in TOTAL COST. Editing Final Manual Cost does not change this calculated value.</source>
-          <target>Muestra el importe industrial asignado a esta línea dividido entre su cantidad neta vendida. Es un coste por unidad de la línea y está incluido en TOTAL COSTE. Cambiar Coste final manual no modifica este valor calculado.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe industrial asignado a esta línea dividido entre su cantidad neta vendida. Es un coste por unidad de la línea y está incluido en TOTAL COSTE. Cambiar Coste final manual no modifica este valor calculado."</note>
+          <source>Shows the industrial amount assigned to this row divided by its production quantity used in the calculation.</source>
+          <target>Muestra el importe industrial asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe industrial asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Industrial Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 636923267 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -3022,9 +3066,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Item No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 3004510136 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the management amount assigned to this row divided by its net sales quantity. It is the management cost per row unit and does not include industrial or recipe cost. It is included in TOTAL COST.</source>
-          <target>Muestra el importe de gestión asignado a esta línea dividido entre su cantidad neta vendida. Es el coste de gestión por unidad de la línea y no incluye el coste industrial ni el de receta. Está incluido en TOTAL COSTE.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe de gestión asignado a esta línea dividido entre su cantidad neta vendida. Es el coste de gestión por unidad de la línea y no incluye el coste industrial ni el de receta. Está incluido en TOTAL COSTE."</note>
+          <source>Shows the management amount assigned to this row divided by its production quantity used in the calculation.</source>
+          <target>Muestra el importe de gestión asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el importe de gestión asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Management Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 274306591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -3040,22 +3084,22 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Net Sales Base Qty. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 2916614756 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the quantity sold in this row unit during the period after subtracting returns. It includes posted shipments not yet invoiced. Assigned amounts are divided by this quantity to obtain unit costs.</source>
-          <target>Muestra la cantidad vendida en la unidad de esta línea durante el periodo tras descontar devoluciones. Incluye los envíos registrados pendientes de facturar. Los importes asignados se dividen entre esta cantidad para obtener los costes unitarios.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra la cantidad vendida en la unidad de esta línea durante el periodo tras descontar devoluciones. Incluye los envíos registrados pendientes de facturar. Los importes asignados se dividen entre esta cantidad para obtener los costes unitarios."</note>
+          <source>Shows net sales in this row unit during the period, including uninvoiced shipments. Sales determine the distribution of production between the item's sales units.</source>
+          <target>Muestra las ventas netas del periodo en la unidad de esta línea, incluidos envíos pendientes de facturar. Las ventas determinan el reparto de la fabricación entre las unidades de venta del producto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra las ventas netas del periodo en la unidad de esta línea, incluidos envíos pendientes de facturar. Las ventas determinan el reparto de la fabricación entre las unidades de venta del producto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Net Sales Quantity - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 2573794215 - Control 2146308772 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the priority of the product, from 1 to 5, copied from its item card when the model was calculated. It cannot be edited here. Its percentage in Priority Factors gives the line more or less share of the expenses.</source>
-          <target>Muestra la prioridad del producto, del 1 al 5, copiada de su ficha al calcular el modelo. No se puede editar aquí. Su porcentaje en Factores de prioridad da a la línea más o menos parte de los gastos.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Muestra la prioridad del producto, del 1 al 5, copiada de su ficha al calcular el modelo. No se puede editar aquí. Su porcentaje en Factores de prioridad da a la línea más o menos parte de los gastos."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Priority Level - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 969878873 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the recipe cost read when the model was calculated and expressed per row unit. It is hidden by default and is not part of the structure totals.</source>
           <target>Muestra el coste de receta leído al calcular el modelo y expresado por unidad de la línea. Está oculto de forma predeterminada y no forma parte de los totales de estructura.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Muestra el coste de receta leído al calcular el modelo y expresado por unidad de la línea. Está oculto de forma predeterminada y no forma parte de los totales de estructura."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Recipe BOM Cost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Control 1549703337 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the quantity in this line unit for Recalculate Costs. Initially it equals actual production. Zero excludes this line.</source>
+          <target>Especifica la cantidad en la unidad de esta línea para Recalcular costes. Inicialmente coincide con la fabricación real. Cero excluye esta línea.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la cantidad en la unidad de esta línea para Recalcular costes. Inicialmente coincide con la fabricación real. Cero excluye esta línea."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Control JMC Theoretical Production Qty. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Page 2573794215 - Control 959360631 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the calculated industrial cost plus full management cost, without recipe cost. It is in euros per row unit for the Amount type and the sum of the industrial and management percentages for the Percentage type. Compare it with Final Manual Cost.</source>
@@ -3092,6 +3136,30 @@
           <target>Coste final aplicado mediante C01 del producto %1. No se ha ejecutado ningún cálculo de coste estándar ni registro contable.</target>
           <note from="Developer" annotates="general" priority="2">ESP="Coste final aplicado mediante C01 del producto %1. No se ha ejecutado ningún cálculo de coste estándar ni registro contable."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Action JMCApplyCostToRecipe - Method OnAction - NamedType jmcAppliedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Action 2655713369 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Redistributes the saved funds using the theoretical production quantities without rereading accounting, production or recipes.</source>
+          <target>Redistribuye los fondos guardados usando las cantidades teóricas de fabricación sin volver a leer contabilidad, producción ni recetas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Redistribuye los fondos guardados usando las cantidades teóricas de fabricación sin volver a leer contabilidad, producción ni recetas."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Action JMCRecalculateCosts - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Action 2655713369 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Recalculate Costs</source>
+          <target>Recalcular costes</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Recalcular costes"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Action JMCRecalculateCosts - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Action 2655713369 - Method 1377591017 - NamedType 3385305877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Costs recalculated using the theoretical production quantities.</source>
+          <target>Costes recalculados con las cantidades teóricas de fabricación.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Costes recalculados con las cantidades teóricas de fabricación."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Action JMCRecalculateCosts - Method OnAction - NamedType jmcCompletedLbl</note>
+        </trans-unit>
+        <trans-unit id="Page 2573794215 - Action 2655713369 - Method 1377591017 - NamedType 3863272047" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Costs recalculated. Lines with issues: %1. Review the issues and the funds pending allocation in the model.</source>
+          <target>Costes recalculados. Líneas con incidencia: %1. Revise las incidencias y los fondos pendientes de reparto en el modelo.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Costes recalculados. Líneas con incidencia: %1. Revise las incidencias y los fondos pendientes de reparto en el modelo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Model Lines - Action JMCRecalculateCosts - Method OnAction - NamedType jmcPartialLbl</note>
         </trans-unit>
         <trans-unit id="Page 2661656842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Structure Cost Simulator</source>
@@ -8590,9 +8658,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCAccountingRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 2967940869" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Calculation against products: group by business and exact unit code; split between groups by recipe value without priority, then within each group by quantity times priority percentage. Industrial and management amounts are rounded separately to 0.01, with final residuals retained.</source>
-          <target>Cálculo contra productos: agrupar por negocio y código exacto de unidad; repartir entre grupos por valor de receta sin prioridad, y dentro del grupo por cantidad por porcentaje de prioridad. Industrial y gestión se redondean por separado a 0,01, conservando los residuos finales.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Cálculo contra productos: agrupar por negocio y código exacto de unidad; repartir entre grupos por valor de receta sin prioridad, y dentro del grupo por cantidad por porcentaje de prioridad. Industrial y gestión se redondean por separado a 0,01, conservando los residuos finales."</note>
+          <source>Net assembly production is distributed among positive sales units in proportion to net base sales. Funds are grouped by business and unit, distributed between groups by production recipe value, and within each group by production quantity. Amounts are rounded separately to 0.01.</source>
+          <target>La fabricación neta de ensamblado se distribuye entre las unidades con ventas positivas proporcionalmente a las ventas netas en unidad base. Los fondos se agrupan por negocio y unidad, se reparten entre grupos por valor de receta de la fabricación y dentro del grupo por cantidad fabricada. Los importes se redondean por separado a 0,01.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="La fabricación neta de ensamblado se distribuye entre las unidades con ventas positivas proporcionalmente a las ventas netas en unidad base. Los fondos se agrupan por negocio y unidad, se reparten entre grupos por valor de receta de la fabricación y dentro del grupo por cantidad fabricada. Los importes se redondean por separado a 0,01."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCAllocationRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 3886436101" size-unit="char" translate="yes" xml:space="preserve">
@@ -8602,9 +8670,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCDimensionRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 980494938" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Requires existing C01 in recipe version 0, positive net quantities in posted and base units, positive recipe cost, an item priority from 1 to 5 and a configured priority percentage. Ineligible lines stay visible without allocation; a business without eligible lines keeps its fund pending. Recalculation reads the final manual cost from structure cost C01 of the recipe, as an amount or a percentage; it does not apply anything to recipes.</source>
-          <target>Requiere C01 existente en versión 0 de receta, cantidades netas positivas en unidad registrada y base, receta positiva, prioridad de producto de 1 a 5 y porcentaje de prioridad configurado. Las líneas no aptas siguen visibles sin reparto; un negocio sin aptos conserva su fondo pendiente. Recalcular lee el coste final manual del coste de estructura C01 de la receta, como importe o porcentaje; no aplica nada a las recetas.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Requiere C01 existente en versión 0 de receta, cantidades netas positivas en unidad registrada y base, receta positiva, prioridad de producto de 1 a 5 y porcentaje de prioridad configurado. Las líneas no aptas siguen visibles sin reparto; un negocio sin aptos conserva su fondo pendiente. Recalcular lee el coste final manual del coste de estructura C01 de la receta, como importe o porcentaje; no aplica nada a las recetas."</note>
+          <source>Requires existing C01 in recipe version 0, a valid unit, positive recipe cost and positive production quantity. Ineligible lines stay visible without allocation; a business without eligible lines keeps its fund pending. Calculate All Costs reads C01 without applying anything to recipes.</source>
+          <target>Requiere C01 existente en versión 0 de receta, unidad válida, receta positiva y cantidad fabricada positiva. Las líneas no aptas siguen visibles sin reparto; un negocio sin aptos conserva su fondo pendiente. Calcular todos los costes lee C01 sin aplicar nada a las recetas.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Requiere C01 existente en versión 0 de receta, unidad válida, receta positiva y cantidad fabricada positiva. Las líneas no aptas siguen visibles sin reparto; un negocio sin aptos conserva su fondo pendiente. Calcular todos los costes lee C01 sin aplicar nada a las recetas."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCEligibilityRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 4097303004" size-unit="char" translate="yes" xml:space="preserve">
@@ -8614,9 +8682,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCProductionRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 3358488236" size-unit="char" translate="yes" xml:space="preserve">
-          <source>All currently unblocked items, with separate rows for the sales units used in the period. Items without sales remain visible in their base unit with an issue. Only CA* (Catering) and PT* (Industry) can receive allocations; other items remain visible with an issue.</source>
-          <target>Todos los productos actualmente no bloqueados, separados por las unidades de venta utilizadas en el periodo. Los productos sin ventas siguen visibles en unidad base con incidencia. Solo CA* (Catering) y PT* (Alimentación) pueden recibir reparto; los demás siguen visibles con incidencia.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Todos los productos actualmente no bloqueados, separados por las unidades de venta utilizadas en el periodo. Los productos sin ventas siguen visibles en unidad base con incidencia. Solo CA* (Catering) y PT* (Alimentación) pueden recibir reparto; los demás siguen visibles con incidencia."</note>
+          <source>All currently unblocked items, with separate rows for sales units used in the period. When no positive net sales exist, production is assigned to the base unit. Only CA* and PT* can receive allocations.</source>
+          <target>Todos los productos actualmente no bloqueados, separados por las unidades de venta utilizadas en el periodo. Sin ventas netas positivas, la fabricación se asigna a la unidad base. Solo CA* y PT* pueden recibir reparto.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Todos los productos actualmente no bloqueados, separados por las unidades de venta utilizadas en el periodo. Sin ventas netas positivas, la fabricación se asigna a la unidad base. Solo CA* y PT* pueden recibir reparto."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - NamedType JMCProductRulesLbl</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - NamedType 2602232861" size-unit="char" translate="yes" xml:space="preserve">
@@ -8734,9 +8802,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control AccountFilter - Property Caption</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - Control 3440492824 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Confirms replacement of model results only, using the business split calculated from actual assembly production costs by LINEA dimension, current recipes, item priorities and configured priority percentages. No cost-center eligibility or direct-cost deductions are implemented. Source data is not modified.</source>
-          <target>Confirma sustituir solo los resultados del modelo con el reparto por negocio calculado del coste real de producción de ensamblados por dimensión LINEA, recetas actuales, prioridades de producto y porcentajes de prioridad configurados. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Confirma sustituir solo los resultados del modelo con el reparto por negocio calculado del coste real de producción de ensamblados por dimensión LINEA, recetas actuales, prioridades de producto y porcentajes de prioridad configurados. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen."</note>
+          <source>Confirms replacement of model results using production costs by LINEA, production quantities and current recipes. No cost-center eligibility or direct-cost deductions are implemented. Source data is not modified.</source>
+          <target>Confirma sustituir los resultados del modelo usando costes de producción por LINEA, cantidades fabricadas y recetas actuales. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Confirma sustituir los resultados del modelo usando costes de producción por LINEA, cantidades fabricadas y recetas actuales. No se implementan elegibilidad por centros ni deducciones de costes directos. No se modifican los datos de origen."</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Calculate Model Costs - Control ConfirmReviewOnly - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 4104558529 - Control 3440492824 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">

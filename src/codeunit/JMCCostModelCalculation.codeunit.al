@@ -24,12 +24,46 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCDetail.Save(jmcCostModel);
     end;
 
+    [CommitBehavior(CommitBehavior::Error)]
+    procedure RecalculateProduction(jmcModelCode: Code[20])
+    var
+        jmcCostModel: Record "JMC Cost Model";
+        jmcSnapshotErr: Label 'Calculate all costs again before recalculating production quantities. The saved calculation inputs are incomplete or a product line was changed.', Comment = 'ESP="Calcule todos los costes de nuevo antes de recalcular las cantidades de fabricación. Los datos guardados están incompletos o se ha modificado una línea de producto."';
+    begin
+        ResetCalculation();
+        jmcCostModel.LockTable();
+        jmcCostModel.Get(jmcModelCode);
+        jmcCostModel.TestField("JMC Calculated At");
+        JMCDetail.InitializeSavedSources(jmcModelCode);
+        LoadLines(jmcModelCode);
+        JMCTempLines.Reset();
+        if JMCDetail.SavedLineCount(jmcModelCode) <> JMCTempLines.Count() then
+            Error(jmcSnapshotErr);
+        if JMCTempLines.FindSet() then
+            repeat
+                if not JMCTempLines."JMC Production Inputs Ready" or not JMCDetail.HasSavedLine(JMCTempLines) then
+                    Error(jmcSnapshotErr);
+                JMCTempLines."JMC Calculation Issue" := JMCTempLines."JMC Source Calculation Issue";
+                SetProductionEligibility();
+                if JMCTempLines."JMC Allocation Eligible" then
+                    if not JMCRecipeCosts.ContainsKey(JMCTempLines."JMC Item No.") then
+                        JMCRecipeCosts.Add(JMCTempLines."JMC Item No.", JMCTempLines."JMC Recipe BOM Cost" / JMCTempLines."JMC Production Unit Factor");
+                JMCTempLines.Modify(false);
+            until JMCTempLines.Next() = 0;
+        BuildBases();
+        AllocateFunds(jmcCostModel);
+        SaveResults(jmcCostModel, jmcCostModel."JMC Starting Date", jmcCostModel."JMC Ending Date", jmcCostModel."JMC Account Filter");
+        JMCDetail.Save(jmcCostModel);
+    end;
+
     local procedure ResetCalculation()
     begin
         JMCTempLines.Reset();
         JMCTempLines.DeleteAll(false);
         Clear(JMCRecipeCosts);
         Clear(JMCItemIssues);
+        Clear(JMCProductionQuantities);
+        Clear(JMCSalesBaseTotals);
         Clear(JMCBases);
         Clear(JMCSalesGroupRecipeBases);
         Clear(JMCSalesGroupQuantityBases);
@@ -65,6 +99,10 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcOutput.SetAutoCalcFields("Cost Amount (Actual)");
         if jmcOutput.FindSet() then
             repeat
+                if JMCProductionQuantities.ContainsKey(jmcOutput."Item No.") then
+                    JMCProductionQuantities.Set(jmcOutput."Item No.", JMCProductionQuantities.Get(jmcOutput."Item No.") + jmcOutput.Quantity)
+                else
+                    JMCProductionQuantities.Add(jmcOutput."Item No.", jmcOutput.Quantity);
                 // Final outputs already include the cost of intermediate recipes.
                 case CopyStr(jmcOutput."Item No.", 1, 2) of
                     'CA', 'PT':
@@ -211,8 +249,8 @@ codeunit 53104 "JMC Cost Model Calculation"
                 if JMCSalesLines.FindSet() then
                     repeat
                         EnsureLine(jmcModelCode, jmcItem, JMCSalesLines."JMC Unit of Measure Code", jmcMethod::Sales, jmcLastLineNo);
-                    until JMCSalesLines.Next() = 0
-                else
+                    until JMCSalesLines.Next() = 0;
+                if not JMCSalesBaseTotals.ContainsKey(jmcItem."No.") then
                     EnsureLine(jmcModelCode, jmcItem, jmcItem."Base Unit of Measure", jmcMethod::Sales, jmcLastLineNo);
             until jmcItem.Next() = 0;
         if jmcLine.FindSet(true) then
@@ -225,7 +263,9 @@ codeunit 53104 "JMC Cost Model Calculation"
                         jmcLine.Delete(true);
                 end else begin
                     JMCSalesLines.SetRange("JMC Unit of Measure Code", jmcLine."JMC Unit of Measure Code");
-                    if JMCSalesLines.IsEmpty() then
+                    if JMCSalesLines.IsEmpty() and
+                       ((jmcLine."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure") or JMCSalesBaseTotals.ContainsKey(jmcItem."No."))
+                    then
                         jmcLine.Delete(true);
                 end;
             until jmcLine.Next() = 0;
@@ -265,6 +305,17 @@ codeunit 53104 "JMC Cost Model Calculation"
                     JMCSalesLines."JMC Net Sales Quantity" -= jmcEntry.Quantity / jmcEntry."Qty. per Unit of Measure";
                 JMCSalesLines.Modify(false);
             until jmcEntry.Next() = 0;
+        JMCSalesLines.Reset();
+        if JMCSalesLines.FindSet() then
+            repeat
+                if (JMCSalesLines."JMC Net Sales Quantity" > 0) and (JMCSalesLines."JMC Net Sales Base Qty." > 0) and
+                   (JMCSalesLines."JMC Calculation Issue" = '')
+                then begin
+                    if not JMCSalesBaseTotals.ContainsKey(JMCSalesLines."JMC Item No.") then
+                        JMCSalesBaseTotals.Add(JMCSalesLines."JMC Item No.", 0);
+                    JMCSalesBaseTotals.Set(JMCSalesLines."JMC Item No.", JMCSalesBaseTotals.Get(JMCSalesLines."JMC Item No.") + JMCSalesLines."JMC Net Sales Base Qty.");
+                end;
+            until JMCSalesLines.Next() = 0;
     end;
 
     local procedure EnsureLine(jmcModelCode: Code[20]; jmcItem: Record Item; jmcUnitCode: Code[10]; jmcMethod: Enum "JMC Cost Allocation Method"; var jmcLastLineNo: Integer)
@@ -286,9 +337,6 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcLine."JMC Item Description" := jmcItem.Description;
         jmcLine."JMC Unit of Measure Code" := jmcUnitCode;
         jmcLine."JMC Allocation Method" := jmcMethod;
-        jmcLine."JMC Priority Level" := jmcItem."JMC Priority Level";
-        if (jmcLine."JMC Priority Level" < 1) or (jmcLine."JMC Priority Level" > 5) then
-            jmcLine."JMC Priority Level" := 1;
         jmcLine.Insert(true);
     end;
 
@@ -298,6 +346,9 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines.FindSet();
         repeat
             PrepareLine();
+            JMCTempLines."JMC Source Calculation Issue" := JMCTempLines."JMC Calculation Issue";
+            JMCTempLines."JMC Production Inputs Ready" := true;
+            SetProductionEligibility();
             JMCTempLines.Modify(false);
         until JMCTempLines.Next() = 0;
         BuildBases();
@@ -306,14 +357,11 @@ codeunit 53104 "JMC Cost Model Calculation"
     local procedure PrepareLine()
     var
         jmcItem: Record Item;
-        jmcPriority: Record "JMC Cost Priority Factor";
         jmcStructureRecipes: Codeunit "JMC Structure Recipe Costs";
         jmcStructurePercentage: Boolean;
         jmcStructureValue: Decimal;
         jmcNegativeC01Lbl: Label 'The recipe structure cost C01 cannot be negative.', Comment = 'ESP="El coste de estructura C01 de la receta no puede ser negativo."';
         jmcMissingC01Lbl: Label 'The recipe is missing structure cost C01.', Comment = 'ESP="Falta el coste de estructura C01 en la receta."';
-        jmcPriorityErr: Label 'Review the percentage for priority %1.', Comment = 'ESP="Revise el porcentaje de la prioridad %1."';
-        jmcItemPriorityErr: Label 'Set a priority from 1 to 5 on the item card of item %1.', Comment = 'ESP="Indique una prioridad del 1 al 5 en la ficha del producto %1."';
         jmcBusinessIssueLbl: Label 'The item''s business could not be identified.', Comment = 'ESP="No se ha podido identificar el negocio del producto."';
         jmcUnitIssueLbl: Label 'Review the item quantities and unit of measure.', Comment = 'ESP="Revise las cantidades y la unidad de medida del producto."';
         jmcSalesErr: Label 'Item %1 has not been sold in unit %2 during the calculated period.', Comment = 'ESP="El producto %1 no se ha vendido para la unidad %2 en el periodo calculado."';
@@ -336,7 +384,30 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines."JMC Structure Totals Ready" := false;
         jmcItem.Get(JMCTempLines."JMC Item No.");
         JMCTempLines."JMC Item Description" := jmcItem.Description;
-        JMCTempLines."JMC Priority Level" := jmcItem."JMC Priority Level";
+        JMCTempLines."JMC Actual Production Qty." := 0;
+        JMCTempLines."JMC Theoretical Production Qty." := 0;
+        JMCTempLines."JMC Production Unit Factor" := 0;
+        JMCSalesLines.Reset();
+        JMCSalesLines.SetRange("JMC Item No.", jmcItem."No.");
+        JMCSalesLines.SetRange("JMC Unit of Measure Code", JMCTempLines."JMC Unit of Measure Code");
+        if JMCSalesLines.FindFirst() then begin
+            JMCTempLines."JMC Net Sales Quantity" := JMCSalesLines."JMC Net Sales Quantity";
+            JMCTempLines."JMC Net Sales Base Qty." := JMCSalesLines."JMC Net Sales Base Qty.";
+            if (JMCSalesLines."JMC Net Sales Quantity" > 0) and (JMCSalesLines."JMC Net Sales Base Qty." > 0) and (JMCSalesLines."JMC Calculation Issue" = '') then
+                JMCTempLines."JMC Production Unit Factor" := JMCSalesLines."JMC Net Sales Base Qty." / JMCSalesLines."JMC Net Sales Quantity";
+        end;
+        if not JMCSalesBaseTotals.ContainsKey(jmcItem."No.") and
+           (JMCTempLines."JMC Unit of Measure Code" = jmcItem."Base Unit of Measure")
+        then
+            JMCTempLines."JMC Production Unit Factor" := 1;
+        if JMCProductionQuantities.ContainsKey(jmcItem."No.") then
+            if JMCSalesBaseTotals.ContainsKey(jmcItem."No.") then begin
+                if JMCTempLines."JMC Production Unit Factor" > 0 then
+                    JMCTempLines."JMC Actual Production Qty." := JMCProductionQuantities.Get(jmcItem."No.") * JMCTempLines."JMC Net Sales Base Qty." / JMCSalesBaseTotals.Get(jmcItem."No.") / JMCTempLines."JMC Production Unit Factor";
+            end else
+                if JMCTempLines."JMC Production Unit Factor" = 1 then
+                    JMCTempLines."JMC Actual Production Qty." := JMCProductionQuantities.Get(jmcItem."No.");
+        JMCTempLines."JMC Theoretical Production Qty." := JMCTempLines."JMC Actual Production Qty.";
         if not jmcStructureRecipes.GetStructureCost(jmcItem."No.", jmcStructurePercentage, jmcStructureValue) then begin
             JMCTempLines."JMC Calculation Issue" := jmcMissingC01Lbl;
             exit;
@@ -357,23 +428,25 @@ codeunit 53104 "JMC Cost Model Calculation"
         if JMCSalesLines.FindFirst() then begin
             JMCTempLines."JMC Net Sales Quantity" := JMCSalesLines."JMC Net Sales Quantity";
             JMCTempLines."JMC Net Sales Base Qty." := JMCSalesLines."JMC Net Sales Base Qty.";
-            if JMCSalesLines."JMC Calculation Issue" <> '' then begin
+            if (JMCSalesLines."JMC Calculation Issue" <> '') and
+               (JMCSalesBaseTotals.ContainsKey(jmcItem."No.") or (JMCTempLines."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure"))
+            then begin
                 JMCTempLines."JMC Calculation Issue" := JMCSalesLines."JMC Calculation Issue";
                 exit;
             end;
         end;
-        if JMCTempLines."JMC Net Sales Quantity" <= 0 then begin
+        if (JMCTempLines."JMC Net Sales Quantity" <= 0) and (JMCTempLines."JMC Production Unit Factor" = 0) then begin
             if JMCTempLines."JMC Net Sales Quantity" < 0 then
                 JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcReturnsLbl, jmcItem."No.", JMCTempLines."JMC Unit of Measure Code")
             else
                 JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcSalesErr, jmcItem."No.", JMCTempLines."JMC Unit of Measure Code");
             exit;
         end;
-        if (JMCTempLines."JMC Unit of Measure Code" = '') or (JMCTempLines."JMC Net Sales Base Qty." <= 0) then begin
+        if (JMCTempLines."JMC Unit of Measure Code" = '') or (JMCTempLines."JMC Production Unit Factor" <= 0) then begin
             JMCTempLines."JMC Calculation Issue" := jmcUnitIssueLbl;
             exit;
         end;
-        JMCTempLines."JMC Recipe BOM Cost" := JMCRecipeCosts.Get(jmcItem."No.") * JMCTempLines."JMC Net Sales Base Qty." / JMCTempLines."JMC Net Sales Quantity";
+        JMCTempLines."JMC Recipe BOM Cost" := JMCRecipeCosts.Get(jmcItem."No.") * JMCTempLines."JMC Production Unit Factor";
         if (CopyStr(jmcItem."No.", 1, 2) <> 'CA') and (CopyStr(jmcItem."No.", 1, 2) <> 'PT') then begin
             JMCTempLines."JMC Calculation Issue" := jmcBusinessIssueLbl;
             exit;
@@ -382,25 +455,27 @@ codeunit 53104 "JMC Cost Model Calculation"
             JMCTempLines."JMC Calculation Issue" := JMCItemIssues.Get(jmcItem."No.");
             exit;
         end;
-        if (JMCTempLines."JMC Priority Level" < 1) or (JMCTempLines."JMC Priority Level" > 5) then begin
-            JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcItemPriorityErr, jmcItem."No.");
-            exit;
-        end;
-        if not jmcPriority.Get(JMCTempLines."JMC Priority Level") then begin
-            JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcPriorityErr, JMCTempLines."JMC Priority Level");
-            exit;
-        end;
-        if (jmcPriority."JMC Allocation Pct." <= 0) or (jmcPriority."JMC Allocation Pct." > 100) then begin
-            JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcPriorityErr, JMCTempLines."JMC Priority Level");
-            exit;
-        end;
-        JMCTempLines."JMC Applied Priority Factor" := jmcPriority."JMC Allocation Pct." / 100;
         // The final manual cost is the one set in recipe cost C01, per line unit when it is an amount.
         if jmcStructurePercentage then
             JMCTempLines."JMC Final Cost" := jmcStructureValue
         else
-            JMCTempLines."JMC Final Cost" := jmcStructureValue * JMCTempLines."JMC Net Sales Base Qty." / JMCTempLines."JMC Net Sales Quantity";
+            JMCTempLines."JMC Final Cost" := jmcStructureValue * JMCTempLines."JMC Production Unit Factor";
         JMCTempLines."JMC Allocation Eligible" := true;
+    end;
+
+    local procedure SetProductionEligibility()
+    var
+        jmcNoProductionLbl: Label 'Production quantity must be positive to allocate costs.', Comment = 'ESP="La cantidad de fabricación debe ser positiva para repartir costes."';
+    begin
+        JMCTempLines."JMC Assigned Industrial Cost" := 0;
+        JMCTempLines."JMC Assigned Management Cost" := 0;
+        JMCTempLines."JMC Industrial Cost" := 0;
+        JMCTempLines."JMC Management Cost" := 0;
+        JMCTempLines."JMC Allocation Eligible" := JMCTempLines."JMC Calculation Issue" = '';
+        if JMCTempLines."JMC Allocation Eligible" and (JMCTempLines."JMC Theoretical Production Qty." <= 0) then begin
+            JMCTempLines."JMC Calculation Issue" := jmcNoProductionLbl;
+            JMCTempLines."JMC Allocation Eligible" := false;
+        end;
     end;
 
     local procedure BuildBases()
@@ -414,7 +489,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         repeat
             if JMCTempLines."JMC Allocation Eligible" then begin
                 jmcBusiness := BusinessIndex(JMCTempLines."JMC Item No.");
-                jmcRecipeValue := JMCTempLines."JMC Net Sales Base Qty." * JMCRecipeCosts.Get(JMCTempLines."JMC Item No.");
+                jmcRecipeValue := JMCTempLines."JMC Theoretical Production Qty." * JMCTempLines."JMC Recipe BOM Cost";
                 jmcGroupKey := SalesGroupKey(jmcBusiness, JMCTempLines."JMC Unit of Measure Code");
                 if not JMCSalesGroupRecipeBases.ContainsKey(jmcGroupKey) then begin
                     JMCSalesGroupRecipeBases.Add(jmcGroupKey, 0);
@@ -423,7 +498,7 @@ codeunit 53104 "JMC Cost Model Calculation"
                     JMCSalesGroupCounts[jmcBusiness] += 1;
                 end;
                 JMCSalesGroupRecipeBases.Set(jmcGroupKey, JMCSalesGroupRecipeBases.Get(jmcGroupKey) + jmcRecipeValue);
-                JMCSalesGroupQuantityBases.Set(jmcGroupKey, JMCSalesGroupQuantityBases.Get(jmcGroupKey) + JMCTempLines."JMC Net Sales Quantity" * JMCTempLines."JMC Applied Priority Factor");
+                JMCSalesGroupQuantityBases.Set(jmcGroupKey, JMCSalesGroupQuantityBases.Get(jmcGroupKey) + JMCTempLines."JMC Theoretical Production Qty.");
                 JMCBases[jmcBusiness] += jmcRecipeValue;
             end;
         until JMCTempLines.Next() = 0;
@@ -573,7 +648,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcRemainingManagement := jmcManagementFund;
         if JMCTempLines.FindSet() then
             repeat
-                jmcWeight := JMCTempLines."JMC Net Sales Quantity" * JMCTempLines."JMC Applied Priority Factor";
+                jmcWeight := JMCTempLines."JMC Theoretical Production Qty.";
                 if jmcCount = 1 then begin
                     jmcIndustrial := jmcRemainingIndustrial;
                     jmcManagement := jmcRemainingManagement;
@@ -585,8 +660,8 @@ codeunit 53104 "JMC Cost Model Calculation"
                 end;
                 JMCTempLines."JMC Assigned Industrial Cost" := jmcIndustrial;
                 JMCTempLines."JMC Assigned Management Cost" := jmcManagement;
-                JMCTempLines."JMC Industrial Cost" := jmcIndustrial / JMCTempLines."JMC Net Sales Quantity";
-                JMCTempLines."JMC Management Cost" := jmcManagement / JMCTempLines."JMC Net Sales Quantity";
+                JMCTempLines."JMC Industrial Cost" := jmcIndustrial / JMCTempLines."JMC Theoretical Production Qty.";
+                JMCTempLines."JMC Management Cost" := jmcManagement / JMCTempLines."JMC Theoretical Production Qty.";
                 JMCDetail.AddAllocation(JMCTempLines, jmcWeight, jmcBase, jmcIndustrialFund, jmcManagementFund, JMCRecipeCosts.Get(JMCTempLines."JMC Item No."));
                 JMCTempLines.Modify(false);
                 jmcRemainingIndustrial -= jmcIndustrial;
@@ -661,6 +736,8 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCDetail: Codeunit "JMC Cost Calculation Detail";
         JMCRecipeCosts: Dictionary of [Code[20], Decimal];
         JMCItemIssues: Dictionary of [Code[20], Text];
+        JMCProductionQuantities: Dictionary of [Code[20], Decimal];
+        JMCSalesBaseTotals: Dictionary of [Code[20], Decimal];
         JMCBases: array[2] of Decimal;
         JMCSalesGroupRecipeBases: Dictionary of [Text, Decimal];
         JMCSalesGroupQuantityBases: Dictionary of [Text, Decimal];

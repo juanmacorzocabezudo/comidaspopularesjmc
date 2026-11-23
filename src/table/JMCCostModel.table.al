@@ -96,7 +96,7 @@ table 53102 "JMC Cost Model"
         {
             Caption = 'Model Unchanged Since Calculation', Comment = 'ESP="Modelo sin cambios desde el cálculo"';
             Editable = false;
-            ToolTip = 'Indicates that model inputs and priority factors have not changed. Later changes to ledger entries or recipes are not monitored; recalculate to refresh source data.', Comment = 'ESP="Indica que no han cambiado las entradas del modelo ni los factores. No se supervisan cambios posteriores en movimientos o recetas; recalcule para actualizar las fuentes."';
+            ToolTip = 'Indicates that model inputs have not changed. Later changes to ledger entries or recipes are not monitored; calculate all costs to refresh source data.', Comment = 'ESP="Indica que no han cambiado los datos del modelo. No se supervisan cambios posteriores en movimientos o recetas; calcule todos los costes para actualizar las fuentes."';
         }
         field(25; "JMC Fixed Industrial Fund"; Decimal)
         {

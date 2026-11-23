@@ -14,6 +14,48 @@ codeunit 53108 "JMC Cost Calculation Detail"
         Clear(JMCPending);
     end;
 
+    procedure InitializeSavedSources(jmcSelectedModelCode: Code[20])
+    var
+        jmcSaved: Record "JMC Cost Calculation Detail";
+    begin
+        Initialize(jmcSelectedModelCode);
+        jmcSaved.SetRange("JMC Model Code", jmcSelectedModelCode);
+        jmcSaved.SetFilter("JMC Detail Type", '%1|%2', jmcSaved."JMC Detail Type"::Accounting, jmcSaved."JMC Detail Type"::Production);
+        if jmcSaved.FindSet() then
+            repeat
+                NewDetail();
+                JMCBuffer.TransferFields(jmcSaved, false);
+                JMCBuffer.Insert(false);
+                if jmcSaved."JMC Detail Type" = jmcSaved."JMC Detail Type"::Accounting then
+                    JMCAccounting[jmcSaved."JMC Classification".AsInteger()] += jmcSaved."JMC Source Amount"
+                else
+                    if jmcSaved."JMC Included" then
+                        JMCProduction[BusinessIndex(jmcSaved."JMC Business")] += jmcSaved."JMC Source Amount";
+            until jmcSaved.Next() = 0;
+    end;
+
+    procedure SavedLineCount(jmcModelCode: Code[20]): Integer
+    var
+        jmcSaved: Record "JMC Cost Calculation Detail";
+    begin
+        jmcSaved.SetRange("JMC Model Code", jmcModelCode);
+        jmcSaved.SetRange("JMC Detail Type", jmcSaved."JMC Detail Type"::Allocation);
+        jmcSaved.SetRange("JMC Classification", Enum::"JMC Cost Classification".FromInteger(1));
+        exit(jmcSaved.Count());
+    end;
+
+    procedure HasSavedLine(jmcLine: Record "JMC Cost Model Line"): Boolean
+    var
+        jmcSaved: Record "JMC Cost Calculation Detail";
+    begin
+        jmcSaved.SetRange("JMC Model Code", jmcLine."JMC Model Code");
+        jmcSaved.SetRange("JMC Detail Type", jmcSaved."JMC Detail Type"::Allocation);
+        jmcSaved.SetRange("JMC Source Entry No.", jmcLine."JMC Line No.");
+        jmcSaved.SetRange("JMC Item No.", jmcLine."JMC Item No.");
+        jmcSaved.SetRange("JMC Unit Code", jmcLine."JMC Unit of Measure Code");
+        exit(not jmcSaved.IsEmpty());
+    end;
+
     procedure AddAccounting(jmcEntry: Record "G/L Entry"; jmcAccount: Record "G/L Account")
     begin
         NewDetail();
@@ -72,11 +114,9 @@ codeunit 53108 "JMC Cost Calculation Detail"
             JMCBuffer."JMC Item No." := jmcLine."JMC Item No.";
             JMCBuffer."JMC Description" := jmcLine."JMC Item Description";
             JMCBuffer."JMC Unit Code" := jmcLine."JMC Unit of Measure Code";
-            JMCBuffer."JMC Quantity" := jmcLine."JMC Net Sales Quantity";
-            JMCBuffer."JMC Base Quantity" := jmcLine."JMC Net Sales Base Qty.";
+            JMCBuffer."JMC Quantity" := jmcLine."JMC Theoretical Production Qty.";
+            JMCBuffer."JMC Base Quantity" := jmcLine."JMC Theoretical Production Qty." * jmcLine."JMC Production Unit Factor";
             JMCBuffer."JMC Base Recipe Cost" := jmcBaseRecipeCost;
-            JMCBuffer."JMC Priority Factor" := jmcLine."JMC Applied Priority Factor";
-            JMCBuffer."JMC Priority Level" := jmcLine."JMC Priority Level";
             JMCBuffer."JMC Method" := jmcLine."JMC Allocation Method";
             JMCBuffer."JMC Classification" := Enum::"JMC Cost Classification".FromInteger(jmcCategory);
             JMCBuffer."JMC Included" := jmcLine."JMC Allocation Eligible";

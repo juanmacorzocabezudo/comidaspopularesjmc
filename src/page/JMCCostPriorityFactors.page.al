@@ -4,7 +4,7 @@ page 53108 "JMC Cost Priority Factors"
     PageType = Worksheet;
     SourceTable = "JMC Cost Priority Factor";
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = None;
     DelayedInsert = true;
 
     layout

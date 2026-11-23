@@ -31,8 +31,6 @@ page 53129 "JMC Cost Detail Analysis"
                 field("JMC Quantity"; Rec."JMC Quantity") { ApplicationArea = All; }
                 field("JMC Base Quantity"; Rec."JMC Base Quantity") { ApplicationArea = All; Visible = JMCAllocation; }
                 field("JMC Base Recipe Cost"; Rec."JMC Base Recipe Cost") { ApplicationArea = All; Visible = false; }
-                field("JMC Priority Level"; Rec."JMC Priority Level") { ApplicationArea = All; Visible = JMCAllocation; }
-                field("JMC Priority Factor"; Rec."JMC Priority Factor") { ApplicationArea = All; Visible = JMCAllocation; }
                 field("JMC Included"; Rec."JMC Included") { ApplicationArea = All; }
                 field("JMC Source Amount"; Rec."JMC Source Amount") { ApplicationArea = All; }
                 field("JMC Formula"; Rec."JMC Formula") { ApplicationArea = All; }

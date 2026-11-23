@@ -313,7 +313,7 @@ page 53126 "JMC Cost Model Simulator"
             exit(false);
         end;
         jmcLine := JMCSavedLines;
-        if (not jmcLine."JMC Allocation Eligible") or (jmcLine."JMC Calculation Issue" <> '') or (jmcLine."JMC Net Sales Quantity" <= 0) then begin
+        if (not jmcLine."JMC Allocation Eligible") or (jmcLine."JMC Calculation Issue" <> '') then begin
             if jmcLine."JMC Calculation Issue" <> '' then
                 jmcIssue := jmcLine."JMC Calculation Issue"
             else

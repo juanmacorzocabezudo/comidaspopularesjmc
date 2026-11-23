@@ -1,5 +1,7 @@
 # Requerimientos del módulo de costes indirectos / estructura
 
+> **Actualización de fabricación:** las referencias posteriores a prioridades y reparto por ventas describen el cálculo anterior y quedan sustituidas por estas reglas. Calcular todos los costes toma la fabricación neta de salidas de ensamblado del periodo y la reparte por unidad de venta proporcionalmente a las ventas netas en unidad base; sin ventas positivas utiliza una línea en unidad base. La cantidad teórica inicial coincide con la real y se puede modificar. Recalcular costes redistribuye los fondos guardados con esas cantidades, sin releer movimientos ni recetas y conservando el coste final manual. Una cantidad no positiva queda sin reparto. Entre grupos de unidad se usa cantidad de fabricación por coste de receta de la unidad; dentro de cada grupo se usa la cantidad de fabricación. Los campos y configuraciones anteriores de prioridad se conservan solo por compatibilidad y no intervienen. Un cálculo antiguo debe ejecutarse de nuevo con Calcular todos los costes antes de usar el nuevo recálculo.
+
 **Ámbito:** Catering e Industria de Comidas Populares. La elaboración de recetas se realiza mediante **pedidos de ensamblado**. Este documento define el desarrollo solicitado, tomando como base el Excel del CEO y las aclaraciones del 22/10/2026.
 
 ## 1. Objetivo y alcance

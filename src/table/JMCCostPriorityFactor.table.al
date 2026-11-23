@@ -42,18 +42,11 @@ table 53104 "JMC Cost Priority Factor"
     trigger OnInsert()
     begin
         CheckFactor();
-        InvalidateCalculation();
     end;
 
     trigger OnModify()
     begin
         CheckFactor();
-        InvalidateCalculation();
-    end;
-
-    trigger OnDelete()
-    begin
-        InvalidateCalculation();
     end;
 
     trigger OnRename()

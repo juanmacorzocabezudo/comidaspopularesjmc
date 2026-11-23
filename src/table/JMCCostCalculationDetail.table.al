@@ -134,7 +134,7 @@ table 53105 "JMC Cost Calculation Detail"
         field(25; "JMC Quantity"; Decimal)
         {
             Caption = 'Saved Movement or Sales Quantity', Comment = 'ESP="Cantidad de movimiento o venta guardada"';
-            ToolTip = 'Shows production quantity in the product base unit; for allocations it shows net sales quantity in its sales unit, after returns. Do not add kilograms, boxes or other different units together.', Comment = 'ESP="En producción es la cantidad en la unidad base del producto; en repartos es la cantidad vendida en su unidad de venta, descontando devoluciones. No sume kilos, cajas u otras unidades diferentes entre sí."';
+            ToolTip = 'Shows the production movement quantity in the base unit, or the production quantity used for an allocation in its line unit. Do not add different units together.', Comment = 'ESP="Muestra la cantidad del movimiento de producción en unidad base o la cantidad de fabricación utilizada para un reparto en la unidad de la línea. No sume unidades diferentes."';
             DecimalPlaces = 2 : 2;
         }
         field(26; "JMC Calculated At"; DateTime)
@@ -164,7 +164,7 @@ table 53105 "JMC Cost Calculation Detail"
         field(31; "JMC Base Quantity"; Decimal)
         {
             Caption = 'Saved Net Base Quantity', Comment = 'ESP="Cantidad base neta guardada"';
-            ToolTip = 'Shows net sales converted to the product base unit using the conversions recorded on the sales movements. It lets the calculation compare different sales formats of the same product.', Comment = 'ESP="Es la venta neta convertida a la unidad base del producto con las conversiones de los movimientos de venta. Permite que el cálculo compare distintos formatos de venta del mismo producto."';
+            ToolTip = 'Shows the production quantity used for the allocation converted to the product base unit.', Comment = 'ESP="Muestra la cantidad de fabricación utilizada para el reparto convertida a la unidad base del producto."';
             DecimalPlaces = 2 : 2;
         }
         field(32; "JMC Base Recipe Cost"; Decimal)

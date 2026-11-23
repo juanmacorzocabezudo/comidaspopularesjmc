@@ -45,6 +45,5 @@ codeunit 53105 "JMC Cost Priority Install"
             end;
         end;
         // Triggers are skipped to avoid checking intermediate values, so invalidate the model explicitly.
-        jmcFactor.InvalidateCalculation();
     end;
 }

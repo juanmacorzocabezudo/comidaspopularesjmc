@@ -24,18 +24,6 @@ page 53124 "JMC Cost Model Lines"
                     ApplicationArea = All;
                     ToolTip = 'Shows the product name saved in the model. It helps identify the row and does not change how expenses are distributed.', Comment = 'ESP="Muestra el nombre del producto guardado en el modelo. Sirve para identificar la línea y no cambia cómo se reparten los gastos."';
                 }
-                field("JMC Allocation Eligible"; Rec."JMC Allocation Eligible")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'A check mark means that this row met the conditions to receive expenses in the last calculation. If it is not checked then read Calculation Issue. A zero cost on an ineligible row is not a valid calculated cost.', Comment = 'ESP="La marca indica que esta línea cumplió las condiciones para recibir gastos en el último cálculo. Si no está marcada consulte Incidencia del cálculo. Un coste a cero en una línea no apta no es un coste calculado válido."';
-                }
-                field("JMC Calculation Issue"; Rec."JMC Calculation Issue")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Explains why this product and unit could not receive an allocation. Correct the cause and run Calculate All Costs again to update the row.', Comment = 'ESP="Explica por qué este producto y unidad no han podido recibir reparto. Corrija la causa y ejecute de nuevo Calcular todos los costes para actualizar la línea."';
-                    Style = Attention;
-                    StyleExpr = Rec."JMC Calculation Issue" <> '';
-                }
                 field("JMC Cost Value Type"; Rec."JMC Cost Value Type")
                 {
                     ApplicationArea = All;
@@ -49,7 +37,7 @@ page 53124 "JMC Cost Model Lines"
                 field("JMC Final Cost"; Rec."JMC Final Cost")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the structure cost kept in the recipe for this row, read from structure cost C01 when the model was calculated: euros per row unit, or the percentage itself for the Percentage type. You can edit it, but the change reaches the recipe only through Apply Final Cost to Recipe. Recalculating reads it from the recipe again.', Comment = 'ESP="Muestra el coste de estructura que se mantiene en la receta para esta línea, leído del coste de estructura C01 al calcular el modelo: euros por unidad de la línea, o el propio porcentaje con el tipo Porcentaje. Puede editarlo, pero el cambio solo llega a la receta mediante Aplicar coste final a receta. Al recalcular se vuelve a leer de la receta."';
+                    ToolTip = 'Shows the manual structure cost. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Changes reach the recipe only through Apply Final Cost to Recipe.', Comment = 'ESP="Muestra el coste manual de estructura. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Los cambios solo llegan a la receta mediante Aplicar coste final a receta."';
                     Editable = Rec."JMC Manual Totals Ready" and Rec."JMC Structure Totals Ready";
 
                     trigger OnValidate()
@@ -61,6 +49,30 @@ page 53124 "JMC Cost Model Lines"
                 field("JMC Cost Difference"; Rec."JMC Cost Difference")
                 {
                     ApplicationArea = All;
+                    Caption = 'Cost Difference', Comment = 'ESP="Diferencia coste"';
+                }
+                field("JMC Actual Production Qty."; Rec."JMC Actual Production Qty.")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows net production in the period allocated to this sales unit in proportion to net base sales. When there are no sales, it is shown in the base unit.', Comment = 'ESP="Muestra la fabricación neta del periodo asignada a esta unidad de venta proporcionalmente a las ventas netas en unidad base. Si no hay ventas se muestra en unidad base."';
+                }
+                field("JMC Theoretical Production Qty."; Rec."JMC Theoretical Production Qty.")
+                {
+                    ApplicationArea = All;
+                    Editable = Rec."JMC Production Inputs Ready";
+                    ToolTip = 'Specifies the quantity in this line unit for Recalculate Costs. Initially it equals actual production. Zero excludes this line.', Comment = 'ESP="Especifica la cantidad en la unidad de esta línea para Recalcular costes. Inicialmente coincide con la fabricación real. Cero excluye esta línea."';
+                }
+                field("JMC Allocation Eligible"; Rec."JMC Allocation Eligible")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'A check mark means that this row met the conditions to receive expenses in the last calculation. If it is not checked then read Calculation Issue. A zero cost on an ineligible row is not a valid calculated cost.', Comment = 'ESP="La marca indica que esta línea cumplió las condiciones para recibir gastos en el último cálculo. Si no está marcada consulte Incidencia del cálculo. Un coste a cero en una línea no apta no es un coste calculado válido."';
+                }
+                field("JMC Calculation Issue"; Rec."JMC Calculation Issue")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Explains why this product and unit could not receive an allocation. Correct the quantity and recalculate costs, or calculate all costs again to refresh the source data.', Comment = 'ESP="Explica por qué este producto y unidad no han podido recibir reparto. Corrija la cantidad y recalcule costes, o calcule todos los costes para actualizar los datos de origen."';
+                    Style = Attention;
+                    StyleExpr = Rec."JMC Calculation Issue" <> '';
                 }
                 field("JMC Recipe BOM Cost"; Rec."JMC Recipe BOM Cost")
                 {
@@ -73,16 +85,10 @@ page 53124 "JMC Cost Model Lines"
                     ApplicationArea = All;
                     ToolTip = 'Identifies the sales unit for this row. Unit costs refer to one unit of this presentation and quantities include only its sales. Changing it requires calculating again. Do not add quantities in different units.', Comment = 'ESP="Identifica la unidad de venta de esta línea. Los costes unitarios corresponden a una unidad de esta presentación y las cantidades incluyen solo sus ventas. Si la cambia debe volver a calcular. No sume cantidades de unidades diferentes."';
                 }
-                field("JMC Priority Level"; Rec."JMC Priority Level")
-                {
-                    ApplicationArea = All;
-                    Editable = false;
-                    ToolTip = 'Shows the priority of the product, from 1 to 5, copied from its item card when the model was calculated. It cannot be edited here. Its percentage in Priority Factors gives the line more or less share of the expenses.', Comment = 'ESP="Muestra la prioridad del producto, del 1 al 5, copiada de su ficha al calcular el modelo. No se puede editar aquí. Su porcentaje en Factores de prioridad da a la línea más o menos parte de los gastos."';
-                }
                 field("JMC Industrial Cost"; Rec."JMC Industrial Cost")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the industrial amount assigned to this row divided by its net sales quantity. It is a cost per row unit and is included in TOTAL COST. Editing Final Manual Cost does not change this calculated value.', Comment = 'ESP="Muestra el importe industrial asignado a esta línea dividido entre su cantidad neta vendida. Es un coste por unidad de la línea y está incluido en TOTAL COSTE. Cambiar Coste final manual no modifica este valor calculado."';
+                    ToolTip = 'Shows the industrial amount assigned to this row divided by its production quantity used in the calculation.', Comment = 'ESP="Muestra el importe industrial asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo."';
                 }
                 field("JMC Industrial Cost Pct."; Rec."JMC Industrial Cost Pct.")
                 {
@@ -92,7 +98,7 @@ page 53124 "JMC Cost Model Lines"
                 field("JMC Management Cost"; Rec."JMC Management Cost")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the management amount assigned to this row divided by its net sales quantity. It is the management cost per row unit and does not include industrial or recipe cost. It is included in TOTAL COST.', Comment = 'ESP="Muestra el importe de gestión asignado a esta línea dividido entre su cantidad neta vendida. Es el coste de gestión por unidad de la línea y no incluye el coste industrial ni el de receta. Está incluido en TOTAL COSTE."';
+                    ToolTip = 'Shows the management amount assigned to this row divided by its production quantity used in the calculation.', Comment = 'ESP="Muestra el importe de gestión asignado a esta línea dividido entre la cantidad de fabricación utilizada en el cálculo."';
                 }
                 field("JMC Management Cost Pct."; Rec."JMC Management Cost Pct.")
                 {
@@ -107,17 +113,12 @@ page 53124 "JMC Cost Model Lines"
                 field("JMC Net Sales Quantity"; Rec."JMC Net Sales Quantity")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the quantity sold in this row unit during the period after subtracting returns. It includes posted shipments not yet invoiced. Assigned amounts are divided by this quantity to obtain unit costs.', Comment = 'ESP="Muestra la cantidad vendida en la unidad de esta línea durante el periodo tras descontar devoluciones. Incluye los envíos registrados pendientes de facturar. Los importes asignados se dividen entre esta cantidad para obtener los costes unitarios."';
+                    ToolTip = 'Shows net sales in this row unit during the period, including uninvoiced shipments. Sales determine the distribution of production between the item''s sales units.', Comment = 'ESP="Muestra las ventas netas del periodo en la unidad de esta línea, incluidos envíos pendientes de facturar. Las ventas determinan el reparto de la fabricación entre las unidades de venta del producto."';
                 }
                 field("JMC Net Sales Base Qty."; Rec."JMC Net Sales Base Qty.")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Shows this row sales quantity converted to the product base unit using the conversions saved in its entries. Returns are subtracted and sales in other presentations are excluded. It is not another quantity to add to net sales.', Comment = 'ESP="Muestra la cantidad vendida de esta línea convertida a la unidad base del producto con las conversiones guardadas en sus movimientos. Se descuentan devoluciones y no se incluyen ventas de otras presentaciones. No es otra cantidad que deba sumar a las ventas netas."';
-                }
-                field("JMC Applied Priority Factor"; Rec."JMC Applied Priority Factor")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Shows the priority percentage used in the last calculation as a multiplier, for example 1 for 100 percent and 0.8 for 80 percent. A larger value gives more share of the expenses. If you change the item priority or the percentages, calculate again to update this value.', Comment = 'ESP="Muestra el porcentaje de la prioridad utilizado en el último cálculo como multiplicador, por ejemplo 1 para el 100 % y 0,8 para el 80 %. Un valor mayor da más parte de los gastos. Si cambia la prioridad del producto o los porcentajes, debe volver a calcular para actualizar este valor."';
                 }
                 field("JMC Assigned Industrial Cost"; Rec."JMC Assigned Industrial Cost")
                 {
@@ -137,6 +138,33 @@ page 53124 "JMC Cost Model Lines"
     {
         area(Processing)
         {
+            action(JMCRecalculateCosts)
+            {
+                Caption = 'Recalculate Costs', Comment = 'ESP="Recalcular costes"';
+                ToolTip = 'Redistributes the saved funds using the theoretical production quantities without rereading accounting, production or recipes.', Comment = 'ESP="Redistribuye los fondos guardados usando las cantidades teóricas de fabricación sin volver a leer contabilidad, producción ni recetas."';
+                ApplicationArea = All;
+                Image = Calculate;
+
+                trigger OnAction()
+                var
+                    jmcCalculation: Codeunit "JMC Cost Model Calculation";
+                    jmcModel: Record "JMC Cost Model";
+                    jmcLine: Record "JMC Cost Model Line";
+                    jmcCompletedLbl: Label 'Costs recalculated using the theoretical production quantities.', Comment = 'ESP="Costes recalculados con las cantidades teóricas de fabricación."';
+                    jmcPartialLbl: Label 'Costs recalculated. Lines with issues: %1. Review the issues and the funds pending allocation in the model.', Comment = 'ESP="Costes recalculados. Líneas con incidencia: %1. Revise las incidencias y los fondos pendientes de reparto en el modelo."';
+                begin
+                    CurrPage.SaveRecord();
+                    jmcCalculation.RecalculateProduction(Rec."JMC Model Code");
+                    jmcModel.Get(Rec."JMC Model Code");
+                    jmcLine.SetRange("JMC Model Code", Rec."JMC Model Code");
+                    jmcLine.SetFilter("JMC Calculation Issue", '<>%1', '');
+                    if (not jmcLine.IsEmpty()) or (jmcModel."JMC Sales Pending Industrial" <> 0) or (jmcModel."JMC Sales Pending Management" <> 0) then
+                        Message(jmcPartialLbl, jmcLine.Count())
+                    else
+                        Message(jmcCompletedLbl);
+                    CurrPage.Update(false);
+                end;
+            }
             action(JMCApplyCostToRecipe)
             {
                 Caption = 'Apply Final Cost to Recipe', Comment = 'ESP="Aplicar coste final a receta"';

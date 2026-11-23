@@ -18,6 +18,7 @@ permissionset 53100 "JMC CP BASE MGT"
         tabledata "G/L Account" = RIMD,
         tabledata "Resource" = RIMD,
         tabledata "Item" = RIMD,
+        tabledata "Item Category" = RIM,
         tabledata "Vendor" = RIMD,
         tabledata "Item Ledger Entry" = RIMD,
         tabledata "Value Entry" = R,
@@ -97,6 +98,8 @@ permissionset 53100 "JMC CP BASE MGT"
         // Reports JMC
         report "JMC Delete Archived Events" = X,
         report "JMC Update Item Weights" = X,
+        report "JMC Update Item Categories" = X,
+        report "JMC Update Item Classification" = X,
         report "JMC Activate Price List Lines" = X,
         report "JMC Delete Empty Price Lines" = X,
         report "Sales Invoice Industry Report" = X,
@@ -105,6 +108,7 @@ permissionset 53100 "JMC CP BASE MGT"
 
         // Codeunits necesarios
         codeunit "JMC Events" = X,
+        codeunit "JMC Item Class. Subscribers" = X,
         codeunit "JMC Oper. Rec. Jnl. Mgt" = X,
         codeunit "JMC Supplier Incident Mgt" = X,
         codeunit "JMC Incident Vendor Reminder" = X,

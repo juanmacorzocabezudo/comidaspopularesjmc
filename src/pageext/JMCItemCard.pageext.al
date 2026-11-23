@@ -2,6 +2,63 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
 {
     layout
     {
+        addbefore("Item Category Code")
+        {
+            field("JMC Category Type"; Rec."JMC Category Type")
+            {
+                ApplicationArea = All;
+                Caption = 'Category Type', Comment = 'ESP="Tipo categoría"';
+                ToolTip = 'Specifies the category type of the item. It filters the available item categories and subcategories.', Comment = 'ESP="Especifica el tipo de categoría del producto. Filtra las familias y sub familias disponibles."';
+
+                trigger OnValidate()
+                begin
+                    CurrPage.Update(false);
+                end;
+            }
+        }
+        // The standard control is replaced because a table extension cannot narrow the TableRelation of a base field.
+        modify("Item Category Code")
+        {
+            Visible = false;
+        }
+        addafter("Item Category Code")
+        {
+            field("JMC Item Category Code"; JMCItemCategoryCode)
+            {
+                ApplicationArea = All;
+                Caption = 'Item Category Code', Comment = 'ESP="Familia producto"';
+                ToolTip = 'Specifies the item category. Only categories with the same category type as the item are offered.', Comment = 'ESP="Especifica la familia del producto. Solo se ofrecen categorías del mismo tipo que el producto."';
+                TableRelation = "Item Category" where("JMC Category Type" = field("JMC Category Type"));
+
+                trigger OnValidate()
+                begin
+                    Rec.Validate("Item Category Code", JMCItemCategoryCode);
+                    CurrPage.ItemAttributesFactbox.Page.LoadItemAttributesData(Rec."No.");
+                    CurrPage.Update(true);
+                end;
+            }
+            field("JMC Item Category Name"; Rec."JMC Item Category Name")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the description of the item category.', Comment = 'ESP="Especifica la descripción de la familia del producto."';
+            }
+            field("JMC Sub Item Category Code"; Rec."JMC Sub Item Category Code")
+            {
+                ApplicationArea = All;
+                Caption = 'Item Subcategory Code', Comment = 'ESP="Sub familia producto"';
+                ToolTip = 'Specifies the item subcategory. Only categories with the same category type as the item are offered.', Comment = 'ESP="Especifica la sub familia del producto. Solo se ofrecen categorías del mismo tipo que el producto."';
+
+                trigger OnValidate()
+                begin
+                    CurrPage.Update(false);
+                end;
+            }
+            field("JMC Item Subcategory Name"; Rec."JMC Item Subcategory Name")
+            {
+                ApplicationArea = All;
+                ToolTip = 'Specifies the description of the item subcategory.', Comment = 'ESP="Especifica la descripción de la sub familia del producto."';
+            }
+        }
         addafter(Formato)
         {
             field("JMC Weight"; Rec."JMC Weight")
@@ -56,6 +113,7 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
 
     trigger OnAfterGetRecord()
     begin
+        JMCItemCategoryCode := Rec."Item Category Code";
         CalculateStockUnitCost();
         CalculateLastYearUnitCost();
     end;
@@ -114,7 +172,13 @@ pageextension 53122 "JMC Item Card" extends "Item Card"
             LastYearUnitCost := TotalCost / TotalQty;
     end;
 
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+        JMCItemCategoryCode := '';
+    end;
+
     var
+        JMCItemCategoryCode: Code[20];
         StockUnitCost: Decimal;
         LastYearUnitCost: Decimal;
 }

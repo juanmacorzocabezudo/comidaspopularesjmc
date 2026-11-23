@@ -1041,6 +1041,14 @@
           <note from="Developer" annotates="general" priority="2">ESP="Termino Pago"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Terminos Pago - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1831575858 - Field 4257284594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer Type</source>
+          <target>[NAB: SUGGESTION]Tipo cliente</target>
+          <target>[NAB: SUGGESTION]Tipo Cliente</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="NAB AL Tool Refresh Xlf" annotates="general" priority="3">Suggested translation inserted.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table JMCAlxControlVenta - Field Tipo Cliente - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1831575858 - Field 2832857678 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Document Type</source>
           <target>Tipo Documento</target>
@@ -7131,6 +7139,18 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer Details FB - Control Avail Credit (LCY) - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 1436985950 - Control 2226395308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Specifies the customer type.</source>
+          <target>Especifica el tipo de cliente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de cliente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer List - Control JMC Customer Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 1436985950 - Control 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Customer Type</source>
+          <target>Tipo Cliente</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Customer List - Control JMC Customer Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 471549067 - Control 1183795359 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3902691336">
           <source>Specifies the total amount for open (not released) sales orders.</source>
           <target>Especifica el importe total de pedidos de venta abiertos (no lanzados).</target>
@@ -7430,6 +7450,18 @@
           <target>Detalles evento</target>
           <note from="Developer" annotates="general" priority="2">ESP="Detalles evento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Action JMC Detalles evento - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 398337721 - Control 2226395308 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
+          <source>Specifies the customer type.</source>
+          <target>Especifica el tipo de cliente.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de cliente."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Control JMC Customer Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 398337721 - Control 2226395308 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
+          <source>Customer Type</source>
+          <target>Tipo Cliente</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo Cliente"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Lista Eventos - Control JMC Customer Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 398337721 - Control 3948035079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1757999966">
           <source>Specifies the total number of adults and children attending the event.</source>

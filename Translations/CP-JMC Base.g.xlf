@@ -7643,6 +7643,76 @@
           <note from="Developer" annotates="general" priority="2">ESP="Proceso completado.\Total registros: %1\Actualizados: %2\Omitidos: %3"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Industry Dates - NamedType CompletionMsg</note>
         </trans-unit>
+        <trans-unit id="Report 1358465458 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Item Categories 2027</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar categorías de producto 2027"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - NamedType 3366217384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Categories updated.\Created: %1\Updated: %2\Unchanged: %3</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Categorías actualizadas.\Creadas: %1\Actualizadas: %2\Sin cambios: %3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - NamedType CompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - NamedType 2963323015" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Create %1 categories and update %2 categories? %3 categories are unchanged. Changing category parents can affect inherited item attributes.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="¿Crear %1 categorías y actualizar %2 categorías? %3 categorías no tienen cambios. Cambiar categorías padre puede afectar a los atributos heredados de los productos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - NamedType ConfirmUpdateQst</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - NamedType 1484865421" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Simulation only. No data was changed.\Categories to create: %1\Categories to update: %2\Unchanged categories: %3</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Solo simulación. No se han modificado datos.\Categorías que se crearían: %1\Categorías que se actualizarían: %2\Categorías sin cambios: %3"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - NamedType PreviewMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - Control 2019666466 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the number of categories to create or update without changing data.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el número de categorías que se crearían o actualizarían sin modificar datos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - Control PreviewOnly - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1358465458 - Control 2019666466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preview Only</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Solo simulación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Categories - Control PreviewOnly - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Update Item Classification 2027</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualizar clasificación de productos 2027"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - NamedType 3366217384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item classification update completed:\\Items updated: %1\Items unchanged: %2\Items not found: %3\Items with invalid classification (skipped): %4\%5</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Actualización de clasificación de productos completada:\\Productos actualizados: %1\Productos sin cambios: %2\Productos no encontrados: %3\Productos con clasificación no válida (omitidos): %4\%5"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - NamedType CompletedMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - NamedType 2963323015" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Items to update: %1\Items unchanged: %2\Items not found: %3\Items with invalid classification (skipped): %4\%5\\Do you want to update the items?</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Productos a actualizar: %1\Productos sin cambios: %2\Productos no encontrados: %3\Productos con clasificación no válida (omitidos): %4\%5\\¿Desea actualizar los productos?"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - NamedType ConfirmUpdateQst</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - NamedType 1484865421" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preview of item classification update:\\Items to update: %1\Items unchanged: %2\Items not found: %3\Items with invalid classification (skipped): %4\%5</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Simulación de actualización de clasificación de productos:\\Productos a actualizar: %1\Productos sin cambios: %2\Productos no encontrados: %3\Productos con clasificación no válida (omitidos): %4\%5"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - NamedType PreviewMsg</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Opciones"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - Control 2019666466 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Shows the number of items to update without changing data.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el número de productos que se actualizarían sin modificar datos."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - Control PreviewOnly - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 2280451906 - Control 2019666466 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Preview Only</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Solo simulación"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report JMC Update Item Classification - Control PreviewOnly - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Report 2107182141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Update Item Weights from Format</source>
           <note from="Developer" annotates="general" priority="2">ESP="Actualizar pesos de productos desde formato"</note>
@@ -8113,6 +8183,46 @@
           <note from="Developer" annotates="general" priority="2">ESP="Especifica si el coste de la cuenta es fijo o variable."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC G/L Account Card - Control JMC Cost Type - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 591914536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the category type of the item. It filters the available item categories and subcategories.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de categoría del producto. Filtra las familias y sub familias disponibles."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Category Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Category Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 2666914216 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the item category. Only categories with the same category type as the item are offered.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la familia del producto. Solo se ofrecen categorías del mismo tipo que el producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Item Category Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 2666914216 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Item Category Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Familia producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Item Category Code - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 2543161234 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the description of the item category.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción de la familia del producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Item Category Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3197570558 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the description of the item subcategory.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción de la sub familia del producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Item Subcategory Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3270798644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Specifies the item subcategory. Only categories with the same category type as the item are offered.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la sub familia del producto. Solo se ofrecen categorías del mismo tipo que el producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Sub Item Category Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 683950567 - Control 3270798644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
+          <source>Item Subcategory Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Sub familia producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Sub Item Category Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 683950567 - Control 26128968 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 1434786627">
           <source>Specifies the weight of the item in kilograms.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Especifica el peso del producto en kilogramos."</note>
@@ -8153,6 +8263,26 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste Unitario Existencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Card - Control JMC Stock Unit Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="PageExtension 2119022633 - Control 591914536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3657300613">
+          <source>Specifies the category type. Items can only use categories with their same category type.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de categoría. Los productos solo pueden usar categorías de su mismo tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Categories - Control JMC Category Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 2119022633 - Control 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3657300613">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Categories - Control JMC Category Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 40517095 - Control 591914536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 964092419">
+          <source>Specifies the category type. Items can only use categories with their same category type.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de categoría. Los productos solo pueden usar categorías de su mismo tipo."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Category Card - Control JMC Category Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 40517095 - Control 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 964092419">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Category Card - Control JMC Category Type - Property Caption</note>
+        </trans-unit>
         <trans-unit id="PageExtension 4239028258 - Action 2561923677 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3595318222">
           <source>Open the item card for the item in this entry, even if it is blocked.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Abrir la ficha del producto de este movimiento, incluso si está bloqueado."</note>
@@ -8172,6 +8302,36 @@
           <source>Item %1 does not exist.</source>
           <note from="Developer" annotates="general" priority="2">ESP="El producto %1 no existe."</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item Ledger Entries - Action JMC View Related Item - Method OnAction - NamedType jmcItemNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 591914536 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Specifies the category type of the item. It filters the available item categories and subcategories.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica el tipo de categoría del producto. Filtra las familias y sub familias disponibles."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Category Type - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Category Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 2543161234 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Specifies the description of the item category.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción de la familia del producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Item Category Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 3197570558 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Specifies the description of the item subcategory.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la descripción de la sub familia del producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Item Subcategory Name - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 3270798644 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Specifies the item subcategory. Only categories with the same category type as the item are offered.</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Especifica la sub familia del producto. Solo se ofrecen categorías del mismo tipo que el producto."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Sub Item Category Code - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4230391837 - Control 3270798644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
+          <source>Item Subcategory Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Sub familia producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Item List - Control JMC Sub Item Category Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 4230391837 - Control 2056776124 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 4178721393">
           <source>Specifies the average purchase cost calculated from the last purchase invoice.</source>
@@ -8708,6 +8868,21 @@
           <note from="Developer" annotates="general" priority="2">ESP="Último coste directo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Average Purchase Cost - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Category Type - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 2543161234 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Item Category Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Item Category Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 3197570558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Item Subcategory Name</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Nombre sub familia"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Item Subcategory Name - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4200125043 - Field 1892570966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>Last Purchase Invoice No.</source>
           <note from="Developer" annotates="general" priority="2">ESP="Nº última factura compra"</note>
@@ -8723,10 +8898,20 @@
           <note from="Developer" annotates="general" priority="2">ESP="Nivel de prioridad"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Priority Level - Property Caption</note>
         </trans-unit>
+        <trans-unit id="TableExtension 4200125043 - Field 3270798644 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
+          <source>Item Subcategory Code</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Sub familia producto"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Sub Item Category Code - Property Caption</note>
+        </trans-unit>
         <trans-unit id="TableExtension 4200125043 - Field 26128968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3276313895">
           <source>Weight</source>
           <note from="Developer" annotates="general" priority="2">ESP="Peso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item - Field JMC Weight - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="TableExtension 686812787 - Field 591914536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1487222247">
+          <source>Category Type</source>
+          <note from="Developer" annotates="general" priority="2">ESP="Tipo categoría"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">TableExtension JMC Item Category - Field JMC Category Type - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1227168464 - Change 513339096 - Method 3279464882 - NamedType 1679176215" size-unit="char" translate="yes" xml:space="preserve" al-object-target="TableExtension 1227168464">
           <source>Cannot set status to Inactive because there are price list lines with empty product. Please delete or complete these lines first.</source>
@@ -9057,6 +9242,51 @@
           <source>Industrial Manufacturing Cost</source>
           <note from="Developer" annotates="general" priority="2">ESP="Coste industrial de fabricación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Cost Classification - EnumValue Industrial Manufacturing Cost - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 3054915598 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CA</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue CA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 3861521238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CI</source>
+          <note from="Developer" annotates="general" priority="2">ESP="CI"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue CI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 2837466271 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DI</source>
+          <note from="Developer" annotates="general" priority="2">ESP="DI"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue DI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 1450102320 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MA</source>
+          <note from="Developer" annotates="general" priority="2">ESP="MA"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue MA - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 2425616983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MP</source>
+          <note from="Developer" annotates="general" priority="2">ESP="MP"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue MP - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 3989991027 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PI</source>
+          <note from="Developer" annotates="general" priority="2">ESP="PI"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue PI - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 801507942 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PR</source>
+          <note from="Developer" annotates="general" priority="2">ESP="PR"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue PR - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 1270295536 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PT</source>
+          <note from="Developer" annotates="general" priority="2">ESP="PT"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue PT - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 591914536 - EnumValue 2574176848 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SER</source>
+          <note from="Developer" annotates="general" priority="2">ESP="SER"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum JMC Category Type - EnumValue SER - Property Caption</note>
         </trans-unit>
         <trans-unit id="Enum 2951830561 - EnumValue 744835066 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fixed</source>

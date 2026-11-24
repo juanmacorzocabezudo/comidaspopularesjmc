@@ -38,6 +38,7 @@ pageextension 53101 "JMC Ficha Evento" extends "Ficha Evento"
                 ApplicationArea = All;
                 Caption = 'Customer Type', Comment = 'ESP="Tipo Cliente"';
                 ToolTip = 'Specifies the customer type copied from the selected customer. You can change it for this event.', Comment = 'ESP="Especifica el tipo de cliente copiado del cliente seleccionado. Puede cambiarlo para este evento."';
+                ShowMandatory = true;
             }
         }
         modify("Total Adultos")

@@ -1,50 +1,63 @@
 codeunit 53105 "JMC Cost Priority Install"
 {
     Subtype = Install;
-    Permissions = tabledata Item = rm,
-                  tabledata "JMC Cost Model" = rm,
+    Permissions = tabledata "JMC Cost Model" = rm,
                   tabledata "JMC Cost Priority Factor" = rim;
 
     trigger OnInstallAppPerCompany()
     begin
-        InitializeItemPriorities();
-    end;
-
-    procedure InitializeItemPriorities()
-    var
-        jmcItem: Record Item;
-        jmcUpgradeTag: Codeunit "Upgrade Tag";
-        jmcPriorityTagLbl: Label 'JMC-ItemPriorityDefault-20261119', Locked = true;
-        jmcPercentageTagLbl: Label 'JMC-PriorityPercentages-20261119', Locked = true;
-    begin
-        if not jmcUpgradeTag.HasUpgradeTag(jmcPriorityTagLbl) then begin
-            jmcItem.SetRange("JMC Priority Level", 0);
-            jmcItem.ModifyAll("JMC Priority Level", 1, false);
-            jmcUpgradeTag.SetUpgradeTag(jmcPriorityTagLbl);
-        end;
-        if not jmcUpgradeTag.HasUpgradeTag(jmcPercentageTagLbl) then begin
-            RestoreDefaultPercentages();
-            jmcUpgradeTag.SetUpgradeTag(jmcPercentageTagLbl);
-        end;
         InitializeResourceCostPercentages();
+        InvalidateDirectPersonnelSources();
+        InvalidateExpandedItemAllocation();
     end;
 
-    local procedure InitializeResourceCostPercentages()
+    procedure InvalidateExpandedItemAllocation()
     var
         jmcCostModel: Record "JMC Cost Model";
         jmcUpgradeTag: Codeunit "Upgrade Tag";
-        jmcResourcePercentageTagLbl: Label 'JMC-FixedResourceCostPercentages-20261123', Locked = true;
+        jmcTagLbl: Label 'JMC-ExpandedItemAllocation-20261126', Locked = true;
+    begin
+        if jmcUpgradeTag.HasUpgradeTag(jmcTagLbl) then
+            exit;
+        if jmcCostModel.Get('GENERAL') then begin
+            jmcCostModel."JMC Personnel Sources Ready" := false;
+            jmcCostModel."JMC Calculation Current" := false;
+            jmcCostModel.Modify(false);
+        end;
+        jmcUpgradeTag.SetUpgradeTag(jmcTagLbl);
+    end;
+
+    procedure InvalidateDirectPersonnelSources()
+    var
+        jmcCostModel: Record "JMC Cost Model";
+        jmcUpgradeTag: Codeunit "Upgrade Tag";
+        jmcDirectBusinessTagLbl: Label 'JMC-DirectPersonnelBusiness-20261126', Locked = true;
+    begin
+        if jmcUpgradeTag.HasUpgradeTag(jmcDirectBusinessTagLbl) then
+            exit;
+        if jmcCostModel.Get('GENERAL') then begin
+            jmcCostModel."JMC Personnel Sources Ready" := false;
+            jmcCostModel."JMC Calculation Current" := false;
+            jmcCostModel.Modify(false);
+        end;
+        jmcUpgradeTag.SetUpgradeTag(jmcDirectBusinessTagLbl);
+    end;
+
+    procedure InitializeResourceCostPercentages()
+    var
+        jmcCostModel: Record "JMC Cost Model";
+        jmcUpgradeTag: Codeunit "Upgrade Tag";
+        jmcResourcePercentageTagLbl: Label 'JMC-PersonnelStructurePercentages-20261126', Locked = true;
     begin
         if jmcUpgradeTag.HasUpgradeTag(jmcResourcePercentageTagLbl) then
             exit;
-        if jmcCostModel.Get('GENERAL') then
-            if (jmcCostModel."JMC Industry Resource Pct." = 0) and
-               (jmcCostModel."JMC Catering Resource Pct." = 0)
-            then begin
-                jmcCostModel.Validate("JMC Industry Resource Pct.", 50);
-                jmcCostModel.Validate("JMC Catering Resource Pct.", 50);
-                jmcCostModel.Modify(false);
-            end;
+        if jmcCostModel.Get('GENERAL') then begin
+            jmcCostModel."JMC Industry Resource Pct." := jmcCostModel."JMC Industry Structure Pct.";
+            jmcCostModel."JMC Catering Resource Pct." := jmcCostModel."JMC Catering Structure Pct.";
+            jmcCostModel."JMC Personnel Sources Ready" := false;
+            jmcCostModel."JMC Calculation Current" := false;
+            jmcCostModel.Modify(false);
+        end;
         jmcUpgradeTag.SetUpgradeTag(jmcResourcePercentageTagLbl);
     end;
 

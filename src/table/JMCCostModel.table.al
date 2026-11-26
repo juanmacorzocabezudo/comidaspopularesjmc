@@ -100,25 +100,25 @@ table 53102 "JMC Cost Model"
         }
         field(25; "JMC Fixed Industrial Fund"; Decimal)
         {
-            Caption = 'Fixed Industrial Fund', Comment = 'ESP="Fondo industrial fijo"';
+            Caption = 'Fixed Industrial Cost', Comment = 'ESP="Coste industrial fijo"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(26; "JMC Variable Industrial Fund"; Decimal)
         {
-            Caption = 'Variable Industrial Fund', Comment = 'ESP="Fondo industrial variable"';
+            Caption = 'Variable Industrial Cost', Comment = 'ESP="Coste industrial variable"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(27; "JMC Fixed Management Fund"; Decimal)
         {
-            Caption = 'Fixed Management Fund', Comment = 'ESP="Fondo de gestión fijo"';
+            Caption = 'Fixed Management Cost', Comment = 'ESP="Coste de gestión fijo"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(28; "JMC Variable Management Fund"; Decimal)
         {
-            Caption = 'Variable Management Fund', Comment = 'ESP="Fondo de gestión variable"';
+            Caption = 'Variable Management Cost', Comment = 'ESP="Coste de gestión variable"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
@@ -177,7 +177,7 @@ table 53102 "JMC Cost Model"
             Caption = 'Fixed Resource Personnel Cost', Comment = 'ESP="Coste fijo de personal"';
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Shows the fixed resource usage cost posted for assembly orders during the calculation period.', Comment = 'ESP="Muestra el coste de uso de recursos fijos registrado para pedidos de ensamblado durante el periodo del cálculo."';
+            ToolTip = 'Shows net accounting expenses linked to fixed resources during the calculation period.', Comment = 'ESP="Muestra los gastos contables netos vinculados a recursos fijos durante el periodo del cálculo."';
         }
         field(37; "JMC Industry Resource Pct."; Decimal)
         {
@@ -185,8 +185,8 @@ table 53102 "JMC Cost Model"
             DecimalPlaces = 0 : 2;
             MinValue = 0;
             MaxValue = 100;
-            InitValue = 50;
-            ToolTip = 'Specifies the share of fixed resource personnel cost allocated to Industry. Change this percentage through Resource Cost Distribution.', Comment = 'ESP="Especifica la proporción del coste fijo de personal asignada a Alimentación. Cambie este porcentaje desde Distribución del coste de personal."';
+            Editable = false;
+            ToolTip = 'Shows the Industry structure percentage used to allocate fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Alimentación utilizado para repartir el coste fijo de personal."';
         }
         field(38; "JMC Catering Resource Pct."; Decimal)
         {
@@ -194,18 +194,18 @@ table 53102 "JMC Cost Model"
             DecimalPlaces = 0 : 2;
             MinValue = 0;
             MaxValue = 100;
-            InitValue = 50;
-            ToolTip = 'Specifies the share of fixed resource personnel cost allocated to Catering. Change this percentage through Resource Cost Distribution.', Comment = 'ESP="Especifica la proporción del coste fijo de personal asignada a Catering. Cambie este porcentaje desde Distribución del coste de personal."';
+            Editable = false;
+            ToolTip = 'Shows the Catering structure percentage used to allocate fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Catering utilizado para repartir el coste fijo de personal."';
         }
         field(39; "JMC Industry Resource Allocation"; Decimal)
         {
-            Caption = 'Industry Personnel Cost Fund', Comment = 'ESP="Fondo de personal Alimentación"';
+            Caption = 'Industry Personnel Cost', Comment = 'ESP="Coste personal Alimentación"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(40; "JMC Catering Resource Allocation"; Decimal)
         {
-            Caption = 'Catering Personnel Cost Fund', Comment = 'ESP="Fondo de personal Catering"';
+            Caption = 'Catering Personnel Cost', Comment = 'ESP="Coste personal Catering"';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
@@ -213,6 +213,23 @@ table 53102 "JMC Cost Model"
         {
             Caption = 'Unallocated Personnel Cost', Comment = 'ESP="Coste de personal pendiente de reparto"';
             DecimalPlaces = 2 : 2;
+            Editable = false;
+        }
+        field(42; "JMC Catering Direct Personnel"; Decimal)
+        {
+            Caption = 'Catering Direct Personnel Cost', Comment = 'ESP="Coste directo de personal Catering"';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+        }
+        field(43; "JMC Industry Direct Personnel"; Decimal)
+        {
+            Caption = 'Industry Direct Personnel Cost', Comment = 'ESP="Coste directo de personal Alimentación"';
+            DecimalPlaces = 2 : 2;
+            Editable = false;
+        }
+        field(44; "JMC Personnel Sources Ready"; Boolean)
+        {
+            Caption = 'Personnel Sources Ready', Comment = 'ESP="Orígenes de personal preparados"';
             Editable = false;
         }
     }
@@ -277,21 +294,24 @@ table 53102 "JMC Cost Model"
             "JMC Industry Structure Pct." := 0;
             "JMC Catering Allocation" := 0;
             "JMC Industry Allocation" := 0;
+            "JMC Catering Resource Pct." := 0;
+            "JMC Industry Resource Pct." := 0;
             exit;
         end;
         "JMC Catering Structure Pct." := "JMC Catering Production Cost" / jmcProductionCost * 100;
         "JMC Industry Structure Pct." := 100 - "JMC Catering Structure Pct.";
+        "JMC Catering Resource Pct." := "JMC Catering Structure Pct.";
+        "JMC Industry Resource Pct." := "JMC Industry Structure Pct.";
         "JMC Catering Allocation" := Round("JMC Total Structure Cost" * "JMC Catering Structure Pct." / 100, 0.01);
         "JMC Industry Allocation" := Round("JMC Total Structure Cost", 0.01) - "JMC Catering Allocation";
     end;
 
     procedure SetResourceCostPercentages(jmcIndustryPct: Decimal; jmcCateringPct: Decimal)
     var
-        jmcInvalidPctErr: Label 'Industry and Catering percentages must add up to 100.', Comment = 'ESP="Los porcentajes de Alimentación y Catering deben sumar 100."';
+        jmcInvalidPctErr: Label 'Personnel percentages are calculated from structure percentages and cannot be changed manually.', Comment = 'ESP="Los porcentajes de personal se calculan a partir de los porcentajes de estructura y no pueden cambiarse manualmente."';
     begin
-        if (jmcIndustryPct < 0) or (jmcIndustryPct > 100) or
-           (jmcCateringPct < 0) or (jmcCateringPct > 100) or
-           (Round(jmcIndustryPct + jmcCateringPct, 0.01) <> 100)
+        if (jmcIndustryPct <> "JMC Industry Structure Pct.") or
+           (jmcCateringPct <> "JMC Catering Structure Pct.")
         then
             Error(jmcInvalidPctErr);
         if ("JMC Industry Resource Pct." = jmcIndustryPct) and

@@ -115,7 +115,7 @@ page 53126 "JMC Cost Model Simulator"
                     ApplicationArea = All;
                     DecimalPlaces = 2 : 2;
                     MinValue = 0;
-                    ToolTip = 'Specifies the quantity in the selected sales unit. It multiplies saved unit costs without redistributing the model fund.', Comment = 'ESP="Especifica la cantidad en la unidad de venta seleccionada. Multiplica los costes unitarios guardados sin redistribuir el fondo del modelo."';
+                    ToolTip = 'Specifies the quantity in the selected sales unit. It multiplies saved unit costs without redistributing the model costs.', Comment = 'ESP="Especifica la cantidad en la unidad de venta seleccionada. Multiplica los costes unitarios guardados sin redistribuir los costes del modelo."';
 
                     trigger OnValidate()
                     begin
@@ -170,7 +170,7 @@ page 53126 "JMC Cost Model Simulator"
                         Caption = 'Personnel Cost per Unit', Comment = 'ESP="Coste de personal por unidad"';
                         ApplicationArea = All;
                         DecimalPlaces = 2 : 2;
-                        ToolTip = 'Specifies the fixed resource personnel cost per unit, kept separately and included in the total.', Comment = 'ESP="Especifica el coste fijo de personal de recursos por unidad, como partida independiente incluida en el total."';
+                        ToolTip = 'Specifies the fixed and direct personnel cost per unit, kept separately and included in the total.', Comment = 'ESP="Especifica el coste fijo y directo de personal por unidad, como partida independiente incluida en el total."';
                     }
                     field(JMCSalesIndustrialAmount; JMCSalesIndustrial)
                     {
@@ -191,7 +191,7 @@ page 53126 "JMC Cost Model Simulator"
                         Caption = 'Simulated Personnel Amount', Comment = 'ESP="Importe de personal simulado"';
                         ApplicationArea = All;
                         DecimalPlaces = 2 : 2;
-                        ToolTip = 'Specifies the simulated fixed resource personnel amount.', Comment = 'ESP="Especifica el importe simulado de personal de recursos fijos."';
+                        ToolTip = 'Specifies the simulated fixed and direct personnel amount.', Comment = 'ESP="Especifica el importe simulado de personal fijo y directo."';
                     }
                     field(JMCSalesStructureAmount; JMCSalesStructure)
                     {

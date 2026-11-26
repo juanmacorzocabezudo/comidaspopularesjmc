@@ -55,4 +55,21 @@ pageextension 53102 "JMC Receta" extends Receta
             }
         }
     }*/
+
+    actions
+    {
+        addafter(ArchiveVersion)
+        {
+            action(JMCC01CostHistory)
+            {
+                Caption = 'Structure Cost History', Comment = 'ESP="Histórico costes de estructura"';
+                ToolTip = 'Shows the C01 costs applied to this product and allows you to fix a historical value.', Comment = 'ESP="Muestra los costes C01 aplicados a este producto y permite fijar un valor histórico."';
+                ApplicationArea = All;
+                Image = History;
+                Promoted = true;
+                RunObject = page "JMC C01 Cost History";
+                RunPageLink = "JMC Item No." = field("No.");
+            }
+        }
+    }
 }

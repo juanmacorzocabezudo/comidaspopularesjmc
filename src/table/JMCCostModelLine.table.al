@@ -51,7 +51,7 @@ table 53103 "JMC Cost Model Line"
         {
             Caption = 'Unit of Measure Code', Comment = 'ESP="Unidad de medida"';
             TableRelation = "Item Unit of Measure".Code where("Item No." = field("JMC Item No."));
-            ToolTip = 'Specifies the unit used in this line''s posted sales. Quantities and allocations belong only to this item and unit.', Comment = 'ESP="Especifica la unidad utilizada en las ventas registradas de esta línea. Las cantidades y los repartos corresponden solo a este producto y unidad."';
+            ToolTip = 'Shows the product base unit used for this line when all costs are calculated.', Comment = 'ESP="Muestra la unidad base del producto utilizada en esta línea al calcular todos los costes."';
 
             trigger OnValidate()
             begin
@@ -153,7 +153,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Calculated Net Sales Quantity', Comment = 'ESP="Cantidad neta de venta calculada"';
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies net quantities sold in this unit during the calculation period, using each posted conversion factor. Returns subtract and uninvoiced shipments are included.', Comment = 'ESP="Especifica las cantidades netas vendidas en esta unidad durante el periodo, usando cada factor de conversión registrado. Las devoluciones restan y se incluyen envíos sin facturar."';
+            ToolTip = 'Shows net sales across all presentations in the product base unit. Returns subtract and uninvoiced shipments are included.', Comment = 'ESP="Muestra las ventas netas de todas las presentaciones en la unidad base del producto. Las devoluciones restan y se incluyen envíos sin facturar."';
         }
         field(21; "JMC Applied Priority Factor"; Decimal)
         {
@@ -166,7 +166,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Assigned Industrial Amount', Comment = 'ESP="Importe industrial asignado"';
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies the allocation for this item and sales unit in the calculation against products. Amounts are not repeated across units.', Comment = 'ESP="Especifica el reparto de este producto y unidad de venta en el cálculo contra productos. Los importes no se repiten entre unidades."';
+            ToolTip = 'Specifies the allocation for this product in the calculation against products.', Comment = 'ESP="Especifica el reparto de este producto en el cálculo contra productos."';
         }
         field(23; "JMC Assigned Management Cost"; Decimal)
         {
@@ -190,7 +190,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Net Sales Quantity (Base)', Comment = 'ESP="Cantidad neta de venta (base)"';
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Specifies the net base quantity of sales posted in this line''s unit. Sales in other units of the same item are not included.', Comment = 'ESP="Especifica la cantidad base neta de las ventas registradas en la unidad de esta línea. No incluye ventas en otras unidades del mismo producto."';
+            ToolTip = 'Shows net sales across all presentations in the product base unit. This is the same quantity as Calculated Net Sales Quantity.', Comment = 'ESP="Muestra las ventas netas de todas las presentaciones en la unidad base del producto. Es la misma cantidad que Cantidad neta de venta calculada."';
         }
         field(28; "JMC Total Cost"; Decimal)
         {
@@ -204,7 +204,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Final Manual Cost', Comment = 'ESP="Coste final manual"';
             DecimalPlaces = 2 : 2;
             MinValue = 0;
-            ToolTip = 'Specifies the structure cost retained for this line. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Apply Final Cost to Recipe writes it to the recipe.', Comment = 'ESP="Especifica el coste de estructura que se mantiene para esta línea. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Aplicar coste final a receta lo escribe en la receta."';
+            ToolTip = 'Specifies the structure cost retained for this line. Calculate All Costs reads C01 from the recipe; Recalculate Costs keeps the manual value. Use the CA or PT apply action to update the recipe.', Comment = 'ESP="Especifica el coste de estructura que se mantiene para esta línea. Calcular todos los costes lee C01 de la receta; Recalcular costes conserva el valor manual. Use la acción de aplicar CA o PT para actualizar la receta."';
 
             trigger OnValidate()
             begin
@@ -216,7 +216,7 @@ table 53103 "JMC Cost Model Line"
             Caption = 'Cost Difference', Comment = 'ESP="Diferencia de coste"';
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Shows TOTAL COST minus Final Manual Cost. A positive value means the calculated cost is higher than the cost kept in the recipe. It is in euros per line unit for the Amount type and in percentage points for the Percentage type.', Comment = 'ESP="Muestra TOTAL COSTE menos Coste final manual. Un valor positivo indica que el coste calculado es mayor que el coste que se mantiene en la receta. Está en euros por unidad de la línea con el tipo Importe y en puntos porcentuales con el tipo Porcentaje."';
+            ToolTip = 'Shows Final Manual Cost minus Total Cost. A negative value means the manual cost is lower than the calculated cost. It is in euros per line unit for the Amount type and in percentage points for the Percentage type. After changing theoretical production quantity, the last difference remains until costs are recalculated.', Comment = 'ESP="Muestra Coste final manual menos Total coste. Un valor negativo indica que el coste manual es menor que el coste calculado. Está en euros por unidad de la línea con el tipo Importe y en puntos porcentuales con el tipo Porcentaje. Al cambiar la cantidad teórica de fabricación se conserva la última diferencia hasta recalcular los costes."';
         }
         field(31; "JMC Manual Totals Ready"; Boolean)
         {
@@ -275,7 +275,7 @@ table 53103 "JMC Cost Model Line"
             DataClassification = CustomerContent;
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Shows fixed resource personnel cost per unit allocated to this product line.', Comment = 'ESP="Muestra el coste fijo de personal por unidad asignado a esta línea de producto."';
+            ToolTip = 'Shows fixed and direct personnel cost per unit allocated to this product line.', Comment = 'ESP="Muestra el coste fijo y directo de personal por unidad asignado a esta línea de producto."';
         }
         field(40; "JMC Personnel Cost Pct."; Decimal)
         {
@@ -291,7 +291,7 @@ table 53103 "JMC Cost Model Line"
             DataClassification = CustomerContent;
             DecimalPlaces = 2 : 2;
             Editable = false;
-            ToolTip = 'Shows the total fixed resource personnel amount allocated to this product and unit for the whole period.', Comment = 'ESP="Muestra el importe total de personal de recursos fijos asignado a este producto y unidad para todo el periodo."';
+            ToolTip = 'Shows the total fixed and direct personnel amount allocated to this product and unit for the whole period.', Comment = 'ESP="Muestra el importe total de personal fijo y directo asignado a este producto y unidad para todo el periodo."';
         }
     }
 
@@ -374,10 +374,13 @@ table 53103 "JMC Cost Model Line"
         else
             "JMC Total Cost" := "JMC Industrial Cost" + "JMC Management Cost" + "JMC Personnel Cost";
         "JMC EXWORK Standard" := "JMC Industrial Cost" + "JMC Management Cost" + "JMC Personnel Cost";
+        RecalculateCostDifference();
+    end;
+
+    procedure RecalculateCostDifference()
+    begin
         if "JMC Manual Totals Ready" and "JMC Structure Totals Ready" then
-            "JMC Cost Difference" := "JMC Total Cost" - "JMC Final Cost"
-        else
-            "JMC Cost Difference" := 0;
+            "JMC Cost Difference" := "JMC Final Cost" - "JMC Total Cost";
     end;
 
     procedure ResetFinalTotals()
@@ -385,7 +388,10 @@ table 53103 "JMC Cost Model Line"
         RecalculateCosts();
         "JMC Manual Totals Ready" := "JMC Allocation Eligible" and ("JMC Calculation Issue" = '');
         "JMC Structure Totals Ready" := "JMC Manual Totals Ready";
-        RecalculateCosts();
+        if "JMC Manual Totals Ready" then
+            RecalculateCosts()
+        else
+            "JMC Cost Difference" := 0;
     end;
 
     local procedure RequireLineRecalculation()
@@ -394,6 +400,7 @@ table 53103 "JMC Cost Model Line"
     begin
         "JMC Manual Totals Ready" := false;
         "JMC Structure Totals Ready" := false;
+        "JMC Cost Difference" := 0;
         "JMC Allocation Eligible" := false;
         "JMC Calculation Issue" := jmcChangedLbl;
         "JMC Production Inputs Ready" := false;
@@ -401,8 +408,12 @@ table 53103 "JMC Cost Model Line"
 
     procedure TestManualTotals()
     var
+        jmcModel: Record "JMC Cost Model";
         jmcRecalculateErr: Label 'Calculate this model again before editing, simulating or applying final totals for this line. The line must be eligible and have no calculation issue.', Comment = 'ESP="Calcule de nuevo este modelo antes de editar, simular o aplicar los totales finales de esta línea. Debe ser apta y no tener incidencias."';
     begin
+        jmcModel.Get("JMC Model Code");
+        if not jmcModel."JMC Personnel Sources Ready" then
+            Error(jmcRecalculateErr);
         if not "JMC Manual Totals Ready" or not "JMC Structure Totals Ready" or not "JMC Allocation Eligible" or ("JMC Calculation Issue" <> '') then
             Error(jmcRecalculateErr);
         TestField("JMC Recipe BOM Cost");

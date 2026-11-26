@@ -88,17 +88,6 @@ page 53109 "JMC Cost Model Card"
                                 ShowSummaryDetail(Rec.FieldNo("JMC Industry Production Cost"));
                             end;
                         }
-                        field("JMC Production Dimension"; Rec."JMC Production Dimension")
-                        {
-                            ApplicationArea = All;
-                            ToolTip = 'Shows the dimension used to distinguish Catering production from Alimentacion production. The calculation reads LINEA from each posted production entry. Select the value to see included and excluded entries.', Comment = 'ESP="Muestra la dimensión utilizada para distinguir la producción de Catering de la de Alimentación. El cálculo lee LINEA en cada movimiento de producción registrado. Pulse el valor para ver los movimientos incluidos y excluidos."';
-                            DrillDown = true;
-
-                            trigger OnDrillDown()
-                            begin
-                                ShowSummaryDetail(Rec.FieldNo("JMC Production Dimension"));
-                            end;
-                        }
                     }
                     group(Allocation)
                     {
@@ -107,7 +96,7 @@ page 53109 "JMC Cost Model Card"
                         field("JMC Catering Allocation"; Rec."JMC Catering Allocation")
                         {
                             ApplicationArea = All;
-                            ToolTip = 'Shows the structure expenses assigned to Catering using its production percentage. The calculation against products distributes this amount among eligible CA products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Catering según su porcentaje de producción. El cálculo contra productos reparte este importe entre los productos CA aptos."';
+                            ToolTip = 'Shows the structure expenses assigned to Catering using its production percentage. The calculation distributes this amount among eligible CA, MP and MA products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Catering según su porcentaje de producción. El cálculo reparte este importe entre los productos CA, MP y MA aptos."';
                             DrillDown = true;
 
                             trigger OnDrillDown()
@@ -118,7 +107,7 @@ page 53109 "JMC Cost Model Card"
                         field("JMC Industry Allocation"; Rec."JMC Industry Allocation")
                         {
                             ApplicationArea = All;
-                            ToolTip = 'Shows the structure expenses assigned to Alimentacion after the Catering share. The calculation against products distributes this amount among eligible PT products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Alimentación tras descontar la parte de Catering. El cálculo contra productos reparte este importe entre los productos PT aptos."';
+                            ToolTip = 'Shows the structure expenses assigned to Alimentacion after the Catering share. The calculation distributes this amount among eligible PT, PI, PR and SER products.', Comment = 'ESP="Muestra los gastos de estructura asignados a Alimentación tras descontar la parte de Catering. El cálculo reparte este importe entre los productos PT, PI, PR y SER aptos."';
                             DrillDown = true;
 
                             trigger OnDrillDown()
@@ -131,13 +120,13 @@ page 53109 "JMC Cost Model Card"
             }
             group(PersonnelCost)
             {
-                Caption = 'Fixed Resource Personnel', Comment = 'ESP="Personal de recursos fijos"';
+                Caption = 'Fixed Personnel Costs', Comment = 'ESP="Costes de personal fijo"';
                 Editable = false;
 
                 field("JMC Fixed Resource Cost"; Rec."JMC Fixed Resource Cost")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows fixed resource usage costs posted for assembly orders in the calculation period. Select the amount to review its source entries and allocation.', Comment = 'ESP="Muestra los costes de uso de recursos fijos registrados para pedidos de ensamblado en el periodo del cálculo. Pulse el importe para consultar los movimientos de origen y su reparto."';
+                    ToolTip = 'Shows net accounting expenses associated with fixed resources, excluding closing entries and balance sheet accounts. Select the amount to review its sources.', Comment = 'ESP="Muestra los gastos contables netos asociados a recursos fijos, sin movimientos de cierre ni cuentas de balance. Pulse el importe para consultar sus orígenes."';
                     DrillDown = true;
 
                     trigger OnDrillDown()
@@ -148,17 +137,37 @@ page 53109 "JMC Cost Model Card"
                 field("JMC Industry Resource Pct."; Rec."JMC Industry Resource Pct.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the percentage of fixed resource personnel cost allocated to Industry. Use Resource Cost Distribution to change it.', Comment = 'ESP="Muestra el porcentaje del coste fijo de personal asignado a Alimentación. Utilice Distribución del coste de personal para cambiarlo."';
+                    ToolTip = 'Shows the Industry structure percentage used for fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Alimentación utilizado para el coste fijo de personal."';
                 }
                 field("JMC Catering Resource Pct."; Rec."JMC Catering Resource Pct.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the percentage of fixed resource personnel cost allocated to Catering. Use Resource Cost Distribution to change it.', Comment = 'ESP="Muestra el porcentaje del coste fijo de personal asignado a Catering. Utilice Distribución del coste de personal para cambiarlo."';
+                    ToolTip = 'Shows the Catering structure percentage used for fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Catering utilizado para el coste fijo de personal."';
+                }
+                field("JMC Industry Direct Personnel"; Rec."JMC Industry Direct Personnel")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows non-fixed resource costs from all assembly orders. Posted quantities and outstanding order quantities are counted once.', Comment = 'ESP="Muestra los costes de recursos no fijos de todos los pedidos de ensamblado. Las cantidades registradas y las pendientes de los pedidos se cuentan una sola vez."';
+                    DrillDown = true;
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Industry Direct Personnel"));
+                    end;
+                }
+                field("JMC Catering Direct Personnel"; Rec."JMC Catering Direct Personnel")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shows non-fixed resource costs from eligible event assignments. Event cost is saved quantity times unit cost.', Comment = 'ESP="Muestra los costes de recursos no fijos de asignaciones a eventos válidos. El coste del evento es la cantidad por el coste unitario guardados."';
+                    DrillDown = true;
+                    trigger OnDrillDown()
+                    begin
+                        ShowSummaryDetail(Rec.FieldNo("JMC Catering Direct Personnel"));
+                    end;
                 }
                 field("JMC Industry Resource Allocation"; Rec."JMC Industry Resource Allocation")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the fixed resource personnel fund assigned to Industry before allocation to products.', Comment = 'ESP="Muestra el fondo de personal de recursos fijos asignado a Alimentación antes de repartirlo entre productos."';
+                    ToolTip = 'Shows Industry direct personnel cost plus its share of fixed accounting personnel cost, before allocation to products.', Comment = 'ESP="Muestra el coste directo de personal de Alimentación más su parte del coste fijo contable de personal, antes de repartirlo entre productos."';
                     DrillDown = true;
 
                     trigger OnDrillDown()
@@ -169,23 +178,12 @@ page 53109 "JMC Cost Model Card"
                 field("JMC Catering Resource Allocation"; Rec."JMC Catering Resource Allocation")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Shows the fixed resource personnel fund assigned to Catering before allocation to products.', Comment = 'ESP="Muestra el fondo de personal de recursos fijos asignado a Catering antes de repartirlo entre productos."';
+                    ToolTip = 'Shows Catering direct personnel cost plus its share of fixed accounting personnel cost, before allocation to products.', Comment = 'ESP="Muestra el coste directo de personal de Catering más su parte del coste fijo contable de personal, antes de repartirlo entre productos."';
                     DrillDown = true;
 
                     trigger OnDrillDown()
                     begin
                         ShowSummaryDetail(Rec.FieldNo("JMC Catering Resource Allocation"));
-                    end;
-                }
-                field("JMC Resource Cost Pending"; Rec."JMC Resource Cost Pending")
-                {
-                    ApplicationArea = All;
-                    ToolTip = 'Shows fixed resource personnel cost that could not be allocated because a business had no eligible production quantity.', Comment = 'ESP="Muestra el coste fijo de personal que no se pudo repartir porque un negocio no tenía cantidad de fabricación apta."';
-                    DrillDown = true;
-
-                    trigger OnDrillDown()
-                    begin
-                        ShowSummaryDetail(Rec.FieldNo("JMC Resource Cost Pending"));
                     end;
                 }
             }
@@ -293,7 +291,7 @@ page 53109 "JMC Cost Model Card"
             action(CalculateAllCosts)
             {
                 Caption = 'Calculate All Costs', Comment = 'ESP="Calcular todos los costes"';
-                ToolTip = 'Calculates accounting funds and the allocation against products for review, replacing model results only. It does not apply costs outside the model.', Comment = 'ESP="Calcula los fondos contables y el reparto contra productos para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo."';
+                ToolTip = 'Calculates accounting costs and the allocation against products for review, replacing model results only. It does not apply costs outside the model.', Comment = 'ESP="Calcula los costes contables y el reparto contra productos para revisión, sustituyendo solo los resultados del modelo. No aplica costes fuera del modelo."';
                 ApplicationArea = All;
                 Image = Calculate;
 
@@ -313,23 +311,18 @@ page 53109 "JMC Cost Model Card"
             action(ResourceCostDistribution)
             {
                 Caption = 'Resource Cost Distribution', Comment = 'ESP="Distribución del coste de personal"';
-                ToolTip = 'Sets how fixed resource personnel costs from assembly orders are split between Industry and Catering. The percentages must add up to 100.', Comment = 'ESP="Establece cómo se reparte entre Alimentación y Catering el coste fijo de personal de los pedidos de ensamblado. Los porcentajes deben sumar 100."';
+                ToolTip = 'Shows the structure percentages used automatically to split fixed accounting personnel cost between Industry and Catering.', Comment = 'ESP="Muestra los porcentajes de estructura utilizados automáticamente para repartir el coste fijo contable de personal entre Alimentación y Catering."';
                 ApplicationArea = All;
                 Image = Setup;
 
                 trigger OnAction()
                 var
                     jmcDistributionPage: Page "JMC Resource Cost Distribution";
-                    jmcIndustryPct: Decimal;
-                    jmcCateringPct: Decimal;
                 begin
                     CurrPage.SaveRecord();
-                    jmcDistributionPage.SetPercentages(Rec."JMC Industry Resource Pct.", Rec."JMC Catering Resource Pct.");
-                    if jmcDistributionPage.RunModal() = Action::OK then begin
-                        jmcDistributionPage.GetPercentages(jmcIndustryPct, jmcCateringPct);
-                        Rec.SetResourceCostPercentages(jmcIndustryPct, jmcCateringPct);
-                        CurrPage.Update(false);
-                    end;
+                    Rec.TestField("JMC Personnel Sources Ready");
+                    jmcDistributionPage.SetPercentages(Rec."JMC Industry Structure Pct.", Rec."JMC Catering Structure Pct.");
+                    jmcDistributionPage.RunModal();
                 end;
             }
             action(SimulateStructureCost)

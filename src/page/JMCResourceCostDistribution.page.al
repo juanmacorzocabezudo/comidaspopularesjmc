@@ -14,21 +14,23 @@ page 53130 "JMC Resource Cost Distribution"
 
                 field(JMCIndustryPercentage; JMCIndustryPercentage)
                 {
+                    Editable = false;
                     Caption = 'Industry %', Comment = 'ESP="% Alimentación"';
                     ApplicationArea = All;
                     DecimalPlaces = 0 : 2;
                     MinValue = 0;
                     MaxValue = 100;
-                    ToolTip = 'Specifies the percentage allocated to Industry. The Catering percentage is the remainder needed to total 100.', Comment = 'ESP="Especifica el porcentaje asignado a Alimentación. El porcentaje de Catering será el restante hasta sumar 100."';
+                    ToolTip = 'Shows the Industry structure percentage used for fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Alimentación utilizado para el coste fijo de personal."';
                 }
                 field(JMCCateringPercentage; JMCCateringPercentage)
                 {
+                    Editable = false;
                     Caption = 'Catering %', Comment = 'ESP="% Catering"';
                     ApplicationArea = All;
                     DecimalPlaces = 0 : 2;
                     MinValue = 0;
                     MaxValue = 100;
-                    ToolTip = 'Specifies the percentage allocated to Catering. The Industry percentage is the remainder needed to total 100.', Comment = 'ESP="Especifica el porcentaje asignado a Catering. El porcentaje de Alimentación será el restante hasta sumar 100."';
+                    ToolTip = 'Shows the Catering structure percentage used for fixed personnel cost.', Comment = 'ESP="Muestra el porcentaje de estructura de Catering utilizado para el coste fijo de personal."';
                 }
             }
         }

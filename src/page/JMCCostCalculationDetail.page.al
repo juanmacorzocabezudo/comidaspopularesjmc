@@ -178,11 +178,12 @@ page 53128 "JMC Cost Calculation Detail"
                                 Page.RunModal(Page::"Item Ledger Entries", jmcItemEntry);
                             end;
                         Rec."JMC Detail Type"::Resource:
-                            begin
+                            if Rec."JMC Source Table ID" = 0 then begin
                                 jmcResourceEntry.Get(Rec."JMC Source Entry No.");
                                 jmcResourceEntry.SetRecFilter();
                                 Page.RunModal(Page::"Resource Ledger Entries", jmcResourceEntry);
-                            end;
+                            end else
+                                OpenPersonnelSource();
                     end;
                 end;
             }
@@ -242,6 +243,7 @@ page 53128 "JMC Cost Calculation Detail"
                     Rec := jmcDetail;
                     Rec.Insert(false);
                 end;
+
             until jmcDetail.Next() = 0;
         jmcCheck.SetRange("JMC Model Code", jmcModelCode);
         jmcCheck.SetRange("JMC Detail Type", jmcCheck."JMC Detail Type"::Formula);
@@ -250,6 +252,41 @@ page 53128 "JMC Cost Calculation Detail"
             Error(jmcChangedErr);
         if jmcCheck.SystemId <> JMCFormula.SystemId then
             Error(jmcChangedErr);
+    end;
+
+    local procedure OpenPersonnelSource()
+    var
+        jmcEntry: Record "G/L Entry";
+        jmcHeader: Record "Assembly Header";
+        jmcPostedHeader: Record "Posted Assembly Header";
+        jmcAssignment: Record "Asignacion Recursos Eventos";
+    begin
+        case Rec."JMC Source Table ID" of
+            Database::"G/L Entry":
+                begin
+                    jmcEntry.Get(Rec."JMC Source Entry No.");
+                    jmcEntry.SetRecFilter();
+                    Page.RunModal(Page::"General Ledger Entries", jmcEntry);
+                end;
+            Database::"Assembly Line":
+                begin
+                    jmcHeader.Get(jmcHeader."Document Type"::Order, Rec."JMC Document No.");
+                    jmcHeader.SetRecFilter();
+                    Page.RunModal(Page::"Assembly Order", jmcHeader);
+                end;
+            Database::"Posted Assembly Line":
+                begin
+                    jmcPostedHeader.Get(Rec."JMC Document No.");
+                    jmcPostedHeader.SetRecFilter();
+                    Page.RunModal(Page::"Posted Assembly Order", jmcPostedHeader);
+                end;
+            Database::"Asignacion Recursos Eventos":
+                begin
+                    jmcAssignment.Get(Rec."JMC Document No.", Rec."JMC Source Entry No.", Rec."JMC Resource No.");
+                    jmcAssignment.SetRecFilter();
+                    Page.RunModal(Page::"JMC Res. Assignment Catering", jmcAssignment);
+                end;
+        end;
     end;
 
     local procedure SetExplanation(jmcFieldNo: Integer)
@@ -262,7 +299,7 @@ page 53128 "JMC Cost Calculation Detail"
         jmcManagementIndustryLbl: Label 'Management Cost Pending in Industry', Comment = 'ESP="Coste de gestión pendiente en Alimentación"';
         jmcResourceCateringLbl: Label 'Personnel Cost Pending in Catering', Comment = 'ESP="Coste de personal pendiente en Catering"';
         jmcResourceIndustryLbl: Label 'Personnel Cost Pending in Industry', Comment = 'ESP="Coste de personal pendiente en Alimentación"';
-        jmcTotalGuideLbl: Label 'Adds the fixed industrial and management funds. The rows below show the G/L entries that make up this total.', Comment = 'ESP="Suma los fondos fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total."';
+        jmcTotalGuideLbl: Label 'Adds the fixed industrial and management costs. The rows below show the G/L entries that make up this total.', Comment = 'ESP="Suma los costes fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total."';
         jmcIndustrialGuideLbl: Label 'Adds the amounts posted to the fixed industrial accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas industriales fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
         jmcManagementGuideLbl: Label 'Adds the amounts posted to the fixed management accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas de gestión fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
         jmcProductionGuideLbl: Label 'Adds the actual production cost for this business. The rows below show the production movements. Only rows marked as included contribute to the result.', Comment = 'ESP="Suma el coste real de producción de este negocio. Debajo aparecen los movimientos de producción. Solo suman las filas marcadas como incluidas."';
@@ -271,11 +308,13 @@ page 53128 "JMC Cost Calculation Detail"
         jmcCateringFundGuideLbl: Label 'Multiplies the total structure cost by the Catering percentage to obtain the money available for this business.', Comment = 'ESP="Multiplica el gasto total de estructura por el porcentaje de Catering para obtener el dinero que corresponde a este negocio."';
         jmcIndustryFundGuideLbl: Label 'Subtracts the Catering allocation from the total structure cost. Industry receives the remaining amount.', Comment = 'ESP="Resta al gasto total de estructura el importe de Catering. Alimentación recibe el resto."';
         jmcSalesPendingGuideLbl: Label 'Adds the money still unallocated in Catering and Industry in the calculation against products. Below you can see the pending amounts and the reasons some products could not participate. Excluded product rows explain the reasons; do not add them to the pending amounts.', Comment = 'ESP="Suma el dinero que queda sin repartir en Catering y Alimentación en el cálculo contra productos. Debajo se muestran los importes pendientes y los motivos por los que algunos productos no participan. Las filas de productos excluidos explican el motivo; no se suman al pendiente."';
-        jmcResourceCostGuideLbl: Label 'Adds fixed resource usage costs from assembly orders in the selected period. The rows below show the resource ledger entries included in this amount.', Comment = 'ESP="Suma los costes de uso de recursos fijos de pedidos de ensamblado del periodo seleccionado. Las filas de abajo muestran los movimientos de recursos incluidos en este importe."';
-        jmcResourceFundGuideLbl: Label 'Applies the configured percentage of fixed resource personnel cost to this business. The lines below show the saved fund and how it was assigned to eligible products or left pending.', Comment = 'ESP="Aplica a este negocio el porcentaje configurado del coste fijo de personal de recursos. Las líneas de abajo muestran el fondo guardado y cómo se asignó a productos aptos o quedó pendiente."';
-        jmcResourcePendingGuideLbl: Label 'Adds fixed resource personnel cost that could not be assigned because the business had no eligible production quantity. The rows below show which business has the pending amount.', Comment = 'ESP="Suma el coste fijo de personal de recursos que no se pudo asignar porque el negocio no tenía cantidad de fabricación apta. Las filas de abajo indican qué negocio tiene el importe pendiente."';
+        jmcResourceCostGuideLbl: Label 'Adds net accounting expenses associated with fixed resources. Closing entries and balance sheet accounts are excluded. The rows below show the included accounting entries.', Comment = 'ESP="Suma los gastos contables netos asociados a recursos fijos. Se excluyen los movimientos de cierre y las cuentas de balance. Debajo aparecen los movimientos contables incluidos."';
+        jmcResourceFundGuideLbl: Label 'Adds direct personnel cost to the fixed accounting personnel cost allocated using the structure percentage. The rows below show sources, allocation and pending amounts.', Comment = 'ESP="Suma el coste directo de personal al coste fijo contable de personal repartido según el porcentaje de estructura. Debajo aparecen los orígenes, el reparto y los importes pendientes."';
+        jmcDirectPersonnelGuideLbl: Label 'Adds non-fixed resource costs assigned directly by source: posted assembly lines and outstanding assembly order quantities belong to Industry; eligible event assignments belong to Catering.', Comment = 'ESP="Suma los costes de recursos no fijos asignados directamente según su origen: las líneas de ensamblado registradas y las cantidades pendientes de pedidos corresponden a Alimentación; las asignaciones a eventos válidos corresponden a Catering."';
+        jmcFixedShareLbl: Label 'Fixed Personnel Share', Comment = 'ESP="Parte de personal fijo"';
+        jmcResourcePendingGuideLbl: Label 'Adds personnel cost that could not be assigned because the business had no eligible production quantity. The rows below show which business has the pending amount.', Comment = 'ESP="Suma el coste de personal que no se pudo asignar porque el negocio no tenía cantidad de fabricación apta. Las filas de abajo indican qué negocio tiene el importe pendiente."';
         jmcDimensionGuideLbl: Label 'LINEA identifies the business of each production movement: CATERING or ALIMENTACION. Only included rows count towards the percentages. Movements with no business are not counted; their exclusion reason appears below.', Comment = 'ESP="LINEA identifica el negocio de cada movimiento de producción: CATERING o ALIMENTACION. Solo cuentan para los porcentajes las filas incluidas. Los movimientos sin negocio no cuentan; debajo se indica por qué se han excluido."';
-        jmcAllocationGuideLbl: Label 'Business Fund, Unit Group and Allocation rows are steps of the same calculation, not extra amounts. Do not add them together. Allocation rows show what each product receives.', Comment = 'ESP="Las filas Fondo del negocio, Grupo de unidad y Reparto son pasos del mismo cálculo, no importes adicionales. No las sume entre sí. Las filas Reparto muestran lo que recibe cada producto."';
+        jmcAllocationGuideLbl: Label 'Business Cost, Unit Group and Allocation rows are steps of the same calculation, not extra amounts. Do not add them together. Allocation rows show what each product receives.', Comment = 'ESP="Las filas Coste del negocio, Grupo de unidad y Reparto son pasos del mismo cálculo, no importes adicionales. No las sume entre sí. Las filas Reparto muestran lo que recibe cada producto."';
         jmcSnapshotGuideLbl: Label 'These are the values saved at the last calculation. Later changes and manual adjustments are not included. Opening this page does not recalculate anything.', Comment = 'ESP="Son los datos guardados en el último cálculo. No incluyen cambios posteriores ni ajustes manuales. Abrir esta página no vuelve a calcular nada."';
     begin
         Clear(JMCOperandACaption);
@@ -353,12 +392,20 @@ page 53128 "JMC Cost Calculation Detail"
                 end;
             jmcModel.FieldNo("JMC Industry Resource Allocation"), jmcModel.FieldNo("JMC Catering Resource Allocation"):
                 begin
-                    JMCOperandACaption := jmcModel.FieldCaption("JMC Fixed Resource Cost");
+                    JMCOperandACaption := jmcFixedShareLbl;
                     if jmcFieldNo = jmcModel.FieldNo("JMC Industry Resource Allocation") then
-                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Industry Resource Pct.")
+                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Industry Direct Personnel")
                     else
-                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Catering Resource Pct.");
+                        JMCOperandBCaption := jmcModel.FieldCaption("JMC Catering Direct Personnel");
                     JMCGuidance := jmcResourceFundGuideLbl;
+                end;
+            jmcModel.FieldNo("JMC Industry Direct Personnel"), jmcModel.FieldNo("JMC Catering Direct Personnel"):
+                begin
+                    if jmcFieldNo = jmcModel.FieldNo("JMC Industry Direct Personnel") then
+                        JMCOperandACaption := jmcModel.FieldCaption("JMC Industry Direct Personnel")
+                    else
+                        JMCOperandACaption := jmcModel.FieldCaption("JMC Catering Direct Personnel");
+                    JMCGuidance := jmcDirectPersonnelGuideLbl;
                 end;
             jmcModel.FieldNo("JMC Resource Cost Pending"):
                 begin
@@ -432,9 +479,12 @@ page 53128 "JMC Cost Calculation Detail"
             34:
                 exit((jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Production) and (jmcDetail."JMC Business" = 'ALIMENTACION'));
             36:
-                exit(jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Resource);
+                exit((jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Resource) and (jmcDetail."JMC Business" = ''));
+            42, 43:
+                exit((jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::Resource) and
+                     (((jmcFieldNo = 42) and (jmcDetail."JMC Business" = 'CATERING')) or ((jmcFieldNo = 43) and (jmcDetail."JMC Business" = 'ALIMENTACION'))));
             39, 40:
-                exit((jmcDetail."JMC Detail Type" in [jmcDetail."JMC Detail Type"::"Resource Fund", jmcDetail."JMC Detail Type"::"Resource Allocation", jmcDetail."JMC Detail Type"::"Resource Pending"]) and
+                exit((jmcDetail."JMC Detail Type" in [jmcDetail."JMC Detail Type"::Resource, jmcDetail."JMC Detail Type"::"Resource Fund", jmcDetail."JMC Detail Type"::"Resource Allocation", jmcDetail."JMC Detail Type"::"Resource Pending"]) and
                      (((jmcFieldNo = 39) and (jmcDetail."JMC Business" = 'ALIMENTACION')) or ((jmcFieldNo = 40) and (jmcDetail."JMC Business" = 'CATERING'))));
             41:
                 exit(jmcDetail."JMC Detail Type" = jmcDetail."JMC Detail Type"::"Resource Pending");

@@ -16,8 +16,8 @@ codeunit 53104 "JMC Cost Model Calculation"
         SynchronizeProducts(jmcModelCode, jmcStartingDate, jmcEndingDate);
         jmcCostModel.Get(jmcModelCode);
         ReadProductionCosts(jmcCostModel, jmcStartingDate, jmcEndingDate);
+        ReadPersonnelCosts(jmcCostModel, jmcStartingDate, jmcEndingDate, jmcAccountFilter);
         ReadFunds(jmcCostModel, jmcStartingDate, jmcEndingDate, jmcAccountFilter);
-        ReadFixedResourceCosts(jmcCostModel, jmcStartingDate, jmcEndingDate);
         LoadLines(jmcModelCode);
         PrepareBases();
         AllocateFunds(jmcCostModel);
@@ -35,6 +35,8 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcCostModel.LockTable();
         jmcCostModel.Get(jmcModelCode);
         jmcCostModel.TestField("JMC Calculated At");
+        if not jmcCostModel."JMC Personnel Sources Ready" then
+            Error(jmcSnapshotErr);
         JMCDetail.InitializeSavedSources(jmcModelCode);
         LoadLines(jmcModelCode);
         JMCTempLines.Reset();
@@ -158,7 +160,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcHasEntries: Boolean;
         jmcPartialErr: Label 'Account %1 has only one cost category filled in. Complete both fields or clear both before calculating.', Comment = 'ESP="La cuenta %1 solo tiene una categoría de coste informada. Complete ambos campos o vacíe ambos antes de calcular."';
         jmcNoEntriesErr: Label 'No non-closing ledger entries were found for configured fixed-cost accounts in this period and account filter.', Comment = 'ESP="No se han encontrado movimientos contables sin cierre de cuentas configuradas de coste fijo para este periodo y filtro."';
-        jmcNegativeErr: Label 'The fund for cost type %1 and classification %2 is negative (%3). Review accounts, signs and period; credits are not converted to expenses.', Comment = 'ESP="El fondo del tipo de coste %1 y clasificación %2 es negativo (%3). Revise cuentas, signos y periodo; los abonos no se convierten en gastos."';
+        jmcNegativeErr: Label 'The amount for cost type %1 and classification %2 is negative (%3). Review accounts, signs and period; credits are not converted to expenses.', Comment = 'ESP="El importe del tipo de coste %1 y clasificación %2 es negativo (%3). Revise cuentas, signos y periodo; los abonos no se convierten en gastos."';
     begin
         if jmcAccountFilter <> '' then
             jmcAccount.SetFilter("No.", jmcAccountFilter);
@@ -168,17 +170,19 @@ codeunit 53104 "JMC Cost Model Calculation"
                 if (jmcAccount."JMC Cost Type" <> jmcAccount."JMC Cost Type"::" ") or
                    (jmcAccount."JMC Cost Classification" <> jmcAccount."JMC Cost Classification"::" ")
                 then begin
-                    if (jmcAccount."JMC Cost Type" = jmcAccount."JMC Cost Type"::" ") or
-                       (jmcAccount."JMC Cost Classification" = jmcAccount."JMC Cost Classification"::" ")
-                    then
-                        Error(jmcPartialErr, jmcAccount."No.");
                     jmcClassification := jmcAccount."JMC Cost Classification".AsInteger();
                     jmcEntry.SetRange("G/L Account No.", jmcAccount."No.");
                     jmcEntry.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
-                    jmcEntry.SetLoadFields(Amount, "Posting Date", "Document No.", Description);
+                    jmcEntry.SetLoadFields(Amount, "Posting Date", "Document No.", Description, "JMC Resource No.");
                     if jmcEntry.FindSet() then
                         repeat
-                            if jmcEntry."Posting Date" = NormalDate(jmcEntry."Posting Date") then begin
+                            if (jmcEntry."Posting Date" = NormalDate(jmcEntry."Posting Date")) and
+                               (jmcEntry."JMC Resource No." = '')
+                            then begin
+                                if (jmcAccount."JMC Cost Type" = jmcAccount."JMC Cost Type"::" ") or
+                                   (jmcAccount."JMC Cost Classification" = jmcAccount."JMC Cost Classification"::" ")
+                                then
+                                    Error(jmcPartialErr, jmcAccount."No.");
                                 jmcFunds[jmcClassification] += jmcEntry.Amount;
                                 jmcHasEntries := true;
                                 JMCDetail.AddAccounting(jmcEntry, jmcAccount);
@@ -186,7 +190,9 @@ codeunit 53104 "JMC Cost Model Calculation"
                         until jmcEntry.Next() = 0;
                 end;
             until jmcAccount.Next() = 0;
-        if not jmcHasEntries then
+        if not jmcHasEntries and (jmcCostModel."JMC Fixed Resource Cost" = 0) and
+           (jmcCostModel."JMC Catering Direct Personnel" = 0) and (jmcCostModel."JMC Industry Direct Personnel" = 0)
+        then
             Error(jmcNoEntriesErr);
         for jmcClassification := 1 to 2 do begin
             if jmcFunds[jmcClassification] < 0 then
@@ -200,31 +206,115 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcCostModel.Validate("JMC Total Structure Cost", jmcFunds[1] + jmcFunds[2]);
     end;
 
-    local procedure ReadFixedResourceCosts(var jmcCostModel: Record "JMC Cost Model"; jmcStartingDate: Date; jmcEndingDate: Date)
+    local procedure ReadPersonnelCosts(var jmcCostModel: Record "JMC Cost Model"; jmcStartingDate: Date; jmcEndingDate: Date; jmcAccountFilter: Text[250])
     var
-        jmcResourceEntry: Record "Res. Ledger Entry";
+        jmcEntry: Record "G/L Entry";
+        jmcAccount: Record "G/L Account";
         jmcResource: Record Resource;
-        jmcResourceCost: Decimal;
-        jmcResourceMissingErr: Label 'Resource %1 used in assembly resource entry %2 no longer exists. Fixed resource costs cannot be calculated.', Comment = 'ESP="El recurso %1 utilizado en el movimiento de recursos de ensamblado %2 ya no existe. No se pueden calcular los costes de recursos fijos."';
-        jmcNegativeCostErr: Label 'The net fixed resource personnel cost for assembly orders is negative (%1). Review resource usage and adjustments for the period.', Comment = 'ESP="El coste neto de personal de recursos fijos de los pedidos de ensamblado es negativo (%1). Revise los consumos y ajustes de recursos del periodo."';
+        jmcFixed: Decimal;
+        jmcDirect: array[2] of Decimal;
+        jmcNegativeCostErr: Label 'Net personnel cost is negative for %1 (%2). Review the source expenses and period.', Comment = 'ESP="El coste neto de personal es negativo para %1 (%2). Revise los gastos de origen y el periodo."';
     begin
-        jmcResourceEntry.SetRange("Entry Type", jmcResourceEntry."Entry Type"::Usage);
-        jmcResourceEntry.SetRange("Order Type", jmcResourceEntry."Order Type"::Assembly);
-        jmcResourceEntry.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
-        jmcResourceEntry.SetLoadFields("Entry No.", "Posting Date", "Document No.", "Resource No.", Quantity, "Total Cost");
-        jmcResource.SetLoadFields(Name, "JMC Cost Type");
-        if jmcResourceEntry.FindSet() then
+        jmcEntry.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
+        jmcEntry.SetFilter("JMC Resource No.", '<>%1', '');
+        if jmcAccountFilter <> '' then
+            jmcEntry.SetFilter("G/L Account No.", jmcAccountFilter);
+        if jmcEntry.FindSet() then
             repeat
-                if not jmcResource.Get(jmcResourceEntry."Resource No.") then
-                    Error(jmcResourceMissingErr, jmcResourceEntry."Resource No.", jmcResourceEntry."Entry No.");
-                if jmcResource."JMC Cost Type" = jmcResource."JMC Cost Type"::Fixed then begin
-                    jmcResourceCost += jmcResourceEntry."Total Cost";
-                    JMCDetail.AddResource(jmcResourceEntry, jmcResource);
+                jmcAccount.Get(jmcEntry."G/L Account No.");
+                if (jmcEntry."Posting Date" = NormalDate(jmcEntry."Posting Date")) and
+                   (jmcAccount."Income/Balance" = jmcAccount."Income/Balance"::"Income Statement")
+                then begin
+                    jmcResource.Get(jmcEntry."JMC Resource No.");
+                    jmcResource.TestField("JMC Cost Type");
+                    if jmcResource."JMC Cost Type" = jmcResource."JMC Cost Type"::Fixed then begin
+                        jmcFixed += jmcEntry.Amount;
+                        JMCDetail.AddPersonnelSource(Database::"G/L Entry", jmcEntry."Entry No.", jmcEntry."Posting Date", jmcEntry."Document No.", jmcResource."No.", jmcEntry.Description, '', jmcEntry.Amount, 0);
+                    end;
                 end;
-            until jmcResourceEntry.Next() = 0;
-        if jmcResourceCost < 0 then
-            Error(jmcNegativeCostErr, jmcResourceCost);
-        jmcCostModel."JMC Fixed Resource Cost" := RoundAmount(jmcResourceCost);
+            until jmcEntry.Next() = 0;
+        ReadAssemblyPersonnel(jmcStartingDate, jmcEndingDate, jmcDirect);
+        ReadEventPersonnel(jmcStartingDate, jmcEndingDate, jmcDirect);
+        if jmcFixed < 0 then
+            Error(jmcNegativeCostErr, jmcCostModel.FieldCaption("JMC Fixed Resource Cost"), jmcFixed);
+        if jmcDirect[1] < 0 then
+            Error(jmcNegativeCostErr, 'CATERING', jmcDirect[1]);
+        if jmcDirect[2] < 0 then
+            Error(jmcNegativeCostErr, 'ALIMENTACION', jmcDirect[2]);
+        jmcCostModel."JMC Fixed Resource Cost" := RoundAmount(jmcFixed);
+        jmcCostModel."JMC Catering Direct Personnel" := RoundAmount(jmcDirect[1]);
+        jmcCostModel."JMC Industry Direct Personnel" := RoundAmount(jmcDirect[2]);
+        jmcCostModel."JMC Personnel Sources Ready" := true;
+    end;
+
+    local procedure ReadAssemblyPersonnel(jmcStartingDate: Date; jmcEndingDate: Date; var jmcDirect: array[2] of Decimal)
+    var
+        jmcHeader: Record "Assembly Header";
+        jmcLine: Record "Assembly Line";
+        jmcPostedHeader: Record "Posted Assembly Header";
+        jmcPostedLine: Record "Posted Assembly Line";
+        jmcResource: Record Resource;
+        jmcAmount: Decimal;
+    begin
+        jmcPostedHeader.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
+        jmcPostedHeader.SetRange(Reversed, false);
+        if jmcPostedHeader.FindSet() then
+            repeat
+                jmcPostedLine.SetRange("Document No.", jmcPostedHeader."No.");
+                jmcPostedLine.SetRange(Type, jmcPostedLine.Type::Resource);
+                if jmcPostedLine.FindSet() then
+                    repeat
+                        jmcResource.Get(jmcPostedLine."No.");
+                        jmcResource.TestField("JMC Cost Type");
+                        if (jmcResource."JMC Cost Type" <> jmcResource."JMC Cost Type"::Fixed) and (jmcPostedLine."Cost Amount" <> 0) then begin
+                            jmcDirect[2] += jmcPostedLine."Cost Amount";
+                            JMCDetail.AddPersonnelSource(Database::"Posted Assembly Line", jmcPostedLine."Line No.", jmcPostedHeader."Posting Date", jmcPostedHeader."No.", jmcResource."No.", jmcPostedLine.Description, 'ALIMENTACION', jmcPostedLine."Cost Amount", jmcPostedLine.Quantity);
+                        end;
+                    until jmcPostedLine.Next() = 0;
+            until jmcPostedHeader.Next() = 0;
+        jmcHeader.SetRange("Document Type", jmcHeader."Document Type"::Order);
+        jmcHeader.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
+        if jmcHeader.FindSet() then
+            repeat
+                jmcLine.SetRange("Document Type", jmcHeader."Document Type");
+                jmcLine.SetRange("Document No.", jmcHeader."No.");
+                jmcLine.SetRange(Type, jmcLine.Type::Resource);
+                if jmcLine.FindSet() then
+                    repeat
+                        jmcResource.Get(jmcLine."No.");
+                        jmcResource.TestField("JMC Cost Type");
+                        jmcAmount := jmcLine."Remaining Quantity" * jmcLine."Unit Cost";
+                        if (jmcResource."JMC Cost Type" <> jmcResource."JMC Cost Type"::Fixed) and (jmcAmount <> 0) then begin
+                            jmcDirect[2] += jmcAmount;
+                            JMCDetail.AddPersonnelSource(Database::"Assembly Line", jmcLine."Line No.", jmcHeader."Posting Date", jmcHeader."No.", jmcResource."No.", jmcLine.Description, 'ALIMENTACION', jmcAmount, jmcLine."Remaining Quantity");
+                        end;
+                    until jmcLine.Next() = 0;
+            until jmcHeader.Next() = 0;
+    end;
+
+    local procedure ReadEventPersonnel(jmcStartingDate: Date; jmcEndingDate: Date; var jmcDirect: array[2] of Decimal)
+    var
+        jmcEvent: Record Evento;
+        jmcAssignment: Record "Asignacion Recursos Eventos";
+        jmcResource: Record Resource;
+        jmcAmount: Decimal;
+    begin
+        jmcEvent.SetRange("Fecha Evento", jmcStartingDate, jmcEndingDate);
+        jmcEvent.SetFilter(Estado, '<>%1&<>%2&<>%3', jmcEvent.Estado::Presupuesto, jmcEvent.Estado::Rechazado, jmcEvent.Estado::Anulado);
+        if jmcEvent.FindSet() then
+            repeat
+                jmcAssignment.SetRange("Codigo Evento", jmcEvent."Codigo Evento");
+                if jmcAssignment.FindSet() then
+                    repeat
+                        jmcResource.Get(jmcAssignment."Codigo Recurso");
+                        jmcResource.TestField("JMC Cost Type");
+                        jmcAmount := jmcAssignment.Cantidad * jmcAssignment."Coste Unitario";
+                        if (jmcResource."JMC Cost Type" <> jmcResource."JMC Cost Type"::Fixed) and (jmcAmount <> 0) then begin
+                            jmcDirect[1] += jmcAmount;
+                            JMCDetail.AddPersonnelSource(Database::"Asignacion Recursos Eventos", jmcAssignment."Linea Recurso Evento", jmcEvent."Fecha Evento", jmcEvent."Codigo Evento", jmcResource."No.", jmcAssignment.Descripcion, 'CATERING', jmcAmount, jmcAssignment.Cantidad);
+                        end;
+                    until jmcAssignment.Next() = 0;
+            until jmcEvent.Next() = 0;
     end;
 
     local procedure LoadLines(jmcModelCode: Code[20])
@@ -270,81 +360,34 @@ codeunit 53104 "JMC Cost Model Calculation"
             until jmcLine.Next() = 0;
         if jmcLine.FindLast() then
             jmcLastLineNo := jmcLine."JMC Line No.";
-        jmcItem.SetRange(Blocked, false);
-        if jmcItem.FindSet() then
-            repeat
-                JMCSalesLines.Reset();
-                JMCSalesLines.SetRange("JMC Item No.", jmcItem."No.");
-                if JMCSalesLines.FindSet() then
-                    repeat
-                        EnsureLine(jmcModelCode, jmcItem, JMCSalesLines."JMC Unit of Measure Code", jmcMethod::Sales, jmcLastLineNo);
-                    until JMCSalesLines.Next() = 0;
-                if not JMCSalesBaseTotals.ContainsKey(jmcItem."No.") then
-                    EnsureLine(jmcModelCode, jmcItem, jmcItem."Base Unit of Measure", jmcMethod::Sales, jmcLastLineNo);
-            until jmcItem.Next() = 0;
         if jmcLine.FindSet(true) then
             repeat
                 jmcItem.Get(jmcLine."JMC Item No.");
-                JMCSalesLines.Reset();
-                JMCSalesLines.SetRange("JMC Item No.", jmcItem."No.");
-                if JMCSalesLines.IsEmpty() then begin
-                    if jmcLine."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure" then
-                        jmcLine.Delete(true);
-                end else begin
-                    JMCSalesLines.SetRange("JMC Unit of Measure Code", jmcLine."JMC Unit of Measure Code");
-                    if JMCSalesLines.IsEmpty() and
-                       ((jmcLine."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure") or JMCSalesBaseTotals.ContainsKey(jmcItem."No."))
-                    then
-                        jmcLine.Delete(true);
-                end;
+                if jmcLine."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure" then
+                    jmcLine.Delete(true);
             until jmcLine.Next() = 0;
+        jmcItem.SetRange(Blocked, false);
+        if jmcItem.FindSet() then
+            repeat
+                EnsureLine(jmcModelCode, jmcItem, jmcItem."Base Unit of Measure", jmcMethod::Sales, jmcLastLineNo);
+            until jmcItem.Next() = 0;
     end;
 
     local procedure ReadSalesQuantities(jmcStartingDate: Date; jmcEndingDate: Date)
     var
         jmcEntry: Record "Item Ledger Entry";
-        jmcLineNo: Integer;
-        jmcConversionIssueLbl: Label 'Review the unit of measure on sale entry %1.', Comment = 'ESP="Revise la unidad de medida del movimiento de venta %1."';
     begin
-        JMCSalesLines.Reset();
-        JMCSalesLines.DeleteAll(false);
         jmcEntry.SetRange("Entry Type", jmcEntry."Entry Type"::Sale);
         jmcEntry.SetRange("Posting Date", jmcStartingDate, jmcEndingDate);
         jmcEntry.SetFilter(Quantity, '<>%1', 0);
-        jmcEntry.SetLoadFields("Item No.", "Unit of Measure Code", Quantity, "Qty. per Unit of Measure");
+        jmcEntry.SetLoadFields("Item No.", Quantity);
         if jmcEntry.FindSet() then
             repeat
-                JMCSalesLines.Reset();
-                JMCSalesLines.SetCurrentKey("JMC Model Code", "JMC Item No.", "JMC Unit of Measure Code", "JMC Allocation Method");
-                JMCSalesLines.SetRange("JMC Model Code", '');
-                JMCSalesLines.SetRange("JMC Item No.", jmcEntry."Item No.");
-                JMCSalesLines.SetRange("JMC Unit of Measure Code", jmcEntry."Unit of Measure Code");
-                if not JMCSalesLines.FindFirst() then begin
-                    JMCSalesLines.Init();
-                    jmcLineNo += 1;
-                    JMCSalesLines."JMC Line No." := jmcLineNo;
-                    JMCSalesLines."JMC Item No." := jmcEntry."Item No.";
-                    JMCSalesLines."JMC Unit of Measure Code" := jmcEntry."Unit of Measure Code";
-                    JMCSalesLines.Insert(false);
-                end;
-                JMCSalesLines."JMC Net Sales Base Qty." -= jmcEntry.Quantity;
-                if (jmcEntry."Unit of Measure Code" = '') or (jmcEntry."Qty. per Unit of Measure" <= 0) then
-                    JMCSalesLines."JMC Calculation Issue" := StrSubstNo(jmcConversionIssueLbl, jmcEntry."Entry No.")
+                if JMCSalesBaseTotals.ContainsKey(jmcEntry."Item No.") then
+                    JMCSalesBaseTotals.Set(jmcEntry."Item No.", JMCSalesBaseTotals.Get(jmcEntry."Item No.") - jmcEntry.Quantity)
                 else
-                    JMCSalesLines."JMC Net Sales Quantity" -= jmcEntry.Quantity / jmcEntry."Qty. per Unit of Measure";
-                JMCSalesLines.Modify(false);
+                    JMCSalesBaseTotals.Add(jmcEntry."Item No.", -jmcEntry.Quantity);
             until jmcEntry.Next() = 0;
-        JMCSalesLines.Reset();
-        if JMCSalesLines.FindSet() then
-            repeat
-                if (JMCSalesLines."JMC Net Sales Quantity" > 0) and (JMCSalesLines."JMC Net Sales Base Qty." > 0) and
-                   (JMCSalesLines."JMC Calculation Issue" = '')
-                then begin
-                    if not JMCSalesBaseTotals.ContainsKey(JMCSalesLines."JMC Item No.") then
-                        JMCSalesBaseTotals.Add(JMCSalesLines."JMC Item No.", 0);
-                    JMCSalesBaseTotals.Set(JMCSalesLines."JMC Item No.", JMCSalesBaseTotals.Get(JMCSalesLines."JMC Item No.") + JMCSalesLines."JMC Net Sales Base Qty.");
-                end;
-            until JMCSalesLines.Next() = 0;
     end;
 
     local procedure EnsureLine(jmcModelCode: Code[20]; jmcItem: Record Item; jmcUnitCode: Code[10]; jmcMethod: Enum "JMC Cost Allocation Method"; var jmcLastLineNo: Integer)
@@ -393,8 +436,6 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcMissingC01Lbl: Label 'The recipe is missing structure cost C01.', Comment = 'ESP="Falta el coste de estructura C01 en la receta."';
         jmcBusinessIssueLbl: Label 'The item''s business could not be identified.', Comment = 'ESP="No se ha podido identificar el negocio del producto."';
         jmcUnitIssueLbl: Label 'Review the item quantities and unit of measure.', Comment = 'ESP="Revise las cantidades y la unidad de medida del producto."';
-        jmcSalesErr: Label 'Item %1 has not been sold in unit %2 during the calculated period.', Comment = 'ESP="El producto %1 no se ha vendido para la unidad %2 en el periodo calculado."';
-        jmcReturnsLbl: Label 'Returns exceed sales for item %1 in unit %2 during the calculated period.', Comment = 'ESP="Las devoluciones del producto %1 superan sus ventas para la unidad %2 en el periodo calculado."';
     begin
         Clear(JMCTempLines."JMC Calculation Issue");
         JMCTempLines."JMC Allocation Eligible" := false;
@@ -417,27 +458,13 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines."JMC Item Description" := jmcItem.Description;
         JMCTempLines."JMC Actual Production Qty." := 0;
         JMCTempLines."JMC Theoretical Production Qty." := 0;
-        JMCTempLines."JMC Production Unit Factor" := 0;
-        JMCSalesLines.Reset();
-        JMCSalesLines.SetRange("JMC Item No.", jmcItem."No.");
-        JMCSalesLines.SetRange("JMC Unit of Measure Code", JMCTempLines."JMC Unit of Measure Code");
-        if JMCSalesLines.FindFirst() then begin
-            JMCTempLines."JMC Net Sales Quantity" := JMCSalesLines."JMC Net Sales Quantity";
-            JMCTempLines."JMC Net Sales Base Qty." := JMCSalesLines."JMC Net Sales Base Qty.";
-            if (JMCSalesLines."JMC Net Sales Quantity" > 0) and (JMCSalesLines."JMC Net Sales Base Qty." > 0) and (JMCSalesLines."JMC Calculation Issue" = '') then
-                JMCTempLines."JMC Production Unit Factor" := JMCSalesLines."JMC Net Sales Base Qty." / JMCSalesLines."JMC Net Sales Quantity";
+        JMCTempLines."JMC Production Unit Factor" := 1;
+        if JMCSalesBaseTotals.ContainsKey(jmcItem."No.") then begin
+            JMCTempLines."JMC Net Sales Quantity" := JMCSalesBaseTotals.Get(jmcItem."No.");
+            JMCTempLines."JMC Net Sales Base Qty." := JMCTempLines."JMC Net Sales Quantity";
         end;
-        if not JMCSalesBaseTotals.ContainsKey(jmcItem."No.") and
-           (JMCTempLines."JMC Unit of Measure Code" = jmcItem."Base Unit of Measure")
-        then
-            JMCTempLines."JMC Production Unit Factor" := 1;
         if JMCProductionQuantities.ContainsKey(jmcItem."No.") then
-            if JMCSalesBaseTotals.ContainsKey(jmcItem."No.") then begin
-                if JMCTempLines."JMC Production Unit Factor" > 0 then
-                    JMCTempLines."JMC Actual Production Qty." := JMCProductionQuantities.Get(jmcItem."No.") * JMCTempLines."JMC Net Sales Base Qty." / JMCSalesBaseTotals.Get(jmcItem."No.") / JMCTempLines."JMC Production Unit Factor";
-            end else
-                if JMCTempLines."JMC Production Unit Factor" = 1 then
-                    JMCTempLines."JMC Actual Production Qty." := JMCProductionQuantities.Get(jmcItem."No.");
+            JMCTempLines."JMC Actual Production Qty." := JMCProductionQuantities.Get(jmcItem."No.");
         JMCTempLines."JMC Theoretical Production Qty." := JMCTempLines."JMC Actual Production Qty.";
         if not jmcStructureRecipes.GetStructureCost(jmcItem."No.", jmcStructurePercentage, jmcStructureValue) then begin
             JMCTempLines."JMC Calculation Issue" := jmcMissingC01Lbl;
@@ -453,32 +480,12 @@ codeunit 53104 "JMC Cost Model Calculation"
             ReadItemRecipe(jmcItem);
         if JMCTempLines."JMC Unit of Measure Code" = jmcItem."Base Unit of Measure" then
             JMCTempLines."JMC Recipe BOM Cost" := JMCRecipeCosts.Get(jmcItem."No.");
-        JMCSalesLines.Reset();
-        JMCSalesLines.SetRange("JMC Item No.", jmcItem."No.");
-        JMCSalesLines.SetRange("JMC Unit of Measure Code", JMCTempLines."JMC Unit of Measure Code");
-        if JMCSalesLines.FindFirst() then begin
-            JMCTempLines."JMC Net Sales Quantity" := JMCSalesLines."JMC Net Sales Quantity";
-            JMCTempLines."JMC Net Sales Base Qty." := JMCSalesLines."JMC Net Sales Base Qty.";
-            if (JMCSalesLines."JMC Calculation Issue" <> '') and
-               (JMCSalesBaseTotals.ContainsKey(jmcItem."No.") or (JMCTempLines."JMC Unit of Measure Code" <> jmcItem."Base Unit of Measure"))
-            then begin
-                JMCTempLines."JMC Calculation Issue" := JMCSalesLines."JMC Calculation Issue";
-                exit;
-            end;
-        end;
-        if (JMCTempLines."JMC Net Sales Quantity" <= 0) and (JMCTempLines."JMC Production Unit Factor" = 0) then begin
-            if JMCTempLines."JMC Net Sales Quantity" < 0 then
-                JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcReturnsLbl, jmcItem."No.", JMCTempLines."JMC Unit of Measure Code")
-            else
-                JMCTempLines."JMC Calculation Issue" := StrSubstNo(jmcSalesErr, jmcItem."No.", JMCTempLines."JMC Unit of Measure Code");
-            exit;
-        end;
         if (JMCTempLines."JMC Unit of Measure Code" = '') or (JMCTempLines."JMC Production Unit Factor" <= 0) then begin
             JMCTempLines."JMC Calculation Issue" := jmcUnitIssueLbl;
             exit;
         end;
         JMCTempLines."JMC Recipe BOM Cost" := JMCRecipeCosts.Get(jmcItem."No.") * JMCTempLines."JMC Production Unit Factor";
-        if (CopyStr(jmcItem."No.", 1, 2) <> 'CA') and (CopyStr(jmcItem."No.", 1, 2) <> 'PT') then begin
+        if jmcStructureRecipes.GetItemBusiness(jmcItem."No.") = 0 then begin
             JMCTempLines."JMC Calculation Issue" := jmcBusinessIssueLbl;
             exit;
         end;
@@ -665,13 +672,17 @@ codeunit 53104 "JMC Cost Model Calculation"
         jmcBusiness: Integer;
         jmcPending: Decimal;
     begin
-        jmcResourceFunds[1] := RoundAmount(jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Catering Resource Pct." / 100);
+        jmcCostModel."JMC Catering Resource Pct." := jmcCostModel."JMC Catering Structure Pct.";
+        jmcCostModel."JMC Industry Resource Pct." := jmcCostModel."JMC Industry Structure Pct.";
+        jmcResourceFunds[1] := RoundAmount(jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Catering Structure Pct." / 100);
         jmcResourceFunds[2] := jmcCostModel."JMC Fixed Resource Cost" - jmcResourceFunds[1];
+        jmcResourceFunds[1] += jmcCostModel."JMC Catering Direct Personnel";
+        jmcResourceFunds[2] += jmcCostModel."JMC Industry Direct Personnel";
         jmcCostModel."JMC Catering Resource Allocation" := jmcResourceFunds[1];
         jmcCostModel."JMC Industry Resource Allocation" := jmcResourceFunds[2];
         jmcCostModel."JMC Resource Cost Pending" := 0;
-        JMCDetail.AddResourceBusinessFund(1, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Catering Resource Pct.", 'A * B / 100', jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Catering Resource Pct." / 100, jmcResourceFunds[1]);
-        JMCDetail.AddResourceBusinessFund(2, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Industry Resource Pct.", 'A * B / 100', jmcCostModel."JMC Fixed Resource Cost" * jmcCostModel."JMC Industry Resource Pct." / 100, jmcResourceFunds[2]);
+        JMCDetail.AddPersonnelBusinessFund(1, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Catering Structure Pct.", jmcCostModel."JMC Catering Direct Personnel", jmcResourceFunds[1]);
+        JMCDetail.AddPersonnelBusinessFund(2, jmcCostModel."JMC Fixed Resource Cost", jmcCostModel."JMC Catering Structure Pct.", jmcCostModel."JMC Industry Direct Personnel", jmcResourceFunds[2]);
         for jmcBusiness := 1 to 2 do
             if jmcResourceFunds[jmcBusiness] <> 0 then
                 if JMCBusinessQuantityBases[jmcBusiness] > 0 then
@@ -693,10 +704,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines.Reset();
         JMCTempLines.SetRange("JMC Allocation Eligible", true);
         JMCTempLines.SetRange("JMC Allocation Method", JMCTempLines."JMC Allocation Method"::Sales);
-        if jmcBusiness = 1 then
-            JMCTempLines.SetFilter("JMC Item No.", 'CA*')
-        else
-            JMCTempLines.SetFilter("JMC Item No.", 'PT*');
+        JMCTempLines.SetFilter("JMC Item No.", JMCStructureRecipes.GetBusinessItemFilter(jmcBusiness));
         jmcCount := JMCTempLines.Count();
         jmcRemaining := jmcResourceFund;
         if JMCTempLines.FindSet() then
@@ -730,10 +738,7 @@ codeunit 53104 "JMC Cost Model Calculation"
         JMCTempLines.Reset();
         JMCTempLines.SetRange("JMC Allocation Eligible", true);
         JMCTempLines.SetRange("JMC Allocation Method", JMCTempLines."JMC Allocation Method"::Sales);
-        if jmcBusiness = 1 then
-            JMCTempLines.SetFilter("JMC Item No.", 'CA*')
-        else
-            JMCTempLines.SetFilter("JMC Item No.", 'PT*');
+        JMCTempLines.SetFilter("JMC Item No.", JMCStructureRecipes.GetBusinessItemFilter(jmcBusiness));
         JMCTempLines.SetRange("JMC Unit of Measure Code", jmcUnitCode);
         jmcBase := JMCSalesGroupQuantityBases.Get(SalesGroupKey(jmcBusiness, jmcUnitCode));
         jmcCount := JMCTempLines.Count();
@@ -804,16 +809,11 @@ codeunit 53104 "JMC Cost Model Calculation"
 
     local procedure BusinessIndex(jmcItemNo: Code[20]): Integer
     var
-        jmcBusinessErr: Label 'Item %1 is not identified as CA (Catering) or PT (Industry). Review the model scope; no business is assigned by default.', Comment = 'ESP="El producto %1 no se identifica como CA (Catering) o PT (Alimentación). Revise los productos del modelo; no se asigna un negocio por defecto."';
+        jmcBusinessErr: Label 'Item %1 is not identified as CA, MP or MA (Catering), or PT, PI, PR or SER (Industry). Review the model scope; no business is assigned by default.', Comment = 'ESP="El producto %1 no se identifica como CA, MP o MA (Catering), ni PT, PI, PR o SER (Alimentación). Revise los productos del modelo; no se asigna un negocio por defecto."';
     begin
-        case CopyStr(jmcItemNo, 1, 2) of
-            'CA':
-                exit(1);
-            'PT':
-                exit(2);
-            else
-                Error(jmcBusinessErr, jmcItemNo);
-        end;
+        if JMCStructureRecipes.GetItemBusiness(jmcItemNo) = 0 then
+            Error(jmcBusinessErr, jmcItemNo);
+        exit(JMCStructureRecipes.GetItemBusiness(jmcItemNo));
     end;
 
     local procedure Minimum(jmcFirst: Decimal; jmcSecond: Decimal): Decimal
@@ -825,8 +825,8 @@ codeunit 53104 "JMC Cost Model Calculation"
 
     var
         JMCTempLines: Record "JMC Cost Model Line" temporary;
-        JMCSalesLines: Record "JMC Cost Model Line" temporary;
         JMCDetail: Codeunit "JMC Cost Calculation Detail";
+        JMCStructureRecipes: Codeunit "JMC Structure Recipe Costs";
         JMCRecipeCosts: Dictionary of [Code[20], Decimal];
         JMCItemIssues: Dictionary of [Code[20], Text];
         JMCProductionQuantities: Dictionary of [Code[20], Decimal];

@@ -21,9 +21,9 @@ table 53105 "JMC Cost Calculation Detail"
         field(4; "JMC Detail Type"; Option)
         {
             Caption = 'Breakdown Level', Comment = 'ESP="Nivel del desglose"';
-            ToolTip = 'Identifies what this row explains: an accounting, production or resource movement, a business fund, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.', Comment = 'ESP="Indica qué explica esta fila: un movimiento contable, de producción o de recursos, el fondo de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."';
+            ToolTip = 'Identifies what this row explains: an accounting, production or resource movement, a business cost, a unit group, a product allocation or money left unallocated. These are different steps, not amounts to add together.', Comment = 'ESP="Indica qué explica esta fila: un movimiento contable, de producción o de recursos, el coste de un negocio, un grupo de unidades, el reparto a un producto o dinero pendiente. Son pasos distintos, no importes que deban sumarse entre sí."';
             OptionMembers = Formula,Accounting,Production,Allocation,Pending,"Unit Group","Business Fund",Resource,"Resource Fund","Resource Allocation","Resource Pending";
-            OptionCaption = 'Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Fund,Resource,Resource Fund,Resource Allocation,Resource Pending', Comment = 'ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Fondo del negocio,Recurso,Fondo de recursos,Reparto de recursos,Recursos pendientes"';
+            OptionCaption = 'Formula,Accounting,Production,Allocation,Pending,Unit Group,Business Cost,Resource,Personnel Cost,Resource Allocation,Resource Pending', Comment = 'ESP="Fórmula,Contabilidad,Producción,Reparto,Pendiente,Grupo de unidad,Coste del negocio,Recurso,Coste de personal,Reparto de recursos,Recursos pendientes"';
         }
         field(5; "JMC Source Entry No."; Integer)
         {
@@ -94,13 +94,13 @@ table 53105 "JMC Cost Calculation Detail"
         field(18; "JMC Operand C"; Decimal)
         {
             Caption = 'Saved Operand C', Comment = 'ESP="Operando C guardado"';
-            ToolTip = 'Shows the money to distribute in formulas that use C. For a product it is the fund available to its group or business; for a unit group it is the business fund. It is not an additional amount.', Comment = 'ESP="Es el dinero que se reparte en las fórmulas que utilizan C. Para un producto es el fondo disponible para su grupo o negocio; para un grupo de unidad es el fondo del negocio. No es un importe adicional."';
+            ToolTip = 'Shows the money to distribute in formulas that use C. For a product it is the amount available to its group or business; for a unit group it is the business amount. It is not an additional amount.', Comment = 'ESP="Es el dinero que se reparte en las fórmulas que utilizan C. Para un producto es el importe disponible para su grupo o negocio; para un grupo de unidad es el importe del negocio. No es un importe adicional."';
             DecimalPlaces = 2 : 2;
         }
         field(19; "JMC Raw Result"; Decimal)
         {
             Caption = 'Result before Rounding', Comment = 'ESP="Resultado antes de redondeo"';
-            ToolTip = 'Shows this row result before rounding or adjusting the final remaining amount. The saved result can differ slightly so that all allocated amounts match the available fund.', Comment = 'ESP="Es el resultado de esta fila antes de redondear o ajustar el importe que queda al final. El resultado guardado puede variar ligeramente para que todo lo repartido coincida con el fondo disponible."';
+            ToolTip = 'Shows this row result before rounding or adjusting the final remaining amount. The saved result can differ slightly so that all allocated amounts match the available amount.', Comment = 'ESP="Es el resultado de esta fila antes de redondear o ajustar el importe que queda al final. El resultado guardado puede variar ligeramente para que todo lo repartido coincida con el importe disponible."';
             DecimalPlaces = 2 : 2;
         }
         field(20; "JMC Result"; Decimal)
@@ -112,7 +112,7 @@ table 53105 "JMC Cost Calculation Detail"
         field(21; "JMC Rounding Difference"; Decimal)
         {
             Caption = 'Rounding or Residual Difference', Comment = 'ESP="Diferencia de redondeo o residuo"';
-            ToolTip = 'Shows this row saved result minus its result before rounding. It explains adjustments needed to distribute the fund exactly; it does not add another expense.', Comment = 'ESP="Es el resultado guardado de esta fila menos su resultado antes de redondear. Explica los ajustes necesarios para repartir exactamente el fondo; no añade otro gasto."';
+            ToolTip = 'Shows this row saved result minus its result before rounding. It explains adjustments needed to distribute the amount exactly; it does not add another expense.', Comment = 'ESP="Es el resultado guardado de esta fila menos su resultado antes de redondear. Explica los ajustes necesarios para repartir exactamente el importe; no añade otro gasto."';
             DecimalPlaces = 2 : 2;
         }
         field(22; "JMC Source Amount"; Decimal)
@@ -188,7 +188,11 @@ table 53105 "JMC Cost Calculation Detail"
         {
             Caption = 'Saved Resource No.', Comment = 'ESP="Nº recurso guardado"';
             TableRelation = Resource."No.";
-            ToolTip = 'Identifies the resource on a saved assembly usage entry.', Comment = 'ESP="Identifica el recurso en el movimiento de consumo de ensamblado guardado."';
+            ToolTip = 'Identifies the resource associated with the saved personnel expense.', Comment = 'ESP="Identifica el recurso asociado al gasto de personal guardado."';
+        }
+        field(36; "JMC Source Table ID"; Integer)
+        {
+            Caption = 'Source Table ID', Comment = 'ESP="ID tabla de origen"';
         }
     }
 

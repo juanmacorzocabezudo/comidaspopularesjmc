@@ -27,32 +27,32 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(5; "JMC Source Entry No."; Integer)
         {
-            Caption = 'Saved Source Entry or Line No.', Comment = 'ESP="Nº movimiento o línea de origen guardados"';
+            Caption = 'Source Entry or Line No.', Comment = 'ESP="Nº movimiento o línea de origen"';
             ToolTip = 'Shows the source movement number for accounting, production and resource rows, or the model line number for product allocations. It is not a document number. A zero means no source number applies.', Comment = 'ESP="Es el número del movimiento en filas contables, de producción y de recursos, o el número de línea del modelo en repartos a productos. No es el número de documento. Un cero indica que no corresponde un número de origen."';
         }
         field(6; "JMC Posting Date"; Date)
         {
-            Caption = 'Saved Posting Date', Comment = 'ESP="Fecha registro guardada"';
+            Caption = 'Posting Date', Comment = 'ESP="Fecha registro"';
             ToolTip = 'Shows the posting date of the source movement when the calculation was saved. It is blank for rows that explain a distribution rather than a movement.', Comment = 'ESP="Es la fecha de registro del movimiento de origen que se guardó al calcular. Está vacía en las filas que explican un reparto y no un movimiento."';
         }
         field(7; "JMC Document No."; Code[20])
         {
-            Caption = 'Saved Document No.', Comment = 'ESP="Nº documento guardado"';
+            Caption = 'Document No.', Comment = 'ESP="Nº documento"';
             ToolTip = 'Shows the document reference copied from the accounting or production movement. Use it to identify the document that produced that movement.', Comment = 'ESP="Es la referencia del documento copiada del movimiento contable o de producción. Permite identificar el documento que generó ese movimiento."';
         }
         field(8; "JMC Account No."; Code[20])
         {
-            Caption = 'Saved Account No.', Comment = 'ESP="Nº cuenta guardada"';
+            Caption = 'Account No.', Comment = 'ESP="Nº cuenta"';
             ToolTip = 'Identifies the G/L account from which this expense was taken. It applies to accounting rows, not to the subsequent product allocations.', Comment = 'ESP="Identifica la cuenta contable de la que se tomó este gasto. Se utiliza en las filas contables, no en los repartos posteriores a productos."';
         }
         field(9; "JMC Item No."; Code[20])
         {
-            Caption = 'Saved Item No.', Comment = 'ESP="Nº producto guardado"';
+            Caption = 'Item No.', Comment = 'ESP="Nº producto"';
             ToolTip = 'Identifies the product in the production movement or allocation line. It is blank for amounts that apply to a whole business or group rather than one product.', Comment = 'ESP="Identifica el producto del movimiento de producción o de la línea de reparto. Está vacío en importes que corresponden a todo un negocio o grupo y no a un producto concreto."';
         }
         field(10; "JMC Unit Code"; Code[10])
         {
-            Caption = 'Saved Movement or Sales Unit', Comment = 'ESP="Unidad de movimiento o venta guardada"';
+            Caption = 'Movement or Sales Unit', Comment = 'ESP="Unidad de movimiento o venta"';
             ToolTip = 'Shows the unit recorded on the production movement or used for the sales allocation, such as kilograms or boxes. Check the quantity field help before adding quantities from different rows.', Comment = 'ESP="Es la unidad anotada en el movimiento de producción o utilizada en el reparto de ventas, como kilos o cajas. Consulte la ayuda del campo cantidad antes de sumar cantidades de distintas filas."';
         }
         field(11; "JMC Business"; Code[20])
@@ -62,7 +62,7 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(12; "JMC Classification"; Enum "JMC Cost Classification")
         {
-            Caption = 'Saved Cost Classification', Comment = 'ESP="Clasificación del coste guardada"';
+            Caption = 'Cost Classification', Comment = 'ESP="Clasificación del coste"';
             ToolTip = 'Indicates whether the amount belongs to industrial or management costs. Each category is distributed separately. Production rows do not use this classification.', Comment = 'ESP="Indica si el importe corresponde a costes industriales o de gestión. Cada categoría se reparte por separado. Los movimientos de producción no utilizan esta clasificación."';
         }
         field(13; "JMC Method"; Enum "JMC Cost Allocation Method")
@@ -71,29 +71,29 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(14; "JMC Description"; Text[100])
         {
-            Caption = 'Saved Source Description', Comment = 'ESP="Descripción de origen guardada"';
+            Caption = 'Source Description', Comment = 'ESP="Descripción de origen"';
             ToolTip = 'Shows the account and movement description, or the product description, copied when calculating. Later description changes do not change this saved text.', Comment = 'ESP="Muestra la descripción de la cuenta y del movimiento, o la del producto, copiada al calcular. Los cambios posteriores de descripción no modifican este texto guardado."';
         }
         field(15; "JMC Formula"; Text[100])
         {
-            Caption = 'Saved Calculation Formula', Comment = 'ESP="Fórmula de cálculo guardada"';
+            Caption = 'Calculation Formula', Comment = 'ESP="Fórmula de cálculo"';
             ToolTip = 'Shows the calculation used for this row. The letters refer to the A, B and C value columns on the same row. Source movements have no formula because their amounts are taken directly.', Comment = 'ESP="Muestra la operación utilizada para esta fila. Las letras corresponden a las columnas de valores A, B y C de esa misma fila. Los movimientos de origen no tienen fórmula porque se toma su importe directamente."';
         }
         field(16; "JMC Operand A"; Decimal)
         {
-            Caption = 'Saved Operand A', Comment = 'ESP="Operando A guardado"';
+            Caption = 'Operand A', Comment = 'ESP="Operando A"';
             ToolTip = 'Shows the value marked A in this row formula. In product allocations it measures how much the product counts in the distribution; in unit groups it is the value of the group recipes.', Comment = 'ESP="Es el valor marcado como A en la fórmula de esta fila. En repartos a productos mide cuánto cuenta el producto al distribuir el dinero; en grupos de unidad es el valor de las recetas del grupo."';
             DecimalPlaces = 2 : 2;
         }
         field(17; "JMC Operand B"; Decimal)
         {
-            Caption = 'Saved Operand B', Comment = 'ESP="Operando B guardado"';
+            Caption = 'Operand B', Comment = 'ESP="Operando B"';
             ToolTip = 'Shows the value marked B in this row formula. In product allocations it is the sum of the weights of the products participating together. It is used to calculate each share, not as an extra cost.', Comment = 'ESP="Es el valor marcado como B en la fórmula de esta fila. En repartos a productos es la suma de los pesos de los productos que participan juntos. Sirve para calcular cada parte, no es un coste adicional."';
             DecimalPlaces = 2 : 2;
         }
         field(18; "JMC Operand C"; Decimal)
         {
-            Caption = 'Saved Operand C', Comment = 'ESP="Operando C guardado"';
+            Caption = 'Operand C', Comment = 'ESP="Operando C"';
             ToolTip = 'Shows the money to distribute in formulas that use C. For a product it is the amount available to its group or business; for a unit group it is the business amount. It is not an additional amount.', Comment = 'ESP="Es el dinero que se reparte en las fórmulas que utilizan C. Para un producto es el importe disponible para su grupo o negocio; para un grupo de unidad es el importe del negocio. No es un importe adicional."';
             DecimalPlaces = 2 : 2;
         }
@@ -105,7 +105,7 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(20; "JMC Result"; Decimal)
         {
-            Caption = 'Saved Result or Contribution', Comment = 'ESP="Resultado o aportación guardados"';
+            Caption = 'Result or Contribution', Comment = 'ESP="Resultado o aportación"';
             ToolTip = 'Shows how much this row contributes. In product allocations it is the money assigned to the product. Do not add different levels together, because that would count the same money more than once.', Comment = 'ESP="Muestra cuánto aporta esta fila. En repartos a productos es el dinero asignado al producto. No sume niveles distintos, porque contaría el mismo dinero más de una vez."';
             DecimalPlaces = 2 : 2;
         }
@@ -117,7 +117,7 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(22; "JMC Source Amount"; Decimal)
         {
-            Caption = 'Original Saved Amount', Comment = 'ESP="Importe original guardado"';
+            Caption = 'Original Amount', Comment = 'ESP="Importe original"';
             ToolTip = 'Shows the amount copied from the source movement, with its original sign. A production movement can have an original amount but contribute nothing if it was excluded. Check Included and the reason.', Comment = 'ESP="Es el importe copiado del movimiento de origen, con su signo original. Un movimiento de producción puede tener importe y no aportar nada si fue excluido. Consulte Incluido y el motivo."';
             DecimalPlaces = 2 : 2;
         }
@@ -128,12 +128,12 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(24; "JMC Issue"; Text[250])
         {
-            Caption = 'Saved Exclusion or Pending Reason', Comment = 'ESP="Motivo de exclusión o pendiente guardado"';
+            Caption = 'Exclusion or Pending Reason', Comment = 'ESP="Motivo de exclusión o pendiente"';
             ToolTip = 'Explains why a movement or product was excluded, or why money could not be distributed. The reason is the one saved when calculating; correcting the source requires recalculating to update this detail.', Comment = 'ESP="Explica por qué se excluyó un movimiento o producto, o por qué no se pudo repartir un importe. Es el motivo guardado al calcular; si corrige el origen, debe recalcular para actualizar este detalle."';
         }
         field(25; "JMC Quantity"; Decimal)
         {
-            Caption = 'Saved Movement or Sales Quantity', Comment = 'ESP="Cantidad de movimiento o venta guardada"';
+            Caption = 'Movement or Sales Quantity', Comment = 'ESP="Cantidad de movimiento o venta"';
             ToolTip = 'Shows the production movement quantity in the base unit, or the production quantity used for an allocation in its line unit. Do not add different units together.', Comment = 'ESP="Muestra la cantidad del movimiento de producción en unidad base o la cantidad de fabricación utilizada para un reparto en la unidad de la línea. No sume unidades diferentes."';
             DecimalPlaces = 2 : 2;
         }
@@ -163,13 +163,13 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(31; "JMC Base Quantity"; Decimal)
         {
-            Caption = 'Saved Net Base Quantity', Comment = 'ESP="Cantidad base neta guardada"';
+            Caption = 'Net Base Quantity', Comment = 'ESP="Cantidad base neta"';
             ToolTip = 'Shows the production quantity used for the allocation converted to the product base unit.', Comment = 'ESP="Muestra la cantidad de fabricación utilizada para el reparto convertida a la unidad base del producto."';
             DecimalPlaces = 2 : 2;
         }
         field(32; "JMC Base Recipe Cost"; Decimal)
         {
-            Caption = 'Saved Base Recipe Unit Cost', Comment = 'ESP="Coste receta por unidad base guardado"';
+            Caption = 'Base Recipe Unit Cost', Comment = 'ESP="Coste receta por unidad base"';
             ToolTip = 'Shows the recipe cost used for one base unit of the product when calculating. It is not the selling price or the amount allocated to that product.', Comment = 'ESP="Es el coste de receta utilizado para una unidad base del producto al calcular. No es el precio de venta ni el importe de estructura asignado al producto."';
             DecimalPlaces = 2 : 2;
         }
@@ -186,7 +186,7 @@ table 53105 "JMC Cost Calculation Detail"
         }
         field(35; "JMC Resource No."; Code[20])
         {
-            Caption = 'Saved Resource No.', Comment = 'ESP="Nº recurso guardado"';
+            Caption = 'Resource No.', Comment = 'ESP="Nº recurso"';
             TableRelation = Resource."No.";
             ToolTip = 'Identifies the resource associated with the saved personnel expense.', Comment = 'ESP="Identifica el recurso asociado al gasto de personal guardado."';
         }

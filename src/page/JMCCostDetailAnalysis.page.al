@@ -25,7 +25,6 @@ page 53129 "JMC Cost Detail Analysis"
                 field("JMC Account No."; Rec."JMC Account No.") { ApplicationArea = All; }
                 field("JMC Item No."; Rec."JMC Item No.") { ApplicationArea = All; }
                 field("JMC Description"; Rec."JMC Description") { ApplicationArea = All; }
-                field("JMC Business"; Rec."JMC Business") { ApplicationArea = All; }
                 field("JMC Classification"; Rec."JMC Classification") { ApplicationArea = All; }
                 field("JMC Unit Code"; Rec."JMC Unit Code") { ApplicationArea = All; }
                 field("JMC Quantity"; Rec."JMC Quantity") { ApplicationArea = All; }
@@ -37,9 +36,7 @@ page 53129 "JMC Cost Detail Analysis"
                 field("JMC Operand A"; Rec."JMC Operand A") { ApplicationArea = All; }
                 field("JMC Operand B"; Rec."JMC Operand B") { ApplicationArea = All; }
                 field("JMC Operand C"; Rec."JMC Operand C") { ApplicationArea = All; }
-                field("JMC Raw Result"; Rec."JMC Raw Result") { ApplicationArea = All; }
                 field("JMC Result"; Rec."JMC Result") { ApplicationArea = All; }
-                field("JMC Rounding Difference"; Rec."JMC Rounding Difference") { ApplicationArea = All; }
                 field("JMC Issue"; Rec."JMC Issue") { ApplicationArea = All; }
             }
         }

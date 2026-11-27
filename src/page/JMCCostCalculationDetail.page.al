@@ -69,20 +69,6 @@ page 53128 "JMC Cost Calculation Detail"
                     ApplicationArea = All;
                     Visible = JMCShowOperandB;
                 }
-                field(JMCRawResult; JMCFormula."JMC Raw Result")
-                {
-                    Caption = 'Unrounded Result', Comment = 'ESP="Resultado sin redondear"';
-                    ToolTip = 'Shows the formula result before rounding or assigning the final remaining amount. Compare it with the saved result to see whether an adjustment was needed.', Comment = 'ESP="Es el resultado de la fórmula antes de redondear o asignar el importe que queda al final del reparto. Compárelo con el resultado guardado para ver si fue necesario un ajuste."';
-                    ApplicationArea = All;
-                    Visible = JMCNumeric;
-                }
-                field(JMCDifference; JMCFormula."JMC Rounding Difference")
-                {
-                    Caption = 'Rounding and Residual Adjustment', Comment = 'ESP="Ajuste de redondeo y residuo"';
-                    ToolTip = 'Shows the saved result minus the unrounded result. It explains differences caused by rounding or distributing the final remaining amount; it is not an extra cost.', Comment = 'ESP="Es el resultado guardado menos el resultado sin redondear. Explica las diferencias por redondeo o por repartir el importe que queda al final; no es un coste adicional."';
-                    ApplicationArea = All;
-                    Visible = JMCNumeric;
-                }
                 field(JMCResult; JMCFormula."JMC Result")
                 {
                     Caption = 'Saved Calculation Result', Comment = 'ESP="Resultado del cálculo guardado"';
@@ -108,7 +94,6 @@ page 53128 "JMC Cost Calculation Detail"
                 field("JMC Resource No."; Rec."JMC Resource No.") { ApplicationArea = All; }
                 field("JMC Item No."; Rec."JMC Item No.") { ApplicationArea = All; }
                 field("JMC Description"; Rec."JMC Description") { ApplicationArea = All; }
-                field("JMC Business"; Rec."JMC Business") { ApplicationArea = All; }
                 field("JMC Classification"; Rec."JMC Classification") { ApplicationArea = All; }
                 field("JMC Unit Code"; Rec."JMC Unit Code") { ApplicationArea = All; }
                 field("JMC Quantity"; Rec."JMC Quantity") { ApplicationArea = All; }
@@ -120,9 +105,7 @@ page 53128 "JMC Cost Calculation Detail"
                 field("JMC Operand A"; Rec."JMC Operand A") { ApplicationArea = All; }
                 field("JMC Operand B"; Rec."JMC Operand B") { ApplicationArea = All; }
                 field("JMC Operand C"; Rec."JMC Operand C") { ApplicationArea = All; }
-                field("JMC Raw Result"; Rec."JMC Raw Result") { ApplicationArea = All; }
                 field("JMC Result"; Rec."JMC Result") { ApplicationArea = All; }
-                field("JMC Rounding Difference"; Rec."JMC Rounding Difference") { ApplicationArea = All; }
                 field("JMC Issue"; Rec."JMC Issue") { ApplicationArea = All; }
             }
         }
@@ -299,6 +282,7 @@ page 53128 "JMC Cost Calculation Detail"
         jmcManagementIndustryLbl: Label 'Management Cost Pending in Industry', Comment = 'ESP="Coste de gestión pendiente en Alimentación"';
         jmcResourceCateringLbl: Label 'Personnel Cost Pending in Catering', Comment = 'ESP="Coste de personal pendiente en Catering"';
         jmcResourceIndustryLbl: Label 'Personnel Cost Pending in Industry', Comment = 'ESP="Coste de personal pendiente en Alimentación"';
+        jmcTotalFormulaLbl: Label 'Fixed costs + semivariable costs', Comment = 'ESP="Costes fijos + costes semivariables"';
         jmcTotalGuideLbl: Label 'Adds the fixed industrial and management costs. The rows below show the G/L entries that make up this total.', Comment = 'ESP="Suma los costes fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total."';
         jmcIndustrialGuideLbl: Label 'Adds the amounts posted to the fixed industrial accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas industriales fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
         jmcManagementGuideLbl: Label 'Adds the amounts posted to the fixed management accounts selected for the period. Negative entries reduce the total. The rows below show those entries.', Comment = 'ESP="Suma los importes de las cuentas de gestión fijas seleccionadas para el periodo. Los movimientos negativos restan. Debajo puede consultar esos movimientos."';
@@ -418,6 +402,8 @@ page 53128 "JMC Cost Calculation Detail"
         end;
         JMCShowOperandB := JMCOperandBCaption <> '';
         SetFormulaText();
+        if jmcFieldNo = jmcModel.FieldNo("JMC Total Structure Cost") then
+            JMCFormulaText := jmcTotalFormulaLbl;
         if jmcFieldNo in [jmcModel.FieldNo("JMC Catering Allocation"), jmcModel.FieldNo("JMC Industry Allocation")] then
             JMCGuidance += ' ' + jmcAllocationGuideLbl;
         JMCGuidance += ' ' + jmcSnapshotGuideLbl;

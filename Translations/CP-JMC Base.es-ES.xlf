@@ -118,9 +118,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Account No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1952027190 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Account No.</source>
-          <target>Nº cuenta guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta guardada"</note>
+          <source>Account No.</source>
+          <target>Nº cuenta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº cuenta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Account No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2080833486 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -130,9 +130,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Base Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2080833486 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Net Base Quantity</source>
-          <target>Cantidad base neta guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad base neta guardada"</note>
+          <source>Net Base Quantity</source>
+          <target>Cantidad base neta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad base neta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Base Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 350728542 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -142,9 +142,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Base Recipe Cost - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 350728542 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Base Recipe Unit Cost</source>
-          <target>Coste receta por unidad base guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Coste receta por unidad base guardado"</note>
+          <source>Base Recipe Unit Cost</source>
+          <target>Coste receta por unidad base</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Coste receta por unidad base"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Base Recipe Cost - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3029797214 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -172,9 +172,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Classification - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1225769014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Cost Classification</source>
-          <target>Clasificación del coste guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Clasificación del coste guardada"</note>
+          <source>Cost Classification</source>
+          <target>Clasificación del coste</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Clasificación del coste"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Classification - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3371300118 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -184,9 +184,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Description - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3371300118 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Source Description</source>
-          <target>Descripción de origen guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Descripción de origen guardada"</note>
+          <source>Source Description</source>
+          <target>Descripción de origen</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Descripción de origen"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Description - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1635896127 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -214,9 +214,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Document No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 521954016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Document No.</source>
-          <target>Nº documento guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº documento guardado"</note>
+          <source>Document No.</source>
+          <target>Nº documento</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº documento"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Document No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 93412081 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -238,9 +238,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Formula - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 580157182 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Calculation Formula</source>
-          <target>Fórmula de cálculo guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Fórmula de cálculo guardada"</note>
+          <source>Calculation Formula</source>
+          <target>Fórmula de cálculo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fórmula de cálculo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Formula - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1496770160 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -262,9 +262,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Issue - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3164407727 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Exclusion or Pending Reason</source>
-          <target>Motivo de exclusión o pendiente guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Motivo de exclusión o pendiente guardado"</note>
+          <source>Exclusion or Pending Reason</source>
+          <target>Motivo de exclusión o pendiente</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Motivo de exclusión o pendiente"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Issue - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1930225594 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -274,9 +274,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Item No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1930225594 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Item No.</source>
-          <target>Nº producto guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº producto guardado"</note>
+          <source>Item No.</source>
+          <target>Nº producto</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº producto"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Item No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2251524157 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -298,9 +298,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand A - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 4132410002 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Operand A</source>
-          <target>Operando A guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Operando A guardado"</note>
+          <source>Operand A</source>
+          <target>Operando A</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Operando A"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand A - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2219320151 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -310,9 +310,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand B - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2219320151 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Operand B</source>
-          <target>Operando B guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Operando B guardado"</note>
+          <source>Operand B</source>
+          <target>Operando B</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Operando B"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand B - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2857016768 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -322,9 +322,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand C - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2857016768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Operand C</source>
-          <target>Operando C guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Operando C guardado"</note>
+          <source>Operand C</source>
+          <target>Operando C</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Operando C"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Operand C - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3344648716 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -334,9 +334,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Posting Date - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3344648716 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Posting Date</source>
-          <target>Fecha registro guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Fecha registro guardada"</note>
+          <source>Posting Date</source>
+          <target>Fecha registro</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Fecha registro"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Posting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2139558701 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -370,9 +370,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Quantity - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1857481897 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Movement or Sales Quantity</source>
-          <target>Cantidad de movimiento o venta guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Cantidad de movimiento o venta guardada"</note>
+          <source>Movement or Sales Quantity</source>
+          <target>Cantidad de movimiento o venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Cantidad de movimiento o venta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Quantity - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 3818975867 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -394,9 +394,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Resource No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 231317795 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Resource No.</source>
-          <target>Nº recurso guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso guardado"</note>
+          <source>Resource No.</source>
+          <target>Nº recurso</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº recurso"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Resource No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 282542511 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -406,9 +406,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Result - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 282542511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Result or Contribution</source>
-          <target>Resultado o aportación guardados</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Resultado o aportación guardados"</note>
+          <source>Result or Contribution</source>
+          <target>Resultado o aportación</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Resultado o aportación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Result - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 565342123 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -436,9 +436,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Amount - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 4038601495 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Original Saved Amount</source>
-          <target>Importe original guardado</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Importe original guardado"</note>
+          <source>Original Amount</source>
+          <target>Importe original</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Importe original"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Amount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1456843406 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
@@ -448,9 +448,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Entry No. - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 1456843406 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Source Entry or Line No.</source>
-          <target>Nº movimiento o línea de origen guardados</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento o línea de origen guardados"</note>
+          <source>Source Entry or Line No.</source>
+          <target>Nº movimiento o línea de origen</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Nº movimiento o línea de origen"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Source Entry No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2882872558 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -478,9 +478,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Unit Code - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Table 822719801 - Field 2152038025 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Saved Movement or Sales Unit</source>
-          <target>Unidad de movimiento o venta guardada</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Unidad de movimiento o venta guardada"</note>
+          <source>Movement or Sales Unit</source>
+          <target>Unidad de movimiento o venta</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Unidad de movimiento o venta"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Table JMC Cost Calculation Detail - Field JMC Unit Code - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4267268924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
@@ -2823,6 +2823,12 @@
           <note from="Developer" annotates="general" priority="2">ESP="Coste de personal pendiente en Alimentación"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcResourceIndustryLbl</note>
         </trans-unit>
+        <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 4226875366" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fixed costs + semivariable costs</source>
+          <target>Costes fijos + costes semivariables</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Costes fijos + costes semivariables"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Method SetExplanation - NamedType jmcTotalFormulaLbl</note>
+        </trans-unit>
         <trans-unit id="Page 822719801 - Method 2021832699 - NamedType 3674222698" size-unit="char" translate="yes" xml:space="preserve">
           <source>Adds the fixed industrial and management costs. The rows below show the G/L entries that make up this total.</source>
           <target>Suma los costes fijos industrial y de gestión. Las filas de abajo muestran los movimientos contables que forman este total.</target>
@@ -2973,18 +2979,6 @@
           <note from="Developer" annotates="general" priority="2">ESP="Fecha y hora del cálculo"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCCalculatedAt - Property Caption</note>
         </trans-unit>
-        <trans-unit id="Page 822719801 - Control 2200093637 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the saved result minus the unrounded result. It explains differences caused by rounding or distributing the final remaining amount; it is not an extra cost.</source>
-          <target>Es el resultado guardado menos el resultado sin redondear. Explica las diferencias por redondeo o por repartir el importe que queda al final; no es un coste adicional.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Es el resultado guardado menos el resultado sin redondear. Explica las diferencias por redondeo o por repartir el importe que queda al final; no es un coste adicional."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCDifference - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 822719801 - Control 2200093637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Rounding and Residual Adjustment</source>
-          <target>Ajuste de redondeo y residuo</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Ajuste de redondeo y residuo"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCDifference - Property Caption</note>
-        </trans-unit>
         <trans-unit id="Page 822719801 - Control 3729709577 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the last day of the selected period, including that day. Movements after this date were not used.</source>
           <target>Es el último día del periodo seleccionado, incluido ese día. No se utilizaron movimientos posteriores a esta fecha.</target>
@@ -3056,18 +3050,6 @@
           <target>Operando B</target>
           <note from="Developer" annotates="general" priority="2">ESP="Operando B"</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCOperandB - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 822719801 - Control 632071019 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Shows the formula result before rounding or assigning the final remaining amount. Compare it with the saved result to see whether an adjustment was needed.</source>
-          <target>Es el resultado de la fórmula antes de redondear o asignar el importe que queda al final del reparto. Compárelo con el resultado guardado para ver si fue necesario un ajuste.</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Es el resultado de la fórmula antes de redondear o asignar el importe que queda al final del reparto. Compárelo con el resultado guardado para ver si fue necesario un ajuste."</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCRawResult - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 822719801 - Control 632071019 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Unrounded Result</source>
-          <target>Resultado sin redondear</target>
-          <note from="Developer" annotates="general" priority="2">ESP="Resultado sin redondear"</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page JMC Cost Calculation Detail - Control JMCRawResult - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 822719801 - Control 1820929111 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shows the exact result saved for this summary value. It does not include manual cost changes made after that calculation.</source>
@@ -9812,6 +9794,18 @@
           <target>Ver incidencias</target>
           <note from="Developer" annotates="general" priority="2">ESP="Ver incidencias"</note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC Assembly Order - Action JMC View Incidents - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4217303866 - Control 4001262638 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3239952495">
+          <source>Shows the last calculated model total cost for this product and its base unit. The value is an amount or a percentage according to the model line cost type. It does not include manual final cost changes.</source>
+          <target>Muestra el último total coste calculado en el modelo para este producto y su unidad base. El valor es un importe o un porcentaje según el tipo de coste de la línea del modelo. No incluye los cambios del coste final manual.</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Muestra el último total coste calculado en el modelo para este producto y su unidad base. El valor es un importe o un porcentaje según el tipo de coste de la línea del modelo. No incluye los cambios del coste final manual."</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC BOM Additional Cost - Control JMCModelTotalCost - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 4217303866 - Control 4001262638 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3239952495">
+          <source>Model Total Cost</source>
+          <target>Total Coste Modelo</target>
+          <note from="Developer" annotates="general" priority="2">ESP="Total Coste Modelo"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension JMC BOM Additional Cost - Control JMCModelTotalCost - Property Caption</note>
         </trans-unit>
         <trans-unit id="PageExtension 2573148565 - Control 125467267 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 3105459369">
           <source>Specifies whether the account belongs to industrial manufacturing cost or full management cost.</source>
